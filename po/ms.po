@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: im-chooser 0.3.2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-09-28 14:38+0900\n"
-"PO-Revision-Date: 2006-12-22 21:15+0800\n"
+"PO-Revision-Date: 2007-01-18 23:12+0800\n"
 "Last-Translator: Sharuzzaman Ahmat Raslan <sharuzzaman@myrealbox.com>\n"
 "Language-Team: none\n"
 "MIME-Version: 1.0\n"
@@ -17,7 +17,7 @@ msgstr ""
 
 #: ../src/im-chooser.c:489
 msgid "<small><i>Note: this change will not take effect until you next log in.</i></small>"
-msgstr ""
+msgstr "<small><i>Nota: perubahan ini tidak akan berfungsi sehingga anda log masuk lain kali.</i></small>"
 
 #: ../src/im-chooser.c:493
 msgid "<b>Input Method</b>"
@@ -33,7 +33,7 @@ msgstr "_Ikut tetapan keseluruhan-sistem"
 
 #: ../src/im-chooser.c:523
 msgid "Follow the system-wide input method configuration to determine which input method should be used."
-msgstr ""
+msgstr "Ikut tetapan kaedah masukan seluruh sistem untuk menentukan kaedah masukan mana yang perlu digunakan."
 
 #: ../src/im-chooser.c:526
 msgid "_Never use input methods"
