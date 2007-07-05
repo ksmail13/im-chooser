@@ -23,6 +23,7 @@ msgid ""
 msgstr ""
 "<small><i>মন কৰিব:এই সলনি আপুনি অহা বাৰলৈ প্ৰৱেশ নকৰালৈকে প্ৰযোজ্য নহয় ।</i></"
 "small>"
+
 #: ../src/im-chooser.c:493
 msgid "<b>Input Method</b>"
 msgstr "<b>নিবেশ পদ্ধতি</b>"
@@ -40,7 +41,9 @@ msgid ""
 "Follow the system-wide input method configuration to determine which input "
 "method should be used."
 msgstr ""
-"কোনটো নিবেশ পদ্ধতি ব্যৱহাৰ কৰিব লাগিব স্থিৰ কৰিব'লৈ ব্যৱস্থাপ্ৰণালী ব্যাপক বিন্যাস অনুকৰণ কৰক"
+"কোনটো নিবেশ পদ্ধতি ব্যৱহাৰ কৰিব লাগিব স্থিৰ কৰিব'লৈ ব্যৱস্থাপ্ৰণালী ব্যাপক বিন্যাস "
+"অনুকৰণ কৰক"
+
 #: ../src/im-chooser.c:526
 msgid "_Never use input methods"
 msgstr "কেতিয়াও নিবেশ পদ্ধতি ব্যৱহাৰ নকৰিব (_N)"
@@ -49,8 +52,8 @@ msgstr "কেতিয়াও নিবেশ পদ্ধতি ব্যৱহ
 msgid ""
 "Entirely disable input methods regardless which locale the desktop is "
 "running on."
-msgstr ""
-"ডেষ্কট'প কোনটো অৱস্থানত চলিছে গণ্য নকৰি নিবেশ পদ্ধতি সমূলঞ্চে অসমৰ্থ কৰক ।"
+msgstr "ডেষ্কট'প কোনটো অৱস্থানত চলিছে গণ্য নকৰি নিবেশ পদ্ধতি সমূলঞ্চে অসমৰ্থ কৰক ।"
+
 #: ../src/im-chooser.c:531
 msgid "_Use legacy input methods"
 msgstr "পুৰাতন নিবেশ পদ্ধতি ব্যৱহাৰ কৰক (_U)"
@@ -60,7 +63,9 @@ msgid ""
 "Use X Input Method anyway. In fact, which input method will be chosen for "
 "the desktop session, depends on the desktop language."
 msgstr ""
-"যিয়েই নহওক X নিবেশ পদ্ধতি ব্যৱহাৰ কৰক । বাস্তৱতে, কোনতো নিবেশ পদ্ধতি ডেষ্কট'প অধিবেশনৰ বাবে নিৰ্ব্বাচিত কৰা হ'ব, ডেষ্কট'প ভাষাৰ ওপৰতহে নিৰ্ভৰ কৰে ।"
+"যিয়েই নহওক X নিবেশ পদ্ধতি ব্যৱহাৰ কৰক । বাস্তৱতে, কোনতো নিবেশ পদ্ধতি ডেষ্কট'প "
+"অধিবেশনৰ বাবে নিৰ্ব্বাচিত কৰা হ'ব, ডেষ্কট'প ভাষাৰ ওপৰতহে নিৰ্ভৰ কৰে ।"
+
 #: ../src/im-chooser.c:539
 msgid "Use _custom input method"
 msgstr "নিজা নিবেশ পদ্ধতি ব্যৱহাৰ কৰক (_c)"
@@ -70,7 +75,9 @@ msgid ""
 "Use input method that you prefer regardless what input method the system "
 "recommends."
 msgstr ""
-"ব্যৱস্থাপ্ৰণালীয়ে কোনতোৰ উপদেশ দিয়ে গণ্য নকৰি আপুনি বাছি লোৱা নিবেশ পদ্ধতি ব্যৱহাৰ কৰক ।"
+"ব্যৱস্থাপ্ৰণালীয়ে কোনতোৰ উপদেশ দিয়ে গণ্য নকৰি আপুনি বাছি লোৱা নিবেশ পদ্ধতি ব্যৱহাৰ "
+"কৰক ।"
+
 #: ../src/main.c:123
 msgid "IM Chooser - Input Method configuration tool"
 msgstr "IM নিৰ্ব্বাচক - নিবেশ পদ্ধতি বিন্যাস সৰঞ্জাম"
@@ -88,4 +95,5 @@ msgid ""
 "Input Method configuration tool to choose the Input Method to be used or "
 "disable Input Method usage on the desktop"
 msgstr ""
-"নিবেশ পদ্ধতি বিন্যাস সৰঞ্জাম ব্যৱহাৰ কৰা নিবেশ পদ্ধতি নিৰ্ব্বাচন কৰিব'লৈ বা ডেষ্কট'পত নিবেশ পদ্ধতিৰ ব্যৱহাৰ অসমৰ্থ কৰক ।"
+"নিবেশ পদ্ধতি বিন্যাস সৰঞ্জাম ব্যৱহাৰ কৰা নিবেশ পদ্ধতি নিৰ্ব্বাচন কৰিব'লৈ বা "
+"ডেষ্কট'পত নিবেশ পদ্ধতিৰ ব্যৱহাৰ অসমৰ্থ কৰক ।"
