@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: im-chooser 0.3.2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-09-28 14:38+0900\n"
-"PO-Revision-Date: 2006-10-06 23:23+0800\n"
+"PO-Revision-Date: 2006-10-15 16:23+0800\n"
 "Last-Translator: Sharuzzaman Ahmat Raslan <sharuzzaman@myrealbox.com>\n"
 "Language-Team: none\n"
 "MIME-Version: 1.0\n"
@@ -61,7 +61,7 @@ msgstr ""
 
 #: ../src/main.c:123
 msgid "IM Chooser - Input Method configuration tool"
-msgstr ""
+msgstr "IM Chooser - Alatan tetapan Kaedah Masukan"
 
 #: ../src/main.c:130
 msgid "_Log Out"
@@ -73,5 +73,5 @@ msgstr "Kaedah Masukan"
 
 #: ../src/im-chooser.desktop.in.in.h:2
 msgid "Input Method configuration tool to choose the Input Method to be used or disable Input Method usage on the desktop"
-msgstr ""
+msgstr "Alatan tetapan Kaedah Masukan untuk memilih Kaedah Masukan yang akan digunakan atau mematikan penggunaan Kaedah Masukan pada desktop"
 
