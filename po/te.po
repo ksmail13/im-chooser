@@ -1,88 +1,97 @@
+# translation of te.po to 
+# translation of te.po to
 # Telugu translations for im-chooser package.
 # Copyright (C) 2006 Red Hat, Inc. All rights reserved.
 # This file is distributed under the same license as the im-chooser package.
 # Automatically generated, 2006.
+# , 2006.
+# , 2006.
+# , 2006.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: im-chooser 0.3.2\n"
+"Project-Id-Version: te\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-09-28 14:38+0900\n"
-"PO-Revision-Date: 2006-09-28 14:38+0900\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2006-10-30 13:19+0530\n"
+"Last-Translator: \n"
+"Language-Team:  <en@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.9.1\n"
 
 #: ../src/im-chooser.c:489
 msgid ""
 "<small><i>Note: this change will not take effect until you next log in.</i></"
 "small>"
 msgstr ""
+"<small><i>సూచన: మీరు మళ్లీ ప్రవేశించేదాకా ఈ మార్పు ప్రభావితం కాదు.</i></"
+"small>"
 
 #: ../src/im-chooser.c:493
 msgid "<b>Input Method</b>"
-msgstr ""
+msgstr "<b>ఇన్పుట్టు విధానం</b>"
 
 #: ../src/im-chooser.c:503
 msgid "No valid IM installed"
-msgstr ""
+msgstr "ఏ విలువైన IM సంస్థాపించబడలేదు"
 
 #: ../src/im-chooser.c:521
 msgid "_Follow the system-wide configuration"
-msgstr ""
+msgstr "సిస్టం-వైడ్ ఆకృతీకరణను అనుసరించు (_F)"
 
 #: ../src/im-chooser.c:523
 msgid ""
 "Follow the system-wide input method configuration to determine which input "
 "method should be used."
-msgstr ""
+msgstr "ఏ ఇన్పుట్ విధానం ఉపయోగించాలో నిర్ణయించటానికి ఈ సిస్టం-వైడ్ ఇన్పుట్ విధానాన్ని అనుసరించు."
 
 #: ../src/im-chooser.c:526
 msgid "_Never use input methods"
-msgstr ""
+msgstr "ఎప్పుడూ ఇన్పుట్ విధానాన్ని ఉపయోగించకు (_N)"
 
 #: ../src/im-chooser.c:528
 msgid ""
 "Entirely disable input methods regardless which locale the desktop is "
 "running on."
-msgstr ""
+msgstr "ఎక్కడ స్థానిక డెస్కుటాప్ నడుస్తోందో దానికి పూర్తిగా అలవికాని ఇన్పుట్ విధానాలు."
 
 #: ../src/im-chooser.c:531
 msgid "_Use legacy input methods"
-msgstr ""
+msgstr "లీగెన్సీ ఇన్పుట్ విధానాన్ని ఉపయోగించు (_U)"
 
 #: ../src/im-chooser.c:533
 msgid ""
 "Use X Input Method anyway. In fact, which input method will be chosen for "
 "the desktop session, depends on the desktop language."
-msgstr ""
+msgstr "ఏమైనప్పటికీ X ఇన్పుట్ విధానాన్ని ఉపయోగించు. నిజానికి, డెస్కుటాప్ సెషన్ కోసం ఎన్నిక చేయబడ్డ ఇన్పుట్ విధానం డెస్కుటాప్ భాష మీద ఆధారపడి ఉంటుంది."
 
 #: ../src/im-chooser.c:539
 msgid "Use _custom input method"
-msgstr ""
+msgstr "వినియోగదారుని ఇన్పుట్ విధానాన్ని ఉపయోగించు (_c)"
 
 #: ../src/im-chooser.c:541
 msgid ""
 "Use input method that you prefer regardless what input method the system "
 "recommends."
-msgstr ""
+msgstr "మీరు మద్దతిస్తున్న కంప్యూటరు మద్దతిచ్చే ఇన్పుట్ విధానాన్ని ఉపయోగిచండి."
 
 #: ../src/main.c:123
 msgid "IM Chooser - Input Method configuration tool"
-msgstr ""
+msgstr "IMని ఎన్నికచేసేది - ఇన్పుట్ విధాన ఆకృతీకరణ ఉపకరణం"
 
 #: ../src/main.c:130
 msgid "_Log Out"
-msgstr ""
+msgstr "బయటకు రా (_L)"
 
 #: ../src/im-chooser.desktop.in.in.h:1
 msgid "Input Method"
-msgstr ""
+msgstr "ఇన్పుట్ విధానం"
 
 #: ../src/im-chooser.desktop.in.in.h:2
 msgid ""
 "Input Method configuration tool to choose the Input Method to be used or "
 "disable Input Method usage on the desktop"
-msgstr ""
+msgstr "డెస్కుటాప్ యందు ఇన్పుట్ విధానాన్ని ఉపయోగించటానికి ఉపయోగించ కుండా ఉండటానికి ఇన్పుట్ విధానంఎన్నిక చేయటానికి ఉపయోగించే ఇన్పుట్ విధాన ఆకృతీకరణ సాధనం"
+
