@@ -54,7 +54,6 @@ AC_DEFINE_UNQUOTED(GETTEXT_PACKAGE, "$GETTEXT_PACKAGE", [Gettext package])
 
 ALL_LINGUAS="af am ar as be bg bn bn_IN bs ca cs cy da de el en_GB es et eu_ES fa fi fr gl gu he hi hr hu hy id is it lt ja ka kn ko ku lo lv mk ml mr ms my nb nl nn no nso or pa pl pt pt_BR ro ru si sk sl sq sr sr@Latn sv ta te th tr uk ur vi zh_CN zh_TW zu"
 AM_GLIB_GNU_GETTEXT
-AM_GLIB_DEFINE_LOCALEDIR(IMCHOOSE_LOCALEDIR)
 
 dnl ======================================================================
 dnl check pkg-config stuff

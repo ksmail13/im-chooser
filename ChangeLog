@@ -1,3 +1,12 @@
+2006-10-07  Akira TAGOH  <at@gclab.org>
+
+	* configure.ac: remove AM_GLIB_DEFINE_LOCALEDIR.
+
+	* src/Makefile.am (INCLUDES): added IMCHOOSE_LOCALEDIR.
+
+	* data/xinput.sh: fallback to read /etc/default/locale if there are no
+	/etc/profile.d/lang.sh.
+
 2006-10-02  Akira TAGOH  <at@gclab.org>
 
 	Translation updates release.

@@ -17,7 +17,11 @@ SYS_XINPUTRC="/etc/X11/xinit/xinputrc"
 oldterm=$TERM
 unset TERM
 if [ -r /etc/profile.d/lang.sh ]; then
+    # for FC etc
     source /etc/profile.d/lang.sh
+elif [ -r /etc/default/locale ]; then
+    # for Debian
+    source /etc/default/locale
 fi
 [ -n "$oldterm" ] && export TERM=$oldterm
 

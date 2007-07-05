@@ -6,6 +6,7 @@ INCLUDES =							\
 	-DXINPUT_PATH="\"$(XINPUT_PATH)\""			\
 	-DXINPUT_SUFFIX="\"$(XINPUT_SUFFIX)\""			\
 	-DICONDIR="\"$(datadir)/pixmaps\""			\
+	-DIMCHOOSE_LOCALEDIR="\"$(datadir)/locale\""		\
 	$(IMCHOOSE_CFLAGS)					\
 	$(GNOME_CFLAGS)						\
 	$(NULL)
