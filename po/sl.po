@@ -1,90 +1,93 @@
+# translation of sl.po to Slovenian
 # Slovenian translations for im-chooser package.
 # Copyright (C) 2006 Red Hat, Inc. All rights reserved.
 # This file is distributed under the same license as the im-chooser package.
-# Automatically generated, 2006.
 #
+# Automatically generated, 2006.
+# Rok Papez <rok.papez@lugos.si>, 2006.
 msgid ""
 msgstr ""
-"Project-Id-Version: im-chooser 0.3.2\n"
+"Project-Id-Version: sl\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-09-28 14:38+0900\n"
-"PO-Revision-Date: 2006-09-28 14:38+0900\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2006-10-09 21:16+0200\n"
+"Last-Translator: Rok Papez <rok.papez@lugos.si>\n"
+"Language-Team: Slovenian <sl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n"
-"%100==4 ? 2 : 3);\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n%100==4 ? 2 : 3);\n"
+"X-Generator: KBabel 1.11.4\n"
 
 #: ../src/im-chooser.c:489
 msgid ""
 "<small><i>Note: this change will not take effect until you next log in.</i></"
 "small>"
-msgstr ""
+msgstr "<small><i>Opozorilo: spremembe se bodo uveljavile šele ob novi prijavi.</i></small>"
 
 #: ../src/im-chooser.c:493
 msgid "<b>Input Method</b>"
-msgstr ""
+msgstr "<b></b>"
 
 #: ../src/im-chooser.c:503
 msgid "No valid IM installed"
-msgstr ""
+msgstr "Ni nameščenih veljavnih vnosnih metod"
 
 #: ../src/im-chooser.c:521
 msgid "_Follow the system-wide configuration"
-msgstr ""
+msgstr "_Enako kot so sistemske nastavitve"
 
 #: ../src/im-chooser.c:523
 msgid ""
 "Follow the system-wide input method configuration to determine which input "
 "method should be used."
-msgstr ""
+msgstr "Pri izbiri vnosnih metod se oziraj po sistemskih nastavitvah"
 
 #: ../src/im-chooser.c:526
 msgid "_Never use input methods"
-msgstr ""
+msgstr "_Ne uporabi vnosnih metod"
 
 #: ../src/im-chooser.c:528
 msgid ""
 "Entirely disable input methods regardless which locale the desktop is "
 "running on."
-msgstr ""
+msgstr "Popolnoma onemogoči vnosne metode ne glede na izbrano jezik namizja."
 
 #: ../src/im-chooser.c:531
 msgid "_Use legacy input methods"
-msgstr ""
+msgstr "_Uporabi stare vnosne metode"
 
 #: ../src/im-chooser.c:533
 msgid ""
 "Use X Input Method anyway. In fact, which input method will be chosen for "
 "the desktop session, depends on the desktop language."
-msgstr ""
+msgstr "Vseeno uporabi vnosne metode X. Pravzaprav je izbira vnosne metode odvisna od izbranega jezika namizja."
 
 #: ../src/im-chooser.c:539
 msgid "Use _custom input method"
-msgstr ""
+msgstr "Uporabi _prikrojene vnosne metode"
 
 #: ../src/im-chooser.c:541
 msgid ""
 "Use input method that you prefer regardless what input method the system "
 "recommends."
-msgstr ""
+msgstr "Uporabi želene vnosne metode ne glede na sistemska priporočila."
 
 #: ../src/main.c:123
 msgid "IM Chooser - Input Method configuration tool"
-msgstr ""
+msgstr "Izbirnik IM - Nastavljanje vnosnih metod (angl. IM - Input Method - vnosne metode)"
 
 #: ../src/main.c:130
 msgid "_Log Out"
-msgstr ""
+msgstr "_Odjava"
 
 #: ../src/im-chooser.desktop.in.in.h:1
 msgid "Input Method"
-msgstr ""
+msgstr "Vnosne metode"
 
 #: ../src/im-chooser.desktop.in.in.h:2
 msgid ""
 "Input Method configuration tool to choose the Input Method to be used or "
 "disable Input Method usage on the desktop"
-msgstr ""
+msgstr "Izbirnik vnosnih metod s katerim lahko ali nastavite želene vnosne metode ali pa jih izklopite."
+
