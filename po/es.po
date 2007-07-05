@@ -1,24 +1,27 @@
+# translation of es.po to Spanish
 # Spanish translations for im-chooser package.
 # Copyright (C) 2006 THE im-chooser'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the im-chooser package.
 # Automatically generated, 2006.
+# Manuel Ospina <mospina@redhat.com>, 2006.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: im-chooser 0.3.2\n"
+"Project-Id-Version: es\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-09-28 14:38+0900\n"
-"PO-Revision-Date: 2006-09-28 09:37-0300\n"
-"Last-Translator: Domingo Becker <beckerde@hotmail.com>\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2006-09-29 10:21+1000\n"
+"Last-Translator: Manuel Ospina <mospina@redhat.com>\n"
+"Language-Team: Spanish <en@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: KBabel 1.9.1\n"
 
 #: ../src/im-chooser.c:489
 msgid "<small><i>Note: this change will not take effect until you next log in.</i></small>"
-msgstr "<small><i>Nota: este cambio no tendrá efecto hasta que no vuelva a ingresar.</i></small>"
+msgstr "<small><i>Nota: este cambio no tendrá efecto hasta que no reinicie la sesión.</i></small>"
 
 #: ../src/im-chooser.c:493
 msgid "<b>Input Method</b>"
@@ -54,7 +57,7 @@ msgstr "Usar el Método de Entrada X de todas formas. En realidad, el método de
 
 #: ../src/im-chooser.c:539
 msgid "Use _custom input method"
-msgstr "_Usar método de entrada personalizado"
+msgstr "U_sar método de entrada personalizado"
 
 #: ../src/im-chooser.c:541
 msgid "Use input method that you prefer regardless what input method the system recommends."
@@ -62,7 +65,7 @@ msgstr "Usar el método de entrada que Ud. prefiere sin importar el método de e
 
 #: ../src/main.c:123
 msgid "IM Chooser - Input Method configuration tool"
-msgstr "Elector del ME - Herramienta para configuración del Método de Entrada"
+msgstr "Selector del ME - Herramienta para configuración del Método de Entrada"
 
 #: ../src/main.c:130
 msgid "_Log Out"
