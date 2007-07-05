@@ -7,19 +7,20 @@
 # Automatically generated, 2006.
 # JAILLET Patrick <ap3demak@gmail.com>, 2006.
 # Thomas Canniot <thomas.canniot@laposte.net>, 2006.
+# Decroux Fabien <fdecroux@redhat.com>, 2006.
 msgid ""
 msgstr ""
 "Project-Id-Version: fr\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-09-28 14:38+0900\n"
-"PO-Revision-Date: 2006-09-29 01:13+0200\n"
-"Last-Translator: Thomas Canniot <thomas.canniot@laposte.net>\n"
-"Language-Team: French\n"
+"PO-Revision-Date: 2006-09-29 10:13+1000\n"
+"Last-Translator: Decroux Fabien <fdecroux@redhat.com>\n"
+"Language-Team: French <fr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: KBabel 1.11.4\n"
+"X-Generator: KBabel 1.9.1\n"
 
 #: ../src/im-chooser.c:489
 msgid ""
@@ -75,7 +76,7 @@ msgstr "Utiliser une méthode de saisie _personnalisée"
 msgid ""
 "Use input method that you prefer regardless what input method the system "
 "recommends."
-msgstr "Utiliser votre méthode de saisie préférée dans tenir compte de la méthode de saisie recommandée par le système."
+msgstr "Utiliser votre méthode de saisie préférée sans tenir compte de la méthode de saisie recommandée par le système."
 
 #: ../src/main.c:123
 msgid "IM Chooser - Input Method configuration tool"
