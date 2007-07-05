@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: fr\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-09-28 14:38+0900\n"
-"PO-Revision-Date: 2006-09-28 18:04+0200\n"
+"PO-Revision-Date: 2006-09-28 18:07+0200\n"
 "Last-Translator: JAILLET Patrick <ap3demak@gmail.com>\n"
 "Language-Team:  <fr@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -27,7 +27,7 @@ msgstr ""
 
 #: ../src/im-chooser.c:493
 msgid "<b>Input Method</b>"
-msgstr "Méthode d'entrée"
+msgstr "<b>Méthode d'entrée</b>"
 
 #: ../src/im-chooser.c:503
 msgid "No valid IM installed"
@@ -83,7 +83,7 @@ msgstr ""
 
 #: ../src/im-chooser.desktop.in.in.h:1
 msgid "Input Method"
-msgstr ""
+msgstr "Méthode d'entrée"
 
 #: ../src/im-chooser.desktop.in.in.h:2
 msgid ""
