@@ -1,88 +1,102 @@
 # Bulgarian translations for im-chooser package.
 # Copyright (C) 2006 Red Hat, Inc. All rights reserved.
 # This file is distributed under the same license as the im-chooser package.
+#
 # Automatically generated, 2006.
+# Doncho N. Gunchev <gunchev@gmail.com>, 2007.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: im-chooser 0.3.2\n"
+"Project-Id-Version: bg\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-09-28 14:38+0900\n"
-"PO-Revision-Date: 2006-09-28 14:38+0900\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2007-03-12 19:29+0200\n"
+"Last-Translator: Doncho N. Gunchev <gunchev@gmail.com>\n"
+"Language-Team: Bulgarian <Bulgarian Translators' Team <dict@fsa-bg.org>>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
 
 #: ../src/im-chooser.c:489
 msgid ""
 "<small><i>Note: this change will not take effect until you next log in.</i></"
 "small>"
-msgstr ""
+msgstr "<small><i>Забележка: тази промяна няма да влезе в сила до следващото Ви влизане в системата.</i></small>"
 
 #: ../src/im-chooser.c:493
 msgid "<b>Input Method</b>"
-msgstr ""
+msgstr "<b>Метод за вход</b>"
 
 #: ../src/im-chooser.c:503
 msgid "No valid IM installed"
-msgstr ""
+msgstr "Няма инсталирани валидни методи за вход"
 
 #: ../src/im-chooser.c:521
 msgid "_Follow the system-wide configuration"
-msgstr ""
+msgstr "Ползване на _системната настройка"
 
 #: ../src/im-chooser.c:523
 msgid ""
 "Follow the system-wide input method configuration to determine which input "
 "method should be used."
 msgstr ""
+"Ползване на системната настройка за метод на вход за определяне кой "
+"метод за вход да се ползва."
 
 #: ../src/im-chooser.c:526
 msgid "_Never use input methods"
-msgstr ""
+msgstr "_Никога да не се ползват методи за вход"
 
 #: ../src/im-chooser.c:528
 msgid ""
 "Entirely disable input methods regardless which locale the desktop is "
 "running on."
 msgstr ""
+"Изцяло изключване методите за вход без значение каква локализация "
+"ползва работната среда."
 
 #: ../src/im-chooser.c:531
 msgid "_Use legacy input methods"
-msgstr ""
+msgstr "Ползване на _остарелите методи за вход"
 
 #: ../src/im-chooser.c:533
 msgid ""
 "Use X Input Method anyway. In fact, which input method will be chosen for "
 "the desktop session, depends on the desktop language."
 msgstr ""
+"Ползване на метода за вход на X. В действителност, кой метод за вход ще се "
+"ползва в сесията на средата зависи изцяло от езика на средата."
 
 #: ../src/im-chooser.c:539
 msgid "Use _custom input method"
-msgstr ""
+msgstr "Ползване на _потребителски метод за вход"
 
 #: ../src/im-chooser.c:541
 msgid ""
 "Use input method that you prefer regardless what input method the system "
 "recommends."
 msgstr ""
+"Ползване на предпочитания от вас метод за вход независимо от това какъв "
+"метод препоръчва системата."
 
 #: ../src/main.c:123
 msgid "IM Chooser - Input Method configuration tool"
-msgstr ""
+msgstr "IM Chooser - инструмент за настройка на метода за вход"
 
 #: ../src/main.c:130
 msgid "_Log Out"
-msgstr ""
+msgstr "_Изход"
 
 #: ../src/im-chooser.desktop.in.in.h:1
 msgid "Input Method"
-msgstr ""
+msgstr "Метод за вход"
 
 #: ../src/im-chooser.desktop.in.in.h:2
 msgid ""
 "Input Method configuration tool to choose the Input Method to be used or "
 "disable Input Method usage on the desktop"
 msgstr ""
+"Инструмента за настройка ползвания метода за вход или забрана "
+"на методите за вход в работната среда"
+
