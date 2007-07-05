@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: im-chooser 0.3.2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-09-28 14:38+0900\n"
-"PO-Revision-Date: 2006-10-15 16:23+0800\n"
+"PO-Revision-Date: 2006-11-15 00:14+0800\n"
 "Last-Translator: Sharuzzaman Ahmat Raslan <sharuzzaman@myrealbox.com>\n"
 "Language-Team: none\n"
 "MIME-Version: 1.0\n"
@@ -57,7 +57,7 @@ msgstr "_Guna kaedah masukan tersendiri"
 
 #: ../src/im-chooser.c:541
 msgid "Use input method that you prefer regardless what input method the system recommends."
-msgstr ""
+msgstr "Gunakan kaedah masukan yang anda suka tidak kira apa kaedah masukan yang disyorkan sistem."
 
 #: ../src/main.c:123
 msgid "IM Chooser - Input Method configuration tool"
