@@ -1,0 +1,13 @@
+2006-07-22  Akira TAGOH  <at@gclab.org>
+
+	* ja.po: updated Japanese translation.
+
+2006-07-10  Akira TAGOH  <at@gclab.org>
+
+	* POTFILES.in: added src/im-chooser.desktop.in.in.
+
+	* ja.po: updated Japanese translation.
+
+2006-06-07  Akira TAGOH  <at@gclab.org>
+
+	* ja.po: added Japanese translation.

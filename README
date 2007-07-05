@@ -1,0 +1,36 @@
+IM Chooser
+=============
+IM Chooser is a GUI configuration tool for Input Method to
+choose the Input Method to be used or disable Input Method
+usage on the desktop.
+
+How does IM Chooser work?
+============================
+IM Chooser relies on xinput.sh script that you may need to
+install it onto the proper place where your system provides
+a hook to bring something up during X server is starting,
+such as /etc/X11/xinit/xinitrc.d on Fedora Core and
+/etc/X11/Xsession.d on Debian.
+For XIM servers, you will have to provide symlinks for them
+with ll_CC style of locale on /etc/X11/xinit/xinput.d by
+default (it's configurable with --with-xinputdir option). if
+your system has alternatives system, it might stands to do
+so.
+
+What variables are available for the IM specific configuration?
+==================================================================
+XIM
+	For settings of XIM. actually it will be used like
+	XMODIFIERS=@im=$XIM.
+
+GTK_IM_MODULE
+	For GTK+ immodule.
+
+QT_IM_MODULE
+	For Qt immodule.
+
+IM_CHOOSER_IGNORE_ME
+	For something like that it shouldn't be chosen
+	directly but another one can handle it. if this
+	appears in IM specific configuration, IM Chooser
+	just ignore it and hide it from the custom choices.

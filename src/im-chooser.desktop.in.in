@@ -1,0 +1,10 @@
+[Desktop Entry]
+Encoding=UTF-8
+_Name=Input Method
+_Comment=Input Method configuration tool to choose the Input Method to be used or disable Input Method usage on the desktop
+Exec=im-chooser
+Icon=im-chooser.png
+Terminal=false
+Type=Application
+StartupNotify=true
+Categories=Applications;Settings;

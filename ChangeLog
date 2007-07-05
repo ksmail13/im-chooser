@@ -1,0 +1,168 @@
+2006-09-08  Akira TAGOH  <at@gclab.org>
+
+	* configure.ac: bumped to 0.3.2.
+
+	* data/im-chooser.png: added an icon from Andrew Fitzsimon
+
+	* src/main.c (main): show the window icon.
+
+	* src/im-chooser.desktop.in.in (Icon): added icon.
+
+2006-08-29  Akira TAGOH  <at@gclab.org>
+
+	* src/im-chooser.c (_im_chooser_set_menu_from_im_table): check
+	the suffix thing too.
+
+2006-08-25  Akira TAGOH  <at@gclab.org>
+
+	* src/im-chooser.desktop.in.in: removed MimeType.
+
+2006-08-15  Akira TAGOH  <at@gclab.org>
+
+	* configure.ac: bumped to 0.3.1.
+
+	* src/main.c (_real_style_set): override spacings.
+
+2006-08-07  Akira TAGOH  <at@gclab.org>
+
+	* src/main.c (main): add an icon to the log out button.
+	make a window to not resizable.
+	adjusted the border inside the window.
+
+	* src/im-chooser.c (im_chooser_get_widget): adjust a padding for
+	header.
+
+	* src/main.c (main): hide a separator.
+
+	* data/xim.in.in: fixed to reflect --xinputdir option.
+
+	* data/none.in.in: likewise.
+
+	* data/Makefile.am: install with the suffix.
+
+2006-07-25  Akira TAGOH  <at@gclab.org>
+
+	* src/im-chooser.c (im_chooser_get_widget): fixed a typo.
+
+2006-07-24  Akira TAGOH  <at@gclab.org>
+
+	* src/xinput.c (xinput_get_im_list): exactly lookup with the suffix.
+
+	* src/im-chooser.c (im_chooser_instance_init): put the xinput name
+	without the suffix.
+	(im_chooser_update_xinputrc): make a symlink with the suffix.
+
+	* src/xinput.c (xinput_get_im_list): lookup the xiput file with
+	the suffix.
+
+	* src/im-chooser.c (im_chooser_get_widget): fixed to make
+	a non-sensitive when no options available on custom.
+
+	* configure.ac: bumped to 0.3.0.
+	added --with-xinput-suffix option.
+
+	* src/im-chooser.c (im_chooser_get_widget): fixed a typo.
+
+2006-07-22  Akira TAGOH  <at@gclab.org>
+
+	* README: described more.
+
+	* data/Makefile.am (xinputdir): use $XINPUT_PATH instead.
+
+	* src/im-chooser.desktop.in (_Name): simplify the name.
+
+	* src/xinput.c (xinput_data_new): initialize the structure.
+	(xinput_data_get_value): renamed from xinput_data_get_name.
+
+	* src/im-chooser.c (im_chooser_instance_init): ignore the xinput script
+	that has IM_CHOOSER_IGNORE_ME.
+	(im_chooser_get_widget): some improvements.
+
+	* src/main.c (main): swaped the buttons.
+
+2006-07-21  Akira TAGOH  <at@gclab.org>
+
+	* src/im-chooser.c (im_chooser_get_widget): show the note.
+
+	* src/main.c (_im_changed_cb): new function.
+	(_dialog_response_cb): support the logout button.
+	(_dialog_response_cb): removed the message dialog to be notified.
+
+	* configure.ac: check libgnomeui.
+
+	* src/im-chooser.[ch]: gobject'ized.
+
+	* src/im-chooser.c (im_chooser_get_widget): stop to use GtkFrame.
+
+2006-07-12  Akira TAGOH  <at@gclab.org>
+
+	* configure.ac: bumped to 0.2.2.
+
+	* src/im-chooser.c (_im_chooser_option_changed_cb): ignore flapping
+	the option.
+	(_im_chooser_detect_real_current_mode): check tan existance of
+	the linked file.
+
+	* src/xinput.c (xinput_data_new): don't evaluate xinput script if it
+	doesn't exist.
+
+	* src/im-chooser.c (_im_chooser_button_clicked_cb): check if menuitem
+	is valid to avoid GObject warning.
+
+	* src/main.c (_dialog_response_cb): inform a need of restarting
+	the desktop if any changes happened.
+
+	* src/im-chooser.c (im_chooser_update_xinputrc): don't make a symlink
+	if IM_MODE_SYSTEM is chosen.
+	(im_chooser_get_widget): better status to indicate what xinputrc didn't
+	found.
+	(_im_chooser_detect_current_mode): assume IM_MODE_SYSTEM if no .xinputrc.
+	(im_chooser_get_widget): disable chices if no XIM or no valid IM is
+	installed.
+	(im_chooser_update_xinputrc): create a backup file.
+
+2006-07-10  Akira TAGOH  <at@gclab.org>
+
+	* configure.ac: bumped to 0.2.1.
+
+	* src/Makefile.am: added im-chooser.desktop.
+	(EXTRA_DIST): added im-chooser.desktop.in.
+
+	* configure.ac (AC_CONFIG_FILES): added src/im-chooser.desktop.in
+
+2006-07-07  Akira TAGOH  <at@gclab.org>
+
+	* configure.ac: bumped to 0.2.0.
+
+2006-07-06  Akira TAGOH  <at@gclab.org>
+
+	* data/Makefile.am (EXTRA_DIST): added xinput.sh.
+
+	* data/xinput.sh: added.
+
+	* src/im-chooser.c (_im_chooser_detect_real_current_mode): return
+	IM_MODE_SYSTEM if the target is the global conf to check.
+	(im_chooser_get_widget): read the global conf.
+
+	* src/xinput.c (xinput_data_get_name): new function.
+
+	* src/im-chooser.c (_im_chooser_detect_real_current_mode):
+	new function.
+	(_im_chooser_set_menu_from_im_table): warns if g_get_home_dir() failed.
+	(im_chooser_get_widget): shows the system-wide configuration.
+	(im_chooser_update_xinputrc): warns if g_get_home_dir() failed.
+
+	* src/Makefile.am (INCLUDES): added XINIT_PATH definition.
+
+	* configure.ac: added --with-xinitdir option.
+
+2006-06-07  Akira TAGOH  <at@gclab.org>
+
+	* configure.ac: bump to 0.1.1.
+
+	* src/im-chooser.c (im_chooser_update_xinputrc): don't try unlink when
+	.xinputrc not found.
+
+2006-06-07  Akira TAGOH  <tagoh@redhat.com>
+
+	* configure.ac: initial release of im-chooser.
