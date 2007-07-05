@@ -1,88 +1,106 @@
+# translation of ml.po to Malayalam
 # Malayalam translations for im-chooser package.
 # Copyright (C) 2006 THE im-chooser'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the im-chooser package.
 # Automatically generated, 2006.
+# Ani Peter <apeter@redhat.com>, 2006.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: im-chooser 0.3.2\n"
+"Project-Id-Version: ml\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-09-28 14:38+0900\n"
-"PO-Revision-Date: 2006-09-28 14:38+0900\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2006-09-29 10:37+0530\n"
+"Last-Translator: Ani Peter <apeter@redhat.com>\n"
+"Language-Team: Malayalam\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.9.1\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n\n"
 
 #: ../src/im-chooser.c:489
 msgid ""
 "<small><i>Note: this change will not take effect until you next log in.</i></"
 "small>"
 msgstr ""
+"<small><i>കുറിപ്പ്: നിങ്ങള്‍ അടുത്ത തവണ ലോഗിന്‍ ചെയ്യുന്പോള്‍ മാത്രമേ ഈ മാറ്റം കംപ്യൂട്ടര്‍ "
+"അംഗീകരിക്കൂ.</i></small>"
 
 #: ../src/im-chooser.c:493
 msgid "<b>Input Method</b>"
-msgstr ""
+msgstr "<b>ഇന്‍പുട്ട് രീതി</b>"
 
 #: ../src/im-chooser.c:503
 msgid "No valid IM installed"
-msgstr ""
+msgstr "സാധുതയുളള IM ഇന്‍സ്റ്റോള്‍ ചെയ്തിട്ടില്ല"
 
 #: ../src/im-chooser.c:521
 msgid "_Follow the system-wide configuration"
-msgstr ""
+msgstr "സിസ്റ്റം-വൈഡ് ക്രമീകരണം അനുസരിച്ച് ചെയ്യുക (_F)"
 
 #: ../src/im-chooser.c:523
 msgid ""
 "Follow the system-wide input method configuration to determine which input "
 "method should be used."
 msgstr ""
+"ഏത് ഇന്‍പുട്ട് രീതി ഉപയോഗിക്കണം എന്ന് തീരുമാനിക്കുന്നതിനായി സിസ്റ്റം-വൈഡ് ഇന്‍പുട്ട് രീതിയുടെ "
+"ക്രമീകരണങ്ങള്‍ അനുസരിച്ച് പ്രവര്‍ത്തിക്കുക."
 
 #: ../src/im-chooser.c:526
 msgid "_Never use input methods"
-msgstr ""
+msgstr "ഒരിക്കലും ഇന്‍പുട്ട് രീതികള്‍ ഉപയോഗിക്കുവാന്‍ പാടില്ല (_N)"
 
 #: ../src/im-chooser.c:528
 msgid ""
 "Entirely disable input methods regardless which locale the desktop is "
 "running on."
 msgstr ""
+"ഏത് ഭാഷയിലാണ് ഡസ്ക്-ടോപ്പ് പ്രവര്‍ത്തിക്കുന്നത് എന്ന കണക്കിലെടുക്കാതെ എല്ലാ ഇന്‍പുട്ട് "
+"രീതികളും അപ്രാപ്യമാക്കുക."
 
 #: ../src/im-chooser.c:531
 msgid "_Use legacy input methods"
-msgstr ""
+msgstr "സ്വന്തമായ ഇന്‍പുട്ട് രീതികള്‍ ഉപയോഗിക്കുക (_U)"
 
 #: ../src/im-chooser.c:533
 msgid ""
 "Use X Input Method anyway. In fact, which input method will be chosen for "
 "the desktop session, depends on the desktop language."
 msgstr ""
+"എന്തായാലും X ഇന്‍പുട്ട് രീതി ഉപയോഗിക്കുക. ഡസ്ക്-ടോപ്പില്‍ ഏത് ഭാഷ ആണോ ഉപയോഗിക്കുന്നത് "
+"അതനുസരിച്ചുളള ഇന്‍പുട്ട് രീതിയാണ് ഡസ്ക്-ടോപ്പ് സെഷനില്‍ ഉപയോഗിക്കുന്നത്."
 
 #: ../src/im-chooser.c:539
 msgid "Use _custom input method"
-msgstr ""
+msgstr "ഇഷ്ടമുളള ഇന്‍പുട്ട് രീതി ഉപയോഗിക്കുക (_c)"
 
 #: ../src/im-chooser.c:541
 msgid ""
 "Use input method that you prefer regardless what input method the system "
 "recommends."
 msgstr ""
+"കംപ്യൂട്ടര്‍ നിങ്ങളോട് ഉപയോഗിക്കുവാന്‍ നിര്‍ദ്ദേശിക്കുന്ന ഇന്‍പുട്ട് രീതി അല്ലാതെ നിങ്ങള്‍ക്ക് "
+"താര്‍പര്യമുളള രീതി ഉപയോഗിക്കുക."
 
 #: ../src/main.c:123
 msgid "IM Chooser - Input Method configuration tool"
-msgstr ""
+msgstr "IM ചൂസര്‍ - ഇന്‍പുട്ട് രീതി സജ്ജമാക്കുന്ന സംവിധാനം"
 
 #: ../src/main.c:130
 msgid "_Log Out"
-msgstr ""
+msgstr "പുറത്ത് കടക്കുക (_L)"
 
 #: ../src/im-chooser.desktop.in.in.h:1
 msgid "Input Method"
-msgstr ""
+msgstr "ഇന്‍പുട്ട് രീതി"
 
 #: ../src/im-chooser.desktop.in.in.h:2
 msgid ""
 "Input Method configuration tool to choose the Input Method to be used or "
 "disable Input Method usage on the desktop"
 msgstr ""
+"ഏത് ഇന്‍പുട്ട് രീതി ഉപയോഗിക്കണം അല്ലെങ്കില്‍ ഡസ്ക്-ടോപ്പിലുളള ഇന്‍പുട്ട് രീതിയുടെ ഉപയോഗം "
+"അപ്രാപ്യമാക്കുക എന്നതിനെല്ലാം ഉപയോഗിക്കുന്ന സംവിധാനമാണ് ഇന്‍പുട്ട് രീതി ക്രമീകരണത്തിനുളള "
+"ഉപകരണം."
+
