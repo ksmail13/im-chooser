@@ -2,96 +2,98 @@
 # Punjabi translations for im-chooser package.
 # Copyright (C) 2006 Red Hat, Inc. All rights reserved.
 # This file is distributed under the same license as the im-chooser package.
+#
 # Automatically generated, 2006.
 # Jaswinder Singh <jsingh@redhat.com>, 2006.
-#
+# A S Alam <aalam@users.sf.net>, 2007.
 msgid ""
 msgstr ""
 "Project-Id-Version: pa\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-09-28 14:38+0900\n"
-"PO-Revision-Date: 2006-09-29 10:31+0530\n"
-"Last-Translator: Jaswinder Singh <jsingh@redhat.com>\n"
-"Language-Team: Punjabi <fedora-trans-pa@redhat.com>\n"
+"PO-Revision-Date: 2007-02-07 10:26+0530\n"
+"Last-Translator: A S Alam <aalam@users.sf.net>\n"
+"Language-Team: Punjabi <punjabi-l10n@lists.sf.net>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.9.1\n"
-"Plural-Forms: Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "\n"
 
 #: ../src/im-chooser.c:489
 msgid ""
 "<small><i>Note: this change will not take effect until you next log in.</i></"
 "small>"
-msgstr ""
-"<small><i>ਸੂਚਨਾ: ਇਹ ਤਬਦੀਲੀ ਤੁਹਾਡੇ ਦੁਬਾਰਾ ਲਾਗਇਨ ਹੋਣ ਤੱਕ ਲਾਗੂ ਨਹੀਂ ਹੋਵੇਗੀ।</i></small>"
+msgstr "<small><i>ਸੂਚਨਾ: ਇਹ ਤਬਦੀਲੀ ਤੁਹਾਡੇ ਮੁੜ ਲਾਗਇਨ ਹੋਣ ਤੱਕ ਲਾਗੂ ਨਹੀਂ ਹੋਵੇਗੀ।</i></small>"
 
 #: ../src/im-chooser.c:493
 msgid "<b>Input Method</b>"
-msgstr "<b>ਇੰਪੁੱਟ ਵਿਧੀ</b>"
+msgstr "<b>ਇੰਪੁੱਟ ਢੰਗ</b>"
 
 #: ../src/im-chooser.c:503
 msgid "No valid IM installed"
-msgstr "ਕੋਈ ਯੋਗ IM ਇੰਸਟਾਲ ਨਹੀਂ"
+msgstr "ਕੋਈ ਠੀਕ IM ਇੰਸਟਾਲ ਨਹੀਂ"
 
 #: ../src/im-chooser.c:521
 msgid "_Follow the system-wide configuration"
-msgstr "ਸਿਸਟਮ-ਅਨੁਕੂਲ ਸੰਰਚਨਾ ਵੇਖੋ(_F)"
+msgstr "ਪੂਰੇ ਸਿਸਟਮ ਦੀ ਸੰਰਚਨਾ ਮੁਤਾਬਕ(_F)"
 
 #: ../src/im-chooser.c:523
 msgid ""
 "Follow the system-wide input method configuration to determine which input "
 "method should be used."
-msgstr "ਪਤਾ ਕਰਨ ਲਈ ਕਿ ਕਿਹੜੀ ਇੰਪੁੱਟ ਵਿਧੀ ਵਰਤੀ ਜਾਏ ਸਿਸਟਮ-ਅਨੁਕੂਲ ਇੰਪੁੱਟ ਵਿਧੀ ਸੰਰਚਨਾ ਵੇਖੋ।"
+msgstr "ਕਿਹੜਾ ਇੰਪੁੱਟ ਢੰਗ ਵਰਤਿਆ ਜਾਵੇ, ਇਸ ਵਾਸਤੇ ਸਿਸਟਮ ਲਈ ਸੰਰਚਿਤ ਸੰਰਚਨਾ ਮੁਤਾਬਕ ਚੱਲੋ।"
 
 #: ../src/im-chooser.c:526
 msgid "_Never use input methods"
-msgstr "ਇੰਪੁੱਟ ਵਿਧੀ ਕਦੇ ਨਾ ਵਰਤੋ(_N)"
+msgstr "ਇੰਪੁੱਟ ਢੰਗ ਕਦੇ ਨਾ ਵਰਤੋ(_N)"
 
 #: ../src/im-chooser.c:528
 msgid ""
 "Entirely disable input methods regardless which locale the desktop is "
 "running on."
-msgstr "ਇਹ ਵੇਖੇ ਬਿਨਾਂ ਕਿ ਡਿਸਕਟਾਪ ਕਿਹੜਾ ਲੋਕੇਲ ਵਰਤਦਾ ਹੈ, ਇੰਪੁੱਟ ਵਿਧੀ ਪੂਰੀ ਤਰਾਂ ਅਯੋਗ ਕਰੋ।"
+msgstr "ਡਿਸਕਟਾਪ ਉੱਤੇ ਚੱਲ ਰਹੇ ਲੋਕਲੇ ਦਾ ਧਿਆਨ ਰੱਖ ਬਗੈਰ ਇੰਪੁੱਟ ਢੰਗ ਨੂੰ ਬੰਦ ਕਰ ਦਿੱਤਾ ਜਾਵੇਗਾ।"
 
 #: ../src/im-chooser.c:531
 msgid "_Use legacy input methods"
-msgstr "ਪੁਰਾਤਨ ਇੰਪੁੱਟ ਵਿਧੀ ਵਰਤੋ(_U)"
+msgstr "ਪੁਰਾਣੇ ਇੰਪੁੱਟ ਢੰਗ ਵਰਤੋਂ(_U)"
 
 #: ../src/im-chooser.c:533
 msgid ""
 "Use X Input Method anyway. In fact, which input method will be chosen for "
 "the desktop session, depends on the desktop language."
 msgstr ""
-"ਕਿਸੇ ਵੀ ਤਰਾਂ X ਇੰਪੁੱਟ ਵਿਧੀ ਵਰਤੋ। ਸਿੱਟੇ ਵਜੋਂ, ਡਿਸਕਟਾਪ ਭਾਸ਼ਾ ਤੇ ਨਿਰਭਰ ਕਰਦਾ ਹੈ ਕਿ ਡਿਸਕਟਾਪ "
-"ਸ਼ੈਸ਼ਨ ਲਈ ਕਿਹੜੀ ਇੰਪੁੱਟ ਵਿਧੀ ਚੁਣੀ ਜਾਵੇਗੀ।"
+"ਕਿਸੇ ਵੀ ਤਰ੍ਹਾਂ X ਇੰਪੁੱਟ ਢੰਗ ਵਰਤੋਂ। ਅਸਲ ਵਿੱਚ ਡਿਸਕਟਾਪ ਸ਼ੈਸ਼ਨ ਲਈ ਕਿਹੜਾ ਇੰਪੁੱਟ ਢੰਗ ਵਰਤਿਆ ਜਾਵੇਗਾ, "
+"ਇਹ ਡਿਸਕਟਾਪ (ਵੇਹੜੇ) ਦੀ ਭਾਸ਼ਾ ਉੱਤੇ ਨਿਰਭਰ ਕਰਦਾ ਹੈ।"
 
 #: ../src/im-chooser.c:539
 msgid "Use _custom input method"
-msgstr "ਪਸੰਦੀ ਦਾ ਇੰਪੁੱਟ ਵਿਧੀ ਵਰਤੋ( _c)"
+msgstr "ਪਸੰਦੀਦਾ ਇੰਪੁੱਟ ਢੰਗ ਵਰਤੋਂ(_c)"
 
 #: ../src/im-chooser.c:541
 msgid ""
 "Use input method that you prefer regardless what input method the system "
 "recommends."
-msgstr ""
-"ਇਹ ਵੇਖੇ ਬਿਨਾਂ ਕਿ ਸਿਸਟਮ ਕਿਹੜੀ ਇੰਪੁੱਟ ਵਿਧੀ ਸਿਫਾਰਸ਼ ਕਰਦਾ ਹੈ, ਇੰਪੁੱਟ ਵਿਧੀ ਵਰਤੋ ਜੋ ਤੁਸੀਂ ਚਾਹੁੰਦੇ ਹੋ।"
+msgstr "ਸਿਸਟਮ ਵਲੋਂ ਸਥਾਪਿਤ ਕੀਤੇ ਇੰਪੁੱਟ ਢੰਗ ਨੂੰ ਅਣਡਿੱਠਾ ਕਰਕੇ ਤੁਹਾਡੇ ਵਲੋਂ ਪਸੰਦ ਕੀਤਾ ਇੰਪੁੱਟ ਢੰਗ ਵਰਤੋਂ।"
 
 #: ../src/main.c:123
 msgid "IM Chooser - Input Method configuration tool"
-msgstr "IM Chooser - ਇੰਪੁੱਟ ਵਿਧੀ ਸੰਰਚਨਾ ਜੰਤਰ"
+msgstr "IM ਚੋਣਕਾਰ - ਇੰਪੁੱਟ ਢੰਗ ਸੰਰਚਨਾ ਸੰਦ"
 
 #: ../src/main.c:130
 msgid "_Log Out"
-msgstr "ਲਾਗ ਆਊਟ(_L)"
+msgstr "ਲਾਗ ਆਉਟ(_L)"
 
 #: ../src/im-chooser.desktop.in.in.h:1
 msgid "Input Method"
-msgstr "ਇੰਪੁੱਟ ਵਿਧੀ"
+msgstr "ਇੰਪੁੱਟ ਢੰਗ1"
 
 #: ../src/im-chooser.desktop.in.in.h:2
 msgid ""
 "Input Method configuration tool to choose the Input Method to be used or "
 "disable Input Method usage on the desktop"
-msgstr "ਇੰਪੁੱਟ ਵਿਧੀ ਚੁਣਨ ਜਾਂ ਡਿਸਕਟਾਪ ਉੱਪਰ ਇੰਪੁੰਟ ਵਿਧੀ ਵਰਤੋਂ ਅਯੋਗ ਕਰਨ ਲਈ ਇੰਪੁੱਟ ਵਿਧੀ ਸੰਰਚਨਾ ਜੰਤਰ"
+msgstr ""
+"ਇੰਪੁੱਟ ਢੰਗ ਸੰਰਚਨਾ ਸੰਦ ਨੂੰ ਵਰਤਣ ਵਾਸਤੇ ਇੰਪੁੱਟ ਢੰਗ ਚੁਣ ਲਈ ਜਾਂ ਡਿਸਕਟਾਪ ਵਾਸਤੇ ਇੰਪੁੱਟ ਢੰਗ ਨੂੰ ਬੰਦ "
+"ਕਰਨ ਲਈ ਵਰਤਿਆ ਜਾ ਸਕਦਾ ਹੈ।"
+
