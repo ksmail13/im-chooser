@@ -33,27 +33,31 @@ msgstr "Engin gild IM eru uppsett"
 
 #: ../src/im-chooser.c:521
 msgid "_Follow the system-wide configuration"
-msgstr ""
+msgstr "_Fylgja viðværum kerfisstillingum"
 
 #: ../src/im-chooser.c:523
 msgid ""
 "Follow the system-wide input method configuration to determine which input "
 "method should be used."
 msgstr ""
+"Notast við víðværar kerfisstillingar til að velja hvaða innsláttaraðferð "
+"á að nota."
 
 #: ../src/im-chooser.c:526
 msgid "_Never use input methods"
-msgstr ""
+msgstr "_Aldrei nota innsláttaraðferðir"
 
 #: ../src/im-chooser.c:528
 msgid ""
 "Entirely disable input methods regardless which locale the desktop is "
 "running on."
 msgstr ""
+"Slökkva alveg á innsláttaraðferðum óháð því hvaða tungumál er í notkun "
+"á skjáborðinu."
 
 #: ../src/im-chooser.c:531
 msgid "_Use legacy input methods"
-msgstr ""
+msgstr "_Nota gömlu innsláttaraðferðina"
 
 #: ../src/im-chooser.c:533
 msgid ""
