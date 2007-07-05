@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: im-chooser 0.3.2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-09-28 14:38+0900\n"
-"PO-Revision-Date: 2007-04-27 00:25+0100\n"
+"PO-Revision-Date: 2007-05-04 12:50+0100\n"
 "Last-Translator: Espen A. Stefansen <espenas@gmail.com>\n"
 "Language-Team: Norwegian/Bokmaal <i18n-nb@lister.ping.uio.no>\n"
 "MIME-Version: 1.0\n"
@@ -44,7 +44,7 @@ msgstr "_Aldri bruk inntastingsmetoder"
 
 #: ../src/im-chooser.c:528
 msgid "Entirely disable input methods regardless which locale the desktop is running on."
-msgstr ""
+msgstr "Deaktiver inntastingsmetoder helt, uansett hvilket lokale skrivebordet kjører med."
 
 #: ../src/im-chooser.c:531
 msgid "_Use legacy input methods"
@@ -76,5 +76,5 @@ msgstr "Inntastingsmetode"
 
 #: ../src/im-chooser.desktop.in.in.h:2
 msgid "Input Method configuration tool to choose the Input Method to be used or disable Input Method usage on the desktop"
-msgstr ""
+msgstr "Konfigurasjonsverktøy for Inntastingsmetode for å velge hvilken inntastingsmetode som skal brukes, eller deaktivere bruk av inntastingsmetode på skrivebordet"
 
