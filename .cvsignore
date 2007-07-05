@@ -1,0 +1,13 @@
+Makefile.in
+Makefile
+aclocal.m4
+autom4te.cache
+config*
+depcomp
+install-sh
+intl*
+libtool
+ltmain.sh
+missing
+mkinstalldirs
+stamp*

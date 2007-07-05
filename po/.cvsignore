@@ -1,0 +1,7 @@
+.intl*
+Makefile.in.in
+Makefile.in
+Makefile
+POTFILES
+stamp*
+*.gmo
