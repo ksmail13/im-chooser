@@ -1,89 +1,93 @@
+# translation of el.po to Greek
 # Greek translations for im-chooser package.
 # Copyright (C) 2006 Red Hat, Inc. All rights reserved.
 # This file is distributed under the same license as the im-chooser package.
-# Automatically generated, 2006.
 #
+# Automatically generated, 2006.
+# Dimitris Glezos <dimitris@glezos.com>, 2006.
 msgid ""
 msgstr ""
-"Project-Id-Version: im-chooser 0.3.2\n"
+"Project-Id-Version: el\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-09-28 14:38+0900\n"
-"PO-Revision-Date: 2006-09-28 14:38+0900\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2006-10-02 15:01+0100\n"
+"Last-Translator: Dimitris Glezos <dimitris@glezos.com>\n"
+"Language-Team: Greek <fedora-trans-el@redhat.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms:  nplurals=2; plural=(n != 1);\n"
+"X-Generator: KBabel 1.11.4\n"
 
 #: ../src/im-chooser.c:489
 msgid ""
 "<small><i>Note: this change will not take effect until you next log in.</i></"
 "small>"
-msgstr ""
+msgstr "<small><i>Σημείωση: αυτή η αλλαγή θα έχει αποτέλεσμα την επόμενη φορά που θα συνδεθείτε.</i></small>"
 
 #: ../src/im-chooser.c:493
 msgid "<b>Input Method</b>"
-msgstr ""
+msgstr "<b>Μέθοδος εισαγωγής</b>"
 
 #: ../src/im-chooser.c:503
 msgid "No valid IM installed"
-msgstr ""
+msgstr "Δεν υπάρχει έγκυρο IM εγκατεστημένο"
 
 #: ../src/im-chooser.c:521
 msgid "_Follow the system-wide configuration"
-msgstr ""
+msgstr "Ακολούθησε την κα_θολική ρύθμιση συστήματος"
 
 #: ../src/im-chooser.c:523
 msgid ""
 "Follow the system-wide input method configuration to determine which input "
 "method should be used."
-msgstr ""
+msgstr "Ακολούθησε τη ρύθμιση μεθόδου εισαγωγής που ισχύει σε όλο το σύστημα για επιλογή μεθόδου εισαγωγής για χρήση"
 
 #: ../src/im-chooser.c:526
 msgid "_Never use input methods"
-msgstr ""
+msgstr "Να _μη γίνει χρήση μεθόδων εισαγωγής ποτέ"
 
 #: ../src/im-chooser.c:528
 msgid ""
 "Entirely disable input methods regardless which locale the desktop is "
 "running on."
-msgstr ""
+msgstr "Απενεργοποίηση μεθόδων εισαγωγής εντελώς ανεξάρτητα του locale με το οποίο εκτελείται η επιφάνεια εργασίας."
 
 #: ../src/im-chooser.c:531
 msgid "_Use legacy input methods"
-msgstr ""
+msgstr "Χρήση παρα_δοσιακών μεθόδων εισαγωγής"
 
 #: ../src/im-chooser.c:533
 msgid ""
 "Use X Input Method anyway. In fact, which input method will be chosen for "
 "the desktop session, depends on the desktop language."
-msgstr ""
+msgstr "Χρήση της μεθόδου εισαγωγής των X. Στην πραγματικότητα, το ποια μέθοδος εισαγωγής θα επιλεγεί για τη συνεδρία επιφάνειας εργασίας θα εξαρτηθεί από τη γλώσσα της επιφάνειας."
 
 #: ../src/im-chooser.c:539
 msgid "Use _custom input method"
-msgstr ""
+msgstr "Χρήση προσαρ_μοσμένης μεθόδου εισαγωγής"
 
 #: ../src/im-chooser.c:541
 msgid ""
 "Use input method that you prefer regardless what input method the system "
 "recommends."
-msgstr ""
+msgstr "Χρήση μεθόδων εισαγωγής που εσείς προτιμάτε ανεξάρτητα με τις μεθόδους εισαγωγής που το σύστημα προτείνει."
 
 #: ../src/main.c:123
 msgid "IM Chooser - Input Method configuration tool"
-msgstr ""
+msgstr "Επιλογή IM - Εργαλείο ρύθμισης μεθόδων εισαγωγής"
 
 #: ../src/main.c:130
 msgid "_Log Out"
-msgstr ""
+msgstr "Απο_σύνδεση"
 
 #: ../src/im-chooser.desktop.in.in.h:1
 msgid "Input Method"
-msgstr ""
+msgstr "Μέθοδος εισαγωγής"
 
 #: ../src/im-chooser.desktop.in.in.h:2
 msgid ""
 "Input Method configuration tool to choose the Input Method to be used or "
 "disable Input Method usage on the desktop"
-msgstr ""
+msgstr "Εργαλείο ρύθμισης μεθόδου εισαγωγής για να επιλέξετε τη μέθοδο εισαγωγής χαρακτήρων της οποίας θα γίνει χρήση ή να απενεργοποιήσετε τη χρήση μεθόδων εισαγωγής στην επιφάνεια εργασίας."
+
