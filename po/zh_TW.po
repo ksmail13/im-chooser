@@ -4,13 +4,14 @@
 # This file is distributed under the same license as the im-chooser package.
 # Automatically generated, 2006.
 # Chester Cheng <ccheng@redhat.com>, 2006.
+# Walter Cheuk <wwycheuk@gmail.com>, 2007.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: zh_TW\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-09-28 14:38+0900\n"
-"PO-Revision-Date: 2006-09-29 01:46+1000\n"
+"PO-Revision-Date: 2007-02-05 01:46+1000\n"
 "Last-Translator: Chester Cheng <ccheng@redhat.com>\n"
 "Language-Team: Chinese, Traditional <zh_TW@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -34,7 +35,7 @@ msgstr "並未安裝有效的輸入法"
 
 #: ../src/im-chooser.c:521
 msgid "_Follow the system-wide configuration"
-msgstr "遵循系統全域設定（_F）"
+msgstr "遵循系統全域設定(_F)"
 
 #: ../src/im-chooser.c:523
 msgid ""
@@ -44,7 +45,7 @@ msgstr "遵循系統全域的輸入法設定，以決定該用哪一個輸入法
 
 #: ../src/im-chooser.c:526
 msgid "_Never use input methods"
-msgstr "永不使用輸入法（_N）"
+msgstr "永不使用輸入法(_N)"
 
 #: ../src/im-chooser.c:528
 msgid ""
@@ -54,7 +55,7 @@ msgstr "不管桌面正在執行何種語系，完全停用輸入法。"
 
 #: ../src/im-chooser.c:531
 msgid "_Use legacy input methods"
-msgstr "使用既有的輸入法（_U）"
+msgstr "使用既有的輸入法(_U)"
 
 #: ../src/im-chooser.c:533
 msgid ""
@@ -66,7 +67,7 @@ msgstr ""
 
 #: ../src/im-chooser.c:539
 msgid "Use _custom input method"
-msgstr "使用自訂的輸入法（_c）"
+msgstr "使用自訂的輸入法(_C)"
 
 #: ../src/im-chooser.c:541
 msgid ""
@@ -80,7 +81,7 @@ msgstr "IM Chooser - 輸入法設定工具"
 
 #: ../src/main.c:130
 msgid "_Log Out"
-msgstr "登出（_L）"
+msgstr "登出(_L)"
 
 #: ../src/im-chooser.desktop.in.in.h:1
 msgid "Input Method"
