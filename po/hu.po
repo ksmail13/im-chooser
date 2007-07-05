@@ -2,88 +2,102 @@
 # Copyright (C) 2006 Red Hat, Inc. All rights reserved.
 # This file is distributed under the same license as the im-chooser package.
 # Automatically generated, 2006.
+# Arpad Biro <biro_arpad@yahoo.com>, 2006.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: im-chooser 0.3.2\n"
+"Project-Id-Version: hu\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-09-28 14:38+0900\n"
-"PO-Revision-Date: 2006-09-28 14:38+0900\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2006-10-06 00:43+0200\n"
+"Last-Translator: Arpad Biro <biro_arpad@yahoo.com>\n"
+"Language-Team: Hungarian\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: KBabel 1.10.2\n"
 
 #: ../src/im-chooser.c:489
 msgid ""
 "<small><i>Note: this change will not take effect until you next log in.</i></"
 "small>"
 msgstr ""
+"<small><i>Megjegyzés: ez a módosítás nem lép érvénybe a következő "
+"bejelentkezésig.</i></small>"
 
 #: ../src/im-chooser.c:493
 msgid "<b>Input Method</b>"
-msgstr ""
+msgstr "<b>Beviteli módszer</b>"
 
 #: ../src/im-chooser.c:503
 msgid "No valid IM installed"
-msgstr ""
+msgstr "Nincs telepítve érvényes beviteli módszer"
 
 #: ../src/im-chooser.c:521
 msgid "_Follow the system-wide configuration"
-msgstr ""
+msgstr "_Rendszerszintű beállítás használata"
 
 #: ../src/im-chooser.c:523
 msgid ""
 "Follow the system-wide input method configuration to determine which input "
 "method should be used."
 msgstr ""
+"A rendszerszintű bevitelimódszer-beállítás szabja meg, hogy melyik beviteli "
+"módszer legyen használva."
 
 #: ../src/im-chooser.c:526
 msgid "_Never use input methods"
-msgstr ""
+msgstr "_Soha ne legyen használva beviteli módszer"
 
 #: ../src/im-chooser.c:528
 msgid ""
 "Entirely disable input methods regardless which locale the desktop is "
 "running on."
 msgstr ""
+"A beviteli módszerek teljes kikapcsolása - függetlenül attól, hogy a "
+"munkaasztal milyen helyi beállításokat (locale) használ."
 
 #: ../src/im-chooser.c:531
 msgid "_Use legacy input methods"
-msgstr ""
+msgstr "Ré_gebbi beviteli módszerek használata"
 
 #: ../src/im-chooser.c:533
 msgid ""
 "Use X Input Method anyway. In fact, which input method will be chosen for "
 "the desktop session, depends on the desktop language."
 msgstr ""
+"Az X rendszer beviteli módszerének használata. A munkaasztal nyelvétől függ, "
+"hogy melyik beviteli módszer lesz kiválasztva a munkamenethez."
 
 #: ../src/im-chooser.c:539
 msgid "Use _custom input method"
-msgstr ""
+msgstr "_Egyéni beviteli módszer használata"
 
 #: ../src/im-chooser.c:541
 msgid ""
 "Use input method that you prefer regardless what input method the system "
 "recommends."
 msgstr ""
+"A felhasználó által megadott beviteli módszer használata - függetlenül "
+"attól, hogy a rendszer melyik beviteli módszert választaná."
 
 #: ../src/main.c:123
 msgid "IM Chooser - Input Method configuration tool"
-msgstr ""
+msgstr "Bevitelimódszer-választó - a beviteli módszer beállítása"
 
 #: ../src/main.c:130
 msgid "_Log Out"
-msgstr ""
+msgstr "_Kilépés"
 
 #: ../src/im-chooser.desktop.in.in.h:1
 msgid "Input Method"
-msgstr ""
+msgstr "Beviteli módszer"
 
 #: ../src/im-chooser.desktop.in.in.h:2
 msgid ""
 "Input Method configuration tool to choose the Input Method to be used or "
 "disable Input Method usage on the desktop"
 msgstr ""
+"Bevitelimódszer-beállító - a használandó beviteli módszer kiválasztása, "
+"illetve a beviteli módszerek használatának kikapcsolása"
