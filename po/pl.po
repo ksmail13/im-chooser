@@ -1,16 +1,14 @@
-# Polish translations for im-chooser package.
-# Copyright (C) 2006 Red Hat, Inc. All rights reserved.
-# This file is distributed under the same license as the im-chooser package.
-# Automatically generated, 2006.
+# translation of pl.po to Polish
+# Piotr Drąg <raven@pmail.pl>, 2006.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: im-chooser 0.3.2\n"
+"Project-Id-Version: pl\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-09-28 14:38+0900\n"
-"PO-Revision-Date: 2006-09-28 14:38+0900\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2006-11-01 02:02+0200\n"
+"Last-Translator: Piotr Drąg <raven@pmail.pl>\n"
+"Language-Team: Polish <pl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -22,69 +20,81 @@ msgid ""
 "<small><i>Note: this change will not take effect until you next log in.</i></"
 "small>"
 msgstr ""
+"<small><i>Uwaga: ta zmiana zostanie uwzględniona po następnym zalogowaniu."
+"</i></small>"
 
 #: ../src/im-chooser.c:493
 msgid "<b>Input Method</b>"
-msgstr ""
+msgstr "<b>Metoda wejścia</b>"
 
 #: ../src/im-chooser.c:503
 msgid "No valid IM installed"
-msgstr ""
+msgstr "Nie zainstalowano prawidłowych IM"
 
 #: ../src/im-chooser.c:521
 msgid "_Follow the system-wide configuration"
-msgstr ""
+msgstr "_Użyj konfiguracji systemowej"
 
 #: ../src/im-chooser.c:523
 msgid ""
 "Follow the system-wide input method configuration to determine which input "
 "method should be used."
 msgstr ""
+"Użyj systemowej konfiguracji metody wejścia, aby ustalić, jaka metoda "
+"powinna być używana."
 
 #: ../src/im-chooser.c:526
 msgid "_Never use input methods"
-msgstr ""
+msgstr "_Nigdy nie używaj metod wejścia"
 
 #: ../src/im-chooser.c:528
 msgid ""
 "Entirely disable input methods regardless which locale the desktop is "
 "running on."
 msgstr ""
+"Całkowicie wyłącz metody wejścia, bez zwracania uwagi na lokalizację "
+"środowiska."
 
 #: ../src/im-chooser.c:531
 msgid "_Use legacy input methods"
-msgstr ""
+msgstr "_Użyj przestarzałych metod wejścia"
 
 #: ../src/im-chooser.c:533
 msgid ""
 "Use X Input Method anyway. In fact, which input method will be chosen for "
 "the desktop session, depends on the desktop language."
 msgstr ""
+"Użyj metody wejścia X mimo tego. Właściwie wybrana metoda wejścia dla sesji "
+"środowiska zależy od jego języka."
 
 #: ../src/im-chooser.c:539
 msgid "Use _custom input method"
-msgstr ""
+msgstr "Użyj _własnej metody wejścia"
 
 #: ../src/im-chooser.c:541
 msgid ""
 "Use input method that you prefer regardless what input method the system "
 "recommends."
 msgstr ""
+"Użyj preferowanej przez siebie metody wejścia zamiast metody rekomendowanej "
+"przez system."
 
 #: ../src/main.c:123
 msgid "IM Chooser - Input Method configuration tool"
-msgstr ""
+msgstr "Wybór IM - narzędzie konfiguracji metody wejścia"
 
 #: ../src/main.c:130
 msgid "_Log Out"
-msgstr ""
+msgstr "Wy_loguj się"
 
 #: ../src/im-chooser.desktop.in.in.h:1
 msgid "Input Method"
-msgstr ""
+msgstr "Metoda wejścia"
 
 #: ../src/im-chooser.desktop.in.in.h:2
 msgid ""
 "Input Method configuration tool to choose the Input Method to be used or "
 "disable Input Method usage on the desktop"
 msgstr ""
+"Narzędzie konfiguracji metody wejścia pozwala wybrać używaną metodę wejścia "
+"lub ją wyłączyć w środowisku"
