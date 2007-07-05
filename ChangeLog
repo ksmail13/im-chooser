@@ -1,3 +1,9 @@
+2007-01-30  Akira TAGOH  <tagoh@redhat.com>
+
+	Translation updates release.
+
+	* configure.ac: bumped to 0.3.4.
+
 2006-10-07  Akira TAGOH  <at@gclab.org>
 
 	* configure.ac: remove AM_GLIB_DEFINE_LOCALEDIR.
