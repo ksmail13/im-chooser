@@ -1,88 +1,106 @@
+# translation of or.po to Oriya
 # Oriya translations for im-chooser package.
 # Copyright (C) 2006 THE im-chooser'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the im-chooser package.
-# Automatically generated, 2006.
 #
+# Automatically generated, 2006.
+# Subhransu Behera <sbehera@redhat.com>, 2006.
 msgid ""
 msgstr ""
-"Project-Id-Version: im-chooser 0.3.2\n"
+"Project-Id-Version: or\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-09-28 14:38+0900\n"
-"PO-Revision-Date: 2006-09-28 14:38+0900\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2006-09-28 16:44+0530\n"
+"Last-Translator: Subhransu Behera <sbehera@redhat.com>\n"
+"Language-Team: Oriya <oriya-group@lists.sarovar.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: Plural-Forms: nplurals=2; plural=(n!=1);\n\n"
 
 #: ../src/im-chooser.c:489
 msgid ""
 "<small><i>Note: this change will not take effect until you next log in.</i></"
 "small>"
 msgstr ""
+"<small><i>ଟିପ୍ପଣୀ: ଆପଣଙ୍କ ପରବର୍ତ୍ତୀ ଲଗଇନ ପର୍ଯ୍ଯନ୍ତ ଏହି ପରିବର୍ତ୍ତନଟି ପ୍ରଭାବିତ ହେବନାହିଁ।</i></"
+"small>"
 
 #: ../src/im-chooser.c:493
 msgid "<b>Input Method</b>"
-msgstr ""
+msgstr "<b>ନିବେଶ ପ୍ରଣାଳୀ</b>"
 
 #: ../src/im-chooser.c:503
 msgid "No valid IM installed"
-msgstr ""
+msgstr "କୌଣସି ବୈଧ ନିବେଶ ପ୍ରଣାଳୀ ସ୍ଥାପିତ ହୋଇନାହିଁ"
 
 #: ../src/im-chooser.c:521
 msgid "_Follow the system-wide configuration"
-msgstr ""
+msgstr "ତନ୍ତ୍ର-ବ୍ଯାପି ବିନ୍ଯାସକୁ ଅନୁକରଣ କରନ୍ତୁ (_F)"
 
 #: ../src/im-chooser.c:523
 msgid ""
 "Follow the system-wide input method configuration to determine which input "
 "method should be used."
 msgstr ""
+"କେଉଁ ନିବେଶ ପ୍ରଣାଳୀକୁ ବ୍ଯବହାର କରାଯିବ ତାହା ସ୍ଥିର କରିବା ପାଇଁ ତନ୍ତ୍ର ବ୍ଯାପି ନିବେଶ ପ୍ରଣାଳୀ "
+"ବିନ୍ଯାସକୁ ଅନୁକରଣ କରନ୍ତୁ।"
 
 #: ../src/im-chooser.c:526
 msgid "_Never use input methods"
-msgstr ""
+msgstr "କଦାପି ନିବେଶ ପ୍ରଣାଳୀ ମାନଙ୍କୁ ବ୍ଯବହାର କରନ୍ତୁ ନାହିଁ (_N)"
 
 #: ../src/im-chooser.c:528
 msgid ""
 "Entirely disable input methods regardless which locale the desktop is "
 "running on."
 msgstr ""
+"ଡେସ୍କଟପଟି କେଉଁ ଲୋକେଲକୁ ବ୍ଯବହାର କରୁଅଛି ତାହା ଉପରେ ଦୃଷ୍ଟିପାତ ନ କରି "
+"ସମ୍ପୂର୍ଣ୍ଣ ନିବେଶ ପ୍ରଣାଳୀକୁ ନିଷ୍କ୍ରିୟ କରିଦିଅନ୍ତୁ।"
 
 #: ../src/im-chooser.c:531
 msgid "_Use legacy input methods"
-msgstr ""
+msgstr "ପୈତୃକ ନିବେଶ ପ୍ରଣାଳୀକୁ ବ୍ଯବହାର କରନ୍ତୁ (_U)"
 
 #: ../src/im-chooser.c:533
 msgid ""
 "Use X Input Method anyway. In fact, which input method will be chosen for "
 "the desktop session, depends on the desktop language."
 msgstr ""
+"ଯେ କୌଣସି ଉପାୟରେ X ନିବେଶ ପ୍ରଣାଳୀକୁ ବ୍ଯବହାର କରନ୍ତୁ। ବାସ୍ତବରେ, ଡେସ୍କଟପ "
+"ଅଧିବେଶନ ପାଇଁ କେଉଁ ନିବେଶ ପ୍ରଣାଳୀକୁ ବ୍ଯବହାର କରାଯିବ ତାହା ଡେସ୍କଟପ ଭାଷା ଉପରେ "
+"ନିର୍ଭର କରିଥାଏ।"
 
 #: ../src/im-chooser.c:539
 msgid "Use _custom input method"
-msgstr ""
+msgstr "ଇଚ୍ଛାରୂପଣ ନିବେଶ ପ୍ରଣାଳୀକୁ ବ୍ଯବହାର କରନ୍ତୁ (_c)"
 
 #: ../src/im-chooser.c:541
 msgid ""
 "Use input method that you prefer regardless what input method the system "
 "recommends."
 msgstr ""
+"ତନ୍ତ୍ର ପରାମର୍ଶ କରୁଥିବା ନିବେଶ ପ୍ରଣାଳୀକୁ ଦୃଷ୍ଟିପାତ ନ କରି ଆପଣଙ୍କ ପସନ୍ଦ କରୁଥିବା "
+"ନିବେଶ ପ୍ରଣାଳୀକୁ ବ୍ଯବହାର କରନ୍ତୁ।"
 
 #: ../src/main.c:123
 msgid "IM Chooser - Input Method configuration tool"
-msgstr ""
+msgstr "ନିବେଶ ପ୍ରଣାଳୀ ଚୟକ - ନିବେଶ ପ୍ରଣାଳୀ ବିନ୍ଯାସ ଉପକରଣ"
 
 #: ../src/main.c:130
 msgid "_Log Out"
-msgstr ""
+msgstr "ଲଗଆଉଟ କରନ୍ତୁ (_L)"
 
 #: ../src/im-chooser.desktop.in.in.h:1
 msgid "Input Method"
-msgstr ""
+msgstr "ନିବେଶ ପ୍ରଣାଳୀ"
 
 #: ../src/im-chooser.desktop.in.in.h:2
 msgid ""
 "Input Method configuration tool to choose the Input Method to be used or "
 "disable Input Method usage on the desktop"
 msgstr ""
+"ନିବେଶ ପ୍ରଣାଳୀକୁ ଚୟନ କରୁଥିବା ନିବେଶ ପ୍ରଣାଳୀ ବିନ୍ଯାସ ଉପକରଣକୁ ବ୍ଯବହାର "
+"କରନ୍ତୁ କିମ୍ବା ଡେସ୍କଟପରେ ନିବେଶ ପ୍ରଣାଳୀର ବ୍ଯବହାର ବିଧିକୁ ନିଷ୍କ୍ରିୟ କରନ୍ତୁ"
+
