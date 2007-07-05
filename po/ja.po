@@ -1,26 +1,28 @@
+# translation of ja.po to Japanese
 # im-chooser
 # Copyright (C) 2006 Red Hat, Inc. All rights reserved.
 # This file is distributed under the same license as the PACKAGE package.
 # Akira TAGOH <tagoh@redhat.com>, 2006.
+# Kiyoto James Hashida <khashida@redhat.com>, 2006.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: im-chooser 0.2.2\n"
+"Project-Id-Version: ja\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-09-28 14:38+0900\n"
-"PO-Revision-Date: 2006-07-22 13:25+0900\n"
-"Last-Translator: Akira TAGOH <tagoh@redhat.com>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2006-12-15 09:46\n"
+"Last-Translator: Kiyoto James Hashida <khashida@redhat.com>\n"
+"Language-Team: Japanese <ja@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.9.1\n"
 
 #: ../src/im-chooser.c:489
 msgid ""
 "<small><i>Note: this change will not take effect until you next log in.</i></"
 "small>"
-msgstr ""
-"<small><i>注意: この変更は次回ログインするまで反映されません。</i></small>"
+msgstr "<small><i>注記: この変更は次回ログインするまで反映されません。</i></small>"
 
 #: ../src/im-chooser.c:493
 msgid "<b>Input Method</b>"
@@ -95,3 +97,4 @@ msgid ""
 msgstr ""
 "デスクトップ上で使われる入力メソッドの選択もしくは無効にするための入力メソッ"
 "ド設定ツールです。"
+
