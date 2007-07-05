@@ -4,20 +4,21 @@
 # This file is distributed under the same license as the im-chooser package.
 # Automatically generated, 2006.
 # Valnir Ferreira Jr. <vferreir@redhat.com>, 2006.
-#
+# Igor Pires Soares <igor@projetofedora.org>, 2007.
+# 
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: pt_BR\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-09-28 14:38+0900\n"
-"PO-Revision-Date: 2006-09-29 10:01+1000\n"
-"Last-Translator: Valnir Ferreira Jr. <vferreir@redhat.com>\n"
-"Language-Team: Brazilian Portuguese\n"
+"PO-Revision-Date: 2007-03-25 21:33-0300\n"
+"Last-Translator: Igor Pires Soares <igor@projetofedora.org>\n"
+"Language-Team: Brazilian Portuguese <Fedora-trans-pt_br@redhat.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: KBabel 1.9.1\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);"
 
 #: ../src/im-chooser.c:489
 msgid ""
@@ -33,7 +34,7 @@ msgstr "<b>Método de Entrada</b>"
 
 #: ../src/im-chooser.c:503
 msgid "No valid IM installed"
-msgstr "Nenhum método de entrada instalado"
+msgstr "Nenhum método de entrada válido instalado"
 
 #: ../src/im-chooser.c:521
 msgid "_Follow the system-wide configuration"
@@ -44,8 +45,8 @@ msgid ""
 "Follow the system-wide input method configuration to determine which input "
 "method should be used."
 msgstr ""
-"Seguir a configuração global do sistema para determinar o método de entrada "
-"a ser usado."
+"Seguir a configuração global do sistema para determinar qual método de entrada "
+"deve ser usado."
 
 #: ../src/im-chooser.c:526
 msgid "_Never use input methods"
@@ -56,8 +57,8 @@ msgid ""
 "Entirely disable input methods regardless which locale the desktop is "
 "running on."
 msgstr ""
-"Desabilitar totalmente métodos de entrada independentemente do idioma da "
-"área de trabalho."
+"Desabilitar totalmente os métodos de entrada independentemente do idioma do "
+"ambiente de trabalho."
 
 #: ../src/im-chooser.c:531
 msgid "_Use legacy input methods"
@@ -68,9 +69,8 @@ msgid ""
 "Use X Input Method anyway. In fact, which input method will be chosen for "
 "the desktop session, depends on the desktop language."
 msgstr ""
-"Usar método de entrada do X assim mesmo. Na verdade, o método de entrada a "
-"ser escolhido para a sessão na área de trabalho depende do idioma usado na "
-"mesma."
+"Usar o método de entrada do X assim mesmo. Na verdade, o método de entrada a ser"
+"escolhido para a sessão do ambiente de trabalho depende do idioma usado no mesmo."
 
 #: ../src/im-chooser.c:539
 msgid "Use _custom input method"
@@ -102,4 +102,5 @@ msgid ""
 "disable Input Method usage on the desktop"
 msgstr ""
 "Ferramenta de configuração para escolher ou desabilitar o método de entrada "
-"a ser usado na área de trabalho"
+"a ser usado no ambiente de trabalho"
+
