@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: im-chooser 0.3.2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-09-28 14:38+0900\n"
-"PO-Revision-Date: 2006-09-29 00:46+0100\n"
+"PO-Revision-Date: 2006-10-01 03:28+0100\n"
 "Last-Translator: Renato Pavicic <renato@translator-shop.org>\n"
 "Language-Team: CROATIAN <www.translator-shop.org>\n"
 "MIME-Version: 1.0\n"
@@ -74,5 +74,5 @@ msgstr "Način unosa"
 
 #: ../src/im-chooser.desktop.in.in.h:2
 msgid "Input Method configuration tool to choose the Input Method to be used or disable Input Method usage on the desktop"
-msgstr "Konfiguracijski alat Načina Unosa ima namjenu odabira načina unosa koji će bitti upotrebljavan ili onemogućavanja upotrebe načina unosa na radnoj površini"
+msgstr "Konfiguracijski alat Načina Unosa ima namjenu odabira načina unosa koji će biti upotrebljavan ili onemogućavanja upotrebe načina unosa na radnoj površini"
 
