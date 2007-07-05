@@ -1,3 +1,4 @@
+# translation of fr.po to French
 # translation of fr.po to
 # French translations for im-chooser package.
 # Copyright (C) 2006 THE im-chooser'S COPYRIGHT HOLDER
@@ -5,14 +6,15 @@
 #
 # Automatically generated, 2006.
 # JAILLET Patrick <ap3demak@gmail.com>, 2006.
+# Thomas Canniot <thomas.canniot@laposte.net>, 2006.
 msgid ""
 msgstr ""
 "Project-Id-Version: fr\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-09-28 14:38+0900\n"
-"PO-Revision-Date: 2006-09-28 18:07+0200\n"
-"Last-Translator: JAILLET Patrick <ap3demak@gmail.com>\n"
-"Language-Team:  <fr@li.org>\n"
+"PO-Revision-Date: 2006-09-29 01:13+0200\n"
+"Last-Translator: Thomas Canniot <thomas.canniot@laposte.net>\n"
+"Language-Team: French\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -24,70 +26,72 @@ msgid ""
 "<small><i>Note: this change will not take effect until you next log in.</i></"
 "small>"
 msgstr ""
+"<small><i>Note : ce changement ne prendra effet qu'à votre prochaine connexion.</i></"
+"small>"
 
 #: ../src/im-chooser.c:493
 msgid "<b>Input Method</b>"
-msgstr "<b>Méthode d'entrée</b>"
+msgstr "<b>Méthode de saisie</b>"
 
 #: ../src/im-chooser.c:503
 msgid "No valid IM installed"
-msgstr ""
+msgstr "Aucune méthode de saisie valide n'est installée"
 
 #: ../src/im-chooser.c:521
 msgid "_Follow the system-wide configuration"
-msgstr ""
+msgstr "_Garder la configuration system-wide"
 
 #: ../src/im-chooser.c:523
 msgid ""
 "Follow the system-wide input method configuration to determine which input "
 "method should be used."
-msgstr ""
+msgstr "Garder la configuration de la méthode de saisie system-wide pour déterminer la méthode à utiliser."
 
 #: ../src/im-chooser.c:526
 msgid "_Never use input methods"
-msgstr ""
+msgstr "_Ne jamais utiliser de méthode de saisie"
 
 #: ../src/im-chooser.c:528
 msgid ""
 "Entirely disable input methods regardless which locale the desktop is "
 "running on."
-msgstr ""
+msgstr "Désactiver complètement les méthodes de saisie quelque soit la langue du système"
 
 #: ../src/im-chooser.c:531
 msgid "_Use legacy input methods"
-msgstr ""
+msgstr "_Utiliser d'anciennes méthodes de saisie"
 
 #: ../src/im-chooser.c:533
 msgid ""
 "Use X Input Method anyway. In fact, which input method will be chosen for "
 "the desktop session, depends on the desktop language."
-msgstr ""
+msgstr "Utiliser la méthode de saisie de X malgré tout. La méthode de saisie sera choisie pour la session en fonction de la langue du système"
 
 #: ../src/im-chooser.c:539
 msgid "Use _custom input method"
-msgstr ""
+msgstr "Utiliser une méthode de saisie _personnalisée"
 
 #: ../src/im-chooser.c:541
 msgid ""
 "Use input method that you prefer regardless what input method the system "
 "recommends."
-msgstr ""
+msgstr "Utiliser votre méthode de saisie préférée dans tenir compte de la méthode de saisie recommandée par le système."
 
 #: ../src/main.c:123
 msgid "IM Chooser - Input Method configuration tool"
-msgstr ""
+msgstr "IM Chooser - Outil de configuration de méthode de saisie"
 
 #: ../src/main.c:130
 msgid "_Log Out"
-msgstr ""
+msgstr "_Se déconnecter"
 
 #: ../src/im-chooser.desktop.in.in.h:1
 msgid "Input Method"
-msgstr "Méthode d'entrée"
+msgstr "Méthode de saisie"
 
 #: ../src/im-chooser.desktop.in.in.h:2
 msgid ""
 "Input Method configuration tool to choose the Input Method to be used or "
 "disable Input Method usage on the desktop"
-msgstr ""
+msgstr "Outil de configuration de méthode de saisie pour choisir la méthode à utiliser ou pour désactiver l'utilisation de méthodes de saisie sur le système."
 
