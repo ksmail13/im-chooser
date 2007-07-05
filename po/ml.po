@@ -1,6 +1,6 @@
 # translation of ml.po to Malayalam
 # Malayalam translations for im-chooser package.
-# Copyright (C) 2006 THE im-chooser'S COPYRIGHT HOLDER
+# Copyright (C) 2006 Red Hat, Inc. All rights reserved.
 # This file is distributed under the same license as the im-chooser package.
 # Automatically generated, 2006.
 # Ani Peter <apeter@redhat.com>, 2006.
@@ -17,7 +17,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.9.1\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"\n"
 
 #: ../src/im-chooser.c:489
 msgid ""
@@ -56,8 +57,8 @@ msgid ""
 "Entirely disable input methods regardless which locale the desktop is "
 "running on."
 msgstr ""
-"ഏത് ഭാഷയിലാണ് ഡസ്ക്-ടോപ്പ് പ്രവര്‍ത്തിക്കുന്നത് എന്ന കണക്കിലെടുക്കാതെ എല്ലാ ഇന്‍പുട്ട് "
-"രീതികളും അപ്രാപ്യമാക്കുക."
+"ഏത് ഭാഷയിലാണ് ഡസ്ക്-ടോപ്പ് പ്രവര്‍ത്തിക്കുന്നത് എന്ന കണക്കിലെടുക്കാതെ എല്ലാ ഇന്‍പുട്ട് രീതികളും "
+"അപ്രാപ്യമാക്കുക."
 
 #: ../src/im-chooser.c:531
 msgid "_Use legacy input methods"
@@ -80,8 +81,8 @@ msgid ""
 "Use input method that you prefer regardless what input method the system "
 "recommends."
 msgstr ""
-"കംപ്യൂട്ടര്‍ നിങ്ങളോട് ഉപയോഗിക്കുവാന്‍ നിര്‍ദ്ദേശിക്കുന്ന ഇന്‍പുട്ട് രീതി അല്ലാതെ നിങ്ങള്‍ക്ക് "
-"താര്‍പര്യമുളള രീതി ഉപയോഗിക്കുക."
+"കംപ്യൂട്ടര്‍ നിങ്ങളോട് ഉപയോഗിക്കുവാന്‍ നിര്‍ദ്ദേശിക്കുന്ന ഇന്‍പുട്ട് രീതി അല്ലാതെ നിങ്ങള്‍ക്ക് താര്‍പര്യമുളള "
+"രീതി ഉപയോഗിക്കുക."
 
 #: ../src/main.c:123
 msgid "IM Chooser - Input Method configuration tool"
@@ -103,4 +104,3 @@ msgstr ""
 "ഏത് ഇന്‍പുട്ട് രീതി ഉപയോഗിക്കണം അല്ലെങ്കില്‍ ഡസ്ക്-ടോപ്പിലുളള ഇന്‍പുട്ട് രീതിയുടെ ഉപയോഗം "
 "അപ്രാപ്യമാക്കുക എന്നതിനെല്ലാം ഉപയോഗിക്കുന്ന സംവിധാനമാണ് ഇന്‍പുട്ട് രീതി ക്രമീകരണത്തിനുളള "
 "ഉപകരണം."
-

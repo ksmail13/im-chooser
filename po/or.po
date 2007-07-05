@@ -1,6 +1,6 @@
 # translation of or.po to Oriya
 # Oriya translations for im-chooser package.
-# Copyright (C) 2006 THE im-chooser'S COPYRIGHT HOLDER
+# Copyright (C) 2006 Red Hat, Inc. All rights reserved.
 # This file is distributed under the same license as the im-chooser package.
 #
 # Automatically generated, 2006.
@@ -17,7 +17,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.11.4\n"
-"Plural-Forms: Plural-Forms: nplurals=2; plural=(n!=1);\n\n"
+"Plural-Forms: Plural-Forms: nplurals=2; plural=(n!=1);\n"
+"\n"
 
 #: ../src/im-chooser.c:489
 msgid ""
@@ -44,8 +45,8 @@ msgid ""
 "Follow the system-wide input method configuration to determine which input "
 "method should be used."
 msgstr ""
-"କେଉଁ ନିବେଶ ପ୍ରଣାଳୀକୁ ବ୍ଯବହାର କରାଯିବ ତାହା ସ୍ଥିର କରିବା ପାଇଁ ତନ୍ତ୍ର ବ୍ଯାପି ନିବେଶ ପ୍ରଣାଳୀ "
-"ବିନ୍ଯାସକୁ ଅନୁକରଣ କରନ୍ତୁ।"
+"କେଉଁ ନିବେଶ ପ୍ରଣାଳୀକୁ ବ୍ଯବହାର କରାଯିବ ତାହା ସ୍ଥିର କରିବା ପାଇଁ ତନ୍ତ୍ର ବ୍ଯାପି ନିବେଶ ପ୍ରଣାଳୀ ବିନ୍ଯାସକୁ "
+"ଅନୁକରଣ କରନ୍ତୁ।"
 
 #: ../src/im-chooser.c:526
 msgid "_Never use input methods"
@@ -56,8 +57,8 @@ msgid ""
 "Entirely disable input methods regardless which locale the desktop is "
 "running on."
 msgstr ""
-"ଡେସ୍କଟପଟି କେଉଁ ଲୋକେଲକୁ ବ୍ଯବହାର କରୁଅଛି ତାହା ଉପରେ ଦୃଷ୍ଟିପାତ ନ କରି "
-"ସମ୍ପୂର୍ଣ୍ଣ ନିବେଶ ପ୍ରଣାଳୀକୁ ନିଷ୍କ୍ରିୟ କରିଦିଅନ୍ତୁ।"
+"ଡେସ୍କଟପଟି କେଉଁ ଲୋକେଲକୁ ବ୍ଯବହାର କରୁଅଛି ତାହା ଉପରେ ଦୃଷ୍ଟିପାତ ନ କରି ସମ୍ପୂର୍ଣ୍ଣ ନିବେଶ ପ୍ରଣାଳୀକୁ "
+"ନିଷ୍କ୍ରିୟ କରିଦିଅନ୍ତୁ।"
 
 #: ../src/im-chooser.c:531
 msgid "_Use legacy input methods"
@@ -68,9 +69,8 @@ msgid ""
 "Use X Input Method anyway. In fact, which input method will be chosen for "
 "the desktop session, depends on the desktop language."
 msgstr ""
-"ଯେ କୌଣସି ଉପାୟରେ X ନିବେଶ ପ୍ରଣାଳୀକୁ ବ୍ଯବହାର କରନ୍ତୁ। ବାସ୍ତବରେ, ଡେସ୍କଟପ "
-"ଅଧିବେଶନ ପାଇଁ କେଉଁ ନିବେଶ ପ୍ରଣାଳୀକୁ ବ୍ଯବହାର କରାଯିବ ତାହା ଡେସ୍କଟପ ଭାଷା ଉପରେ "
-"ନିର୍ଭର କରିଥାଏ।"
+"ଯେ କୌଣସି ଉପାୟରେ X ନିବେଶ ପ୍ରଣାଳୀକୁ ବ୍ଯବହାର କରନ୍ତୁ। ବାସ୍ତବରେ, ଡେସ୍କଟପ ଅଧିବେଶନ ପାଇଁ କେଉଁ "
+"ନିବେଶ ପ୍ରଣାଳୀକୁ ବ୍ଯବହାର କରାଯିବ ତାହା ଡେସ୍କଟପ ଭାଷା ଉପରେ ନିର୍ଭର କରିଥାଏ।"
 
 #: ../src/im-chooser.c:539
 msgid "Use _custom input method"
@@ -81,8 +81,8 @@ msgid ""
 "Use input method that you prefer regardless what input method the system "
 "recommends."
 msgstr ""
-"ତନ୍ତ୍ର ପରାମର୍ଶ କରୁଥିବା ନିବେଶ ପ୍ରଣାଳୀକୁ ଦୃଷ୍ଟିପାତ ନ କରି ଆପଣଙ୍କ ପସନ୍ଦ କରୁଥିବା "
-"ନିବେଶ ପ୍ରଣାଳୀକୁ ବ୍ଯବହାର କରନ୍ତୁ।"
+"ତନ୍ତ୍ର ପରାମର୍ଶ କରୁଥିବା ନିବେଶ ପ୍ରଣାଳୀକୁ ଦୃଷ୍ଟିପାତ ନ କରି ଆପଣଙ୍କ ପସନ୍ଦ କରୁଥିବା ନିବେଶ ପ୍ରଣାଳୀକୁ "
+"ବ୍ଯବହାର କରନ୍ତୁ।"
 
 #: ../src/main.c:123
 msgid "IM Chooser - Input Method configuration tool"
@@ -101,6 +101,5 @@ msgid ""
 "Input Method configuration tool to choose the Input Method to be used or "
 "disable Input Method usage on the desktop"
 msgstr ""
-"ନିବେଶ ପ୍ରଣାଳୀକୁ ଚୟନ କରୁଥିବା ନିବେଶ ପ୍ରଣାଳୀ ବିନ୍ଯାସ ଉପକରଣକୁ ବ୍ଯବହାର "
-"କରନ୍ତୁ କିମ୍ବା ଡେସ୍କଟପରେ ନିବେଶ ପ୍ରଣାଳୀର ବ୍ଯବହାର ବିଧିକୁ ନିଷ୍କ୍ରିୟ କରନ୍ତୁ"
-
+"ନିବେଶ ପ୍ରଣାଳୀକୁ ଚୟନ କରୁଥିବା ନିବେଶ ପ୍ରଣାଳୀ ବିନ୍ଯାସ ଉପକରଣକୁ ବ୍ଯବହାର କରନ୍ତୁ କିମ୍ବା ଡେସ୍କଟପରେ "
+"ନିବେଶ ପ୍ରଣାଳୀର ବ୍ଯବହାର ବିଧିକୁ ନିଷ୍କ୍ରିୟ କରନ୍ତୁ"

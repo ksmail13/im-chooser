@@ -1,6 +1,6 @@
 # translation of es.po to Spanish
 # Spanish translations for im-chooser package.
-# Copyright (C) 2006 THE im-chooser'S COPYRIGHT HOLDER
+# Copyright (C) 2006 Red Hat, Inc. All rights reserved.
 # This file is distributed under the same license as the im-chooser package.
 # Automatically generated, 2006.
 # Manuel Ospina <mospina@redhat.com>, 2006.
@@ -20,8 +20,12 @@ msgstr ""
 "X-Generator: KBabel 1.9.1\n"
 
 #: ../src/im-chooser.c:489
-msgid "<small><i>Note: this change will not take effect until you next log in.</i></small>"
-msgstr "<small><i>Nota: este cambio no tendrá efecto hasta que no reinicie la sesión.</i></small>"
+msgid ""
+"<small><i>Note: this change will not take effect until you next log in.</i></"
+"small>"
+msgstr ""
+"<small><i>Nota: este cambio no tendrá efecto hasta que no reinicie la sesión."
+"</i></small>"
 
 #: ../src/im-chooser.c:493
 msgid "<b>Input Method</b>"
@@ -36,32 +40,49 @@ msgid "_Follow the system-wide configuration"
 msgstr "Seguir la con_figuración de todo el sistema"
 
 #: ../src/im-chooser.c:523
-msgid "Follow the system-wide input method configuration to determine which input method should be used."
-msgstr "Seguir la configuración del método de entrada para todo el sistema para determinar qué método de entrada debe ser usado."
+msgid ""
+"Follow the system-wide input method configuration to determine which input "
+"method should be used."
+msgstr ""
+"Seguir la configuración del método de entrada para todo el sistema para "
+"determinar qué método de entrada debe ser usado."
 
 #: ../src/im-chooser.c:526
 msgid "_Never use input methods"
 msgstr "_Nunca usar métodos de entrada"
 
 #: ../src/im-chooser.c:528
-msgid "Entirely disable input methods regardless which locale the desktop is running on."
-msgstr "Deshabilitar completamente los métodos de entrada, sin importar la configuración regional del escritorio."
+msgid ""
+"Entirely disable input methods regardless which locale the desktop is "
+"running on."
+msgstr ""
+"Deshabilitar completamente los métodos de entrada, sin importar la "
+"configuración regional del escritorio."
 
 #: ../src/im-chooser.c:531
 msgid "_Use legacy input methods"
 msgstr "_Usar métodos de entrada legados"
 
 #: ../src/im-chooser.c:533
-msgid "Use X Input Method anyway. In fact, which input method will be chosen for the desktop session, depends on the desktop language."
-msgstr "Usar el Método de Entrada X de todas formas. En realidad, el método de entrada que se usará para la sesión de escritorio depende del idioma del escritorio."
+msgid ""
+"Use X Input Method anyway. In fact, which input method will be chosen for "
+"the desktop session, depends on the desktop language."
+msgstr ""
+"Usar el Método de Entrada X de todas formas. En realidad, el método de "
+"entrada que se usará para la sesión de escritorio depende del idioma del "
+"escritorio."
 
 #: ../src/im-chooser.c:539
 msgid "Use _custom input method"
 msgstr "U_sar método de entrada personalizado"
 
 #: ../src/im-chooser.c:541
-msgid "Use input method that you prefer regardless what input method the system recommends."
-msgstr "Usar el método de entrada que Ud. prefiere sin importar el método de entrada recomendado por el sistema."
+msgid ""
+"Use input method that you prefer regardless what input method the system "
+"recommends."
+msgstr ""
+"Usar el método de entrada que Ud. prefiere sin importar el método de entrada "
+"recomendado por el sistema."
 
 #: ../src/main.c:123
 msgid "IM Chooser - Input Method configuration tool"
@@ -76,6 +97,9 @@ msgid "Input Method"
 msgstr "Método de Entrada"
 
 #: ../src/im-chooser.desktop.in.in.h:2
-msgid "Input Method configuration tool to choose the Input Method to be used or disable Input Method usage on the desktop"
-msgstr "Herramienta de configuración del Método de Entrada para elección del mismo o para deshabilitar el uso de métodos de entrada en el escritorio"
-
+msgid ""
+"Input Method configuration tool to choose the Input Method to be used or "
+"disable Input Method usage on the desktop"
+msgstr ""
+"Herramienta de configuración del Método de Entrada para elección del mismo o "
+"para deshabilitar el uso de métodos de entrada en el escritorio"

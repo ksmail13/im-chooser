@@ -1,37 +1,8 @@
-# translation of it.po to 
-# translation of it.po to
-# translation of it.po to
-# translation of it.po to
-# translation of it.po to
-# translation of it.po to
-# translation of it.po to
-# translation of it.po to
+# translation of it.po to Italian
 # Italian translations for im-chooser package.
-# Copyright (C) 2006 THE im-chooser'S COPYRIGHT HOLDER
+# Copyright (C) 2006 Red Hat, Inc. All rights reserved.
 # This file is distributed under the same license as the im-chooser package.
 # Automatically generated, 2006.
-# , 2006.
-# , 2006.
-# , 2006.
-# , 2006.
-# , 2006.
-# , 2006.
-# , 2006.
-# , 2006.
-# , 2006.
-# , 2006.
-# , 2006.
-# , 2006.
-# , 2006.
-# , 2006.
-# , 2006.
-# , 2006.
-# , 2006.
-# , 2006.
-# , 2006.
-# , 2006.
-# , 2006.
-# , 2006.
 #
 msgid ""
 msgstr ""
@@ -51,7 +22,9 @@ msgstr ""
 msgid ""
 "<small><i>Note: this change will not take effect until you next log in.</i></"
 "small>"
-msgstr "<small><i>Nota Bene: questa modifica non verrà implementata fino al vostro successivo login.</i></small>"
+msgstr ""
+"<small><i>Nota Bene: questa modifica non verrà implementata fino al vostro "
+"successivo login.</i></small>"
 
 #: ../src/im-chooser.c:493
 msgid "<b>Input Method</b>"
@@ -69,7 +42,9 @@ msgstr "_Segui la configurazione di tutto il sistema"
 msgid ""
 "Follow the system-wide input method configuration to determine which input "
 "method should be used."
-msgstr "Segui la configurazione dell'input method di tutto il sistema per determinare quale metodo d'input deve essere usato."
+msgstr ""
+"Segui la configurazione dell'input method di tutto il sistema per "
+"determinare quale metodo d'input deve essere usato."
 
 #: ../src/im-chooser.c:526
 msgid "_Never use input methods"
@@ -79,7 +54,9 @@ msgstr "_Non usare mai gli input method"
 msgid ""
 "Entirely disable input methods regardless which locale the desktop is "
 "running on."
-msgstr "Disabilita totalmente gli input method senza considerare su quale locale il desktop è in esecuzione."
+msgstr ""
+"Disabilita totalmente gli input method senza considerare su quale locale il "
+"desktop è in esecuzione."
 
 #: ../src/im-chooser.c:531
 msgid "_Use legacy input methods"
@@ -89,7 +66,9 @@ msgstr "_Utilizza i legacy input method"
 msgid ""
 "Use X Input Method anyway. In fact, which input method will be chosen for "
 "the desktop session, depends on the desktop language."
-msgstr "Usa comunque X Input Method. Il tipo di input method scelto per la sessione desktop dipenderà dalla lingua del desktop."
+msgstr ""
+"Usa comunque X Input Method. Il tipo di input method scelto per la sessione "
+"desktop dipenderà dalla lingua del desktop."
 
 #: ../src/im-chooser.c:539
 msgid "Use _custom input method"
@@ -99,7 +78,9 @@ msgstr "_Usa input method personalizzato"
 msgid ""
 "Use input method that you prefer regardless what input method the system "
 "recommends."
-msgstr "Usa l'input method preferito senza considerare l'input method consigliato dal sistema."
+msgstr ""
+"Usa l'input method preferito senza considerare l'input method consigliato "
+"dal sistema."
 
 #: ../src/main.c:123
 msgid "IM Chooser - Input Method configuration tool"
@@ -117,5 +98,6 @@ msgstr "Input Method"
 msgid ""
 "Input Method configuration tool to choose the Input Method to be used or "
 "disable Input Method usage on the desktop"
-msgstr "Tool di configurazione dell'Input Method per selezionare l'input method da utilizzare o per disabilitare l'input method sul desktop."
-
+msgstr ""
+"Tool di configurazione dell'Input Method per selezionare l'input method da "
+"utilizzare o per disabilitare l'input method sul desktop."

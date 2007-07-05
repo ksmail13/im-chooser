@@ -1,6 +1,6 @@
 # translation of ta.po to Tamil
 # Tamil translations for im-chooser package.
-# Copyright (C) 2006 THE im-chooser'S COPYRIGHT HOLDER
+# Copyright (C) 2006 Red Hat, Inc. All rights reserved.
 # This file is distributed under the same license as the im-chooser package.
 # Automatically generated, 2006.
 # Felix <ifelix@redhat.com>, 2006.
@@ -17,15 +17,16 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.9.1\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"\n"
 
 #: ../src/im-chooser.c:489
 msgid ""
 "<small><i>Note: this change will not take effect until you next log in.</i></"
 "small>"
 msgstr ""
-"<small><i>குறிப்பு: அடுத்த உள் அனுமதி செய்யும் வரை இந்த மாற்றங்கள் செயல்படுத்தப்படாது.</i></"
-"small>"
+"<small><i>குறிப்பு: அடுத்த உள் அனுமதி செய்யும் வரை இந்த மாற்றங்கள் செயல்படுத்தப்படாது.</"
+"i></small>"
 
 #: ../src/im-chooser.c:493
 msgid "<b>Input Method</b>"
@@ -44,8 +45,8 @@ msgid ""
 "Follow the system-wide input method configuration to determine which input "
 "method should be used."
 msgstr ""
-"கணினி சார்ந்த உள்ளீடு முறை கட்டமைப்பினை பின்பற்றி எந்த உள்ளீடு முறையை "
-"பயன்படுத்த வேண்டும் என்பதை அறியவும்."
+"கணினி சார்ந்த உள்ளீடு முறை கட்டமைப்பினை பின்பற்றி எந்த உள்ளீடு முறையை பயன்படுத்த வேண்டும் "
+"என்பதை அறியவும்."
 
 #: ../src/im-chooser.c:526
 msgid "_Never use input methods"
@@ -56,8 +57,8 @@ msgid ""
 "Entirely disable input methods regardless which locale the desktop is "
 "running on."
 msgstr ""
-"எந்த மொழி பணிமேடையில் பயன்படுத்தப்படுகிறது தவிர முழு உள்ளிடு "
-"முறைகளையும் பயன்படுத்தலாம்."
+"எந்த மொழி பணிமேடையில் பயன்படுத்தப்படுகிறது தவிர முழு உள்ளிடு முறைகளையும் "
+"பயன்படுத்தலாம்."
 
 #: ../src/im-chooser.c:531
 msgid "_Use legacy input methods"
@@ -68,8 +69,8 @@ msgid ""
 "Use X Input Method anyway. In fact, which input method will be chosen for "
 "the desktop session, depends on the desktop language."
 msgstr ""
-"X உள்ளீடு முறையை எப்படியும் பயன்படுத்தவும். பணிமேடை மொழியைப் பொருத்து, "
-"எந்த உள்ளீடு முறை பணிமேடை அமர்வுக்கு பயன்படுத்த வேண்டும் என்பதை பார்க்கவும்."
+"X உள்ளீடு முறையை எப்படியும் பயன்படுத்தவும். பணிமேடை மொழியைப் பொருத்து, எந்த உள்ளீடு முறை "
+"பணிமேடை அமர்வுக்கு பயன்படுத்த வேண்டும் என்பதை பார்க்கவும்."
 
 #: ../src/im-chooser.c:539
 msgid "Use _custom input method"
@@ -80,8 +81,8 @@ msgid ""
 "Use input method that you prefer regardless what input method the system "
 "recommends."
 msgstr ""
-"கணினி உள்ளீடு முறையை பரிந்துரை செய்கிறது தவிர உங்களுக்கு விருப்பமான உள்ளீடு "
-"முறையையும் பயன்படுத்தலாம்."
+"கணினி உள்ளீடு முறையை பரிந்துரை செய்கிறது தவிர உங்களுக்கு விருப்பமான உள்ளீடு முறையையும் "
+"பயன்படுத்தலாம்."
 
 #: ../src/main.c:123
 msgid "IM Chooser - Input Method configuration tool"
@@ -102,4 +103,3 @@ msgid ""
 msgstr ""
 "உள்ளீடு முறை கட்டமைப்பு கருவி உள்ளிடு முறையை பயன்படுத்த அல்லது உள்ளீடு முறை பயன்பாட்டை "
 "பணிமேடையில் செயல்நீக்க பயன்படுகிறது"
-

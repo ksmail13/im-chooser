@@ -1,6 +1,6 @@
 # translation of pt_BR.po to Brazilian Portuguese
 # Portuguese translations for im-chooser package.
-# Copyright (C) 2006 THE im-chooser'S COPYRIGHT HOLDER
+# Copyright (C) 2006 Red Hat, Inc. All rights reserved.
 # This file is distributed under the same license as the im-chooser package.
 # Automatically generated, 2006.
 # Valnir Ferreira Jr. <vferreir@redhat.com>, 2006.
@@ -23,7 +23,9 @@ msgstr ""
 msgid ""
 "<small><i>Note: this change will not take effect until you next log in.</i></"
 "small>"
-msgstr "<small><i>Nota: Esta alteração não terá efeito até o seu próximo login.</i></small>"
+msgstr ""
+"<small><i>Nota: Esta alteração não terá efeito até o seu próximo login.</i></"
+"small>"
 
 #: ../src/im-chooser.c:493
 msgid "<b>Input Method</b>"
@@ -41,7 +43,9 @@ msgstr "Seguir a con_figuração global do sistema"
 msgid ""
 "Follow the system-wide input method configuration to determine which input "
 "method should be used."
-msgstr "Seguir a configuração global do sistema para determinar o método de entrada a ser usado."
+msgstr ""
+"Seguir a configuração global do sistema para determinar o método de entrada "
+"a ser usado."
 
 #: ../src/im-chooser.c:526
 msgid "_Never use input methods"
@@ -51,7 +55,9 @@ msgstr "_Nunca usar métodos de entrada"
 msgid ""
 "Entirely disable input methods regardless which locale the desktop is "
 "running on."
-msgstr "Desabilitar totalmente métodos de entrada independentemente do idioma da área de trabalho."
+msgstr ""
+"Desabilitar totalmente métodos de entrada independentemente do idioma da "
+"área de trabalho."
 
 #: ../src/im-chooser.c:531
 msgid "_Use legacy input methods"
@@ -61,7 +67,10 @@ msgstr "_Usar métodos de entrada legados"
 msgid ""
 "Use X Input Method anyway. In fact, which input method will be chosen for "
 "the desktop session, depends on the desktop language."
-msgstr "Usar método de entrada do X assim mesmo. Na verdade, o método de entrada a ser escolhido para a sessão na área de trabalho depende do idioma usado na mesma."
+msgstr ""
+"Usar método de entrada do X assim mesmo. Na verdade, o método de entrada a "
+"ser escolhido para a sessão na área de trabalho depende do idioma usado na "
+"mesma."
 
 #: ../src/im-chooser.c:539
 msgid "Use _custom input method"
@@ -71,7 +80,9 @@ msgstr "Usar _método de entrada personalizado"
 msgid ""
 "Use input method that you prefer regardless what input method the system "
 "recommends."
-msgstr "Usar seu método de entrada preferido, independentemente do método de entrada recomendado pelo sistema."
+msgstr ""
+"Usar seu método de entrada preferido, independentemente do método de entrada "
+"recomendado pelo sistema."
 
 #: ../src/main.c:123
 msgid "IM Chooser - Input Method configuration tool"
@@ -89,5 +100,6 @@ msgstr "Método de Entrada"
 msgid ""
 "Input Method configuration tool to choose the Input Method to be used or "
 "disable Input Method usage on the desktop"
-msgstr "Ferramenta de configuração para escolher ou desabilitar o método de entrada a ser usado na área de trabalho"
-
+msgstr ""
+"Ferramenta de configuração para escolher ou desabilitar o método de entrada "
+"a ser usado na área de trabalho"

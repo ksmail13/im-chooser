@@ -1,6 +1,6 @@
 # translation of zh_TW.po to Chinese, Traditional
 # Chinese translations for im-chooser package.
-# Copyright (C) 2006 THE im-chooser'S COPYRIGHT HOLDER
+# Copyright (C) 2006 Red Hat, Inc. All rights reserved.
 # This file is distributed under the same license as the im-chooser package.
 # Automatically generated, 2006.
 # Chester Cheng <ccheng@redhat.com>, 2006.
@@ -60,7 +60,9 @@ msgstr "使用既有的輸入法（_U）"
 msgid ""
 "Use X Input Method anyway. In fact, which input method will be chosen for "
 "the desktop session, depends on the desktop language."
-msgstr "無論如何，都使用 X 的輸入法。事實上，桌面環境選用哪一種輸入法，端賴桌面的語言而定。"
+msgstr ""
+"無論如何，都使用 X 的輸入法。事實上，桌面環境選用哪一種輸入法，端賴桌面的語言"
+"而定。"
 
 #: ../src/im-chooser.c:539
 msgid "Use _custom input method"
@@ -89,4 +91,3 @@ msgid ""
 "Input Method configuration tool to choose the Input Method to be used or "
 "disable Input Method usage on the desktop"
 msgstr "輸入法設定工具可以用來選擇輸入法，或停用桌面環境所使用的輸入法"
-

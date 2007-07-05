@@ -1,6 +1,6 @@
 # translation of ko.po to Korean
 # Korean translations for im-chooser package.
-# Copyright (C) 2006 THE im-chooser'S COPYRIGHT HOLDER
+# Copyright (C) 2006 Red Hat, Inc. All rights reserved.
 # This file is distributed under the same license as the im-chooser package.
 # Automatically generated, 2006.
 # Eunju Kim <eukim@redhat.com>, 2006.
@@ -23,7 +23,9 @@ msgstr ""
 msgid ""
 "<small><i>Note: this change will not take effect until you next log in.</i></"
 "small>"
-msgstr "<small><i>주의: 이러한 변경사항은 다음번 로그인 하실때 까지 적용되지 않습니다.</i></small>"
+msgstr ""
+"<small><i>주의: 이러한 변경사항은 다음번 로그인 하실때 까지 적용되지 않습니"
+"다.</i></small>"
 
 #: ../src/im-chooser.c:493
 msgid "<b>Input Method</b>"
@@ -42,8 +44,7 @@ msgid ""
 "Follow the system-wide input method configuration to determine which input "
 "method should be used."
 msgstr ""
-"사용할 입력 방식을 결정하기 위해 시스템 전체적인 입력 방식 설정을 "
-"합니다."
+"사용할 입력 방식을 결정하기 위해 시스템 전체적인 입력 방식 설정을 합니다."
 
 #: ../src/im-chooser.c:526
 msgid "_Never use input methods"
@@ -54,8 +55,7 @@ msgid ""
 "Entirely disable input methods regardless which locale the desktop is "
 "running on."
 msgstr ""
-"데스크탑이 실행되고 있는 로케일에 상관없이 입력 방식을 완전히 "
-"비활성화합니다."
+"데스크탑이 실행되고 있는 로케일에 상관없이 입력 방식을 완전히 비활성화합니다."
 
 #: ../src/im-chooser.c:531
 msgid "_Use legacy input methods"
@@ -65,7 +65,9 @@ msgstr "레거시 입력 방식 사용(_U)"
 msgid ""
 "Use X Input Method anyway. In fact, which input method will be chosen for "
 "the desktop session, depends on the desktop language."
-msgstr "X 입력 방식을 사용합니다. 데스크탑에서 사용되는 언어에 따라 데스크탑 세션에서의 입력 방식이 선택됩니다."
+msgstr ""
+"X 입력 방식을 사용합니다. 데스크탑에서 사용되는 언어에 따라 데스크탑 세션에서"
+"의 입력 방식이 선택됩니다."
 
 #: ../src/im-chooser.c:539
 msgid "Use _custom input method"
@@ -75,7 +77,9 @@ msgstr "사용자 입력 방식 사용(_C)"
 msgid ""
 "Use input method that you prefer regardless what input method the system "
 "recommends."
-msgstr "시스템이 권장하는 입력 방식에 상관없이 자신이 선호하는 입력 방식을 사용합니다."
+msgstr ""
+"시스템이 권장하는 입력 방식에 상관없이 자신이 선호하는 입력 방식을 사용합니"
+"다."
 
 #: ../src/main.c:123
 msgid "IM Chooser - Input Method configuration tool"
@@ -93,5 +97,6 @@ msgstr "입력 방식"
 msgid ""
 "Input Method configuration tool to choose the Input Method to be used or "
 "disable Input Method usage on the desktop"
-msgstr "데스크탑에서 입력 방식 사용을 비활성화하거나 또는 사용할 입력 방식 선택을 위한 입력 방식 설정 도구"
-
+msgstr ""
+"데스크탑에서 입력 방식 사용을 비활성화하거나 또는 사용할 입력 방식 선택을 위"
+"한 입력 방식 설정 도구"

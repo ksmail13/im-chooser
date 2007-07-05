@@ -1,6 +1,6 @@
 # translation of gu.po to Gujarati
 # Gujarati translations for im-chooser package.
-# Copyright (C) 2006 THE im-chooser'S COPYRIGHT HOLDER
+# Copyright (C) 2006 Red Hat, Inc. All rights reserved.
 # This file is distributed under the same license as the im-chooser package.
 # Automatically generated, 2006.
 # Ankit Patel <ankit@redhat.com>, 2006.
@@ -17,13 +17,16 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.9.1\n"
-"Plural-Forms: nplurals=2; plural=(n!=1);\n\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+"\n"
 
 #: ../src/im-chooser.c:489
 msgid ""
 "<small><i>Note: this change will not take effect until you next log in.</i></"
 "small>"
-msgstr "<small><i>નોંધ: આ ફેરફાર જ્યાં સુધી તમે પ્રવેશ નહિં કરો ત્યાં સુધી અસર લાવશે નહિં.</i></small>"
+msgstr ""
+"<small><i>નોંધ: આ ફેરફાર જ્યાં સુધી તમે પ્રવેશ નહિં કરો ત્યાં સુધી અસર લાવશે નહિં.</i></"
+"small>"
 
 #: ../src/im-chooser.c:493
 msgid "<b>Input Method</b>"
@@ -61,7 +64,9 @@ msgstr "લીગસી ઈનપુટ પદ્ધતિઓ વાપરો (_
 msgid ""
 "Use X Input Method anyway. In fact, which input method will be chosen for "
 "the desktop session, depends on the desktop language."
-msgstr "X ઈનપુટ પદ્ધતિને ગમે તે રીતે વાપરો. હકીકતમાં, ડેસ્કટોપ સત્ર માટે કઈ ઈનપુટ પદ્ધતિ વાપરવામાં આવશે, તે ડેસ્કટોપ ભાષા પર આધાર રાખે છે."
+msgstr ""
+"X ઈનપુટ પદ્ધતિને ગમે તે રીતે વાપરો. હકીકતમાં, ડેસ્કટોપ સત્ર માટે કઈ ઈનપુટ પદ્ધતિ વાપરવામાં "
+"આવશે, તે ડેસ્કટોપ ભાષા પર આધાર રાખે છે."
 
 #: ../src/im-chooser.c:539
 msgid "Use _custom input method"
@@ -71,7 +76,9 @@ msgstr "વૈવિધ્યપૂર્ણ ઈનપુટ પદ્ધતિ 
 msgid ""
 "Use input method that you prefer regardless what input method the system "
 "recommends."
-msgstr "ઈનપુટ પદ્ધતિ વાપરો કે જેને તમે તમારી સિસ્ટમ જેનો આગ્રહ રાખે તે ઈનપુટ પદ્ધતિ તરીકે પ્રાધાન્ય આપે."
+msgstr ""
+"ઈનપુટ પદ્ધતિ વાપરો કે જેને તમે તમારી સિસ્ટમ જેનો આગ્રહ રાખે તે ઈનપુટ પદ્ધતિ તરીકે પ્રાધાન્ય "
+"આપે."
 
 #: ../src/main.c:123
 msgid "IM Chooser - Input Method configuration tool"
@@ -89,5 +96,6 @@ msgstr "ઈનપુટ પદ્ધતિ"
 msgid ""
 "Input Method configuration tool to choose the Input Method to be used or "
 "disable Input Method usage on the desktop"
-msgstr "ડેસ્કટોપ પર વાપરવાની ઈનપુટ પદ્ધતિ પસંદ કરવાનું કે તેને નિષ્ક્રિય કરવાનું ઈનપુટ પદ્ધતિ રૂપરેખાંકન સાધન"
-
+msgstr ""
+"ડેસ્કટોપ પર વાપરવાની ઈનપુટ પદ્ધતિ પસંદ કરવાનું કે તેને નિષ્ક્રિય કરવાનું ઈનપુટ પદ્ધતિ "
+"રૂપરેખાંકન સાધન"

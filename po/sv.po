@@ -1,5 +1,5 @@
 # Swedish translations for im-chooser package.
-# Copyright (C) 2006 THE im-chooser'S COPYRIGHT HOLDER
+# Copyright (C) 2006 Red Hat, Inc. All rights reserved.
 # This file is distributed under the same license as the im-chooser package.
 # Magnus Larsson <fedoratrans@gmail.com>, 2006.
 # 
@@ -15,13 +15,15 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../src/im-chooser.c:489
 msgid ""
 "<small><i>Note: this change will not take effect until you next log in.</i></"
 "small>"
-msgstr "<small><i>Notis: denna ändring kommer inte gälla förrän nästa gång du loggar in.</i></small>"
+msgstr ""
+"<small><i>Notis: denna ändring kommer inte gälla förrän nästa gång du loggar "
+"in.</i></small>"
 
 #: ../src/im-chooser.c:493
 msgid "<b>Input Method</b>"
@@ -39,7 +41,9 @@ msgstr "_Följ den system-vida konfigurationen"
 msgid ""
 "Follow the system-wide input method configuration to determine which input "
 "method should be used."
-msgstr "Följ den system-vida konfigurationen av inmatningsmetod för att bestämma vilken inmatningsmetod som ska användas."
+msgstr ""
+"Följ den system-vida konfigurationen av inmatningsmetod för att bestämma "
+"vilken inmatningsmetod som ska användas."
 
 #: ../src/im-chooser.c:526
 msgid "_Never use input methods"
@@ -49,7 +53,8 @@ msgstr "_Använd aldrig inmatningsmetoder"
 msgid ""
 "Entirely disable input methods regardless which locale the desktop is "
 "running on."
-msgstr "Inaktivera inmatningsmetoder helt oavsett vilken lokal skrivbordet kör med."
+msgstr ""
+"Inaktivera inmatningsmetoder helt oavsett vilken lokal skrivbordet kör med."
 
 #: ../src/im-chooser.c:531
 msgid "_Use legacy input methods"
@@ -59,7 +64,9 @@ msgstr "_Använd föråldrade inmatningsmetoder"
 msgid ""
 "Use X Input Method anyway. In fact, which input method will be chosen for "
 "the desktop session, depends on the desktop language."
-msgstr "Använd inmatningsmetoden för X ändå. Faktum är att vilken inmatningsmetod som väljs för skrivbordssessionen beror på skrivbordets språk."
+msgstr ""
+"Använd inmatningsmetoden för X ändå. Faktum är att vilken inmatningsmetod "
+"som väljs för skrivbordssessionen beror på skrivbordets språk."
 
 #: ../src/im-chooser.c:539
 msgid "Use _custom input method"
@@ -69,7 +76,9 @@ msgstr "Använd _anpassad inmatningsmetod"
 msgid ""
 "Use input method that you prefer regardless what input method the system "
 "recommends."
-msgstr "Använd inmatningsmetod som du föredrar oavsett vilken inmatningsmetod som systemet rekommenderar."
+msgstr ""
+"Använd inmatningsmetod som du föredrar oavsett vilken inmatningsmetod som "
+"systemet rekommenderar."
 
 #: ../src/main.c:123
 msgid "IM Chooser - Input Method configuration tool"
@@ -87,5 +96,7 @@ msgstr "Inmatningsmetod"
 msgid ""
 "Input Method configuration tool to choose the Input Method to be used or "
 "disable Input Method usage on the desktop"
-msgstr "Verktyg för konfiguration av inmatningsmetod för att välja vilken inmatningsmetod som ska användas eller inaktivera användning av inmatningsmetod på skrivbordet"
-
+msgstr ""
+"Verktyg för konfiguration av inmatningsmetod för att välja vilken "
+"inmatningsmetod som ska användas eller inaktivera användning av "
+"inmatningsmetod på skrivbordet"

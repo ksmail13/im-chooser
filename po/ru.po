@@ -1,7 +1,7 @@
 # translation of ru.po to 
 # translation of ru.po to
 # Russian translations for im-chooser package.
-# Copyright (C) 2006 THE im-chooser'S COPYRIGHT HOLDER
+# Copyright (C) 2006 Red Hat, Inc. All rights reserved.
 # This file is distributed under the same license as the im-chooser package.
 # Automatically generated, 2006.
 # Yulia Poyarkova <ypoyarko@redhat.com>, 2006.
@@ -25,7 +25,9 @@ msgstr ""
 msgid ""
 "<small><i>Note: this change will not take effect until you next log in.</i></"
 "small>"
-msgstr "<small><i>Замечание: это изменение не вступит в силу до следующего входа.</i></small>"
+msgstr ""
+"<small><i>Замечание: это изменение не вступит в силу до следующего входа.</"
+"i></small>"
 
 #: ../src/im-chooser.c:493
 msgid "<b>Input Method</b>"
@@ -43,7 +45,9 @@ msgstr "_Принять общесистемную конфигурацию"
 msgid ""
 "Follow the system-wide input method configuration to determine which input "
 "method should be used."
-msgstr "Принять системную конфигурацию метода ввода для задания используемого метода ввода."
+msgstr ""
+"Принять системную конфигурацию метода ввода для задания используемого метода "
+"ввода."
 
 #: ../src/im-chooser.c:526
 msgid "_Never use input methods"
@@ -64,8 +68,8 @@ msgid ""
 "Use X Input Method anyway. In fact, which input method will be chosen for "
 "the desktop session, depends on the desktop language."
 msgstr ""
-"Использовать метод ввода X. Другими словами, метод ввода будет зависеть "
-"от языка системы."
+"Использовать метод ввода X. Другими словами, метод ввода будет зависеть от "
+"языка системы."
 
 #: ../src/im-chooser.c:539
 msgid "Use _custom input method"
@@ -75,7 +79,9 @@ msgstr "Использовать п_ользовательский метод в
 msgid ""
 "Use input method that you prefer regardless what input method the system "
 "recommends."
-msgstr "Использовать заданный метод ввода независимо от метода, рекомендуемого системой."
+msgstr ""
+"Использовать заданный метод ввода независимо от метода, рекомендуемого "
+"системой."
 
 #: ../src/main.c:123
 msgid "IM Chooser - Input Method configuration tool"
@@ -93,5 +99,6 @@ msgstr "Метод ввода"
 msgid ""
 "Input Method configuration tool to choose the Input Method to be used or "
 "disable Input Method usage on the desktop"
-msgstr "Утилита настройки метода ввода позволяет выбрать метод ввода или вообще отключить использование метода ввода."
-
+msgstr ""
+"Утилита настройки метода ввода позволяет выбрать метод ввода или вообще "
+"отключить использование метода ввода."

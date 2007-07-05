@@ -1,5 +1,5 @@
 # Croatian translations for im-chooser package.
-# Copyright (C) 2006 THE im-chooser'S COPYRIGHT HOLDER
+# Copyright (C) 2006 Red Hat, Inc. All rights reserved.
 # This file is distributed under the same license as the im-chooser package.
 # Automatically generated, 2006.
 #
@@ -14,11 +14,16 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
+"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
 #: ../src/im-chooser.c:489
-msgid "<small><i>Note: this change will not take effect until you next log in.</i></small>"
-msgstr "<small><i>Napomena: Ova izmjena neće imati učinka do ponovnog prijavljivanja.</i></small>"
+msgid ""
+"<small><i>Note: this change will not take effect until you next log in.</i></"
+"small>"
+msgstr ""
+"<small><i>Napomena: Ova izmjena neće imati učinka do ponovnog prijavljivanja."
+"</i></small>"
 
 #: ../src/im-chooser.c:493
 msgid "<b>Input Method</b>"
@@ -33,32 +38,48 @@ msgid "_Follow the system-wide configuration"
 msgstr "Prati _opću konfiguraciju sustava"
 
 #: ../src/im-chooser.c:523
-msgid "Follow the system-wide input method configuration to determine which input method should be used."
-msgstr "Praćenje opće konfiguracije način unosa u sustavu radi određivanja točnog način unosa koji će biti upotrebljavan."
+msgid ""
+"Follow the system-wide input method configuration to determine which input "
+"method should be used."
+msgstr ""
+"Praćenje opće konfiguracije način unosa u sustavu radi određivanja točnog "
+"način unosa koji će biti upotrebljavan."
 
 #: ../src/im-chooser.c:526
 msgid "_Never use input methods"
 msgstr "_Nikad ne upotrebljavaj načine unosa"
 
 #: ../src/im-chooser.c:528
-msgid "Entirely disable input methods regardless which locale the desktop is running on."
-msgstr "Potpuno onemogućavanje načina unosa, bez obzira na lokalne postavke radne površine."
+msgid ""
+"Entirely disable input methods regardless which locale the desktop is "
+"running on."
+msgstr ""
+"Potpuno onemogućavanje načina unosa, bez obzira na lokalne postavke radne "
+"površine."
 
 #: ../src/im-chooser.c:531
 msgid "_Use legacy input methods"
 msgstr "_Upotrijebi nasljedne načine unosa"
 
 #: ../src/im-chooser.c:533
-msgid "Use X Input Method anyway. In fact, which input method will be chosen for the desktop session, depends on the desktop language."
-msgstr "Upotreba X načina unosa u bilo kojem slučaju. Ustvari, način unosa koji će biti odabran za sesiju radne površine ovisit će o jeziku radne površine."
+msgid ""
+"Use X Input Method anyway. In fact, which input method will be chosen for "
+"the desktop session, depends on the desktop language."
+msgstr ""
+"Upotreba X načina unosa u bilo kojem slučaju. Ustvari, način unosa koji će "
+"biti odabran za sesiju radne površine ovisit će o jeziku radne površine."
 
 #: ../src/im-chooser.c:539
 msgid "Use _custom input method"
 msgstr "Upotrijebi _prilagođeni načina unosa"
 
 #: ../src/im-chooser.c:541
-msgid "Use input method that you prefer regardless what input method the system recommends."
-msgstr "Upotreba način a unosa koji preferirate, bez obzira na način unosa koji preporučuje sustav."
+msgid ""
+"Use input method that you prefer regardless what input method the system "
+"recommends."
+msgstr ""
+"Upotreba način a unosa koji preferirate, bez obzira na način unosa koji "
+"preporučuje sustav."
 
 #: ../src/main.c:123
 msgid "IM Chooser - Input Method configuration tool"
@@ -73,6 +94,10 @@ msgid "Input Method"
 msgstr "Način unosa"
 
 #: ../src/im-chooser.desktop.in.in.h:2
-msgid "Input Method configuration tool to choose the Input Method to be used or disable Input Method usage on the desktop"
-msgstr "Konfiguracijski alat Načina Unosa ima namjenu odabira načina unosa koji će biti upotrebljavan ili onemogućavanja upotrebe načina unosa na radnoj površini"
-
+msgid ""
+"Input Method configuration tool to choose the Input Method to be used or "
+"disable Input Method usage on the desktop"
+msgstr ""
+"Konfiguracijski alat Načina Unosa ima namjenu odabira načina unosa koji će "
+"biti upotrebljavan ili onemogućavanja upotrebe načina unosa na radnoj "
+"površini"

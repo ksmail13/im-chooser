@@ -14,11 +14,16 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
+"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
 #: ../src/im-chooser.c:489
-msgid "<small><i>Note: this change will not take effect until you next log in.</i></small>"
-msgstr "<small><i>Напомена: ова промена неће прећи у дејство до следећег пријављивања.</i></small>"
+msgid ""
+"<small><i>Note: this change will not take effect until you next log in.</i></"
+"small>"
+msgstr ""
+"<small><i>Напомена: ова промена неће прећи у дејство до следећег "
+"пријављивања.</i></small>"
 
 #: ../src/im-chooser.c:493
 msgid "<b>Input Method</b>"
@@ -33,32 +38,48 @@ msgid "_Follow the system-wide configuration"
 msgstr "Пра_ти системска подешавања"
 
 #: ../src/im-chooser.c:523
-msgid "Follow the system-wide input method configuration to determine which input method should be used."
-msgstr "Прати системска подешавања метода уноса да би утврдили који метод уноса треба користити."
+msgid ""
+"Follow the system-wide input method configuration to determine which input "
+"method should be used."
+msgstr ""
+"Прати системска подешавања метода уноса да би утврдили који метод уноса "
+"треба користити."
 
 #: ../src/im-chooser.c:526
 msgid "_Never use input methods"
 msgstr "_Никада не користи методе уноса"
 
 #: ../src/im-chooser.c:528
-msgid "Entirely disable input methods regardless which locale the desktop is running on."
-msgstr "Потпуно искључи методе уноса без обзира на локалитет у коме је радно окружење."
+msgid ""
+"Entirely disable input methods regardless which locale the desktop is "
+"running on."
+msgstr ""
+"Потпуно искључи методе уноса без обзира на локалитет у коме је радно "
+"окружење."
 
 #: ../src/im-chooser.c:531
 msgid "_Use legacy input methods"
 msgstr "_Користи застареле методе уноса"
 
 #: ../src/im-chooser.c:533
-msgid "Use X Input Method anyway. In fact, which input method will be chosen for the desktop session, depends on the desktop language."
-msgstr "Свеједно користи Иксов метод уноса. У ствари, од језика радног окружења зависи који ће метод уноса бити одабран за радну сесију."
+msgid ""
+"Use X Input Method anyway. In fact, which input method will be chosen for "
+"the desktop session, depends on the desktop language."
+msgstr ""
+"Свеједно користи Иксов метод уноса. У ствари, од језика радног окружења "
+"зависи који ће метод уноса бити одабран за радну сесију."
 
 #: ../src/im-chooser.c:539
 msgid "Use _custom input method"
 msgstr "Користи при_лагођени метод уноса"
 
 #: ../src/im-chooser.c:541
-msgid "Use input method that you prefer regardless what input method the system recommends."
-msgstr "Употреба метода уноса којег Ви желите без обзира који метод уноса систем препоручује."
+msgid ""
+"Use input method that you prefer regardless what input method the system "
+"recommends."
+msgstr ""
+"Употреба метода уноса којег Ви желите без обзира који метод уноса систем "
+"препоручује."
 
 #: ../src/main.c:123
 msgid "IM Chooser - Input Method configuration tool"
@@ -73,6 +94,9 @@ msgid "Input Method"
 msgstr "Метод уноса"
 
 #: ../src/im-chooser.desktop.in.in.h:2
-msgid "Input Method configuration tool to choose the Input Method to be used or disable Input Method usage on the desktop"
-msgstr "Алат за подешавање метода уноса врши избор метода уноса за употребу или искључивање употребе метода уноса у радном окружењу"
-
+msgid ""
+"Input Method configuration tool to choose the Input Method to be used or "
+"disable Input Method usage on the desktop"
+msgstr ""
+"Алат за подешавање метода уноса врши избор метода уноса за употребу или "
+"искључивање употребе метода уноса у радном окружењу"

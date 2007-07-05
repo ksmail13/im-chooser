@@ -1,6 +1,6 @@
 # translation of pa.po to Punjabi
 # Punjabi translations for im-chooser package.
-# Copyright (C) 2006 THE im-chooser'S COPYRIGHT HOLDER
+# Copyright (C) 2006 Red Hat, Inc. All rights reserved.
 # This file is distributed under the same license as the im-chooser package.
 # Automatically generated, 2006.
 # Jaswinder Singh <jsingh@redhat.com>, 2006.
@@ -17,15 +17,15 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.9.1\n"
-"Plural-Forms: Plural-Forms: nplurals=2; plural=(n != 1);\n\n"
+"Plural-Forms: Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"\n"
 
 #: ../src/im-chooser.c:489
 msgid ""
 "<small><i>Note: this change will not take effect until you next log in.</i></"
 "small>"
 msgstr ""
-"<small><i>ਸੂਚਨਾ: ਇਹ ਤਬਦੀਲੀ ਤੁਹਾਡੇ ਦੁਬਾਰਾ ਲਾਗਇਨ ਹੋਣ ਤੱਕ ਲਾਗੂ ਨਹੀਂ ਹੋਵੇਗੀ।</i></"
-"small>"
+"<small><i>ਸੂਚਨਾ: ਇਹ ਤਬਦੀਲੀ ਤੁਹਾਡੇ ਦੁਬਾਰਾ ਲਾਗਇਨ ਹੋਣ ਤੱਕ ਲਾਗੂ ਨਹੀਂ ਹੋਵੇਗੀ।</i></small>"
 
 #: ../src/im-chooser.c:493
 msgid "<b>Input Method</b>"
@@ -63,7 +63,9 @@ msgstr "ਪੁਰਾਤਨ ਇੰਪੁੱਟ ਵਿਧੀ ਵਰਤੋ(_U)"
 msgid ""
 "Use X Input Method anyway. In fact, which input method will be chosen for "
 "the desktop session, depends on the desktop language."
-msgstr "ਕਿਸੇ ਵੀ ਤਰਾਂ X ਇੰਪੁੱਟ ਵਿਧੀ ਵਰਤੋ। ਸਿੱਟੇ ਵਜੋਂ, ਡਿਸਕਟਾਪ ਭਾਸ਼ਾ ਤੇ ਨਿਰਭਰ ਕਰਦਾ ਹੈ ਕਿ ਡਿਸਕਟਾਪ ਸ਼ੈਸ਼ਨ ਲਈ ਕਿਹੜੀ ਇੰਪੁੱਟ ਵਿਧੀ ਚੁਣੀ ਜਾਵੇਗੀ।"
+msgstr ""
+"ਕਿਸੇ ਵੀ ਤਰਾਂ X ਇੰਪੁੱਟ ਵਿਧੀ ਵਰਤੋ। ਸਿੱਟੇ ਵਜੋਂ, ਡਿਸਕਟਾਪ ਭਾਸ਼ਾ ਤੇ ਨਿਰਭਰ ਕਰਦਾ ਹੈ ਕਿ ਡਿਸਕਟਾਪ "
+"ਸ਼ੈਸ਼ਨ ਲਈ ਕਿਹੜੀ ਇੰਪੁੱਟ ਵਿਧੀ ਚੁਣੀ ਜਾਵੇਗੀ।"
 
 #: ../src/im-chooser.c:539
 msgid "Use _custom input method"
@@ -73,7 +75,8 @@ msgstr "ਪਸੰਦੀ ਦਾ ਇੰਪੁੱਟ ਵਿਧੀ ਵਰਤੋ( _c)
 msgid ""
 "Use input method that you prefer regardless what input method the system "
 "recommends."
-msgstr "ਇਹ ਵੇਖੇ ਬਿਨਾਂ ਕਿ ਸਿਸਟਮ ਕਿਹੜੀ ਇੰਪੁੱਟ ਵਿਧੀ ਸਿਫਾਰਸ਼ ਕਰਦਾ ਹੈ, ਇੰਪੁੱਟ ਵਿਧੀ ਵਰਤੋ ਜੋ ਤੁਸੀਂ ਚਾਹੁੰਦੇ ਹੋ।"
+msgstr ""
+"ਇਹ ਵੇਖੇ ਬਿਨਾਂ ਕਿ ਸਿਸਟਮ ਕਿਹੜੀ ਇੰਪੁੱਟ ਵਿਧੀ ਸਿਫਾਰਸ਼ ਕਰਦਾ ਹੈ, ਇੰਪੁੱਟ ਵਿਧੀ ਵਰਤੋ ਜੋ ਤੁਸੀਂ ਚਾਹੁੰਦੇ ਹੋ।"
 
 #: ../src/main.c:123
 msgid "IM Chooser - Input Method configuration tool"
@@ -92,4 +95,3 @@ msgid ""
 "Input Method configuration tool to choose the Input Method to be used or "
 "disable Input Method usage on the desktop"
 msgstr "ਇੰਪੁੱਟ ਵਿਧੀ ਚੁਣਨ ਜਾਂ ਡਿਸਕਟਾਪ ਉੱਪਰ ਇੰਪੁੰਟ ਵਿਧੀ ਵਰਤੋਂ ਅਯੋਗ ਕਰਨ ਲਈ ਇੰਪੁੱਟ ਵਿਧੀ ਸੰਰਚਨਾ ਜੰਤਰ"
-

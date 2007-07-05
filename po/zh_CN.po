@@ -1,6 +1,6 @@
 # translation of zh_CN.po to 
 # Chinese translations for im-chooser package.
-# Copyright (C) 2006 THE im-chooser'S COPYRIGHT HOLDER
+# Copyright (C) 2006 Red Hat, Inc. All rights reserved.
 # This file is distributed under the same license as the im-chooser package.
 # Automatically generated, 2006.
 # Tony Fu <tfu@redhat.com>, 2006.
@@ -22,9 +22,7 @@ msgstr ""
 msgid ""
 "<small><i>Note: this change will not take effect until you next log in.</i></"
 "small>"
-msgstr ""
-"<small><i>请注意：这个修改在您下一次登录前不会起作用。</i></"
-"small>"
+msgstr "<small><i>请注意：这个修改在您下一次登录前不会起作用。</i></small>"
 
 #: ../src/im-chooser.c:493
 msgid "<b>Input Method</b>"
@@ -91,4 +89,3 @@ msgid ""
 "Input Method configuration tool to choose the Input Method to be used or "
 "disable Input Method usage on the desktop"
 msgstr "输入法配置工具被用来选择要使用的输入法，或在系统上禁用输入法。"
-
