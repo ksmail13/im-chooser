@@ -80,14 +80,22 @@ AC_ARG_WITH(xinputdir,
 	AC_HELP_STRING([--with-xinputdir], [build with the specific xinput script directory])
 	,,
 	with_xinputdir=no)
+AC_ARG_WITH(xinputrcdir,
+	AC_HELP_STRING([--with-xinputrcdir], [build with the specific xinputrc directory])
+	,,
+	with_xinputrcdir=no)
 AC_ARG_WITH(xinitdir,
-	AC_HELP_STRING([--with-xinitdir], [build with the specific xinit directory])
+	AC_HELP_STRING([--with-xinitdir], [build with the specific xinit script directory])
 	,,
 	with_xinitdir=no)
 AC_ARG_WITH(xinput-suffix,
 	AC_HELP_STRING([--with-xinput-suffix], [specify the xinput file suffix])
 	,,
 	with_xinput_suffix=no)
+AC_ARG_WITH(xinputsh,
+	AC_HELP_STRING([--with-xinputsh], [specify the xinput shell script name])
+	,,
+	with_xinputsh=no)
 
 dnl ======================================================================
 dnl options - xinputdir
@@ -103,11 +111,37 @@ XINPUT_PATH=$with_xinputdir
 AC_SUBST(XINPUT_PATH)
 
 dnl ======================================================================
+dnl options - xinputrcdir
+dnl ======================================================================
+AC_MSG_CHECKING(whether to build the specific xinputrc directory)
+if test "x$with_xinputrcdir" = xno; then
+	with_xinputrcdir="${sysconfdir}/X11/xinit/"
+	AC_MSG_RESULT(no)
+else
+	AC_MSG_RESULT(yes)
+fi
+XINPUTRC_PATH=$with_xinputrcdir
+AC_SUBST(XINPUTRC_PATH)
+
+dnl ======================================================================
+dnl options - xinputsh
+dnl ======================================================================
+AC_MSG_CHECKING(whether to give the specific xinput.sh name)
+if test "x$with_xinputsh" = xno; then
+	with_xinputsh="xinput.sh"
+	AC_MSG_RESULT(no)
+else
+	AC_MSG_RESULT(yes)
+fi
+XINPUTSH=$with_xinputsh
+AC_SUBST(XINPUTSH)
+
+dnl ======================================================================
 dnl options - xinitdir
 dnl ======================================================================
-AC_MSG_CHECKING(whether to build the specific xinit directory)
+AC_MSG_CHECKING(whether to build the specific xinit script directory)
 if test "x$with_xinitdir" = xno; then
-	with_xinitdir="${sysconfdir}/X11/xinit/"
+	with_xinitdir="${sysconfdir}/X11/xinit/xinitrc.d/"
 	AC_MSG_RESULT(no)
 else
 	AC_MSG_RESULT(yes)
@@ -116,7 +150,7 @@ XINIT_PATH=$with_xinitdir
 AC_SUBST(XINIT_PATH)
 
 dnl ======================================================================
-dnl options - xinitdir
+dnl options - xinit-suffix
 dnl ======================================================================
 AC_MSG_CHECKING(whether to build the specific xinput suffix)
 if test "x$with_xinput_suffix" = xno; then
@@ -138,7 +172,7 @@ src/im-chooser.desktop.in
 data/Makefile
 data/none.in
 data/xim.in
-data/xinput.sh
+data/xinput.sh.in
 po/Makefile.in
 ])
 AC_OUTPUT
@@ -151,7 +185,9 @@ echo "========== Build Information =========="
 echo " CFLAGS:                     $IMCHOOSE_CFLAGS"
 echo " LIBS:                       $IMCHOOSE_LIBS"
 echo " XINPUT_PATH:                $XINPUT_PATH"
+echo " XINPUTRC_PATH:              $XINPUTRC_PATH"
 echo " XINIT_PATH:                 $XINIT_PATH"
+echo " XINPUTSH:                   $XINPUTSH"
 echo " XINPUT_SUFFIX:              $XINPUT_SUFFIX"
 echo " GNOME support:              $use_gnome"
 echo ""

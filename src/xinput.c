@@ -154,7 +154,7 @@ xinput_data_new(const gchar *file)
 
 	str = g_string_new(NULL);
 	cmd = g_string_new(NULL);
-	g_string_printf(cmd, ". %s;", file);
+	g_string_printf(cmd, "export IM_CHOOSER_DISABLE_USER_XINPUTRC=yes; export IM_CHOOSER_ONLY_EVALUATE_VARIABLES=yes;. %s;", file);
 	for (i = 0; _xinput_tokens[i] != NULL; i++) {
 		size_t len = strlen(_xinput_tokens[i]);
 

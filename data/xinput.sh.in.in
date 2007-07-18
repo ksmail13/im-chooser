@@ -11,7 +11,7 @@
 # X Input method setup script
 
 USER_XINPUTRC="$HOME/.xinputrc"
-SYS_XINPUTRC="@XINIT_PATH@/xinputrc"
+SYS_XINPUTRC="@XINPUTRC_PATH@/xinputrc"
 
 # Load up the user and system locale settings
 oldterm=$TERM
@@ -32,17 +32,20 @@ unset XIM XIM_PROGRAM XIM_ARGS XMODIFIERS GTK_IM_MODULE QT_IM_MODULE AUXILIARY_P
 
 [ -z "$IM_CHOOSER_DISABLE_USER_XINPUTRC" ] && IM_CHOOSER_DISABLE_USER_XINPUTRC=no
 
-echo $USER_XINPUTRC
-echo $IM_CHOOSER_DISABLE_USER_XINPUTRC
 if [ -r "$USER_XINPUTRC" -a "x$IM_CHOOSER_DISABLE_USER_XINPUTRC" = "xno" ]; then
     source "$USER_XINPUTRC"
 elif [ -r "$SYS_XINPUTRC" ]; then
-    source "$SYS_XINPUTRC"
+    # FIXME: This hardcoded list has to be gone in the future.
+    _language_list="as bn gu hi ja kn ko ml mr ne or pa si ta te th ur vi zh"
+    for i in $_language_list; do
+	if echo $tmplang | grep -q -E "^$i"; then
+	    source "$SYS_XINPUTRC"
+	    break
+	fi
+    done
 fi
 
-echo $XIM
-echo $GTK_IM_MODULE
-
+[ -z "$XIM" ] && XIM=none
 [ -n "$GTK_IM_MODULE" ] && export GTK_IM_MODULE
 [ -n "$QT_IM_MODULE" ] && export QT_IM_MODULE
 

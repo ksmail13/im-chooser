@@ -1,5 +1,19 @@
 2007-07-18  Akira TAGOH  <tagoh@redhat.com>
 
+	* data/xinput.sh.in.in: Sync to Fedora's.
+
+	* data/Makefile.am: Install xinput.sh script.
+
+	* src/xinput.c (xinput_data_new): Update to not bringing IM up actually.
+
+	* src/im-chooser.c (_im_chooser_detect_current_mode): Update
+	an installation path for the system xinputrc.
+	(im_chooser_get_widget): Evaluate the variables from xinput.sh script
+	to see the real result.
+	(im_chooser_get_widget): Use better words.
+
+	* configure.ac: Add options, --with-xinputrcdir and --with-xinputsh.
+
 	* data/xinput.sh.in: Support the auxiliary program.
 
 	* data/xinput.sh.in: Update to not bringing IM up actually.

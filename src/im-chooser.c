@@ -316,7 +316,7 @@ _im_chooser_detect_current_mode(void)
 			if (!_im_chooser_detect_real_current_mode(&mode, filename)) {
 				/* try to detect from the global xinputrc */
 				g_free(filename);
-				filename = g_build_filename(XINIT_PATH, IM_GLOBAL_XINPUT_CONF, NULL);
+				filename = g_build_filename(XINPUTRC_PATH, IM_GLOBAL_XINPUT_CONF, NULL);
 				if (filename != NULL &&
 				    !_im_chooser_detect_real_current_mode(&mode, filename)) {
 					/* probably unknown mode */
@@ -494,7 +494,7 @@ im_chooser_get_widget(IMChooser *im)
 		gtk_label_set_use_markup(GTK_LABEL (label), TRUE);
 		gtk_misc_set_alignment(GTK_MISC (label), 0, 0);
 
-		global = g_build_filename(XINIT_PATH, IM_GLOBAL_XINPUT_CONF, NULL);
+		global = g_build_filename(XINIT_PATH, IM_XINPUT_SH, NULL);
 		xinput = xinput_data_new(global);
 		if (xinput != NULL) {
 			label_name = xinput_data_get_value(xinput, XINPUT_VALUE_XIM);
@@ -518,28 +518,28 @@ im_chooser_get_widget(IMChooser *im)
 
 		/* follow the system default */
 		radio = gtk_radio_button_new_with_mnemonic(NULL,
-							   _("_Follow the system-wide configuration"));
+							   _("_Use default Input Method for your language"));
 		im->widget_groups = g_slist_append(im->widget_groups, radio);
-		_im_chooser_set_tooltips(radio, _("Follow the system-wide input method configuration to determine which input method should be used."));
+		_im_chooser_set_tooltips(radio, _("Your system chooses the appropriate Input Method for your language automatically from among Input Methods installed on your system."));
+		/* custom input methods */
+		radio = gtk_radio_button_new_with_mnemonic_from_widget(GTK_RADIO_BUTTON (radio),
+								       _("Choose _specific Input Method"));
+		im->widget_groups = g_slist_append(im->widget_groups, radio);
+		_im_chooser_set_tooltips(radio, _("Use the specific Input Method that you prefer regardless what Input Method the system recommends."));
+		if (no_custom) {
+			gtk_widget_set_sensitive(radio, FALSE);
+		}
 		/* never use input methods */
 		radio = gtk_radio_button_new_with_mnemonic_from_widget(GTK_RADIO_BUTTON (radio),
-								       _("_Never use input methods"));
+								       _("_Do not use Input Method"));
 		im->widget_groups = g_slist_append(im->widget_groups, radio);
-		_im_chooser_set_tooltips(radio, _("Entirely disable input methods regardless which locale the desktop is running on."));
+		_im_chooser_set_tooltips(radio, _("Do not use Input Method no matter what language the desktop is running on."));
 		/* use legacy input methods */
 		radio = gtk_radio_button_new_with_mnemonic_from_widget(GTK_RADIO_BUTTON (radio),
-								       _("_Use legacy input methods"));
+								       _("Use legacy _Input Method"));
 		im->widget_groups = g_slist_append(im->widget_groups, radio);
 		_im_chooser_set_tooltips(radio, _("Use X Input Method anyway. In fact, which input method will be chosen for the desktop session, depends on the desktop language."));
 		if (no_xim) {
-			gtk_widget_set_sensitive(radio, FALSE);
-		}
-		/* custom input methods */
-		radio = gtk_radio_button_new_with_mnemonic_from_widget(GTK_RADIO_BUTTON (radio),
-								       _("Use _custom input method"));
-		im->widget_groups = g_slist_append(im->widget_groups, radio);
-		_im_chooser_set_tooltips(radio, _("Use input method that you prefer regardless what input method the system recommends."));
-		if (no_custom) {
 			gtk_widget_set_sensitive(radio, FALSE);
 		}
 

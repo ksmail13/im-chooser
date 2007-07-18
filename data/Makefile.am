@@ -12,15 +12,27 @@ $(xinput_DATA): $(xinput_in_files)
 		cp $$file `echo $$file | sed -e 's|.in$$|$(XINPUT_SUFFIX)|'`;	\
 	done
 
-CONFIGURE_DEPENDENCIES =	\
-	xinput.sh.in		\
-	$(NULL)
+xinputsh_in_in = xinput.sh.in.in
+xinputsh_in = $(xinputsh_in_in:.in=)
+xinputsh_DATA = @XINPUTSH@
+xinputshdir = @XINIT_PATH@
+$(xinputsh_DATA): $(xinputsh_in)
+	cp $(xinputsh_in) @XINPUTSH@
 
 icondir = $(datadir)/pixmaps
 icon_DATA = im-chooser.png
 
-EXTRA_DIST =			\
-	$(xinput_DATA)		\
-	$(icon_DATA)		\
+CONFIGURE_DEPENDENCIES =	\
 	xinput.sh.in		\
 	$(NULL)
+
+EXTRA_DIST =			\
+	$(xinput_DATA)		\
+	$(xinputsh_DATA)	\
+	$(icon_DATA)		\
+	$(NULL)
+
+clean-local:
+	-rm @XINPUTSH@
+
+.PHONY: clean-local

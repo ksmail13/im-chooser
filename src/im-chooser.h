@@ -40,9 +40,9 @@ typedef struct _IMChooserClass	IMChooserClass;
 
 typedef enum {
 	IM_MODE_SYSTEM = 0,
+	IM_MODE_CUSTOM,
 	IM_MODE_NEVER,
 	IM_MODE_LEGACY,
-	IM_MODE_CUSTOM,
 } IMChooserMode;
 typedef enum {
 	IM_SUBMODE_UNKNOWN = 0,
