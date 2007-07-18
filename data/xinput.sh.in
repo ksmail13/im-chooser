@@ -1,5 +1,5 @@
 #!/bin/bash
-# Copyright (C) 1999 - 2004 Red Hat, Inc. All rights reserved. This
+# Copyright (C) 1999-2004,2007 Red Hat, Inc. All rights reserved. This
 # copyrighted material is made available to anyone wishing to use, modify,
 # copy, or redistribute it subject to the terms and conditions of the
 # GNU General Public License version 2.
@@ -11,13 +11,13 @@
 # X Input method setup script
 
 USER_XINPUTRC="$HOME/.xinputrc"
-SYS_XINPUTRC="/etc/X11/xinit/xinputrc"
+SYS_XINPUTRC="@XINIT_PATH@/xinputrc"
 
 # Load up the user and system locale settings
 oldterm=$TERM
 unset TERM
 if [ -r /etc/profile.d/lang.sh ]; then
-    # for FC etc
+    # for Fedora etc
     source /etc/profile.d/lang.sh
 elif [ -r /etc/default/locale ]; then
     # for Debian
@@ -30,11 +30,18 @@ tmplang=${LC_CTYPE:-${LANG:-"en_US.UTF-8"}}
 # unset env vars to be safe
 unset XIM XIM_PROGRAM XIM_ARGS XMODIFIERS GTK_IM_MODULE QT_IM_MODULE
 
-if [ -r "$USER_XINPUTRC" ]; then
+[ -z "$IM_CHOOSER_DISABLE_USER_XINPUTRC" ] && IM_CHOOSER_DISABLE_USER_XINPUTRC=no
+
+echo $USER_XINPUTRC
+echo $IM_CHOOSER_DISABLE_USER_XINPUTRC
+if [ -r "$USER_XINPUTRC" -a "x$IM_CHOOSER_DISABLE_USER_XINPUTRC" = "xno" ]; then
     source "$USER_XINPUTRC"
 elif [ -r "$SYS_XINPUTRC" ]; then
     source "$SYS_XINPUTRC"
 fi
+
+echo $XIM
+echo $GTK_IM_MODULE
 
 [ -n "$GTK_IM_MODULE" ] && export GTK_IM_MODULE
 [ -n "$QT_IM_MODULE" ] && export QT_IM_MODULE
@@ -44,4 +51,5 @@ fi
 [ -n "$XMODIFIERS" ] && export XMODIFIERS
 
 # execute XIM_PROGRAM
-[ -n "$XIM_PROGRAM" ] && which "$XIM_PROGRAM" > /dev/null 2>&1 && LANG="$tmplang" "$XIM_PROGRAM" $XIM_ARGS &
+[ -z "$IM_CHOOSER_ONLY_EVALUATE_VARIABLES" ] && IM_CHOOSER_ONLY_EVALUATE_VARIABLES=no
+[ -n "$XIM_PROGRAM" -a "x$IM_CHOOSER_ONLY_EVALUATE_VARIABLES" = "xno" ] && which "$XIM_PROGRAM" > /dev/null 2>&1 && LANG="$tmplang" "$XIM_PROGRAM" $XIM_ARGS &

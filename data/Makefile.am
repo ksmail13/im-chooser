@@ -12,11 +12,15 @@ $(xinput_DATA): $(xinput_in_files)
 		cp $$file `echo $$file | sed -e 's|.in$$|$(XINPUT_SUFFIX)|'`;	\
 	done
 
+CONFIGURE_DEPENDENCIES =	\
+	xinput.sh.in		\
+	$(NULL)
+
 icondir = $(datadir)/pixmaps
 icon_DATA = im-chooser.png
 
 EXTRA_DIST =			\
 	$(xinput_DATA)		\
 	$(icon_DATA)		\
-	xinput.sh		\
+	xinput.sh.in		\
 	$(NULL)

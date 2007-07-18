@@ -138,6 +138,7 @@ src/im-chooser.desktop.in
 data/Makefile
 data/none.in
 data/xim.in
+data/xinput.sh
 po/Makefile.in
 ])
 AC_OUTPUT
