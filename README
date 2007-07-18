@@ -34,3 +34,8 @@ IM_CHOOSER_IGNORE_ME
 	directly but another one can handle it. if this
 	appears in IM specific configuration, IM Chooser
 	just ignore it and hide it from the custom choices.
+
+AUXILIARY_PROGRAM
+	an optional program that may want to bring up for
+	IM. AUXILIARY_ARGS can be used to give any options
+	for AUXLIARY_PROGRAM.
