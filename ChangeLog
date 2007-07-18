@@ -1,5 +1,7 @@
 2007-07-18  Akira TAGOH  <tagoh@redhat.com>
 
+	* data/xinput.sh.in: Support the auxiliary program.
+
 	* data/xinput.sh.in: Update to not bringing IM up actually.
 
 	* configure.ac: Generate xinput.sh.
