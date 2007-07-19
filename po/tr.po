@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tr\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-09-28 14:38+0900\n"
+"POT-Creation-Date: 2007-07-18 19:23+0900\n"
 "PO-Revision-Date: 2007-01-31 03:52+0200\n"
 "Last-Translator: Egemen Metin Turan <mturan@aegee-ankara.org>\n"
 "Language-Team: Turkish <fedora-trans-tr@redhat.com>\n"
@@ -37,52 +37,54 @@ msgid "No valid IM installed"
 msgstr "Geçerli bir HHA kurulmamış"
 
 #: ../src/im-chooser.c:521
-msgid "_Follow the system-wide configuration"
-msgstr "Sistem genelinde geçerli yapılandırmayı _takip et"
+msgid "_Use default Input Method for your language"
+msgstr ""
 
 #: ../src/im-chooser.c:523
 msgid ""
-"Follow the system-wide input method configuration to determine which input "
-"method should be used."
+"Your system chooses the appropriate Input Method for your language "
+"automatically from among Input Methods installed on your system."
 msgstr ""
-"Hangi giriş yönteminin kullanılacağını belirlemek için sistem genelinde geçerli "
-"yapılandırmayı takip et."
 
 #: ../src/im-chooser.c:526
-msgid "_Never use input methods"
-msgstr "Giriş yöntemleri _asla kullanma"
+#, fuzzy
+msgid "Choose _specific Input Method"
+msgstr "_Seçimlik giriş yöntemi kullan"
 
 #: ../src/im-chooser.c:528
+#, fuzzy
 msgid ""
-"Entirely disable input methods regardless which locale the desktop is "
-"running on."
+"Use the specific Input Method that you prefer regardless what Input Method "
+"the system recommends."
+msgstr ""
+"Sistemin önerdiği giriş yöntemini göz önüne almadan tercih ettiğiniz giriş "
+"yöntemini kullanınız."
+
+#: ../src/im-chooser.c:534
+#, fuzzy
+msgid "_Do not use Input Method"
+msgstr "Giriş yöntemleri _asla kullanma"
+
+#: ../src/im-chooser.c:536
+#, fuzzy
+msgid ""
+"Do not use Input Method no matter what language the desktop is running on."
 msgstr ""
 "Hangi yerel kullanıldığı göz önüne alınmadan tüm giriş yöntemlerini "
 "kullanılamaz kıl."
 
-#: ../src/im-chooser.c:531
-msgid "_Use legacy input methods"
+#: ../src/im-chooser.c:539
+#, fuzzy
+msgid "Use legacy _Input Method"
 msgstr "_Eski giriş yöntemlerini kullan"
 
-#: ../src/im-chooser.c:533
+#: ../src/im-chooser.c:541
 msgid ""
 "Use X Input Method anyway. In fact, which input method will be chosen for "
 "the desktop session, depends on the desktop language."
 msgstr ""
 "X giriş yöntemini kullan. Gerçekte masaüstü oturumu hangi giriş yöntemini "
 "seçeceğiniz masaüstü diline bağlıdır."
-
-#: ../src/im-chooser.c:539
-msgid "Use _custom input method"
-msgstr "_Seçimlik giriş yöntemi kullan"
-
-#: ../src/im-chooser.c:541
-msgid ""
-"Use input method that you prefer regardless what input method the system "
-"recommends."
-msgstr ""
-"Sistemin önerdiği giriş yöntemini göz önüne almadan tercih ettiğiniz giriş "
-"yöntemini kullanınız."
 
 #: ../src/main.c:123
 msgid "IM Chooser - Input Method configuration tool"
@@ -104,3 +106,12 @@ msgstr ""
 "Giriş Yöntemi yapılandırma aracı masaüstünde kullanılacak Giriş Yöntemini "
 "seçmek veya Giriş Yöntemini kullanılmaz kılmak içindir."
 
+#~ msgid "_Follow the system-wide configuration"
+#~ msgstr "Sistem genelinde geçerli yapılandırmayı _takip et"
+
+#~ msgid ""
+#~ "Follow the system-wide input method configuration to determine which "
+#~ "input method should be used."
+#~ msgstr ""
+#~ "Hangi giriş yönteminin kullanılacağını belirlemek için sistem genelinde "
+#~ "geçerli yapılandırmayı takip et."

@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fr\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-09-28 14:38+0900\n"
+"POT-Creation-Date: 2007-07-18 19:23+0900\n"
 "PO-Revision-Date: 2006-09-29 10:13+1000\n"
 "Last-Translator: Decroux Fabien <fdecroux@redhat.com>\n"
 "Language-Team: French <fr@li.org>\n"
@@ -38,52 +38,54 @@ msgid "No valid IM installed"
 msgstr "Aucune méthode de saisie valide n'est installée"
 
 #: ../src/im-chooser.c:521
-msgid "_Follow the system-wide configuration"
-msgstr "_Garder la configuration system-wide"
+msgid "_Use default Input Method for your language"
+msgstr ""
 
 #: ../src/im-chooser.c:523
 msgid ""
-"Follow the system-wide input method configuration to determine which input "
-"method should be used."
+"Your system chooses the appropriate Input Method for your language "
+"automatically from among Input Methods installed on your system."
 msgstr ""
-"Garder la configuration de la méthode de saisie system-wide pour déterminer "
-"la méthode à utiliser."
 
 #: ../src/im-chooser.c:526
-msgid "_Never use input methods"
-msgstr "_Ne jamais utiliser de méthode de saisie"
+#, fuzzy
+msgid "Choose _specific Input Method"
+msgstr "Utiliser une méthode de saisie _personnalisée"
 
 #: ../src/im-chooser.c:528
+#, fuzzy
 msgid ""
-"Entirely disable input methods regardless which locale the desktop is "
-"running on."
+"Use the specific Input Method that you prefer regardless what Input Method "
+"the system recommends."
+msgstr ""
+"Utiliser votre méthode de saisie préférée sans tenir compte de la méthode de "
+"saisie recommandée par le système."
+
+#: ../src/im-chooser.c:534
+#, fuzzy
+msgid "_Do not use Input Method"
+msgstr "_Ne jamais utiliser de méthode de saisie"
+
+#: ../src/im-chooser.c:536
+#, fuzzy
+msgid ""
+"Do not use Input Method no matter what language the desktop is running on."
 msgstr ""
 "Désactiver complètement les méthodes de saisie quelque soit la langue du "
 "système"
 
-#: ../src/im-chooser.c:531
-msgid "_Use legacy input methods"
+#: ../src/im-chooser.c:539
+#, fuzzy
+msgid "Use legacy _Input Method"
 msgstr "_Utiliser d'anciennes méthodes de saisie"
 
-#: ../src/im-chooser.c:533
+#: ../src/im-chooser.c:541
 msgid ""
 "Use X Input Method anyway. In fact, which input method will be chosen for "
 "the desktop session, depends on the desktop language."
 msgstr ""
 "Utiliser la méthode de saisie de X malgré tout. La méthode de saisie sera "
 "choisie pour la session en fonction de la langue du système"
-
-#: ../src/im-chooser.c:539
-msgid "Use _custom input method"
-msgstr "Utiliser une méthode de saisie _personnalisée"
-
-#: ../src/im-chooser.c:541
-msgid ""
-"Use input method that you prefer regardless what input method the system "
-"recommends."
-msgstr ""
-"Utiliser votre méthode de saisie préférée sans tenir compte de la méthode de "
-"saisie recommandée par le système."
 
 #: ../src/main.c:123
 msgid "IM Chooser - Input Method configuration tool"
@@ -105,3 +107,13 @@ msgstr ""
 "Outil de configuration de méthode de saisie pour choisir la méthode à "
 "utiliser ou pour désactiver l'utilisation de méthodes de saisie sur le "
 "système."
+
+#~ msgid "_Follow the system-wide configuration"
+#~ msgstr "_Garder la configuration system-wide"
+
+#~ msgid ""
+#~ "Follow the system-wide input method configuration to determine which "
+#~ "input method should be used."
+#~ msgstr ""
+#~ "Garder la configuration de la méthode de saisie system-wide pour "
+#~ "déterminer la méthode à utiliser."

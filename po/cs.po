@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: im-chooser 0.3.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-09-28 14:38+0900\n"
+"POT-Creation-Date: 2007-07-18 19:23+0900\n"
 "PO-Revision-Date: 2007-01-27 10:51+0100\n"
 "Last-Translator: Milan Kerslager <kerslage@linux.cz>\n"
 "Language-Team: Czech <cs@li.org>\n"
@@ -22,7 +22,8 @@ msgid ""
 "<small><i>Note: this change will not take effect until you next log in.</i></"
 "small>"
 msgstr ""
-"<small><i>Poznámka: tato změna se projeví až při dalším přihlášení.</i></small>"
+"<small><i>Poznámka: tato změna se projeví až při dalším přihlášení.</i></"
+"small>"
 
 #: ../src/im-chooser.c:493
 msgid "<b>Input Method</b>"
@@ -33,48 +34,52 @@ msgid "No valid IM installed"
 msgstr "Nebyl vybrán žádný správný IM"
 
 #: ../src/im-chooser.c:521
-msgid "_Follow the system-wide configuration"
-msgstr "Podle konfigurace pro _celý systému"
+msgid "_Use default Input Method for your language"
+msgstr ""
 
 #: ../src/im-chooser.c:523
 msgid ""
-"Follow the system-wide input method configuration to determine which input "
-"method should be used."
+"Your system chooses the appropriate Input Method for your language "
+"automatically from among Input Methods installed on your system."
 msgstr ""
-"Podle konfigurace pro celý systém bude určeno, jaká vstupní metoda bude použita."
 
 #: ../src/im-chooser.c:526
-msgid "_Never use input methods"
-msgstr "_Nepoužívat žádnou vstupní metodu"
+#, fuzzy
+msgid "Choose _specific Input Method"
+msgstr "Použít _uživatelsky definované vstupní metody"
 
 #: ../src/im-chooser.c:528
+#, fuzzy
 msgid ""
-"Entirely disable input methods regardless which locale the desktop is "
-"running on."
+"Use the specific Input Method that you prefer regardless what Input Method "
+"the system recommends."
 msgstr ""
-"Úplně zakázat vstupní metody nezávisle na locale, ve kterém je dekstop spuštěn."
+"Použít vstupní metody, které preferujete, nezávisle na doporučení systému."
 
-#: ../src/im-chooser.c:531
-msgid "_Use legacy input methods"
+#: ../src/im-chooser.c:534
+#, fuzzy
+msgid "_Do not use Input Method"
+msgstr "_Nepoužívat žádnou vstupní metodu"
+
+#: ../src/im-chooser.c:536
+#, fuzzy
+msgid ""
+"Do not use Input Method no matter what language the desktop is running on."
+msgstr ""
+"Úplně zakázat vstupní metody nezávisle na locale, ve kterém je dekstop "
+"spuštěn."
+
+#: ../src/im-chooser.c:539
+#, fuzzy
+msgid "Use legacy _Input Method"
 msgstr "Použít _původní vstupní metody"
 
-#: ../src/im-chooser.c:533
+#: ../src/im-chooser.c:541
 msgid ""
 "Use X Input Method anyway. In fact, which input method will be chosen for "
 "the desktop session, depends on the desktop language."
 msgstr ""
 "Použít vstupní metody X. Vstupní metoda bude závislá na použitém jazyce."
-
-#: ../src/im-chooser.c:539
-msgid "Use _custom input method"
-msgstr "Použít _uživatelsky definované vstupní metody"
-
-#: ../src/im-chooser.c:541
-msgid ""
-"Use input method that you prefer regardless what input method the system "
-"recommends."
-msgstr ""
-"Použít vstupní metody, které preferujete, nezávisle na doporučení systému."
 
 #: ../src/main.c:123
 msgid "IM Chooser - Input Method configuration tool"
@@ -95,3 +100,13 @@ msgid ""
 msgstr ""
 "Nástroj pro konfiguraci vstupních metod, které budou používány nebo "
 "kompletní zakázání alternativních vstupních metod na desktopu."
+
+#~ msgid "_Follow the system-wide configuration"
+#~ msgstr "Podle konfigurace pro _celý systému"
+
+#~ msgid ""
+#~ "Follow the system-wide input method configuration to determine which "
+#~ "input method should be used."
+#~ msgstr ""
+#~ "Podle konfigurace pro celý systém bude určeno, jaká vstupní metoda bude "
+#~ "použita."

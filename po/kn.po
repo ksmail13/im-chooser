@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kn\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-09-28 14:38+0900\n"
+"POT-Creation-Date: 2007-07-18 19:23+0900\n"
 "PO-Revision-Date: 2006-12-06 12:54+0530\n"
 "Last-Translator: shankar Prasad <svenkate@redhat.com>\n"
 "Language-Team: Kannada <en@li.org>\n"
@@ -25,8 +25,8 @@ msgid ""
 "<small><i>Note: this change will not take effect until you next log in.</i></"
 "small>"
 msgstr ""
-"<small><i>ಸೂಚನೆ: ನೀವು ಮುಂದಿನ ಬಾರಿ ಒಳಗೆ ಪ್ರವೇಶಿಸುವವರೆಗೆ ಈ ಬದಲಾವಣೆಯು ಕಾರ್ಯಗತವಾಗುವುದಿಲ್ಲ.</i></"
-"small>"
+"<small><i>ಸೂಚನೆ: ನೀವು ಮುಂದಿನ ಬಾರಿ ಒಳಗೆ ಪ್ರವೇಶಿಸುವವರೆಗೆ ಈ ಬದಲಾವಣೆಯು "
+"ಕಾರ್ಯಗತವಾಗುವುದಿಲ್ಲ.</i></small>"
 
 #: ../src/im-chooser.c:493
 msgid "<b>Input Method</b>"
@@ -37,52 +37,54 @@ msgid "No valid IM installed"
 msgstr "ಸಮ್ಮತವಾದ IM ಅನುಸ್ಥಾಪಿತವಾಗಿಲ್ಲ"
 
 #: ../src/im-chooser.c:521
-msgid "_Follow the system-wide configuration"
-msgstr "ವ್ಯವಸ್ಥಾ-ವಿಶಾಲ ಸ್ವರೂಪವನ್ನು ಅನುಸರಿಸಿ (_F) "
+msgid "_Use default Input Method for your language"
+msgstr ""
 
 #: ../src/im-chooser.c:523
 msgid ""
-"Follow the system-wide input method configuration to determine which input "
-"method should be used."
+"Your system chooses the appropriate Input Method for your language "
+"automatically from among Input Methods installed on your system."
 msgstr ""
-"ಯಾವ ಆದಾನ ಕ್ರಮವನ್ನು ಉಪಯೋಗಿಸ ಬೇಕೆಂದು ನಿಶ್ಚಯಿಸಲು ವ್ಯವಸ್ಥಾ-ವಿಶಾಲ ಆದಾನ ಕ್ರಮಸ್ವರೂಪವನ್ನು "
-"ಅನುಸರಿಸಿ."
 
 #: ../src/im-chooser.c:526
-msgid "_Never use input methods"
-msgstr "ಆದಾನ ಕ್ರಮವನ್ನು ಎಂದಿಗೂ ಉಪಯೋಗಿಸ ಬೇಡ (_N)"
+#, fuzzy
+msgid "Choose _specific Input Method"
+msgstr "ಗ್ರಾಹಕಾನುಕೂಲ ಆದಾನ ಕ್ರಮವನ್ನು ಉಪಯೋಗಿಸು (_c)"
 
 #: ../src/im-chooser.c:528
+#, fuzzy
 msgid ""
-"Entirely disable input methods regardless which locale the desktop is "
-"running on."
+"Use the specific Input Method that you prefer regardless what Input Method "
+"the system recommends."
 msgstr ""
-"ಯಾವ ಲೊಕ್ಯಾಲ್ ನಲ್ಲಿ ಗಣಕ ಪರದೆಯು ಚಾಲಿತವಾಗುತ್ತಿದೆ ಎಂಬುದನ್ನೂ ಲಕ್ಷಿಸದೆ ಆದಾನ ಕ್ರಮವನ್ನು ಸಂಪೂರ್ಣವಾಗಿ "
-"ನಿಷ್ಕ್ರಿಯಗೊಳಿಸು."
+"ವ್ಯವಸ್ಥೆಯು ಯಾವ ಆದಾನಕ್ರಮವನ್ನು ಸೂಚಿಸುತ್ತದೆ ಎಂಬುದನ್ನು ಲಕ್ಷಿಸದೇ ನೀವು ಇಚ್ಛಿಸಿದ "
+"ಆದಾನಕ್ರಮವನ್ನೇ ಉಪಯೋಗಿಸಿ."
 
-#: ../src/im-chooser.c:531
-msgid "_Use legacy input methods"
+#: ../src/im-chooser.c:534
+#, fuzzy
+msgid "_Do not use Input Method"
+msgstr "ಆದಾನ ಕ್ರಮವನ್ನು ಎಂದಿಗೂ ಉಪಯೋಗಿಸ ಬೇಡ (_N)"
+
+#: ../src/im-chooser.c:536
+#, fuzzy
+msgid ""
+"Do not use Input Method no matter what language the desktop is running on."
+msgstr ""
+"ಯಾವ ಲೊಕ್ಯಾಲ್ ನಲ್ಲಿ ಗಣಕ ಪರದೆಯು ಚಾಲಿತವಾಗುತ್ತಿದೆ ಎಂಬುದನ್ನೂ ಲಕ್ಷಿಸದೆ ಆದಾನ ಕ್ರಮವನ್ನು "
+"ಸಂಪೂರ್ಣವಾಗಿ ನಿಷ್ಕ್ರಿಯಗೊಳಿಸು."
+
+#: ../src/im-chooser.c:539
+#, fuzzy
+msgid "Use legacy _Input Method"
 msgstr "ಪಾರಂಪರಿಕ ಆದಾನ ಕ್ರಮಗಳನ್ನು ಅನುಸರಿಸು (_U)"
 
-#: ../src/im-chooser.c:533
+#: ../src/im-chooser.c:541
 msgid ""
 "Use X Input Method anyway. In fact, which input method will be chosen for "
 "the desktop session, depends on the desktop language."
 msgstr ""
 "ಏನಾದರಾಗಲಿ ಎಕ್ಸ್ ಆದಾನ ಕ್ರಮ ಉಪಯೋಗಿಸು. ನಿಜಾಂಶವೆಂದರೆ,ಗಣಕ ಪರದೆಯ ಕಲಾಪಕ್ಕೆ ಯಾವ ಆದಾನಕ್ರಮ "
 "ಉಪಯೋಗಿಸ್ಪಡುತ್ತದೆ ಎಂಬುದು ಗಣಕ ಪರದೆಯ ಭಾಷೆಯ ಮೇಲೆ ನಿರ್ಧರಿತವಾಗಿರುತ್ತದೆ."
-
-#: ../src/im-chooser.c:539
-msgid "Use _custom input method"
-msgstr "ಗ್ರಾಹಕಾನುಕೂಲ ಆದಾನ ಕ್ರಮವನ್ನು ಉಪಯೋಗಿಸು (_c)"
-
-#: ../src/im-chooser.c:541
-msgid ""
-"Use input method that you prefer regardless what input method the system "
-"recommends."
-msgstr ""
-"ವ್ಯವಸ್ಥೆಯು ಯಾವ ಆದಾನಕ್ರಮವನ್ನು ಸೂಚಿಸುತ್ತದೆ ಎಂಬುದನ್ನು ಲಕ್ಷಿಸದೇ ನೀವು ಇಚ್ಛಿಸಿದ ಆದಾನಕ್ರಮವನ್ನೇ "
-"ಉಪಯೋಗಿಸಿ."
 
 #: ../src/main.c:123
 msgid "IM Chooser - Input Method configuration tool"
@@ -104,3 +106,12 @@ msgstr ""
 "ಗಣಕ ಪರದೆಯನ್ನು ಉಪಯೋಗಿಸುವಾಗ, ಆದಾನಕ್ರಮವನ್ನು ಉಪಯೋಗಿಸಬೇಕೆ ಅಥವಾ ನಿಷ್ಕ್ರಿಯಗೊಳಿಸ ಬೇಕೆ "
 "ಎಂಬುದನ್ನು ಆದಾನ ಕ್ರಮ ಸ್ವರೂಪಣಾ ಉಪಕರಣವು ಆಯ್ಕೆಮಾಡುತ್ತದೆ"
 
+#~ msgid "_Follow the system-wide configuration"
+#~ msgstr "ವ್ಯವಸ್ಥಾ-ವಿಶಾಲ ಸ್ವರೂಪವನ್ನು ಅನುಸರಿಸಿ (_F) "
+
+#~ msgid ""
+#~ "Follow the system-wide input method configuration to determine which "
+#~ "input method should be used."
+#~ msgstr ""
+#~ "ಯಾವ ಆದಾನ ಕ್ರಮವನ್ನು ಉಪಯೋಗಿಸ ಬೇಕೆಂದು ನಿಶ್ಚಯಿಸಲು ವ್ಯವಸ್ಥಾ-ವಿಶಾಲ ಆದಾನ ಕ್ರಮಸ್ವರೂಪವನ್ನು "
+#~ "ಅನುಸರಿಸಿ."

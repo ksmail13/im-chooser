@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: im-chooser 0.3.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-09-28 14:38+0900\n"
+"POT-Creation-Date: 2007-07-18 19:23+0900\n"
 "PO-Revision-Date: 2006-11-11 12:37+0200\n"
 "Last-Translator: Alexandru Szasz <alexxed@gmail.com>\n"
 "Language-Team: none <gnomero-list@lists.sourceforge.net>\n"
@@ -20,7 +20,9 @@ msgstr ""
 msgid ""
 "<small><i>Note: this change will not take effect until you next log in.</i></"
 "small>"
-msgstr "<small><i>Notă: această schimbare va avea efect doar de la următoarea autentificare.</i></small>"
+msgstr ""
+"<small><i>Notă: această schimbare va avea efect doar de la următoarea "
+"autentificare.</i></small>"
 
 #: ../src/im-chooser.c:493
 msgid "<b>Input Method</b>"
@@ -31,52 +33,54 @@ msgid "No valid IM installed"
 msgstr "Nicio MI instalată"
 
 #: ../src/im-chooser.c:521
-msgid "_Follow the system-wide configuration"
-msgstr "_Foloseşte configuraţia sistemului"
+msgid "_Use default Input Method for your language"
+msgstr ""
 
 #: ../src/im-chooser.c:523
 msgid ""
-"Follow the system-wide input method configuration to determine which input "
-"method should be used."
+"Your system chooses the appropriate Input Method for your language "
+"automatically from among Input Methods installed on your system."
 msgstr ""
-"Foloseşte configuraţia sistemului pentru a determina ce metodă de introducere "
-"ar trebui folosită."
 
 #: ../src/im-chooser.c:526
-msgid "_Never use input methods"
-msgstr "_Nu folosi metode de introducere"
+#, fuzzy
+msgid "Choose _specific Input Method"
+msgstr "Alege metoda de introducere"
 
 #: ../src/im-chooser.c:528
+#, fuzzy
 msgid ""
-"Entirely disable input methods regardless which locale the desktop is "
-"running on."
+"Use the specific Input Method that you prefer regardless what Input Method "
+"the system recommends."
 msgstr ""
-"Dezactivează complet metodele de introducere indiferent sub ce "
-"localizare rulează desktopul."
+"Folosiţi metoda de introducere pe care o preferaţi indiferent de ce metodă "
+"de introducere recomandă sistemul."
 
-#: ../src/im-chooser.c:531
-msgid "_Use legacy input methods"
+#: ../src/im-chooser.c:534
+#, fuzzy
+msgid "_Do not use Input Method"
+msgstr "_Nu folosi metode de introducere"
+
+#: ../src/im-chooser.c:536
+#, fuzzy
+msgid ""
+"Do not use Input Method no matter what language the desktop is running on."
+msgstr ""
+"Dezactivează complet metodele de introducere indiferent sub ce localizare "
+"rulează desktopul."
+
+#: ../src/im-chooser.c:539
+#, fuzzy
+msgid "Use legacy _Input Method"
 msgstr "Foloseşte metodele de introd_ucere moştenite"
 
-#: ../src/im-chooser.c:533
+#: ../src/im-chooser.c:541
 msgid ""
 "Use X Input Method anyway. In fact, which input method will be chosen for "
 "the desktop session, depends on the desktop language."
 msgstr ""
 "Foloseşte totuşi metode de introducere X. De fapt, alegerea metodei de "
 "introducere pentru sesiune depinde de limba desktopului."
-
-#: ../src/im-chooser.c:539
-msgid "Use _custom input method"
-msgstr "Alege metoda de introducere"
-
-#: ../src/im-chooser.c:541
-msgid ""
-"Use input method that you prefer regardless what input method the system "
-"recommends."
-msgstr ""
-"Folosiţi metoda de introducere pe care o preferaţi indiferent de ce metodă "
-"de introducere recomandă sistemul."
 
 #: ../src/main.c:123
 msgid "IM Chooser - Input Method configuration tool"
@@ -95,6 +99,15 @@ msgid ""
 "Input Method configuration tool to choose the Input Method to be used or "
 "disable Input Method usage on the desktop"
 msgstr ""
-"Unealtă pentru configurarea metodei de introducere pe care o folosiţi "
-"sau pentru a dezactiva utilizarea metodelor de introducere."
+"Unealtă pentru configurarea metodei de introducere pe care o folosiţi sau "
+"pentru a dezactiva utilizarea metodelor de introducere."
 
+#~ msgid "_Follow the system-wide configuration"
+#~ msgstr "_Foloseşte configuraţia sistemului"
+
+#~ msgid ""
+#~ "Follow the system-wide input method configuration to determine which "
+#~ "input method should be used."
+#~ msgstr ""
+#~ "Foloseşte configuraţia sistemului pentru a determina ce metodă de "
+#~ "introducere ar trebui folosită."

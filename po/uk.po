@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: im-chooser\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-09-28 14:38+0900\n"
+"POT-Creation-Date: 2007-07-18 19:23+0900\n"
 "PO-Revision-Date: 2007-01-23 14:48+0900\n"
 "Last-Translator: Maxim Dziumanenko <dziumanenko@gmail.com>\n"
 "Language-Team: Ukrainian <uk@li.org>\n"
@@ -20,8 +20,8 @@ msgid ""
 "<small><i>Note: this change will not take effect until you next log in.</i></"
 "small>"
 msgstr ""
-"<small><i>Зауваження: ця зміна не набере сили до наступного входу.</"
-"i></small>"
+"<small><i>Зауваження: ця зміна не набере сили до наступного входу.</i></"
+"small>"
 
 #: ../src/im-chooser.c:493
 msgid "<b>Input Method</b>"
@@ -32,49 +32,52 @@ msgid "No valid IM installed"
 msgstr "не встановлено метод вводу"
 
 #: ../src/im-chooser.c:521
-msgid "_Follow the system-wide configuration"
-msgstr "_Прийняти загальносистемну конфігурацію"
+msgid "_Use default Input Method for your language"
+msgstr ""
 
 #: ../src/im-chooser.c:523
 msgid ""
-"Follow the system-wide input method configuration to determine which input "
-"method should be used."
+"Your system chooses the appropriate Input Method for your language "
+"automatically from among Input Methods installed on your system."
 msgstr ""
-"Прийняти системну конфігурацію метода вводу для вказування методу вводу, що використовується."
 
 #: ../src/im-chooser.c:526
-msgid "_Never use input methods"
-msgstr "_Не використовувати методи вводу"
+#, fuzzy
+msgid "Choose _specific Input Method"
+msgstr "Метод вводу _визначається користувачем"
 
 #: ../src/im-chooser.c:528
+#, fuzzy
 msgid ""
-"Entirely disable input methods regardless which locale the desktop is "
-"running on."
+"Use the specific Input Method that you prefer regardless what Input Method "
+"the system recommends."
+msgstr ""
+"Використовувати вказаний метод вводу незалежно від методу, що рекомендується "
+"системою."
+
+#: ../src/im-chooser.c:534
+#, fuzzy
+msgid "_Do not use Input Method"
+msgstr "_Не використовувати методи вводу"
+
+#: ../src/im-chooser.c:536
+#, fuzzy
+msgid ""
+"Do not use Input Method no matter what language the desktop is running on."
 msgstr "Вимкнути методи вводу незалежно від мови системи."
 
-#: ../src/im-chooser.c:531
-msgid "_Use legacy input methods"
+#: ../src/im-chooser.c:539
+#, fuzzy
+msgid "Use legacy _Input Method"
 msgstr "Використовувати _стандартні методи вводу"
 
-#: ../src/im-chooser.c:533
+#: ../src/im-chooser.c:541
 msgid ""
 "Use X Input Method anyway. In fact, which input method will be chosen for "
 "the desktop session, depends on the desktop language."
 msgstr ""
 "Використовувати метод вводу X. Іншими словами, метод вводу буде залежний від "
 "мови системи."
-
-#: ../src/im-chooser.c:539
-msgid "Use _custom input method"
-msgstr "Метод вводу _визначається користувачем"
-
-#: ../src/im-chooser.c:541
-msgid ""
-"Use input method that you prefer regardless what input method the system "
-"recommends."
-msgstr ""
-"Використовувати вказаний метод вводу незалежно від методу, що рекомендується "
-"системою."
 
 #: ../src/main.c:123
 msgid "IM Chooser - Input Method configuration tool"
@@ -95,3 +98,13 @@ msgid ""
 msgstr ""
 "Програма налаштовування методу вводу дозволяє обрати метод вводу або взагалі "
 "вимкнути використання методу вводу."
+
+#~ msgid "_Follow the system-wide configuration"
+#~ msgstr "_Прийняти загальносистемну конфігурацію"
+
+#~ msgid ""
+#~ "Follow the system-wide input method configuration to determine which "
+#~ "input method should be used."
+#~ msgstr ""
+#~ "Прийняти системну конфігурацію метода вводу для вказування методу вводу, "
+#~ "що використовується."

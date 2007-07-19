@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: im-chooser\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-09-28 14:38+0900\n"
+"POT-Creation-Date: 2007-07-18 19:23+0900\n"
 "PO-Revision-Date: 2006-11-06 22:37+0100\n"
 "Last-Translator: Peter van Egdom <p.van.egdom@gmail.com>\n"
 "Language-Team: Dutch <vertaling@nl.linux.org>\n"
@@ -34,52 +34,54 @@ msgid "No valid IM installed"
 msgstr "Er is geen geldige IM geïnstalleerd"
 
 #: ../src/im-chooser.c:521
-msgid "_Follow the system-wide configuration"
-msgstr "_Gebruik de systeembrede configuratie"
+msgid "_Use default Input Method for your language"
+msgstr ""
 
 #: ../src/im-chooser.c:523
 msgid ""
-"Follow the system-wide input method configuration to determine which input "
-"method should be used."
+"Your system chooses the appropriate Input Method for your language "
+"automatically from among Input Methods installed on your system."
 msgstr ""
-"Gebruik de systeembrede invoermethode configuratie om te achterhalen welke "
-"invoermethode gebruikt dient te worden."
 
 #: ../src/im-chooser.c:526
-msgid "_Never use input methods"
-msgstr "Invoermethodes _nooit gebruiken"
+#, fuzzy
+msgid "Choose _specific Input Method"
+msgstr "Gebruik _aangepaste invoermethode"
 
 #: ../src/im-chooser.c:528
+#, fuzzy
 msgid ""
-"Entirely disable input methods regardless which locale the desktop is "
-"running on."
+"Use the specific Input Method that you prefer regardless what Input Method "
+"the system recommends."
+msgstr ""
+"Gebruik de invoermethode die u prefereert ondanks de door het systeem "
+"aangeraden invoermethode."
+
+#: ../src/im-chooser.c:534
+#, fuzzy
+msgid "_Do not use Input Method"
+msgstr "Invoermethodes _nooit gebruiken"
+
+#: ../src/im-chooser.c:536
+#, fuzzy
+msgid ""
+"Do not use Input Method no matter what language the desktop is running on."
 msgstr ""
 "Schakel de invoermethodes geheel uit, ondanks de taaldefinitie van het "
 "bureaublad."
 
-#: ../src/im-chooser.c:531
-msgid "_Use legacy input methods"
+#: ../src/im-chooser.c:539
+#, fuzzy
+msgid "Use legacy _Input Method"
 msgstr "_Gebruik oude invoermethodes"
 
-#: ../src/im-chooser.c:533
+#: ../src/im-chooser.c:541
 msgid ""
 "Use X Input Method anyway. In fact, which input method will be chosen for "
 "the desktop session, depends on the desktop language."
 msgstr ""
 "Gebruik de X invoermethode. De invoermethode die wordt gekozen voor de "
 "bureaublad sessie is afhankelijk van de bureaublad taal."
-
-#: ../src/im-chooser.c:539
-msgid "Use _custom input method"
-msgstr "Gebruik _aangepaste invoermethode"
-
-#: ../src/im-chooser.c:541
-msgid ""
-"Use input method that you prefer regardless what input method the system "
-"recommends."
-msgstr ""
-"Gebruik de invoermethode die u prefereert ondanks de door het systeem "
-"aangeraden invoermethode."
 
 #: ../src/main.c:123
 msgid "IM Chooser - Input Method configuration tool"
@@ -101,3 +103,13 @@ msgstr ""
 "Invoermethode configuratiehulpmiddel om de te gebruiken invoermethode te "
 "kiezen of om het gebruik van invoermethodes uit te schakelen voor het "
 "bureaublad"
+
+#~ msgid "_Follow the system-wide configuration"
+#~ msgstr "_Gebruik de systeembrede configuratie"
+
+#~ msgid ""
+#~ "Follow the system-wide input method configuration to determine which "
+#~ "input method should be used."
+#~ msgstr ""
+#~ "Gebruik de systeembrede invoermethode configuratie om te achterhalen "
+#~ "welke invoermethode gebruikt dient te worden."

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: or\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-09-28 14:38+0900\n"
+"POT-Creation-Date: 2007-07-18 19:23+0900\n"
 "PO-Revision-Date: 2006-09-28 16:44+0530\n"
 "Last-Translator: Subhransu Behera <sbehera@redhat.com>\n"
 "Language-Team: Oriya <oriya-group@lists.sarovar.org>\n"
@@ -37,52 +37,54 @@ msgid "No valid IM installed"
 msgstr "କୌଣସି ବୈଧ ନିବେଶ ପ୍ରଣାଳୀ ସ୍ଥାପିତ ହୋଇନାହିଁ"
 
 #: ../src/im-chooser.c:521
-msgid "_Follow the system-wide configuration"
-msgstr "ତନ୍ତ୍ର-ବ୍ଯାପି ବିନ୍ଯାସକୁ ଅନୁକରଣ କରନ୍ତୁ (_F)"
+msgid "_Use default Input Method for your language"
+msgstr ""
 
 #: ../src/im-chooser.c:523
 msgid ""
-"Follow the system-wide input method configuration to determine which input "
-"method should be used."
+"Your system chooses the appropriate Input Method for your language "
+"automatically from among Input Methods installed on your system."
 msgstr ""
-"କେଉଁ ନିବେଶ ପ୍ରଣାଳୀକୁ ବ୍ଯବହାର କରାଯିବ ତାହା ସ୍ଥିର କରିବା ପାଇଁ ତନ୍ତ୍ର ବ୍ଯାପି ନିବେଶ ପ୍ରଣାଳୀ ବିନ୍ଯାସକୁ "
-"ଅନୁକରଣ କରନ୍ତୁ।"
 
 #: ../src/im-chooser.c:526
-msgid "_Never use input methods"
-msgstr "କଦାପି ନିବେଶ ପ୍ରଣାଳୀ ମାନଙ୍କୁ ବ୍ଯବହାର କରନ୍ତୁ ନାହିଁ (_N)"
+#, fuzzy
+msgid "Choose _specific Input Method"
+msgstr "ଇଚ୍ଛାରୂପଣ ନିବେଶ ପ୍ରଣାଳୀକୁ ବ୍ଯବହାର କରନ୍ତୁ (_c)"
 
 #: ../src/im-chooser.c:528
+#, fuzzy
 msgid ""
-"Entirely disable input methods regardless which locale the desktop is "
-"running on."
+"Use the specific Input Method that you prefer regardless what Input Method "
+"the system recommends."
+msgstr ""
+"ତନ୍ତ୍ର ପରାମର୍ଶ କରୁଥିବା ନିବେଶ ପ୍ରଣାଳୀକୁ ଦୃଷ୍ଟିପାତ ନ କରି ଆପଣଙ୍କ ପସନ୍ଦ କରୁଥିବା ନିବେଶ ପ୍ରଣାଳୀକୁ "
+"ବ୍ଯବହାର କରନ୍ତୁ।"
+
+#: ../src/im-chooser.c:534
+#, fuzzy
+msgid "_Do not use Input Method"
+msgstr "କଦାପି ନିବେଶ ପ୍ରଣାଳୀ ମାନଙ୍କୁ ବ୍ଯବହାର କରନ୍ତୁ ନାହିଁ (_N)"
+
+#: ../src/im-chooser.c:536
+#, fuzzy
+msgid ""
+"Do not use Input Method no matter what language the desktop is running on."
 msgstr ""
 "ଡେସ୍କଟପଟି କେଉଁ ଲୋକେଲକୁ ବ୍ଯବହାର କରୁଅଛି ତାହା ଉପରେ ଦୃଷ୍ଟିପାତ ନ କରି ସମ୍ପୂର୍ଣ୍ଣ ନିବେଶ ପ୍ରଣାଳୀକୁ "
 "ନିଷ୍କ୍ରିୟ କରିଦିଅନ୍ତୁ।"
 
-#: ../src/im-chooser.c:531
-msgid "_Use legacy input methods"
+#: ../src/im-chooser.c:539
+#, fuzzy
+msgid "Use legacy _Input Method"
 msgstr "ପୈତୃକ ନିବେଶ ପ୍ରଣାଳୀକୁ ବ୍ଯବହାର କରନ୍ତୁ (_U)"
 
-#: ../src/im-chooser.c:533
+#: ../src/im-chooser.c:541
 msgid ""
 "Use X Input Method anyway. In fact, which input method will be chosen for "
 "the desktop session, depends on the desktop language."
 msgstr ""
 "ଯେ କୌଣସି ଉପାୟରେ X ନିବେଶ ପ୍ରଣାଳୀକୁ ବ୍ଯବହାର କରନ୍ତୁ। ବାସ୍ତବରେ, ଡେସ୍କଟପ ଅଧିବେଶନ ପାଇଁ କେଉଁ "
 "ନିବେଶ ପ୍ରଣାଳୀକୁ ବ୍ଯବହାର କରାଯିବ ତାହା ଡେସ୍କଟପ ଭାଷା ଉପରେ ନିର୍ଭର କରିଥାଏ।"
-
-#: ../src/im-chooser.c:539
-msgid "Use _custom input method"
-msgstr "ଇଚ୍ଛାରୂପଣ ନିବେଶ ପ୍ରଣାଳୀକୁ ବ୍ଯବହାର କରନ୍ତୁ (_c)"
-
-#: ../src/im-chooser.c:541
-msgid ""
-"Use input method that you prefer regardless what input method the system "
-"recommends."
-msgstr ""
-"ତନ୍ତ୍ର ପରାମର୍ଶ କରୁଥିବା ନିବେଶ ପ୍ରଣାଳୀକୁ ଦୃଷ୍ଟିପାତ ନ କରି ଆପଣଙ୍କ ପସନ୍ଦ କରୁଥିବା ନିବେଶ ପ୍ରଣାଳୀକୁ "
-"ବ୍ଯବହାର କରନ୍ତୁ।"
 
 #: ../src/main.c:123
 msgid "IM Chooser - Input Method configuration tool"
@@ -103,3 +105,13 @@ msgid ""
 msgstr ""
 "ନିବେଶ ପ୍ରଣାଳୀକୁ ଚୟନ କରୁଥିବା ନିବେଶ ପ୍ରଣାଳୀ ବିନ୍ଯାସ ଉପକରଣକୁ ବ୍ଯବହାର କରନ୍ତୁ କିମ୍ବା ଡେସ୍କଟପରେ "
 "ନିବେଶ ପ୍ରଣାଳୀର ବ୍ଯବହାର ବିଧିକୁ ନିଷ୍କ୍ରିୟ କରନ୍ତୁ"
+
+#~ msgid "_Follow the system-wide configuration"
+#~ msgstr "ତନ୍ତ୍ର-ବ୍ଯାପି ବିନ୍ଯାସକୁ ଅନୁକରଣ କରନ୍ତୁ (_F)"
+
+#~ msgid ""
+#~ "Follow the system-wide input method configuration to determine which "
+#~ "input method should be used."
+#~ msgstr ""
+#~ "କେଉଁ ନିବେଶ ପ୍ରଣାଳୀକୁ ବ୍ଯବହାର କରାଯିବ ତାହା ସ୍ଥିର କରିବା ପାଇଁ ତନ୍ତ୍ର ବ୍ଯାପି ନିବେଶ ପ୍ରଣାଳୀ "
+#~ "ବିନ୍ଯାସକୁ ଅନୁକରଣ କରନ୍ତୁ।"

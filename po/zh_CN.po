@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: zh_CN\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-09-28 14:38+0900\n"
+"POT-Creation-Date: 2007-07-18 19:23+0900\n"
 "PO-Revision-Date: 2006-09-29 08:58+1000\n"
 "Last-Translator: Tony Fu <tfu@redhat.com>\n"
 "Language-Team:  <zh@li.org>\n"
@@ -33,44 +33,48 @@ msgid "No valid IM installed"
 msgstr "没有安装有效的输入法"
 
 #: ../src/im-chooser.c:521
-msgid "_Follow the system-wide configuration"
-msgstr "(_F)使用系统范围内的配置"
+msgid "_Use default Input Method for your language"
+msgstr ""
 
 #: ../src/im-chooser.c:523
 msgid ""
-"Follow the system-wide input method configuration to determine which input "
-"method should be used."
-msgstr "根据系统范围内的输入法设置来决定使用哪种输入法。"
+"Your system chooses the appropriate Input Method for your language "
+"automatically from among Input Methods installed on your system."
+msgstr ""
 
 #: ../src/im-chooser.c:526
-msgid "_Never use input methods"
-msgstr "(_N)不使用输入法"
+#, fuzzy
+msgid "Choose _specific Input Method"
+msgstr "(_c)使用自定义输入法"
 
 #: ../src/im-chooser.c:528
+#, fuzzy
 msgid ""
-"Entirely disable input methods regardless which locale the desktop is "
-"running on."
+"Use the specific Input Method that you prefer regardless what Input Method "
+"the system recommends."
+msgstr "使用您喜好的输入法，而不用考虑系统推荐使用什么输入法。"
+
+#: ../src/im-chooser.c:534
+#, fuzzy
+msgid "_Do not use Input Method"
+msgstr "(_N)不使用输入法"
+
+#: ../src/im-chooser.c:536
+#, fuzzy
+msgid ""
+"Do not use Input Method no matter what language the desktop is running on."
 msgstr "无论系统使用什么语言版本，都完全禁用输入法。"
 
-#: ../src/im-chooser.c:531
-msgid "_Use legacy input methods"
+#: ../src/im-chooser.c:539
+#, fuzzy
+msgid "Use legacy _Input Method"
 msgstr "(_U)使用旧的输入法"
 
-#: ../src/im-chooser.c:533
+#: ../src/im-chooser.c:541
 msgid ""
 "Use X Input Method anyway. In fact, which input method will be chosen for "
 "the desktop session, depends on the desktop language."
 msgstr "使用 X 输入法。使用哪种输入法是根据系统所运行的语言版本来决定的。"
-
-#: ../src/im-chooser.c:539
-msgid "Use _custom input method"
-msgstr "(_c)使用自定义输入法"
-
-#: ../src/im-chooser.c:541
-msgid ""
-"Use input method that you prefer regardless what input method the system "
-"recommends."
-msgstr "使用您喜好的输入法，而不用考虑系统推荐使用什么输入法。"
 
 #: ../src/main.c:123
 msgid "IM Chooser - Input Method configuration tool"
@@ -89,3 +93,11 @@ msgid ""
 "Input Method configuration tool to choose the Input Method to be used or "
 "disable Input Method usage on the desktop"
 msgstr "输入法配置工具被用来选择要使用的输入法，或在系统上禁用输入法。"
+
+#~ msgid "_Follow the system-wide configuration"
+#~ msgstr "(_F)使用系统范围内的配置"
+
+#~ msgid ""
+#~ "Follow the system-wide input method configuration to determine which "
+#~ "input method should be used."
+#~ msgstr "根据系统范围内的输入法设置来决定使用哪种输入法。"

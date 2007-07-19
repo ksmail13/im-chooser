@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ta\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-09-28 14:38+0900\n"
+"POT-Creation-Date: 2007-07-18 19:23+0900\n"
 "PO-Revision-Date: 2006-09-29 11:47+0530\n"
 "Last-Translator: Felix <ifelix@redhat.com>\n"
 "Language-Team: Tamil <ta@li.org>\n"
@@ -37,52 +37,54 @@ msgid "No valid IM installed"
 msgstr "சரியான IM நிறுவப்படவில்லை"
 
 #: ../src/im-chooser.c:521
-msgid "_Follow the system-wide configuration"
-msgstr "கணினி சார்ந்த கட்டமைப்பினை பின்பற்றவும் (_F)"
+msgid "_Use default Input Method for your language"
+msgstr ""
 
 #: ../src/im-chooser.c:523
 msgid ""
-"Follow the system-wide input method configuration to determine which input "
-"method should be used."
+"Your system chooses the appropriate Input Method for your language "
+"automatically from among Input Methods installed on your system."
 msgstr ""
-"கணினி சார்ந்த உள்ளீடு முறை கட்டமைப்பினை பின்பற்றி எந்த உள்ளீடு முறையை பயன்படுத்த வேண்டும் "
-"என்பதை அறியவும்."
 
 #: ../src/im-chooser.c:526
-msgid "_Never use input methods"
-msgstr "உள்ளீடு முறைகளை ஒருபோதும் பயன்படுத்த வேண்டாம் (_N)"
+#, fuzzy
+msgid "Choose _specific Input Method"
+msgstr "தனிபயன் உள்ளீடு முறையை பயன்படுத்தவும் (_c)"
 
 #: ../src/im-chooser.c:528
+#, fuzzy
 msgid ""
-"Entirely disable input methods regardless which locale the desktop is "
-"running on."
+"Use the specific Input Method that you prefer regardless what Input Method "
+"the system recommends."
+msgstr ""
+"கணினி உள்ளீடு முறையை பரிந்துரை செய்கிறது தவிர உங்களுக்கு விருப்பமான உள்ளீடு முறையையும் "
+"பயன்படுத்தலாம்."
+
+#: ../src/im-chooser.c:534
+#, fuzzy
+msgid "_Do not use Input Method"
+msgstr "உள்ளீடு முறைகளை ஒருபோதும் பயன்படுத்த வேண்டாம் (_N)"
+
+#: ../src/im-chooser.c:536
+#, fuzzy
+msgid ""
+"Do not use Input Method no matter what language the desktop is running on."
 msgstr ""
 "எந்த மொழி பணிமேடையில் பயன்படுத்தப்படுகிறது தவிர முழு உள்ளிடு முறைகளையும் "
 "பயன்படுத்தலாம்."
 
-#: ../src/im-chooser.c:531
-msgid "_Use legacy input methods"
+#: ../src/im-chooser.c:539
+#, fuzzy
+msgid "Use legacy _Input Method"
 msgstr "முறையான உள்ளீடு முறைகளை பயன்படுத்தவும் (_U)"
 
-#: ../src/im-chooser.c:533
+#: ../src/im-chooser.c:541
 msgid ""
 "Use X Input Method anyway. In fact, which input method will be chosen for "
 "the desktop session, depends on the desktop language."
 msgstr ""
 "X உள்ளீடு முறையை எப்படியும் பயன்படுத்தவும். பணிமேடை மொழியைப் பொருத்து, எந்த உள்ளீடு முறை "
 "பணிமேடை அமர்வுக்கு பயன்படுத்த வேண்டும் என்பதை பார்க்கவும்."
-
-#: ../src/im-chooser.c:539
-msgid "Use _custom input method"
-msgstr "தனிபயன் உள்ளீடு முறையை பயன்படுத்தவும் (_c)"
-
-#: ../src/im-chooser.c:541
-msgid ""
-"Use input method that you prefer regardless what input method the system "
-"recommends."
-msgstr ""
-"கணினி உள்ளீடு முறையை பரிந்துரை செய்கிறது தவிர உங்களுக்கு விருப்பமான உள்ளீடு முறையையும் "
-"பயன்படுத்தலாம்."
 
 #: ../src/main.c:123
 msgid "IM Chooser - Input Method configuration tool"
@@ -103,3 +105,13 @@ msgid ""
 msgstr ""
 "உள்ளீடு முறை கட்டமைப்பு கருவி உள்ளிடு முறையை பயன்படுத்த அல்லது உள்ளீடு முறை பயன்பாட்டை "
 "பணிமேடையில் செயல்நீக்க பயன்படுகிறது"
+
+#~ msgid "_Follow the system-wide configuration"
+#~ msgstr "கணினி சார்ந்த கட்டமைப்பினை பின்பற்றவும் (_F)"
+
+#~ msgid ""
+#~ "Follow the system-wide input method configuration to determine which "
+#~ "input method should be used."
+#~ msgstr ""
+#~ "கணினி சார்ந்த உள்ளீடு முறை கட்டமைப்பினை பின்பற்றி எந்த உள்ளீடு முறையை பயன்படுத்த "
+#~ "வேண்டும் என்பதை அறியவும்."

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: bn_IN\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-09-28 14:38+0900\n"
+"POT-Creation-Date: 2007-07-18 19:23+0900\n"
 "PO-Revision-Date: 2006-09-29 11:51+0530\n"
 "Last-Translator: Runa Bhattacharjee <runab@redhat.com>\n"
 "Language-Team: Bengali India\n"
@@ -37,49 +37,51 @@ msgid "No valid IM installed"
 msgstr "বৈধ ইনপুট পদ্ধতি (IM) ইনস্টল করা হয়নি"
 
 #: ../src/im-chooser.c:521
-msgid "_Follow the system-wide configuration"
-msgstr "সম্পূর্ণ সিস্টেমে নির্ধারিত কনফিগারেশ প্রয়োগ করা হবে (_F)"
+msgid "_Use default Input Method for your language"
+msgstr ""
 
 #: ../src/im-chooser.c:523
 msgid ""
-"Follow the system-wide input method configuration to determine which input "
-"method should be used."
+"Your system chooses the appropriate Input Method for your language "
+"automatically from among Input Methods installed on your system."
 msgstr ""
-"সম্পূর্ণ সিস্টেমের ক্ষেত্রে নির্ধারিত ইনপুট পদ্ধতির কনফিগারেশন অনুযায়ী ব্যবহারের "
-"উদ্দেশ্যে ইনপুট পদ্ধতি নির্বাচন করা হবে।"
 
 #: ../src/im-chooser.c:526
-msgid "_Never use input methods"
-msgstr "ইনপুট পদ্ধতি ব্যবহার করা হবে না (_N)"
+#, fuzzy
+msgid "Choose _specific Input Method"
+msgstr "স্বনির্ধারিত ইনপুট পদ্ধতি ব্যবহার করা হবে (_c)"
 
 #: ../src/im-chooser.c:528
+#, fuzzy
 msgid ""
-"Entirely disable input methods regardless which locale the desktop is "
-"running on."
+"Use the specific Input Method that you prefer regardless what Input Method "
+"the system recommends."
+msgstr ""
+"সিস্টেমে প্রস্তাবিত ইনপুট পদ্ধতি নির্বিশেষে আপনার পছন্দসই ইনপুট পদ্ধতি ব্যবহার করুন।"
+
+#: ../src/im-chooser.c:534
+#, fuzzy
+msgid "_Do not use Input Method"
+msgstr "ইনপুট পদ্ধতি ব্যবহার করা হবে না (_N)"
+
+#: ../src/im-chooser.c:536
+#, fuzzy
+msgid ""
+"Do not use Input Method no matter what language the desktop is running on."
 msgstr "ডেস্কটপে ব্যবহৃত লোকেইল নির্বিশেষে সর্বধরনের ইনপুট পদ্ধতি নিষ্ক্রিয় করা হবে।"
 
-#: ../src/im-chooser.c:531
-msgid "_Use legacy input methods"
+#: ../src/im-chooser.c:539
+#, fuzzy
+msgid "Use legacy _Input Method"
 msgstr "লিগাসি ইনপুট পদ্ধতি ব্যবহার করা হবে (_U)"
 
-#: ../src/im-chooser.c:533
+#: ../src/im-chooser.c:541
 msgid ""
 "Use X Input Method anyway. In fact, which input method will be chosen for "
 "the desktop session, depends on the desktop language."
 msgstr ""
 "তথাপি X ইনপুট পদ্ধতি (XIM) ব্যবহার করা হবে। বাস্তবে ডেস্কটপে ব্যবহৃত ভাষা অনুসারে "
 "ডেস্কটপ সেশানে ব্যবহারযোগ্য ইনপুট পদ্ধতি নির্ধারিত হয়।"
-
-#: ../src/im-chooser.c:539
-msgid "Use _custom input method"
-msgstr "স্বনির্ধারিত ইনপুট পদ্ধতি ব্যবহার করা হবে (_c)"
-
-#: ../src/im-chooser.c:541
-msgid ""
-"Use input method that you prefer regardless what input method the system "
-"recommends."
-msgstr ""
-"সিস্টেমে প্রস্তাবিত ইনপুট পদ্ধতি নির্বিশেষে আপনার পছন্দসই ইনপুট পদ্ধতি ব্যবহার করুন।"
 
 #: ../src/main.c:123
 msgid "IM Chooser - Input Method configuration tool"
@@ -100,3 +102,13 @@ msgid ""
 msgstr ""
 "ডেস্কটপে ব্যবহারযোগ্য ইনপুট পদ্ধতি নির্ধারণ অথবা ইনপুট পদ্ধতি নিষ্ক্রিয় করতে ব্যবহৃত "
 "কনফিগারেশনের সামগ্রী।"
+
+#~ msgid "_Follow the system-wide configuration"
+#~ msgstr "সম্পূর্ণ সিস্টেমে নির্ধারিত কনফিগারেশ প্রয়োগ করা হবে (_F)"
+
+#~ msgid ""
+#~ "Follow the system-wide input method configuration to determine which "
+#~ "input method should be used."
+#~ msgstr ""
+#~ "সম্পূর্ণ সিস্টেমের ক্ষেত্রে নির্ধারিত ইনপুট পদ্ধতির কনফিগারেশন অনুযায়ী ব্যবহারের "
+#~ "উদ্দেশ্যে ইনপুট পদ্ধতি নির্বাচন করা হবে।"

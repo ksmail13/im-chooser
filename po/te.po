@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: te\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-09-28 14:38+0900\n"
+"POT-Creation-Date: 2007-07-18 19:23+0900\n"
 "PO-Revision-Date: 2006-10-30 13:19+0530\n"
 "Last-Translator: \n"
 "Language-Team:  <en@li.org>\n"
@@ -36,46 +36,50 @@ msgid "No valid IM installed"
 msgstr "ఏ విలువైన IM సంస్థాపించబడలేదు"
 
 #: ../src/im-chooser.c:521
-msgid "_Follow the system-wide configuration"
-msgstr "సిస్టం-వైడ్ ఆకృతీకరణను అనుసరించు (_F)"
+msgid "_Use default Input Method for your language"
+msgstr ""
 
 #: ../src/im-chooser.c:523
 msgid ""
-"Follow the system-wide input method configuration to determine which input "
-"method should be used."
-msgstr "ఏ ఇన్పుట్ విధానం ఉపయోగించాలో నిర్ణయించటానికి ఈ సిస్టం-వైడ్ ఇన్పుట్ విధానాన్ని అనుసరించు."
+"Your system chooses the appropriate Input Method for your language "
+"automatically from among Input Methods installed on your system."
+msgstr ""
 
 #: ../src/im-chooser.c:526
-msgid "_Never use input methods"
-msgstr "ఎప్పుడూ ఇన్పుట్ విధానాన్ని ఉపయోగించకు (_N)"
+#, fuzzy
+msgid "Choose _specific Input Method"
+msgstr "వినియోగదారుని ఇన్పుట్ విధానాన్ని ఉపయోగించు (_c)"
 
 #: ../src/im-chooser.c:528
+#, fuzzy
 msgid ""
-"Entirely disable input methods regardless which locale the desktop is "
-"running on."
+"Use the specific Input Method that you prefer regardless what Input Method "
+"the system recommends."
+msgstr "మీరు మద్దతిస్తున్న కంప్యూటరు మద్దతిచ్చే ఇన్పుట్ విధానాన్ని ఉపయోగిచండి."
+
+#: ../src/im-chooser.c:534
+#, fuzzy
+msgid "_Do not use Input Method"
+msgstr "ఎప్పుడూ ఇన్పుట్ విధానాన్ని ఉపయోగించకు (_N)"
+
+#: ../src/im-chooser.c:536
+#, fuzzy
+msgid ""
+"Do not use Input Method no matter what language the desktop is running on."
 msgstr "ఎక్కడ స్థానిక డెస్కుటాప్ నడుస్తోందో దానికి పూర్తిగా అలవికాని ఇన్పుట్ విధానాలు."
 
-#: ../src/im-chooser.c:531
-msgid "_Use legacy input methods"
+#: ../src/im-chooser.c:539
+#, fuzzy
+msgid "Use legacy _Input Method"
 msgstr "లీగెన్సీ ఇన్పుట్ విధానాన్ని ఉపయోగించు (_U)"
 
-#: ../src/im-chooser.c:533
+#: ../src/im-chooser.c:541
 msgid ""
 "Use X Input Method anyway. In fact, which input method will be chosen for "
 "the desktop session, depends on the desktop language."
 msgstr ""
 "ఏమైనప్పటికీ X ఇన్పుట్ విధానాన్ని ఉపయోగించు. నిజానికి, డెస్కుటాప్ సెషన్ కోసం ఎన్నిక చేయబడ్డ ఇన్పుట్ విధానం "
 "డెస్కుటాప్ భాష మీద ఆధారపడి ఉంటుంది."
-
-#: ../src/im-chooser.c:539
-msgid "Use _custom input method"
-msgstr "వినియోగదారుని ఇన్పుట్ విధానాన్ని ఉపయోగించు (_c)"
-
-#: ../src/im-chooser.c:541
-msgid ""
-"Use input method that you prefer regardless what input method the system "
-"recommends."
-msgstr "మీరు మద్దతిస్తున్న కంప్యూటరు మద్దతిచ్చే ఇన్పుట్ విధానాన్ని ఉపయోగిచండి."
 
 #: ../src/main.c:123
 msgid "IM Chooser - Input Method configuration tool"
@@ -96,3 +100,11 @@ msgid ""
 msgstr ""
 "డెస్కుటాప్ యందు ఇన్పుట్ విధానాన్ని ఉపయోగించటానికి ఉపయోగించ కుండా ఉండటానికి ఇన్పుట్ విధానంఎన్నిక చేయటానికి "
 "ఉపయోగించే ఇన్పుట్ విధాన ఆకృతీకరణ సాధనం"
+
+#~ msgid "_Follow the system-wide configuration"
+#~ msgstr "సిస్టం-వైడ్ ఆకృతీకరణను అనుసరించు (_F)"
+
+#~ msgid ""
+#~ "Follow the system-wide input method configuration to determine which "
+#~ "input method should be used."
+#~ msgstr "ఏ ఇన్పుట్ విధానం ఉపయోగించాలో నిర్ణయించటానికి ఈ సిస్టం-వైడ్ ఇన్పుట్ విధానాన్ని అనుసరించు."

@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: im-chooser 0.3.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-09-28 14:38+0900\n"
+"POT-Creation-Date: 2007-07-18 19:23+0900\n"
 "PO-Revision-Date: 2006-09-28 14:38+0900\n"
 "Last-Translator: Xavier Conde Rueda <xavi.conde@gmail.com>\n"
 "Language-Team: none\n"
@@ -44,52 +44,54 @@ msgid "No valid IM installed"
 msgstr "No hi ha cap ME instal·lat vàlid"
 
 #: ../src/im-chooser.c:521
-msgid "_Follow the system-wide configuration"
-msgstr "_Segueix la configuració global del sistema"
+msgid "_Use default Input Method for your language"
+msgstr ""
 
 #: ../src/im-chooser.c:523
 msgid ""
-"Follow the system-wide input method configuration to determine which input "
-"method should be used."
+"Your system chooses the appropriate Input Method for your language "
+"automatically from among Input Methods installed on your system."
 msgstr ""
-"Segueix el mètode d'entrada global del sistema per determinar quin mètode "
-"d'entrada s'ha de fer servir."
 
 #: ../src/im-chooser.c:526
-msgid "_Never use input methods"
-msgstr "_No usis mètodes d'entrada"
+#, fuzzy
+msgid "Choose _specific Input Method"
+msgstr "Usa el mètode _personalitzat"
 
 #: ../src/im-chooser.c:528
+#, fuzzy
 msgid ""
-"Entirely disable input methods regardless which locale the desktop is "
-"running on."
+"Use the specific Input Method that you prefer regardless what Input Method "
+"the system recommends."
+msgstr ""
+"Usa el mètode d'entrada preferit sense tenir en compte el recomenat pel "
+"sistema."
+
+#: ../src/im-chooser.c:534
+#, fuzzy
+msgid "_Do not use Input Method"
+msgstr "_No usis mètodes d'entrada"
+
+#: ../src/im-chooser.c:536
+#, fuzzy
+msgid ""
+"Do not use Input Method no matter what language the desktop is running on."
 msgstr ""
 "Inhabilita completament els mètodes d'entrada sense tenir en compte la "
 "localització actual de l'escriptori."
 
-#: ../src/im-chooser.c:531
-msgid "_Use legacy input methods"
+#: ../src/im-chooser.c:539
+#, fuzzy
+msgid "Use legacy _Input Method"
 msgstr "_Usa els mètodes predeterminats"
 
-#: ../src/im-chooser.c:533
+#: ../src/im-chooser.c:541
 msgid ""
 "Use X Input Method anyway. In fact, which input method will be chosen for "
 "the desktop session, depends on the desktop language."
 msgstr ""
-"Usa el mètode d'entrada d'X igualment. De fet, el mètode d'entrada escollit per "
-"a la sessió de l'escriptori depén del llenguatge de l'escriptori."
-
-#: ../src/im-chooser.c:539
-msgid "Use _custom input method"
-msgstr "Usa el mètode _personalitzat"
-
-#: ../src/im-chooser.c:541
-msgid ""
-"Use input method that you prefer regardless what input method the system "
-"recommends."
-msgstr 
-"Usa el mètode d'entrada preferit sense tenir en compte el recomenat pel "
-"sistema."
+"Usa el mètode d'entrada d'X igualment. De fet, el mètode d'entrada escollit "
+"per a la sessió de l'escriptori depén del llenguatge de l'escriptori."
 
 #: ../src/main.c:123
 msgid "IM Chooser - Input Method configuration tool"
@@ -108,5 +110,15 @@ msgid ""
 "Input Method configuration tool to choose the Input Method to be used or "
 "disable Input Method usage on the desktop"
 msgstr ""
-"Eina de configuració del mètode d'entrada, per a escollir el mètode d'entrada "
-"que es farà servir o per a inhabilitar-ne l'ús"
+"Eina de configuració del mètode d'entrada, per a escollir el mètode "
+"d'entrada que es farà servir o per a inhabilitar-ne l'ús"
+
+#~ msgid "_Follow the system-wide configuration"
+#~ msgstr "_Segueix la configuració global del sistema"
+
+#~ msgid ""
+#~ "Follow the system-wide input method configuration to determine which "
+#~ "input method should be used."
+#~ msgstr ""
+#~ "Segueix el mètode d'entrada global del sistema per determinar quin mètode "
+#~ "d'entrada s'ha de fer servir."
