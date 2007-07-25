@@ -8,9 +8,7 @@ xinput_in_in_files =		\
 xinput_in_files = $(xinput_in_in_files:.in.in=.in)
 xinput_DATA = $(xinput_in_files:.in=$(XINPUT_SUFFIX))
 $(xinput_DATA): $(xinput_in_files)
-	list='$(xinput_in_files)'; for file in $$list; do	\
-		cp $$file `echo $$file | sed -e 's|.in$$|$(XINPUT_SUFFIX)|'`;	\
-	done
+	cp `echo $@ | sed -e 's|$(XINPUT_SUFFIX)$$||'`.in $@
 
 xinputsh_in_in = xinput.sh.in.in
 xinputsh_in = $(xinputsh_in_in:.in=)
@@ -33,7 +31,6 @@ EXTRA_DIST =			\
 	$(NULL)
 
 clean-local:
-	-rm @XINPUTSH@
 	-rm $(xinput_DATA)
 	-rm $(xinputsh_DATA)
 
