@@ -1,5 +1,9 @@
 2007-07-25  Akira TAGOH  <tagoh@redhat.com>
 
+	* configure.ac: dump a version to 0.4.1.
+
+	* data/Makefile.am: small bug fix.
+
 	* configure.ac: dump a version to 0.4.0.
 
 2007-07-18  Akira TAGOH  <tagoh@redhat.com>

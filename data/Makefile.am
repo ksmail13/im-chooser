@@ -27,12 +27,14 @@ CONFIGURE_DEPENDENCIES =	\
 	$(NULL)
 
 EXTRA_DIST =			\
-	$(xinput_DATA)		\
-	$(xinputsh_DATA)	\
+	$(xinput_in_in_files)	\
+	$(xinputsh_in_in)	\
 	$(icon_DATA)		\
 	$(NULL)
 
 clean-local:
 	-rm @XINPUTSH@
+	-rm $(xinput_DATA)
+	-rm $(xinputsh_DATA)
 
 .PHONY: clean-local
