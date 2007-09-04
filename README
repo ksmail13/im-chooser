@@ -39,3 +39,9 @@ AUXILIARY_PROGRAM
 	an optional program that may want to bring up for
 	IM. AUXILIARY_ARGS can be used to give any options
 	for AUXLIARY_PROGRAM.
+
+PREFERENCE_PROGRAM
+	an optional program that sets up the input method.
+	This program will be brought up from im-chooser.
+	PREFERENCE_ARGS can be used to give any options for
+	PREFERENCE_PROGRAM.

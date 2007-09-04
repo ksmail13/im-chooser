@@ -25,6 +25,9 @@ im_chooser_SOURCES =						\
 	main.c							\
 	im-chooser.c						\
 	im-chooser.h						\
+	im-chooser-private.h					\
+	im-chooser-simple.c					\
+	im-chooser-simple.h					\
 	xinput.c						\
 	xinput.h						\
 	$(NULL)

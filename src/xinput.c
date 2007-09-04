@@ -1,6 +1,7 @@
+/* -*- Mode: C; tab-width: 8; indent-tabs-mode: t; c-basic-offset: 8 -*- */
 /* 
  * xinput.c
- * Copyright (C) 2006 Red Hat, Inc. All rights reserved.
+ * Copyright (C) 2006-2007 Red Hat, Inc. All rights reserved.
  * 
  * Authors:
  *   Akira TAGOH  <tagoh@redhat.com>
@@ -29,7 +30,9 @@
 #include <sys/stat.h>
 #include <unistd.h>
 #include <glib.h>
+#include <glib/gi18n.h>
 #include "xinput.h"
+#include "im-chooser-private.h"
 
 
 #define _skip_blanks(_str)				\
@@ -47,9 +50,14 @@
 
 
 struct _XInputData {
+	gchar    *file;
 	gchar    *gtkimm;
 	gchar    *qtimm;
 	gchar    *xim;
+	gchar    *prefs_prog;
+	gchar    *prefs_args;
+	gchar    *short_desc;
+	gchar    *long_desc;
 	gboolean  ignore;
 };
 
@@ -58,6 +66,10 @@ const gchar *_xinput_tokens[] = {
 	"QT_IM_MODULE=",
 	"XIM=",
 	"IM_CHOOSER_IGNORE_ME=",
+	"PREFERENCE_PROGRAM=",
+	"PREFERENCE_ARGS=",
+	"SHORT_DESC=",
+	"LONG_DESC=",
 	NULL
 };
 typedef enum {
@@ -65,6 +77,10 @@ typedef enum {
 	QT_IM_MODULE,
 	XIM,
 	IM_CHOOSER_IGNORE_ME,
+	PREFERENCE_PROGRAM,
+	PREFERENCE_ARGS,
+	SHORT_DESC,
+	LONG_DESC,
 } token_type_t;
 
 /*
@@ -144,17 +160,36 @@ xinput_data_new(const gchar *file)
 {
 	XInputData *retval;
 	FILE *fp;
-	gchar buffer[256], *p;
+	gchar buffer[256], *p, *name;
 	gint i;
 	GString *str, *cmd;
 	token_type_t type;
 	struct stat st;
 
-	g_return_val_if_fail (file != NULL, NULL);
+	if (file == NULL) {
+		/* special xinput data for user-own xinput file */
+		retval = g_new0(XInputData, 1);
+		retval->file = NULL;
+		retval->gtkimm = NULL;
+		retval->qtimm = NULL;
+		retval->xim = NULL;
+		retval->prefs_prog = NULL;
+		retval->prefs_args = NULL;
+		retval->short_desc = g_strdup(IM_USER_SPECIFIC_LABEL);
+		retval->long_desc = g_strdup(_("xinputrc was modified by the user"));
+		retval->ignore = FALSE;
 
+		return retval;
+	}
 	str = g_string_new(NULL);
 	cmd = g_string_new(NULL);
-	g_string_printf(cmd, "export IM_CHOOSER_DISABLE_USER_XINPUTRC=yes; export IM_CHOOSER_ONLY_EVALUATE_VARIABLES=yes;. %s;", file);
+	name = g_path_get_basename(file);
+	g_string_append(cmd, "export IM_CHOOSER_DISABLE_USER_XINPUTRC=yes; export IM_CHOOSER_ONLY_EVALUATE_VARIABLES=yes;");
+	if (strcmp(name, IM_GLOBAL_XINPUT_CONF) == 0) {
+		g_string_append_printf(cmd, ". %s;", XINIT_PATH G_DIR_SEPARATOR_S IM_XINPUT_SH);
+	} else {
+		g_string_append_printf(cmd, ". %s;", file);
+	}
 	for (i = 0; _xinput_tokens[i] != NULL; i++) {
 		size_t len = strlen(_xinput_tokens[i]);
 
@@ -167,10 +202,15 @@ xinput_data_new(const gchar *file)
 		return NULL;
 	}
 
-	retval = g_new0(XInputData, 1);
+	retval = g_new(XInputData, 1);
+	retval->file = g_strdup(file);
 	retval->gtkimm = NULL;
 	retval->qtimm = NULL;
 	retval->xim = NULL;
+	retval->prefs_prog = NULL;
+	retval->prefs_args = NULL;
+	retval->short_desc = NULL;
+	retval->long_desc = NULL;
 	retval->ignore = FALSE;
 
 	while (!feof(fp)) {
@@ -209,6 +249,18 @@ xinput_data_new(const gchar *file)
 						    retval->ignore = TRUE;
 					    }
 					    break;
+				    case PREFERENCE_PROGRAM:
+					    retval->prefs_prog = g_strdup(str->str);
+					    break;
+				    case PREFERENCE_ARGS:
+					    retval->prefs_args = g_strdup(str->str);
+					    break;
+				    case SHORT_DESC:
+					    retval->short_desc = g_strdup(str->str);
+					    break;
+				    case LONG_DESC:
+					    retval->long_desc = g_strdup(str->str);
+					    break;
 				    default:
 					    break;
 				}
@@ -218,6 +270,22 @@ xinput_data_new(const gchar *file)
 		}
 	}
 	pclose(fp);
+
+#define _my_free(n)				\
+	if ((n) != NULL && (n)[0] == 0) {	\
+		g_free(n);			\
+		(n) = NULL;			\
+	}
+
+	_my_free(retval->gtkimm);
+	_my_free(retval->qtimm);
+	_my_free(retval->xim);
+	_my_free(retval->prefs_prog);
+	_my_free(retval->prefs_args);
+	_my_free(retval->short_desc);
+	_my_free(retval->long_desc);
+
+#undef _my_free
 
 	g_string_free(cmd, TRUE);
 	g_string_free(str, TRUE);
@@ -233,12 +301,22 @@ xinput_data_free(gpointer data)
 	g_return_if_fail (data != NULL);
 
 	xinput = data;
+	if (xinput->file)
+		g_free(xinput->file);
 	if (xinput->gtkimm)
 		g_free(xinput->gtkimm);
 	if (xinput->qtimm)
 		g_free(xinput->qtimm);
 	if (xinput->xim)
 		g_free(xinput->xim);
+	if (xinput->prefs_prog)
+		g_free(xinput->prefs_prog);
+	if (xinput->prefs_args)
+		g_free(xinput->prefs_args);
+	if (xinput->short_desc)
+		g_free(xinput->short_desc);
+	if (xinput->long_desc)
+		g_free(xinput->long_desc);
 	g_free(xinput);
 }
 
@@ -263,10 +341,38 @@ xinput_data_get_value(XInputData      *xinput,
 	    case XINPUT_VALUE_IGNORE_ME:
 		    retval = GINT_TO_POINTER (xinput->ignore);
 		    break;
+	    case XINPUT_VALUE_PREFS_PROG:
+		    retval = xinput->prefs_prog;
+		    break;
+	    case XINPUT_VALUE_PREFS_ARGS:
+		    retval = xinput->prefs_args;
+		    break;
+	    case XINPUT_VALUE_SHORT_DESC:
+		    retval = xinput->short_desc;
+		    break;
+	    case XINPUT_VALUE_LONG_DESC:
+		    retval = xinput->long_desc;
+		    break;
+	    case XINPUT_VALUE_FILENAME:
+		    retval = xinput->file;
+		    break;
 	    default:
 		    g_warning("Unknown name type: %d", type);
 		    break;
 	}
+
+	return retval;
+}
+
+gchar *
+xinput_data_get_short_description(XInputData *xinput)
+{
+	gchar *retval;
+
+	g_return_val_if_fail (xinput != NULL, NULL);
+
+	if ((retval = xinput_data_get_value(xinput, XINPUT_VALUE_SHORT_DESC)) == NULL)
+		retval = xinput_data_get_value(xinput, XINPUT_VALUE_XIM);
 
 	return retval;
 }

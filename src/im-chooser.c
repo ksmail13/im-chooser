@@ -1,3 +1,4 @@
+/* -*- Mode: C; tab-width: 8; indent-tabs-mode: t; c-basic-offset: 8 -*- */
 /* 
  * im-chooser.c
  * Copyright (C) 2006 Red Hat, Inc. All rights reserved.
@@ -26,6 +27,7 @@
 #include <glib/gi18n.h>
 #include <gtk/gtk.h>
 #include "im-chooser.h"
+#include "im-chooser-private.h"
 #include "xinput.h"
 
 #define ENCODE_MODE(mode, submode)		\
@@ -40,16 +42,8 @@
 	(((val) >> 16) & 0xffff)
 		
 #define IM_CHOOSER_MODE		"im-chooser-mode"
-/* user config file */
-#define IM_USER_XINPUT_CONF	".xinputrc"
-/* global config file */
-#define IM_GLOBAL_XINPUT_CONF	"xinputrc"
 /* name that uses to be determined which IM is used for default. */
 #define IM_DEFAULT_NAME		"xinputrc"
-/* name that uses to be determined that IM is never used no matter what */
-#define IM_NONE_NAME		"none"
-/* name that uses to be determined that XIM is always used no matter what */
-#define IM_XIM_NAME		"xim"
 /* label that uses to indicate their own .xinputrc */
 #define IM_USER_SPECIFIC_LABEL	"User Specific"
 /* label that uses to indicate "unknown" xinput script */
@@ -215,6 +209,7 @@ im_chooser_instance_init(IMChooser *im)
 	GSList *l, *im_list;
 	XInputData *xinput;
 
+	im->widget = NULL;
 	im->modified = FALSE;
 	im->is_backedup = FALSE;
 
@@ -582,6 +577,7 @@ im_chooser_get_widget(IMChooser *im)
 
 		im->widget = vbox;
 	}
+	gtk_widget_show_all(im->widget);
 
 	return im->widget;
 }
