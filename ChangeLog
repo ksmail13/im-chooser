@@ -1,5 +1,8 @@
 2007-09-04  Akira TAGOH  <tagoh@redhat.com>
 
+	* data/xinput.sh.in.in: Do not run even $AUXILIARY_PROGRAM when
+	$IM_CHOOSER_ONLY_EVALUATE_VARIABLES is set.
+
 	* README: Describe PREFERENCE_PROGRAM AND PREFERENCE_ARGS.
 
 	* data/none.in.in: Add IM_CHOOSER_IGNORE_ME to not display in the IM list.

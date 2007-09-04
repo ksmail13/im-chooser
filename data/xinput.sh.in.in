@@ -51,4 +51,4 @@ fi
 [ -n "$XIM_PROGRAM" -a "x$IM_CHOOSER_ONLY_EVALUATE_VARIABLES" = "xno" ] && which "$XIM_PROGRAM" > /dev/null 2>&1 && LANG="$tmplang" "$XIM_PROGRAM" $XIM_ARGS &
 
 # execute AUXILIARY_PROGRAM
-[ -n "$AUXILIARY_PROGRAM" ] && which "$AUXILIARY_PROGRAM" > /dev/null 2>&1 && LANG="$tmplang" "$AUXILIARY_PROGRAM" $AUXILIARY_ARGS &
+[ -n "$AUXILIARY_PROGRAM" -a "x$IM_CHOOSER_ONLY_EVALUATE_VARIABLES" = "xno" ] && which "$AUXILIARY_PROGRAM" > /dev/null 2>&1 && LANG="$tmplang" "$AUXILIARY_PROGRAM" $AUXILIARY_ARGS &
