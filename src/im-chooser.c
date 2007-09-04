@@ -44,8 +44,6 @@
 #define IM_CHOOSER_MODE		"im-chooser-mode"
 /* name that uses to be determined which IM is used for default. */
 #define IM_DEFAULT_NAME		"xinputrc"
-/* label that uses to indicate their own .xinputrc */
-#define IM_USER_SPECIFIC_LABEL	"User Specific"
 /* label that uses to indicate "unknown" xinput script */
 #define IM_UNKNOWN_LABEL	"Unknown"
 
