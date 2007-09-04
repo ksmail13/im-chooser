@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: im-chooser\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-07-18 19:23+0900\n"
+"POT-Creation-Date: 2007-09-04 23:59+0900\n"
 "PO-Revision-Date: 2007-06-11 13:28+0000\n"
 "Last-Translator: Abigail Brady <morwen@evilmagic.org>\n"
 "Language-Team: \n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../src/im-chooser.c:489
+#: ../src/im-chooser.c:482 ../src/im-chooser-simple.c:607
 msgid ""
 "<small><i>Note: this change will not take effect until you next log in.</i></"
 "small>"
@@ -23,30 +23,30 @@ msgstr ""
 "<small><i>Note: this change will not take effect until you next log in.</i></"
 "small>"
 
-#: ../src/im-chooser.c:493
+#: ../src/im-chooser.c:486 ../src/im-chooser-simple.c:594
 msgid "<b>Input Method</b>"
 msgstr "<b>Input Method</b>"
 
-#: ../src/im-chooser.c:503
+#: ../src/im-chooser.c:496
 msgid "No valid IM installed"
 msgstr "No valid IM installed"
 
-#: ../src/im-chooser.c:521
+#: ../src/im-chooser.c:514
 msgid "_Use default Input Method for your language"
 msgstr ""
 
-#: ../src/im-chooser.c:523
+#: ../src/im-chooser.c:516
 msgid ""
 "Your system chooses the appropriate Input Method for your language "
 "automatically from among Input Methods installed on your system."
 msgstr ""
 
-#: ../src/im-chooser.c:526
+#: ../src/im-chooser.c:519
 #, fuzzy
 msgid "Choose _specific Input Method"
 msgstr "Use _custom input method"
 
-#: ../src/im-chooser.c:528
+#: ../src/im-chooser.c:521
 #, fuzzy
 msgid ""
 "Use the specific Input Method that you prefer regardless what Input Method "
@@ -55,12 +55,12 @@ msgstr ""
 "Use input method that you prefer regardless what input method the system "
 "recommends."
 
-#: ../src/im-chooser.c:534
+#: ../src/im-chooser.c:527
 #, fuzzy
 msgid "_Do not use Input Method"
 msgstr "_Never use input methods"
 
-#: ../src/im-chooser.c:536
+#: ../src/im-chooser.c:529
 #, fuzzy
 msgid ""
 "Do not use Input Method no matter what language the desktop is running on."
@@ -68,12 +68,12 @@ msgstr ""
 "Entirely disable input methods regardless which locale the desktop is "
 "running on."
 
-#: ../src/im-chooser.c:539
+#: ../src/im-chooser.c:532
 #, fuzzy
 msgid "Use legacy _Input Method"
 msgstr "_Use legacy input methods"
 
-#: ../src/im-chooser.c:541
+#: ../src/im-chooser.c:534
 msgid ""
 "Use X Input Method anyway. In fact, which input method will be chosen for "
 "the desktop session, depends on the desktop language."
@@ -81,13 +81,40 @@ msgstr ""
 "Use X Input Method anyway. In fact, which input method will be chosen for "
 "the desktop session, depends on the desktop language."
 
-#: ../src/main.c:123
+#: ../src/im-chooser-simple.c:431
+#, c-format
+msgid "Use %s"
+msgstr ""
+
+#: ../src/im-chooser-simple.c:433
+msgid " (Legacy)"
+msgstr ""
+
+#: ../src/im-chooser-simple.c:435
+msgid " (Recommend)"
+msgstr ""
+
+#: ../src/im-chooser-simple.c:600
+msgid "_Enable input method feature"
+msgstr ""
+
+#: ../src/im-chooser-simple.c:639
+#, fuzzy
+msgid "Input Method _Preferences..."
+msgstr "Input Method"
+
+#: ../src/main.c:140
 msgid "IM Chooser - Input Method configuration tool"
 msgstr "IM Chooser - Input Method configuration tool"
 
-#: ../src/main.c:130
+#: ../src/main.c:148
 msgid "_Log Out"
 msgstr "_Log Out"
+
+#. label that uses to indicate their own .xinputrc
+#: ../src/im-chooser-private.h:36
+msgid "User Specific"
+msgstr ""
 
 #: ../src/im-chooser.desktop.in.in.h:1
 msgid "Input Method"

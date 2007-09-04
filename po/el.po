@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: el\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-07-18 19:23+0900\n"
+"POT-Creation-Date: 2007-09-04 23:59+0900\n"
 "PO-Revision-Date: 2006-10-02 15:01+0100\n"
 "Last-Translator: Dimitris Glezos <dimitris@glezos.com>\n"
 "Language-Team: Greek <fedora-trans-el@redhat.com>\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Plural-Forms:  nplurals=2; plural=(n != 1);\n"
 "X-Generator: KBabel 1.11.4\n"
 
-#: ../src/im-chooser.c:489
+#: ../src/im-chooser.c:482 ../src/im-chooser-simple.c:607
 msgid ""
 "<small><i>Note: this change will not take effect until you next log in.</i></"
 "small>"
@@ -27,30 +27,30 @@ msgstr ""
 "<small><i>Σημείωση: αυτή η αλλαγή θα έχει αποτέλεσμα την επόμενη φορά που θα "
 "συνδεθείτε.</i></small>"
 
-#: ../src/im-chooser.c:493
+#: ../src/im-chooser.c:486 ../src/im-chooser-simple.c:594
 msgid "<b>Input Method</b>"
 msgstr "<b>Μέθοδος εισαγωγής</b>"
 
-#: ../src/im-chooser.c:503
+#: ../src/im-chooser.c:496
 msgid "No valid IM installed"
 msgstr "Δεν υπάρχει έγκυρο IM εγκατεστημένο"
 
-#: ../src/im-chooser.c:521
+#: ../src/im-chooser.c:514
 msgid "_Use default Input Method for your language"
 msgstr ""
 
-#: ../src/im-chooser.c:523
+#: ../src/im-chooser.c:516
 msgid ""
 "Your system chooses the appropriate Input Method for your language "
 "automatically from among Input Methods installed on your system."
 msgstr ""
 
-#: ../src/im-chooser.c:526
+#: ../src/im-chooser.c:519
 #, fuzzy
 msgid "Choose _specific Input Method"
 msgstr "Χρήση προσαρ_μοσμένης μεθόδου εισαγωγής"
 
-#: ../src/im-chooser.c:528
+#: ../src/im-chooser.c:521
 #, fuzzy
 msgid ""
 "Use the specific Input Method that you prefer regardless what Input Method "
@@ -59,12 +59,12 @@ msgstr ""
 "Χρήση μεθόδων εισαγωγής που εσείς προτιμάτε ανεξάρτητα με τις μεθόδους "
 "εισαγωγής που το σύστημα προτείνει."
 
-#: ../src/im-chooser.c:534
+#: ../src/im-chooser.c:527
 #, fuzzy
 msgid "_Do not use Input Method"
 msgstr "Να _μη γίνει χρήση μεθόδων εισαγωγής ποτέ"
 
-#: ../src/im-chooser.c:536
+#: ../src/im-chooser.c:529
 #, fuzzy
 msgid ""
 "Do not use Input Method no matter what language the desktop is running on."
@@ -72,12 +72,12 @@ msgstr ""
 "Απενεργοποίηση μεθόδων εισαγωγής εντελώς ανεξάρτητα του locale με το οποίο "
 "εκτελείται η επιφάνεια εργασίας."
 
-#: ../src/im-chooser.c:539
+#: ../src/im-chooser.c:532
 #, fuzzy
 msgid "Use legacy _Input Method"
 msgstr "Χρήση παρα_δοσιακών μεθόδων εισαγωγής"
 
-#: ../src/im-chooser.c:541
+#: ../src/im-chooser.c:534
 msgid ""
 "Use X Input Method anyway. In fact, which input method will be chosen for "
 "the desktop session, depends on the desktop language."
@@ -86,13 +86,40 @@ msgstr ""
 "εισαγωγής θα επιλεγεί για τη συνεδρία επιφάνειας εργασίας θα εξαρτηθεί από "
 "τη γλώσσα της επιφάνειας."
 
-#: ../src/main.c:123
+#: ../src/im-chooser-simple.c:431
+#, c-format
+msgid "Use %s"
+msgstr ""
+
+#: ../src/im-chooser-simple.c:433
+msgid " (Legacy)"
+msgstr ""
+
+#: ../src/im-chooser-simple.c:435
+msgid " (Recommend)"
+msgstr ""
+
+#: ../src/im-chooser-simple.c:600
+msgid "_Enable input method feature"
+msgstr ""
+
+#: ../src/im-chooser-simple.c:639
+#, fuzzy
+msgid "Input Method _Preferences..."
+msgstr "Μέθοδος εισαγωγής"
+
+#: ../src/main.c:140
 msgid "IM Chooser - Input Method configuration tool"
 msgstr "Επιλογή IM - Εργαλείο ρύθμισης μεθόδων εισαγωγής"
 
-#: ../src/main.c:130
+#: ../src/main.c:148
 msgid "_Log Out"
 msgstr "Απο_σύνδεση"
+
+#. label that uses to indicate their own .xinputrc
+#: ../src/im-chooser-private.h:36
+msgid "User Specific"
+msgstr ""
 
 #: ../src/im-chooser.desktop.in.in.h:1
 msgid "Input Method"

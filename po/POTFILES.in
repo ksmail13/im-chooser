@@ -1,4 +1,5 @@
 src/im-chooser.c
+src/im-chooser-simple.c
 src/main.c
+src/im-chooser-private.h
 src/im-chooser.desktop.in.in
-

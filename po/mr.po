@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mr\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-07-18 19:23+0900\n"
+"POT-Creation-Date: 2007-09-04 23:59+0900\n"
 "PO-Revision-Date: 2006-10-02 21:01+0530\n"
 "Last-Translator: Rahul Bhalerao <b.rahul.pm@gmail.com>\n"
 "Language-Team: Marathi\n"
@@ -19,7 +19,7 @@ msgstr ""
 "X-Generator: KBabel 1.9.1\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../src/im-chooser.c:489
+#: ../src/im-chooser.c:482 ../src/im-chooser-simple.c:607
 msgid ""
 "<small><i>Note: this change will not take effect until you next log in.</i></"
 "small>"
@@ -27,30 +27,30 @@ msgstr ""
 "<small><i>टीप: तुम्ही पुन्हा लॉगीन करेपर्यंत हा बदल परिणामकारक होणार नाही.</i></"
 "small>"
 
-#: ../src/im-chooser.c:493
+#: ../src/im-chooser.c:486 ../src/im-chooser-simple.c:594
 msgid "<b>Input Method</b>"
 msgstr "<b>आदान पद्धती</b>"
 
-#: ../src/im-chooser.c:503
+#: ../src/im-chooser.c:496
 msgid "No valid IM installed"
 msgstr "वैध IM प्रतिष्ठापित नाही"
 
-#: ../src/im-chooser.c:521
+#: ../src/im-chooser.c:514
 msgid "_Use default Input Method for your language"
 msgstr ""
 
-#: ../src/im-chooser.c:523
+#: ../src/im-chooser.c:516
 msgid ""
 "Your system chooses the appropriate Input Method for your language "
 "automatically from among Input Methods installed on your system."
 msgstr ""
 
-#: ../src/im-chooser.c:526
+#: ../src/im-chooser.c:519
 #, fuzzy
 msgid "Choose _specific Input Method"
 msgstr "स्वेच्छेची आदान पद्धती वापरा(_c)"
 
-#: ../src/im-chooser.c:528
+#: ../src/im-chooser.c:521
 #, fuzzy
 msgid ""
 "Use the specific Input Method that you prefer regardless what Input Method "
@@ -59,24 +59,24 @@ msgstr ""
 "प्रणाली कोणती आदान पद्धती सुचवते याविषयी संबंध न ठेवता तुमची प्राधान्यता असलेली आदान "
 "पद्धती वापरावी."
 
-#: ../src/im-chooser.c:534
+#: ../src/im-chooser.c:527
 #, fuzzy
 msgid "_Do not use Input Method"
 msgstr "आदान पद्धती कधीच वापरू नका(_N)"
 
-#: ../src/im-chooser.c:536
+#: ../src/im-chooser.c:529
 #, fuzzy
 msgid ""
 "Do not use Input Method no matter what language the desktop is running on."
 msgstr ""
 "डेस्कटॉप कोणत्या लोकेलवर चालतोय याविषयी संबंध न ठेवता आदान पद्धती पूर्णतः अकार्यक्षम करा."
 
-#: ../src/im-chooser.c:539
+#: ../src/im-chooser.c:532
 #, fuzzy
 msgid "Use legacy _Input Method"
 msgstr "परंपरागत आदान पद्धती वापरा(_U)"
 
-#: ../src/im-chooser.c:541
+#: ../src/im-chooser.c:534
 msgid ""
 "Use X Input Method anyway. In fact, which input method will be chosen for "
 "the desktop session, depends on the desktop language."
@@ -84,13 +84,40 @@ msgstr ""
 "X आदान पद्धतीचा वापर करा. प्रत्यक्षात, डेस्कटॉप सत्रासाठी कोणती आदान पद्धती निवडली "
 "जाईल, हे डेस्कटॉप भाषेवर अवलंबून असते."
 
-#: ../src/main.c:123
+#: ../src/im-chooser-simple.c:431
+#, c-format
+msgid "Use %s"
+msgstr ""
+
+#: ../src/im-chooser-simple.c:433
+msgid " (Legacy)"
+msgstr ""
+
+#: ../src/im-chooser-simple.c:435
+msgid " (Recommend)"
+msgstr ""
+
+#: ../src/im-chooser-simple.c:600
+msgid "_Enable input method feature"
+msgstr ""
+
+#: ../src/im-chooser-simple.c:639
+#, fuzzy
+msgid "Input Method _Preferences..."
+msgstr "आदान पद्धती"
+
+#: ../src/main.c:140
 msgid "IM Chooser - Input Method configuration tool"
 msgstr "IM निवडकर्ता - आदान पद्धती व्यूहरचना उपकरण"
 
-#: ../src/main.c:130
+#: ../src/main.c:148
 msgid "_Log Out"
 msgstr "लॉग आउट (_L)"
+
+#. label that uses to indicate their own .xinputrc
+#: ../src/im-chooser-private.h:36
+msgid "User Specific"
+msgstr ""
 
 #: ../src/im-chooser.desktop.in.in.h:1
 msgid "Input Method"
