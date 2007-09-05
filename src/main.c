@@ -50,6 +50,36 @@ _im_changed_cb(IMChooserSimple *im,
 
 	gtk_widget_set_sensitive(button, im_chooser_simple_is_modified(im));
 }
+
+static void
+_im_notify_n_im_cb(IMChooserSimple *im,
+		   guint            n,
+		   gpointer         data)
+{
+	GtkWidget *window = GTK_WIDGET (data);
+
+	if (n == 0) {
+		GtkWidget *dialog = gtk_message_dialog_new_with_markup(GTK_WINDOW (window),
+								       GTK_DIALOG_MODAL,
+								       GTK_MESSAGE_ERROR,
+								       GTK_BUTTONS_OK,
+								       _("<span weight=\"bold\" size=\"larger\">No input method is available</span>"));
+
+		gtk_message_dialog_format_secondary_text(GTK_MESSAGE_DIALOG (dialog),
+							 _("Please install any input methods before running if you like."));
+		g_signal_connect(dialog, "response",
+				 G_CALLBACK (gtk_true), NULL);
+
+		while (g_main_context_pending(NULL))
+			g_main_context_iteration(NULL, TRUE);
+
+		gtk_dialog_run(GTK_DIALOG (dialog));
+		gtk_widget_destroy(dialog);
+
+		exit(1);
+	}
+}
+
 #endif /* USE_OLD_UI */
 
 static void
@@ -160,6 +190,9 @@ main(int    argc,
 	widget = im_chooser_get_widget(im);
 #else
 	im = im_chooser_simple_new();
+	g_signal_connect(im, "notify_n_im",
+			 G_CALLBACK (_im_notify_n_im_cb), window);
+
 	widget = im_chooser_simple_get_widget(im);
 #endif /* USE_OLD_UI */
 

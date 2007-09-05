@@ -35,13 +35,16 @@
 
 enum {
 	CHANGED,
+	NOTIFY_N_IM,
 	LAST_SIGNAL
 };
 
 struct _IMChooserSimpleClass {
 	GObjectClass parent_class;
 
-	void (* changed) (IMChooserSimple *im);
+	void (* changed)     (IMChooserSimple *im);
+	void (* notify_n_im) (IMChooserSimple *im,
+			      guint            n);
 };
 
 struct _IMChooserSimple {
@@ -185,6 +188,14 @@ im_chooser_simple_class_init(IMChooserSimpleClass *klass)
 					NULL, NULL,
 					g_cclosure_marshal_VOID__VOID,
 					G_TYPE_NONE, 0);
+	signals[NOTIFY_N_IM] = g_signal_new("notify_n_im",
+					    G_OBJECT_CLASS_TYPE (klass),
+					    G_SIGNAL_RUN_FIRST,
+					    G_STRUCT_OFFSET (IMChooserSimpleClass, notify_n_im),
+					    NULL, NULL,
+					    g_cclosure_marshal_VOID__UINT,
+					    G_TYPE_NONE, 1,
+					    G_TYPE_UINT);
 }
 
 static void
@@ -470,7 +481,8 @@ _im_chooser_simple_update_im_list(IMChooserSimple *im)
 	if (requisition.height > 120)
 		requisition.height = 120;
 	gtk_widget_set_size_request(im->widget_im_list, -1, requisition.height);
-	/* XXX */
+
+	g_signal_emit(im, signals[NOTIFY_N_IM], 0, count);
 }
 
 static void
