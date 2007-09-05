@@ -1,5 +1,7 @@
 2007-09-05  Akira TAGOH  <tagoh@redhat.com>
 
+	* README: Add the description of SHORT_DESC and LONG_DESC
+
 	* src/im-chooser-simple.c (im_chooser_simple_class_init): create
 	a notify_n_im signal.
 	(_im_chooser_simple_update_im_list): emit a notify_n_im signal here.

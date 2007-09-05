@@ -45,3 +45,13 @@ PREFERENCE_PROGRAM
 	This program will be brought up from im-chooser.
 	PREFERENCE_ARGS can be used to give any options for
 	PREFERENCE_PROGRAM.
+
+SHORT_DESC
+	an optional short description to explain the input method.
+	This variable is particularly used to display the input method
+	name at the input method selection list. otherwise XIM variable
+	will be used for that.
+
+LONG_DESC
+	an optional long description to explain the input method.
+	This variable isn't actually used yet.
