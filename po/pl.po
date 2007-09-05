@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pl\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-09-04 23:59+0900\n"
+"POT-Creation-Date: 2007-09-05 09:55+0900\n"
 "PO-Revision-Date: 2007-06-07 21:45+0200\n"
 "Last-Translator: Piotr Drąg <raven@pmail.pl>\n"
 "Language-Team: Polish <pl@li.org>\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../src/im-chooser.c:482 ../src/im-chooser-simple.c:607
+#: ../src/im-chooser.c:482 ../src/im-chooser-simple.c:619
 msgid ""
 "<small><i>Note: this change will not take effect until you next log in.</i></"
 "small>"
@@ -21,7 +21,7 @@ msgstr ""
 "<small><i>Uwaga: ta zmiana zostanie uwzględniona po następnym zalogowaniu.</"
 "i></small>"
 
-#: ../src/im-chooser.c:486 ../src/im-chooser-simple.c:594
+#: ../src/im-chooser.c:486 ../src/im-chooser-simple.c:606
 msgid "<b>Input Method</b>"
 msgstr "<b>Metoda wejścia</b>"
 
@@ -79,33 +79,42 @@ msgstr ""
 "Użyj metody wejścia X mimo tego. Właściwie wybrana metoda wejścia dla sesji "
 "środowiska zależy od jego języka."
 
-#: ../src/im-chooser-simple.c:431
+#: ../src/im-chooser-simple.c:442
 #, c-format
 msgid "Use %s"
 msgstr ""
 
-#: ../src/im-chooser-simple.c:433
+#: ../src/im-chooser-simple.c:444
 msgid " (Legacy)"
 msgstr ""
 
-#: ../src/im-chooser-simple.c:435
+#: ../src/im-chooser-simple.c:446
 msgid " (Recommend)"
 msgstr ""
 
-#: ../src/im-chooser-simple.c:600
+#: ../src/im-chooser-simple.c:612
 msgid "_Enable input method feature"
 msgstr ""
 
-#: ../src/im-chooser-simple.c:639
+#: ../src/im-chooser-simple.c:651
 #, fuzzy
 msgid "Input Method _Preferences..."
 msgstr "Metoda wejścia"
 
-#: ../src/main.c:140
+#: ../src/main.c:66
+msgid ""
+"<span weight=\"bold\" size=\"larger\">No input method is available</span>"
+msgstr ""
+
+#: ../src/main.c:69
+msgid "Please install any input methods before running if you like."
+msgstr ""
+
+#: ../src/main.c:170
 msgid "IM Chooser - Input Method configuration tool"
 msgstr "Wybór IM - narzędzie konfiguracji metody wejścia"
 
-#: ../src/main.c:148
+#: ../src/main.c:178
 msgid "_Log Out"
 msgstr "Wy_loguj się"
 

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: im-chooser\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-09-04 23:59+0900\n"
+"POT-Creation-Date: 2007-09-05 09:55+0900\n"
 "PO-Revision-Date: 2006-11-06 22:37+0100\n"
 "Last-Translator: Peter van Egdom <p.van.egdom@gmail.com>\n"
 "Language-Team: Dutch <vertaling@nl.linux.org>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: KBabel 1.11.4\n"
 
-#: ../src/im-chooser.c:482 ../src/im-chooser-simple.c:607
+#: ../src/im-chooser.c:482 ../src/im-chooser-simple.c:619
 msgid ""
 "<small><i>Note: this change will not take effect until you next log in.</i></"
 "small>"
@@ -25,7 +25,7 @@ msgstr ""
 "<small><i>Let op: deze verandering zal pas actief worden wanneer u zich "
 "opnieuw aanmeldt.</i></small>"
 
-#: ../src/im-chooser.c:486 ../src/im-chooser-simple.c:594
+#: ../src/im-chooser.c:486 ../src/im-chooser-simple.c:606
 msgid "<b>Input Method</b>"
 msgstr "<b>Invoermethode</b>"
 
@@ -83,33 +83,42 @@ msgstr ""
 "Gebruik de X invoermethode. De invoermethode die wordt gekozen voor de "
 "bureaublad sessie is afhankelijk van de bureaublad taal."
 
-#: ../src/im-chooser-simple.c:431
+#: ../src/im-chooser-simple.c:442
 #, c-format
 msgid "Use %s"
 msgstr ""
 
-#: ../src/im-chooser-simple.c:433
+#: ../src/im-chooser-simple.c:444
 msgid " (Legacy)"
 msgstr ""
 
-#: ../src/im-chooser-simple.c:435
+#: ../src/im-chooser-simple.c:446
 msgid " (Recommend)"
 msgstr ""
 
-#: ../src/im-chooser-simple.c:600
+#: ../src/im-chooser-simple.c:612
 msgid "_Enable input method feature"
 msgstr ""
 
-#: ../src/im-chooser-simple.c:639
+#: ../src/im-chooser-simple.c:651
 #, fuzzy
 msgid "Input Method _Preferences..."
 msgstr "Invoermethode"
 
-#: ../src/main.c:140
+#: ../src/main.c:66
+msgid ""
+"<span weight=\"bold\" size=\"larger\">No input method is available</span>"
+msgstr ""
+
+#: ../src/main.c:69
+msgid "Please install any input methods before running if you like."
+msgstr ""
+
+#: ../src/main.c:170
 msgid "IM Chooser - Input Method configuration tool"
 msgstr "IM Chooser - Invoermethode configuratiehulpmiddel"
 
-#: ../src/main.c:148
+#: ../src/main.c:178
 msgid "_Log Out"
 msgstr "_Afmelden"
 

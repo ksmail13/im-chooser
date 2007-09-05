@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: si\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-09-04 23:59+0900\n"
+"POT-Creation-Date: 2007-09-05 09:55+0900\n"
 "PO-Revision-Date: 2006-11-29 21:42+0530\n"
 "Last-Translator: Tyronne Wickramarathne <tywickra@redhat.com>\n"
 "Language-Team: Sinhala <en@li.org>\n"
@@ -18,14 +18,14 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.11.4\n"
 
-#: ../src/im-chooser.c:482 ../src/im-chooser-simple.c:607
+#: ../src/im-chooser.c:482 ../src/im-chooser-simple.c:619
 msgid ""
 "<small><i>Note: this change will not take effect until you next log in.</i></"
 "small>"
 msgstr ""
 "<small><i>ඔබ පද්ධතියට නැවත පිවිසෙන තුරු සිදුකරන ලද වෙනස්කම් බලපවත් වන්නේ නැත</i></small>"
 
-#: ../src/im-chooser.c:486 ../src/im-chooser-simple.c:594
+#: ../src/im-chooser.c:486 ../src/im-chooser-simple.c:606
 msgid "<b>Input Method</b>"
 msgstr "<b>අක්‍ෂර ඇතුල්කරන ආකාරය</b>"
 
@@ -82,33 +82,42 @@ msgstr ""
 "කෙසේ හෝ X අක්‍ෂර ඇතුලත් කිරීමේ ක්‍රමය භාවිත කරන්න. ඩෙස්ක්ටොප් සැසිය සඳහා භාවිතා කරන අක්‍ෂර "
 "ඇතුලත් කිරීමේ ක්‍රමය ඩෙස්ක්ටොප් එක භාවිත කරනු භාෂාව ලබන පදනම්ව තෝරාගනු ලැබේ."
 
-#: ../src/im-chooser-simple.c:431
+#: ../src/im-chooser-simple.c:442
 #, c-format
 msgid "Use %s"
 msgstr ""
 
-#: ../src/im-chooser-simple.c:433
+#: ../src/im-chooser-simple.c:444
 msgid " (Legacy)"
 msgstr ""
 
-#: ../src/im-chooser-simple.c:435
+#: ../src/im-chooser-simple.c:446
 msgid " (Recommend)"
 msgstr ""
 
-#: ../src/im-chooser-simple.c:600
+#: ../src/im-chooser-simple.c:612
 msgid "_Enable input method feature"
 msgstr ""
 
-#: ../src/im-chooser-simple.c:639
+#: ../src/im-chooser-simple.c:651
 #, fuzzy
 msgid "Input Method _Preferences..."
 msgstr "අක්‍ෂර ඇතුලත් කිරීමේ ක්‍රමය"
 
-#: ../src/main.c:140
+#: ../src/main.c:66
+msgid ""
+"<span weight=\"bold\" size=\"larger\">No input method is available</span>"
+msgstr ""
+
+#: ../src/main.c:69
+msgid "Please install any input methods before running if you like."
+msgstr ""
+
+#: ../src/main.c:170
 msgid "IM Chooser - Input Method configuration tool"
 msgstr "අක්‍ෂර ඇතුලත් කිරීමේ තේරීම් කාරක (IM Chooser) - අක්‍ෂර ඇතුලත් කරනය මානකරන උපකරණය"
 
-#: ../src/main.c:148
+#: ../src/main.c:178
 msgid "_Log Out"
 msgstr "පිටව යනු(_L)"
 
