@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: pl\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2007-09-05 09:55+0900\n"
-"PO-Revision-Date: 2007-06-07 21:45+0200\n"
+"PO-Revision-Date: 2007-09-06 00:43+0200\n"
 "Last-Translator: Piotr Drąg <raven@pmail.pl>\n"
 "Language-Team: Polish <pl@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -31,21 +31,21 @@ msgstr "Nie zainstalowano prawidłowych IM"
 
 #: ../src/im-chooser.c:514
 msgid "_Use default Input Method for your language"
-msgstr ""
+msgstr "_Użyj domyslnej metody wejścia dla swojego języka"
 
 #: ../src/im-chooser.c:516
 msgid ""
 "Your system chooses the appropriate Input Method for your language "
 "automatically from among Input Methods installed on your system."
 msgstr ""
+"System wybierze odpowiednią metodę wejścia dla twojego języka automatycznie "
+"spośród zainstalowanych metod wejścia."
 
 #: ../src/im-chooser.c:519
-#, fuzzy
 msgid "Choose _specific Input Method"
-msgstr "Użyj _własnej metody wejścia"
+msgstr "_Wybierz określoną metodę wejścia"
 
 #: ../src/im-chooser.c:521
-#, fuzzy
 msgid ""
 "Use the specific Input Method that you prefer regardless what Input Method "
 "the system recommends."
@@ -54,22 +54,19 @@ msgstr ""
 "system."
 
 #: ../src/im-chooser.c:527
-#, fuzzy
 msgid "_Do not use Input Method"
-msgstr "_Nigdy nie używaj metod wejścia"
+msgstr "Nie używaj meto_dy wejścia"
 
 #: ../src/im-chooser.c:529
-#, fuzzy
 msgid ""
 "Do not use Input Method no matter what language the desktop is running on."
 msgstr ""
-"Całkowicie wyłącz metody wejścia, bez zwracania uwagi na lokalizację "
-"środowiska."
+"Nie używaj metody wejścia, bez zwracania uwagi na język, na jakim jest "
+"uruchomione środowisko graficzne."
 
 #: ../src/im-chooser.c:532
-#, fuzzy
 msgid "Use legacy _Input Method"
-msgstr "_Użyj przestarzałych metod wejścia"
+msgstr "Użyj p_rzestarzałej metody wejścia"
 
 #: ../src/im-chooser.c:534
 msgid ""
@@ -82,33 +79,34 @@ msgstr ""
 #: ../src/im-chooser-simple.c:442
 #, c-format
 msgid "Use %s"
-msgstr ""
+msgstr "Użyj %s"
 
 #: ../src/im-chooser-simple.c:444
 msgid " (Legacy)"
-msgstr ""
+msgstr " (przestarzała)"
 
 #: ../src/im-chooser-simple.c:446
 msgid " (Recommend)"
-msgstr ""
+msgstr " (zalecana)"
 
 #: ../src/im-chooser-simple.c:612
 msgid "_Enable input method feature"
-msgstr ""
+msgstr "Włącz m_etodę wejścia"
 
 #: ../src/im-chooser-simple.c:651
-#, fuzzy
 msgid "Input Method _Preferences..."
-msgstr "Metoda wejścia"
+msgstr "_Preferencje metody wejścia..."
 
 #: ../src/main.c:66
 msgid ""
 "<span weight=\"bold\" size=\"larger\">No input method is available</span>"
 msgstr ""
+"<span weight=\"bold\" size=\"larger\">Żadna metoda wejścia nie jest dostępna"
+"</span>"
 
 #: ../src/main.c:69
 msgid "Please install any input methods before running if you like."
-msgstr ""
+msgstr "Zainstaluj metodę wejścia przed uruchomieniem."
 
 #: ../src/main.c:170
 msgid "IM Chooser - Input Method configuration tool"
@@ -118,10 +116,9 @@ msgstr "Wybór IM - narzędzie konfiguracji metody wejścia"
 msgid "_Log Out"
 msgstr "Wy_loguj się"
 
-#. label that uses to indicate their own .xinputrc
 #: ../src/im-chooser-private.h:36
 msgid "User Specific"
-msgstr ""
+msgstr "Określona przez użytkownika"
 
 #: ../src/im-chooser.desktop.in.in.h:1
 msgid "Input Method"
@@ -134,13 +131,3 @@ msgid ""
 msgstr ""
 "Narzędzie konfiguracji metody wejścia pozwala wybrać używaną metodę wejścia "
 "lub ją wyłączyć w środowisku"
-
-#~ msgid "_Follow the system-wide configuration"
-#~ msgstr "_Użyj konfiguracji systemowej"
-
-#~ msgid ""
-#~ "Follow the system-wide input method configuration to determine which "
-#~ "input method should be used."
-#~ msgstr ""
-#~ "Użyj systemowej konfiguracji metody wejścia, aby ustalić, jaka metoda "
-#~ "powinna być używana."
