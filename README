@@ -9,13 +9,19 @@ How does IM Chooser work?
 IM Chooser relies on xinput.sh script that you may need to
 install it onto the proper place where your system provides
 a hook to bring something up during X server is starting,
-such as /etc/X11/xinit/xinitrc.d on Fedora Core and
+such as /etc/X11/xinit/xinitrc.d on Fedora and
 /etc/X11/Xsession.d on Debian.
 For XIM servers, you will have to provide symlinks for them
 with ll_CC style of locale on /etc/X11/xinit/xinput.d by
 default (it's configurable with --with-xinputdir option). if
 your system has alternatives system, it might stands to do
-so.
+so.  Also, you can drop the improper XIM servers from the
+selection list if you specify --with-xinput-suffix and no
+such suffix is given to the xinput script of XIM servers,
+because im-chooser tries to pick up the xinput script name +
+--with-xinput-suffix. therefore "xim" xinput script provided
+by this displays the proper XIM servers for your language
+then.
 
 What variables are available for the IM specific configuration?
 ==================================================================
