@@ -18,10 +18,10 @@ your system has alternatives system, it might stands to do
 so.  Also, you can drop the improper XIM servers from the
 selection list if you specify --with-xinput-suffix and no
 such suffix is given to the xinput script of XIM servers,
-because im-chooser tries to pick up the xinput script name +
---with-xinput-suffix. therefore "xim" xinput script provided
-by this displays the proper XIM servers for your language
-then.
+because im-chooser tries to pick up the xinput script with
+the name + --with-xinput-suffix. therefore "xim" xinput
+script provided by this displays the proper XIM servers for
+your language then.
 
 What variables are available for the IM specific configuration?
 ==================================================================
