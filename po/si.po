@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: si\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-07-18 19:23+0900\n"
+"POT-Creation-Date: 2007-09-05 09:55+0900\n"
 "PO-Revision-Date: 2006-11-29 21:42+0530\n"
 "Last-Translator: Tyronne Wickramarathne <tywickra@redhat.com>\n"
 "Language-Team: Sinhala <en@li.org>\n"
@@ -18,37 +18,37 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.11.4\n"
 
-#: ../src/im-chooser.c:489
+#: ../src/im-chooser.c:482 ../src/im-chooser-simple.c:619
 msgid ""
 "<small><i>Note: this change will not take effect until you next log in.</i></"
 "small>"
 msgstr ""
 "<small><i>ඔබ පද්ධතියට නැවත පිවිසෙන තුරු සිදුකරන ලද වෙනස්කම් බලපවත් වන්නේ නැත</i></small>"
 
-#: ../src/im-chooser.c:493
+#: ../src/im-chooser.c:486 ../src/im-chooser-simple.c:606
 msgid "<b>Input Method</b>"
 msgstr "<b>අක්‍ෂර ඇතුල්කරන ආකාරය</b>"
 
-#: ../src/im-chooser.c:503
+#: ../src/im-chooser.c:496
 msgid "No valid IM installed"
 msgstr "වලංගු නැති අක්‍ෂර ඇතුල්කරන ආකාරයක් ස්ථාපනය කර ඇත"
 
-#: ../src/im-chooser.c:521
+#: ../src/im-chooser.c:514
 msgid "_Use default Input Method for your language"
 msgstr ""
 
-#: ../src/im-chooser.c:523
+#: ../src/im-chooser.c:516
 msgid ""
 "Your system chooses the appropriate Input Method for your language "
 "automatically from among Input Methods installed on your system."
 msgstr ""
 
-#: ../src/im-chooser.c:526
+#: ../src/im-chooser.c:519
 #, fuzzy
 msgid "Choose _specific Input Method"
 msgstr "රිසි ලෙස සකස්කර තිබෙන අක්‍ෂර ඇතුලත් කිරීමේ ක්‍රමය භාවිත කරන්න(_c)"
 
-#: ../src/im-chooser.c:528
+#: ../src/im-chooser.c:521
 #, fuzzy
 msgid ""
 "Use the specific Input Method that you prefer regardless what Input Method "
@@ -57,24 +57,24 @@ msgstr ""
 "පද්ධතිය විසින් රෙකමදාරු කරනු ලබන අක්‍ෂර ඇතුලත් කිරීමේ ක්‍රමය සැලකිල්ලට නොගෙන ඔබට කැමති ක්‍රමයක් "
 "භාවිත කරන්න."
 
-#: ../src/im-chooser.c:534
+#: ../src/im-chooser.c:527
 #, fuzzy
 msgid "_Do not use Input Method"
 msgstr "අක්‍ෂර ඇතුලත් කිරීමෙ ක්‍රමයන් භාවිත නොකරන්න(_N)"
 
-#: ../src/im-chooser.c:536
+#: ../src/im-chooser.c:529
 #, fuzzy
 msgid ""
 "Do not use Input Method no matter what language the desktop is running on."
 msgstr ""
 "ඩෙස්ක්ටොප් එක මත ක්‍රියා කරන භාෂාව නොසලකා හැර අක්‍ෂර ඇතුලත් කිරීමේ ක්‍රමයන් අක්‍රීය කරන්න."
 
-#: ../src/im-chooser.c:539
+#: ../src/im-chooser.c:532
 #, fuzzy
 msgid "Use legacy _Input Method"
 msgstr "පද්ධතියේ පෙර නිමැවුම තුල තිබෙන අක්‍ෂර ඇතුලත් කිරීමේ ක්‍රම භාවිත කරන්න(_U)"
 
-#: ../src/im-chooser.c:541
+#: ../src/im-chooser.c:534
 msgid ""
 "Use X Input Method anyway. In fact, which input method will be chosen for "
 "the desktop session, depends on the desktop language."
@@ -82,13 +82,49 @@ msgstr ""
 "කෙසේ හෝ X අක්‍ෂර ඇතුලත් කිරීමේ ක්‍රමය භාවිත කරන්න. ඩෙස්ක්ටොප් සැසිය සඳහා භාවිතා කරන අක්‍ෂර "
 "ඇතුලත් කිරීමේ ක්‍රමය ඩෙස්ක්ටොප් එක භාවිත කරනු භාෂාව ලබන පදනම්ව තෝරාගනු ලැබේ."
 
-#: ../src/main.c:123
+#: ../src/im-chooser-simple.c:442
+#, c-format
+msgid "Use %s"
+msgstr ""
+
+#: ../src/im-chooser-simple.c:444
+msgid " (Legacy)"
+msgstr ""
+
+#: ../src/im-chooser-simple.c:446
+msgid " (Recommend)"
+msgstr ""
+
+#: ../src/im-chooser-simple.c:612
+msgid "_Enable input method feature"
+msgstr ""
+
+#: ../src/im-chooser-simple.c:651
+#, fuzzy
+msgid "Input Method _Preferences..."
+msgstr "අක්‍ෂර ඇතුලත් කිරීමේ ක්‍රමය"
+
+#: ../src/main.c:66
+msgid ""
+"<span weight=\"bold\" size=\"larger\">No input method is available</span>"
+msgstr ""
+
+#: ../src/main.c:69
+msgid "Please install any input methods before running if you like."
+msgstr ""
+
+#: ../src/main.c:170
 msgid "IM Chooser - Input Method configuration tool"
 msgstr "අක්‍ෂර ඇතුලත් කිරීමේ තේරීම් කාරක (IM Chooser) - අක්‍ෂර ඇතුලත් කරනය මානකරන උපකරණය"
 
-#: ../src/main.c:130
+#: ../src/main.c:178
 msgid "_Log Out"
 msgstr "පිටව යනු(_L)"
+
+#. label that uses to indicate their own .xinputrc
+#: ../src/im-chooser-private.h:36
+msgid "User Specific"
+msgstr ""
 
 #: ../src/im-chooser.desktop.in.in.h:1
 msgid "Input Method"

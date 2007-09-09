@@ -1,3 +1,37 @@
+2007-09-06  Akira TAGOH  <tagoh@redhat.com>
+
+	* configure.ac: bump to 0.5.0
+
+2007-09-05  Akira TAGOH  <tagoh@redhat.com>
+
+	* README: Add the description of SHORT_DESC and LONG_DESC
+
+	* src/im-chooser-simple.c (im_chooser_simple_class_init): create
+	a notify_n_im signal.
+	(_im_chooser_simple_update_im_list): emit a notify_n_im signal here.
+
+	* src/main.c (_im_notify_n_im_cb): new function to deal with the case
+	of no IM.
+
+2007-09-04  Akira TAGOH  <tagoh@redhat.com>
+
+	* data/xinput.sh.in.in: Do not run even $AUXILIARY_PROGRAM when
+	$IM_CHOOSER_ONLY_EVALUATE_VARIABLES is set.
+
+	* README: Describe PREFERENCE_PROGRAM AND PREFERENCE_ARGS.
+
+	* data/none.in.in: Add IM_CHOOSER_IGNORE_ME to not display in the IM list.
+
+	* src/xinput.c (xinput_data_new): Modified to have some state for new UI.
+	(xinput_data_get_value): likewise.
+	(xinput_data_get_short_description): new function.
+
+	* src/main.c (main): Updated a bit for new UI.
+
+	* src/im-chooser-simple.[ch]: Add a new class to build a new UI.
+
+	* src/im-chooser-private.h: new file.
+
 2007-07-25  Akira TAGOH  <tagoh@redhat.com>
 
 	* configure.ac: dump a version to 0.4.1.

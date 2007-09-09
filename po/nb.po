@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: im-chooser 0.3.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-07-18 19:23+0900\n"
+"POT-Creation-Date: 2007-09-05 09:55+0900\n"
 "PO-Revision-Date: 2007-05-04 12:50+0100\n"
 "Last-Translator: Espen A. Stefansen <espenas@gmail.com>\n"
 "Language-Team: Norwegian/Bokmaal <i18n-nb@lister.ping.uio.no>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../src/im-chooser.c:489
+#: ../src/im-chooser.c:482 ../src/im-chooser-simple.c:619
 msgid ""
 "<small><i>Note: this change will not take effect until you next log in.</i></"
 "small>"
@@ -26,30 +26,30 @@ msgstr ""
 "<small><i>NB: denne endringen vil ikke gjelde før neste gang du logger inn.</"
 "i></small>"
 
-#: ../src/im-chooser.c:493
+#: ../src/im-chooser.c:486 ../src/im-chooser-simple.c:606
 msgid "<b>Input Method</b>"
 msgstr "<b>Inntastingsmetode</b>"
 
-#: ../src/im-chooser.c:503
+#: ../src/im-chooser.c:496
 msgid "No valid IM installed"
 msgstr "Ingen gyldig IM installert"
 
-#: ../src/im-chooser.c:521
+#: ../src/im-chooser.c:514
 msgid "_Use default Input Method for your language"
 msgstr ""
 
-#: ../src/im-chooser.c:523
+#: ../src/im-chooser.c:516
 msgid ""
 "Your system chooses the appropriate Input Method for your language "
 "automatically from among Input Methods installed on your system."
 msgstr ""
 
-#: ../src/im-chooser.c:526
+#: ../src/im-chooser.c:519
 #, fuzzy
 msgid "Choose _specific Input Method"
 msgstr "Bruk _egendefinerte inntastingsmetoder"
 
-#: ../src/im-chooser.c:528
+#: ../src/im-chooser.c:521
 #, fuzzy
 msgid ""
 "Use the specific Input Method that you prefer regardless what Input Method "
@@ -58,12 +58,12 @@ msgstr ""
 "Bruk inntastingsmetoden som du foretrekker uavhengig av hvilken "
 "inntastingsmetode som systemet anbefaler."
 
-#: ../src/im-chooser.c:534
+#: ../src/im-chooser.c:527
 #, fuzzy
 msgid "_Do not use Input Method"
 msgstr "_Aldri bruk inntastingsmetoder"
 
-#: ../src/im-chooser.c:536
+#: ../src/im-chooser.c:529
 #, fuzzy
 msgid ""
 "Do not use Input Method no matter what language the desktop is running on."
@@ -71,12 +71,12 @@ msgstr ""
 "Deaktiver inntastingsmetoder helt, uansett hvilket lokale skrivebordet "
 "kjører med."
 
-#: ../src/im-chooser.c:539
+#: ../src/im-chooser.c:532
 #, fuzzy
 msgid "Use legacy _Input Method"
 msgstr "_Bruk foreldede inntastingsmetoder"
 
-#: ../src/im-chooser.c:541
+#: ../src/im-chooser.c:534
 msgid ""
 "Use X Input Method anyway. In fact, which input method will be chosen for "
 "the desktop session, depends on the desktop language."
@@ -85,13 +85,49 @@ msgstr ""
 "inntastingsmetode som vil bli valgt forskrivebordssesjonen, avhenger av "
 "språket på skrivebordet."
 
-#: ../src/main.c:123
+#: ../src/im-chooser-simple.c:442
+#, c-format
+msgid "Use %s"
+msgstr ""
+
+#: ../src/im-chooser-simple.c:444
+msgid " (Legacy)"
+msgstr ""
+
+#: ../src/im-chooser-simple.c:446
+msgid " (Recommend)"
+msgstr ""
+
+#: ../src/im-chooser-simple.c:612
+msgid "_Enable input method feature"
+msgstr ""
+
+#: ../src/im-chooser-simple.c:651
+#, fuzzy
+msgid "Input Method _Preferences..."
+msgstr "Inntastingsmetode"
+
+#: ../src/main.c:66
+msgid ""
+"<span weight=\"bold\" size=\"larger\">No input method is available</span>"
+msgstr ""
+
+#: ../src/main.c:69
+msgid "Please install any input methods before running if you like."
+msgstr ""
+
+#: ../src/main.c:170
 msgid "IM Chooser - Input Method configuration tool"
 msgstr "IM velger - Verktøy for konfigurasjon av inntastingsmetode"
 
-#: ../src/main.c:130
+#: ../src/main.c:178
 msgid "_Log Out"
 msgstr "_Logg ut"
+
+#. label that uses to indicate their own .xinputrc
+#: ../src/im-chooser-private.h:36
+msgid "User Specific"
+msgstr ""
 
 #: ../src/im-chooser.desktop.in.in.h:1
 msgid "Input Method"

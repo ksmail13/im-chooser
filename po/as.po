@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: as\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-07-18 19:23+0900\n"
+"POT-Creation-Date: 2007-09-05 09:55+0900\n"
 "PO-Revision-Date: 2006-10-02 18:43+0530\n"
 "Last-Translator: Amitakhya Phukan <amitakhya.phukan@gmail.com>\n"
 "Language-Team: Assamese\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.9.1\n"
 
-#: ../src/im-chooser.c:489
+#: ../src/im-chooser.c:482 ../src/im-chooser-simple.c:619
 msgid ""
 "<small><i>Note: this change will not take effect until you next log in.</i></"
 "small>"
@@ -24,30 +24,30 @@ msgstr ""
 "<small><i>মন কৰিব:এই সলনি আপুনি অহা বাৰলৈ প্ৰৱেশ নকৰালৈকে প্ৰযোজ্য নহয় ।</i></"
 "small>"
 
-#: ../src/im-chooser.c:493
+#: ../src/im-chooser.c:486 ../src/im-chooser-simple.c:606
 msgid "<b>Input Method</b>"
 msgstr "<b>নিবেশ পদ্ধতি</b>"
 
-#: ../src/im-chooser.c:503
+#: ../src/im-chooser.c:496
 msgid "No valid IM installed"
 msgstr "কোনো বৈধ IM সংস্থাপন কৰা হোৱা নাই"
 
-#: ../src/im-chooser.c:521
+#: ../src/im-chooser.c:514
 msgid "_Use default Input Method for your language"
 msgstr ""
 
-#: ../src/im-chooser.c:523
+#: ../src/im-chooser.c:516
 msgid ""
 "Your system chooses the appropriate Input Method for your language "
 "automatically from among Input Methods installed on your system."
 msgstr ""
 
-#: ../src/im-chooser.c:526
+#: ../src/im-chooser.c:519
 #, fuzzy
 msgid "Choose _specific Input Method"
 msgstr "নিজা নিবেশ পদ্ধতি ব্যৱহাৰ কৰক (_c)"
 
-#: ../src/im-chooser.c:528
+#: ../src/im-chooser.c:521
 #, fuzzy
 msgid ""
 "Use the specific Input Method that you prefer regardless what Input Method "
@@ -56,23 +56,23 @@ msgstr ""
 "ব্যৱস্থাপ্ৰণালীয়ে কোনতোৰ উপদেশ দিয়ে গণ্য নকৰি আপুনি বাছি লোৱা নিবেশ পদ্ধতি ব্যৱহাৰ "
 "কৰক ।"
 
-#: ../src/im-chooser.c:534
+#: ../src/im-chooser.c:527
 #, fuzzy
 msgid "_Do not use Input Method"
 msgstr "কেতিয়াও নিবেশ পদ্ধতি ব্যৱহাৰ নকৰিব (_N)"
 
-#: ../src/im-chooser.c:536
+#: ../src/im-chooser.c:529
 #, fuzzy
 msgid ""
 "Do not use Input Method no matter what language the desktop is running on."
 msgstr "ডেষ্কট'প কোনটো অৱস্থানত চলিছে গণ্য নকৰি নিবেশ পদ্ধতি সমূলঞ্চে অসমৰ্থ কৰক ।"
 
-#: ../src/im-chooser.c:539
+#: ../src/im-chooser.c:532
 #, fuzzy
 msgid "Use legacy _Input Method"
 msgstr "পুৰাতন নিবেশ পদ্ধতি ব্যৱহাৰ কৰক (_U)"
 
-#: ../src/im-chooser.c:541
+#: ../src/im-chooser.c:534
 msgid ""
 "Use X Input Method anyway. In fact, which input method will be chosen for "
 "the desktop session, depends on the desktop language."
@@ -80,13 +80,49 @@ msgstr ""
 "যিয়েই নহওক X নিবেশ পদ্ধতি ব্যৱহাৰ কৰক । বাস্তৱতে, কোনতো নিবেশ পদ্ধতি ডেষ্কট'প "
 "অধিবেশনৰ বাবে নিৰ্ব্বাচিত কৰা হ'ব, ডেষ্কট'প ভাষাৰ ওপৰতহে নিৰ্ভৰ কৰে ।"
 
-#: ../src/main.c:123
+#: ../src/im-chooser-simple.c:442
+#, c-format
+msgid "Use %s"
+msgstr ""
+
+#: ../src/im-chooser-simple.c:444
+msgid " (Legacy)"
+msgstr ""
+
+#: ../src/im-chooser-simple.c:446
+msgid " (Recommend)"
+msgstr ""
+
+#: ../src/im-chooser-simple.c:612
+msgid "_Enable input method feature"
+msgstr ""
+
+#: ../src/im-chooser-simple.c:651
+#, fuzzy
+msgid "Input Method _Preferences..."
+msgstr "নিবেশ পদ্ধতি"
+
+#: ../src/main.c:66
+msgid ""
+"<span weight=\"bold\" size=\"larger\">No input method is available</span>"
+msgstr ""
+
+#: ../src/main.c:69
+msgid "Please install any input methods before running if you like."
+msgstr ""
+
+#: ../src/main.c:170
 msgid "IM Chooser - Input Method configuration tool"
 msgstr "IM নিৰ্ব্বাচক - নিবেশ পদ্ধতি বিন্যাস সৰঞ্জাম"
 
-#: ../src/main.c:130
+#: ../src/main.c:178
 msgid "_Log Out"
 msgstr "প্ৰস্থান (_L)"
+
+#. label that uses to indicate their own .xinputrc
+#: ../src/im-chooser-private.h:36
+msgid "User Specific"
+msgstr ""
 
 #: ../src/im-chooser.desktop.in.in.h:1
 msgid "Input Method"

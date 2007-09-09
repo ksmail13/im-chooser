@@ -1,6 +1,7 @@
+/* -*- Mode: C; tab-width: 8; indent-tabs-mode: t; c-basic-offset: 8 -*- */
 /* 
  * xinput.h
- * Copyright (C) 2006 Red Hat, Inc. All rights reserved.
+ * Copyright (C) 2006-2007 Red Hat, Inc. All rights reserved.
  * 
  * Authors:
  *   Akira TAGOH  <tagoh@redhat.com>
@@ -32,16 +33,22 @@ typedef enum {
 	XINPUT_VALUE_GTKIMM,
 	XINPUT_VALUE_QTIMM,
 	XINPUT_VALUE_IGNORE_ME,
+	XINPUT_VALUE_PREFS_PROG,
+	XINPUT_VALUE_PREFS_ARGS,
+	XINPUT_VALUE_SHORT_DESC,
+	XINPUT_VALUE_LONG_DESC,
+	XINPUT_VALUE_FILENAME,
 } XInputValueType;
 
 typedef struct _XInputData	XInputData;
 
-GSList     *xinput_get_im_list   (const gchar     *path);
-GHashTable *xinput_get_lang_table(const gchar     *path);
-XInputData *xinput_data_new      (const gchar     *file);
-void        xinput_data_free     (gpointer         data);
-gpointer    xinput_data_get_value(XInputData      *xinput,
-				  XInputValueType  type);
+GSList     *xinput_get_im_list               (const gchar     *path);
+GHashTable *xinput_get_lang_table            (const gchar     *path);
+XInputData *xinput_data_new                  (const gchar     *file);
+void        xinput_data_free                 (gpointer         data);
+gpointer    xinput_data_get_value            (XInputData      *xinput,
+                                              XInputValueType  type);
+gchar      *xinput_data_get_short_description(XInputData      *xinput) G_GNUC_CONST;
 
 G_END_DECLS
 
