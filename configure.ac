@@ -1,5 +1,5 @@
 dnl Process this file with autoconf to produce a configure script.
-AC_INIT([im-chooser], 0.5.0, [tagoh@redhat.com])
+AC_INIT([im-chooser], 0.5.1, [tagoh@redhat.com])
 
 . ./requires
 

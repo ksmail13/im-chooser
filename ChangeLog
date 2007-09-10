@@ -1,5 +1,7 @@
 2007-09-10  Akira TAGOH  <tagoh@redhat.com>
 
+	* configure.ac: bump to 0.5.1.
+
 	* src/im-chooser-simple.c (im_chooser_simple_enable_im_on_toggled):
 	check if PREFERENCE_PROGRAM really exists and is executable.
 	(im_chooser_simple_im_list_on_changed): likewise.
