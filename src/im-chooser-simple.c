@@ -101,6 +101,7 @@ im_chooser_simple_enable_im_on_toggled(GtkToggleButton *button,
 {
 	gboolean flag;
 	IMChooserSimple *im;
+	gchar *prog;
 
 	g_return_if_fail (GTK_IS_TOGGLE_BUTTON (button));
 	g_return_if_fail (IM_IS_CHOOSER_SIMPLE (user_data));
@@ -110,7 +111,9 @@ im_chooser_simple_enable_im_on_toggled(GtkToggleButton *button,
 	flag = gtk_toggle_button_get_active(button);
 
 	gtk_widget_set_sensitive(im->widget_scrolled, flag);
-	if (im->current_im && xinput_data_get_value(im->current_im, XINPUT_VALUE_PREFS_PROG))
+	if (im->current_im &&
+	    (prog = xinput_data_get_value(im->current_im, XINPUT_VALUE_PREFS_PROG)) != NULL &&
+	    g_file_test(prog, G_FILE_TEST_EXISTS | G_FILE_TEST_IS_EXECUTABLE))
 		gtk_widget_set_sensitive(im->button_im_config, flag);
 	else
 		gtk_widget_set_sensitive(im->button_im_config, FALSE);
@@ -141,6 +144,7 @@ im_chooser_simple_im_list_on_changed(GtkTreeSelection *selection,
 	GtkTreeModel *model;
 	GtkTreeIter iter;
 	XInputData *xinput;
+	gchar *prog;
 
 	if (im->initialized == FALSE)
 		return;
@@ -149,7 +153,9 @@ im_chooser_simple_im_list_on_changed(GtkTreeSelection *selection,
 		gtk_tree_model_get(model, &iter, 1, &xinput, -1);
 		if (im->current_im != xinput) {
 			im->current_im = xinput;
-			if (im->current_im && xinput_data_get_value(im->current_im, XINPUT_VALUE_PREFS_PROG))
+			if (im->current_im &&
+			    (prog = xinput_data_get_value(im->current_im, XINPUT_VALUE_PREFS_PROG)) != NULL &&
+			    g_file_test(prog, G_FILE_TEST_EXISTS | G_FILE_TEST_IS_EXECUTABLE))
 				gtk_widget_set_sensitive(im->button_im_config, TRUE);
 			else
 				gtk_widget_set_sensitive(im->button_im_config, FALSE);
@@ -671,6 +677,7 @@ im_chooser_simple_get_widget(IMChooserSimple *im)
 
 	gtk_widget_set_sensitive(im->widget_scrolled, FALSE);
 	gtk_widget_set_sensitive(im->button_im_config, FALSE);
+	gtk_widget_set_sensitive(im->checkbox_is_im_enabled, FALSE);
 	gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON (im->checkbox_is_im_enabled),
 				     (im->current_im != NULL));
 
