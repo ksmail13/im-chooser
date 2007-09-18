@@ -1,3 +1,10 @@
+2007-09-18  Akira TAGOH  <tagoh@redhat.com>
+
+	* src/im-chooser-simple.c (_im_chooser_simple_update_im_list): Check
+	iter to not be warned.
+	(im_chooser_simple_get_widget): unset a toggle button for default, but
+	not insensitive.
+
 2007-09-10  Akira TAGOH  <tagoh@redhat.com>
 
 	* configure.ac: bump to 0.5.1.

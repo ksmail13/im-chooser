@@ -463,22 +463,22 @@ _im_chooser_simple_update_im_list(IMChooserSimple *im)
 		g_string_free(string, TRUE);
 	}
 	if (cur_iter == NULL) {
-		gtk_tree_model_get_iter_first(GTK_TREE_MODEL (list), &iter);
-		cur_iter = gtk_tree_iter_copy(&iter);
+		if (gtk_tree_model_get_iter_first(GTK_TREE_MODEL (list), &iter))
+			cur_iter = gtk_tree_iter_copy(&iter);
 	}
-	gtk_tree_view_set_model(GTK_TREE_VIEW (im->widget_im_list), GTK_TREE_MODEL (list));
-	column = gtk_tree_view_get_column(GTK_TREE_VIEW (im->widget_im_list), 0);
-	path = gtk_tree_model_get_path(GTK_TREE_MODEL (list), cur_iter);
-	gtk_tree_view_set_cursor(GTK_TREE_VIEW (im->widget_im_list), path, column, FALSE);
-	gtk_tree_path_free(path);
-	gtk_tree_iter_free(cur_iter);
+	if (cur_iter != NULL) {
+		gtk_tree_view_set_model(GTK_TREE_VIEW (im->widget_im_list), GTK_TREE_MODEL (list));
+		column = gtk_tree_view_get_column(GTK_TREE_VIEW (im->widget_im_list), 0);
+		path = gtk_tree_model_get_path(GTK_TREE_MODEL (list), cur_iter);
+		gtk_tree_view_set_cursor(GTK_TREE_VIEW (im->widget_im_list), path, column, FALSE);
+		gtk_tree_path_free(path);
+		gtk_tree_iter_free(cur_iter);
+	}
 	g_object_unref(list);
 
-	if (count <= 1) {
-		if (count == 0) {
-			gtk_widget_set_sensitive(im->checkbox_is_im_enabled, FALSE);
-			gtk_widget_hide(im->widget_scrolled);
-		}
+	if (count == 0) {
+		gtk_widget_set_sensitive(im->checkbox_is_im_enabled, FALSE);
+		gtk_widget_hide(im->widget_scrolled);
 	} else {
 		gtk_widget_show(im->widget_scrolled);
 		gtk_widget_set_sensitive(im->checkbox_is_im_enabled, TRUE);
@@ -677,7 +677,8 @@ im_chooser_simple_get_widget(IMChooserSimple *im)
 
 	gtk_widget_set_sensitive(im->widget_scrolled, FALSE);
 	gtk_widget_set_sensitive(im->button_im_config, FALSE);
-	gtk_widget_set_sensitive(im->checkbox_is_im_enabled, FALSE);
+	gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON (im->checkbox_is_im_enabled),
+				     FALSE);
 	gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON (im->checkbox_is_im_enabled),
 				     (im->current_im != NULL));
 
