@@ -1,3 +1,22 @@
+2007-09-18  Akira TAGOH  <tagoh@redhat.com>
+
+	* configure.ac: bump to 0.5.2.
+
+	* src/im-chooser-simple.c (_im_chooser_simple_update_im_list): Check
+	iter to not be warned.
+	(im_chooser_simple_get_widget): unset a toggle button for default, but
+	not insensitive.
+
+2007-09-10  Akira TAGOH  <tagoh@redhat.com>
+
+	* configure.ac: bump to 0.5.1.
+
+	* src/im-chooser-simple.c (im_chooser_simple_enable_im_on_toggled):
+	check if PREFERENCE_PROGRAM really exists and is executable.
+	(im_chooser_simple_im_list_on_changed): likewise.
+	(im_chooser_simple_get_widget): makes the config button as an
+	insensitive by default.
+
 2007-09-06  Akira TAGOH  <tagoh@redhat.com>
 
 	* configure.ac: bump to 0.5.0
