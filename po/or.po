@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: or\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-09-05 09:55+0900\n"
+"POT-Creation-Date: 2007-09-20 10:20+0900\n"
 "PO-Revision-Date: 2006-09-28 16:44+0530\n"
 "Last-Translator: Subhransu Behera <sbehera@redhat.com>\n"
 "Language-Team: Oriya <oriya-group@lists.sarovar.org>\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Plural-Forms: Plural-Forms: nplurals=2; plural=(n!=1);\n"
 "\n"
 
-#: ../src/im-chooser.c:482 ../src/im-chooser-simple.c:619
+#: ../src/im-chooser.c:482 ../src/im-chooser-simple.c:625
 msgid ""
 "<small><i>Note: this change will not take effect until you next log in.</i></"
 "small>"
@@ -28,7 +28,7 @@ msgstr ""
 "<small><i>ଟିପ୍ପଣୀ: ଆପଣଙ୍କ ପରବର୍ତ୍ତୀ ଲଗଇନ ପର୍ଯ୍ଯନ୍ତ ଏହି ପରିବର୍ତ୍ତନଟି ପ୍ରଭାବିତ ହେବନାହିଁ।</i></"
 "small>"
 
-#: ../src/im-chooser.c:486 ../src/im-chooser-simple.c:606
+#: ../src/im-chooser.c:486 ../src/im-chooser-simple.c:612
 msgid "<b>Input Method</b>"
 msgstr "<b>ନିବେଶ ପ୍ରଣାଳୀ</b>"
 
@@ -86,24 +86,24 @@ msgstr ""
 "ଯେ କୌଣସି ଉପାୟରେ X ନିବେଶ ପ୍ରଣାଳୀକୁ ବ୍ଯବହାର କରନ୍ତୁ। ବାସ୍ତବରେ, ଡେସ୍କଟପ ଅଧିବେଶନ ପାଇଁ କେଉଁ "
 "ନିବେଶ ପ୍ରଣାଳୀକୁ ବ୍ଯବହାର କରାଯିବ ତାହା ଡେସ୍କଟପ ଭାଷା ଉପରେ ନିର୍ଭର କରିଥାଏ।"
 
-#: ../src/im-chooser-simple.c:442
+#: ../src/im-chooser-simple.c:448
 #, c-format
 msgid "Use %s"
 msgstr ""
 
-#: ../src/im-chooser-simple.c:444
+#: ../src/im-chooser-simple.c:450
 msgid " (Legacy)"
 msgstr ""
 
-#: ../src/im-chooser-simple.c:446
+#: ../src/im-chooser-simple.c:452
 msgid " (Recommend)"
 msgstr ""
 
-#: ../src/im-chooser-simple.c:612
+#: ../src/im-chooser-simple.c:618
 msgid "_Enable input method feature"
 msgstr ""
 
-#: ../src/im-chooser-simple.c:651
+#: ../src/im-chooser-simple.c:657
 #, fuzzy
 msgid "Input Method _Preferences..."
 msgstr "ନିବେଶ ପ୍ରଣାଳୀ"
@@ -124,6 +124,10 @@ msgstr "ନିବେଶ ପ୍ରଣାଳୀ ଚୟକ - ନିବେଶ ପ୍
 #: ../src/main.c:178
 msgid "_Log Out"
 msgstr "ଲଗଆଉଟ କରନ୍ତୁ (_L)"
+
+#: ../src/xinput.c:179
+msgid "xinputrc was modified by the user"
+msgstr ""
 
 #. label that uses to indicate their own .xinputrc
 #: ../src/im-chooser-private.h:36

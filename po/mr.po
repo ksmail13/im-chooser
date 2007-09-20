@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mr\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-09-05 09:55+0900\n"
+"POT-Creation-Date: 2007-09-20 10:20+0900\n"
 "PO-Revision-Date: 2006-10-02 21:01+0530\n"
 "Last-Translator: Rahul Bhalerao <b.rahul.pm@gmail.com>\n"
 "Language-Team: Marathi\n"
@@ -19,7 +19,7 @@ msgstr ""
 "X-Generator: KBabel 1.9.1\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../src/im-chooser.c:482 ../src/im-chooser-simple.c:619
+#: ../src/im-chooser.c:482 ../src/im-chooser-simple.c:625
 msgid ""
 "<small><i>Note: this change will not take effect until you next log in.</i></"
 "small>"
@@ -27,7 +27,7 @@ msgstr ""
 "<small><i>टीप: तुम्ही पुन्हा लॉगीन करेपर्यंत हा बदल परिणामकारक होणार नाही.</i></"
 "small>"
 
-#: ../src/im-chooser.c:486 ../src/im-chooser-simple.c:606
+#: ../src/im-chooser.c:486 ../src/im-chooser-simple.c:612
 msgid "<b>Input Method</b>"
 msgstr "<b>आदान पद्धती</b>"
 
@@ -84,24 +84,24 @@ msgstr ""
 "X आदान पद्धतीचा वापर करा. प्रत्यक्षात, डेस्कटॉप सत्रासाठी कोणती आदान पद्धती निवडली "
 "जाईल, हे डेस्कटॉप भाषेवर अवलंबून असते."
 
-#: ../src/im-chooser-simple.c:442
+#: ../src/im-chooser-simple.c:448
 #, c-format
 msgid "Use %s"
 msgstr ""
 
-#: ../src/im-chooser-simple.c:444
+#: ../src/im-chooser-simple.c:450
 msgid " (Legacy)"
 msgstr ""
 
-#: ../src/im-chooser-simple.c:446
+#: ../src/im-chooser-simple.c:452
 msgid " (Recommend)"
 msgstr ""
 
-#: ../src/im-chooser-simple.c:612
+#: ../src/im-chooser-simple.c:618
 msgid "_Enable input method feature"
 msgstr ""
 
-#: ../src/im-chooser-simple.c:651
+#: ../src/im-chooser-simple.c:657
 #, fuzzy
 msgid "Input Method _Preferences..."
 msgstr "आदान पद्धती"
@@ -122,6 +122,10 @@ msgstr "IM निवडकर्ता - आदान पद्धती व्�
 #: ../src/main.c:178
 msgid "_Log Out"
 msgstr "लॉग आउट (_L)"
+
+#: ../src/xinput.c:179
+msgid "xinputrc was modified by the user"
+msgstr ""
 
 #. label that uses to indicate their own .xinputrc
 #: ../src/im-chooser-private.h:36

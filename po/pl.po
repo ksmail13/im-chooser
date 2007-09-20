@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pl\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-09-05 09:55+0900\n"
+"POT-Creation-Date: 2007-09-20 10:20+0900\n"
 "PO-Revision-Date: 2007-09-06 00:43+0200\n"
 "Last-Translator: Piotr Drąg <raven@pmail.pl>\n"
 "Language-Team: Polish <pl@li.org>\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../src/im-chooser.c:482 ../src/im-chooser-simple.c:619
+#: ../src/im-chooser.c:482 ../src/im-chooser-simple.c:625
 msgid ""
 "<small><i>Note: this change will not take effect until you next log in.</i></"
 "small>"
@@ -21,7 +21,7 @@ msgstr ""
 "<small><i>Uwaga: ta zmiana zostanie uwzględniona po następnym zalogowaniu.</"
 "i></small>"
 
-#: ../src/im-chooser.c:486 ../src/im-chooser-simple.c:606
+#: ../src/im-chooser.c:486 ../src/im-chooser-simple.c:612
 msgid "<b>Input Method</b>"
 msgstr "<b>Metoda wejścia</b>"
 
@@ -76,24 +76,24 @@ msgstr ""
 "Użyj metody wejścia X mimo tego. Właściwie wybrana metoda wejścia dla sesji "
 "środowiska zależy od jego języka."
 
-#: ../src/im-chooser-simple.c:442
+#: ../src/im-chooser-simple.c:448
 #, c-format
 msgid "Use %s"
 msgstr "Użyj %s"
 
-#: ../src/im-chooser-simple.c:444
+#: ../src/im-chooser-simple.c:450
 msgid " (Legacy)"
 msgstr " (przestarzała)"
 
-#: ../src/im-chooser-simple.c:446
+#: ../src/im-chooser-simple.c:452
 msgid " (Recommend)"
 msgstr " (zalecana)"
 
-#: ../src/im-chooser-simple.c:612
+#: ../src/im-chooser-simple.c:618
 msgid "_Enable input method feature"
 msgstr "Włącz m_etodę wejścia"
 
-#: ../src/im-chooser-simple.c:651
+#: ../src/im-chooser-simple.c:657
 msgid "Input Method _Preferences..."
 msgstr "_Preferencje metody wejścia..."
 
@@ -101,8 +101,8 @@ msgstr "_Preferencje metody wejścia..."
 msgid ""
 "<span weight=\"bold\" size=\"larger\">No input method is available</span>"
 msgstr ""
-"<span weight=\"bold\" size=\"larger\">Żadna metoda wejścia nie jest dostępna"
-"</span>"
+"<span weight=\"bold\" size=\"larger\">Żadna metoda wejścia nie jest "
+"dostępna</span>"
 
 #: ../src/main.c:69
 msgid "Please install any input methods before running if you like."
@@ -116,6 +116,11 @@ msgstr "Wybór IM - narzędzie konfiguracji metody wejścia"
 msgid "_Log Out"
 msgstr "Wy_loguj się"
 
+#: ../src/xinput.c:179
+msgid "xinputrc was modified by the user"
+msgstr ""
+
+#. label that uses to indicate their own .xinputrc
 #: ../src/im-chooser-private.h:36
 msgid "User Specific"
 msgstr "Określona przez użytkownika"

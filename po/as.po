@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: as\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-09-05 09:55+0900\n"
+"POT-Creation-Date: 2007-09-20 10:20+0900\n"
 "PO-Revision-Date: 2006-10-02 18:43+0530\n"
 "Last-Translator: Amitakhya Phukan <amitakhya.phukan@gmail.com>\n"
 "Language-Team: Assamese\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.9.1\n"
 
-#: ../src/im-chooser.c:482 ../src/im-chooser-simple.c:619
+#: ../src/im-chooser.c:482 ../src/im-chooser-simple.c:625
 msgid ""
 "<small><i>Note: this change will not take effect until you next log in.</i></"
 "small>"
@@ -24,7 +24,7 @@ msgstr ""
 "<small><i>মন কৰিব:এই সলনি আপুনি অহা বাৰলৈ প্ৰৱেশ নকৰালৈকে প্ৰযোজ্য নহয় ।</i></"
 "small>"
 
-#: ../src/im-chooser.c:486 ../src/im-chooser-simple.c:606
+#: ../src/im-chooser.c:486 ../src/im-chooser-simple.c:612
 msgid "<b>Input Method</b>"
 msgstr "<b>নিবেশ পদ্ধতি</b>"
 
@@ -80,24 +80,24 @@ msgstr ""
 "যিয়েই নহওক X নিবেশ পদ্ধতি ব্যৱহাৰ কৰক । বাস্তৱতে, কোনতো নিবেশ পদ্ধতি ডেষ্কট'প "
 "অধিবেশনৰ বাবে নিৰ্ব্বাচিত কৰা হ'ব, ডেষ্কট'প ভাষাৰ ওপৰতহে নিৰ্ভৰ কৰে ।"
 
-#: ../src/im-chooser-simple.c:442
+#: ../src/im-chooser-simple.c:448
 #, c-format
 msgid "Use %s"
 msgstr ""
 
-#: ../src/im-chooser-simple.c:444
+#: ../src/im-chooser-simple.c:450
 msgid " (Legacy)"
 msgstr ""
 
-#: ../src/im-chooser-simple.c:446
+#: ../src/im-chooser-simple.c:452
 msgid " (Recommend)"
 msgstr ""
 
-#: ../src/im-chooser-simple.c:612
+#: ../src/im-chooser-simple.c:618
 msgid "_Enable input method feature"
 msgstr ""
 
-#: ../src/im-chooser-simple.c:651
+#: ../src/im-chooser-simple.c:657
 #, fuzzy
 msgid "Input Method _Preferences..."
 msgstr "নিবেশ পদ্ধতি"
@@ -118,6 +118,10 @@ msgstr "IM নিৰ্ব্বাচক - নিবেশ পদ্ধতি �
 #: ../src/main.c:178
 msgid "_Log Out"
 msgstr "প্ৰস্থান (_L)"
+
+#: ../src/xinput.c:179
+msgid "xinputrc was modified by the user"
+msgstr ""
 
 #. label that uses to indicate their own .xinputrc
 #: ../src/im-chooser-private.h:36

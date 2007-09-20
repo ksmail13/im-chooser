@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: im-chooser 0.3.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-09-05 09:55+0900\n"
+"POT-Creation-Date: 2007-09-20 10:20+0900\n"
 "PO-Revision-Date: 2006-09-29 04:28-0400\n"
 "Last-Translator: Keld Simonsen <keld@dkuug.dk>\n"
 "Language-Team: Danish <dansk@klid.dk>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../src/im-chooser.c:482 ../src/im-chooser-simple.c:619
+#: ../src/im-chooser.c:482 ../src/im-chooser-simple.c:625
 msgid ""
 "<small><i>Note: this change will not take effect until you next log in.</i></"
 "small>"
@@ -26,7 +26,7 @@ msgstr ""
 "<small><i>Bemærk: denne ændring vil ikke gælde før næste gang du logger ind."
 "</i></small>"
 
-#: ../src/im-chooser.c:486 ../src/im-chooser-simple.c:606
+#: ../src/im-chooser.c:486 ../src/im-chooser-simple.c:612
 msgid "<b>Input Method</b>"
 msgstr "<b>Indtastningsmetode</b>"
 
@@ -85,24 +85,24 @@ msgstr ""
 "indtastningsmetode som vælges for skrivebordssessionen afhænge af sproget "
 "for skrivebordet."
 
-#: ../src/im-chooser-simple.c:442
+#: ../src/im-chooser-simple.c:448
 #, c-format
 msgid "Use %s"
 msgstr ""
 
-#: ../src/im-chooser-simple.c:444
+#: ../src/im-chooser-simple.c:450
 msgid " (Legacy)"
 msgstr ""
 
-#: ../src/im-chooser-simple.c:446
+#: ../src/im-chooser-simple.c:452
 msgid " (Recommend)"
 msgstr ""
 
-#: ../src/im-chooser-simple.c:612
+#: ../src/im-chooser-simple.c:618
 msgid "_Enable input method feature"
 msgstr ""
 
-#: ../src/im-chooser-simple.c:651
+#: ../src/im-chooser-simple.c:657
 #, fuzzy
 msgid "Input Method _Preferences..."
 msgstr "Indtastningsmetode"
@@ -123,6 +123,10 @@ msgstr "IM Vælger - Værktøj for konfiguration af indtastningsmetode"
 #: ../src/main.c:178
 msgid "_Log Out"
 msgstr "_Log ud"
+
+#: ../src/xinput.c:179
+msgid "xinputrc was modified by the user"
+msgstr ""
 
 #. label that uses to indicate their own .xinputrc
 #: ../src/im-chooser-private.h:36

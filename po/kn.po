@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kn\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-09-05 09:55+0900\n"
+"POT-Creation-Date: 2007-09-20 10:20+0900\n"
 "PO-Revision-Date: 2006-12-06 12:54+0530\n"
 "Last-Translator: shankar Prasad <svenkate@redhat.com>\n"
 "Language-Team: Kannada <en@li.org>\n"
@@ -20,7 +20,7 @@ msgstr ""
 "X-Generator: KBabel 1.11.4\n"
 "Plural-Forms: Plural-Forms: nplural=2;plural=(n !=1);\n"
 
-#: ../src/im-chooser.c:482 ../src/im-chooser-simple.c:619
+#: ../src/im-chooser.c:482 ../src/im-chooser-simple.c:625
 msgid ""
 "<small><i>Note: this change will not take effect until you next log in.</i></"
 "small>"
@@ -28,7 +28,7 @@ msgstr ""
 "<small><i>ಸೂಚನೆ: ನೀವು ಮುಂದಿನ ಬಾರಿ ಒಳಗೆ ಪ್ರವೇಶಿಸುವವರೆಗೆ ಈ ಬದಲಾವಣೆಯು "
 "ಕಾರ್ಯಗತವಾಗುವುದಿಲ್ಲ.</i></small>"
 
-#: ../src/im-chooser.c:486 ../src/im-chooser-simple.c:606
+#: ../src/im-chooser.c:486 ../src/im-chooser-simple.c:612
 msgid "<b>Input Method</b>"
 msgstr "<b>ಆದಾನ ಕ್ರಮ</b>"
 
@@ -86,24 +86,24 @@ msgstr ""
 "ಏನಾದರಾಗಲಿ ಎಕ್ಸ್ ಆದಾನ ಕ್ರಮ ಉಪಯೋಗಿಸು. ನಿಜಾಂಶವೆಂದರೆ,ಗಣಕ ಪರದೆಯ ಕಲಾಪಕ್ಕೆ ಯಾವ ಆದಾನಕ್ರಮ "
 "ಉಪಯೋಗಿಸ್ಪಡುತ್ತದೆ ಎಂಬುದು ಗಣಕ ಪರದೆಯ ಭಾಷೆಯ ಮೇಲೆ ನಿರ್ಧರಿತವಾಗಿರುತ್ತದೆ."
 
-#: ../src/im-chooser-simple.c:442
+#: ../src/im-chooser-simple.c:448
 #, c-format
 msgid "Use %s"
 msgstr ""
 
-#: ../src/im-chooser-simple.c:444
+#: ../src/im-chooser-simple.c:450
 msgid " (Legacy)"
 msgstr ""
 
-#: ../src/im-chooser-simple.c:446
+#: ../src/im-chooser-simple.c:452
 msgid " (Recommend)"
 msgstr ""
 
-#: ../src/im-chooser-simple.c:612
+#: ../src/im-chooser-simple.c:618
 msgid "_Enable input method feature"
 msgstr ""
 
-#: ../src/im-chooser-simple.c:651
+#: ../src/im-chooser-simple.c:657
 #, fuzzy
 msgid "Input Method _Preferences..."
 msgstr "ಆದಾನ ಕ್ರಮ"
@@ -124,6 +124,10 @@ msgstr "IM Chooser - ಆದಾನ ಕ್ರಮ ಸ್ವರೂಪಿಸುವ �
 #: ../src/main.c:178
 msgid "_Log Out"
 msgstr "ಹೊರಗೆ ನಡೆ (_L)"
+
+#: ../src/xinput.c:179
+msgid "xinputrc was modified by the user"
+msgstr ""
 
 #. label that uses to indicate their own .xinputrc
 #: ../src/im-chooser-private.h:36
