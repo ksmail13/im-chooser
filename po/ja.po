@@ -2,28 +2,28 @@
 # im-chooser
 # Copyright (C) 2006 Red Hat, Inc. All rights reserved.
 # This file is distributed under the same license as the PACKAGE package.
+#
 # Akira TAGOH <tagoh@redhat.com>, 2006.
 # Kiyoto James Hashida <khashida@redhat.com>, 2006.
-#
+# Noriko Mizumoto <noriko@redhat.com>, 2007.
 msgid ""
 msgstr ""
 "Project-Id-Version: ja\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-09-20 10:20+0900\n"
-"PO-Revision-Date: 2006-12-15 09:46\n"
-"Last-Translator: Kiyoto James Hashida <khashida@redhat.com>\n"
-"Language-Team: Japanese <ja@li.org>\n"
+"POT-Creation-Date: 2007-09-19 01:37-0700\n"
+"PO-Revision-Date: 2007-09-21 14:28+1000\n"
+"Last-Translator: Noriko Mizumoto <noriko@redhat.com>\n"
+"Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.9.1\n"
+"X-Generator: KBabel 1.11.4\n"
 
 #: ../src/im-chooser.c:482 ../src/im-chooser-simple.c:625
 msgid ""
 "<small><i>Note: this change will not take effect until you next log in.</i></"
 "small>"
-msgstr ""
-"<small><i>注記: この変更は次回ログインするまで反映されません。</i></small>"
+msgstr "<small><i>注記: この変更は次回ログインするまで反映されません。</i></small>"
 
 #: ../src/im-chooser.c:486 ../src/im-chooser-simple.c:612
 msgid "<b>Input Method</b>"
@@ -31,88 +31,76 @@ msgstr "<b>入力メソッド</b>"
 
 #: ../src/im-chooser.c:496
 msgid "No valid IM installed"
-msgstr "有効な入力メソッドがありません"
+msgstr "有効な入力メソッドがインストールされていません"
 
 #: ../src/im-chooser.c:514
 msgid "_Use default Input Method for your language"
-msgstr ""
+msgstr "使用している言語にデフォルトの入力メソッドを使用する(_U)"
 
 #: ../src/im-chooser.c:516
 msgid ""
 "Your system chooses the appropriate Input Method for your language "
 "automatically from among Input Methods installed on your system."
-msgstr ""
+msgstr "ご使用のシステムにインストールされている入力メソッドの中からご使用の言語に適切な入力メソッドを自動的に選択します。"
 
 #: ../src/im-chooser.c:519
-#, fuzzy
 msgid "Choose _specific Input Method"
-msgstr "カスタム入力メソッドを使う(_C)"
+msgstr "特定の入力メソッドを選択する(_S)"
 
 #: ../src/im-chooser.c:521
-#, fuzzy
 msgid ""
 "Use the specific Input Method that you prefer regardless what Input Method "
 "the system recommends."
-msgstr ""
-"システムがどの入力メソッドを推奨するかに関係なく好きな入力メソッドを使いま"
-"す。"
+msgstr "システムが推奨する入力メソッドに関係なく選択される特定の入力メソッドを使用します。"
 
 #: ../src/im-chooser.c:527
-#, fuzzy
 msgid "_Do not use Input Method"
-msgstr "入力メソッドを使わない(_N)"
+msgstr "入力メソッドを使わない(_D)"
 
 #: ../src/im-chooser.c:529
-#, fuzzy
-msgid ""
-"Do not use Input Method no matter what language the desktop is running on."
-msgstr ""
-"どのロケールでデスクトップが動作しているかに関係なく完全に入力メソッドを無効"
-"にします。"
+msgid "Do not use Input Method no matter what language the desktop is running on."
+msgstr "デスクトップが動作させている言語に関係なく入力メソッドを使用しません。"
 
 #: ../src/im-chooser.c:532
-#, fuzzy
 msgid "Use legacy _Input Method"
-msgstr "レガシーな入力メソッドを使う(_U)"
+msgstr "レガシーな入力メソッドを使う(_I)"
 
 #: ../src/im-chooser.c:534
 msgid ""
 "Use X Input Method anyway. In fact, which input method will be chosen for "
 "the desktop session, depends on the desktop language."
 msgstr ""
-"X入力メソッドを使います。実際には、どの入力メソッドが選ばれるかは、デスクトッ"
+"X 入力メソッドを使います。 実際には、 どの入力メソッドが選ばれるかはデスクトッ"
 "プの言語に依存します。"
 
 #: ../src/im-chooser-simple.c:448
 #, c-format
 msgid "Use %s"
-msgstr ""
+msgstr "%s を使用する"
 
 #: ../src/im-chooser-simple.c:450
 msgid " (Legacy)"
-msgstr ""
+msgstr " (レガシー)"
 
 #: ../src/im-chooser-simple.c:452
 msgid " (Recommend)"
-msgstr ""
+msgstr " (推奨)"
 
 #: ../src/im-chooser-simple.c:618
 msgid "_Enable input method feature"
-msgstr ""
+msgstr "入力メソッドの機能を有効にする(_E)"
 
 #: ../src/im-chooser-simple.c:657
-#, fuzzy
 msgid "Input Method _Preferences..."
-msgstr "入力メソッド"
+msgstr "入力メソッドの個人設定(_P)..."
 
 #: ../src/main.c:66
-msgid ""
-"<span weight=\"bold\" size=\"larger\">No input method is available</span>"
-msgstr ""
+msgid "<span weight=\"bold\" size=\"larger\">No input method is available</span>"
+msgstr "<span weight=\"bold\" size=\"larger\">使用できる入力メソッドがありません</span>"
 
 #: ../src/main.c:69
 msgid "Please install any input methods before running if you like."
-msgstr ""
+msgstr "必要であれば、 実行する前に入力メソッドをインストールしてください。"
 
 #: ../src/main.c:170
 msgid "IM Chooser - Input Method configuration tool"
@@ -122,14 +110,10 @@ msgstr "IM Chooser - 入力メソッド設定ツール"
 msgid "_Log Out"
 msgstr "ログアウト(_L)"
 
-#: ../src/xinput.c:179
-msgid "xinputrc was modified by the user"
-msgstr ""
-
 #. label that uses to indicate their own .xinputrc
 #: ../src/im-chooser-private.h:36
 msgid "User Specific"
-msgstr ""
+msgstr "ユーザー固有"
 
 #: ../src/im-chooser.desktop.in.in.h:1
 msgid "Input Method"
@@ -139,14 +123,5 @@ msgstr "入力メソッド"
 msgid ""
 "Input Method configuration tool to choose the Input Method to be used or "
 "disable Input Method usage on the desktop"
-msgstr ""
-"デスクトップ上で使われる入力メソッドの選択もしくは無効にするための入力メソッ"
-"ド設定ツールです。"
+msgstr "使用する入力メソッドを選択する、 またはデスクトップで入力メソッドの使用を無効にするための入力メソッド設定ツールです。"
 
-#~ msgid "_Follow the system-wide configuration"
-#~ msgstr "システム設定に従う(_F)"
-
-#~ msgid ""
-#~ "Follow the system-wide input method configuration to determine which "
-#~ "input method should be used."
-#~ msgstr "どの入力メソッドを使うべきかシステム設定に従います。"
