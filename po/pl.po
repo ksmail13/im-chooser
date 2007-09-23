@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: pl\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2007-09-20 10:20+0900\n"
-"PO-Revision-Date: 2007-09-06 00:43+0200\n"
+"PO-Revision-Date: 2007-09-21 15:54+0200\n"
 "Last-Translator: Piotr Drąg <raven@pmail.pl>\n"
 "Language-Team: Polish <pl@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -118,9 +118,8 @@ msgstr "Wy_loguj się"
 
 #: ../src/xinput.c:179
 msgid "xinputrc was modified by the user"
-msgstr ""
+msgstr "xinputrc został zmodyfikowany przez użytkownika"
 
-#. label that uses to indicate their own .xinputrc
 #: ../src/im-chooser-private.h:36
 msgid "User Specific"
 msgstr "Określona przez użytkownika"
