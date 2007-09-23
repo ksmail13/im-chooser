@@ -1,117 +1,95 @@
 # Finnish translations for im-chooser package.
 # Copyright (C) 2006 Red Hat, Inc. All rights reserved.
 # This file is distributed under the same license as the im-chooser package.
-# Automatically generated, 2006.
 #
+# Ville-Pekka Vainio <vpivaini@cs.helsinki.fi>, 2006, 2007.
 msgid ""
 msgstr ""
 "Project-Id-Version: im-chooser 0.3.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-09-20 10:20+0900\n"
-"PO-Revision-Date: 2006-12-26 21:17+0200\n"
+"POT-Creation-Date: 2007-09-19 01:38-0700\n"
+"PO-Revision-Date: 2007-09-20 23:58+0300\n"
 "Last-Translator: Ville-Pekka Vainio <vpivaini@cs.helsinki.fi>\n"
-"Language-Team: none\n"
+"Language-Team: Finnish <laatu@lokalisointi.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../src/im-chooser.c:482 ../src/im-chooser-simple.c:625
-msgid ""
-"<small><i>Note: this change will not take effect until you next log in.</i></"
-"small>"
-msgstr ""
-"<small><i>Huomaa: Tämän asetuksen muutokset tulevat voimaan vasta seuraavan "
-"kerran sisään kirjauduttaessa.</i></small>"
+#: ../src/im-chooser.c:482
+#: ../src/im-chooser-simple.c:625
+msgid "<small><i>Note: this change will not take effect until you next log in.</i></small>"
+msgstr "<small><i>Huomaa: Tämän asetuksen muutokset tulevat voimaan vasta seuraavan kerran sisään kirjauduttaessa.</i></small>"
 
-#: ../src/im-chooser.c:486 ../src/im-chooser-simple.c:612
+#: ../src/im-chooser.c:486
+#: ../src/im-chooser-simple.c:612
 msgid "<b>Input Method</b>"
-msgstr "<b>Syöttötapa</b>"
+msgstr "<b>Syöttömenetelmä</b>"
 
 #: ../src/im-chooser.c:496
 msgid "No valid IM installed"
-msgstr "Sopivaa syöttötapaa ei ole asennettu"
+msgstr "Sopivaa syöttömenetelmää ei ole asennettu"
 
 #: ../src/im-chooser.c:514
 msgid "_Use default Input Method for your language"
-msgstr ""
+msgstr "_Käytä kielen oletussyöttömenetelmää"
 
 #: ../src/im-chooser.c:516
-msgid ""
-"Your system chooses the appropriate Input Method for your language "
-"automatically from among Input Methods installed on your system."
-msgstr ""
+msgid "Your system chooses the appropriate Input Method for your language automatically from among Input Methods installed on your system."
+msgstr "Järjestelmä valitsee sopivan syöttömenetelmän kielellesi automaattisesti järjestelmään asennettujen syöttömenetelmien joukosta."
 
 #: ../src/im-chooser.c:519
-#, fuzzy
 msgid "Choose _specific Input Method"
-msgstr "Käytä _mukautettua syöttötapaa"
+msgstr "Valitse tietty syöttömenetelmä"
 
 #: ../src/im-chooser.c:521
-#, fuzzy
-msgid ""
-"Use the specific Input Method that you prefer regardless what Input Method "
-"the system recommends."
-msgstr ""
-"Käytä suosimaasi syöttötapaa huolimatta siitä, mitä tapaa järjestelmä "
-"suosittelee."
+msgid "Use the specific Input Method that you prefer regardless what Input Method the system recommends."
+msgstr "Käytä suosimaasi syöttömenetelmää huolimatta siitä, mitä menetelmää järjestelmä suosittelee."
 
 #: ../src/im-chooser.c:527
-#, fuzzy
 msgid "_Do not use Input Method"
-msgstr "_Älä koskaan käytä syöttötapoja"
+msgstr "Älä käytä syöttömenetelmää"
 
 #: ../src/im-chooser.c:529
-#, fuzzy
-msgid ""
-"Do not use Input Method no matter what language the desktop is running on."
-msgstr ""
-"Ota syöttötavat kokonaan pois käytöstä, huolimatta siitä, mitä maa-asetustoa "
-"työpöytä käyttää."
+msgid "Do not use Input Method no matter what language the desktop is running on."
+msgstr "Älä käytä syöttömenetelmää, huolimatta siitä mitä kieltä työpöytä käyttää."
 
 #: ../src/im-chooser.c:532
-#, fuzzy
 msgid "Use legacy _Input Method"
-msgstr "Käytä _vanhentuneita syöttötapoja"
+msgstr "Käytä vanhentunutta _syöttömenetelmää"
 
 #: ../src/im-chooser.c:534
-msgid ""
-"Use X Input Method anyway. In fact, which input method will be chosen for "
-"the desktop session, depends on the desktop language."
-msgstr ""
-"Käytä X:n syöttötapaa joka tapauksessa. Työpöydän kielestä riippuu, mikä "
-"syöttötapa valitaan työpöytäsessioon."
+msgid "Use X Input Method anyway. In fact, which input method will be chosen for the desktop session, depends on the desktop language."
+msgstr "Käytä X:n syöttömenetelmää joka tapauksessa. Työpöydän kielestä riippuu, mikä syöttömenetelmä valitaan työpöytäistuntoon."
 
 #: ../src/im-chooser-simple.c:448
 #, c-format
 msgid "Use %s"
-msgstr ""
+msgstr "Käytä %s"
 
 #: ../src/im-chooser-simple.c:450
 msgid " (Legacy)"
-msgstr ""
+msgstr "(Vanhentunut)"
 
 #: ../src/im-chooser-simple.c:452
 msgid " (Recommend)"
-msgstr ""
+msgstr "(Suositeltu)"
 
 #: ../src/im-chooser-simple.c:618
 msgid "_Enable input method feature"
-msgstr ""
+msgstr "Ota käyttöön syöttömenetelmä-ominaisuus"
 
 #: ../src/im-chooser-simple.c:657
-#, fuzzy
 msgid "Input Method _Preferences..."
-msgstr "Syöttötapa"
+msgstr "Syöttömenetelmien _asetukset..."
 
 #: ../src/main.c:66
-msgid ""
-"<span weight=\"bold\" size=\"larger\">No input method is available</span>"
-msgstr ""
+msgid "<span weight=\"bold\" size=\"larger\">No input method is available</span>"
+msgstr "<span weight=\"bold\" size=\"larger\">Mitään syöttömenetelmää ei ole käytettävissä</span>"
 
 #: ../src/main.c:69
 msgid "Please install any input methods before running if you like."
-msgstr ""
+msgstr "Asenna haluamasi syöttömenetelmät ennen ohjelman suorittamista."
 
 #: ../src/main.c:170
 msgid "IM Chooser - Input Method configuration tool"
@@ -121,33 +99,25 @@ msgstr "Syöttötavan valintatyökalu"
 msgid "_Log Out"
 msgstr "_Kirjaudu ulos"
 
-#: ../src/xinput.c:179
-msgid "xinputrc was modified by the user"
-msgstr ""
-
 #. label that uses to indicate their own .xinputrc
 #: ../src/im-chooser-private.h:36
 msgid "User Specific"
-msgstr ""
+msgstr "Käyttäjäkohtainen"
 
 #: ../src/im-chooser.desktop.in.in.h:1
 msgid "Input Method"
-msgstr "Syöttötapa"
+msgstr "Syöttömenetelmä"
 
 #: ../src/im-chooser.desktop.in.in.h:2
-msgid ""
-"Input Method configuration tool to choose the Input Method to be used or "
-"disable Input Method usage on the desktop"
-msgstr ""
-"Syöttötavan asetustyökalu käytettävän syöttötavan valintaan tai "
-"syöttötapojen kytkemiseen pois päältä työpöytäkäytössä."
+msgid "Input Method configuration tool to choose the Input Method to be used or disable Input Method usage on the desktop"
+msgstr "Syöttötavan asetustyökalu käytettävän syöttötavan valintaan tai syöttötapojen kytkemiseen pois päältä työpöytäkäytössä."
 
 #~ msgid "_Follow the system-wide configuration"
 #~ msgstr "_Seuraa järjestelmänlaajuisia asetuksia"
-
 #~ msgid ""
 #~ "Follow the system-wide input method configuration to determine which "
 #~ "input method should be used."
 #~ msgstr ""
 #~ "Seuraa järjestelmänlaajuisia syöttötapa-asetuksia ja valitse käytettävä "
 #~ "syöttötapa niiden perusteella."
+
