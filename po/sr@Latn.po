@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: im-chooser 0.3.2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2007-09-20 10:20+0900\n"
-"PO-Revision-Date: 2006-09-28 23:14+0100\n"
+"PO-Revision-Date: 2007-09-23 11:12-0000\n"
 "Last-Translator: Miloš Komarčević <kmilos@gmail.com>\n"
 "Language-Team: Serbian (sr) <fedora@prevod.org>\n"
 "MIME-Version: 1.0\n"
@@ -35,45 +35,41 @@ msgstr "Važeći IM nije instaliran"
 
 #: ../src/im-chooser.c:514
 msgid "_Use default Input Method for your language"
-msgstr ""
+msgstr "_Koristi podrazumevani metod unosa za moj jezik"
 
 #: ../src/im-chooser.c:516
 msgid ""
 "Your system chooses the appropriate Input Method for your language "
 "automatically from among Input Methods installed on your system."
 msgstr ""
+"Sistem samostalno bira odgovarajući metod unosa za vaš jezik između metoda "
+"unosa instaliranih na sistemu."
 
 #: ../src/im-chooser.c:519
-#, fuzzy
 msgid "Choose _specific Input Method"
-msgstr "Koristi pri_lagođeni metod unosa"
+msgstr "Koristi _određeni metod unosa"
 
 #: ../src/im-chooser.c:521
-#, fuzzy
 msgid ""
 "Use the specific Input Method that you prefer regardless what Input Method "
 "the system recommends."
 msgstr ""
-"Upotreba metoda unosa kojeg Vi želite bez obzira koji metod unosa sistem "
-"preporučuje."
+"Upotreba određenog metoda unosa kojeg želite bez obzira koji metod unosa "
+"sistem preporučuje."
 
 #: ../src/im-chooser.c:527
-#, fuzzy
 msgid "_Do not use Input Method"
-msgstr "_Nikada ne koristi metode unosa"
+msgstr "_Ne koristi metode unosa"
 
 #: ../src/im-chooser.c:529
-#, fuzzy
 msgid ""
 "Do not use Input Method no matter what language the desktop is running on."
 msgstr ""
-"Potpuno isključi metode unosa bez obzira na lokalitet u kome je radno "
-"okruženje."
+"Nemoj koristiti metode unosa bez obzira na jezik u kome je radno okruženje."
 
 #: ../src/im-chooser.c:532
-#, fuzzy
 msgid "Use legacy _Input Method"
-msgstr "_Koristi zastarele metode unosa"
+msgstr "Koristi zastarele metode _unosa"
 
 #: ../src/im-chooser.c:534
 msgid ""
@@ -86,33 +82,33 @@ msgstr ""
 #: ../src/im-chooser-simple.c:448
 #, c-format
 msgid "Use %s"
-msgstr ""
+msgstr "Koristi %s"
 
 #: ../src/im-chooser-simple.c:450
 msgid " (Legacy)"
-msgstr ""
+msgstr " (Zastarelo)"
 
 #: ../src/im-chooser-simple.c:452
 msgid " (Recommend)"
-msgstr ""
+msgstr " (Preporučeno)"
 
 #: ../src/im-chooser-simple.c:618
 msgid "_Enable input method feature"
-msgstr ""
+msgstr "_Uključi mogućnost metoda unosa"
 
 #: ../src/im-chooser-simple.c:657
-#, fuzzy
 msgid "Input Method _Preferences..."
-msgstr "Metod unosa"
+msgstr "Postavke metoda unosa"
 
 #: ../src/main.c:66
 msgid ""
 "<span weight=\"bold\" size=\"larger\">No input method is available</span>"
 msgstr ""
+"<span weight=\"bold\" size=\"larger\">Nema dostupnih metoda unosa</span>"
 
 #: ../src/main.c:69
 msgid "Please install any input methods before running if you like."
-msgstr ""
+msgstr "Instalirajte bilo koje metode unosa pre pokretanja ako želite."
 
 #: ../src/main.c:170
 msgid "IM Chooser - Input Method configuration tool"
@@ -124,12 +120,12 @@ msgstr "Od_javi se"
 
 #: ../src/xinput.c:179
 msgid "xinputrc was modified by the user"
-msgstr ""
+msgstr "xinputrc je izmenio korisnik"
 
 #. label that uses to indicate their own .xinputrc
 #: ../src/im-chooser-private.h:36
 msgid "User Specific"
-msgstr ""
+msgstr "Korisnički određeno"
 
 #: ../src/im-chooser.desktop.in.in.h:1
 msgid "Input Method"
@@ -142,13 +138,3 @@ msgid ""
 msgstr ""
 "Alat za podešavanje metoda unosa vrši izbor metoda unosa za upotrebu ili "
 "isključivanje upotrebe metoda unosa u radnom okruženju"
-
-#~ msgid "_Follow the system-wide configuration"
-#~ msgstr "Pra_ti sistemska podešavanja"
-
-#~ msgid ""
-#~ "Follow the system-wide input method configuration to determine which "
-#~ "input method should be used."
-#~ msgstr ""
-#~ "Prati sistemska podešavanja metoda unosa da bi utvrdili koji metod unosa "
-#~ "treba koristiti."
