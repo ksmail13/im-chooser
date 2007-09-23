@@ -9,9 +9,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: de\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-09-20 10:20+0900\n"
-"PO-Revision-Date: 2006-09-29 10:36+1000\n"
-"Last-Translator: PGP-KeyID: 0x037FD3CF <ttrinks@redhat.com>\n"
+"POT-Creation-Date: 2007-09-19 01:38-0700\n"
+"PO-Revision-Date: 2007-09-23 23:35+0100\n"
+"Last-Translator: Fabian Affolter <fab@fedoraproject.org>\n"
 "Language-Team:  <en@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,15 +19,13 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: KBabel 1.9.1\n"
 
-#: ../src/im-chooser.c:482 ../src/im-chooser-simple.c:625
-msgid ""
-"<small><i>Note: this change will not take effect until you next log in.</i></"
-"small>"
-msgstr ""
-"<small><i>Hinweis: Diese Änderung wird erst nach dem nächsten Login aktiv.</"
-"i></small>"
+#: ../src/im-chooser.c:482
+#: ../src/im-chooser-simple.c:625
+msgid "<small><i>Note: this change will not take effect until you next log in.</i></small>"
+msgstr "<small><i>Hinweis: Diese Änderung wird erst nach dem nächsten Login aktiv.</i></small>"
 
-#: ../src/im-chooser.c:486 ../src/im-chooser-simple.c:612
+#: ../src/im-chooser.c:486
+#: ../src/im-chooser-simple.c:612
 msgid "<b>Input Method</b>"
 msgstr "<b>Eingabemethode</b>"
 
@@ -40,37 +38,26 @@ msgid "_Use default Input Method for your language"
 msgstr ""
 
 #: ../src/im-chooser.c:516
-msgid ""
-"Your system chooses the appropriate Input Method for your language "
-"automatically from among Input Methods installed on your system."
+msgid "Your system chooses the appropriate Input Method for your language automatically from among Input Methods installed on your system."
 msgstr ""
 
 #: ../src/im-chooser.c:519
-#, fuzzy
 msgid "Choose _specific Input Method"
 msgstr "Verwende _angepasste Eingabemethode"
 
 #: ../src/im-chooser.c:521
 #, fuzzy
-msgid ""
-"Use the specific Input Method that you prefer regardless what Input Method "
-"the system recommends."
-msgstr ""
-"Eingabemethode verwenden, die Sie bevorzugen, unabhängig davon, welche "
-"Eingabemethode das System empfiehlt."
+msgid "Use the specific Input Method that you prefer regardless what Input Method the system recommends."
+msgstr "Eingabemethode verwenden, die Sie bevorzugen, unabhängig davon, welche Eingabemethode das System empfiehlt."
 
 #: ../src/im-chooser.c:527
-#, fuzzy
 msgid "_Do not use Input Method"
-msgstr "_Niemals Eingabemethoden verwenden"
+msgstr "_Verwende keine Eingabemethoden"
 
 #: ../src/im-chooser.c:529
 #, fuzzy
-msgid ""
-"Do not use Input Method no matter what language the desktop is running on."
-msgstr ""
-"Eingabemethoden komplett deaktivieren unabhängig davon, mit welcher locale "
-"der Desktop läuft."
+msgid "Do not use Input Method no matter what language the desktop is running on."
+msgstr "Eingabemethoden komplett deaktivieren unabhängig davon, mit welcher locale der Desktop läuft."
 
 #: ../src/im-chooser.c:532
 #, fuzzy
@@ -78,21 +65,17 @@ msgid "Use legacy _Input Method"
 msgstr "_Alte Eingabemethoden verwenden"
 
 #: ../src/im-chooser.c:534
-msgid ""
-"Use X Input Method anyway. In fact, which input method will be chosen for "
-"the desktop session, depends on the desktop language."
-msgstr ""
-"X-Eingabemethode dennoch verwenden. Tatsächlich hängt die Wahl der "
-"Eingabemethode für die Desktop-Session von der Desktop-Sprache ab."
+msgid "Use X Input Method anyway. In fact, which input method will be chosen for the desktop session, depends on the desktop language."
+msgstr "X-Eingabemethode dennoch verwenden. Tatsächlich hängt die Wahl der Eingabemethode für die Desktop-Session von der Desktop-Sprache ab."
 
 #: ../src/im-chooser-simple.c:448
 #, c-format
 msgid "Use %s"
-msgstr ""
+msgstr "Benutze %s"
 
 #: ../src/im-chooser-simple.c:450
 msgid " (Legacy)"
-msgstr ""
+msgstr " (Legacy)"
 
 #: ../src/im-chooser-simple.c:452
 msgid " (Recommend)"
@@ -103,13 +86,11 @@ msgid "_Enable input method feature"
 msgstr ""
 
 #: ../src/im-chooser-simple.c:657
-#, fuzzy
 msgid "Input Method _Preferences..."
-msgstr "Eingabemethode"
+msgstr "Eingabemethode _Einstellungen..."
 
 #: ../src/main.c:66
-msgid ""
-"<span weight=\"bold\" size=\"larger\">No input method is available</span>"
+msgid "<span weight=\"bold\" size=\"larger\">No input method is available</span>"
 msgstr ""
 
 #: ../src/main.c:69
@@ -124,10 +105,6 @@ msgstr "IM Chooser - Das Konfigurationstool für die Eingabemethode"
 msgid "_Log Out"
 msgstr "_Ausloggen"
 
-#: ../src/xinput.c:179
-msgid "xinputrc was modified by the user"
-msgstr ""
-
 #. label that uses to indicate their own .xinputrc
 #: ../src/im-chooser-private.h:36
 msgid "User Specific"
@@ -138,20 +115,15 @@ msgid "Input Method"
 msgstr "Eingabemethode"
 
 #: ../src/im-chooser.desktop.in.in.h:2
-msgid ""
-"Input Method configuration tool to choose the Input Method to be used or "
-"disable Input Method usage on the desktop"
-msgstr ""
-"Das Konfigurationstool für die Eingabemethode, um die zu verwendende "
-"Eingabemethode auszuwählen, oder die Verwendung von Eingabemethoden auf dem "
-"Desktop zu deaktivieren"
+msgid "Input Method configuration tool to choose the Input Method to be used or disable Input Method usage on the desktop"
+msgstr "Das Konfigurationstool für die Eingabemethode, um die zu verwendende Eingabemethode auszuwählen, oder die Verwendung von Eingabemethoden auf dem Desktop zu deaktivieren"
 
 #~ msgid "_Follow the system-wide configuration"
 #~ msgstr "_Folge der systemweiten Konfiguration"
-
 #~ msgid ""
 #~ "Follow the system-wide input method configuration to determine which "
 #~ "input method should be used."
 #~ msgstr ""
 #~ "Folge der systemweiten Eingabemethode, um festzustellen, welche "
 #~ "Eingabemethode verwendet werden soll."
+
