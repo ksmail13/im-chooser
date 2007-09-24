@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ja\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-09-19 01:37-0700\n"
-"PO-Revision-Date: 2007-09-24 10:18+1000\n"
+"POT-Creation-Date: 2007-09-23 23:44-0700\n"
+"PO-Revision-Date: 2007-09-25 09:13+1000\n"
 "Last-Translator: Noriko Mizumoto <noriko@redhat.com>\n"
 "Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
@@ -41,7 +41,9 @@ msgstr "使用している言語にデフォルトの入力メソッドを使用
 msgid ""
 "Your system chooses the appropriate Input Method for your language "
 "automatically from among Input Methods installed on your system."
-msgstr "ご使用のシステムにインストールされている入力メソッドの中からご使用の言語に適切な入力メソッドを自動的に選択します。"
+msgstr ""
+"ご使用のシステムにインストールされている入力メソッドの中からご使用の言語に適"
+"切な入力メソッドを自動的に選択します。"
 
 #: ../src/im-chooser.c:519
 msgid "Choose _specific Input Method"
@@ -51,7 +53,9 @@ msgstr "特定の入力メソッドを選択する(_S)"
 msgid ""
 "Use the specific Input Method that you prefer regardless what Input Method "
 "the system recommends."
-msgstr "システムが推奨する入力メソッドに関係なく選択される特定の入力メソッドを使用します。"
+msgstr ""
+"システムが推奨する入力メソッドに関係なく選択される特定の入力メソッドを使用し"
+"ます。"
 
 #: ../src/im-chooser.c:527
 msgid "_Do not use Input Method"
@@ -70,8 +74,8 @@ msgid ""
 "Use X Input Method anyway. In fact, which input method will be chosen for "
 "the desktop session, depends on the desktop language."
 msgstr ""
-"X 入力メソッドを使います。 実際には、 どの入力メソッドが選ばれるかはデスクトッ"
-"プの言語に依存します。"
+"X 入力メソッドを使います。 実際には、 どの入力メソッドが選ばれるかはデスク"
+"トップの言語に依存します。"
 
 #: ../src/im-chooser-simple.c:448
 #, c-format
@@ -96,7 +100,9 @@ msgstr "入力メソッドの個人設定(_P)..."
 
 #: ../src/main.c:66
 msgid "<span weight=\"bold\" size=\"larger\">No input method is available</span>"
-msgstr "<span weight=\"bold\" size=\"larger\">使用できる入力メソッドがありません</span>"
+msgstr ""
+"<span weight=\"bold\" size=\"larger\">使用できる入力メソッドがありません</"
+"span>"
 
 #: ../src/main.c:69
 msgid "Please install any input methods before running if you like."
@@ -109,6 +115,10 @@ msgstr "IM Chooser - 入力メソッド設定ツール"
 #: ../src/main.c:178
 msgid "_Log Out"
 msgstr "ログアウト(_L)"
+
+#: ../src/xinput.c:179
+msgid "xinputrc was modified by the user"
+msgstr "ユーザーにより xinputrc が変更されました"
 
 #. label that uses to indicate their own .xinputrc
 #: ../src/im-chooser-private.h:36
@@ -123,5 +133,7 @@ msgstr "入力メソッド"
 msgid ""
 "Input Method configuration tool to choose the Input Method to be used or "
 "disable Input Method usage on the desktop"
-msgstr "使用する入力メソッドを選択する、 またはデスクトップで入力メソッドの使用を無効にするための入力メソッド設定ツールです。"
+msgstr ""
+"使用する入力メソッドを選択する、 またはデスクトップで入力メソッドの使用を無効"
+"にするための入力メソッド設定ツールです。"
 
