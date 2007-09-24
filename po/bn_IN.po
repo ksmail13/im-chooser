@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: bn_IN\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-09-19 01:37-0700\n"
-"PO-Revision-Date: 2007-09-24 11:07+0530\n"
+"POT-Creation-Date: 2007-09-23 23:45-0700\n"
+"PO-Revision-Date: 2007-09-24 12:48+0530\n"
 "Last-Translator: Runa Bhattacharjee <runabh@gmail.com>\n"
 "Language-Team: Bengali INDIA\n"
 "MIME-Version: 1.0\n"
@@ -45,7 +45,9 @@ msgstr "আপনার ভাষার ক্ষেত্রে প্রযো
 msgid ""
 "Your system chooses the appropriate Input Method for your language "
 "automatically from among Input Methods installed on your system."
-msgstr "সিস্টেমে ইনস্টল করা ইনপুট পদ্ধতিগুলি থেকে, আপনার ভাষার ক্ষেত্রে প্রযোজ্য ইনপুট পদ্ধতিটি সিস্টেম দ্বারা স্বয়ংক্রিয়রূপে নির্বাচন করা হয়।"
+msgstr ""
+"সিস্টেমে ইনস্টল করা ইনপুট পদ্ধতিগুলি থেকে, আপনার ভাষার ক্ষেত্রে প্রযোজ্য ইনপুট পদ্ধতিটি "
+"সিস্টেম দ্বারা স্বয়ংক্রিয়রূপে নির্বাচন করা হয়।"
 
 #: ../src/im-chooser.c:519
 msgid "Choose _specific Input Method"
@@ -113,6 +115,10 @@ msgstr "IM Chooser - ইনপুট পদ্ধতি কনফিগার �
 #: ../src/main.c:178
 msgid "_Log Out"
 msgstr "লগ আউট করুন (_L)"
+
+#: ../src/xinput.c:179
+msgid "xinputrc was modified by the user"
+msgstr "ব্যবহারকারী দ্বারা xinputrc পরিবর্তিত হয়েছে"
 
 #. label that uses to indicate their own .xinputrc
 #: ../src/im-chooser-private.h:36
