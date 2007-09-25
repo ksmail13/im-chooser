@@ -1,4 +1,4 @@
-# translation of im-chooser.trunk.po to Brazilian Portuguese
+# translation of pt_BR.po to Brazilian Portuguese
 # Portuguese translations for im-chooser package.
 # Copyright (C) 2006 Red Hat, Inc. All rights reserved.
 # This file is distributed under the same license as the im-chooser package.
@@ -12,8 +12,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pt_BR\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-09-19 01:38-0700\n"
-"PO-Revision-Date: 2007-09-21 09:36-0300\n"
+"POT-Creation-Date: 2007-09-23 23:44-0700\n"
+"PO-Revision-Date: 2007-09-25 09:36-0300\n"
 "Last-Translator: Diego Búrigo Zacarão <diegobz@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <fedora-docs-br@redhat.com>\n"
 "MIME-Version: 1.0\n"
@@ -36,7 +36,7 @@ msgstr "<b>Método de Entrada</b>"
 
 #: ../src/im-chooser.c:496
 msgid "No valid IM installed"
-msgstr "Nenhum Método de Entrada válido instalado"
+msgstr "Nenhum método de entrada válido instalado"
 
 #: ../src/im-chooser.c:514
 msgid "_Use default Input Method for your language"
@@ -100,7 +100,7 @@ msgstr "Habilitar a característica de método de _entrada"
 
 #: ../src/im-chooser-simple.c:657
 msgid "Input Method _Preferences..."
-msgstr "_Preferências do Método de Entrada"
+msgstr "_Preferências do Método de Entrada..."
 
 #: ../src/main.c:66
 msgid "<span weight=\"bold\" size=\"larger\">No input method is available</span>"
@@ -117,6 +117,10 @@ msgstr "IM Chooser - Ferramenta de configuração do Método de Entrada"
 #: ../src/main.c:178
 msgid "_Log Out"
 msgstr "_Logoff"
+
+#: ../src/xinput.c:179
+msgid "xinputrc was modified by the user"
+msgstr "o xinputrc foi modificado pelo usuário"
 
 #. label that uses to indicate their own .xinputrc
 #: ../src/im-chooser-private.h:36
