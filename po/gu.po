@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: im-chooser.trunk.gu\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-09-23 23:44-0700\n"
-"PO-Revision-Date: 2007-09-24 15:15+0530\n"
+"POT-Creation-Date: 2007-09-23 23:45-0700\n"
+"PO-Revision-Date: 2007-09-26 12:05+0530\n"
 "Last-Translator: Ankit Patel <ankit@redhat.com>\n"
 "Language-Team: Gujarati <fedora-trans-gu@redhat.com>\n"
 "MIME-Version: 1.0\n"
@@ -120,7 +120,7 @@ msgstr "બહાર નીકળો (_L)"
 
 #: ../src/xinput.c:179
 msgid "xinputrc was modified by the user"
-msgstr "xinputrc વપરાશકર્તા દ્વારા સુધારાઈ હતી"
+msgstr "xinputrc એ વપરાશકર્તા દ્વારા સુધારાઈ હતી"
 
 #. label that uses to indicate their own .xinputrc
 #: ../src/im-chooser-private.h:36
