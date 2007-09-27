@@ -7,27 +7,26 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: es\n"
+"Project-Id-Version: im-chooser\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-09-20 10:20+0900\n"
-"PO-Revision-Date: 2006-09-29 10:21+1000\n"
-"Last-Translator: Manuel Ospina <mospina@redhat.com>\n"
-"Language-Team: Spanish <en@li.org>\n"
+"POT-Creation-Date: 2007-09-23 23:44-0700\n"
+"PO-Revision-Date: 2007-09-27 10:22-0300\n"
+"Last-Translator: Domingo Becker <domingobecker@gmail.com>\n"
+"Language-Team: Fedora Spanish <fedora-trans-es@redhat.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: KBabel 1.9.1\n"
+"X-Poedit-Language: Spanish\n"
 
-#: ../src/im-chooser.c:482 ../src/im-chooser-simple.c:625
-msgid ""
-"<small><i>Note: this change will not take effect until you next log in.</i></"
-"small>"
-msgstr ""
-"<small><i>Nota: este cambio no tendrá efecto hasta que no reinicie la sesión."
-"</i></small>"
+#: ../src/im-chooser.c:482
+#: ../src/im-chooser-simple.c:625
+msgid "<small><i>Note: this change will not take effect until you next log in.</i></small>"
+msgstr "<small><i>Nota: este cambio no tendrá efecto hasta que no reinicie la sesión.</i></small>"
 
-#: ../src/im-chooser.c:486 ../src/im-chooser-simple.c:612
+#: ../src/im-chooser.c:486
+#: ../src/im-chooser-simple.c:612
 msgid "<b>Input Method</b>"
 msgstr "<b>Método de Entrada</b>"
 
@@ -37,85 +36,64 @@ msgstr "No hay instalado un ME válido"
 
 #: ../src/im-chooser.c:514
 msgid "_Use default Input Method for your language"
-msgstr ""
+msgstr "_Usar el Método de Entrada predeterminado para su idioma"
 
 #: ../src/im-chooser.c:516
-msgid ""
-"Your system chooses the appropriate Input Method for your language "
-"automatically from among Input Methods installed on your system."
-msgstr ""
+msgid "Your system chooses the appropriate Input Method for your language automatically from among Input Methods installed on your system."
+msgstr "Su sistema elige el Método de Entrada apropiado para su idioma automáticamente de entre los Métodos de Entrada instalados en su sistema."
 
 #: ../src/im-chooser.c:519
-#, fuzzy
 msgid "Choose _specific Input Method"
-msgstr "U_sar método de entrada personalizado"
+msgstr "Elegir Método de Entrada e_specífico"
 
 #: ../src/im-chooser.c:521
-#, fuzzy
-msgid ""
-"Use the specific Input Method that you prefer regardless what Input Method "
-"the system recommends."
-msgstr ""
-"Usar el método de entrada que Ud. prefiere sin importar el método de entrada "
-"recomendado por el sistema."
+msgid "Use the specific Input Method that you prefer regardless what Input Method the system recommends."
+msgstr "Usar el método de entrada que Ud. prefiere sin importar el Método de Entrada recomendado por el sistema."
 
 #: ../src/im-chooser.c:527
-#, fuzzy
 msgid "_Do not use Input Method"
-msgstr "_Nunca usar métodos de entrada"
+msgstr "_Nunca usar Métodos de Entrada"
 
 #: ../src/im-chooser.c:529
-#, fuzzy
-msgid ""
-"Do not use Input Method no matter what language the desktop is running on."
-msgstr ""
-"Deshabilitar completamente los métodos de entrada, sin importar la "
-"configuración regional del escritorio."
+msgid "Do not use Input Method no matter what language the desktop is running on."
+msgstr "Deshabilitar completamente los Métodos de Entrada, sin importar la configuración regional del escritorio."
 
 #: ../src/im-chooser.c:532
-#, fuzzy
 msgid "Use legacy _Input Method"
-msgstr "_Usar métodos de entrada legados"
+msgstr "_Usar Métodos de Entrada legados"
 
 #: ../src/im-chooser.c:534
-msgid ""
-"Use X Input Method anyway. In fact, which input method will be chosen for "
-"the desktop session, depends on the desktop language."
-msgstr ""
-"Usar el Método de Entrada X de todas formas. En realidad, el método de "
-"entrada que se usará para la sesión de escritorio depende del idioma del "
-"escritorio."
+msgid "Use X Input Method anyway. In fact, which input method will be chosen for the desktop session, depends on the desktop language."
+msgstr "Usar el Método de Entrada X de todas formas. En realidad, el método de entrada que se usará para la sesión de escritorio depende del idioma del escritorio."
 
 #: ../src/im-chooser-simple.c:448
 #, c-format
 msgid "Use %s"
-msgstr ""
+msgstr "Use %s"
 
 #: ../src/im-chooser-simple.c:450
 msgid " (Legacy)"
-msgstr ""
+msgstr " (Legado)"
 
 #: ../src/im-chooser-simple.c:452
 msgid " (Recommend)"
-msgstr ""
+msgstr " (Recomendado)"
 
 #: ../src/im-chooser-simple.c:618
 msgid "_Enable input method feature"
-msgstr ""
+msgstr "_Habilitar la característica de método de entrada"
 
 #: ../src/im-chooser-simple.c:657
-#, fuzzy
 msgid "Input Method _Preferences..."
-msgstr "Método de Entrada"
+msgstr "_Preferencias del Método de Entrada..."
 
 #: ../src/main.c:66
-msgid ""
-"<span weight=\"bold\" size=\"larger\">No input method is available</span>"
-msgstr ""
+msgid "<span weight=\"bold\" size=\"larger\">No input method is available</span>"
+msgstr "<span weight=\"bold\" size=\"larger\">No hay disponible ningún métido de entrada</span>"
 
 #: ../src/main.c:69
 msgid "Please install any input methods before running if you like."
-msgstr ""
+msgstr "Por favor, instale cualquier método de entrada antes de ejecutarlo, si lo desea."
 
 #: ../src/main.c:170
 msgid "IM Chooser - Input Method configuration tool"
@@ -127,31 +105,27 @@ msgstr "Sa_lir"
 
 #: ../src/xinput.c:179
 msgid "xinputrc was modified by the user"
-msgstr ""
+msgstr "xinputrc fue modificado por el usuario"
 
 #. label that uses to indicate their own .xinputrc
 #: ../src/im-chooser-private.h:36
 msgid "User Specific"
-msgstr ""
+msgstr "Específico al Usuario"
 
 #: ../src/im-chooser.desktop.in.in.h:1
 msgid "Input Method"
 msgstr "Método de Entrada"
 
 #: ../src/im-chooser.desktop.in.in.h:2
-msgid ""
-"Input Method configuration tool to choose the Input Method to be used or "
-"disable Input Method usage on the desktop"
-msgstr ""
-"Herramienta de configuración del Método de Entrada para elección del mismo o "
-"para deshabilitar el uso de métodos de entrada en el escritorio"
+msgid "Input Method configuration tool to choose the Input Method to be used or disable Input Method usage on the desktop"
+msgstr "Herramienta de configuración del Método de Entrada para elección del mismo o para deshabilitar el uso de métodos de entrada en el escritorio"
 
 #~ msgid "_Follow the system-wide configuration"
 #~ msgstr "Seguir la con_figuración de todo el sistema"
-
 #~ msgid ""
 #~ "Follow the system-wide input method configuration to determine which "
 #~ "input method should be used."
 #~ msgstr ""
 #~ "Seguir la configuración del método de entrada para todo el sistema para "
 #~ "determinar qué método de entrada debe ser usado."
+
