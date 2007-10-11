@@ -224,8 +224,7 @@ im_chooser_simple_instance_init(IMChooserSimple *im)
 			gchar *name = g_path_get_basename(l->data), *key;
 			size_t suffixlen = strlen(XINPUT_SUFFIX), len;
 
-			if (name != NULL &&
-			    GPOINTER_TO_UINT (xinput_data_get_value(xinput, XINPUT_VALUE_IGNORE_ME)) != TRUE) {
+			if (name != NULL) {
 				len = strlen(name);
 				if (len > suffixlen) {
 					key = xinput_data_get_short_description(xinput);
@@ -272,7 +271,7 @@ _im_chooser_simple_get_xinput(IMChooserSimple *im,
 						g_warning("Failed to get a short description for `%s'", origname);
 						goto end;
 					}
-					if (strcmp(key, IM_NONE_NAME) == 0)
+					if (GPOINTER_TO_UINT (xinput_data_get_value(xinput, XINPUT_VALUE_IGNORE_ME)) == TRUE)
 						goto end;
 					if ((retval = g_hash_table_lookup(im->im_table, key)) == NULL) {
 						g_warning("System Default xinputrc points to the unknown xinput script.");
@@ -319,17 +318,14 @@ _im_chooser_simple_get_system_default_im(IMChooserSimple *im)
 {
 	XInputData *xinput;
 	gchar *filename = g_build_filename(XINPUTRC_PATH, IM_GLOBAL_XINPUT_CONF, NULL);
-	gchar *name;
 
 	g_return_val_if_fail (filename != NULL, NULL);
 
 	xinput = _im_chooser_simple_get_xinput(im, filename);
 	g_free(filename);
-	if (xinput) {
-		name = xinput_data_get_short_description(xinput);
-		if (name && strcmp(name, IM_NONE_NAME) == 0)
-			return NULL;
-	}
+	if (xinput != NULL &&
+	    GPOINTER_TO_UINT (xinput_data_get_value(xinput, XINPUT_VALUE_IGNORE_ME)) == TRUE)
+		return NULL;
 
 	return xinput;
 }
@@ -338,7 +334,7 @@ static XInputData *
 _im_chooser_simple_get_current_im(IMChooserSimple *im)
 {
 	XInputData *retval;
-	gchar *filename, *name;
+	gchar *filename;
 	const gchar *home;
 
 	home = g_get_home_dir();
@@ -352,11 +348,9 @@ _im_chooser_simple_get_current_im(IMChooserSimple *im)
 		retval = _im_chooser_simple_get_system_default_im(im);
 	if (filename)
 		g_free(filename);
-	if (retval) {
-		name = xinput_data_get_short_description(retval);
-		if (name && strcmp(name, IM_NONE_NAME) == 0)
-			return NULL;
-	}
+	if (retval != NULL &&
+	    GPOINTER_TO_UINT (xinput_data_get_value(retval, XINPUT_VALUE_IGNORE_ME)) == TRUE)
+		return NULL;
 
 	return retval;
 }
@@ -395,8 +389,12 @@ _im_chooser_simple_set_im_to_list(gpointer key,
 	IMChooserSimpleHashData *hdata = data;
 	gchar *name, *gtkimm, *qtimm;
 	XInputData *xinput = value;
-	IMChooserSimpleListData *ldata = g_new0(IMChooserSimpleListData, 1);
+	IMChooserSimpleListData *ldata;
 
+	if (xinput &&
+	    GPOINTER_TO_UINT (xinput_data_get_value(xinput, XINPUT_VALUE_IGNORE_ME)) == TRUE)
+		return;
+	ldata = g_new0(IMChooserSimpleListData, 1);
 	ldata->data = xinput;
 	name = xinput_data_get_short_description(xinput);
 	ldata->name = name;

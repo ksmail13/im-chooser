@@ -1,3 +1,13 @@
+2007-10-11  Akira TAGOH  <tagoh@redhat.com>
+
+	* src/im-chooser-simple.c (im_chooser_simple_instance_init): register
+	the config file even if it has an IM_CHOOSER_IGNORE_ME flag.
+	(_im_chooser_simple_get_xinput): check a XINPUT_VALUE_IGNORE_ME flag
+	instead of looking at the hard-coded name.
+	(_im_chooser_simple_get_system_default_im): likewise.
+	(_im_chooser_simple_get_current_im): likewise.
+	(_im_chooser_simple_set_im_to_list): likewise.
+
 2007-09-18  Akira TAGOH  <tagoh@redhat.com>
 
 	* configure.ac: bump to 0.5.2.
