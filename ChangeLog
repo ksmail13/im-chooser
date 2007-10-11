@@ -1,5 +1,7 @@
 2007-10-11  Akira TAGOH  <tagoh@redhat.com>
 
+	* configure.ac: bump to 0.5.3.
+
 	* src/im-chooser-simple.c (im_chooser_simple_instance_init): register
 	the config file even if it has an IM_CHOOSER_IGNORE_ME flag.
 	(_im_chooser_simple_get_xinput): check a XINPUT_VALUE_IGNORE_ME flag
