@@ -1,3 +1,7 @@
+2007-10-15  Akira TAGOH  <tagoh@redhat.com>
+
+	* configure.ac: remove the obsolete Norwegian translation.
+
 2007-10-11  Akira TAGOH  <tagoh@redhat.com>
 
 	* configure.ac: bump to 0.5.3.
