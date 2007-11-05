@@ -7,15 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: im-chooser\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-09-20 10:20+0900\n"
-"PO-Revision-Date: 2007-01-23 14:48+0900\n"
+"POT-Creation-Date: 2007-10-19 01:21-0700\n"
+"PO-Revision-Date: 2007-11-06 14:48+0900\n"
 "Last-Translator: Maxim Dziumanenko <dziumanenko@gmail.com>\n"
 "Language-Team: Ukrainian <uk@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../src/im-chooser.c:482 ../src/im-chooser-simple.c:625
+#: ../src/im-chooser.c:482 ../src/im-chooser-simple.c:623
 msgid ""
 "<small><i>Note: this change will not take effect until you next log in.</i></"
 "small>"
@@ -23,31 +23,31 @@ msgstr ""
 "<small><i>Зауваження: ця зміна не набере сили до наступного входу.</i></"
 "small>"
 
-#: ../src/im-chooser.c:486 ../src/im-chooser-simple.c:612
+#: ../src/im-chooser.c:486 ../src/im-chooser-simple.c:610
 msgid "<b>Input Method</b>"
 msgstr "<b>Метод вводу</b>"
 
 #: ../src/im-chooser.c:496
 msgid "No valid IM installed"
-msgstr "не встановлено метод вводу"
+msgstr "Не встановлено метод вводу"
 
 #: ../src/im-chooser.c:514
 msgid "_Use default Input Method for your language"
-msgstr ""
+msgstr "_Типовий метод вводу для вашої мови"
 
 #: ../src/im-chooser.c:516
 msgid ""
 "Your system chooses the appropriate Input Method for your language "
 "automatically from among Input Methods installed on your system."
 msgstr ""
+"Система автоматично обирає відповідний метод вводу для вашої мови "
+"серед встановлених у системі."
 
 #: ../src/im-chooser.c:519
-#, fuzzy
 msgid "Choose _specific Input Method"
 msgstr "Метод вводу _визначається користувачем"
 
 #: ../src/im-chooser.c:521
-#, fuzzy
 msgid ""
 "Use the specific Input Method that you prefer regardless what Input Method "
 "the system recommends."
@@ -56,20 +56,17 @@ msgstr ""
 "системою."
 
 #: ../src/im-chooser.c:527
-#, fuzzy
 msgid "_Do not use Input Method"
 msgstr "_Не використовувати методи вводу"
 
 #: ../src/im-chooser.c:529
-#, fuzzy
 msgid ""
 "Do not use Input Method no matter what language the desktop is running on."
-msgstr "Вимкнути методи вводу незалежно від мови системи."
+msgstr "Вимкнути методи вводу незалежно від мови робочого середовища."
 
 #: ../src/im-chooser.c:532
-#, fuzzy
 msgid "Use legacy _Input Method"
-msgstr "Використовувати _стандартні методи вводу"
+msgstr "Використовувати с_тарі методи вводу"
 
 #: ../src/im-chooser.c:534
 msgid ""
@@ -79,36 +76,36 @@ msgstr ""
 "Використовувати метод вводу X. Іншими словами, метод вводу буде залежний від "
 "мови системи."
 
-#: ../src/im-chooser-simple.c:448
+#: ../src/im-chooser-simple.c:446
 #, c-format
 msgid "Use %s"
-msgstr ""
+msgstr "Використовувати %s"
+
+#: ../src/im-chooser-simple.c:448
+msgid " (Legacy)"
+msgstr " (Застаріло)"
 
 #: ../src/im-chooser-simple.c:450
-msgid " (Legacy)"
-msgstr ""
-
-#: ../src/im-chooser-simple.c:452
 msgid " (Recommend)"
-msgstr ""
+msgstr " (Рекомендується)"
 
-#: ../src/im-chooser-simple.c:618
+#: ../src/im-chooser-simple.c:616
 msgid "_Enable input method feature"
-msgstr ""
+msgstr "_Увімкнути методи вводу"
 
-#: ../src/im-chooser-simple.c:657
-#, fuzzy
+#: ../src/im-chooser-simple.c:655
 msgid "Input Method _Preferences..."
-msgstr "Метод вводу"
+msgstr "_Параметри методів вводу..."
 
 #: ../src/main.c:66
 msgid ""
 "<span weight=\"bold\" size=\"larger\">No input method is available</span>"
 msgstr ""
+"<span weight=\"bold\" size=\"larger\">Немає доступних методів вводу</span>"
 
 #: ../src/main.c:69
 msgid "Please install any input methods before running if you like."
-msgstr ""
+msgstr "Встановіть бажані методи воду перед їх використанням."
 
 #: ../src/main.c:170
 msgid "IM Chooser - Input Method configuration tool"
@@ -120,12 +117,12 @@ msgstr "Ви_йти"
 
 #: ../src/xinput.c:179
 msgid "xinputrc was modified by the user"
-msgstr ""
+msgstr "xinputrc змінено користувачем"
 
 #. label that uses to indicate their own .xinputrc
 #: ../src/im-chooser-private.h:36
 msgid "User Specific"
-msgstr ""
+msgstr "Специфічно для користувача"
 
 #: ../src/im-chooser.desktop.in.in.h:1
 msgid "Input Method"
@@ -139,12 +136,4 @@ msgstr ""
 "Програма налаштовування методу вводу дозволяє обрати метод вводу або взагалі "
 "вимкнути використання методу вводу."
 
-#~ msgid "_Follow the system-wide configuration"
-#~ msgstr "_Прийняти загальносистемну конфігурацію"
 
-#~ msgid ""
-#~ "Follow the system-wide input method configuration to determine which "
-#~ "input method should be used."
-#~ msgstr ""
-#~ "Прийняти системну конфігурацію метода вводу для вказування методу вводу, "
-#~ "що використовується."
