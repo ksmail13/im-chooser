@@ -1,5 +1,7 @@
 2007-11-16  Akira TAGOH  <tagoh@redhat.com>
 
+	* src/im-chooser-simple.c: Improve English label. (RH#302491)
+
 	* src/im-chooser.desktop.in.in: Update a bit for GNOME HIG compliant.
 	(RH#330431)
 

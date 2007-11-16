@@ -445,9 +445,9 @@ _im_chooser_simple_update_im_list(IMChooserSimple *im)
 		g_string_append(string, "<i>");
 		g_string_append_printf(string, _("Use %s"), ldata->name);
 		if (ldata->is_legacy && !ldata->is_unknown)
-			g_string_append(string, _(" (Legacy)"));
+			g_string_append(string, _(" (legacy)"));
 		if (ldata->is_recommended && !ldata->is_unknown) {
-			g_string_append(string, _(" (Recommend)"));
+			g_string_append(string, _(" (recommended)"));
 			if (im->current_im == NULL && im->default_im == ldata->data)
 				cur_iter = gtk_tree_iter_copy(&iter);
 		}
