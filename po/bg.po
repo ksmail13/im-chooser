@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: im-chooser\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-09-20 10:20+0900\n"
+"POT-Creation-Date: 2007-11-16 18:20+0900\n"
 "PO-Revision-Date: 2007-09-24 14:15+0300\n"
 "Last-Translator: Doncho N. Gunchev <gunchev@gmail.com>\n"
 "Language-Team: Bulgarian <dict@fsa-bg.org>\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.11.4\n"
 
-#: ../src/im-chooser.c:482 ../src/im-chooser-simple.c:625
+#: ../src/im-chooser.c:482 ../src/im-chooser-simple.c:623
 msgid ""
 "<small><i>Note: this change will not take effect until you next log in.</i></"
 "small>"
@@ -27,7 +27,7 @@ msgstr ""
 "<small><i>Забележка: тази промяна няма да влезе в сила до следващото Ви "
 "влизане в системата.</i></small>"
 
-#: ../src/im-chooser.c:486 ../src/im-chooser-simple.c:612
+#: ../src/im-chooser.c:486 ../src/im-chooser-simple.c:610
 msgid "<b>Input Method</b>"
 msgstr "<b>Метод за вход</b>"
 
@@ -44,8 +44,8 @@ msgid ""
 "Your system chooses the appropriate Input Method for your language "
 "automatically from among Input Methods installed on your system."
 msgstr ""
-"Вашата система избира подходящ метод за вход за вашия език "
-"автоматично от инсталираните в системата входни методи."
+"Вашата система избира подходящ метод за вход за вашия език автоматично от "
+"инсталираните в системата входни методи."
 
 #: ../src/im-chooser.c:519
 msgid "Choose _specific Input Method"
@@ -64,7 +64,8 @@ msgid "_Do not use Input Method"
 msgstr "_Да не се ползва метод за вход"
 
 #: ../src/im-chooser.c:529
-msgid "Do not use Input Method no matter what language the desktop is running on."
+msgid ""
+"Do not use Input Method no matter what language the desktop is running on."
 msgstr "Да не се ползва метод за вход без значение какъв език ползва средата."
 
 #: ../src/im-chooser.c:532
@@ -76,33 +77,37 @@ msgid ""
 "Use X Input Method anyway. In fact, which input method will be chosen for "
 "the desktop session, depends on the desktop language."
 msgstr ""
-"Ползване на метода за вход на X. В действителност, кой метод за вход "
-"ще се ползва в сесията на средата зависи изцяло от езика на средата."
+"Ползване на метода за вход на X. В действителност, кой метод за вход ще се "
+"ползва в сесията на средата зависи изцяло от езика на средата."
 
-#: ../src/im-chooser-simple.c:448
+#: ../src/im-chooser-simple.c:446
 #, c-format
 msgid "Use %s"
 msgstr "Ползване на %s"
 
-#: ../src/im-chooser-simple.c:450
-msgid " (Legacy)"
+#: ../src/im-chooser-simple.c:448
+#, fuzzy
+msgid " (legacy)"
 msgstr " (Остарял)"
 
-#: ../src/im-chooser-simple.c:452
-msgid " (Recommend)"
+#: ../src/im-chooser-simple.c:450
+#, fuzzy
+msgid " (recommended)"
 msgstr " (Препоръчителен)"
 
-#: ../src/im-chooser-simple.c:618
+#: ../src/im-chooser-simple.c:616
 msgid "_Enable input method feature"
 msgstr "_Включване поддръжката на метод за вход"
 
-#: ../src/im-chooser-simple.c:657
+#: ../src/im-chooser-simple.c:655
 msgid "Input Method _Preferences..."
 msgstr "На_стройки на метода за вход..."
 
 #: ../src/main.c:66
-msgid "<span weight=\"bold\" size=\"larger\">No input method is available</span>"
-msgstr "<span weight=\"bold\" size=\"larger\">Няма налични методи за вход</span>"
+msgid ""
+"<span weight=\"bold\" size=\"larger\">No input method is available</span>"
+msgstr ""
+"<span weight=\"bold\" size=\"larger\">Няма налични методи за вход</span>"
 
 #: ../src/main.c:69
 msgid "Please install any input methods before running if you like."
@@ -126,14 +131,14 @@ msgid "User Specific"
 msgstr "Персонални"
 
 #: ../src/im-chooser.desktop.in.in.h:1
-msgid "Input Method"
-msgstr "Метод за вход"
+#, fuzzy
+msgid ""
+"Choose the input method to be used or disable the input method usage on the "
+"desktop"
+msgstr ""
+"Инструмента за настройка ползвания метода за вход или забрана на методите за "
+"вход в работната среда"
 
 #: ../src/im-chooser.desktop.in.in.h:2
-msgid ""
-"Input Method configuration tool to choose the Input Method to be used or "
-"disable Input Method usage on the desktop"
-msgstr ""
-"Инструмента за настройка ползвания метода за вход или забрана на "
-"методите за вход в работната среда"
-
+msgid "Input Method"
+msgstr "Метод за вход"

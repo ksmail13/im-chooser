@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Desktop Input Method configuration tool\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-09-23 23:45-0700\n"
+"POT-Creation-Date: 2007-11-16 18:20+0900\n"
 "PO-Revision-Date: 2007-09-24 16:25+0100\n"
 "Last-Translator: Severin Heiniger <severinheiniger@gmail.com>\n"
 "Language-Team: German Translation team <fedora-trans-de@redhat.com>\n"
@@ -22,13 +22,15 @@ msgstr ""
 "X-Poedit-Language: German\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
-#: ../src/im-chooser.c:482
-#: ../src/im-chooser-simple.c:625
-msgid "<small><i>Note: this change will not take effect until you next log in.</i></small>"
-msgstr "<small><i>Hinweis: Diese Änderung wird erst aktiv, wenn Sie sich das nächste Mal anmelden.</i></small>"
+#: ../src/im-chooser.c:482 ../src/im-chooser-simple.c:623
+msgid ""
+"<small><i>Note: this change will not take effect until you next log in.</i></"
+"small>"
+msgstr ""
+"<small><i>Hinweis: Diese Änderung wird erst aktiv, wenn Sie sich das nächste "
+"Mal anmelden.</i></small>"
 
-#: ../src/im-chooser.c:486
-#: ../src/im-chooser-simple.c:612
+#: ../src/im-chooser.c:486 ../src/im-chooser-simple.c:610
 msgid "<b>Input Method</b>"
 msgstr "<b>Eingabemethode</b>"
 
@@ -41,62 +43,83 @@ msgid "_Use default Input Method for your language"
 msgstr "_Standardmäßige Eingabemethode für Ihre Sprache verwenden"
 
 #: ../src/im-chooser.c:516
-msgid "Your system chooses the appropriate Input Method for your language automatically from among Input Methods installed on your system."
-msgstr "Ihr System wählt automatisch die passende Eingabemethode für Ihre Sprache aus den auf Ihrem System installierten Eingabemethoden."
+msgid ""
+"Your system chooses the appropriate Input Method for your language "
+"automatically from among Input Methods installed on your system."
+msgstr ""
+"Ihr System wählt automatisch die passende Eingabemethode für Ihre Sprache "
+"aus den auf Ihrem System installierten Eingabemethoden."
 
 #: ../src/im-chooser.c:519
 msgid "Choose _specific Input Method"
 msgstr "_Bestimmte Eingabemethode auswählen"
 
 #: ../src/im-chooser.c:521
-msgid "Use the specific Input Method that you prefer regardless what Input Method the system recommends."
-msgstr "Verwenden Sie Ihre bevorzugte Eingabemethode, unabhängig davon, welche Eingabemethode das System empfiehlt."
+msgid ""
+"Use the specific Input Method that you prefer regardless what Input Method "
+"the system recommends."
+msgstr ""
+"Verwenden Sie Ihre bevorzugte Eingabemethode, unabhängig davon, welche "
+"Eingabemethode das System empfiehlt."
 
 #: ../src/im-chooser.c:527
 msgid "_Do not use Input Method"
 msgstr "_Keine Eingabemethode verwenden"
 
 #: ../src/im-chooser.c:529
-msgid "Do not use Input Method no matter what language the desktop is running on."
-msgstr "Eingabemethoden komplett deaktivieren, unabhängig davon, mit welcher Sprache der Desktop läuft."
+msgid ""
+"Do not use Input Method no matter what language the desktop is running on."
+msgstr ""
+"Eingabemethoden komplett deaktivieren, unabhängig davon, mit welcher Sprache "
+"der Desktop läuft."
 
 #: ../src/im-chooser.c:532
 msgid "Use legacy _Input Method"
 msgstr "_Alte Eingabemethode verwenden"
 
 #: ../src/im-chooser.c:534
-msgid "Use X Input Method anyway. In fact, which input method will be chosen for the desktop session, depends on the desktop language."
-msgstr "X-Eingabemethode trotzdem verwenden. Eigentlich hängt die Wahl der Eingabemethode für die Desktop-Session von der Desktop-Sprache ab."
+msgid ""
+"Use X Input Method anyway. In fact, which input method will be chosen for "
+"the desktop session, depends on the desktop language."
+msgstr ""
+"X-Eingabemethode trotzdem verwenden. Eigentlich hängt die Wahl der "
+"Eingabemethode für die Desktop-Session von der Desktop-Sprache ab."
 
-#: ../src/im-chooser-simple.c:448
+#: ../src/im-chooser-simple.c:446
 #, c-format
 msgid "Use %s"
 msgstr "%s verwenden"
 
-#: ../src/im-chooser-simple.c:450
-msgid " (Legacy)"
+#: ../src/im-chooser-simple.c:448
+#, fuzzy
+msgid " (legacy)"
 msgstr " (veraltet)"
 
-#: ../src/im-chooser-simple.c:452
-msgid " (Recommend)"
+#: ../src/im-chooser-simple.c:450
+#, fuzzy
+msgid " (recommended)"
 msgstr " (empfohlen)"
 
-#: ../src/im-chooser-simple.c:618
+#: ../src/im-chooser-simple.c:616
 msgid "_Enable input method feature"
 msgstr "Eingabemethoden-_Funktion aktivieren"
 
-#: ../src/im-chooser-simple.c:657
+#: ../src/im-chooser-simple.c:655
 msgid "Input Method _Preferences..."
 msgstr "_Einstellungen zur Eingabemethode..."
 
 #: ../src/main.c:66
-msgid "<span weight=\"bold\" size=\"larger\">No input method is available</span>"
-msgstr "<span weight=\"bold\" size=\"larger\">Keine Eingabemethoden verfügbar</span>"
+msgid ""
+"<span weight=\"bold\" size=\"larger\">No input method is available</span>"
+msgstr ""
+"<span weight=\"bold\" size=\"larger\">Keine Eingabemethoden verfügbar</span>"
 
 #: ../src/main.c:69
 #, fuzzy
 msgid "Please install any input methods before running if you like."
-msgstr "Bitte installieren Sie eine Eingabemethode bevor Sie sie laufen lassen, wenn Sie wollen."
+msgstr ""
+"Bitte installieren Sie eine Eingabemethode bevor Sie sie laufen lassen, wenn "
+"Sie wollen."
 
 #: ../src/main.c:170
 msgid "IM Chooser - Input Method configuration tool"
@@ -116,10 +139,15 @@ msgid "User Specific"
 msgstr "Benutzerdefiniert"
 
 #: ../src/im-chooser.desktop.in.in.h:1
-msgid "Input Method"
-msgstr "Eingabemethode"
+#, fuzzy
+msgid ""
+"Choose the input method to be used or disable the input method usage on the "
+"desktop"
+msgstr ""
+"Das Konfigurationswerkzeug für die Eingabemethode, um die zu verwendende "
+"Eingabemethode auszuwählen, oder die Verwendung von Eingabemethoden auf dem "
+"Desktop zu deaktivieren"
 
 #: ../src/im-chooser.desktop.in.in.h:2
-msgid "Input Method configuration tool to choose the Input Method to be used or disable Input Method usage on the desktop"
-msgstr "Das Konfigurationswerkzeug für die Eingabemethode, um die zu verwendende Eingabemethode auszuwählen, oder die Verwendung von Eingabemethoden auf dem Desktop zu deaktivieren"
-
+msgid "Input Method"
+msgstr "Eingabemethode"

@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pa\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-09-20 10:20+0900\n"
+"POT-Creation-Date: 2007-11-16 18:20+0900\n"
 "PO-Revision-Date: 2007-02-07 10:26+0530\n"
 "Last-Translator: A S Alam <aalam@users.sf.net>\n"
 "Language-Team: Punjabi <punjabi-l10n@lists.sf.net>\n"
@@ -21,14 +21,14 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "\n"
 
-#: ../src/im-chooser.c:482 ../src/im-chooser-simple.c:625
+#: ../src/im-chooser.c:482 ../src/im-chooser-simple.c:623
 msgid ""
 "<small><i>Note: this change will not take effect until you next log in.</i></"
 "small>"
 msgstr ""
 "<small><i>ਸੂਚਨਾ: ਇਹ ਤਬਦੀਲੀ ਤੁਹਾਡੇ ਮੁੜ ਲਾਗਇਨ ਹੋਣ ਤੱਕ ਲਾਗੂ ਨਹੀਂ ਹੋਵੇਗੀ।</i></small>"
 
-#: ../src/im-chooser.c:486 ../src/im-chooser-simple.c:612
+#: ../src/im-chooser.c:486 ../src/im-chooser-simple.c:610
 msgid "<b>Input Method</b>"
 msgstr "<b>ਇੰਪੁੱਟ ਢੰਗ</b>"
 
@@ -82,24 +82,24 @@ msgstr ""
 "ਕਿਸੇ ਵੀ ਤਰ੍ਹਾਂ X ਇੰਪੁੱਟ ਢੰਗ ਵਰਤੋਂ। ਅਸਲ ਵਿੱਚ ਡਿਸਕਟਾਪ ਸ਼ੈਸ਼ਨ ਲਈ ਕਿਹੜਾ ਇੰਪੁੱਟ ਢੰਗ ਵਰਤਿਆ ਜਾਵੇਗਾ, "
 "ਇਹ ਡਿਸਕਟਾਪ (ਵੇਹੜੇ) ਦੀ ਭਾਸ਼ਾ ਉੱਤੇ ਨਿਰਭਰ ਕਰਦਾ ਹੈ।"
 
-#: ../src/im-chooser-simple.c:448
+#: ../src/im-chooser-simple.c:446
 #, c-format
 msgid "Use %s"
 msgstr ""
 
+#: ../src/im-chooser-simple.c:448
+msgid " (legacy)"
+msgstr ""
+
 #: ../src/im-chooser-simple.c:450
-msgid " (Legacy)"
+msgid " (recommended)"
 msgstr ""
 
-#: ../src/im-chooser-simple.c:452
-msgid " (Recommend)"
-msgstr ""
-
-#: ../src/im-chooser-simple.c:618
+#: ../src/im-chooser-simple.c:616
 msgid "_Enable input method feature"
 msgstr ""
 
-#: ../src/im-chooser-simple.c:657
+#: ../src/im-chooser-simple.c:655
 #, fuzzy
 msgid "Input Method _Preferences..."
 msgstr "ਇੰਪੁੱਟ ਢੰਗ1"
@@ -131,16 +131,17 @@ msgid "User Specific"
 msgstr ""
 
 #: ../src/im-chooser.desktop.in.in.h:1
-msgid "Input Method"
-msgstr "ਇੰਪੁੱਟ ਢੰਗ1"
-
-#: ../src/im-chooser.desktop.in.in.h:2
+#, fuzzy
 msgid ""
-"Input Method configuration tool to choose the Input Method to be used or "
-"disable Input Method usage on the desktop"
+"Choose the input method to be used or disable the input method usage on the "
+"desktop"
 msgstr ""
 "ਇੰਪੁੱਟ ਢੰਗ ਸੰਰਚਨਾ ਸੰਦ ਨੂੰ ਵਰਤਣ ਵਾਸਤੇ ਇੰਪੁੱਟ ਢੰਗ ਚੁਣ ਲਈ ਜਾਂ ਡਿਸਕਟਾਪ ਵਾਸਤੇ ਇੰਪੁੱਟ ਢੰਗ ਨੂੰ ਬੰਦ ਕਰਨ ਲਈ "
 "ਵਰਤਿਆ ਜਾ ਸਕਦਾ ਹੈ।"
+
+#: ../src/im-chooser.desktop.in.in.h:2
+msgid "Input Method"
+msgstr "ਇੰਪੁੱਟ ਢੰਗ1"
 
 #~ msgid "_Follow the system-wide configuration"
 #~ msgstr "ਪੂਰੇ ਸਿਸਟਮ ਦੀ ਸੰਰਚਨਾ ਮੁਤਾਬਕ(_F)"

@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fr\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-09-20 10:20+0900\n"
+"POT-Creation-Date: 2007-11-16 18:20+0900\n"
 "PO-Revision-Date: 2006-09-29 10:13+1000\n"
 "Last-Translator: Decroux Fabien <fdecroux@redhat.com>\n"
 "Language-Team: French <fr@li.org>\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: KBabel 1.9.1\n"
 
-#: ../src/im-chooser.c:482 ../src/im-chooser-simple.c:625
+#: ../src/im-chooser.c:482 ../src/im-chooser-simple.c:623
 msgid ""
 "<small><i>Note: this change will not take effect until you next log in.</i></"
 "small>"
@@ -29,7 +29,7 @@ msgstr ""
 "<small><i>Note : ce changement ne prendra effet qu'à votre prochaine "
 "connexion.</i></small>"
 
-#: ../src/im-chooser.c:486 ../src/im-chooser-simple.c:612
+#: ../src/im-chooser.c:486 ../src/im-chooser-simple.c:610
 msgid "<b>Input Method</b>"
 msgstr "<b>Méthode de saisie</b>"
 
@@ -87,24 +87,24 @@ msgstr ""
 "Utiliser la méthode de saisie de X malgré tout. La méthode de saisie sera "
 "choisie pour la session en fonction de la langue du système"
 
-#: ../src/im-chooser-simple.c:448
+#: ../src/im-chooser-simple.c:446
 #, c-format
 msgid "Use %s"
 msgstr ""
 
+#: ../src/im-chooser-simple.c:448
+msgid " (legacy)"
+msgstr ""
+
 #: ../src/im-chooser-simple.c:450
-msgid " (Legacy)"
+msgid " (recommended)"
 msgstr ""
 
-#: ../src/im-chooser-simple.c:452
-msgid " (Recommend)"
-msgstr ""
-
-#: ../src/im-chooser-simple.c:618
+#: ../src/im-chooser-simple.c:616
 msgid "_Enable input method feature"
 msgstr ""
 
-#: ../src/im-chooser-simple.c:657
+#: ../src/im-chooser-simple.c:655
 #, fuzzy
 msgid "Input Method _Preferences..."
 msgstr "Méthode de saisie"
@@ -136,17 +136,18 @@ msgid "User Specific"
 msgstr ""
 
 #: ../src/im-chooser.desktop.in.in.h:1
-msgid "Input Method"
-msgstr "Méthode de saisie"
-
-#: ../src/im-chooser.desktop.in.in.h:2
+#, fuzzy
 msgid ""
-"Input Method configuration tool to choose the Input Method to be used or "
-"disable Input Method usage on the desktop"
+"Choose the input method to be used or disable the input method usage on the "
+"desktop"
 msgstr ""
 "Outil de configuration de méthode de saisie pour choisir la méthode à "
 "utiliser ou pour désactiver l'utilisation de méthodes de saisie sur le "
 "système."
+
+#: ../src/im-chooser.desktop.in.in.h:2
+msgid "Input Method"
+msgstr "Méthode de saisie"
 
 #~ msgid "_Follow the system-wide configuration"
 #~ msgstr "_Garder la configuration system-wide"

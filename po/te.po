@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: te\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-09-20 10:20+0900\n"
+"POT-Creation-Date: 2007-11-16 18:20+0900\n"
 "PO-Revision-Date: 2006-10-30 13:19+0530\n"
 "Last-Translator: \n"
 "Language-Team:  <en@li.org>\n"
@@ -21,13 +21,13 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.9.1\n"
 
-#: ../src/im-chooser.c:482 ../src/im-chooser-simple.c:625
+#: ../src/im-chooser.c:482 ../src/im-chooser-simple.c:623
 msgid ""
 "<small><i>Note: this change will not take effect until you next log in.</i></"
 "small>"
 msgstr "<small><i>సూచన: మీరు మళ్లీ ప్రవేశించేదాకా ఈ మార్పు ప్రభావితం కాదు.</i></small>"
 
-#: ../src/im-chooser.c:486 ../src/im-chooser-simple.c:612
+#: ../src/im-chooser.c:486 ../src/im-chooser-simple.c:610
 msgid "<b>Input Method</b>"
 msgstr "<b>ఇన్పుట్టు విధానం</b>"
 
@@ -81,24 +81,24 @@ msgstr ""
 "ఏమైనప్పటికీ X ఇన్పుట్ విధానాన్ని ఉపయోగించు. నిజానికి, డెస్కుటాప్ సెషన్ కోసం ఎన్నిక చేయబడ్డ ఇన్పుట్ విధానం "
 "డెస్కుటాప్ భాష మీద ఆధారపడి ఉంటుంది."
 
-#: ../src/im-chooser-simple.c:448
+#: ../src/im-chooser-simple.c:446
 #, c-format
 msgid "Use %s"
 msgstr ""
 
+#: ../src/im-chooser-simple.c:448
+msgid " (legacy)"
+msgstr ""
+
 #: ../src/im-chooser-simple.c:450
-msgid " (Legacy)"
+msgid " (recommended)"
 msgstr ""
 
-#: ../src/im-chooser-simple.c:452
-msgid " (Recommend)"
-msgstr ""
-
-#: ../src/im-chooser-simple.c:618
+#: ../src/im-chooser-simple.c:616
 msgid "_Enable input method feature"
 msgstr ""
 
-#: ../src/im-chooser-simple.c:657
+#: ../src/im-chooser-simple.c:655
 #, fuzzy
 msgid "Input Method _Preferences..."
 msgstr "ఇన్పుట్ విధానం"
@@ -130,16 +130,17 @@ msgid "User Specific"
 msgstr ""
 
 #: ../src/im-chooser.desktop.in.in.h:1
-msgid "Input Method"
-msgstr "ఇన్పుట్ విధానం"
-
-#: ../src/im-chooser.desktop.in.in.h:2
+#, fuzzy
 msgid ""
-"Input Method configuration tool to choose the Input Method to be used or "
-"disable Input Method usage on the desktop"
+"Choose the input method to be used or disable the input method usage on the "
+"desktop"
 msgstr ""
 "డెస్కుటాప్ యందు ఇన్పుట్ విధానాన్ని ఉపయోగించటానికి ఉపయోగించ కుండా ఉండటానికి ఇన్పుట్ విధానంఎన్నిక చేయటానికి "
 "ఉపయోగించే ఇన్పుట్ విధాన ఆకృతీకరణ సాధనం"
+
+#: ../src/im-chooser.desktop.in.in.h:2
+msgid "Input Method"
+msgstr "ఇన్పుట్ విధానం"
 
 #~ msgid "_Follow the system-wide configuration"
 #~ msgstr "సిస్టం-వైడ్ ఆకృతీకరణను అనుసరించు (_F)"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: or\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-09-20 10:20+0900\n"
+"POT-Creation-Date: 2007-11-16 18:20+0900\n"
 "PO-Revision-Date: 2006-09-28 16:44+0530\n"
 "Last-Translator: Subhransu Behera <sbehera@redhat.com>\n"
 "Language-Team: Oriya <oriya-group@lists.sarovar.org>\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Plural-Forms: Plural-Forms: nplurals=2; plural=(n!=1);\n"
 "\n"
 
-#: ../src/im-chooser.c:482 ../src/im-chooser-simple.c:625
+#: ../src/im-chooser.c:482 ../src/im-chooser-simple.c:623
 msgid ""
 "<small><i>Note: this change will not take effect until you next log in.</i></"
 "small>"
@@ -28,7 +28,7 @@ msgstr ""
 "<small><i>ଟିପ୍ପଣୀ: ଆପଣଙ୍କ ପରବର୍ତ୍ତୀ ଲଗଇନ ପର୍ଯ୍ଯନ୍ତ ଏହି ପରିବର୍ତ୍ତନଟି ପ୍ରଭାବିତ ହେବନାହିଁ।</i></"
 "small>"
 
-#: ../src/im-chooser.c:486 ../src/im-chooser-simple.c:612
+#: ../src/im-chooser.c:486 ../src/im-chooser-simple.c:610
 msgid "<b>Input Method</b>"
 msgstr "<b>ନିବେଶ ପ୍ରଣାଳୀ</b>"
 
@@ -86,24 +86,24 @@ msgstr ""
 "ଯେ କୌଣସି ଉପାୟରେ X ନିବେଶ ପ୍ରଣାଳୀକୁ ବ୍ଯବହାର କରନ୍ତୁ। ବାସ୍ତବରେ, ଡେସ୍କଟପ ଅଧିବେଶନ ପାଇଁ କେଉଁ "
 "ନିବେଶ ପ୍ରଣାଳୀକୁ ବ୍ଯବହାର କରାଯିବ ତାହା ଡେସ୍କଟପ ଭାଷା ଉପରେ ନିର୍ଭର କରିଥାଏ।"
 
-#: ../src/im-chooser-simple.c:448
+#: ../src/im-chooser-simple.c:446
 #, c-format
 msgid "Use %s"
 msgstr ""
 
+#: ../src/im-chooser-simple.c:448
+msgid " (legacy)"
+msgstr ""
+
 #: ../src/im-chooser-simple.c:450
-msgid " (Legacy)"
+msgid " (recommended)"
 msgstr ""
 
-#: ../src/im-chooser-simple.c:452
-msgid " (Recommend)"
-msgstr ""
-
-#: ../src/im-chooser-simple.c:618
+#: ../src/im-chooser-simple.c:616
 msgid "_Enable input method feature"
 msgstr ""
 
-#: ../src/im-chooser-simple.c:657
+#: ../src/im-chooser-simple.c:655
 #, fuzzy
 msgid "Input Method _Preferences..."
 msgstr "ନିବେଶ ପ୍ରଣାଳୀ"
@@ -135,16 +135,17 @@ msgid "User Specific"
 msgstr ""
 
 #: ../src/im-chooser.desktop.in.in.h:1
-msgid "Input Method"
-msgstr "ନିବେଶ ପ୍ରଣାଳୀ"
-
-#: ../src/im-chooser.desktop.in.in.h:2
+#, fuzzy
 msgid ""
-"Input Method configuration tool to choose the Input Method to be used or "
-"disable Input Method usage on the desktop"
+"Choose the input method to be used or disable the input method usage on the "
+"desktop"
 msgstr ""
 "ନିବେଶ ପ୍ରଣାଳୀକୁ ଚୟନ କରୁଥିବା ନିବେଶ ପ୍ରଣାଳୀ ବିନ୍ଯାସ ଉପକରଣକୁ ବ୍ଯବହାର କରନ୍ତୁ କିମ୍ବା ଡେସ୍କଟପରେ "
 "ନିବେଶ ପ୍ରଣାଳୀର ବ୍ଯବହାର ବିଧିକୁ ନିଷ୍କ୍ରିୟ କରନ୍ତୁ"
+
+#: ../src/im-chooser.desktop.in.in.h:2
+msgid "Input Method"
+msgstr "ନିବେଶ ପ୍ରଣାଳୀ"
 
 #~ msgid "_Follow the system-wide configuration"
 #~ msgstr "ତନ୍ତ୍ର-ବ୍ଯାପି ବିନ୍ଯାସକୁ ଅନୁକରଣ କରନ୍ତୁ (_F)"

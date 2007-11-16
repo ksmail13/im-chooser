@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: zh_CN\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-09-20 10:20+0900\n"
+"POT-Creation-Date: 2007-11-16 18:20+0900\n"
 "PO-Revision-Date: 2006-09-29 08:58+1000\n"
 "Last-Translator: Tony Fu <tfu@redhat.com>\n"
 "Language-Team:  <zh@li.org>\n"
@@ -18,13 +18,13 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.9.1\n"
 
-#: ../src/im-chooser.c:482 ../src/im-chooser-simple.c:625
+#: ../src/im-chooser.c:482 ../src/im-chooser-simple.c:623
 msgid ""
 "<small><i>Note: this change will not take effect until you next log in.</i></"
 "small>"
 msgstr "<small><i>请注意：这个修改在您下一次登录前不会起作用。</i></small>"
 
-#: ../src/im-chooser.c:486 ../src/im-chooser-simple.c:612
+#: ../src/im-chooser.c:486 ../src/im-chooser-simple.c:610
 msgid "<b>Input Method</b>"
 msgstr "<b>输入方法</b>"
 
@@ -76,24 +76,24 @@ msgid ""
 "the desktop session, depends on the desktop language."
 msgstr "使用 X 输入法。使用哪种输入法是根据系统所运行的语言版本来决定的。"
 
-#: ../src/im-chooser-simple.c:448
+#: ../src/im-chooser-simple.c:446
 #, c-format
 msgid "Use %s"
 msgstr ""
 
+#: ../src/im-chooser-simple.c:448
+msgid " (legacy)"
+msgstr ""
+
 #: ../src/im-chooser-simple.c:450
-msgid " (Legacy)"
+msgid " (recommended)"
 msgstr ""
 
-#: ../src/im-chooser-simple.c:452
-msgid " (Recommend)"
-msgstr ""
-
-#: ../src/im-chooser-simple.c:618
+#: ../src/im-chooser-simple.c:616
 msgid "_Enable input method feature"
 msgstr ""
 
-#: ../src/im-chooser-simple.c:657
+#: ../src/im-chooser-simple.c:655
 #, fuzzy
 msgid "Input Method _Preferences..."
 msgstr "输入法"
@@ -125,14 +125,15 @@ msgid "User Specific"
 msgstr ""
 
 #: ../src/im-chooser.desktop.in.in.h:1
-msgid "Input Method"
-msgstr "输入法"
+#, fuzzy
+msgid ""
+"Choose the input method to be used or disable the input method usage on the "
+"desktop"
+msgstr "输入法配置工具被用来选择要使用的输入法，或在系统上禁用输入法。"
 
 #: ../src/im-chooser.desktop.in.in.h:2
-msgid ""
-"Input Method configuration tool to choose the Input Method to be used or "
-"disable Input Method usage on the desktop"
-msgstr "输入法配置工具被用来选择要使用的输入法，或在系统上禁用输入法。"
+msgid "Input Method"
+msgstr "输入法"
 
 #~ msgid "_Follow the system-wide configuration"
 #~ msgstr "(_F)使用系统范围内的配置"

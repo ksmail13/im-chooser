@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pl\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-09-20 10:20+0900\n"
+"POT-Creation-Date: 2007-11-16 18:20+0900\n"
 "PO-Revision-Date: 2007-09-21 15:54+0200\n"
 "Last-Translator: Piotr Drąg <raven@pmail.pl>\n"
 "Language-Team: Polish <pl@li.org>\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../src/im-chooser.c:482 ../src/im-chooser-simple.c:625
+#: ../src/im-chooser.c:482 ../src/im-chooser-simple.c:623
 msgid ""
 "<small><i>Note: this change will not take effect until you next log in.</i></"
 "small>"
@@ -21,7 +21,7 @@ msgstr ""
 "<small><i>Uwaga: ta zmiana zostanie uwzględniona po następnym zalogowaniu.</"
 "i></small>"
 
-#: ../src/im-chooser.c:486 ../src/im-chooser-simple.c:612
+#: ../src/im-chooser.c:486 ../src/im-chooser-simple.c:610
 msgid "<b>Input Method</b>"
 msgstr "<b>Metoda wejścia</b>"
 
@@ -76,24 +76,26 @@ msgstr ""
 "Użyj metody wejścia X mimo tego. Właściwie wybrana metoda wejścia dla sesji "
 "środowiska zależy od jego języka."
 
-#: ../src/im-chooser-simple.c:448
+#: ../src/im-chooser-simple.c:446
 #, c-format
 msgid "Use %s"
 msgstr "Użyj %s"
 
-#: ../src/im-chooser-simple.c:450
-msgid " (Legacy)"
+#: ../src/im-chooser-simple.c:448
+#, fuzzy
+msgid " (legacy)"
 msgstr " (przestarzała)"
 
-#: ../src/im-chooser-simple.c:452
-msgid " (Recommend)"
+#: ../src/im-chooser-simple.c:450
+#, fuzzy
+msgid " (recommended)"
 msgstr " (zalecana)"
 
-#: ../src/im-chooser-simple.c:618
+#: ../src/im-chooser-simple.c:616
 msgid "_Enable input method feature"
 msgstr "Włącz m_etodę wejścia"
 
-#: ../src/im-chooser-simple.c:657
+#: ../src/im-chooser-simple.c:655
 msgid "Input Method _Preferences..."
 msgstr "_Preferencje metody wejścia..."
 
@@ -120,18 +122,20 @@ msgstr "Wy_loguj się"
 msgid "xinputrc was modified by the user"
 msgstr "xinputrc został zmodyfikowany przez użytkownika"
 
+#. label that uses to indicate their own .xinputrc
 #: ../src/im-chooser-private.h:36
 msgid "User Specific"
 msgstr "Określona przez użytkownika"
 
 #: ../src/im-chooser.desktop.in.in.h:1
-msgid "Input Method"
-msgstr "Metoda wejścia"
-
-#: ../src/im-chooser.desktop.in.in.h:2
+#, fuzzy
 msgid ""
-"Input Method configuration tool to choose the Input Method to be used or "
-"disable Input Method usage on the desktop"
+"Choose the input method to be used or disable the input method usage on the "
+"desktop"
 msgstr ""
 "Narzędzie konfiguracji metody wejścia pozwala wybrać używaną metodę wejścia "
 "lub ją wyłączyć w środowisku"
+
+#: ../src/im-chooser.desktop.in.in.h:2
+msgid "Input Method"
+msgstr "Metoda wejścia"

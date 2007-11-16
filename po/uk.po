@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: im-chooser\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-10-19 01:21-0700\n"
+"POT-Creation-Date: 2007-11-16 18:20+0900\n"
 "PO-Revision-Date: 2007-11-06 14:48+0900\n"
 "Last-Translator: Maxim Dziumanenko <dziumanenko@gmail.com>\n"
 "Language-Team: Ukrainian <uk@li.org>\n"
@@ -40,8 +40,8 @@ msgid ""
 "Your system chooses the appropriate Input Method for your language "
 "automatically from among Input Methods installed on your system."
 msgstr ""
-"Система автоматично обирає відповідний метод вводу для вашої мови "
-"серед встановлених у системі."
+"Система автоматично обирає відповідний метод вводу для вашої мови серед "
+"встановлених у системі."
 
 #: ../src/im-chooser.c:519
 msgid "Choose _specific Input Method"
@@ -82,11 +82,13 @@ msgid "Use %s"
 msgstr "Використовувати %s"
 
 #: ../src/im-chooser-simple.c:448
-msgid " (Legacy)"
+#, fuzzy
+msgid " (legacy)"
 msgstr " (Застаріло)"
 
 #: ../src/im-chooser-simple.c:450
-msgid " (Recommend)"
+#, fuzzy
+msgid " (recommended)"
 msgstr " (Рекомендується)"
 
 #: ../src/im-chooser-simple.c:616
@@ -125,15 +127,14 @@ msgid "User Specific"
 msgstr "Специфічно для користувача"
 
 #: ../src/im-chooser.desktop.in.in.h:1
-msgid "Input Method"
-msgstr "Метод вводу"
-
-#: ../src/im-chooser.desktop.in.in.h:2
+#, fuzzy
 msgid ""
-"Input Method configuration tool to choose the Input Method to be used or "
-"disable Input Method usage on the desktop"
+"Choose the input method to be used or disable the input method usage on the "
+"desktop"
 msgstr ""
 "Програма налаштовування методу вводу дозволяє обрати метод вводу або взагалі "
 "вимкнути використання методу вводу."
 
-
+#: ../src/im-chooser.desktop.in.in.h:2
+msgid "Input Method"
+msgstr "Метод вводу"

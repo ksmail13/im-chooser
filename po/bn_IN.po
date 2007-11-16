@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: bn_IN\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-09-23 23:45-0700\n"
+"POT-Creation-Date: 2007-11-16 18:20+0900\n"
 "PO-Revision-Date: 2007-09-24 12:48+0530\n"
 "Last-Translator: Runa Bhattacharjee <runabh@gmail.com>\n"
 "Language-Team: Bengali INDIA\n"
@@ -21,7 +21,7 @@ msgstr ""
 "\n"
 "X-Generator: KBabel 1.11.4\n"
 
-#: ../src/im-chooser.c:482 ../src/im-chooser-simple.c:625
+#: ../src/im-chooser.c:482 ../src/im-chooser-simple.c:623
 msgid ""
 "<small><i>Note: this change will not take effect until you next log in.</i></"
 "small>"
@@ -29,7 +29,7 @@ msgstr ""
 "<small><i>উল্লেখ্য: পরবর্তী বার লগ-ইন না করা অবধি এই পরিবর্তনগুললি প্রয়োগ করা হবে "
 "না।</i></small>"
 
-#: ../src/im-chooser.c:486 ../src/im-chooser-simple.c:612
+#: ../src/im-chooser.c:486 ../src/im-chooser-simple.c:610
 msgid "<b>Input Method</b>"
 msgstr "<b>ইনপুট পদ্ধতি</b>"
 
@@ -57,14 +57,16 @@ msgstr "সুনির্দিষ্ট ইনপুট পদ্ধতি ন
 msgid ""
 "Use the specific Input Method that you prefer regardless what Input Method "
 "the system recommends."
-msgstr "সিস্টেমে প্রস্তাবিত ইনপুট পদ্ধতি নির্বিশেষে আপনার পছন্দসই ইনপুট পদ্ধতি ব্যবহার করুন।"
+msgstr ""
+"সিস্টেমে প্রস্তাবিত ইনপুট পদ্ধতি নির্বিশেষে আপনার পছন্দসই ইনপুট পদ্ধতি ব্যবহার করুন।"
 
 #: ../src/im-chooser.c:527
 msgid "_Do not use Input Method"
 msgstr "ইনপুট পদ্ধতি ব্যবহার করা হবে না (_D)"
 
 #: ../src/im-chooser.c:529
-msgid "Do not use Input Method no matter what language the desktop is running on."
+msgid ""
+"Do not use Input Method no matter what language the desktop is running on."
 msgstr "ডেস্কটপে ব্যবহৃত ভাষা নির্বিশেষে কোনো ইনপুট পদ্ধতি ব্যবহার করা হবে না।"
 
 #: ../src/im-chooser.c:532
@@ -79,30 +81,34 @@ msgstr ""
 "তথাপি X ইনপুট পদ্ধতি (XIM) ব্যবহার করা হবে। বাস্তবে ডেস্কটপে ব্যবহৃত ভাষা অনুসারে "
 "ডেস্কটপ সেশানে ব্যবহারযোগ্য ইনপুট পদ্ধতি নির্ধারিত হয়।"
 
-#: ../src/im-chooser-simple.c:448
+#: ../src/im-chooser-simple.c:446
 #, c-format
 msgid "Use %s"
 msgstr "%s ব্যবহার করা হবে"
 
-#: ../src/im-chooser-simple.c:450
-msgid " (Legacy)"
+#: ../src/im-chooser-simple.c:448
+#, fuzzy
+msgid " (legacy)"
 msgstr " (লিগ্যাসি)"
 
-#: ../src/im-chooser-simple.c:452
-msgid " (Recommend)"
+#: ../src/im-chooser-simple.c:450
+#, fuzzy
+msgid " (recommended)"
 msgstr " (প্রস্তাবিত)"
 
-#: ../src/im-chooser-simple.c:618
+#: ../src/im-chooser-simple.c:616
 msgid "_Enable input method feature"
 msgstr "ইনপুট পদ্ধতির বৈশিষ্ট্য সক্রিয় করুন (_E)"
 
-#: ../src/im-chooser-simple.c:657
+#: ../src/im-chooser-simple.c:655
 msgid "Input Method _Preferences..."
 msgstr "ইনপুট পদ্ধতি সংক্রান্ত পছন্দসই মান...(_P)"
 
 #: ../src/main.c:66
-msgid "<span weight=\"bold\" size=\"larger\">No input method is available</span>"
-msgstr "<span weight=\"bold\" size=\"larger\">কোনো ইনপুট পদ্ধতি উপস্থিত নেই</span>"
+msgid ""
+"<span weight=\"bold\" size=\"larger\">No input method is available</span>"
+msgstr ""
+"<span weight=\"bold\" size=\"larger\">কোনো ইনপুট পদ্ধতি উপস্থিত নেই</span>"
 
 #: ../src/main.c:69
 msgid "Please install any input methods before running if you like."
@@ -126,14 +132,14 @@ msgid "User Specific"
 msgstr "ব্যবহারকারী সুনির্দিষ্ট"
 
 #: ../src/im-chooser.desktop.in.in.h:1
-msgid "Input Method"
-msgstr "ইনপুট পদ্ধতি"
-
-#: ../src/im-chooser.desktop.in.in.h:2
+#, fuzzy
 msgid ""
-"Input Method configuration tool to choose the Input Method to be used or "
-"disable Input Method usage on the desktop"
+"Choose the input method to be used or disable the input method usage on the "
+"desktop"
 msgstr ""
 "ডেস্কটপে ব্যবহারযোগ্য ইনপুট পদ্ধতি নির্ধারণ অথবা ইনপুট পদ্ধতি নিষ্ক্রিয় করতে ব্যবহৃত "
 "কনফিগারেশনের সামগ্রী।"
 
+#: ../src/im-chooser.desktop.in.in.h:2
+msgid "Input Method"
+msgstr "ইনপুট পদ্ধতি"
