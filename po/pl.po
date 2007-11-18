@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: pl\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2007-11-16 18:20+0900\n"
-"PO-Revision-Date: 2007-09-21 15:54+0200\n"
+"PO-Revision-Date: 2007-11-18 03:26+0200\n"
 "Last-Translator: Piotr Drąg <raven@pmail.pl>\n"
 "Language-Team: Polish <pl@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -82,12 +82,10 @@ msgid "Use %s"
 msgstr "Użyj %s"
 
 #: ../src/im-chooser-simple.c:448
-#, fuzzy
 msgid " (legacy)"
 msgstr " (przestarzała)"
 
 #: ../src/im-chooser-simple.c:450
-#, fuzzy
 msgid " (recommended)"
 msgstr " (zalecana)"
 
@@ -128,13 +126,10 @@ msgid "User Specific"
 msgstr "Określona przez użytkownika"
 
 #: ../src/im-chooser.desktop.in.in.h:1
-#, fuzzy
 msgid ""
 "Choose the input method to be used or disable the input method usage on the "
 "desktop"
-msgstr ""
-"Narzędzie konfiguracji metody wejścia pozwala wybrać używaną metodę wejścia "
-"lub ją wyłączyć w środowisku"
+msgstr "Wybieranie metody wejścia lub wyłączanie jej w środowisku graficznym"
 
 #: ../src/im-chooser.desktop.in.in.h:2
 msgid "Input Method"
