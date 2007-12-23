@@ -1,4 +1,4 @@
-# translation of el.po to Greek
+# translation of im-chooser.po to Greek
 # Greek translations for im-chooser package.
 # Copyright (C) 2006 Red Hat, Inc. All rights reserved.
 # This file is distributed under the same license as the im-chooser package.
@@ -7,10 +7,10 @@
 # Dimitris Glezos <dimitris@glezos.com>, 2006, 2007.
 msgid ""
 msgstr ""
-"Project-Id-Version: el\n"
+"Project-Id-Version: im-chooser\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2007-11-16 18:20+0900\n"
-"PO-Revision-Date: 2007-09-22 23:27+0100\n"
+"PO-Revision-Date: 2007-12-23 21:11+0200\n"
 "Last-Translator: Dimitris Glezos <dimitris@glezos.com>\n"
 "Language-Team: Greek <fedora-trans-el@redhat.com>\n"
 "MIME-Version: 1.0\n"
@@ -65,8 +65,7 @@ msgid "_Do not use Input Method"
 msgstr "Να _μη γίνει χρήση μεθόδων εισαγωγής"
 
 #: ../src/im-chooser.c:529
-msgid ""
-"Do not use Input Method no matter what language the desktop is running on."
+msgid "Do not use Input Method no matter what language the desktop is running on."
 msgstr ""
 "Να μη γίνει χρήση μεθόδων εισαγωγής, ανεξάρτητα της γλώσσας της επιφάνεια "
 "εργασίας."
@@ -90,12 +89,10 @@ msgid "Use %s"
 msgstr "Χρήση του %s"
 
 #: ../src/im-chooser-simple.c:448
-#, fuzzy
 msgid " (legacy)"
 msgstr " (παραδοσιακή)"
 
 #: ../src/im-chooser-simple.c:450
-#, fuzzy
 msgid " (recommended)"
 msgstr " (προτείνεται)"
 
@@ -108,8 +105,7 @@ msgid "Input Method _Preferences..."
 msgstr "Π_ροτιμήσεις μεθόδου εισαγωγής..."
 
 #: ../src/main.c:66
-msgid ""
-"<span weight=\"bold\" size=\"larger\">No input method is available</span>"
+msgid "<span weight=\"bold\" size=\"larger\">No input method is available</span>"
 msgstr ""
 "<span weight=\"bold\" size=\"larger\">Δεν υπάρχει διαθέσιμη μέθοδος "
 "εισαγωγής></span>"
@@ -138,15 +134,14 @@ msgid "User Specific"
 msgstr "Ειδικές στο χρήστη"
 
 #: ../src/im-chooser.desktop.in.in.h:1
-#, fuzzy
 msgid ""
 "Choose the input method to be used or disable the input method usage on the "
 "desktop"
 msgstr ""
-"Εργαλείο ρύθμισης μεθόδου εισαγωγής για να επιλέξετε τη μέθοδο εισαγωγής "
-"χαρακτήρων της οποίας θα γίνει χρήση ή να απενεργοποιήσετε τη χρήση μεθόδων "
-"εισαγωγής στην επιφάνεια εργασίας."
+"Επιλέξτε μέθοδο εισαγωγής για χρήση ή απενεργοποιήστε τη χρήση μεθόδων "
+"εισαγωγής στην επιφάνεια εργασίας"
 
 #: ../src/im-chooser.desktop.in.in.h:2
 msgid "Input Method"
 msgstr "Μέθοδος εισαγωγής"
+
