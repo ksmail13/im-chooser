@@ -1,140 +1,126 @@
-# translation of im-chooser.trunk.gu.po to Gujarati
-# Gujarati translations for im-chooser package.
+# Zulu translations for im-chooser package.
 # Copyright (C) 2006 Red Hat, Inc. All rights reserved.
 # This file is distributed under the same license as the im-chooser package.
-#
 # Automatically generated, 2006.
-# Ankit Patel <ankit@redhat.com>, 2006, 2007.
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: im-chooser.trunk.gu\n"
+"Project-Id-Version: im-chooser 0.3.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-12-23 07:26-0700\n"
-"PO-Revision-Date: 2007-12-24 14:27+0530\n"
-"Last-Translator: Ankit Patel <ankit@redhat.com>\n"
-"Language-Team: Gujarati <fedora-trans-gu@redhat.com>\n"
+"POT-Creation-Date: 2007-12-23 07:30-0700\n"
+"PO-Revision-Date: 2006-09-28 14:38+0900\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=ASCII\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.11.4\n"
-"Plural-Forms:  nplurals=2; plural=(n!=1);\n\n"
-"\n"
-"\n"
-"\n"
 
 #: ../src/im-chooser.c:482 ../src/im-chooser-simple.c:623
 msgid ""
 "<small><i>Note: this change will not take effect until you next log in.</i></"
 "small>"
 msgstr ""
-"<small><i>નોંધ: આ ફેરફાર જ્યાં સુધી તમે પ્રવેશ નહિં કરો ત્યાં સુધી અસર લાવશે નહિં.</i></"
-"small>"
 
 #: ../src/im-chooser.c:486 ../src/im-chooser-simple.c:610
 msgid "<b>Input Method</b>"
-msgstr "<b>ઈનપુટ પદ્ધતિ</b>"
+msgstr ""
 
 #: ../src/im-chooser.c:496
 msgid "No valid IM installed"
-msgstr "કોઈ માન્ય IM સ્થાપિત નથી"
+msgstr ""
 
 #: ../src/im-chooser.c:514
 msgid "_Use default Input Method for your language"
-msgstr "તમારી ભાષા માટે મૂળભૂત ઈનપુટ પદ્ધતિ વાપરો (_U)"
+msgstr ""
 
 #: ../src/im-chooser.c:516
 msgid ""
 "Your system chooses the appropriate Input Method for your language "
 "automatically from among Input Methods installed on your system."
 msgstr ""
-"તમારી સિસ્ટમ આપોઆપ તમારી સિસ્ટમમાં સ્થાપિત ઈનપુટ પદ્ધતિઓમાંથી તમારી ભાષા માટે યોગ્ય "
-"ઈનપુટ પદ્ધતિ પસંદ કરે છે."
 
 #: ../src/im-chooser.c:519
 msgid "Choose _specific Input Method"
-msgstr "ચોક્કસ ઈનપુટ પદ્ધતિ પસંદ કરો (_s)"
+msgstr ""
 
 #: ../src/im-chooser.c:521
 msgid ""
 "Use the specific Input Method that you prefer regardless what Input Method "
 "the system recommends."
 msgstr ""
-"ચોક્કસ ઈનપુટ પદ્ધતિ વાપરો કે જેને તમે સંદર્ભ તરીકે પ્રાધાન્ય આપો કે જે ઈનપુટ પદ્ધતિનો સિસ્ટમ "
-"આગ્રહ રાખે છે."
 
 #: ../src/im-chooser.c:527
 msgid "_Do not use Input Method"
-msgstr "ઈનપુટ પદ્ધતિ વાપરશો નહિં (_D)"
+msgstr ""
 
 #: ../src/im-chooser.c:529
-msgid "Do not use Input Method no matter what language the desktop is running on."
-msgstr "ઈનપુટ પદ્ધતિ વાપરશો નહિં કે પછી કોઈપણ ભાષા ડેસ્કટોપ વાપરી રહ્યું હોય."
+msgid ""
+"Do not use Input Method no matter what language the desktop is running on."
+msgstr ""
 
 #: ../src/im-chooser.c:532
 msgid "Use legacy _Input Method"
-msgstr "લીગસી ઈનપુટ પદ્ધતિ વાપરો (_I)"
+msgstr ""
 
 #: ../src/im-chooser.c:534
 msgid ""
 "Use X Input Method anyway. In fact, which input method will be chosen for "
 "the desktop session, depends on the desktop language."
 msgstr ""
-"X ઈનપુટ પદ્ધતિને ગમે તે રીતે વાપરો. હકીકતમાં, ડેસ્કટોપ સત્ર માટે કઈ ઈનપુટ પદ્ધતિ વાપરવામાં "
-"આવશે, તે ડેસ્કટોપ ભાષા પર આધાર રાખે છે."
 
 #: ../src/im-chooser-simple.c:446
 #, c-format
 msgid "Use %s"
-msgstr "%s વાપરો"
+msgstr ""
 
 #: ../src/im-chooser-simple.c:448
 msgid " (legacy)"
-msgstr " (લીગસી)"
+msgstr ""
 
 #: ../src/im-chooser-simple.c:450
 msgid " (recommended)"
-msgstr " (આગ્રહણીય)"
+msgstr ""
 
 #: ../src/im-chooser-simple.c:616
 msgid "_Enable input method feature"
-msgstr "ઈનપુટ પદ્ધતિ લક્ષણ સક્રિય કરો (_E)"
+msgstr ""
 
 #: ../src/im-chooser-simple.c:655
 msgid "Input Method _Preferences..."
-msgstr "ઈનપુટ પદ્ધતિ પસંદગીઓ (_P)..."
+msgstr ""
 
 #: ../src/main.c:66
-msgid "<span weight=\"bold\" size=\"larger\">No input method is available</span>"
-msgstr "<span weight=\"bold\" size=\"larger\">કોઈ ઈનપુટ પદ્ધતિ ઉપલબ્ધ નથી</span>"
+msgid ""
+"<span weight=\"bold\" size=\"larger\">No input method is available</span>"
+msgstr ""
 
 #: ../src/main.c:69
 msgid "Please install any input methods before running if you like."
-msgstr "મહેરબાની કરીને ચલાવવા પહેલાં કોઈપણ ઈનપુટ પદ્ધતિઓ પસંદ કરો કે જે તમને ગમે."
+msgstr ""
 
 #: ../src/main.c:170
 msgid "IM Chooser - Input Method configuration tool"
-msgstr "IM પસંદગીકારક - ઈનપુટ પદ્ધતિ રૂપરેખાંકન સાધન"
+msgstr ""
 
 #: ../src/main.c:178
 msgid "_Log Out"
-msgstr "બહાર નીકળો (_L)"
+msgstr ""
 
 #: ../src/xinput.c:179
 msgid "xinputrc was modified by the user"
-msgstr "xinputrc એ વપરાશકર્તા દ્વારા સુધારાઈ હતી"
+msgstr ""
 
 #. label that uses to indicate their own .xinputrc
 #: ../src/im-chooser-private.h:36
 msgid "User Specific"
-msgstr "વપરાશકર્તા લગતી"
+msgstr ""
 
 #: ../src/im-chooser.desktop.in.in.h:1
 msgid ""
 "Choose the input method to be used or disable the input method usage on the "
 "desktop"
-msgstr "વાપરવા માટેની ઈનપુટ પદ્ધતિ પસંદ કરો અથવા ડેસ્કટોપ પર ઈનપુટ પદ્ધતિનો વપરાશ નિષ્ક્રિય કરો"
+msgstr ""
 
 #: ../src/im-chooser.desktop.in.in.h:2
 msgid "Input Method"
-msgstr "ઈનપુટ પદ્ધતિ"
-
+msgstr ""
