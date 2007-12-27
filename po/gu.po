@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: im-chooser.trunk.gu\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-12-23 07:26-0700\n"
+"POT-Creation-Date: 2007-11-16 18:20+0900\n"
 "PO-Revision-Date: 2007-12-24 14:27+0530\n"
 "Last-Translator: Ankit Patel <ankit@redhat.com>\n"
 "Language-Team: Gujarati <fedora-trans-gu@redhat.com>\n"
@@ -17,7 +17,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.11.4\n"
-"Plural-Forms:  nplurals=2; plural=(n!=1);\n\n"
+"Plural-Forms:  nplurals=2; plural=(n!=1);\n"
+"\n"
 "\n"
 "\n"
 "\n"
@@ -67,7 +68,8 @@ msgid "_Do not use Input Method"
 msgstr "ઈનપુટ પદ્ધતિ વાપરશો નહિં (_D)"
 
 #: ../src/im-chooser.c:529
-msgid "Do not use Input Method no matter what language the desktop is running on."
+msgid ""
+"Do not use Input Method no matter what language the desktop is running on."
 msgstr "ઈનપુટ પદ્ધતિ વાપરશો નહિં કે પછી કોઈપણ ભાષા ડેસ્કટોપ વાપરી રહ્યું હોય."
 
 #: ../src/im-chooser.c:532
@@ -104,7 +106,8 @@ msgid "Input Method _Preferences..."
 msgstr "ઈનપુટ પદ્ધતિ પસંદગીઓ (_P)..."
 
 #: ../src/main.c:66
-msgid "<span weight=\"bold\" size=\"larger\">No input method is available</span>"
+msgid ""
+"<span weight=\"bold\" size=\"larger\">No input method is available</span>"
 msgstr "<span weight=\"bold\" size=\"larger\">કોઈ ઈનપુટ પદ્ધતિ ઉપલબ્ધ નથી</span>"
 
 #: ../src/main.c:69
@@ -132,9 +135,9 @@ msgstr "વપરાશકર્તા લગતી"
 msgid ""
 "Choose the input method to be used or disable the input method usage on the "
 "desktop"
-msgstr "વાપરવા માટેની ઈનપુટ પદ્ધતિ પસંદ કરો અથવા ડેસ્કટોપ પર ઈનપુટ પદ્ધતિનો વપરાશ નિષ્ક્રિય કરો"
+msgstr ""
+"વાપરવા માટેની ઈનપુટ પદ્ધતિ પસંદ કરો અથવા ડેસ્કટોપ પર ઈનપુટ પદ્ધતિનો વપરાશ નિષ્ક્રિય કરો"
 
 #: ../src/im-chooser.desktop.in.in.h:2
 msgid "Input Method"
 msgstr "ઈનપુટ પદ્ધતિ"
-

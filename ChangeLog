@@ -1,3 +1,7 @@
+2007-12-27  Akira TAGOH  <tagoh@redhat.com>
+
+	* configure.ac: bump to 0.5.5.
+
 2007-12-25  Akira TAGOH  <tagoh@redhat.com>
 
 	* configure.ac: rename sr@Latn to sr@latin. (RH#426540)

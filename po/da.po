@@ -3,8 +3,8 @@
 # This file is distributed under the same license as the im-chooser package.
 # Magnus Larsson <fedoratrans@gmail.com>, 2006.
 # Keld Simonsen <keld@dkuug.dk>, 2006.
-# 
-# 
+#
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: im-chooser 0.3.2\n"

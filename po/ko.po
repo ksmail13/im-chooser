@@ -43,7 +43,9 @@ msgstr "사용 언어에 해당하는 기본값 입력 방식을 사용 (_U)"
 msgid ""
 "Your system chooses the appropriate Input Method for your language "
 "automatically from among Input Methods installed on your system."
-msgstr "시스템은 설치된 입력 방식에서 자동으로 사용 언어에 해당하는 입력 방식을 선택합니다."
+msgstr ""
+"시스템은 설치된 입력 방식에서 자동으로 사용 언어에 해당하는 입력 방식을 선택"
+"합니다."
 
 #: ../src/im-chooser.c:519
 msgid "Choose _specific Input Method"
@@ -53,15 +55,19 @@ msgstr "사용자 지정 입력 방식 선택 (_S) "
 msgid ""
 "Use the specific Input Method that you prefer regardless what Input Method "
 "the system recommends."
-msgstr "시스템이 권장하는 입력 방식에 상관없이 선호하는 사용자 지정 입력 방식을 사용합니다."
+msgstr ""
+"시스템이 권장하는 입력 방식에 상관없이 선호하는 사용자 지정 입력 방식을 사용"
+"합니다."
 
 #: ../src/im-chooser.c:527
 msgid "_Do not use Input Method"
 msgstr "입력 방식을 사용하지 않음(_D)"
 
 #: ../src/im-chooser.c:529
-msgid "Do not use Input Method no matter what language the desktop is running on."
-msgstr "데스크탑에서 실행되고 있는 언어에 상관없이 입력 방식을 사용하지 않습니다. "
+msgid ""
+"Do not use Input Method no matter what language the desktop is running on."
+msgstr ""
+"데스크탑에서 실행되고 있는 언어에 상관없이 입력 방식을 사용하지 않습니다. "
 
 #: ../src/im-chooser.c:532
 msgid "Use legacy _Input Method"
@@ -72,8 +78,8 @@ msgid ""
 "Use X Input Method anyway. In fact, which input method will be chosen for "
 "the desktop session, depends on the desktop language."
 msgstr ""
-"X 입력 방식을 사용합니다. 데스크탑에서 실행되고 있는 언어에 따라 데스크탑 세션에서"
-"의 입력 방식이 선택됩니다."
+"X 입력 방식을 사용합니다. 데스크탑에서 실행되고 있는 언어에 따라 데스크탑 세"
+"션에서의 입력 방식이 선택됩니다."
 
 #: ../src/im-chooser-simple.c:446
 #, c-format
@@ -97,8 +103,10 @@ msgid "Input Method _Preferences..."
 msgstr "입력 방식 설정 (_P) "
 
 #: ../src/main.c:66
-msgid "<span weight=\"bold\" size=\"larger\">No input method is available</span>"
-msgstr "<span weight=\"bold\" size=\"larger\">사용 가능한 입력 방식이 없음</span> "
+msgid ""
+"<span weight=\"bold\" size=\"larger\">No input method is available</span>"
+msgstr ""
+"<span weight=\"bold\" size=\"larger\">사용 가능한 입력 방식이 없음</span> "
 
 #: ../src/main.c:69
 msgid "Please install any input methods before running if you like."
@@ -125,9 +133,9 @@ msgstr "사용자 지정 "
 msgid ""
 "Choose the input method to be used or disable the input method usage on the "
 "desktop"
-msgstr "데스크탑에서 입력 방식 사용을 비활성화하거나 또는 사용할 입력 방식 선택 "
+msgstr ""
+"데스크탑에서 입력 방식 사용을 비활성화하거나 또는 사용할 입력 방식 선택 "
 
 #: ../src/im-chooser.desktop.in.in.h:2
 msgid "Input Method"
 msgstr "입력 방식"
-

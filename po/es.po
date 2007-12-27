@@ -65,7 +65,8 @@ msgid "_Do not use Input Method"
 msgstr "_Nunca usar Métodos de Entrada"
 
 #: ../src/im-chooser.c:529
-msgid "Do not use Input Method no matter what language the desktop is running on."
+msgid ""
+"Do not use Input Method no matter what language the desktop is running on."
 msgstr ""
 "Deshabilitar completamente los Métodos de Entrada, sin importar la "
 "configuración regional del escritorio."
@@ -105,7 +106,8 @@ msgid "Input Method _Preferences..."
 msgstr "_Preferencias del Método de Entrada..."
 
 #: ../src/main.c:66
-msgid "<span weight=\"bold\" size=\"larger\">No input method is available</span>"
+msgid ""
+"<span weight=\"bold\" size=\"larger\">No input method is available</span>"
 msgstr ""
 "<span weight=\"bold\" size=\"larger\">No hay disponible ningún métido de "
 "entrada</span>"
@@ -137,9 +139,10 @@ msgstr "Específico al Usuario"
 msgid ""
 "Choose the input method to be used or disable the input method usage on the "
 "desktop"
-msgstr "Selecciona el método de entrada a utilizar o desactiva los métodos de entrada en el escritorio."
+msgstr ""
+"Selecciona el método de entrada a utilizar o desactiva los métodos de "
+"entrada en el escritorio."
 
 #: ../src/im-chooser.desktop.in.in.h:2
 msgid "Input Method"
 msgstr "Método de Entrada"
-

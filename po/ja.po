@@ -3,7 +3,7 @@
 # Copyright (C) 2006 Red Hat, Inc. All rights reserved.
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Akira TAGOH <tagoh@redhat.com>, 2006.
+# Akira TAGOH <tagoh@redhat.com>, 2006,2007.
 # Kiyoto James Hashida <khashida@redhat.com>, 2006.
 # Noriko Mizumoto <noriko@redhat.com>, 2007.
 msgid ""
@@ -11,13 +11,12 @@ msgstr ""
 "Project-Id-Version: ja\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2007-11-16 18:20+0900\n"
-"PO-Revision-Date: 2007-09-25 09:13+1000\n"
-"Last-Translator: Noriko Mizumoto <noriko@redhat.com>\n"
+"PO-Revision-Date: 2007-12-27 15:10+0900\n"
+"Last-Translator: Akira TAGOH <tagoh@redhat.com>\n"
 "Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.11.4\n"
 
 #: ../src/im-chooser.c:482 ../src/im-chooser-simple.c:623
 msgid ""
@@ -85,12 +84,10 @@ msgid "Use %s"
 msgstr "%s を使用する"
 
 #: ../src/im-chooser-simple.c:448
-#, fuzzy
 msgid " (legacy)"
 msgstr " (レガシー)"
 
 #: ../src/im-chooser-simple.c:450
-#, fuzzy
 msgid " (recommended)"
 msgstr " (推奨)"
 
@@ -131,13 +128,10 @@ msgid "User Specific"
 msgstr "ユーザー固有"
 
 #: ../src/im-chooser.desktop.in.in.h:1
-#, fuzzy
 msgid ""
 "Choose the input method to be used or disable the input method usage on the "
 "desktop"
-msgstr ""
-"使用する入力メソッドを選択する、 またはデスクトップで入力メソッドの使用を無効"
-"にするための入力メソッド設定ツールです。"
+msgstr "使用する入力メソッドを選択、 またはデスクトップで入力メソッドの使用を無効します。"
 
 #: ../src/im-chooser.desktop.in.in.h:2
 msgid "Input Method"
