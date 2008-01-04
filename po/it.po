@@ -4,13 +4,13 @@
 # This file is distributed under the same license as the im-chooser package.
 #
 # Automatically generated, 2006.
-# Francesco Tombolini <tombo@adamantio.net>, 2007.
+# Francesco Tombolini <tombo@adamantio.net>, 2007, 2008.
 msgid ""
 msgstr ""
 "Project-Id-Version: it\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-11-16 18:20+0900\n"
-"PO-Revision-Date: 2007-06-09 20:46+0200\n"
+"POT-Creation-Date: 2007-12-23 07:26-0700\n"
+"PO-Revision-Date: 2008-01-04 18:39+0100\n"
 "Last-Translator: Francesco Tombolini <tombo@adamantio.net>\n"
 "Language-Team: Italiano <fedora-trans-it@redhat.com>\n"
 "MIME-Version: 1.0\n"
@@ -37,45 +37,35 @@ msgstr "Nessun IM valido installato"
 
 #: ../src/im-chooser.c:514
 msgid "_Use default Input Method for your language"
-msgstr ""
+msgstr "_Usare il metodo di input predefinito per il proprio linguaggio"
 
 #: ../src/im-chooser.c:516
 msgid ""
 "Your system chooses the appropriate Input Method for your language "
 "automatically from among Input Methods installed on your system."
-msgstr ""
+msgstr "Il sistema sceglie l'appropriato metodo di input per il linguaggio in uso automaticamente fra i metodi di input installati sul sistema."
 
 #: ../src/im-chooser.c:519
-#, fuzzy
 msgid "Choose _specific Input Method"
-msgstr "_Usa input method personalizzato"
+msgstr "Scegliere un metodo di input _specifico"
 
 #: ../src/im-chooser.c:521
-#, fuzzy
 msgid ""
 "Use the specific Input Method that you prefer regardless what Input Method "
 "the system recommends."
-msgstr ""
-"Usa l'input method preferito senza considerare l'input method consigliato "
-"dal sistema."
+msgstr "Usare un metodo di input specifico senza considerare il metodo consigliato dal sistema."
 
 #: ../src/im-chooser.c:527
-#, fuzzy
 msgid "_Do not use Input Method"
-msgstr "_Non usare mai gli input method"
+msgstr "Non usare meto_do di input"
 
 #: ../src/im-chooser.c:529
-#, fuzzy
-msgid ""
-"Do not use Input Method no matter what language the desktop is running on."
-msgstr ""
-"Disabilita totalmente gli input method senza considerare su quale locale il "
-"desktop è in esecuzione."
+msgid "Do not use Input Method no matter what language the desktop is running on."
+msgstr "Non usare metodo di input senza riguardo per il linguaggio usato dal desktop in esecuzione."
 
 #: ../src/im-chooser.c:532
-#, fuzzy
 msgid "Use legacy _Input Method"
-msgstr "_Utilizza i legacy input method"
+msgstr "Utilizzare metodo di _input legacy"
 
 #: ../src/im-chooser.c:534
 msgid ""
@@ -88,33 +78,31 @@ msgstr ""
 #: ../src/im-chooser-simple.c:446
 #, c-format
 msgid "Use %s"
-msgstr ""
+msgstr "Usare %s"
 
 #: ../src/im-chooser-simple.c:448
 msgid " (legacy)"
-msgstr ""
+msgstr " (legacy)"
 
 #: ../src/im-chooser-simple.c:450
 msgid " (recommended)"
-msgstr ""
+msgstr " (raccomandato)"
 
 #: ../src/im-chooser-simple.c:616
 msgid "_Enable input method feature"
-msgstr ""
+msgstr "Abilitar_e caratteristica del metodo di input"
 
 #: ../src/im-chooser-simple.c:655
-#, fuzzy
 msgid "Input Method _Preferences..."
-msgstr "Input Method"
+msgstr "_Preferenze del metodo di input..."
 
 #: ../src/main.c:66
-msgid ""
-"<span weight=\"bold\" size=\"larger\">No input method is available</span>"
-msgstr ""
+msgid "<span weight=\"bold\" size=\"larger\">No input method is available</span>"
+msgstr "<span weight=\"bold\" size=\"larger\">Nessun metodo di input disponibile</span>"
 
 #: ../src/main.c:69
 msgid "Please install any input methods before running if you like."
-msgstr ""
+msgstr "Si prega di installare un qualsiasi metodo di input prima dell'esecuzione."
 
 #: ../src/main.c:170
 msgid "IM Chooser - Input Method configuration tool"
@@ -126,32 +114,20 @@ msgstr "_Log Out"
 
 #: ../src/xinput.c:179
 msgid "xinputrc was modified by the user"
-msgstr ""
+msgstr "xinputrc è stato modificato dall'utente"
 
 #. label that uses to indicate their own .xinputrc
 #: ../src/im-chooser-private.h:36
 msgid "User Specific"
-msgstr ""
+msgstr "Specifiche utente"
 
 #: ../src/im-chooser.desktop.in.in.h:1
-#, fuzzy
 msgid ""
 "Choose the input method to be used or disable the input method usage on the "
 "desktop"
-msgstr ""
-"Tool di configurazione dell'Input Method per selezionare l'input method da "
-"utilizzare o per disabilitare l'input method sul desktop."
+msgstr "Scegliere il metodo di input da utilizzare o disabilitare l'uso del metodo di input sul desktop."
 
 #: ../src/im-chooser.desktop.in.in.h:2
 msgid "Input Method"
 msgstr "Input Method"
 
-#~ msgid "_Follow the system-wide configuration"
-#~ msgstr "_Segui la configurazione di tutto il sistema"
-
-#~ msgid ""
-#~ "Follow the system-wide input method configuration to determine which "
-#~ "input method should be used."
-#~ msgstr ""
-#~ "Segui la configurazione dell'input method di tutto il sistema per "
-#~ "determinare quale metodo d'input deve essere usato."
