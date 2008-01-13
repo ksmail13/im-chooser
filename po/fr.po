@@ -1,18 +1,18 @@
-# translation of im-chooser3.po to Français
+# translation of im-chooser (copie).trunk.po to Français
 # French translations for im-chooser package.
 # Copyright (C) 2006 Red Hat, Inc. All rights reserved.
 # This file is distributed under the same license as the im-chooser package.
 #
 # Automatically generated, 2006.
 # JAILLET Patrick <ap3demak@gmail.com>, 2006.
-# Thomas Canniot <mrtom@fedoraproject.org>, 2006, 2007.
+# Thomas Canniot <mrtom@fedoraproject.org>, 2006, 2007, 2008.
 # Decroux Fabien <fdecroux@redhat.com>, 2006.
 msgid ""
 msgstr ""
 "Project-Id-Version: fr\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-11-16 18:20+0900\n"
-"PO-Revision-Date: 2007-12-16 00:20+0100\n"
+"POT-Creation-Date: 2007-12-27 01:32-0700\n"
+"PO-Revision-Date: 2008-01-11 19:25+0100\n"
 "Last-Translator: Thomas Canniot <mrtom@fedoraproject.org>\n"
 "Language-Team: Français <fedora-trans-fr@redhat.com>\n"
 "MIME-Version: 1.0\n"
@@ -66,10 +66,8 @@ msgid "_Do not use Input Method"
 msgstr "_Ne pas utiliser de méthode de saisie"
 
 #: ../src/im-chooser.c:529
-msgid ""
-"Do not use Input Method no matter what language the desktop is running on."
-msgstr ""
-"Ne pas utiliser les méthodes de saisie quelque soit la langue du système"
+msgid "Do not use Input Method no matter what language the desktop is running on."
+msgstr "Ne pas utiliser les méthodes de saisie quelque soit la langue du système"
 
 #: ../src/im-chooser.c:532
 msgid "Use legacy _Input Method"
@@ -89,14 +87,12 @@ msgid "Use %s"
 msgstr "Utiliser %s"
 
 #: ../src/im-chooser-simple.c:448
-#, fuzzy
 msgid " (legacy)"
-msgstr " (Ancienne version)"
+msgstr " (ancienne version)"
 
 #: ../src/im-chooser-simple.c:450
-#, fuzzy
 msgid " (recommended)"
-msgstr " (Recommandée)"
+msgstr " (recommandée)"
 
 #: ../src/im-chooser-simple.c:616
 msgid "_Enable input method feature"
@@ -107,8 +103,7 @@ msgid "Input Method _Preferences..."
 msgstr "_Préférences des méthodes de saisie..."
 
 #: ../src/main.c:66
-msgid ""
-"<span weight=\"bold\" size=\"larger\">No input method is available</span>"
+msgid "<span weight=\"bold\" size=\"larger\">No input method is available</span>"
 msgstr ""
 "<span weight=\"bold\" size=\"larger\">Aucune méthode de saisie n'est "
 "disponible</span>"
@@ -135,15 +130,12 @@ msgid "User Specific"
 msgstr "Spécifique à l'utilisateur"
 
 #: ../src/im-chooser.desktop.in.in.h:1
-#, fuzzy
 msgid ""
 "Choose the input method to be used or disable the input method usage on the "
 "desktop"
-msgstr ""
-"Outil de configuration de méthode de saisie pour choisir la méthode à "
-"utiliser ou pour désactiver l'utilisation de méthodes de saisie sur le "
-"système."
+msgstr "Choisissez la méthode de saisie à utiliser ou désactivez l'utilisation des méthodes de saisie sur le système."
 
 #: ../src/im-chooser.desktop.in.in.h:2
 msgid "Input Method"
 msgstr "Méthode de saisie"
+
