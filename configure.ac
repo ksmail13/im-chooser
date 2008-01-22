@@ -1,5 +1,5 @@
 dnl Process this file with autoconf to produce a configure script.
-AC_INIT([im-chooser], 0.5.5, [https://bugzilla.redhat.com/enter_bug.cgi?product=Fedora&component=im-chooser])
+AC_INIT([im-chooser], 0.99, [https://bugzilla.redhat.com/enter_bug.cgi?product=Fedora&component=im-chooser])
 
 . ./requires
 
@@ -42,6 +42,12 @@ fi
 changequote([,])dnl
 
 dnl ======================================================================
+dnl define variables
+dnl ======================================================================
+DBUS_SERVICE_DIR=`pkg-config --variable session_bus_services_dir dbus-1`
+AC_SUBST(DBUS_SERVICE_DIR)
+
+dnl ======================================================================
 dnl functions testing
 dnl ======================================================================
 
@@ -59,6 +65,10 @@ dnl ======================================================================
 dnl check pkg-config stuff
 dnl ======================================================================
 PKG_CHECK_MODULES(IMCHOOSE, gtk+-2.0)
+PKG_CHECK_MODULES(IMSETTINGS, dbus-1 dbus-glib-1)
+PKG_CHECK_MODULES(GCONF, gconf-2.0,
+	[use_gconf="yes"],
+	[use_gconf="no"])
 PKG_CHECK_MODULES(GNOME, libgnomeui-2.0,
 	[AC_DEFINE(USE_GNOME,,[use GNOME library])
 	 use_gnome="yes"],
@@ -66,8 +76,15 @@ PKG_CHECK_MODULES(GNOME, libgnomeui-2.0,
 	 use_gnome="no"])
 AC_SUBST(IMCHOOSE_CFLAGS)
 AC_SUBST(IMCHOOSE_LIBS)
+AC_SUBST(IMSETTINGS_CFLAGS)
+AC_SUBST(IMSETTINGS_LIBS)
+AC_SUBST(GCONF_CFLAGS)
+AC_SUBST(GCONF_LIBS)
 AC_SUBST(GNOME_CFLAGS)
 AC_SUBST(GNOME_LIBS)
+
+AM_CONDITIONAL(ENABLE_GCONF, test x$use_gconf != xno)
+AM_CONDITIONAL(ENABLE_GNOME, test x$use_gnome != xno)
 
 dnl ======================================================================
 dnl check another libraries
@@ -167,13 +184,20 @@ dnl output
 dnl ======================================================================
 AC_CONFIG_FILES([
 Makefile
-src/Makefile
-src/im-chooser.desktop.in
 data/Makefile
 data/none.in
 data/xim.in
 data/xinput.sh.in
+imsettings/backends/Makefile
+imsettings/backends/gconf/Makefile
+imsettings/imsettings/Makefile
+imsettings/src/Makefile
+imsettings/utils/Makefile
+imsettings/Makefile
+imsettings/imsettings.pc
 po/Makefile.in
+src/Makefile
+src/im-chooser.desktop.in
 ])
 AC_OUTPUT
 

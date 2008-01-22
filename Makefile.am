@@ -1,5 +1,5 @@
 NULL =
-SUBDIRS = src data po
+SUBDIRS = imsettings src data po
 
 EXTRA_DIST =			\
 	intltool-extract.in	\
