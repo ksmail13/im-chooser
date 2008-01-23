@@ -189,6 +189,29 @@ imsettings_get_im_module_name(GObject      *object,
 }
 
 static gboolean
+imsettings_get_xim_program(GObject      *object,
+			   const gchar  *module,
+			   const gchar **progname,
+			   const gchar **progargs,
+			   GError      **error)
+{
+	IMSettingsObserverClass *klass = IMSETTINGS_OBSERVER_GET_CLASS (object);
+	IMSettingsInfo *info;
+	gboolean retval = FALSE;
+
+	if (klass->get_info) {
+		info = klass->get_info(IMSETTINGS_OBSERVER (object), module, error);
+		if (*error == NULL) {
+			*progname = imsettings_info_get_xim_program(info);
+			*progargs = imsettings_info_get_xim_args(info);
+			retval = TRUE;
+		}
+	}
+
+	return retval;
+}
+
+static gboolean
 imsettings_get_preferences_program(GObject      *object,
 				   const gchar  *module,
 				   const gchar **progname,

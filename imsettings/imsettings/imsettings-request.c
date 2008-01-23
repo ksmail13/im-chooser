@@ -278,6 +278,31 @@ imsettings_request_get_im_module_name(IMSettingsRequest *imsettings,
 }
 
 gboolean
+imsettings_request_get_xim_program(IMSettingsRequest *imsettings,
+				   const gchar       *module,
+				   gchar            **out_prog,
+				   gchar            **out_prog_args)
+{
+	IMSettingsRequestPrivate *priv;
+	GError *error = NULL;
+	gboolean retval = TRUE;
+
+	g_return_val_if_fail (IMSETTINGS_IS_REQUEST (imsettings), FALSE);
+	g_return_val_if_fail (module != NULL && module[0] != 0, FALSE);
+	g_return_val_if_fail (out_prog != NULL, FALSE);
+	g_return_val_if_fail (out_prog_args != NULL, FALSE);
+
+	priv = IMSETTINGS_REQUEST_GET_PRIVATE (imsettings);
+	if (!com_redhat_DBus_imsettings_IMInfo_get_xim_program(priv->proxy, module, out_prog, out_prog_args, &error)) {
+		g_warning(_("Failed to invoke a method `%s':\n  %s"), "GetXimProgram", error->message);
+		g_error_free(error);
+		retval = FALSE;
+	}
+
+	return retval;
+}
+
+gboolean
 imsettings_request_get_preferences_program(IMSettingsRequest *imsettings,
 					   const gchar       *module,
 					   gchar            **out_prog,

@@ -31,7 +31,9 @@ main(int    argc,
 {
 	IMSettingsRequest *imsettings;
 	DBusConnection *connection;
-	gchar *file, *gtkimm, *qtimm, *xim, *prefs_prog, *prefs_args, *aux_prog, *aux_args, *short_desc, *long_desc;
+	gchar *file, *gtkimm, *qtimm, *xim;
+	gchar *xim_prog, *xim_args, *prefs_prog, *prefs_args, *aux_prog, *aux_args;
+	gchar *short_desc, *long_desc;
 
 	g_type_init();
 
@@ -54,6 +56,7 @@ main(int    argc,
 		gtkimm = imsettings_request_get_im_module_name(imsettings, argv[1], IMSETTINGS_IMM_GTK);
 		qtimm = imsettings_request_get_im_module_name(imsettings, argv[1], IMSETTINGS_IMM_QT);
 		xim = imsettings_request_get_im_module_name(imsettings, argv[1], IMSETTINGS_IMM_XIM);
+		imsettings_request_get_xim_program(imsettings, argv[1], &xim_prog, &xim_args);
 		imsettings_request_get_preferences_program(imsettings, argv[1], &prefs_prog, &prefs_args);
 		imsettings_request_get_auxiliary_program(imsettings, argv[1], &aux_prog, &aux_args);
 		short_desc = imsettings_request_get_short_description(imsettings, argv[1]);
@@ -62,13 +65,16 @@ main(int    argc,
 		g_print("Xinput file: %s\n"
 			"GTK+ immodule: %s\n"
 			"Qt immodule: %s\n"
-			"XIM server: %s\n"
+			"XMODIFIERS: @im=%s\n"
+			"XIM server: %s %s\n"
 			"preferences: %s %s\n"
 			"auxiliary: %s %s\n"
 			"Short Description: %s\n"
 			"Long Description: %s\n",
 			file, gtkimm, qtimm, xim,
-			prefs_prog, prefs_args, aux_prog, aux_args,
+			xim_prog, xim_args,
+			prefs_prog, prefs_args,
+			aux_prog, aux_args,
 			short_desc, long_desc);
 	}
 	g_object_unref(imsettings);

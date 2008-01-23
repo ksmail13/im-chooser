@@ -2,6 +2,7 @@ NULL =
 
 INCLUDES =						\
 	-DIMSETTINGS_LOCALEDIR="\"$(datadir)/locale\""	\
+	-DXINIT_PATH="\"$(XINIT_PATH)\""		\
 	-DXINPUT_PATH="\"$(XINPUT_PATH)\""		\
 	-DXINPUT_SUFFIX="\"$(XINPUT_SUFFIX)\""		\
 	-DIMSETTINGS_XINPUT_SH="\"$(XINPUTSH)\""	\

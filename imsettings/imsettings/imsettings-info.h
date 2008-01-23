@@ -53,6 +53,8 @@ const gchar    *imsettings_info_get_filename     (IMSettingsInfo       *info);
 const gchar    *imsettings_info_get_gtkimm       (IMSettingsInfo       *info);
 const gchar    *imsettings_info_get_qtimm        (IMSettingsInfo       *info);
 const gchar    *imsettings_info_get_xim          (IMSettingsInfo       *info);
+const gchar    *imsettings_info_get_xim_program  (IMSettingsInfo       *info);
+const gchar    *imsettings_info_get_xim_args     (IMSettingsInfo       *info);
 const gchar    *imsettings_info_get_prefs_program(IMSettingsInfo       *info);
 const gchar    *imsettings_info_get_prefs_args   (IMSettingsInfo       *info);
 const gchar    *imsettings_info_get_aux_program  (IMSettingsInfo       *info);

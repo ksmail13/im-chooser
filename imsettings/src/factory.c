@@ -29,6 +29,7 @@
 #include <glib.h>
 #include <glib/gi18n.h>
 #include <glib-object.h>
+#include <X11/Xlib.h>
 #include "imsettings/imsettings-request.h"
 #include "imsettings/imsettings.h"
 #include "imsettings-manager.h"
@@ -63,13 +64,20 @@ main(int    argc,
 	IMSettingsManager *manager;
 	IMSettingsRequest *req;
 	gboolean arg_replace = FALSE;
+	gchar *arg_display_name = NULL, *display_name = NULL;
 	GOptionContext *ctx = g_option_context_new(NULL);
 	GOptionEntry entries[] = {
 		{"replace", 0, G_OPTION_FLAG_NO_ARG, G_OPTION_ARG_NONE, &arg_replace, N_("Replace the running settings daemon with new instance."), NULL},
+		{"display", 0, G_OPTION_FLAG_IN_MAIN, G_OPTION_ARG_STRING, &arg_display_name, N_("X display to use"), N_("DISPLAY")},
+#if 0
+		/* FIXME */
+		{"screen", 0, 0, G_OPTION_ARG_INT, &arg_screen, N_("X screen to use"), N_("SCREEN")},
+#endif
 		{NULL, 0, 0, 0, NULL, NULL, NULL}
 	};
 	DBusConnection *connection;
 	DBusGConnection *gconn;
+	Display *display;
 
 #ifdef ENABLE_NLS
 	bindtextdomain (GETTEXT_PACKAGE, IMSETTINGS_LOCALEDIR);
@@ -93,6 +101,16 @@ main(int    argc,
 	}
 	g_option_context_free(ctx);
 
+	display = XOpenDisplay(arg_display_name);
+	if (display == NULL) {
+		g_printerr(_("Failed to open a X display."));
+		exit(1);
+	}
+	if (display_name == NULL)
+		display_name = g_strdup(DisplayString(display));
+
+	XCloseDisplay(display);
+
 	/* FIXME: value type has to be initialized before using DBusGProxy.
 	 *        and we may want to use a private connection.
 	 */
@@ -112,6 +130,7 @@ main(int    argc,
 		g_print("Failed to create an instance for the settings daemon.\n");
 		exit(1);
 	}
+	g_object_set(G_OBJECT (manager), "display_name", display_name, NULL);
 
 	g_signal_connect(manager, "reload",
 			 G_CALLBACK (reload_cb),
@@ -129,6 +148,7 @@ main(int    argc,
 
 	g_print("exiting from the loop\n");
 
+	g_free(display_name);
 	g_object_unref(manager);
 
 	return 0;

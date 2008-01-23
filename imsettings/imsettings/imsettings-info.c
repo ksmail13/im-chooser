@@ -53,6 +53,8 @@ typedef struct _IMSettingsInfoPrivate {
 	gchar    *gtkimm;
 	gchar    *qtimm;
 	gchar    *xim;
+	gchar    *xim_prog;
+	gchar    *xim_args;
 	gchar    *prefs_prog;
 	gchar    *prefs_args;
 	gchar    *aux_prog;
@@ -71,6 +73,8 @@ enum {
 	PROP_QT_IMM,
 	PROP_XIM,
 	PROP_IGNORE_FLAG,
+	PROP_XIM_PROG,
+	PROP_XIM_PROG_ARGS,
 	PROP_PREFS_PROG,
 	PROP_PREFS_PROG_ARGS,
 	PROP_AUX_PROG,
@@ -101,6 +105,8 @@ imsettings_info_notify_properties(GObject     *object,
 		"QT_IM_MODULE=",
 		"XIM=",
 		"IM_CHOOSER_IGNORE_ME=",
+		"XIM_PROGRAM=",
+		"XIM_ARGS=",
 		"PREFERENCE_PROGRAM=",
 		"PREFERENCE_ARGS=",
 		"AUXILIARY_PROGRAM=",
@@ -114,6 +120,8 @@ imsettings_info_notify_properties(GObject     *object,
 		"qtimm",
 		"xim",
 		"ignore",
+		"xim_prog",
+		"xim_args",
 		"prefs_prog",
 		"prefs_args",
 		"aux_prog",
@@ -171,6 +179,8 @@ imsettings_info_notify_properties(GObject     *object,
 					    case PROP_GTK_IMM:
 					    case PROP_QT_IMM:
 					    case PROP_XIM:
+					    case PROP_XIM_PROG:
+					    case PROP_XIM_PROG_ARGS:
 					    case PROP_PREFS_PROG:
 					    case PROP_PREFS_PROG_ARGS:
 					    case PROP_AUX_PROG:
@@ -249,6 +259,12 @@ imsettings_info_set_property(GObject      *object,
 	    case PROP_IGNORE_FLAG:
 		    _set_bool_prop(ignore);
 		    break;
+	    case PROP_XIM_PROG:
+		    _set_str_prop(xim_prog);
+		    break;
+	    case PROP_XIM_PROG_ARGS:
+		    _set_str_prop(xim_args);
+		    break;
 	    case PROP_PREFS_PROG:
 		    _set_str_prop(prefs_prog);
 		    break;
@@ -311,6 +327,12 @@ imsettings_info_get_property(GObject    *object,
 	    case PROP_IGNORE_FLAG:
 		    _get_bool_prop(ignore);
 		    break;
+	    case PROP_XIM_PROG:
+		    _get_str_prop(xim_program);
+		    break;
+	    case PROP_XIM_PROG_ARGS:
+		    _get_str_prop(xim_args);
+		    break;
 	    case PROP_PREFS_PROG:
 		    _get_str_prop(prefs_program);
 		    break;
@@ -353,6 +375,8 @@ imsettings_info_finalize(GObject *object)
 	_my_free(gtkimm);
 	_my_free(qtimm);
 	_my_free(xim);
+	_my_free(xim_prog);
+	_my_free(xim_args);
 	_my_free(prefs_prog);
 	_my_free(prefs_args);
 	_my_free(aux_prog);
@@ -405,6 +429,18 @@ imsettings_info_class_init(IMSettingsInfoClass *klass)
 							     _("A flag to not list up."),
 							     FALSE,
 							     G_PARAM_READWRITE));
+	g_object_class_install_property(object_class, PROP_XIM_PROG,
+					g_param_spec_string("xim_prog",
+							    _("XIM server program name"),
+							    _("XIM server program to be run"),
+							    NULL,
+							    G_PARAM_READWRITE));
+	g_object_class_install_property(object_class, PROP_XIM_PROG_ARGS,
+					g_param_spec_string("xim_args",
+							    _("XIM server program's options"),
+							    _("Command line options for XIM server program"),
+							    NULL,
+							    G_PARAM_READWRITE));
 	g_object_class_install_property(object_class, PROP_PREFS_PROG,
 					g_param_spec_string("prefs_prog",
 							    _("Preference program name"),
@@ -464,6 +500,8 @@ imsettings_info_init(IMSettingsInfo *info)
 	priv->gtkimm = NULL;
 	priv->qtimm = NULL;
 	priv->xim = NULL;
+	priv->xim_prog = NULL;
+	priv->xim_args = NULL;
 	priv->prefs_prog = NULL;
 	priv->prefs_args = NULL;
 	priv->aux_prog = NULL;
@@ -571,6 +609,8 @@ _IMSETTINGS_DEFUNC_PROPERTY (const gchar *,filename, filename, NULL)
 _IMSETTINGS_DEFUNC_PROPERTY (const gchar *,gtkimm, gtkimm, NULL)
 _IMSETTINGS_DEFUNC_PROPERTY (const gchar *,qtimm, qtimm, NULL)
 _IMSETTINGS_DEFUNC_PROPERTY (const gchar *,xim, xim, NULL)
+_IMSETTINGS_DEFUNC_PROPERTY (const gchar *,xim_program, xim_prog, NULL)
+_IMSETTINGS_DEFUNC_PROPERTY (const gchar *,xim_args, xim_args, NULL)
 _IMSETTINGS_DEFUNC_PROPERTY (const gchar *,prefs_program, prefs_prog, NULL)
 _IMSETTINGS_DEFUNC_PROPERTY (const gchar *,prefs_args, prefs_args, NULL)
 _IMSETTINGS_DEFUNC_PROPERTY (const gchar *,aux_program, aux_prog, NULL)
@@ -618,6 +658,8 @@ imsettings_info_compare(const IMSettingsInfo *info1,
 	return (_cmp(gtkimm) &&
 		_cmp(qtimm) &&
 		_cmp(xim) &&
+		_cmp(xim_prog) &&
+		_cmp(xim_args) &&
 		_cmp(prefs_prog) &&
 		_cmp(prefs_args) &&
 		_cmp(aux_prog) &&

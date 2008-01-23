@@ -60,6 +60,10 @@ gchar             *imsettings_request_get_xinput_filename    (IMSettingsRequest 
 gchar             *imsettings_request_get_im_module_name     (IMSettingsRequest *imsettings,
                                                               const gchar       *module,
                                                               guint32            type);
+gboolean           imsettings_request_get_xim_program        (IMSettingsRequest *imsettings,
+                                                              const gchar       *module,
+                                                              gchar             **out_prog,
+                                                              gchar             **out_prog_args);
 gboolean           imsettings_request_get_preferences_program(IMSettingsRequest *imsettings,
                                                               const gchar       *module,
                                                               gchar             **out_prog,

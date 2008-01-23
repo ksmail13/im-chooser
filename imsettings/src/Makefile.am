@@ -23,7 +23,12 @@ im_settings_daemon_SOURCES =						\
 	$(NULL)
 im_settings_daemon_CFLAGS =						\
 	-DG_LOG_DOMAIN="\"IM-Settings-Daemon\""				\
+	$(IMDAEMON_CFLAGS)						\
 	$(NULL)
+im_settings_daemon_LDADD =						\
+	$(IMDAEMON_LIBS)						\
+	$(NULL)
+
 im_info_daemon_SOURCES =						\
 	factory_info.c							\
 	imsettings-manager.c						\

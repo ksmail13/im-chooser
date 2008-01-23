@@ -1,5 +1,28 @@
+2008-01-23  Akira TAGOH  <tagoh@redhat.com>
+
+	* src/factory.c (main): Update to get a X display name.
+
+	* src/imsettings-manager.c (imsettings_manager_real_set_property): new.
+	(imsettings_manager_real_get_property): new.
+	(_remove_pidfile): new.
+	(_start_process): new.
+	(_build_pidfilename): new.
+	(imsettings_manager_real_start_im): Add an implementation to bring up
+	an auxiliary program and XIM server.
+
+	* imsettings/imsettings-request.c (imsettings_request_get_xim_program):
+	new function.
+
+	* imsettings/imsettings-observer.c (imsettings_get_xim_program): add
+	a callback to deal with GetXimProgram method.
+
+	* imsettings/imsettings.xml: add GetXimProgram method.
+
+	* imsettings/imsettings-info.c (imsettings_info_get_xim_program): new.
+	(imsettings_info_get_xim_args): new.
+
+	* utils/imsettings-info.c (main): output XIM server's configuration too.
+
 2008-01-22  Akira TAGOH  <tagoh@redhat.com>
 
 	* Initial commit for imsettings library.
-
-
