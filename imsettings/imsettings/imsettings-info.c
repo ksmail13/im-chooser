@@ -632,7 +632,19 @@ imsettings_info_get_short_desc(IMSettingsInfo *info)
 }
 
 _IMSETTINGS_DEFUNC_PROPERTY (const gchar *,long_desc, long_desc, NULL)
-_IMSETTINGS_DEFUNC_PROPERTY (gboolean,is_visible, ignore, FALSE)
+
+gboolean
+imsettings_info_is_visible(IMSettingsInfo *info)
+{
+	IMSettingsInfoPrivate *priv;
+
+	g_return_val_if_fail (IMSETTINGS_IS_INFO (info), FALSE);
+
+	priv = IMSETTINGS_INFO_GET_PRIVATE (info);
+
+	return !priv->ignore;
+}
+
 _IMSETTINGS_DEFUNC_PROPERTY (gboolean,is_system_default, is_system_default, FALSE)
 _IMSETTINGS_DEFUNC_PROPERTY (gboolean,is_user_default, is_user_default, FALSE)
 

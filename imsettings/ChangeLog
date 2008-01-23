@@ -1,3 +1,12 @@
+2008-01-24  Akira TAGOH  <tagoh@redhat.com>
+
+	* src/imsettings-manager.c (imsettings_manager_load_conf): Make
+	a condition to not segfault. user's .xinputrc is more likely to be
+	unavailable.
+
+	* imsettings/imsettings-info.c (imsettings_info_is_visible):
+	Fix a reverse flag.
+
 2008-01-23  Akira TAGOH  <tagoh@redhat.com>
 
 	* src/factory.c (main): Update to get a X display name.

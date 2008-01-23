@@ -496,18 +496,22 @@ imsettings_manager_load_conf(IMSettingsManager *manager)
 	filename = g_build_filename(homedir, IMSETTINGS_USER_XINPUT_CONF, NULL);
 	info = imsettings_info_new(filename);
 	g_free(filename);
-	g_object_set(G_OBJECT (info), "is_user_default", TRUE, NULL);
-	name = imsettings_info_get_short_desc(info);
-	if ((p = g_hash_table_lookup(priv->im_info_table, name)) == NULL) {
-		g_warning(_("No user default IM found at the pre-search phase. Adding..."));
-		g_hash_table_insert(priv->im_info_table, g_strdup(name), info);
-	} else {
-		if (!imsettings_info_compare(info, p)) {
-			g_warning(_("Looking up the different object with the same key. it may happens due to the un-unique short description. replacing..."));
-			g_hash_table_replace(priv->im_info_table, g_strdup(name), info);
+	if (imsettings_info_is_visible(info)) {
+		g_object_set(G_OBJECT (info), "is_user_default", TRUE, NULL);
+		name = imsettings_info_get_short_desc(info);
+		if ((p = g_hash_table_lookup(priv->im_info_table, name)) == NULL) {
+			g_warning(_("No user default IM found at the pre-search phase. Adding..."));
+			g_hash_table_insert(priv->im_info_table, g_strdup(name), info);
 		} else {
-			/* reuse the object */
-			g_object_set(G_OBJECT (p), "is_user_default", TRUE, NULL);
+			if (!imsettings_info_compare(info, p)) {
+				g_warning(_("Looking up the different object with the same key. it may happens due to the un-unique short description. replacing..."));
+				g_hash_table_replace(priv->im_info_table, g_strdup(name), info);
+			} else {
+				/* reuse the object */
+				g_object_set(G_OBJECT (p), "is_user_default", TRUE, NULL);
+			}
 		}
+	} else {
+		g_object_unref(info);
 	}
 }
