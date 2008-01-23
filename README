@@ -29,6 +29,11 @@ XIM
 	For settings of XIM. actually it will be used like
 	XMODIFIERS=@im=$XIM.
 
+XIM_PROGRAM
+	A XIM server be brought up to communicate through
+	XIM protocol. XIM_ARGS can be used to give any
+	options for XIM_PROGRAM.
+
 GTK_IM_MODULE
 	For GTK+ immodule.
 
