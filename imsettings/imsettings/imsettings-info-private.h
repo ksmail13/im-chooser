@@ -32,6 +32,8 @@ G_BEGIN_DECLS
 #define IMSETTINGS_GLOBAL_XINPUT_CONF		"xinputrc"
 /* user config file */
 #define IMSETTINGS_USER_XINPUT_CONF		".xinputrc"
+/* config file use to be determined that IM is never used no matter what */
+#define IMSETTINGS_NONE_CONF			"none"
 #define IMSETTINGS_USER_SPECIFIC_SHORT_DESC	N_("user Specific")
 #define IMSETTINGS_USER_SPECIFIC_LONG_DESC	N_("xinputrc was modified by the user")
 

@@ -4,6 +4,8 @@ INCLUDES =								\
 	-DIMSETTINGS_LOCALEDIR="\"$(datadir)/locale\""			\
 	-DXINIT_PATH="\"$(XINIT_PATH)\""				\
 	-DXINPUTRC_PATH="\"$(XINPUTRC_PATH)\""				\
+	-DXINPUT_PATH="\"$(XINPUT_PATH)\""				\
+	-DXINPUT_SUFFIX="\"$(XINPUT_SUFFIX)\""				\
 	-I$(top_srcdir)/imsettings					\
 	$(IMSETTINGS_CFLAGS)						\
 	$(NULL)

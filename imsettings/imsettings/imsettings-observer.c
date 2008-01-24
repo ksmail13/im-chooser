@@ -31,6 +31,7 @@
 #include "imsettings.h"
 #include "imsettings-observer.h"
 #include "imsettings-utils.h"
+#include "imsettings-marshal.h"
 
 #define IMSETTINGS_OBSERVER_GET_PRIVATE(_o_)	(G_TYPE_INSTANCE_GET_PRIVATE ((_o_), IMSETTINGS_TYPE_OBSERVER, IMSettingsObserverPrivate))
 
@@ -117,14 +118,15 @@ imsettings_start_im(GObject      *object,
 static gboolean
 imsettings_stop_im(GObject      *object,
 		   const gchar  *module,
+		   gboolean      force,
 		   gboolean     *ret,
 		   GError      **error)
 {
 	IMSettingsObserverClass *klass = IMSETTINGS_OBSERVER_GET_CLASS (object);
 
 	*ret = FALSE;
-	if (klass->start_im) {
-		*ret = klass->start_im(IMSETTINGS_OBSERVER (object), module, error);
+	if (klass->stop_im) {
+		*ret = klass->stop_im(IMSETTINGS_OBSERVER (object), module, force, error);
 	}
 
 	return *ret;
@@ -452,9 +454,10 @@ imsettings_observer_real_start_im(IMSettingsObserver *imsettings,
 static gboolean
 imsettings_observer_real_stop_im(IMSettingsObserver *imsettings,
 				 const gchar        *module,
+				 gboolean            force,
 				 GError            **error)
 {
-	g_signal_emit(imsettings, signals[STOPIM], 0, module, NULL);
+	g_signal_emit(imsettings, signals[STOPIM], 0, module, force, NULL);
 
 	return TRUE;
 }
@@ -516,9 +519,9 @@ imsettings_observer_class_init(IMSettingsObserverClass *klass)
 				       G_SIGNAL_RUN_FIRST,
 				       G_STRUCT_OFFSET (IMSettingsObserverClass, s_stop_im),
 				       NULL, NULL,
-				       g_cclosure_marshal_VOID__STRING,
-				       G_TYPE_NONE, 1,
-				       G_TYPE_STRING);
+				       imsettings_marshal_VOID__STRING_BOOLEAN,
+				       G_TYPE_NONE, 2,
+				       G_TYPE_STRING, G_TYPE_BOOLEAN);
 
 	dbus_g_object_type_install_info(IMSETTINGS_TYPE_OBSERVER,
 					&dbus_glib_imsettings_object_info);

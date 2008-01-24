@@ -220,12 +220,21 @@ imsettings_info_set_property(GObject      *object,
 			     GParamSpec   *pspec)
 {
 	IMSettingsInfoPrivate *priv = IMSETTINGS_INFO_GET_PRIVATE (object);
+	gchar *p;
+	struct stat st;
 
 #define _set_str_prop(_m_)						\
 	G_STMT_START {							\
+		const gchar *v;						\
+									\
 		if (priv->_m_)						\
 			g_free(priv->_m_);				\
-		priv->_m_ = g_strdup(g_value_get_string(value));	\
+		v = g_value_get_string(value);				\
+		if (v && v[0] != 0) {					\
+			priv->_m_ = g_strdup(g_value_get_string(value)); \
+		} else {						\
+			priv->_m_ = NULL;				\
+		}							\
 		g_object_notify(object, # _m_);				\
 	} G_STMT_END
 #define _set_bool_prop(_m_)				\
@@ -237,12 +246,18 @@ imsettings_info_set_property(GObject      *object,
 	switch (prop_id) {
 	    case PROP_FILENAME:
 		    _set_str_prop(filename);
-		    if (priv->filename == NULL) {
+		    p = g_build_filename(g_get_home_dir(), IMSETTINGS_USER_XINPUT_CONF, NULL);
+		    if (strcmp(p, priv->filename) == 0 &&
+			lstat(priv->filename, &st) == 0 &&
+			!S_ISLNK (st.st_mode)) {
 			    /* special case to deal with the user-own conf file */
 			    g_object_set(object,
 					 "short_desc", IMSETTINGS_USER_SPECIFIC_SHORT_DESC,
 					 "long_desc", IMSETTINGS_USER_SPECIFIC_LONG_DESC,
 					 NULL);
+		    } else if (stat(priv->filename, &st) == -1) {
+			    /* maybe dead link */
+			    g_object_set(object, "ignore", TRUE, NULL);
 		    } else {
 			    imsettings_info_notify_properties(object, priv->filename);
 		    }
@@ -587,6 +602,9 @@ _imsettings_info_get_filename_list(void)
 IMSettingsInfo *
 imsettings_info_new(const gchar *filename)
 {
+	g_return_val_if_fail (filename != NULL, NULL);
+	g_return_val_if_fail (g_file_test(filename, G_FILE_TEST_EXISTS), NULL);
+
 	return g_object_new(IMSETTINGS_TYPE_INFO,
 			    "filename", filename,
 			    NULL);
@@ -645,8 +663,29 @@ imsettings_info_is_visible(IMSettingsInfo *info)
 	return !priv->ignore;
 }
 
-_IMSETTINGS_DEFUNC_PROPERTY (gboolean,is_system_default, is_system_default, FALSE)
-_IMSETTINGS_DEFUNC_PROPERTY (gboolean,is_user_default, is_user_default, FALSE)
+gboolean
+imsettings_info_is_system_default(IMSettingsInfo *info)
+{
+	IMSettingsInfoPrivate *priv;
+
+	g_return_val_if_fail (IMSETTINGS_IS_INFO (info), FALSE);
+
+	priv = IMSETTINGS_INFO_GET_PRIVATE (info);
+
+	return priv->is_system_default;
+}
+
+gboolean
+imsettings_info_is_user_default(IMSettingsInfo *info)
+{
+	IMSettingsInfoPrivate *priv;
+
+	g_return_val_if_fail (IMSETTINGS_IS_INFO (info), FALSE);
+
+	priv = IMSETTINGS_INFO_GET_PRIVATE (info);
+
+	return priv->is_user_default;
+}
 
 gboolean
 imsettings_info_compare(const IMSettingsInfo *info1,

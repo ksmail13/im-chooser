@@ -73,6 +73,7 @@ struct _IMSettingsObserverClass {
 						    GError             **error);
 	gboolean          (* stop_im)              (IMSettingsObserver *imsettings,
 						    const gchar         *module,
+						    gboolean             force,
 						    GError             **error);
 
 	/* signals */

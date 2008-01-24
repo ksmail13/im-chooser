@@ -92,6 +92,11 @@ AM_CONDITIONAL(ENABLE_GNOME, test x$use_gnome != xno)
 dnl ======================================================================
 dnl check another libraries
 dnl ======================================================================
+AM_PATH_GLIB_2_0($GLIB_REQUIRED, :,
+	AC_MSG_ERROR([
+*** GLIB $GLIB_REQUIRED_VERSION or better is required. The latest version of
+*** GLIB is always available from ftp://ftp.gtk.org/.]),
+    glib)
 
 dnl ======================================================================
 dnl options

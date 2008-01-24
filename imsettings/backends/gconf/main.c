@@ -67,15 +67,11 @@ gconf_imsettings_change_to(GObject      *object,
 		*ret = FALSE;
 	} else {
 		g_print("setting up gconf key to %s\n", module);
-#if 0
 		if (!gconf_engine_set(engine, "/desktop/gnome/interface/gtk-im-module", gval, error)) {
 			*ret = FALSE;
 		} else {
 			*ret = TRUE;
 		}
-#else
-		*ret = TRUE;
-#endif
 		gconf_value_free(gval);
 	}
 

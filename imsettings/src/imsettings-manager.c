@@ -32,6 +32,7 @@
 #include <string.h>
 #include <unistd.h>
 #include <glib/gfileutils.h>
+#include <glib/gmessages.h>
 #include <glib/gstdio.h>
 #include <glib/gi18n-lib.h>
 #include "imsettings/imsettings.h"
@@ -206,11 +207,13 @@ _start_process(const gchar  *prog_name,
 	gchar *contents = NULL;
 	gint tried = 0;
 
+	if (prog_name == NULL || prog_name[0] == 0)
+		goto end;
   retry:
 	if (tried > 1)
 		goto end;
 	tried++;
-	if ((fd = g_creat(pidfile, S_IRUSR|S_IWUSR)) == -1) {
+	if ((fd = g_open(pidfile, O_CREAT|O_EXCL|O_WRONLY, S_IRUSR|S_IWUSR)) == -1) {
 		gsize len = 0;
 		int pid, save_errno = errno;
 
@@ -219,19 +222,21 @@ _start_process(const gchar  *prog_name,
 				    g_file_error_from_errno(save_errno),
 				    _("Failed to open a pidfile: %s"),
 				    pidfile);
-			return FALSE;
+			goto end;
 		}
 		if (!g_file_get_contents(pidfile, &contents, &len, error))
-			return FALSE;
+			goto end;
 
 		if ((pid = atoi(contents)) == 0) {
 			/* maybe invalid pidfile. retry after removing a pidfile. */
+			g_print("failed to get a pid.\n");
 			if (!_remove_pidfile(pidfile, error))
 				goto end;
 
 			goto retry;
 		} else {
 			if (kill((pid_t)pid, 0) == -1) {
+				g_print("failed to send a signal.\n");
 				/* pid may be invalid. retry after removing a pidfile. */
 				if (!_remove_pidfile(pidfile, error))
 					goto end;
@@ -271,6 +276,54 @@ _start_process(const gchar  *prog_name,
 	return (*error == NULL);
 }
 
+static gboolean
+_stop_process(const gchar  *pidfile,
+	      const gchar  *type,
+	      GError      **error)
+{
+	gchar *contents = NULL;
+	gsize len = 0;
+	pid_t pid;
+	gboolean retval = FALSE;
+
+	if (!g_file_get_contents(pidfile, &contents, &len, error)) {
+		if (g_error_matches(*error, G_FILE_ERROR, G_FILE_ERROR_NOENT)) {
+			/* No pidfile is available. there aren't anything else to do.
+			 * basically this is no problem. someone may just did stop an IM
+			 * actually not running.
+			 */
+			g_error_free(*error);
+			*error = NULL;
+			retval = TRUE;
+		} else {
+			/* Otherwise that shouldn't be happened.
+			 */
+			g_return_val_if_reached(FALSE);
+		}
+	} else {
+		if ((pid = atoi(contents)) == 0) {
+			/* maybe invalid pidfile. */
+			g_set_error(error, IMSETTINGS_GERROR, IMSETTINGS_GERROR_UNABLE_TO_TRACK_IM,
+				    _("Couldn't determine the pid for %s process."),
+				    type);
+			goto end;
+		}
+		if (kill(pid, SIGTERM) == -1) {
+			g_set_error(error, IMSETTINGS_GERROR, IMSETTINGS_GERROR_UNABLE_TO_TRACK_IM,
+				    _("Couldn't send a signal to the %s process successfully."),
+				    type);
+		} else {
+			_remove_pidfile(pidfile, NULL);
+			retval = TRUE;
+		}
+	}
+  end:
+	if (contents)
+		g_free(contents);
+
+	return retval;
+}
+
 static gchar *
 _build_pidfilename(const gchar *base,
 		   const gchar *display_name,
@@ -305,6 +358,83 @@ _build_pidfilename(const gchar *base,
 }
 
 static gboolean
+_update_symlink(IMSettingsManagerPrivate  *priv,
+		IMSettingsInfo            *info,
+		GError                   **error)
+{
+	struct stat st;
+	const gchar *homedir, *p;
+	gchar *conffile = NULL, *backfile = NULL, *xinputfile = NULL;
+	int save_errno;
+
+	homedir = g_get_home_dir();
+	if (homedir == NULL) {
+		g_set_error(error, G_FILE_ERROR, G_FILE_ERROR_FAILED,
+			    _("Failed to get a place of home directory."));
+		return FALSE;
+	}
+	conffile = g_build_filename(homedir, IMSETTINGS_USER_XINPUT_CONF, NULL);
+	backfile = g_build_filename(homedir, IMSETTINGS_USER_XINPUT_CONF ".bak", NULL);
+	if (lstat(conffile, &st) == 0) {
+		if (!S_ISLNK (st.st_mode)) {
+			/* .xinputrc was probably made by the hand. */
+			if (g_rename(conffile, backfile) == -1) {
+				save_errno = errno;
+				g_set_error(error, G_FILE_ERROR,
+					    g_file_error_from_errno(save_errno),
+					    _("Failed to create a backup file: %s"),
+					    g_strerror(save_errno));
+				goto end;
+			}
+		} else {
+			if (g_unlink(conffile) == -1) {
+				save_errno = errno;
+				g_set_error(error, G_FILE_ERROR,
+					    g_file_error_from_errno(save_errno),
+					    _("Failed to remove a .xinputrc file: %s"),
+					    g_strerror(save_errno));
+				goto end;
+			}
+		}
+	}
+
+	p = imsettings_info_get_filename(info);
+	if (p == NULL) {
+		/* try to revert the backup file for the user specific conf file */
+		if (g_rename(backfile, conffile) == -1) {
+			save_errno = errno;
+
+			g_set_error(error, G_FILE_ERROR,
+				    g_file_error_from_errno(save_errno),
+				    _("Failed to revert the backup file: %s"),
+				    g_strerror(save_errno));
+			goto end;
+		}
+	} else {
+		xinputfile = g_strdup(p);
+	}
+	if (xinputfile) {
+		if (symlink(xinputfile, conffile) == -1) {
+			save_errno = errno;
+
+			g_set_error(error, G_FILE_ERROR,
+				    g_file_error_from_errno(save_errno),
+				    _("Failed to make a symlink: %s"),
+				    g_strerror(save_errno));
+		}
+	}
+  end:
+	if (conffile)
+		g_free(conffile);
+	if (backfile)
+		g_free(backfile);
+	if (xinputfile)
+		g_free(xinputfile);
+
+	return (*error == NULL);
+}
+
+static gboolean
 imsettings_manager_real_start_im(IMSettingsObserver  *imsettings,
 				 const gchar         *module,
 				 GError             **error)
@@ -333,7 +463,7 @@ imsettings_manager_real_start_im(IMSettingsObserver  *imsettings,
 		xim_prog = imsettings_info_get_xim_program(info);
 		xim_args = imsettings_info_get_xim_args(info);
 		pidfile = _build_pidfilename(xinputfile, priv->display_name, "xim");
-		
+
 		/* bring up a XIM server */
 		if (!_start_process(xim_prog, xim_args, pidfile, error))
 			goto end;
@@ -348,8 +478,14 @@ imsettings_manager_real_start_im(IMSettingsObserver  *imsettings,
 		imm = imsettings_info_get_qtimm(info);
 		imsettings_request_change_to(priv->qt_req, imm);
 #endif
-		if (*error == NULL)
+
+		/* Finally update a symlink on your home */
+		if (!_update_symlink(priv, info, error))
+			goto end;
+
+		if (*error == NULL) {
 			retval = TRUE;
+		}
 	}
   end:
 	if (pidfile)
@@ -361,19 +497,98 @@ imsettings_manager_real_start_im(IMSettingsObserver  *imsettings,
 static gboolean
 imsettings_manager_real_stop_im(IMSettingsObserver  *imsettings,
 				const gchar         *module,
+				gboolean             force,
 				GError             **error)
 {
-//	IMSettingsManagerPrivate *priv = IMSETTINGS_MANAGER_GET_PRIVATE (imsettings);
+	IMSettingsManagerPrivate *priv = IMSETTINGS_MANAGER_GET_PRIVATE (imsettings);
+	IMSettingsInfo *info, *oinfo;
+	const gchar *xinputfile, *homedir;
+	gchar *pidfile = NULL, *conffile;
+	gboolean retval = FALSE;
+	GString *strerr = g_string_new(NULL);
 
 	g_print("Stopping %s...\n", module);
 
+	info = imsettings_manager_real_get_info(imsettings, module, error);
+	if (info) {
+		xinputfile = imsettings_info_get_filename(info);
+		pidfile = _build_pidfilename(xinputfile, priv->display_name, "aux");
+
+		/* kill an auxiliary program */
+		if (!_stop_process(pidfile, "aux", error)) {
+			if (force) {
+				g_string_append_printf(strerr, "%s\n", (*error)->message);
+				g_error_free(*error);
+				*error = NULL;
+				_remove_pidfile(pidfile, NULL);
+			} else {
+				goto end;
+			}
+		}
+		g_free(pidfile);
+		pidfile = _build_pidfilename(xinputfile, priv->display_name, "xim");
+
+		/* kill a XIM server */
+		if (!_stop_process(pidfile, "xim", error)) {
+			if (force) {
+				g_string_append_printf(strerr, "%s\n", (*error)->message);
+				g_error_free(*error);
+				*error = NULL;
+				_remove_pidfile(pidfile, NULL);
+			} else {
+				goto end;
+			}
+		}
+
+		/* FIXME: We need to take care of imsettings per X screens?
+		 */
+		imsettings_request_change_to(priv->gtk_req, NULL);
 #if 0
-	imsettings_request_change_to(priv->gtk_req, NULL);
-	imsettings_request_change_to(priv->xim_req, NULL);
-	imsettings_request_change_to(priv->qt_req, NULL);
+		imsettings_request_change_to(priv->xim_req, NULL);
+		imsettings_request_change_to(priv->qt_req, NULL);
 #endif
 
-	return TRUE;
+		/* finally update .xinputrc */
+		homedir = g_get_home_dir();
+		if (homedir == NULL) {
+			g_set_error(error, G_FILE_ERROR, G_FILE_ERROR_FAILED,
+				    _("Failed to get a place of home directory."));
+			goto end;
+		}
+		conffile = g_build_filename(homedir, IMSETTINGS_USER_XINPUT_CONF, NULL);
+		oinfo = imsettings_info_new(conffile);
+		if (oinfo == NULL || imsettings_info_compare(oinfo, info)) {
+			if (oinfo)
+				g_object_unref(oinfo);
+			oinfo = imsettings_info_new(XINPUT_PATH IMSETTINGS_NONE_CONF XINPUT_SUFFIX);
+			if (oinfo == NULL) {
+				g_set_error(error, IMSETTINGS_GERROR, IMSETTINGS_GERROR_FAILED,
+					    _("The appropriate configuration file wasn't found. maybe the installation failed: %s"),
+					    XINPUT_PATH IMSETTINGS_NONE_CONF XINPUT_SUFFIX);
+				goto end;
+			}
+			if (!_update_symlink(priv, oinfo, error))
+				goto end;
+		}
+		if (oinfo)
+			g_object_unref(oinfo);
+
+		if (*error == NULL) {
+			if (force && strerr->len > 0) {
+				g_set_error(error, IMSETTINGS_GERROR, IMSETTINGS_GERROR_FAILED,
+					    "Errors detected, but forcibly stopped:\n  * %s",
+					    strerr->str);
+			} else {
+				retval = TRUE;
+			}
+		}
+	}
+  end:
+	if (pidfile)
+		g_free(pidfile);
+	g_string_free(strerr, TRUE);
+
+	return retval;
 }
 
 static void
@@ -474,6 +689,9 @@ imsettings_manager_load_conf(IMSettingsManager *manager)
 		g_free(filename);
 		g_object_set(G_OBJECT (info), "is_system_default", TRUE, NULL);
 		name = imsettings_info_get_short_desc(info);
+		if (name == NULL)
+			g_assert_not_reached();
+
 		if ((p = g_hash_table_lookup(priv->im_info_table, name)) == NULL) {
 			g_warning(_("No system default IM found at the pre-search phase. Adding..."));
 			g_hash_table_insert(priv->im_info_table, g_strdup(name), info);
@@ -484,6 +702,7 @@ imsettings_manager_load_conf(IMSettingsManager *manager)
 			} else {
 				/* reuse the object */
 				g_object_set(G_OBJECT (p), "is_system_default", TRUE, NULL);
+				g_object_unref(info);
 			}
 		}
 	}
@@ -499,7 +718,7 @@ imsettings_manager_load_conf(IMSettingsManager *manager)
 	if (imsettings_info_is_visible(info)) {
 		g_object_set(G_OBJECT (info), "is_user_default", TRUE, NULL);
 		name = imsettings_info_get_short_desc(info);
-		if ((p = g_hash_table_lookup(priv->im_info_table, name)) == NULL) {
+		if (name == NULL || (p = g_hash_table_lookup(priv->im_info_table, name)) == NULL) {
 			g_warning(_("No user default IM found at the pre-search phase. Adding..."));
 			g_hash_table_insert(priv->im_info_table, g_strdup(name), info);
 		} else {
@@ -509,6 +728,7 @@ imsettings_manager_load_conf(IMSettingsManager *manager)
 			} else {
 				/* reuse the object */
 				g_object_set(G_OBJECT (p), "is_user_default", TRUE, NULL);
+				g_object_unref(info);
 			}
 		}
 	} else {

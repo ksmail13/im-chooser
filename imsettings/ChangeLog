@@ -1,5 +1,29 @@
 2008-01-24  Akira TAGOH  <tagoh@redhat.com>
 
+	* src/imsettings-manager.c (_start_process): Fix a silly bug that
+	always create a pidfile no matter what the file exists.
+	(_start_process): do nothing if the program name is an empty.
+	(_stop_process): new.
+	(_update_symlink): new.
+	(imsettings_manager_real_start_im): Update .xinputrc.
+	(imsettings_manager_real_stop_im): Implement a lot.
+
+	* imsettings/imsettings.xml (StopIM): Add a boolean for force flag.
+
+	* imsettings/marshal.list: new.
+
+	* imsettings/imsettings-info.c (imsettings_info_set_property):
+	do not set an empty string to the property.
+	(imsettings_info_set_property): turn on an ignore property
+	if the conf file is invalid.
+
+	* utils/imsettings-restart.c (main): Add --force option to stop IM
+	forcibly.
+
+	* utils/imsettings-stop.c (main): likewise.
+
+2008-01-24  Akira TAGOH  <tagoh@redhat.com>
+
 	* src/imsettings-manager.c (imsettings_manager_load_conf): Make
 	a condition to not segfault. user's .xinputrc is more likely to be
 	unavailable.

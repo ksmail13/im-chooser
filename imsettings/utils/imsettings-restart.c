@@ -20,6 +20,10 @@
  * Foundation, Inc., 59 Temple Place - Suite 330,
  * Boston, MA 02111-1307, USA.
  */
+#ifdef HAVE_CONFIG_H
+#include "config.h"
+#endif
+
 #include <stdlib.h>
 #include <unistd.h>
 #include <glib/gi18n.h>
@@ -32,27 +36,59 @@ main(int    argc,
 {
 	IMSettingsRequest *imsettings;
 	DBusConnection *connection;
+	gboolean arg_force = FALSE;
+	GOptionContext *ctx = g_option_context_new(NULL);
+	GOptionEntry entries[] = {
+		{"force", 'f', G_OPTION_FLAG_NO_ARG, G_OPTION_ARG_NONE, &arg_force, N_("Force reloading the configuration, including restarting the process.")},
+		{NULL, 0, 0, 0, NULL, NULL, NULL}
+	};
+	GError *error = NULL;
+	gboolean flag;
+
+#ifdef ENABLE_NLS
+	bindtextdomain (GETTEXT_PACKAGE, IMSETTINGS_LOCALEDIR);
+#ifdef HAVE_BIND_TEXTDOMAIN_CODESET
+	bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
+#endif /* HAVE_BIND_TEXTDOMAIN_CODESET */
+	textdomain (GETTEXT_PACKAGE);
+#endif /* ENABLE_NLS */
 
 	g_type_init();
 
+	g_option_context_add_main_entries(ctx, entries, GETTEXT_PACKAGE);
+	if (!g_option_context_parse(ctx, &argc, &argv, &error)) {
+		if (error != NULL) {
+			g_printerr("%s\n", error->message);
+		} else {
+			g_warning(_("Unknown error in parsing the command lines."));
+		}
+		exit(1);
+	}
 	if (argc < 2) {
-		gchar *progname = g_path_get_basename(argv[0]);
+		gchar *help = g_option_context_get_help(ctx, TRUE, NULL);
 
-		g_print("Usage: %s <module name>\n", progname);
-
-		g_free(progname);
+		g_print("%s\n", help);
+		g_free(help);
 
 		exit(1);
 	}
+	g_option_context_free(ctx);
+
 	connection = dbus_bus_get(DBUS_BUS_SESSION, NULL);
 	imsettings = imsettings_request_new(connection, IMSETTINGS_INTERFACE_DBUS);
-	if (!imsettings_request_stop_im(imsettings, argv[1])) {
-		g_printerr("Failed to stop IM process `%s'\n", argv[1]);
-		exit(1);
+	if (!(flag = imsettings_request_stop_im(imsettings, argv[1], arg_force))) {
+		if (!arg_force) {
+			g_printerr("Failed to stop IM process `%s'\n", argv[1]);
+			exit(1);
+		}
 	}
 	sleep(3);
 	if (imsettings_request_start_im(imsettings, argv[1])) {
-		g_print("Restarted %s\n", argv[1]);
+		if (arg_force && flag) {
+			g_print("Forcibly restarted %s, but maybe not completely\n", argv[1]);
+		} else {
+			g_print("Restarted %s\n", argv[1]);
+		}
 	} else {
 		g_printerr("Failed to restart IM process `%s'\n", argv[1]);
 		exit(1);
