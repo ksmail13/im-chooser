@@ -1,5 +1,8 @@
 2008-01-25  Akira TAGOH  <tagoh@redhat.com>
 
+	* src/imsettings-manager.c (_start_process): Inherit the environment
+	variables to bring up the child process.
+
 	* src/imsettings-manager.c (_collect_im_list): new.
 	(imsettings_manager_real_get_list): build the IM list dynamically.
 	(_start_process): set LC_CTYPE to run the programs.

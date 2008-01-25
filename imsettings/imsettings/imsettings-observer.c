@@ -127,7 +127,6 @@ imsettings_start_im(GObject      *object,
 
 static gboolean
 imsettings_stop_im(GObject      *object,
-		   const gchar  *lang,
 		   const gchar  *module,
 		   gboolean      force,
 		   gboolean     *ret,

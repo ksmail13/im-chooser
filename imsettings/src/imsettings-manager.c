@@ -261,19 +261,26 @@ _start_process(const gchar  *prog_name,
 		/* the requested IM may be already running */
 	} else {
 		if (prog_name) {
-			gchar *cmd, **argv, **envp = NULL;
+			gchar *cmd, **argv, **envp = NULL, **env_list;
 			static const gchar *env_names[] = {
 				"LC_CTYPE",
 				NULL
 			};
-			gint i = 0;
+			guint len, i = 0, j = 0;
 			GPid pid;
 
-			envp = g_new(gchar *, G_N_ELEMENTS(env_names));
-			if (lang) {
-				envp[i] = g_strdup_printf("%s=%s", env_names[i], lang); i++;
+			env_list = g_listenv();
+			len = g_strv_length(env_list);
+			envp = g_new0(gchar *, G_N_ELEMENTS (env_names) + len + 1);
+			for (i = 0; i < len; i++) {
+				envp[i] = g_strdup_printf("%s=%s",
+							  env_list[i],
+							  g_getenv(env_list[i]));
 			}
-			envp[i] = NULL;
+			if (lang) {
+				envp[i + j] = g_strdup_printf("%s=%s", env_names[j], lang); j++;
+			}
+			envp[i + j] = NULL;
 
 			cmd = g_strdup_printf("%s %s", prog_name, prog_args);
 			argv = g_strsplit_set(cmd, " \t", -1);
