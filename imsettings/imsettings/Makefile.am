@@ -28,6 +28,13 @@ imsettingsinc_HEADERS =					\
 	imsettings-info.h				\
 	imsettings-observer.h				\
 	imsettings-request.h				\
+	imsettings-utils.h				\
+	$(NULL)
+
+noinst_HEADERS =					\
+	imsettings-glib-glue.h				\
+	imsettings-info-private.h			\
+	imsettings-marshal.h				\
 	$(NULL)
 
 imsettings.h: stamp-bindings.h stamp-marshal.h
@@ -79,6 +86,7 @@ libimsettings_la_LDFLAGS =				\
 
 EXTRA_DIST =						\
 	imsettings.xml					\
+	marshal.list					\
 	$(NULL)
 
 CLEANFILES =						\

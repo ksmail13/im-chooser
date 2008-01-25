@@ -17,6 +17,10 @@ LIBS =									\
 	$(NULL)
 
 
+noinst_HEADERS =							\
+	imsettings-manager.h						\
+	$(NULL)
+
 libexec_PROGRAMS = im-settings-daemon im-info-daemon
 
 im_settings_daemon_SOURCES =						\

@@ -24,6 +24,10 @@ gconf_im_settings_daemon_CFLAGS =				\
 	-DG_LOG_DOMAIN="\"Gconf-IM-Settings-Daemon\""		\
 	$(NULL)
 
+noinst_HEADERS =						\
+	gconf-imsettings-glue.h					\
+	$(NULL)
+
 gconf-imsettings-glue.h: stamp-glue.h
 	@true
 stamp-glue.h: $(srcdir)/introspection.xml Makefile
