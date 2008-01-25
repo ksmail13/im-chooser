@@ -1,5 +1,7 @@
 2008-01-25  Akira TAGOH  <tagoh@redhat.com>
 
+	* backends/gconf/Makefile.am (EXTRA_DIST): Fix a typo.
+
 	* src/imsettings-manager.c (_start_process): Inherit the environment
 	variables to bring up the child process.
 

@@ -41,11 +41,11 @@ service_DATA = gconf-im-settings-daemon.service
 
 EXTRA_DIST =							\
 	introspection.xml					\
-	gconf-imsettings-daemon.service.in			\
+	gconf-im-settings-daemon.service.in			\
 	$(NULL)
 
 DISTCLEANFILES =						\
-	gconf-imsettings-daemon.service				\
+	gconf-im-settings-daemon.service			\
 	$(NULL)
 
 CLEANFILES =							\
