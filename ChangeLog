@@ -1,5 +1,16 @@
 2008-01-25  Akira TAGOH  <tagoh@redhat.com>
 
+	* src/im-chooser-simple.c: Update a lot to work with imsettings.
+	* src/xinput.[ch]: Remove.
+
+	* src/im-chooser.[ch]: Remove.
+
+	* src/im-chooser-private.h: Remove.
+
+	* src/main.c: clean up the obsolete code.
+
+2008-01-25  Akira TAGOH  <tagoh@redhat.com>
+
 	* data/xinput.sh.in.in: Update to bring up IM through imsettings.
 
 	* data/xinputinfo.sh.in: new.

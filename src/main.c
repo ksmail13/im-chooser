@@ -1,7 +1,7 @@
 /* -*- Mode: C; tab-width: 8; indent-tabs-mode: t; c-basic-offset: 8 -*- */
 /* 
  * main.c
- * Copyright (C) 2006-2007 Red Hat, Inc. All rights reserved.
+ * Copyright (C) 2006-2008 Red Hat, Inc. All rights reserved.
  * 
  * Authors:
  *   Akira TAGOH  <tagoh@redhat.com>
@@ -28,20 +28,9 @@
 #ifdef USE_GNOME
 #include <gnome.h>
 #endif /* USE_GNOME */
-#include "im-chooser.h"
 #include "im-chooser-simple.h"
 
 #ifdef USE_GNOME
-#ifdef USE_OLD_UI
-static void
-_im_changed_cb(IMChooser *im,
-	       gpointer   data)
-{
-	GtkWidget *button = GTK_WIDGET (data);
-
-	gtk_widget_set_sensitive(button, im_chooser_is_modified(im));
-}
-#else
 static void
 _im_changed_cb(IMChooserSimple *im,
 	       gpointer         data)
@@ -79,8 +68,6 @@ _im_notify_n_im_cb(IMChooserSimple *im,
 		exit(1);
 	}
 }
-
-#endif /* USE_OLD_UI */
 
 static void
 _real_style_set(GtkWidget *widget,
@@ -138,11 +125,7 @@ main(int    argc,
      char **argv)
 {
 	GtkWidget *window, *widget, *close_button;
-#ifdef USE_OLD_UI
-	IMChooser *im;
-#else
 	IMChooserSimple *im;
-#endif /* USE_OLD_UI */
 #ifdef USE_GNOME
 	GnomeProgram *program;
 	GtkWidget *logout_button, *logout_image;
@@ -185,16 +168,11 @@ main(int    argc,
 	gtk_dialog_add_action_widget(GTK_DIALOG (window), close_button, GTK_RESPONSE_OK);
 	gtk_dialog_set_has_separator(GTK_DIALOG (window), FALSE);
 
-#ifdef USE_OLD_UI
-	im = im_chooser_new();
-	widget = im_chooser_get_widget(im);
-#else
 	im = im_chooser_simple_new();
 	g_signal_connect(im, "notify_n_im",
 			 G_CALLBACK (_im_notify_n_im_cb), window);
 
 	widget = im_chooser_simple_get_widget(im);
-#endif /* USE_OLD_UI */
 
 	gtk_widget_show_all(window);
 	gtk_box_pack_start(GTK_BOX (GTK_DIALOG (window)->vbox), widget, TRUE, TRUE, 0);

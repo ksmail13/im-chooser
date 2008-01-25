@@ -1,7 +1,7 @@
 /* -*- Mode: C; tab-width: 8; indent-tabs-mode: t; c-basic-offset: 8 -*- */
 /* 
  * im-chooser-simple.c
- * Copyright (C) 2007 Red Hat, Inc. All rights reserved.
+ * Copyright (C) 2007-2008 Red Hat, Inc. All rights reserved.
  * 
  * Authors:
  *   Akira TAGOH  <tagoh@redhat.com>
@@ -28,9 +28,9 @@
 #include <unistd.h>
 #include <sys/stat.h>
 #include <glib/gi18n.h>
-#include "xinput.h"
+#include "imsettings/imsettings.h"
+#include "imsettings/imsettings-request.h"
 #include "im-chooser-simple.h"
-#include "im-chooser-private.h"
 
 
 enum {
@@ -48,44 +48,20 @@ struct _IMChooserSimpleClass {
 };
 
 struct _IMChooserSimple {
-	GObject     parent_instance;
-	GtkWidget  *widget;
-	GtkWidget  *checkbox_is_im_enabled;
-	GtkWidget  *widget_scrolled;
-	GtkWidget  *widget_im_list;
-	GtkWidget  *button_im_config;
-	GHashTable *im_table;
-	GHashTable *lang_table;
-	XInputData *initial_im;
-	XInputData *current_im;
-	XInputData *default_im;
-	gboolean    initialized;
+	GObject             parent_instance;
+	GtkWidget          *widget;
+	GtkWidget          *checkbox_is_im_enabled;
+	GtkWidget          *widget_scrolled;
+	GtkWidget          *widget_im_list;
+	GtkWidget          *button_im_config;
+	IMSettingsRequest  *imsettings;
+	IMSettingsRequest  *imsettings_info;
+	gchar             **im_list;
+	gchar              *initial_im;
+	gchar              *current_im;
+	gchar              *default_im;
+	gboolean            initialized;
 };
-
-struct _IMChooserSimpleHashData {
-	IMChooserSimple *im;
-	GSList          *list;
-};
-
-struct _IMChooserSimpleListData {
-	XInputData *data;
-	gchar      *name;
-	gboolean    is_recommended;
-	gboolean    is_legacy;
-	gboolean    is_unknown;
-};
-
-typedef struct _IMChooserSimpleHashData		IMChooserSimpleHashData;
-typedef struct _IMChooserSimpleListData		IMChooserSimpleListData;
-
-static XInputData *_im_chooser_simple_get_xinput           (IMChooserSimple *im,
-                                                            const gchar     *filename);
-static XInputData *_im_chooser_simple_get_system_default_im(IMChooserSimple *im);
-static XInputData *_im_chooser_simple_get_current_im       (IMChooserSimple *im);
-static void        _im_chooser_simple_set_im_to_list       (gpointer         key,
-                                                            gpointer         value,
-                                                            gpointer         data);
-static void        _im_chooser_simple_create_symlink       (IMChooserSimple *im);
 
 
 static GObjectClass *parent_class = NULL;
@@ -97,11 +73,11 @@ static guint         signals[LAST_SIGNAL] = { 0 };
  */
 static void
 im_chooser_simple_enable_im_on_toggled(GtkToggleButton *button,
-					gpointer         user_data)
+				       gpointer         user_data)
 {
 	gboolean flag;
 	IMChooserSimple *im;
-	gchar *prog;
+	gchar *prog, *args;
 
 	g_return_if_fail (GTK_IS_TOGGLE_BUTTON (button));
 	g_return_if_fail (IM_IS_CHOOSER_SIMPLE (user_data));
@@ -112,7 +88,7 @@ im_chooser_simple_enable_im_on_toggled(GtkToggleButton *button,
 
 	gtk_widget_set_sensitive(im->widget_scrolled, flag);
 	if (im->current_im &&
-	    (prog = xinput_data_get_value(im->current_im, XINPUT_VALUE_PREFS_PROG)) != NULL &&
+	    imsettings_request_get_preferences_program(im->imsettings_info, im->current_im, &prog, &args) &&
 	    g_file_test(prog, G_FILE_TEST_EXISTS | G_FILE_TEST_IS_EXECUTABLE))
 		gtk_widget_set_sensitive(im->button_im_config, flag);
 	else
@@ -122,18 +98,26 @@ im_chooser_simple_enable_im_on_toggled(GtkToggleButton *button,
 		GtkTreeSelection *selection;
 		GtkTreeModel *model;
 		GtkTreeIter iter;
-		XInputData *xinput;
+		gchar *name;
 
 		selection = gtk_tree_view_get_selection(GTK_TREE_VIEW (im->widget_im_list));
 		if (gtk_tree_selection_get_selected(selection, &model, &iter)) {
-			gtk_tree_model_get(model, &iter, 1, &xinput, -1);
-			im->current_im = xinput;
+			gtk_tree_model_get(model, &iter, 1, &name, -1);
+			if (im->current_im) {
+				imsettings_request_stop_im(im->imsettings, im->current_im, TRUE);
+				g_free(im->current_im);
+			}
+			im->current_im = g_strdup(name);
+			imsettings_request_start_im(im->imsettings, im->current_im);
 		}
 	} else {
+		if (im->current_im) {
+			imsettings_request_stop_im(im->imsettings, im->current_im, TRUE);
+			g_free(im->current_im);
+		}
 		im->current_im = NULL;
 	}
-	if (im->initialized)
-		_im_chooser_simple_create_symlink(im);
+	g_signal_emit(im, signals[CHANGED], 0, NULL);
 }
 
 static void
@@ -143,23 +127,25 @@ im_chooser_simple_im_list_on_changed(GtkTreeSelection *selection,
 	IMChooserSimple *im = user_data;
 	GtkTreeModel *model;
 	GtkTreeIter iter;
-	XInputData *xinput;
-	gchar *prog;
+	gchar *name, *prog, *args;
 
 	if (im->initialized == FALSE)
 		return;
 
 	if (gtk_tree_selection_get_selected(selection, &model, &iter)) {
-		gtk_tree_model_get(model, &iter, 1, &xinput, -1);
-		if (im->current_im != xinput) {
-			im->current_im = xinput;
-			if (im->current_im &&
-			    (prog = xinput_data_get_value(im->current_im, XINPUT_VALUE_PREFS_PROG)) != NULL &&
+		gtk_tree_model_get(model, &iter, 1, &name, -1);
+		if (strcmp(im->current_im, name) != 0) {
+			if (im->current_im) {
+				imsettings_request_stop_im(im->imsettings, im->current_im, TRUE);
+				g_free(im->current_im);
+			}
+			im->current_im = g_strdup(name);
+			imsettings_request_start_im(im->imsettings, im->current_im);
+			if (imsettings_request_get_preferences_program(im->imsettings_info, name, &prog, &args) &&
 			    g_file_test(prog, G_FILE_TEST_EXISTS | G_FILE_TEST_IS_EXECUTABLE))
 				gtk_widget_set_sensitive(im->button_im_config, TRUE);
 			else
 				gtk_widget_set_sensitive(im->button_im_config, FALSE);
-			_im_chooser_simple_create_symlink(im);
 		}
 	}
 }
@@ -169,13 +155,19 @@ im_chooser_simple_prefs_button_on_clicked(GtkButton *button,
 					  gpointer   user_data)
 {
 	IMChooserSimple *im = IM_CHOOSER_SIMPLE (user_data);
-	gchar *prog = xinput_data_get_value(im->current_im, XINPUT_VALUE_PREFS_PROG);
-	gchar *args = xinput_data_get_value(im->current_im, XINPUT_VALUE_PREFS_ARGS);
-	gchar *cmdline = g_strconcat(prog, args, NULL);
+	gchar *prog = NULL, *args = NULL, *cmdline = NULL;
 
-	g_spawn_command_line_async(cmdline, NULL);
+	if (imsettings_request_get_preferences_program(im->imsettings_info, im->current_im, &prog, &args)) {
+		cmdline = g_strconcat(prog, args, NULL);
+		g_spawn_command_line_async(cmdline, NULL);
+	}
 
-	g_free(cmdline);
+	if (cmdline)
+		g_free(cmdline);
+	if (prog)
+		g_free(prog);
+	if (args)
+		g_free(args);
 }
 
 /*
@@ -207,216 +199,22 @@ im_chooser_simple_class_init(IMChooserSimpleClass *klass)
 static void
 im_chooser_simple_instance_init(IMChooserSimple *im)
 {
-	GSList *l, *im_list;
-	XInputData *xinput;
+	DBusConnection *conn;
 
 	im->widget = NULL;
 	im->initialized = FALSE;
 
-	/* read system-wide info */
-	im->im_table = g_hash_table_new_full(g_str_hash, g_str_equal, NULL, xinput_data_free);
-	im->lang_table = xinput_get_lang_table(NULL);
-	/* get all the info of the xinput script */
-	im_list = xinput_get_im_list(NULL);
-	for (l = im_list; l != NULL; l = g_slist_next(l)) {
-		xinput = xinput_data_new(l->data);
-		if (xinput != NULL) {
-			gchar *name = g_path_get_basename(l->data), *key;
-			size_t suffixlen = strlen(XINPUT_SUFFIX), len;
+	conn = dbus_bus_get(DBUS_BUS_SESSION, NULL);
+	im->imsettings = imsettings_request_new(conn, IMSETTINGS_INTERFACE_DBUS);
+	im->imsettings_info = imsettings_request_new(conn, IMSETTINGS_INFO_INTERFACE_DBUS);
 
-			if (name != NULL) {
-				len = strlen(name);
-				if (len > suffixlen) {
-					key = xinput_data_get_short_description(xinput);
-					if (key == NULL)
-						g_warning("Failed to get a short description for `%s'", (gchar *)l->data);
-					else
-						g_hash_table_replace(im->im_table, key, xinput);
-				}
-			}
-		}
-	}
+	/* get all the info of the xinput script */
+	im->im_list = imsettings_request_get_im_list(im->imsettings);
 
 	/* get current im */
-	im->current_im = _im_chooser_simple_get_current_im(im);
-	im->default_im = _im_chooser_simple_get_system_default_im(im);
-	im->initial_im = im->current_im;
-}
-
-static XInputData *
-_im_chooser_simple_get_xinput(IMChooserSimple *im,
-			      const gchar     *filename)
-{
-	struct stat st;
-	gchar *origname = NULL, *name = NULL;
-	gchar *key;
-	XInputData *retval = NULL;
-
-	if (lstat(filename, &st) == 0) {
-		if (S_ISLNK (st.st_mode)) {
-			origname = g_file_read_link(filename, NULL);
-			if (origname && stat(origname, &st) == 0) {
-				name = g_path_get_basename(origname);
-				if (strcmp(name, IM_GLOBAL_XINPUT_CONF) == 0) {
-					/* obsolete state: need to deal with the global conf */
-					XInputData *xinput = xinput_data_new(origname);
-					const gchar *key;
-
-					if (xinput == NULL) {
-						g_warning("Probably dangling xinputrc symlink");
-						goto end;
-					}
-					key = xinput_data_get_short_description(xinput);
-					if (key == NULL) {
-						g_warning("Failed to get a short description for `%s'", origname);
-						goto end;
-					}
-					if (GPOINTER_TO_UINT (xinput_data_get_value(xinput, XINPUT_VALUE_IGNORE_ME)) == TRUE)
-						goto end;
-					if ((retval = g_hash_table_lookup(im->im_table, key)) == NULL) {
-						g_warning("System Default xinputrc points to the unknown xinput script.");
-						goto end;
-					}
-					xinput_data_free(xinput);
-				} else {
-					XInputData *xinput = xinput_data_new(origname);
-
-					if (xinput == NULL) {
-						g_warning("Probably dangling xinputrc symlink");
-						goto end;
-					}
-					key = xinput_data_get_short_description(xinput);
-					if (key == NULL) {
-						g_warning("Failed to get a short description for `%s'", origname);
-						goto end;
-					}
-					if ((retval = g_hash_table_lookup(im->im_table, key)) == NULL) {
-						g_warning("%s isn't available", name);
-						goto end;
-					}
-					xinput_data_free(xinput);
-				}
-			}
-		} else {
-			/* user-own xinput file */
-			retval = xinput_data_new(NULL);
-			key = xinput_data_get_short_description(retval);
-			g_hash_table_replace(im->im_table, key, retval);
-		}
-	}
-  end:
-	if (name)
-		g_free(name);
-	if (origname)
-		g_free(origname);
-
-	return retval;
-}
-
-static XInputData *
-_im_chooser_simple_get_system_default_im(IMChooserSimple *im)
-{
-	XInputData *xinput;
-	gchar *filename = g_build_filename(XINPUTRC_PATH, IM_GLOBAL_XINPUT_CONF, NULL);
-
-	g_return_val_if_fail (filename != NULL, NULL);
-
-	xinput = _im_chooser_simple_get_xinput(im, filename);
-	g_free(filename);
-	if (xinput != NULL &&
-	    GPOINTER_TO_UINT (xinput_data_get_value(xinput, XINPUT_VALUE_IGNORE_ME)) == TRUE)
-		return NULL;
-
-	return xinput;
-}
-
-static XInputData *
-_im_chooser_simple_get_current_im(IMChooserSimple *im)
-{
-	XInputData *retval;
-	gchar *filename;
-	const gchar *home;
-
-	home = g_get_home_dir();
-	if (home == NULL) {
-		g_error("Failed to get a place of home directory.");
-		return NULL;
-	}
-	filename = g_build_filename(home, IM_USER_XINPUT_CONF, NULL);
-	retval = _im_chooser_simple_get_xinput(im, filename);
-	if (retval == NULL)
-		retval = _im_chooser_simple_get_system_default_im(im);
-	if (filename)
-		g_free(filename);
-	if (retval != NULL &&
-	    GPOINTER_TO_UINT (xinput_data_get_value(retval, XINPUT_VALUE_IGNORE_ME)) == TRUE)
-		return NULL;
-
-	return retval;
-}
-
-static gint
-_im_chooser_simple_sort_data(gconstpointer a,
-			     gconstpointer b)
-{
-	const IMChooserSimpleListData *la = a, *lb = b;
-
-	if (la->is_recommended && !lb->is_recommended) {
-		return -1;
-		/* appearing multiple recommended IMs isn't likely */
-	} else if (!la->is_recommended && lb->is_recommended) {
-		return 1;
-		/* no need to check if both isn't recommended IMs */
-	} else if (!la->is_legacy && lb->is_legacy) {
-		return -1;
-	} else if ((!la->is_legacy && !lb->is_legacy) ||
-		   (la->is_legacy && lb->is_legacy)) {
-		/* check the IM name to be sorted out */
-		return strcmp(la->name, lb->name);
-	} else if (la->is_legacy && !lb->is_legacy) {
-		return 1;
-	}
-	g_warning("[BUG] Unknown state to sort the data.");
-
-	return 0;
-}
-
-static void
-_im_chooser_simple_set_im_to_list(gpointer key,
-				  gpointer value,
-				  gpointer data)
-{
-	IMChooserSimpleHashData *hdata = data;
-	gchar *name, *gtkimm, *qtimm;
-	XInputData *xinput = value;
-	IMChooserSimpleListData *ldata;
-
-	if (xinput &&
-	    GPOINTER_TO_UINT (xinput_data_get_value(xinput, XINPUT_VALUE_IGNORE_ME)) == TRUE)
-		return;
-	ldata = g_new0(IMChooserSimpleListData, 1);
-	ldata->data = xinput;
-	name = xinput_data_get_short_description(xinput);
-	ldata->name = name;
-	gtkimm = xinput_data_get_value(xinput, XINPUT_VALUE_GTKIMM);
-	qtimm = xinput_data_get_value(xinput, XINPUT_VALUE_QTIMM);
-	if ((gtkimm == NULL || strcmp(gtkimm, "xim") == 0) &&
-	    (qtimm == NULL || strcmp(qtimm, "xim") == 0)) {
-		ldata->is_legacy = TRUE;
-	} else {
-		ldata->is_legacy = FALSE;
-	}
-	if (strcmp(name, IM_USER_SPECIFIC_LABEL) == 0) {
-		ldata->is_unknown = TRUE;
-	} else {
-		ldata->is_unknown = FALSE;
-	}
-	if (xinput == hdata->im->default_im) {
-		ldata->is_recommended = TRUE;
-	} else {
-		ldata->is_recommended = FALSE;
-	}
-	hdata->list = g_slist_insert_sorted(hdata->list, ldata, _im_chooser_simple_sort_data);
+	im->current_im = NULL;
+	im->default_im = NULL;
+	im->initial_im = NULL;
 }
 
 static void
@@ -426,37 +224,35 @@ _im_chooser_simple_update_im_list(IMChooserSimple *im)
 	GtkTreeIter iter, *cur_iter = NULL;
 	GtkTreePath *path;
 	GtkTreeViewColumn *column;
-	IMChooserSimpleHashData hdata;
 	GtkRequisition requisition;
-	GSList *l;
 	guint count;
+	gint i;
 
-	hdata.list = NULL;
-	hdata.im = im;
-	g_hash_table_foreach(im->im_table, _im_chooser_simple_set_im_to_list, &hdata);
-
-	count = g_slist_length(hdata.list);
-	list = gtk_list_store_new(2, G_TYPE_STRING, G_TYPE_POINTER);
-	for (l = hdata.list; l != NULL; l = g_slist_next(l)) {
-		IMChooserSimpleListData *ldata = l->data;
+	count = g_strv_length(im->im_list);
+	list = gtk_list_store_new(2, G_TYPE_STRING, G_TYPE_STRING);
+	for (i = 0; im->im_list[i] != NULL; i++) {
 		GString *string = g_string_new(NULL);
 
 		gtk_list_store_append(list, &iter);
 		g_string_append(string, "<i>");
-		g_string_append_printf(string, _("Use %s"), ldata->name);
-		if (ldata->is_legacy && !ldata->is_unknown)
+		g_string_append_printf(string, _("Use %s"), im->im_list[i]);
+		if (imsettings_request_is_xim(im->imsettings_info, im->im_list[i])) {
 			g_string_append(string, _(" (legacy)"));
-		if (ldata->is_recommended && !ldata->is_unknown) {
+		}
+		if (imsettings_request_is_system_default(im->imsettings_info, im->im_list[i])) {
 			g_string_append(string, _(" (recommended)"));
-			if (im->current_im == NULL && im->default_im == ldata->data)
-				cur_iter = gtk_tree_iter_copy(&iter);
+			if (!im->default_im)
+				im->default_im = g_strdup(im->im_list[i]);
+		}
+		if (im->current_im == NULL &&
+		    imsettings_request_is_user_default(im->imsettings_info, im->im_list[i])) {
+			im->current_im = g_strdup(im->im_list[i]);
+			cur_iter = gtk_tree_iter_copy(&iter);
 		}
 		g_string_append(string, "</i>");
-		if (im->current_im && im->current_im == ldata->data)
-			cur_iter = gtk_tree_iter_copy(&iter);
 		gtk_list_store_set(list, &iter,
 				   0, string->str,
-				   1, ldata->data,
+				   1, im->im_list[i],
 				   -1);
 		g_string_free(string, TRUE);
 	}
@@ -487,71 +283,6 @@ _im_chooser_simple_update_im_list(IMChooserSimple *im)
 	gtk_widget_set_size_request(im->widget_im_list, -1, requisition.height);
 
 	g_signal_emit(im, signals[NOTIFY_N_IM], 0, count);
-}
-
-static void
-_im_chooser_simple_create_symlink(IMChooserSimple *im)
-{
-	struct stat st;
-	const gchar *home;
-	gchar *file = NULL, *bakfile = NULL, *xinputfile = NULL;
-
-	home = g_get_home_dir();
-	if (home == NULL) {
-		g_error("Failed to get a place of home directory.");
-		return;
-	}
-	file = g_build_filename(home, IM_USER_XINPUT_CONF, NULL);
-	bakfile = g_build_filename(home, IM_USER_XINPUT_CONF ".bak", NULL);
-	if (lstat(file, &st) == 0) {
-		if (!S_ISLNK (st.st_mode)) {
-			/* xinputrc was probably made by the user */
-			if (rename(file, bakfile) == -1) {
-				g_warning("Failed to create a backup file.");
-				g_free(bakfile);
-				g_free(file);
-				return;
-			}
-		} else {
-			if (unlink(file) == -1) {
-				g_warning("Failed to remove a .xinputrc file.");
-				g_free(bakfile);
-				g_free(file);
-				return;
-			}
-		}
-	}
-	if (im->current_im == NULL) {
-		/* current IM is none */
-		xinputfile = g_build_filename(XINPUT_PATH, IM_NONE_NAME XINPUT_SUFFIX, NULL);
-	} else {
-		gchar *p = xinput_data_get_value(im->current_im, XINPUT_VALUE_FILENAME);
-
-		if (p == NULL) {
-			/* try to revert the backup file for the user specific conf file */
-			if (rename(bakfile, file) == -1) {
-				g_warning("Failed to revert the backup file.");
-				g_free(bakfile);
-				g_free(file);
-				return;
-			}
-		} else {
-			xinputfile = g_strdup(p);
-		}
-	}
-	if (xinputfile) {
-		if (symlink(xinputfile, file) == -1)
-			g_warning("Failed to create a symlink %s from %s", file, xinputfile);
-	}
-
-	if (file)
-		g_free(file);
-	if (bakfile)
-		g_free(bakfile);
-	if (xinputfile)
-		g_free(xinputfile);
-
-	g_signal_emit(im, signals[CHANGED], 0);
 }
 
 /*

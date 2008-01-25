@@ -2,20 +2,18 @@ NULL =
 
 INCLUDES =							\
 	-DG_LOG_DOMAIN="\"IM-Chooser\""				\
-	-DXINIT_PATH="\"$(XINIT_PATH)\""			\
-	-DXINPUT_PATH="\"$(XINPUT_PATH)\""			\
-	-DXINPUTRC_PATH="\"$(XINPUTRC_PATH)\""			\
-	-DXINPUT_SUFFIX="\"$(XINPUT_SUFFIX)\""			\
-	-DIM_XINPUT_SH="\"$(XINPUTSH)\""			\
 	-DICONDIR="\"$(datadir)/pixmaps\""			\
 	-DIMCHOOSE_LOCALEDIR="\"$(datadir)/locale\""		\
+	-I$(top_srcdir)/imsettings				\
 	$(IMCHOOSE_CFLAGS)					\
+	$(IMSETTINGS_CFLAGS)					\
 	$(GNOME_CFLAGS)						\
 	$(NULL)
 
 LIBS =								\
 	@LDFLAGS@						\
 	$(IMCHOOSE_LIBS)					\
+	$(IMSETTINGS_LIBS)					\
 	$(GNOME_LIBS)						\
 	$(NULL)
 
@@ -23,13 +21,11 @@ bin_PROGRAMS = im-chooser
 
 im_chooser_SOURCES =						\
 	main.c							\
-	im-chooser.c						\
-	im-chooser.h						\
-	im-chooser-private.h					\
 	im-chooser-simple.c					\
 	im-chooser-simple.h					\
-	xinput.c						\
-	xinput.h						\
+	$(NULL)
+im_chooser_LDADD =						\
+	$(top_builddir)/imsettings/imsettings/libimsettings.la	\
 	$(NULL)
 
 desktopdir = $(datadir)/applications
