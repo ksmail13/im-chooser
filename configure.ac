@@ -196,6 +196,7 @@ data/Makefile
 data/none.in
 data/xim.in
 data/xinput.sh.in
+data/xinputinfo.sh
 imsettings/backends/Makefile
 imsettings/backends/gconf/Makefile
 imsettings/imsettings/Makefile
