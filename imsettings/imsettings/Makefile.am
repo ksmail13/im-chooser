@@ -5,7 +5,7 @@ INCLUDES =						\
 	-DXINIT_PATH="\"$(XINIT_PATH)\""		\
 	-DXINPUT_PATH="\"$(XINPUT_PATH)\""		\
 	-DXINPUT_SUFFIX="\"$(XINPUT_SUFFIX)\""		\
-	-DIMSETTINGS_XINPUT_SH="\"$(XINPUTSH)\""	\
+	-DXINPUTINFO_PATH="\"$(libexecdir)\""		\
 	-I$(top_srcdir)/imsettings/			\
 	$(IMSETTINGS_CFLAGS)				\
 	$(NULL)

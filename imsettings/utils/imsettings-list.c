@@ -21,6 +21,8 @@
  * Foundation, Inc., 59 Temple Place - Suite 330,
  * Boston, MA 02111-1307, USA.
  */
+#include <locale.h>
+#include <glib/gi18n.h>
 #include "imsettings/imsettings.h"
 #include "imsettings/imsettings-request.h"
 
@@ -30,15 +32,19 @@ main(int    argc,
 {
 	IMSettingsRequest *imsettings;
 	DBusConnection *connection;
-	gchar **list;
+	gchar **list, *locale;
 	gint i;
+
+	setlocale(LC_ALL, "");
+	locale = setlocale(LC_CTYPE, NULL);
 
 	g_type_init();
 
 	connection = dbus_bus_get(DBUS_BUS_SESSION, NULL);
 	imsettings = imsettings_request_new(connection, IMSETTINGS_INTERFACE_DBUS);
+	imsettings_request_set_locale(imsettings, locale);
 	if ((list = imsettings_request_get_im_list(imsettings)) == NULL) {
-		g_printerr("Failed to get an IM list.");
+		g_printerr("Failed to get an IM list.\n");
 	} else {
 		for (i = 0; list[i] != NULL; i++) {
 			g_print("%d: %s\n", i + 1, list[i]);

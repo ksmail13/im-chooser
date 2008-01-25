@@ -49,6 +49,7 @@
 
 
 typedef struct _IMSettingsInfoPrivate {
+	gchar    *language;
 	gchar    *filename;
 	gchar    *gtkimm;
 	gchar    *qtimm;
@@ -64,10 +65,12 @@ typedef struct _IMSettingsInfoPrivate {
 	gboolean  ignore;
 	gboolean  is_system_default;
 	gboolean  is_user_default;
+	gboolean  is_xim;
 } IMSettingsInfoPrivate;
 
 enum {
 	PROP_0 = 0,
+	PROP_LANGUAGE,
 	PROP_FILENAME,
 	PROP_GTK_IMM,
 	PROP_QT_IMM,
@@ -83,6 +86,7 @@ enum {
 	PROP_LONG_DESC,
 	PROP_IS_SYSTEM_DEFAULT,
 	PROP_IS_USER_DEFAULT,
+	PROP_IS_XIM,
 };
 
 
@@ -99,7 +103,7 @@ imsettings_info_notify_properties(GObject     *object,
 				  const gchar *filename)
 {
 	GString *cmd, *str;
-	gchar *basename, *p, buffer[256];
+	gchar *xinputinfo, *p, buffer[256];
 	static const gchar *_xinput_tokens[] = {
 		"GTK_IM_MODULE=",
 		"QT_IM_MODULE=",
@@ -134,22 +138,20 @@ imsettings_info_notify_properties(GObject     *object,
 	FILE *fp;
 	guint prop;
 	struct stat st;
+	IMSettingsInfoPrivate *priv = IMSETTINGS_INFO_GET_PRIVATE (object);
+	gchar *lang;
 
 	cmd = g_string_new(NULL);
 	str = g_string_new(NULL);
-	basename = g_path_get_basename(filename);
-	g_string_append(cmd, "export IMSETTINGS_DISABLE_USER_XINPUTRC=yes; export IMSETTINGS_ONLY_EVALUATE_VARIABLES=yes;");
-	g_string_append_printf(cmd, ". %s;",
-			       (strcmp(basename, IMSETTINGS_GLOBAL_XINPUT_CONF) == 0 ?
-				XINIT_PATH G_DIR_SEPARATOR_S IMSETTINGS_XINPUT_SH :
-				filename));
-	for (i = 0; _xinput_tokens[i] != NULL; i++) {
-		size_t len = strlen(_xinput_tokens[i]);
+	if (priv->language)
+		lang = g_strdup_printf("LANG=%s ", priv->language);
+	else
+		lang = g_strdup("");
+	xinputinfo = g_build_filename(XINPUTINFO_PATH, "xinputinfo.sh", NULL);
+	g_string_append_printf(cmd, "%s. %s %s", lang, xinputinfo, filename);
 
-		p = g_strndup(_xinput_tokens[i], len - 1);
-		g_string_append_printf(cmd, "echo \"%s$%s\";", _xinput_tokens[i], p);
-		g_free(p);
-	}
+	g_free(lang);
+
 	if (lstat(filename, &st) == -1 ||
 	    (fp = popen(cmd->str, "r")) == NULL) {
 		/* error happens. don't list. */
@@ -164,7 +166,7 @@ imsettings_info_notify_properties(GObject     *object,
 						size_t len = strlen(_xinput_tokens[i]);
 
 						if (strncmp(p, _xinput_tokens[i], len) == 0) {
-							prop = i + 2;
+							prop = i + (PROP_GTK_IMM - PROP_0);
 							p += len;
 							for (; *p != 0 && !isspace(*p); p++)
 								g_string_append_c(str, *p);
@@ -188,7 +190,7 @@ imsettings_info_notify_properties(GObject     *object,
 					    case PROP_SHORT_DESC:
 					    case PROP_LONG_DESC:
 						    g_object_set(object,
-								 properties[prop - 2], str->str,
+								 properties[prop - (PROP_GTK_IMM - PROP_0)], str->str,
 								 NULL);
 						    break;
 					    case PROP_IGNORE_FLAG:
@@ -239,13 +241,34 @@ imsettings_info_set_property(GObject      *object,
 	} G_STMT_END
 #define _set_bool_prop(_m_)				\
 	G_STMT_START {					\
+		gboolean _b_ = priv->_m_;		\
 		priv->_m_ = g_value_get_boolean(value);	\
-		g_object_notify(object, # _m_);		\
+		if (_b_ != priv->_m_)			\
+			g_object_notify(object, # _m_);	\
 	} G_STMT_END
 
 	switch (prop_id) {
+	    case PROP_LANGUAGE:
+		    _set_str_prop(language);
+		    if (priv->filename &&
+			(imsettings_info_is_visible(IMSETTINGS_INFO (object)) ||
+			 imsettings_info_is_xim(IMSETTINGS_INFO (object)))) {
+			    /* XIM always has to be updated. */
+			    imsettings_info_notify_properties(object, priv->filename);
+		    }
+		    break;
 	    case PROP_FILENAME:
 		    _set_str_prop(filename);
+		    p = g_path_get_basename(priv->filename);
+		    if (strcmp(p, IMSETTINGS_XIM_CONF XINPUT_SUFFIX) == 0) {
+			    priv->is_xim = TRUE;
+			    g_object_set(object, "ignore", FALSE, NULL);
+		    } else if (strcmp(p, IMSETTINGS_NONE_CONF XINPUT_SUFFIX) == 0) {
+			    g_object_set(object, "ignore", TRUE, NULL);
+		    } else {
+			    g_object_set(object, "ignore", FALSE, NULL);
+		    }
+		    g_free(p);
 		    p = g_build_filename(g_get_home_dir(), IMSETTINGS_USER_XINPUT_CONF, NULL);
 		    if (strcmp(p, priv->filename) == 0 &&
 			lstat(priv->filename, &st) == 0 &&
@@ -261,6 +284,7 @@ imsettings_info_set_property(GObject      *object,
 		    } else {
 			    imsettings_info_notify_properties(object, priv->filename);
 		    }
+		    g_free(p);
 		    break;
 	    case PROP_GTK_IMM:
 		    _set_str_prop(gtkimm);
@@ -372,6 +396,9 @@ imsettings_info_get_property(GObject    *object,
 	    case PROP_IS_USER_DEFAULT:
 		    _get_bool_prop(is_user_default);
 		    break;
+	    case PROP_IS_XIM:
+		    _get_bool_prop(is_xim);
+		    break;
 	    default:
 		    G_OBJECT_WARN_INVALID_PROPERTY_ID (object, prop_id, pspec);
 		    break;
@@ -387,6 +414,8 @@ imsettings_info_finalize(GObject *object)
 	if (priv->_o_)				\
 		g_free(priv->_o_)
 
+	_my_free(language);
+	_my_free(filename);
 	_my_free(gtkimm);
 	_my_free(qtimm);
 	_my_free(xim);
@@ -414,12 +443,18 @@ imsettings_info_class_init(IMSettingsInfoClass *klass)
 	object_class->finalize     = imsettings_info_finalize;
 
 	/* properties */
+	g_object_class_install_property(object_class, PROP_LANGUAGE,
+					g_param_spec_string("language",
+							    _("Language"),
+							    _("A language to pull the information in."),
+							    NULL,
+							    G_PARAM_READWRITE | G_PARAM_CONSTRUCT));
 	g_object_class_install_property(object_class, PROP_FILENAME,
 					g_param_spec_string("filename",
 							    _("Filename"),
 							    _("A filename referring to the IM information."),
 							    NULL,
-							    G_PARAM_READWRITE | G_PARAM_CONSTRUCT));
+							    G_PARAM_READWRITE));
 	g_object_class_install_property(object_class, PROP_GTK_IMM,
 					g_param_spec_string("gtkimm",
 							    _("GTK+ immodule"),
@@ -504,6 +539,12 @@ imsettings_info_class_init(IMSettingsInfoClass *klass)
 							     _("Whether or not IM is an user default."),
 							     FALSE,
 							     G_PARAM_READWRITE));
+	g_object_class_install_property(object_class, PROP_IS_XIM,
+					g_param_spec_boolean("is_xim",
+							     _("XIM"),
+							     _("Whether or not IM is a XIM server."),
+							     FALSE,
+							     G_PARAM_READABLE));
 }
 
 static void
@@ -610,6 +651,20 @@ imsettings_info_new(const gchar *filename)
 			    NULL);
 }
 
+IMSettingsInfo *
+imsettings_info_new_with_lang(const gchar *filename,
+			      const gchar *language)
+{
+	g_return_val_if_fail (filename != NULL, NULL);
+	g_return_val_if_fail (language != NULL, NULL);
+	g_return_val_if_fail (g_file_test(filename, G_FILE_TEST_EXISTS), NULL);
+
+	return g_object_new(IMSETTINGS_TYPE_INFO,
+			    "language", language,
+			    "filename", filename,
+			    NULL);
+}
+
 #define _IMSETTINGS_DEFUNC_PROPERTY(_t_,_n_,_m_,_v_)			\
 	_t_								\
 	imsettings_info_get_ ## _n_(IMSettingsInfo *info)		\
@@ -651,6 +706,14 @@ imsettings_info_get_short_desc(IMSettingsInfo *info)
 
 _IMSETTINGS_DEFUNC_PROPERTY (const gchar *,long_desc, long_desc, NULL)
 
+const gchar *
+imsettings_info_get_supported_language(IMSettingsInfo *info)
+{
+	g_return_val_if_fail (IMSETTINGS_IS_INFO (info), NULL);
+
+	return NULL;
+}
+
 gboolean
 imsettings_info_is_visible(IMSettingsInfo *info)
 {
@@ -685,6 +748,18 @@ imsettings_info_is_user_default(IMSettingsInfo *info)
 	priv = IMSETTINGS_INFO_GET_PRIVATE (info);
 
 	return priv->is_user_default;
+}
+
+gboolean
+imsettings_info_is_xim(IMSettingsInfo *info)
+{
+	IMSettingsInfoPrivate *priv;
+
+	g_return_val_if_fail (IMSETTINGS_IS_INFO (info), FALSE);
+
+	priv = IMSETTINGS_INFO_GET_PRIVATE (info);
+
+	return priv->is_xim;
 }
 
 gboolean

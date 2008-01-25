@@ -20,6 +20,7 @@
  * Foundation, Inc., 59 Temple Place - Suite 330,
  * Boston, MA 02111-1307, USA.
  */
+#include <locale.h>
 #include <stdlib.h>
 #include <glib/gi18n.h>
 #include "imsettings/imsettings.h"
@@ -31,6 +32,10 @@ main(int    argc,
 {
 	IMSettingsRequest *imsettings;
 	DBusConnection *connection;
+	gchar *locale;
+
+	setlocale(LC_ALL, "");
+	locale = setlocale(LC_CTYPE, NULL);
 
 	g_type_init();
 
@@ -45,6 +50,7 @@ main(int    argc,
 	}
 	connection = dbus_bus_get(DBUS_BUS_SESSION, NULL);
 	imsettings = imsettings_request_new(connection, IMSETTINGS_INTERFACE_DBUS);
+	imsettings_request_set_locale(imsettings, locale);
 	if (imsettings_request_start_im(imsettings, argv[1])) {
 		g_print("Started %s\n", argv[1]);
 	} else {

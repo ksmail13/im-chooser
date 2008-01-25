@@ -54,7 +54,9 @@ struct _IMSettingsRequest {
 GType              imsettings_request_get_type               (void) G_GNUC_CONST;
 IMSettingsRequest *imsettings_request_new                    (DBusConnection    *connection,
                                                               const gchar       *interface);
-gchar*            *imsettings_request_get_im_list            (IMSettingsRequest *imsettings);
+void               imsettings_request_set_locale             (IMSettingsRequest *imsettings,
+							      const gchar       *locale);
+gchar            **imsettings_request_get_im_list            (IMSettingsRequest *imsettings);
 gchar             *imsettings_request_get_xinput_filename    (IMSettingsRequest *imsettings,
                                                               const gchar       *module);
 gchar             *imsettings_request_get_im_module_name     (IMSettingsRequest *imsettings,
@@ -76,6 +78,14 @@ gchar             *imsettings_request_get_short_description  (IMSettingsRequest 
                                                               const gchar       *module);
 gchar             *imsettings_request_get_long_description   (IMSettingsRequest *imsettings,
                                                               const gchar       *module);
+gboolean           imsettings_request_is_system_default      (IMSettingsRequest *imsettings,
+							      const gchar       *module);
+gboolean           imsettings_request_is_user_default        (IMSettingsRequest *imsettings,
+							      const gchar       *module);
+gboolean           imsettings_request_is_xim                 (IMSettingsRequest *imsettings,
+							      const gchar       *module);
+gchar             *imsettings_request_get_supported_language (IMSettingsRequest *imsettings,
+							      const gchar       *module);
 gboolean           imsettings_request_start_im               (IMSettingsRequest *imsettings,
                                                               const gchar       *module);
 gboolean           imsettings_request_stop_im                (IMSettingsRequest *imsettings,

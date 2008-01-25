@@ -1,3 +1,40 @@
+2008-01-25  Akira TAGOH  <tagoh@redhat.com>
+
+	* src/imsettings-manager.c (_collect_im_list): new.
+	(imsettings_manager_real_get_list): build the IM list dynamically.
+	(_start_process): set LC_CTYPE to run the programs.
+
+	* imsettings/imsettings-request.c (imsettings_request_set_locale): new.
+	(imsettings_request_is_system_default): new.
+	(imsettings_request_is_user_default): new.
+	(imsettings_request_is_xim): new.
+	(imsettings_request_get_supported_language): new.
+
+	* imsettings/imsettings-observer.c (imsettings_is_system_default): new.
+	(imsettings_is_user_default): new.
+	(imsettings_is_xim): new.
+	(imsettings_get_supported_language): new.
+
+	* imsettings/imsettings.xml (IsSystemDefault): new.
+	(IsUserDefault): new.
+	(IsXim): new.
+	(GetList): Add lang argument.
+	(StartIM): likewise.
+
+	* imsettings/imsettings-info.c (imsettings_info_notify_properties):
+	Fetch the informations from xinputinfo.sh instead of xinput.sh with some options.
+	(imsettings_info_set_property): Update the information against the locale.
+	(imsettings_info_set_property): always set XIM is visible no matter
+	what the status is, except the dead link.
+	(imsettings_info_new_with_lang): new.
+	(imsettings_info_is_xim): new.
+
+	* utils/imsettings-list.c (main): Get a different output against current locale.
+
+	* utils/imsettings-info.c (main): likewise.
+
+	* utils/imsettings-start.c (main): likewise.
+
 2008-01-24  Akira TAGOH  <tagoh@redhat.com>
 
 	* src/imsettings-manager.c (_start_process): Fix a silly bug that

@@ -63,15 +63,17 @@ struct _IMSettingsObserverClass {
 	gboolean          (* reload)               (IMSettingsObserver  *imsettings,
 						    gboolean             force,
 						    GError             **error);
-	const GPtrArray * (* get_list)             (IMSettingsObserver  *imsettings,
+	GPtrArray       * (* get_list)             (IMSettingsObserver  *imsettings,
+						    const gchar         *lang,
 						    GError             **error);
 	IMSettingsInfo  * (* get_info)             (IMSettingsObserver  *imsettings,
 						    const gchar         *module,
 						    GError             **error);
-	gboolean          (* start_im)             (IMSettingsObserver *imsettings,
+	gboolean          (* start_im)             (IMSettingsObserver  *imsettings,
+						    const gchar         *lang,
 						    const gchar         *module,
 						    GError             **error);
-	gboolean          (* stop_im)              (IMSettingsObserver *imsettings,
+	gboolean          (* stop_im)              (IMSettingsObserver  *imsettings,
 						    const gchar         *module,
 						    gboolean             force,
 						    GError             **error);

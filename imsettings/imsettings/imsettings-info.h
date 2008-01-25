@@ -47,25 +47,29 @@ struct _IMSettingsInfo {
 };
 
 
-GType           imsettings_info_get_type         (void) G_GNUC_CONST;
-IMSettingsInfo *imsettings_info_new              (const gchar          *filename);
-const gchar    *imsettings_info_get_filename     (IMSettingsInfo       *info);
-const gchar    *imsettings_info_get_gtkimm       (IMSettingsInfo       *info);
-const gchar    *imsettings_info_get_qtimm        (IMSettingsInfo       *info);
-const gchar    *imsettings_info_get_xim          (IMSettingsInfo       *info);
-const gchar    *imsettings_info_get_xim_program  (IMSettingsInfo       *info);
-const gchar    *imsettings_info_get_xim_args     (IMSettingsInfo       *info);
-const gchar    *imsettings_info_get_prefs_program(IMSettingsInfo       *info);
-const gchar    *imsettings_info_get_prefs_args   (IMSettingsInfo       *info);
-const gchar    *imsettings_info_get_aux_program  (IMSettingsInfo       *info);
-const gchar    *imsettings_info_get_aux_args     (IMSettingsInfo       *info);
-const gchar    *imsettings_info_get_short_desc   (IMSettingsInfo       *info);
-const gchar    *imsettings_info_get_long_desc    (IMSettingsInfo       *info);
-gboolean        imsettings_info_is_visible       (IMSettingsInfo       *info);
-gboolean        imsettings_info_is_system_default(IMSettingsInfo       *info);
-gboolean        imsettings_info_is_user_default  (IMSettingsInfo       *info);
-gboolean        imsettings_info_compare          (const IMSettingsInfo *info1,
-                                                  const IMSettingsInfo *info2);
+GType           imsettings_info_get_type              (void) G_GNUC_CONST;
+IMSettingsInfo *imsettings_info_new                   (const gchar          *filename);
+IMSettingsInfo *imsettings_info_new_with_lang         (const gchar          *filename,
+						       const gchar          *language);
+const gchar    *imsettings_info_get_filename          (IMSettingsInfo       *info);
+const gchar    *imsettings_info_get_gtkimm            (IMSettingsInfo       *info);
+const gchar    *imsettings_info_get_qtimm             (IMSettingsInfo       *info);
+const gchar    *imsettings_info_get_xim               (IMSettingsInfo       *info);
+const gchar    *imsettings_info_get_xim_program       (IMSettingsInfo       *info);
+const gchar    *imsettings_info_get_xim_args          (IMSettingsInfo       *info);
+const gchar    *imsettings_info_get_prefs_program     (IMSettingsInfo       *info);
+const gchar    *imsettings_info_get_prefs_args        (IMSettingsInfo       *info);
+const gchar    *imsettings_info_get_aux_program       (IMSettingsInfo       *info);
+const gchar    *imsettings_info_get_aux_args          (IMSettingsInfo       *info);
+const gchar    *imsettings_info_get_short_desc        (IMSettingsInfo       *info);
+const gchar    *imsettings_info_get_long_desc         (IMSettingsInfo       *info);
+const gchar    *imsettings_info_get_supported_language(IMSettingsInfo       *info);
+gboolean        imsettings_info_is_visible            (IMSettingsInfo       *info);
+gboolean        imsettings_info_is_system_default     (IMSettingsInfo       *info);
+gboolean        imsettings_info_is_user_default       (IMSettingsInfo       *info);
+gboolean        imsettings_info_is_xim                (IMSettingsInfo       *info);
+gboolean        imsettings_info_compare               (const IMSettingsInfo *info1,
+                                                       const IMSettingsInfo *info2);
 
 G_END_DECLS
 

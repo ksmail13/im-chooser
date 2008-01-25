@@ -34,6 +34,7 @@ main(int    argc,
 	gchar *file, *gtkimm, *qtimm, *xim;
 	gchar *xim_prog, *xim_args, *prefs_prog, *prefs_args, *aux_prog, *aux_args;
 	gchar *short_desc, *long_desc;
+	gboolean is_system_default, is_user_default, is_xim;
 
 	g_type_init();
 
@@ -61,6 +62,9 @@ main(int    argc,
 		imsettings_request_get_auxiliary_program(imsettings, argv[1], &aux_prog, &aux_args);
 		short_desc = imsettings_request_get_short_description(imsettings, argv[1]);
 		long_desc = imsettings_request_get_long_description(imsettings, argv[1]);
+		is_system_default = imsettings_request_is_system_default(imsettings, argv[1]);
+		is_user_default = imsettings_request_is_user_default(imsettings, argv[1]);
+		is_xim = imsettings_request_is_xim(imsettings, argv[1]);
 
 		g_print("Xinput file: %s\n"
 			"GTK+ immodule: %s\n"
@@ -70,12 +74,18 @@ main(int    argc,
 			"preferences: %s %s\n"
 			"auxiliary: %s %s\n"
 			"Short Description: %s\n"
-			"Long Description: %s\n",
+			"Long Description: %s\n"
+			"Is system default: %s\n"
+			"Is user default: %s\n"
+			"Is XIM server: %s\n",
 			file, gtkimm, qtimm, xim,
 			xim_prog, xim_args,
 			prefs_prog, prefs_args,
 			aux_prog, aux_args,
-			short_desc, long_desc);
+			short_desc, long_desc,
+			(is_system_default ? "TRUE" : "FALSE"),
+			(is_user_default ? "TRUE" : "FALSE"),
+			(is_xim ? "TRUE" : "FALSE"));
 	}
 	g_object_unref(imsettings);
 

@@ -80,19 +80,28 @@ G_DEFINE_TYPE (IMSettingsObserver, imsettings_observer, G_TYPE_OBJECT);
  * Private functions
  */
 static gboolean
-imsettings_get_list(GObject       *object,
-		    const gchar ***ret,
-		    GError       **error)
+imsettings_get_list(GObject     *object,
+		    const gchar *lang,
+		    gchar     ***ret,
+		    GError     **error)
 {
 	IMSettingsObserverClass *klass = IMSETTINGS_OBSERVER_GET_CLASS (object);
-	const GPtrArray *list;
+	GPtrArray *list;
 	gboolean retval = FALSE;
+	gint i;
 
 	if (klass->get_list) {
-		list = klass->get_list(IMSETTINGS_OBSERVER (object), error);
+		list = klass->get_list(IMSETTINGS_OBSERVER (object), lang, error);
 		if (*error == NULL) {
-			*ret = (const gchar **)list->pdata;
+			*ret = g_strdupv((gchar **)list->pdata);
 			retval = TRUE;
+		}
+		if (list) {
+			for (i = 0; i < list->len; i++) {
+				if (g_ptr_array_index(list, i))
+					g_free(g_ptr_array_index(list, i));
+			}
+			g_ptr_array_free(list, TRUE);
 		}
 	}
 
@@ -101,6 +110,7 @@ imsettings_get_list(GObject       *object,
 
 static gboolean
 imsettings_start_im(GObject      *object,
+		    const gchar  *lang,
 		    const gchar  *module,
 		    gboolean     *ret,
 		    GError      **error)
@@ -109,7 +119,7 @@ imsettings_start_im(GObject      *object,
 
 	*ret = FALSE;
 	if (klass->start_im) {
-		*ret = klass->start_im(IMSETTINGS_OBSERVER (object), module, error);
+		*ret = klass->start_im(IMSETTINGS_OBSERVER (object), lang, module, error);
 	}
 
 	return *ret;
@@ -117,6 +127,7 @@ imsettings_start_im(GObject      *object,
 
 static gboolean
 imsettings_stop_im(GObject      *object,
+		   const gchar  *lang,
 		   const gchar  *module,
 		   gboolean      force,
 		   gboolean     *ret,
@@ -301,6 +312,90 @@ imsettings_get_long_description(GObject      *object,
 	return retval;
 }
 
+static gboolean
+imsettings_is_system_default(GObject      *object,
+			     const gchar  *module,
+			     gboolean     *ret,
+			     GError      **error)
+{
+	IMSettingsObserverClass *klass = IMSETTINGS_OBSERVER_GET_CLASS (object);
+	IMSettingsInfo *info;
+	gboolean retval = FALSE;
+
+	if (klass->get_info) {
+		info = klass->get_info(IMSETTINGS_OBSERVER (object), module, error);
+		if (*error == NULL) {
+			*ret = imsettings_info_is_system_default(info);
+			retval = TRUE;
+		}
+	}
+
+	return retval;
+}
+
+static gboolean
+imsettings_is_user_default(GObject      *object,
+			   const gchar  *module,
+			   gboolean     *ret,
+			   GError      **error)
+{
+	IMSettingsObserverClass *klass = IMSETTINGS_OBSERVER_GET_CLASS (object);
+	IMSettingsInfo *info;
+	gboolean retval = FALSE;
+
+	if (klass->get_info) {
+		info = klass->get_info(IMSETTINGS_OBSERVER (object), module, error);
+		if (*error == NULL) {
+			*ret = imsettings_info_is_user_default(info);
+			retval = TRUE;
+		}
+	}
+
+	return retval;
+}
+
+static gboolean
+imsettings_is_xim(GObject      *object,
+		  const gchar  *module,
+		  gboolean     *ret,
+		  GError      **error)
+{
+	IMSettingsObserverClass *klass = IMSETTINGS_OBSERVER_GET_CLASS (object);
+	IMSettingsInfo *info;
+	gboolean retval = FALSE;
+
+	if (klass->get_info) {
+		info = klass->get_info(IMSETTINGS_OBSERVER (object), module, error);
+		if (*error == NULL) {
+			*ret = imsettings_info_is_xim(info);
+			retval = TRUE;
+		}
+	}
+
+	return retval;
+}
+
+static gboolean
+imsettings_get_supported_language(GObject      *object,
+				  const gchar  *module,
+				  const gchar **ret,
+				  GError      **error)
+{
+	IMSettingsObserverClass *klass = IMSETTINGS_OBSERVER_GET_CLASS (object);
+	IMSettingsInfo *info;
+	gboolean retval = FALSE;
+
+	if (klass->get_info) {
+		info = klass->get_info(IMSETTINGS_OBSERVER (object), module, error);
+		if (*error == NULL) {
+			*ret = imsettings_info_get_supported_language(info);
+			retval = TRUE;
+		}
+	}
+
+	return retval;
+}
+
 #include "imsettings-glib-glue.h"
 
 
@@ -443,6 +538,7 @@ imsettings_observer_real_message_filter(DBusConnection *connection,
 
 static gboolean
 imsettings_observer_real_start_im(IMSettingsObserver *imsettings,
+				  const gchar        *lang,
 				  const gchar        *module,
 				  GError            **error)
 {

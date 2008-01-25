@@ -1,3 +1,9 @@
+2008-01-25  Akira TAGOH  <tagoh@redhat.com>
+
+	* data/xinput.sh.in.in: Update to bring up IM through imsettings.
+
+	* data/xinputinfo.sh.in: new.
+
 2008-01-24  Akira TAGOH  <tagoh@redhat.com>
 
 	* configure.ac: Check glib path.

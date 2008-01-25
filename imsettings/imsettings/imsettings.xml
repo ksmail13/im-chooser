@@ -2,11 +2,11 @@
 <node name="/com/redhat/DBus.imsettings">
   <interface name="com.redhat.DBus.imsettings">
     <method name="GetList">
-      <arg type="as" name="ret" direction="out">
-	<annotation name="org.freedesktop.DBus.GLib.Const" value="" />
-      </arg>
+      <arg type="s" name="lang" direction="in" />
+      <arg type="as" name="ret" direction="out" />
     </method>
     <method name="StartIM">
+      <arg type="s" name="lang" direction="in" />
       <arg type="s" name="module" direction="in" />
       <arg type="b" name="ret" direction="out" />
     </method>
@@ -64,6 +64,24 @@
       </arg>
     </method>
     <method name="GetLongDescription">
+      <arg type="s" name="imname" direction="in" />
+      <arg type="s" name="ret" direction="out">
+	<annotation name="org.freedesktop.DBus.GLib.Const" value="" />
+      </arg>
+    </method>
+    <method name="IsSystemDefault">
+      <arg type="s" name="imname" direction="in" />
+      <arg type="b" name="ret" direction="out" />
+    </method>
+    <method name="IsUserDefault">
+      <arg type="s" name="imname" direction="in" />
+      <arg type="b" name="ret" direction="out" />
+    </method>
+    <method name="IsXim">
+      <arg type="s" name="imname" direction="in" />
+      <arg type="b" name="ret" direction="out" />
+    </method>
+    <method name="GetSupportedLanguage">
       <arg type="s" name="imname" direction="in" />
       <arg type="s" name="ret" direction="out">
 	<annotation name="org.freedesktop.DBus.GLib.Const" value="" />

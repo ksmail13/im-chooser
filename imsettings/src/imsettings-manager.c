@@ -48,7 +48,6 @@
 
 
 typedef struct _IMSettingsManagerPrivate {
-	GPtrArray         *im_list;
 	GHashTable        *im_info_table;
 	IMSettingsRequest *gtk_req;
 	IMSettingsRequest *xim_req;
@@ -67,20 +66,6 @@ G_DEFINE_TYPE (IMSettingsManager, imsettings_manager, IMSETTINGS_TYPE_OBSERVER);
 /*
  * Private functions
  */
-static void
-_im_list_array_free(GPtrArray *array)
-{
-	gint i;
-
-	for (i = 0; i < array->len; i++) {
-		gchar *s = g_ptr_array_index(array, i);
-
-		if (s)
-			g_free(s);
-	}
-	g_ptr_array_free(array, TRUE);
-}
-
 static void
 imsettings_manager_real_set_property(GObject      *object,
 				     guint         prop_id,
@@ -127,8 +112,6 @@ imsettings_manager_real_finalize(GObject *object)
 
 	priv = IMSETTINGS_MANAGER_GET_PRIVATE (object);
 
-	if (priv->im_list)
-		_im_list_array_free(priv->im_list);
 	if (priv->im_info_table)
 		g_hash_table_destroy(priv->im_info_table);
 	if (priv->gtk_req)
@@ -144,18 +127,48 @@ imsettings_manager_real_finalize(GObject *object)
 		G_OBJECT_CLASS (imsettings_manager_parent_class)->finalize(object);
 }
 
-static const GPtrArray *
+typedef struct _IMSettingsManagerCollectList {
+	GPtrArray   *array;
+	const gchar *lang;
+} IMSettingsManagerCollectList;
+
+static void
+_collect_im_list(gpointer key,
+		 gpointer val,
+		 gpointer data)
+{
+	IMSettingsManagerCollectList *v = data;
+	IMSettingsInfo *info = IMSETTINGS_INFO (val);
+
+	if (!imsettings_info_is_xim(info)) {
+		if (imsettings_info_is_visible(info))
+			g_ptr_array_add(v->array, g_strdup(key));
+	} else {
+		/* need to update the short description with the lang */
+		g_object_set(G_OBJECT (info), "language", v->lang, NULL);
+		if (imsettings_info_is_visible(info))
+			g_ptr_array_add(v->array, g_strdup(imsettings_info_get_short_desc(info)));
+	}
+}
+
+static GPtrArray *
 imsettings_manager_real_get_list(IMSettingsObserver  *imsettings,
+				 const gchar         *lang,
 				 GError             **error)
 {
 	IMSettingsManagerPrivate *priv = IMSETTINGS_MANAGER_GET_PRIVATE (imsettings);
+	IMSettingsManagerCollectList v;
 
-	if (priv->im_list == NULL) {
+	v.array = g_ptr_array_new();
+	v.lang = lang;
+	g_hash_table_foreach(priv->im_info_table, _collect_im_list, &v);
+	if (v.array->len == 0) {
 		g_set_error(error, IMSETTINGS_GERROR, IMSETTINGS_GERROR_NOT_AVAILABLE,
 			    _("No input methods is available on your system."));
 	}
+	g_ptr_array_add(v.array, NULL);
 
-	return priv->im_list;
+	return v.array;
 }
 
 static IMSettingsInfo *
@@ -201,6 +214,7 @@ static gboolean
 _start_process(const gchar  *prog_name,
 	       const gchar  *prog_args,
 	       const gchar  *pidfile,
+	       const gchar  *lang,
 	       GError      **error)
 {
 	int fd;
@@ -247,12 +261,23 @@ _start_process(const gchar  *prog_name,
 		/* the requested IM may be already running */
 	} else {
 		if (prog_name) {
-			gchar *cmd, **argv;
+			gchar *cmd, **argv, **envp = NULL;
+			static const gchar *env_names[] = {
+				"LC_CTYPE",
+				NULL
+			};
+			gint i = 0;
 			GPid pid;
+
+			envp = g_new(gchar *, G_N_ELEMENTS(env_names));
+			if (lang) {
+				envp[i] = g_strdup_printf("%s=%s", env_names[i], lang); i++;
+			}
+			envp[i] = NULL;
 
 			cmd = g_strdup_printf("%s %s", prog_name, prog_args);
 			argv = g_strsplit_set(cmd, " \t", -1);
-			if (g_spawn_async(g_get_tmp_dir(), argv, NULL,
+			if (g_spawn_async(g_get_tmp_dir(), argv, envp,
 					  G_SPAWN_STDOUT_TO_DEV_NULL|
 					  G_SPAWN_STDERR_TO_DEV_NULL,
 					  NULL, NULL, &pid, error)) {
@@ -264,6 +289,7 @@ _start_process(const gchar  *prog_name,
 				close(fd);
 				_remove_pidfile(pidfile, NULL);
 			}
+			g_strfreev(envp);
 
 			g_free(cmd);
 			g_strfreev(argv);
@@ -436,6 +462,7 @@ _update_symlink(IMSettingsManagerPrivate  *priv,
 
 static gboolean
 imsettings_manager_real_start_im(IMSettingsObserver  *imsettings,
+				 const gchar         *lang,
 				 const gchar         *module,
 				 GError             **error)
 {
@@ -456,7 +483,7 @@ imsettings_manager_real_start_im(IMSettingsObserver  *imsettings,
 		pidfile = _build_pidfilename(xinputfile, priv->display_name, "aux");
 
 		/* bring up an auxiliary program */
-		if (!_start_process(aux_prog, aux_args, pidfile, error))
+		if (!_start_process(aux_prog, aux_args, pidfile, lang, error))
 			goto end;
 
 		g_free(pidfile);
@@ -465,7 +492,7 @@ imsettings_manager_real_start_im(IMSettingsObserver  *imsettings,
 		pidfile = _build_pidfilename(xinputfile, priv->display_name, "xim");
 
 		/* bring up a XIM server */
-		if (!_start_process(xim_prog, xim_args, pidfile, error))
+		if (!_start_process(xim_prog, xim_args, pidfile, lang, error))
 			goto end;
 
 		/* FIXME: We need to take care of imsettings per X screens?
@@ -625,7 +652,6 @@ imsettings_manager_init(IMSettingsManager *manager)
 
 	connection = dbus_bus_get(DBUS_BUS_SESSION, NULL);
 
-	priv->im_list = g_ptr_array_new();
 	priv->im_info_table = g_hash_table_new_full(g_str_hash, g_str_equal, g_free, g_object_unref);
 
 	priv->gtk_req = imsettings_request_new(connection, IMSETTINGS_GCONF_INTERFACE_DBUS);
@@ -660,10 +686,6 @@ imsettings_manager_load_conf(IMSettingsManager *manager)
 	const gchar *name, *homedir;
 	gchar *filename;
 
-	if (priv->im_list) {
-		_im_list_array_free(priv->im_list);
-		priv->im_list = g_ptr_array_new();
-	}
 	if (priv->im_info_table) {
 		g_hash_table_remove_all(priv->im_info_table);
 	}
@@ -675,14 +697,12 @@ imsettings_manager_load_conf(IMSettingsManager *manager)
 			info = imsettings_info_new(g_ptr_array_index(list, i));
 			name = imsettings_info_get_short_desc(info);
 			if (g_hash_table_lookup(priv->im_info_table, name) == NULL) {
-				g_ptr_array_add(priv->im_list, g_strdup(name));
 				g_hash_table_insert(priv->im_info_table, g_strdup(name), info);
 			} else {
 				g_warning(_("Duplicate entry `%s' from %s. SHORT_DESC has to be unique."),
 					  name, (gchar *)g_ptr_array_index(list, i));
 			}
 		}
-		g_ptr_array_add(priv->im_list, NULL);
 		/* determine the system default and the user choice */
 		filename = g_build_filename(XINPUTRC_PATH, IMSETTINGS_GLOBAL_XINPUT_CONF, NULL);
 		info = imsettings_info_new(filename);

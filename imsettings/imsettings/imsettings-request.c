@@ -40,12 +40,14 @@ typedef struct _IMSettingsRequestPrivate {
 	DBusGProxy     *proxy;
 	gchar          *interface;
 	gchar          *path;
+	gchar          *locale;
 } IMSettingsRequestPrivate;
 
 enum {
 	PROP_0,
 	PROP_INTERFACE,
 	PROP_CONNECTION,
+	PROP_LOCALE,
 	LAST_PROP
 };
 
@@ -105,6 +107,10 @@ imsettings_request_set_property(GObject      *object,
 		    imsettings_request_connect_to(IMSETTINGS_REQUEST (object));
 		    g_object_notify(object, "connection");
 		    break;
+	    case PROP_LOCALE:
+		    imsettings_request_set_locale(IMSETTINGS_REQUEST (object),
+						  g_value_get_string(value));
+		    break;
 	    default:
 		    G_OBJECT_WARN_INVALID_PROPERTY_ID (object, prop_id, pspec);
 		    break;
@@ -126,6 +132,9 @@ imsettings_request_get_property(GObject    *object,
 	    case PROP_CONNECTION:
 		    g_value_set_boxed(value, priv->connection);
 		    break;
+	    case PROP_LOCALE:
+		    g_value_set_string(value, priv->locale);
+		    break;
 	    default:
 		    G_OBJECT_WARN_INVALID_PROPERTY_ID (object, prop_id, pspec);
 		    break;
@@ -141,6 +150,8 @@ imsettings_request_finalize(GObject *object)
 		g_free(priv->interface);
 	if (priv->path)
 		g_free(priv->path);
+	if (priv->locale)
+		g_free(priv->locale);
 	if (priv->connection)
 		dbus_connection_unref(priv->connection);
 	if (priv->proxy)
@@ -177,6 +188,12 @@ imsettings_request_class_init(IMSettingsRequestClass *klass)
 							   _("An object to be a DBus connection"),
 							   DBUS_TYPE_CONNECTION,
 							   G_PARAM_READWRITE));
+	g_object_class_install_property(object_class, PROP_LOCALE,
+					g_param_spec_string("locale",
+							    _("Locale"),
+							    _("Locale to get the imsettings information"),
+							    NULL,
+							    G_PARAM_READWRITE));
 
 	dbus_g_object_type_install_info(IMSETTINGS_TYPE_REQUEST,
 					&dummy_info);
@@ -203,6 +220,25 @@ imsettings_request_new(DBusConnection *connection,
 						 NULL);
 }
 
+void
+imsettings_request_set_locale(IMSettingsRequest *imsettings,
+			      const gchar       *locale)
+{
+	IMSettingsRequestPrivate *priv;
+
+	g_return_if_fail (IMSETTINGS_IS_REQUEST (imsettings));
+
+	priv = IMSETTINGS_REQUEST_GET_PRIVATE (imsettings);
+	if (priv->locale) {
+		g_free(priv->locale);
+		priv->locale = NULL;
+	}
+	if (locale)
+		priv->locale = g_strdup(locale);
+
+	g_object_notify(G_OBJECT (imsettings), "locale");
+}
+
 gchar **
 imsettings_request_get_im_list(IMSettingsRequest *imsettings)
 {
@@ -213,7 +249,7 @@ imsettings_request_get_im_list(IMSettingsRequest *imsettings)
 	g_return_val_if_fail (IMSETTINGS_IS_REQUEST (imsettings), NULL);
 
 	priv = IMSETTINGS_REQUEST_GET_PRIVATE (imsettings);
-	if (!com_redhat_DBus_imsettings_get_list(priv->proxy, &retval, &error)) {
+	if (!com_redhat_DBus_imsettings_get_list(priv->proxy, priv->locale, &retval, &error)) {
 		g_warning(_("Failed to invoke a method `%s':\n  %s"), "GetList", error->message);
 		g_error_free(error);
 	}
@@ -233,7 +269,7 @@ imsettings_request_get_im_list_async(IMSettingsRequest                         *
 
 	priv = IMSETTINGS_REQUEST_GET_PRIVATE (imsettings);
 
-	return com_redhat_DBus_imsettings_get_list_async(priv->proxy, callback, user_data) != NULL;
+	return com_redhat_DBus_imsettings_get_list_async(priv->proxy, priv->locale, callback, user_data) != NULL;
 }
 
 gchar *
@@ -393,6 +429,86 @@ imsettings_request_get_long_description(IMSettingsRequest *imsettings,
 }
 
 gboolean
+imsettings_request_is_system_default(IMSettingsRequest *imsettings,
+				     const gchar       *module)
+{
+	IMSettingsRequestPrivate *priv;
+	GError *error = NULL;
+	gboolean retval = FALSE;
+
+	g_return_val_if_fail (IMSETTINGS_IS_REQUEST (imsettings), FALSE);
+	g_return_val_if_fail (module != NULL && module[0] != 0, FALSE);
+
+	priv = IMSETTINGS_REQUEST_GET_PRIVATE (imsettings);
+	if (!com_redhat_DBus_imsettings_IMInfo_is_system_default(priv->proxy, module, &retval, &error)) {
+		g_warning(_("Failed to invoke a method `%s':\n  %s"), "IsSystemDefault", error->message);
+		g_error_free(error);
+	}
+
+	return retval;
+}
+
+gboolean
+imsettings_request_is_user_default(IMSettingsRequest *imsettings,
+				   const gchar       *module)
+{
+	IMSettingsRequestPrivate *priv;
+	GError *error = NULL;
+	gboolean retval = FALSE;
+
+	g_return_val_if_fail (IMSETTINGS_IS_REQUEST (imsettings), FALSE);
+	g_return_val_if_fail (module != NULL && module[0] != 0, FALSE);
+
+	priv = IMSETTINGS_REQUEST_GET_PRIVATE (imsettings);
+	if (!com_redhat_DBus_imsettings_IMInfo_is_user_default(priv->proxy, module, &retval, &error)) {
+		g_warning(_("Failed to invoke a method `%s':\n  %s"), "IsUserDefault", error->message);
+		g_error_free(error);
+	}
+
+	return retval;
+}
+
+gboolean
+imsettings_request_is_xim(IMSettingsRequest *imsettings,
+			  const gchar       *module)
+{
+	IMSettingsRequestPrivate *priv;
+	GError *error = NULL;
+	gboolean retval = FALSE;
+
+	g_return_val_if_fail (IMSETTINGS_IS_REQUEST (imsettings), FALSE);
+	g_return_val_if_fail (module != NULL && module[0] != 0, FALSE);
+
+	priv = IMSETTINGS_REQUEST_GET_PRIVATE (imsettings);
+	if (!com_redhat_DBus_imsettings_IMInfo_is_xim(priv->proxy, module, &retval, &error)) {
+		g_warning(_("Failed to invoke a method `%s':\n  %s"), "IsXim", error->message);
+		g_error_free(error);
+	}
+
+	return retval;
+}
+
+gchar *
+imsettings_request_get_supported_language(IMSettingsRequest *imsettings,
+					  const gchar       *module)
+{
+	IMSettingsRequestPrivate *priv;
+	GError *error = NULL;
+	gchar *retval = NULL;
+
+	g_return_val_if_fail (IMSETTINGS_IS_REQUEST (imsettings), NULL);
+	g_return_val_if_fail (module != NULL && module[0] != 0, NULL);
+
+	priv = IMSETTINGS_REQUEST_GET_PRIVATE (imsettings);
+	if (!com_redhat_DBus_imsettings_IMInfo_get_supported_language(priv->proxy, module, &retval, &error)) {
+		g_warning(_("Failed to invoke a method `%s':\n  %s"), "GetSupportedLanguage", error->message);
+		g_error_free(error);
+	}
+
+	return retval;
+}
+
+gboolean
 imsettings_request_start_im(IMSettingsRequest *imsettings,
 			    const gchar       *module)
 {
@@ -404,7 +520,7 @@ imsettings_request_start_im(IMSettingsRequest *imsettings,
 	g_return_val_if_fail (module != NULL && module[0] != 0, FALSE);
 
 	priv = IMSETTINGS_REQUEST_GET_PRIVATE (imsettings);
-	if (!com_redhat_DBus_imsettings_start_im(priv->proxy, module, &retval, &error)) {
+	if (!com_redhat_DBus_imsettings_start_im(priv->proxy, priv->locale, module, &retval, &error)) {
 		g_warning(_("Failed to invoke a method `%s':\n  %s"), "StartIM", error->message);
 		g_error_free(error);
 	}
@@ -426,7 +542,7 @@ imsettings_request_start_im_async(IMSettingsRequest                         *ims
 
 	priv = IMSETTINGS_REQUEST_GET_PRIVATE (imsettings);
 
-	return com_redhat_DBus_imsettings_start_im_async(priv->proxy, module, callback, user_data) != NULL;
+	return com_redhat_DBus_imsettings_start_im_async(priv->proxy, priv->locale, module, callback, user_data) != NULL;
 }
 
 gboolean

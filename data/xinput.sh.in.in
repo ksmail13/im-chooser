@@ -1,5 +1,5 @@
 #!/bin/bash
-# Copyright (C) 1999-2004,2007 Red Hat, Inc. All rights reserved. This
+# Copyright (C) 1999-2004,2007-2008 Red Hat, Inc. All rights reserved. This
 # copyrighted material is made available to anyone wishing to use, modify,
 # copy, or redistribute it subject to the terms and conditions of the
 # GNU General Public License version 2.
@@ -30,25 +30,34 @@ tmplang=${LC_CTYPE:-${LANG:-"en_US.UTF-8"}}
 # unset env vars to be safe
 unset XIM XIM_PROGRAM XIM_ARGS XMODIFIERS GTK_IM_MODULE QT_IM_MODULE AUXILIARY_PROGRAM AUXILIARY_ARGS
 
-[ -z "$IM_CHOOSER_DISABLE_USER_XINPUTRC" ] && IM_CHOOSER_DISABLE_USER_XINPUTRC=no
+[ -z "$IMSETTINGS_DISABLE_USER_XINPUTRC" ] && IMSETTINGS_DISABLE_USER_XINPUTRC=no
 
-if [ -r "$USER_XINPUTRC" -a "x$IM_CHOOSER_DISABLE_USER_XINPUTRC" = "xno" ]; then
+if [ -r "$USER_XINPUTRC" -a "x$IMSETTINGS_DISABLE_USER_XINPUTRC" = "xno" ]; then
     source "$USER_XINPUTRC"
 elif [ -r "$SYS_XINPUTRC" ]; then
     source "$SYS_XINPUTRC"
 fi
 
 [ -z "$XIM" ] && XIM=none
-[ -n "$GTK_IM_MODULE" ] && export GTK_IM_MODULE
+
+# Update XSETTINGS for immodule
+[ -x /usr/bin/gconftool-2 ] && /usr/bin/gconftool-2 -t string -s /desktop/gnome/interface/gtk-im-module "$GTK_IM_MODULE" || :
+
+# Ensure GTK_IM_MODULE is empty. otherwise GTK+ doesn't pick up immodule through XSETTINGS
+unset GTK_IM_MODULE
+export GTK_IM_MODULE
+
+# FIXME: Qt doesn't support XSETTINGS for immodule yet.
+#        We still need to go with the older way.
 [ -n "$QT_IM_MODULE" ] && export QT_IM_MODULE
 
+# FIXME: XIM doesn't support XSETTINGS yet.
+#        We still need to go with the older way.
 # setup XMODIFIERS
 [ -z "$XMODIFIERS" -a -n "$XIM" ] && XMODIFIERS="@im=$XIM"
 [ -n "$XMODIFIERS" ] && export XMODIFIERS
 
-# execute XIM_PROGRAM
-[ -z "$IM_CHOOSER_ONLY_EVALUATE_VARIABLES" ] && IM_CHOOSER_ONLY_EVALUATE_VARIABLES=no
-[ -n "$XIM_PROGRAM" -a "x$IM_CHOOSER_ONLY_EVALUATE_VARIABLES" = "xno" ] && which "$XIM_PROGRAM" > /dev/null 2>&1 && LANG="$tmplang" "$XIM_PROGRAM" $XIM_ARGS &
-
-# execute AUXILIARY_PROGRAM
-[ -n "$AUXILIARY_PROGRAM" -a "x$IM_CHOOSER_ONLY_EVALUATE_VARIABLES" = "xno" ] && which "$AUXILIARY_PROGRAM" > /dev/null 2>&1 && LANG="$tmplang" "$AUXILIARY_PROGRAM" $AUXILIARY_ARGS &
+# start IM via imsettings
+IMSETTINGS_MODULE=${SHORT_DESC:-${XIM}}
+[ -z "$IMSETTINGS_MODULE" ] && IMSETTINGS_MODULE="none"
+which imsettings-start 2>&1 && LANG="$tmplang" imsettings-start "$IMSETTINGS_MODULE" || :
