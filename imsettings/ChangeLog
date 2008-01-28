@@ -1,3 +1,14 @@
+2008-01-28  Akira TAGOH  <tagoh@redhat.com>
+
+	* src/imsettings-manager.c (_update_symlink): check the filename.
+	we don't expect the filename is NULL for the user specific conffile anymore.
+
+	* imsettings/imsettings-info-private.h (IMSETTINGS_USER_SPECIFIC_SHORT_DESC):
+	Fix a typo.
+
+	* imsettings/imsettings-info.c (imsettings_info_set_property):
+	check the filename much strictly.
+
 2008-01-25  Akira TAGOH  <tagoh@redhat.com>
 
 	* backends/gconf/Makefile.am (EXTRA_DIST): Fix a typo.

@@ -36,7 +36,7 @@ G_BEGIN_DECLS
 #define IMSETTINGS_NONE_CONF			"none"
 /* config file use to be determined that IM is always used no matter what */
 #define IMSETTINGS_XIM_CONF			"xim"
-#define IMSETTINGS_USER_SPECIFIC_SHORT_DESC	N_("user Specific")
+#define IMSETTINGS_USER_SPECIFIC_SHORT_DESC	N_("User Specific")
 #define IMSETTINGS_USER_SPECIFIC_LONG_DESC	N_("xinputrc was modified by the user")
 
 

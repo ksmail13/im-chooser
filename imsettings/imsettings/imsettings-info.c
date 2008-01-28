@@ -222,7 +222,7 @@ imsettings_info_set_property(GObject      *object,
 			     GParamSpec   *pspec)
 {
 	IMSettingsInfoPrivate *priv = IMSETTINGS_INFO_GET_PRIVATE (object);
-	gchar *p;
+	gchar *p, *n;
 	struct stat st;
 
 #define _set_str_prop(_m_)						\
@@ -259,18 +259,18 @@ imsettings_info_set_property(GObject      *object,
 		    break;
 	    case PROP_FILENAME:
 		    _set_str_prop(filename);
-		    p = g_path_get_basename(priv->filename);
-		    if (strcmp(p, IMSETTINGS_XIM_CONF XINPUT_SUFFIX) == 0) {
+		    n = g_path_get_basename(priv->filename);
+		    if (strcmp(n, IMSETTINGS_XIM_CONF XINPUT_SUFFIX) == 0) {
 			    priv->is_xim = TRUE;
 			    g_object_set(object, "ignore", FALSE, NULL);
-		    } else if (strcmp(p, IMSETTINGS_NONE_CONF XINPUT_SUFFIX) == 0) {
+		    } else if (strcmp(n, IMSETTINGS_NONE_CONF XINPUT_SUFFIX) == 0) {
 			    g_object_set(object, "ignore", TRUE, NULL);
 		    } else {
 			    g_object_set(object, "ignore", FALSE, NULL);
 		    }
-		    g_free(p);
-		    p = g_build_filename(g_get_home_dir(), IMSETTINGS_USER_XINPUT_CONF, NULL);
-		    if (strcmp(p, priv->filename) == 0 &&
+		    p = g_path_get_dirname(priv->filename);
+		    if (strcmp(n, IMSETTINGS_USER_XINPUT_CONF) == 0 &&
+			strcmp(p, g_get_home_dir()) == 0 &&
 			lstat(priv->filename, &st) == 0 &&
 			!S_ISLNK (st.st_mode)) {
 			    /* special case to deal with the user-own conf file */
@@ -285,6 +285,7 @@ imsettings_info_set_property(GObject      *object,
 			    imsettings_info_notify_properties(object, priv->filename);
 		    }
 		    g_free(p);
+		    g_free(n);
 		    break;
 	    case PROP_GTK_IMM:
 		    _set_str_prop(gtkimm);

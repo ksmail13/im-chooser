@@ -396,8 +396,8 @@ _update_symlink(IMSettingsManagerPrivate  *priv,
 		GError                   **error)
 {
 	struct stat st;
-	const gchar *homedir, *p;
-	gchar *conffile = NULL, *backfile = NULL, *xinputfile = NULL;
+	const gchar *homedir, *f;
+	gchar *conffile = NULL, *backfile = NULL, *xinputfile = NULL, *p, *n;;
 	int save_errno;
 
 	homedir = g_get_home_dir();
@@ -431,8 +431,14 @@ _update_symlink(IMSettingsManagerPrivate  *priv,
 		}
 	}
 
-	p = imsettings_info_get_filename(info);
-	if (p == NULL) {
+	f = imsettings_info_get_filename(info);
+	if (f == NULL) {
+		g_assert_not_reached();
+	}
+	p = g_path_get_dirname(f);
+	n = g_path_get_basename(f);
+	if (strcmp(p, g_get_home_dir()) == 0 &&
+	    strcmp(n, IMSETTINGS_USER_XINPUT_CONF) == 0) {
 		/* try to revert the backup file for the user specific conf file */
 		if (g_rename(backfile, conffile) == -1) {
 			save_errno = errno;
@@ -444,8 +450,11 @@ _update_symlink(IMSettingsManagerPrivate  *priv,
 			goto end;
 		}
 	} else {
-		xinputfile = g_strdup(p);
+		xinputfile = g_strdup(f);
 	}
+	g_free(n);
+	g_free(p);
+
 	if (xinputfile) {
 		if (symlink(xinputfile, conffile) == -1) {
 			save_errno = errno;
