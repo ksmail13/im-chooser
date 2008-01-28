@@ -1,3 +1,12 @@
+2008-01-28  Akira TAGOH  <tagoh@redhat.com>
+
+	* src/im-chooser-simple.c (im_chooser_simple_im_list_on_changed):
+	send a changed signal.
+	(_im_chooser_simple_update_im_list): set initial IM if not yet.
+	(im_chooser_simple_get_widget): Update a note a bit.
+	(im_chooser_simple_is_modified): Follow the new way to detect
+	the modification.
+
 2008-01-25  Akira TAGOH  <tagoh@redhat.com>
 
 	* src/im-chooser-simple.c: Update a lot to work with imsettings.

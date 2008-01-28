@@ -146,6 +146,7 @@ im_chooser_simple_im_list_on_changed(GtkTreeSelection *selection,
 				gtk_widget_set_sensitive(im->button_im_config, TRUE);
 			else
 				gtk_widget_set_sensitive(im->button_im_config, FALSE);
+			g_signal_emit(im, signals[CHANGED], 0, NULL);
 		}
 	}
 }
@@ -247,6 +248,8 @@ _im_chooser_simple_update_im_list(IMChooserSimple *im)
 		if (im->current_im == NULL &&
 		    imsettings_request_is_user_default(im->imsettings_info, im->im_list[i])) {
 			im->current_im = g_strdup(im->im_list[i]);
+			if (im->initial_im == NULL)
+				im->initial_im = g_strdup(im->current_im);
 			cur_iter = gtk_tree_iter_copy(&iter);
 		}
 		g_string_append(string, "</i>");
@@ -351,7 +354,7 @@ im_chooser_simple_get_widget(IMChooserSimple *im)
 				 G_CALLBACK (im_chooser_simple_enable_im_on_toggled), im);
 
 		align3 = gtk_alignment_new(0.1, 0, 1.0, 1.0);
-		label3 = gtk_label_new(_("<small><i>Note: this change will not take effect until you next log in.</i></small>"));
+		label3 = gtk_label_new(_("<small><i>Note: this change will not take effect until you next log in, except GTK+ applications.</i></small>"));
 		gtk_label_set_use_markup(GTK_LABEL (label3), TRUE);
 		gtk_label_set_line_wrap(GTK_LABEL (label3), TRUE);
 		gtk_misc_set_alignment(GTK_MISC (label3), 0, 0);
@@ -421,5 +424,7 @@ im_chooser_simple_is_modified(IMChooserSimple *im)
 {
 	g_return_val_if_fail (IM_IS_CHOOSER_SIMPLE (im), FALSE);
 
-	return im->initial_im != im->current_im;
+	return !((im->initial_im == NULL && im->current_im == NULL) ||
+		 (im->initial_im != NULL && im->current_im != NULL &&
+		  strcmp(im->initial_im,im->current_im) == 0));
 }
