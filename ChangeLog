@@ -1,3 +1,8 @@
+2008-01-29  Akira TAGOH  <tagoh@redhat.com>
+
+	* configure.ac: turn off -Wall and -Werror if it's not with
+	--enable-maintainer-mode.
+
 2008-01-28  Akira TAGOH  <tagoh@redhat.com>
 
 	* src/im-chooser-simple.c (im_chooser_simple_im_list_on_changed):

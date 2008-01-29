@@ -17,15 +17,17 @@ dnl set CFLAGS
 dnl ======================================================================
 changequote(,)dnl
 if test "x$GCC" = "xyes"; then
-	case " $CFLAGS " in
-	*[\ \	]-Wall[\ \	]*) ;;
-	*) CFLAGS="$CFLAGS -Wall"   ;;
-	esac
+   	if test "x$USE_MAINTAINER_MODE" = "xyes"; then
+		case " $CFLAGS " in
+			*[\ \	]-Wall[\ \	]*) ;;
+			*) CFLAGS="$CFLAGS -Wall"   ;;
+		esac
 
-	case " $CFLAGS " in
-	*[\ \	]-Werror[\ \	]*) ;;
-	*) CFLAGS="$CFLAGS -Werror" ;;
-	esac
+		case " $CFLAGS " in
+			*[\ \	]-Werror[\ \	]*) ;;
+			*) CFLAGS="$CFLAGS -Werror" ;;
+		esac
+	fi
 
 	if test "x$enable_ansi" = "xyes"; then
 		case " $CFLAGS " in
