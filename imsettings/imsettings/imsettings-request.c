@@ -85,7 +85,6 @@ imsettings_request_set_property(GObject      *object,
 				GParamSpec   *pspec)
 {
 	IMSettingsRequestPrivate *priv = IMSETTINGS_REQUEST_GET_PRIVATE (object);
-	DBusConnection *connection;
 
 	switch (prop_id) {
 	    case PROP_INTERFACE:
@@ -99,11 +98,8 @@ imsettings_request_set_property(GObject      *object,
 		    g_object_notify(object, "interface");
 		    break;
 	    case PROP_CONNECTION:
-		    connection = (DBusConnection *)g_value_get_boxed(value);
-		    dbus_connection_ref(connection);
-		    if (priv->connection)
-			    dbus_connection_unref(priv->connection);
-		    priv->connection = connection;
+		    /* XXX: do we need to close the dbus connection here? */
+		    priv->connection = (DBusConnection *)g_value_get_boxed(value);
 		    imsettings_request_connect_to(IMSETTINGS_REQUEST (object));
 		    g_object_notify(object, "connection");
 		    break;
@@ -152,10 +148,9 @@ imsettings_request_finalize(GObject *object)
 		g_free(priv->path);
 	if (priv->locale)
 		g_free(priv->locale);
-	if (priv->connection)
-		dbus_connection_unref(priv->connection);
 	if (priv->proxy)
 		g_object_unref(priv->proxy);
+	/* XXX: do we need to unref the dbus connection here? */
 
 	if (G_OBJECT_CLASS (imsettings_request_parent_class)->finalize)
 		G_OBJECT_CLASS (imsettings_request_parent_class)->finalize(object);

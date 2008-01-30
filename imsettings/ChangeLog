@@ -1,3 +1,18 @@
+2008-01-30  Akira TAGOH  <tagoh@redhat.com>
+
+	* src/imsettings-manager.c (_start_process): set an empty string
+	if args is null.
+	(imsettings_manager_real_start_im): reload the IM info.
+	(imsettings_manager_real_stop_im): likewise.
+
+	* imsettings/imsettings-request.c (imsettings_request_set_property):
+	remove the code to unref the dbus connection so far.
+	(imsettings_request_finalize): likewise.
+
+	* imsettings/imsettings-observer.c (imsettings_observer_set_property):
+	remove the code to unref the dbus connection so far.
+	(imsettings_observer_finalize): likewise.
+
 2008-01-28  Akira TAGOH  <tagoh@redhat.com>
 
 	* src/imsettings-manager.c (_update_symlink): check the filename.

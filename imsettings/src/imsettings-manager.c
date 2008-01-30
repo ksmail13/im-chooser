@@ -282,7 +282,7 @@ _start_process(const gchar  *prog_name,
 			}
 			envp[i + j] = NULL;
 
-			cmd = g_strdup_printf("%s %s", prog_name, prog_args);
+			cmd = g_strdup_printf("%s %s", prog_name, (prog_args ? prog_args : ""));
 			argv = g_strsplit_set(cmd, " \t", -1);
 			if (g_spawn_async(g_get_tmp_dir(), argv, envp,
 					  G_SPAWN_STDOUT_TO_DEV_NULL|
@@ -488,6 +488,8 @@ imsettings_manager_real_start_im(IMSettingsObserver  *imsettings,
 	const gchar *xim_prog = NULL, *xim_args = NULL;
 	gchar *pidfile = NULL;
 	gboolean retval = FALSE;
+	IMSettingsRequest *req;
+	DBusConnection *conn;
 
 	g_print("Starting %s...\n", module);
 
@@ -527,6 +529,11 @@ imsettings_manager_real_start_im(IMSettingsObserver  *imsettings,
 			goto end;
 
 		if (*error == NULL) {
+			imsettings_manager_load_conf(IMSETTINGS_MANAGER (imsettings));
+			conn = dbus_bus_get(DBUS_BUS_SESSION, NULL);
+			req = imsettings_request_new(conn, IMSETTINGS_INFO_INTERFACE_DBUS);
+			imsettings_request_reload(req, FALSE);
+			g_object_unref(req);
 			retval = TRUE;
 		}
 	}
@@ -549,6 +556,8 @@ imsettings_manager_real_stop_im(IMSettingsObserver  *imsettings,
 	gchar *pidfile = NULL, *conffile;
 	gboolean retval = FALSE;
 	GString *strerr = g_string_new(NULL);
+	IMSettingsRequest *req;
+	DBusConnection *conn;
 
 	g_print("Stopping %s...\n", module);
 
@@ -624,6 +633,11 @@ imsettings_manager_real_stop_im(IMSettingsObserver  *imsettings,
 			} else {
 				retval = TRUE;
 			}
+			imsettings_manager_load_conf(IMSETTINGS_MANAGER (imsettings));
+			conn = dbus_bus_get(DBUS_BUS_SESSION, NULL);
+			req = imsettings_request_new(conn, IMSETTINGS_INFO_INTERFACE_DBUS);
+			imsettings_request_reload(req, FALSE);
+			g_object_unref(req);
 		}
 	}
   end:

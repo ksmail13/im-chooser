@@ -405,7 +405,6 @@ imsettings_observer_set_property(GObject      *object,
 				 GParamSpec   *pspec)
 {
 	IMSettingsObserverPrivate *priv = IMSETTINGS_OBSERVER_GET_PRIVATE (object);
-	DBusGConnection *connection;
 
 	switch (prop_id) {
 	    case PROP_MODULE:
@@ -419,11 +418,8 @@ imsettings_observer_set_property(GObject      *object,
 		    g_object_notify(object, "replace");
 		    break;
 	    case PROP_CONNECTION:
-		    connection = g_value_get_boxed(value);
-		    dbus_g_connection_ref(connection);
-		    if (priv->connection)
-			    dbus_g_connection_unref(priv->connection);
-		    priv->connection = connection;
+		    /* XXX: do we need to close the connection here? */
+		    priv->connection = g_value_get_boxed(value);
 		    g_object_notify(object, "connection");
 		    break;
 	    default:
@@ -465,8 +461,7 @@ imsettings_observer_finalize(GObject *object)
 
 	if (priv->module_name)
 		g_free(priv->module_name);
-	if (priv->connection)
-		dbus_g_connection_unref(priv->connection);
+	/* XXX: do we need to unref the dbus connection here? */
 
 	if (G_OBJECT_CLASS (imsettings_observer_parent_class)->finalize)
 		G_OBJECT_CLASS (imsettings_observer_parent_class)->finalize(object);
