@@ -1,3 +1,16 @@
+2008-01-30  Akira TAGOH  <tagoh@redhat.com>
+
+	* data/xinput.sh.in.in: Add a wait for a workaround that something
+	is stalled at gnome-session.
+
+	* src/im-chooser-simple.c (im_chooser_simple_enable_im_on_toggled):
+	don't send any requests if it's still at the initialization.
+	(im_chooser_simple_enable_im_on_toggled): Update the preference button
+	state after the current position is set.
+	(im_chooser_simple_sort_compare): new.
+	(_im_chooser_simple_update_im_list): sort out according to whether
+	it's the system default and the legacy IM.
+
 2008-01-29  Akira TAGOH  <tagoh@redhat.com>
 
 	* configure.ac: turn off -Wall and -Werror if it's not with

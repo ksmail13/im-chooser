@@ -87,13 +87,6 @@ im_chooser_simple_enable_im_on_toggled(GtkToggleButton *button,
 	flag = gtk_toggle_button_get_active(button);
 
 	gtk_widget_set_sensitive(im->widget_scrolled, flag);
-	if (im->current_im &&
-	    imsettings_request_get_preferences_program(im->imsettings_info, im->current_im, &prog, &args) &&
-	    g_file_test(prog, G_FILE_TEST_EXISTS | G_FILE_TEST_IS_EXECUTABLE))
-		gtk_widget_set_sensitive(im->button_im_config, flag);
-	else
-		gtk_widget_set_sensitive(im->button_im_config, FALSE);
-
 	if (flag) {
 		GtkTreeSelection *selection;
 		GtkTreeModel *model;
@@ -104,19 +97,29 @@ im_chooser_simple_enable_im_on_toggled(GtkToggleButton *button,
 		if (gtk_tree_selection_get_selected(selection, &model, &iter)) {
 			gtk_tree_model_get(model, &iter, 1, &name, -1);
 			if (im->current_im) {
-				imsettings_request_stop_im(im->imsettings, im->current_im, TRUE);
+				if (im->initialized)
+					imsettings_request_stop_im(im->imsettings, im->current_im, TRUE);
 				g_free(im->current_im);
 			}
 			im->current_im = g_strdup(name);
-			imsettings_request_start_im(im->imsettings, im->current_im);
+			if (im->initialized)
+				imsettings_request_start_im(im->imsettings, im->current_im);
 		}
 	} else {
 		if (im->current_im) {
-			imsettings_request_stop_im(im->imsettings, im->current_im, TRUE);
+			if (im->initialized)
+				imsettings_request_stop_im(im->imsettings, im->current_im, TRUE);
 			g_free(im->current_im);
 		}
 		im->current_im = NULL;
 	}
+	if (im->current_im &&
+	    imsettings_request_get_preferences_program(im->imsettings_info, im->current_im, &prog, &args) &&
+	    g_file_test(prog, G_FILE_TEST_EXISTS | G_FILE_TEST_IS_EXECUTABLE))
+		gtk_widget_set_sensitive(im->button_im_config, flag);
+	else
+		gtk_widget_set_sensitive(im->button_im_config, FALSE);
+
 	g_signal_emit(im, signals[CHANGED], 0, NULL);
 }
 
@@ -218,6 +221,20 @@ im_chooser_simple_instance_init(IMChooserSimple *im)
 	im->initial_im = NULL;
 }
 
+static gint
+im_chooser_simple_sort_compare(GtkTreeModel *model,
+			       GtkTreeIter  *a,
+			       GtkTreeIter  *b,
+			       gpointer      data)
+{
+	GValue value_a = { 0, }, value_b = { 0, };
+
+	gtk_tree_model_get_value(model, a, 2, &value_a);
+	gtk_tree_model_get_value(model, b, 2, &value_b);
+
+	return g_value_get_int(&value_a) - g_value_get_int(&value_b);
+}
+
 static void
 _im_chooser_simple_update_im_list(IMChooserSimple *im)
 {
@@ -227,20 +244,23 @@ _im_chooser_simple_update_im_list(IMChooserSimple *im)
 	GtkTreeViewColumn *column;
 	GtkRequisition requisition;
 	guint count;
-	gint i;
+	gint i, priority = 0;
 
 	count = g_strv_length(im->im_list);
-	list = gtk_list_store_new(2, G_TYPE_STRING, G_TYPE_STRING);
+	list = gtk_list_store_new(3, G_TYPE_STRING, G_TYPE_STRING, G_TYPE_INT);
 	for (i = 0; im->im_list[i] != NULL; i++) {
 		GString *string = g_string_new(NULL);
 
+		priority = 50;
 		gtk_list_store_append(list, &iter);
 		g_string_append(string, "<i>");
 		g_string_append_printf(string, _("Use %s"), im->im_list[i]);
 		if (imsettings_request_is_xim(im->imsettings_info, im->im_list[i])) {
+			priority = 100;
 			g_string_append(string, _(" (legacy)"));
 		}
 		if (imsettings_request_is_system_default(im->imsettings_info, im->im_list[i])) {
+			priority = 10;
 			g_string_append(string, _(" (recommended)"));
 			if (!im->default_im)
 				im->default_im = g_strdup(im->im_list[i]);
@@ -256,6 +276,7 @@ _im_chooser_simple_update_im_list(IMChooserSimple *im)
 		gtk_list_store_set(list, &iter,
 				   0, string->str,
 				   1, im->im_list[i],
+				   2, priority,
 				   -1);
 		g_string_free(string, TRUE);
 	}
@@ -264,12 +285,18 @@ _im_chooser_simple_update_im_list(IMChooserSimple *im)
 			cur_iter = gtk_tree_iter_copy(&iter);
 	}
 	if (cur_iter != NULL) {
+		gtk_tree_sortable_set_sort_func(GTK_TREE_SORTABLE (list), 0,
+						im_chooser_simple_sort_compare,
+						im, NULL);
 		gtk_tree_view_set_model(GTK_TREE_VIEW (im->widget_im_list), GTK_TREE_MODEL (list));
 		column = gtk_tree_view_get_column(GTK_TREE_VIEW (im->widget_im_list), 0);
+		gtk_tree_view_column_set_sort_column_id(column, 0);
+		gtk_tree_view_column_set_sort_order(column, GTK_SORT_ASCENDING);
 		path = gtk_tree_model_get_path(GTK_TREE_MODEL (list), cur_iter);
 		gtk_tree_view_set_cursor(GTK_TREE_VIEW (im->widget_im_list), path, column, FALSE);
 		gtk_tree_path_free(path);
 		gtk_tree_iter_free(cur_iter);
+		g_signal_emit_by_name(column, "clicked", 0, NULL);
 	}
 	g_object_unref(list);
 

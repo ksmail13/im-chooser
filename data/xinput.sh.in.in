@@ -60,4 +60,5 @@ export GTK_IM_MODULE
 # start IM via imsettings
 IMSETTINGS_MODULE=${SHORT_DESC:-${XIM}}
 [ -z "$IMSETTINGS_MODULE" ] && IMSETTINGS_MODULE="none"
-which imsettings-start 2>&1 && LANG="$tmplang" imsettings-start "$IMSETTINGS_MODULE" || :
+# XXX: Why that without wait blocks bringing up something from gnome-session?
+which imsettings-start > /dev/null 2>&1 && (sleep 10 && LANG="$tmplang" imsettings-start "$IMSETTINGS_MODULE" || :) &
