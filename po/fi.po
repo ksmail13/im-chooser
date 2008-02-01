@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: im-chooser 0.3.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-11-16 18:20+0900\n"
+"POT-Creation-Date: 2008-02-01 11:10+0900\n"
 "PO-Revision-Date: 2007-09-24 23:21+0300\n"
 "Last-Translator: Ville-Pekka Vainio <vpivaini@cs.helsinki.fi>\n"
 "Language-Team: Finnish <laatu@lokalisointi.org>\n"
@@ -16,118 +16,406 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../src/im-chooser.c:482 ../src/im-chooser-simple.c:623
-msgid ""
-"<small><i>Note: this change will not take effect until you next log in.</i></"
-"small>"
+#: ../imsettings/backends/gconf/main.c:111 ../imsettings/src/factory.c:50
+#: ../imsettings/src/factory_info.c:49
+#, c-format
+msgid "Reloading...\n"
 msgstr ""
-"<small><i>Huomaa: Tämän asetuksen muutokset tulevat voimaan vasta seuraavan "
-"kerran sisään kirjauduttaessa.</i></small>"
 
-#: ../src/im-chooser.c:486 ../src/im-chooser-simple.c:610
-msgid "<b>Input Method</b>"
-msgstr "<b>Syöttömenetelmä</b>"
-
-#: ../src/im-chooser.c:496
-msgid "No valid IM installed"
-msgstr "Sopivaa syöttömenetelmää ei ole asennettu"
-
-#: ../src/im-chooser.c:514
-msgid "_Use default Input Method for your language"
-msgstr "_Käytä kielen oletussyöttömenetelmää"
-
-#: ../src/im-chooser.c:516
-msgid ""
-"Your system chooses the appropriate Input Method for your language "
-"automatically from among Input Methods installed on your system."
+#: ../imsettings/backends/gconf/main.c:144
+#: ../imsettings/imsettings/imsettings-observer.c:580
+#: ../imsettings/src/factory.c:70 ../imsettings/src/factory_info.c:68
+msgid "Replace the running settings daemon with new instance."
 msgstr ""
-"Järjestelmä valitsee sopivan syöttömenetelmän kielellesi automaattisesti "
-"järjestelmään asennettujen syöttömenetelmien joukosta."
 
-#: ../src/im-chooser.c:519
-msgid "Choose _specific Input Method"
-msgstr "Valitse tietty syöttömenetelmä"
-
-#: ../src/im-chooser.c:521
-msgid ""
-"Use the specific Input Method that you prefer regardless what Input Method "
-"the system recommends."
+#: ../imsettings/backends/gconf/main.c:166 ../imsettings/src/factory.c:98
+#: ../imsettings/src/factory_info.c:90
+#: ../imsettings/utils/imsettings-reload.c:61
+#: ../imsettings/utils/imsettings-restart.c:63
+#: ../imsettings/utils/imsettings-stop.c:61
+msgid "Unknown error in parsing the command lines."
 msgstr ""
-"Käytä suosimaasi syöttömenetelmää huolimatta siitä, mitä menetelmää "
-"järjestelmä suosittelee."
 
-#: ../src/im-chooser.c:527
-msgid "_Do not use Input Method"
-msgstr "Älä käytä syöttömenetelmää"
-
-#: ../src/im-chooser.c:529
-msgid ""
-"Do not use Input Method no matter what language the desktop is running on."
+#: ../imsettings/backends/gconf/main.c:178 ../imsettings/src/factory.c:121
+#: ../imsettings/src/factory_info.c:103
+#, c-format
+msgid "Failed to replace the running settings daemon."
 msgstr ""
-"Älä käytä syöttömenetelmää, huolimatta siitä mitä kieltä työpöytä käyttää."
 
-#: ../src/im-chooser.c:532
-msgid "Use legacy _Input Method"
-msgstr "Käytä vanhentunutta _syöttömenetelmää"
-
-#: ../src/im-chooser.c:534
-msgid ""
-"Use X Input Method anyway. In fact, which input method will be chosen for "
-"the desktop session, depends on the desktop language."
+#: ../imsettings/imsettings/imsettings-info.c:449
+msgid "Language"
 msgstr ""
-"Käytä X:n syöttömenetelmää joka tapauksessa. Työpöydän kielestä riippuu, "
-"mikä syöttömenetelmä valitaan työpöytäistuntoon."
 
-#: ../src/im-chooser-simple.c:446
+#: ../imsettings/imsettings/imsettings-info.c:450
+msgid "A language to pull the information in."
+msgstr ""
+
+#: ../imsettings/imsettings/imsettings-info.c:455
+msgid "Filename"
+msgstr ""
+
+#: ../imsettings/imsettings/imsettings-info.c:456
+msgid "A filename referring to the IM information."
+msgstr ""
+
+#: ../imsettings/imsettings/imsettings-info.c:461
+msgid "GTK+ immodule"
+msgstr ""
+
+#: ../imsettings/imsettings/imsettings-info.c:462
+msgid "A module name used for GTK+"
+msgstr ""
+
+#: ../imsettings/imsettings/imsettings-info.c:467
+msgid "Qt immodule"
+msgstr ""
+
+#: ../imsettings/imsettings/imsettings-info.c:468
+msgid "A module name used for Qt"
+msgstr ""
+
+#: ../imsettings/imsettings/imsettings-info.c:473
+msgid "XIM name"
+msgstr ""
+
+#: ../imsettings/imsettings/imsettings-info.c:474
+msgid "XIM server name"
+msgstr ""
+
+#: ../imsettings/imsettings/imsettings-info.c:479
+msgid "Ignore flag"
+msgstr ""
+
+#: ../imsettings/imsettings/imsettings-info.c:480
+msgid "A flag to not list up."
+msgstr ""
+
+#: ../imsettings/imsettings/imsettings-info.c:485
+msgid "XIM server program name"
+msgstr ""
+
+#: ../imsettings/imsettings/imsettings-info.c:486
+msgid "XIM server program to be run"
+msgstr ""
+
+#: ../imsettings/imsettings/imsettings-info.c:491
+msgid "XIM server program's options"
+msgstr ""
+
+#: ../imsettings/imsettings/imsettings-info.c:492
+msgid "Command line options for XIM server program"
+msgstr ""
+
+#: ../imsettings/imsettings/imsettings-info.c:497
+msgid "Preference program name"
+msgstr ""
+
+#: ../imsettings/imsettings/imsettings-info.c:498
+msgid "Preference program to be run"
+msgstr ""
+
+#: ../imsettings/imsettings/imsettings-info.c:503
+msgid "Preference program's options"
+msgstr ""
+
+#: ../imsettings/imsettings/imsettings-info.c:504
+msgid "Command line options for preference program"
+msgstr ""
+
+#: ../imsettings/imsettings/imsettings-info.c:509
+msgid "Auxiliary program name"
+msgstr ""
+
+#: ../imsettings/imsettings/imsettings-info.c:510
+msgid "Auxiliary program to be run"
+msgstr ""
+
+#: ../imsettings/imsettings/imsettings-info.c:515
+msgid "Auxiliary program's options"
+msgstr ""
+
+#: ../imsettings/imsettings/imsettings-info.c:516
+msgid "Command line options for auxiliary program"
+msgstr ""
+
+#: ../imsettings/imsettings/imsettings-info.c:521
+#: ../imsettings/imsettings/imsettings-info.c:522
+msgid "Short Description"
+msgstr ""
+
+#: ../imsettings/imsettings/imsettings-info.c:527
+#: ../imsettings/imsettings/imsettings-info.c:528
+msgid "Long Description"
+msgstr ""
+
+#: ../imsettings/imsettings/imsettings-info.c:533
+msgid "System Default"
+msgstr ""
+
+#: ../imsettings/imsettings/imsettings-info.c:534
+msgid "Whether or not IM is a system default."
+msgstr ""
+
+#: ../imsettings/imsettings/imsettings-info.c:539
+msgid "User Default"
+msgstr ""
+
+#: ../imsettings/imsettings/imsettings-info.c:540
+msgid "Whether or not IM is an user default."
+msgstr ""
+
+#: ../imsettings/imsettings/imsettings-info.c:545
+msgid "XIM"
+msgstr ""
+
+#: ../imsettings/imsettings/imsettings-info.c:546
+msgid "Whether or not IM is a XIM server."
+msgstr ""
+
+#: ../imsettings/imsettings/imsettings-observer.c:193
+#, c-format
+msgid "Invalid IM module type: %d"
+msgstr ""
+
+#: ../imsettings/imsettings/imsettings-observer.c:573
+msgid "IM module name"
+msgstr ""
+
+#: ../imsettings/imsettings/imsettings-observer.c:574
+msgid "An IM module name to be watched signals"
+msgstr ""
+
+#: ../imsettings/imsettings/imsettings-observer.c:579
+msgid "Replace"
+msgstr ""
+
+#: ../imsettings/imsettings/imsettings-observer.c:585
+#: ../imsettings/imsettings/imsettings-request.c:182
+msgid "DBus connection"
+msgstr ""
+
+#: ../imsettings/imsettings/imsettings-observer.c:586
+#: ../imsettings/imsettings/imsettings-request.c:183
+msgid "An object to be a DBus connection"
+msgstr ""
+
+#: ../imsettings/imsettings/imsettings-request.c:176
+msgid "DBus Interface"
+msgstr ""
+
+#: ../imsettings/imsettings/imsettings-request.c:177
+msgid "Interface name to connect to DBus"
+msgstr ""
+
+#: ../imsettings/imsettings/imsettings-request.c:188
+msgid "Locale"
+msgstr ""
+
+#: ../imsettings/imsettings/imsettings-request.c:189
+msgid "Locale to get the imsettings information"
+msgstr ""
+
+#: ../imsettings/imsettings/imsettings-request.c:248
+#: ../imsettings/imsettings/imsettings-request.c:283
+#: ../imsettings/imsettings/imsettings-request.c:304
+#: ../imsettings/imsettings/imsettings-request.c:328
+#: ../imsettings/imsettings/imsettings-request.c:353
+#: ../imsettings/imsettings/imsettings-request.c:378
+#: ../imsettings/imsettings/imsettings-request.c:399
+#: ../imsettings/imsettings/imsettings-request.c:419
+#: ../imsettings/imsettings/imsettings-request.c:439
+#: ../imsettings/imsettings/imsettings-request.c:459
+#: ../imsettings/imsettings/imsettings-request.c:479
+#: ../imsettings/imsettings/imsettings-request.c:499
+#: ../imsettings/imsettings/imsettings-request.c:519
+#: ../imsettings/imsettings/imsettings-request.c:557
+#, c-format
+msgid ""
+"Failed to invoke a method `%s':\n"
+"  %s"
+msgstr ""
+
+#: ../imsettings/imsettings/imsettings-request.c:621
+#, c-format
+msgid ""
+"Failed to invoke a method `%s' on %s:\n"
+"  %s"
+msgstr ""
+
+#: ../imsettings/src/factory.c:71
+msgid "X display to use"
+msgstr ""
+
+#: ../imsettings/src/factory.c:71
+msgid "DISPLAY"
+msgstr ""
+
+#. FIXME
+#: ../imsettings/src/factory.c:74
+msgid "X screen to use"
+msgstr ""
+
+#: ../imsettings/src/factory.c:74
+msgid "SCREEN"
+msgstr ""
+
+#: ../imsettings/src/factory.c:106
+#, c-format
+msgid "Failed to open a X display."
+msgstr ""
+
+#: ../imsettings/src/imsettings-manager.c:167
+#, c-format
+msgid "No input methods is available on your system."
+msgstr ""
+
+#: ../imsettings/src/imsettings-manager.c:185
+#, c-format
+msgid "No such input method on your system: %s"
+msgstr ""
+
+#: ../imsettings/src/imsettings-manager.c:204
+#, c-format
+msgid "Failed to remove a pidfile: %s"
+msgstr ""
+
+#: ../imsettings/src/imsettings-manager.c:237
+#, c-format
+msgid "Failed to open a pidfile: %s"
+msgstr ""
+
+#: ../imsettings/src/imsettings-manager.c:340
+#, c-format
+msgid "Couldn't determine the pid for %s process."
+msgstr ""
+
+#: ../imsettings/src/imsettings-manager.c:346
+#, c-format
+msgid "Couldn't send a signal to the %s process successfully."
+msgstr ""
+
+#: ../imsettings/src/imsettings-manager.c:406
+#: ../imsettings/src/imsettings-manager.c:607
+#: ../imsettings/src/imsettings-manager.c:762
+#, c-format
+msgid "Failed to get a place of home directory."
+msgstr ""
+
+#: ../imsettings/src/imsettings-manager.c:418
+#, c-format
+msgid "Failed to create a backup file: %s"
+msgstr ""
+
+#: ../imsettings/src/imsettings-manager.c:427
+#, c-format
+msgid "Failed to remove a .xinputrc file: %s"
+msgstr ""
+
+#: ../imsettings/src/imsettings-manager.c:448
+#, c-format
+msgid "Failed to revert the backup file: %s"
+msgstr ""
+
+#: ../imsettings/src/imsettings-manager.c:464
+#, c-format
+msgid "Failed to make a symlink: %s"
+msgstr ""
+
+#: ../imsettings/src/imsettings-manager.c:618
+#, c-format
+msgid ""
+"The appropriate configuration file wasn't found. maybe the installation "
+"failed: %s"
+msgstr ""
+
+#: ../imsettings/src/imsettings-manager.c:671
+msgid "X display name"
+msgstr ""
+
+#: ../imsettings/src/imsettings-manager.c:672
+msgid "X display name to use"
+msgstr ""
+
+#: ../imsettings/src/imsettings-manager.c:732
+#, c-format
+msgid "Duplicate entry `%s' from %s. SHORT_DESC has to be unique."
+msgstr ""
+
+#: ../imsettings/src/imsettings-manager.c:746
+msgid "No system default IM found at the pre-search phase. Adding..."
+msgstr ""
+
+#: ../imsettings/src/imsettings-manager.c:750
+#: ../imsettings/src/imsettings-manager.c:776
+msgid ""
+"Looking up the different object with the same key. it may happens due to the "
+"un-unique short description. replacing..."
+msgstr ""
+
+#: ../imsettings/src/imsettings-manager.c:772
+msgid "No user default IM found at the pre-search phase. Adding..."
+msgstr ""
+
+#: ../imsettings/utils/imsettings-reload.c:40
+#: ../imsettings/utils/imsettings-restart.c:42
+#: ../imsettings/utils/imsettings-stop.c:41
+msgid "Force reloading the configuration, including restarting the process."
+msgstr ""
+
+#: ../src/im-chooser-simple.c:257
 #, c-format
 msgid "Use %s"
 msgstr "Käytä %s"
 
-#: ../src/im-chooser-simple.c:448
+#: ../src/im-chooser-simple.c:260
 #, fuzzy
 msgid " (legacy)"
 msgstr "(Vanhentunut)"
 
-#: ../src/im-chooser-simple.c:450
+#: ../src/im-chooser-simple.c:264
 #, fuzzy
 msgid " (recommended)"
 msgstr "(Suositeltu)"
 
-#: ../src/im-chooser-simple.c:616
+#: ../src/im-chooser-simple.c:379
+msgid "<b>Input Method</b>"
+msgstr "<b>Syöttömenetelmä</b>"
+
+#: ../src/im-chooser-simple.c:385
 msgid "_Enable input method feature"
 msgstr "Ota käyttöön syöttömenetelmä-ominaisuus"
 
-#: ../src/im-chooser-simple.c:655
+#: ../src/im-chooser-simple.c:392
+#, fuzzy
+msgid ""
+"<small><i>Note: this change will not take effect until you next log in, "
+"except GTK+ applications.</i></small>"
+msgstr ""
+"<small><i>Huomaa: Tämän asetuksen muutokset tulevat voimaan vasta seuraavan "
+"kerran sisään kirjauduttaessa.</i></small>"
+
+#: ../src/im-chooser-simple.c:424
 msgid "Input Method _Preferences..."
 msgstr "Syöttömenetelmien _asetukset..."
 
-#: ../src/main.c:66
+#: ../src/main.c:55
 msgid ""
 "<span weight=\"bold\" size=\"larger\">No input method is available</span>"
 msgstr ""
 "<span weight=\"bold\" size=\"larger\">Mitään syöttömenetelmää ei ole "
 "käytettävissä</span>"
 
-#: ../src/main.c:69
+#: ../src/main.c:58
 msgid "Please install any input methods before running if you like."
 msgstr "Asenna haluamasi syöttömenetelmät ennen ohjelman suorittamista."
 
-#: ../src/main.c:170
+#: ../src/main.c:153
 msgid "IM Chooser - Input Method configuration tool"
 msgstr "Syöttötavan valintatyökalu"
 
-#: ../src/main.c:178
+#: ../src/main.c:161
 msgid "_Log Out"
 msgstr "_Kirjaudu ulos"
-
-#: ../src/xinput.c:179
-msgid "xinputrc was modified by the user"
-msgstr "Käyttäjä on muokannut tiedostoa xinputrc"
-
-#. label that uses to indicate their own .xinputrc
-#: ../src/im-chooser-private.h:36
-msgid "User Specific"
-msgstr "Käyttäjäkohtainen"
 
 #: ../src/im-chooser.desktop.in.in.h:1
 #, fuzzy
@@ -141,6 +429,53 @@ msgstr ""
 #: ../src/im-chooser.desktop.in.in.h:2
 msgid "Input Method"
 msgstr "Syöttömenetelmä"
+
+#~ msgid "No valid IM installed"
+#~ msgstr "Sopivaa syöttömenetelmää ei ole asennettu"
+
+#~ msgid "_Use default Input Method for your language"
+#~ msgstr "_Käytä kielen oletussyöttömenetelmää"
+
+#~ msgid ""
+#~ "Your system chooses the appropriate Input Method for your language "
+#~ "automatically from among Input Methods installed on your system."
+#~ msgstr ""
+#~ "Järjestelmä valitsee sopivan syöttömenetelmän kielellesi automaattisesti "
+#~ "järjestelmään asennettujen syöttömenetelmien joukosta."
+
+#~ msgid "Choose _specific Input Method"
+#~ msgstr "Valitse tietty syöttömenetelmä"
+
+#~ msgid ""
+#~ "Use the specific Input Method that you prefer regardless what Input "
+#~ "Method the system recommends."
+#~ msgstr ""
+#~ "Käytä suosimaasi syöttömenetelmää huolimatta siitä, mitä menetelmää "
+#~ "järjestelmä suosittelee."
+
+#~ msgid "_Do not use Input Method"
+#~ msgstr "Älä käytä syöttömenetelmää"
+
+#~ msgid ""
+#~ "Do not use Input Method no matter what language the desktop is running on."
+#~ msgstr ""
+#~ "Älä käytä syöttömenetelmää, huolimatta siitä mitä kieltä työpöytä käyttää."
+
+#~ msgid "Use legacy _Input Method"
+#~ msgstr "Käytä vanhentunutta _syöttömenetelmää"
+
+#~ msgid ""
+#~ "Use X Input Method anyway. In fact, which input method will be chosen for "
+#~ "the desktop session, depends on the desktop language."
+#~ msgstr ""
+#~ "Käytä X:n syöttömenetelmää joka tapauksessa. Työpöydän kielestä riippuu, "
+#~ "mikä syöttömenetelmä valitaan työpöytäistuntoon."
+
+#~ msgid "xinputrc was modified by the user"
+#~ msgstr "Käyttäjä on muokannut tiedostoa xinputrc"
+
+#~ msgid "User Specific"
+#~ msgstr "Käyttäjäkohtainen"
 
 #~ msgid "_Follow the system-wide configuration"
 #~ msgstr "_Seuraa järjestelmänlaajuisia asetuksia"
