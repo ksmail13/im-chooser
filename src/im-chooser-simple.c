@@ -239,7 +239,7 @@ static void
 _im_chooser_simple_update_im_list(IMChooserSimple *im)
 {
 	GtkListStore *list;
-	GtkTreeIter iter, *cur_iter = NULL;
+	GtkTreeIter iter, *cur_iter = NULL, *def_iter = NULL, *first_iter = NULL;
 	GtkTreePath *path;
 	GtkTreeViewColumn *column;
 	GtkRequisition requisition;
@@ -264,6 +264,7 @@ _im_chooser_simple_update_im_list(IMChooserSimple *im)
 			g_string_append(string, _(" (recommended)"));
 			if (!im->default_im)
 				im->default_im = g_strdup(im->im_list[i]);
+			def_iter = gtk_tree_iter_copy(&iter);
 		}
 		if (im->current_im == NULL &&
 		    imsettings_request_is_user_default(im->imsettings_info, im->im_list[i])) {
@@ -280,9 +281,12 @@ _im_chooser_simple_update_im_list(IMChooserSimple *im)
 				   -1);
 		g_string_free(string, TRUE);
 	}
-	if (cur_iter == NULL) {
-		if (gtk_tree_model_get_iter_first(GTK_TREE_MODEL (list), &iter))
-			cur_iter = gtk_tree_iter_copy(&iter);
+	if (cur_iter == NULL && def_iter == NULL) {
+		cur_iter = first_iter;
+		first_iter = NULL;
+	} else if (cur_iter == NULL) {
+		cur_iter = def_iter;
+		def_iter = NULL;
 	}
 	if (cur_iter != NULL) {
 		gtk_tree_sortable_set_sort_func(GTK_TREE_SORTABLE (list), 0,
@@ -298,6 +302,10 @@ _im_chooser_simple_update_im_list(IMChooserSimple *im)
 		gtk_tree_iter_free(cur_iter);
 		g_signal_emit_by_name(column, "clicked", 0, NULL);
 	}
+	if (first_iter)
+		gtk_tree_iter_free(first_iter);
+	if (def_iter)
+		gtk_tree_iter_free(def_iter);
 	g_object_unref(list);
 
 	if (count == 0) {
