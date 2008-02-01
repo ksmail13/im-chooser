@@ -1,6 +1,13 @@
-src/im-chooser.c
+imsettings/backends/gconf/main.c
+imsettings/imsettings/imsettings-info.c
+imsettings/imsettings/imsettings-observer.c
+imsettings/imsettings/imsettings-request.c
+imsettings/src/factory.c
+imsettings/src/factory_info.c
+imsettings/src/imsettings-manager.c
+imsettings/utils/imsettings-reload.c
+imsettings/utils/imsettings-restart.c
+imsettings/utils/imsettings-stop.c
 src/im-chooser-simple.c
 src/main.c
-src/xinput.c
-src/im-chooser-private.h
 src/im-chooser.desktop.in.in
