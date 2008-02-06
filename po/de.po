@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Desktop Input Method configuration tool\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-02-01 11:10+0900\n"
-"PO-Revision-Date: 2008-01-29 10:14+0100\n"
+"POT-Creation-Date: 2008-02-01 01:34-0700\n"
+"PO-Revision-Date: 2008-02-06 12:03+0100\n"
 "Last-Translator: Fabian Affolter <fab@fedoraproject.org>\n"
 "Language-Team: German Translation team <fedora-trans-de@redhat.com>\n"
 "MIME-Version: 1.0\n"
@@ -22,19 +22,21 @@ msgstr ""
 "X-Poedit-Language: German\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
-#: ../imsettings/backends/gconf/main.c:111 ../imsettings/src/factory.c:50
+#: ../imsettings/backends/gconf/main.c:111
+#: ../imsettings/src/factory.c:50
 #: ../imsettings/src/factory_info.c:49
-#, c-format
 msgid "Reloading...\n"
-msgstr ""
+msgstr "Neuladen...\n"
 
 #: ../imsettings/backends/gconf/main.c:144
 #: ../imsettings/imsettings/imsettings-observer.c:580
-#: ../imsettings/src/factory.c:70 ../imsettings/src/factory_info.c:68
+#: ../imsettings/src/factory.c:70
+#: ../imsettings/src/factory_info.c:68
 msgid "Replace the running settings daemon with new instance."
 msgstr ""
 
-#: ../imsettings/backends/gconf/main.c:166 ../imsettings/src/factory.c:98
+#: ../imsettings/backends/gconf/main.c:166
+#: ../imsettings/src/factory.c:98
 #: ../imsettings/src/factory_info.c:90
 #: ../imsettings/utils/imsettings-reload.c:61
 #: ../imsettings/utils/imsettings-restart.c:63
@@ -42,15 +44,15 @@ msgstr ""
 msgid "Unknown error in parsing the command lines."
 msgstr ""
 
-#: ../imsettings/backends/gconf/main.c:178 ../imsettings/src/factory.c:121
+#: ../imsettings/backends/gconf/main.c:178
+#: ../imsettings/src/factory.c:121
 #: ../imsettings/src/factory_info.c:103
-#, c-format
 msgid "Failed to replace the running settings daemon."
 msgstr ""
 
 #: ../imsettings/imsettings/imsettings-info.c:449
 msgid "Language"
-msgstr ""
+msgstr "Sprache"
 
 #: ../imsettings/imsettings/imsettings-info.c:450
 msgid "A language to pull the information in."
@@ -58,7 +60,7 @@ msgstr ""
 
 #: ../imsettings/imsettings/imsettings-info.c:455
 msgid "Filename"
-msgstr ""
+msgstr "Dateiname"
 
 #: ../imsettings/imsettings/imsettings-info.c:456
 msgid "A filename referring to the IM information."
@@ -66,31 +68,34 @@ msgstr ""
 
 #: ../imsettings/imsettings/imsettings-info.c:461
 msgid "GTK+ immodule"
-msgstr ""
+msgstr "GTK+-IMModul"
 
 #: ../imsettings/imsettings/imsettings-info.c:462
+#, fuzzy
 msgid "A module name used for GTK+"
-msgstr ""
+msgstr "Für die Verbindung benutzter Benutzername."
 
 #: ../imsettings/imsettings/imsettings-info.c:467
+#, fuzzy
 msgid "Qt immodule"
-msgstr ""
+msgstr "QT Integrierter Bildschirm"
 
 #: ../imsettings/imsettings/imsettings-info.c:468
+#, fuzzy
 msgid "A module name used for Qt"
-msgstr ""
+msgstr "Für die Verbindung benutzter Benutzername."
 
 #: ../imsettings/imsettings/imsettings-info.c:473
 msgid "XIM name"
-msgstr ""
+msgstr "XIM-Name"
 
 #: ../imsettings/imsettings/imsettings-info.c:474
 msgid "XIM server name"
-msgstr ""
+msgstr "XIM-Servername"
 
 #: ../imsettings/imsettings/imsettings-info.c:479
 msgid "Ignore flag"
-msgstr ""
+msgstr "Flag ignorieren"
 
 #: ../imsettings/imsettings/imsettings-info.c:480
 msgid "A flag to not list up."
@@ -113,32 +118,36 @@ msgid "Command line options for XIM server program"
 msgstr ""
 
 #: ../imsettings/imsettings/imsettings-info.c:497
+#, fuzzy
 msgid "Preference program name"
-msgstr ""
+msgstr "Ungültiger Programmname: %s"
 
 #: ../imsettings/imsettings/imsettings-info.c:498
 msgid "Preference program to be run"
 msgstr ""
 
 #: ../imsettings/imsettings/imsettings-info.c:503
+#, fuzzy
 msgid "Preference program's options"
-msgstr ""
+msgstr "Zeige Fma Optionen"
 
 #: ../imsettings/imsettings/imsettings-info.c:504
 msgid "Command line options for preference program"
 msgstr ""
 
 #: ../imsettings/imsettings/imsettings-info.c:509
+#, fuzzy
 msgid "Auxiliary program name"
-msgstr ""
+msgstr "Ungültiger Programmname: %s"
 
 #: ../imsettings/imsettings/imsettings-info.c:510
 msgid "Auxiliary program to be run"
 msgstr ""
 
 #: ../imsettings/imsettings/imsettings-info.c:515
+#, fuzzy
 msgid "Auxiliary program's options"
-msgstr ""
+msgstr "Zeige Fma Optionen"
 
 #: ../imsettings/imsettings/imsettings-info.c:516
 msgid "Command line options for auxiliary program"
@@ -147,16 +156,16 @@ msgstr ""
 #: ../imsettings/imsettings/imsettings-info.c:521
 #: ../imsettings/imsettings/imsettings-info.c:522
 msgid "Short Description"
-msgstr ""
+msgstr "Kurze Beschreibung"
 
 #: ../imsettings/imsettings/imsettings-info.c:527
 #: ../imsettings/imsettings/imsettings-info.c:528
 msgid "Long Description"
-msgstr ""
+msgstr "Lange Beschreibung"
 
 #: ../imsettings/imsettings/imsettings-info.c:533
 msgid "System Default"
-msgstr ""
+msgstr "System-Vorgabe"
 
 #: ../imsettings/imsettings/imsettings-info.c:534
 msgid "Whether or not IM is a system default."
@@ -164,28 +173,30 @@ msgstr ""
 
 #: ../imsettings/imsettings/imsettings-info.c:539
 msgid "User Default"
-msgstr ""
+msgstr "Benutzer-Vorgabe"
 
 #: ../imsettings/imsettings/imsettings-info.c:540
+#, fuzzy
 msgid "Whether or not IM is an user default."
-msgstr ""
+msgstr "Legt fest, ob der Reiter durch den Benutzer umgeordnet werden darf"
 
 #: ../imsettings/imsettings/imsettings-info.c:545
 msgid "XIM"
-msgstr ""
+msgstr "XIM"
 
 #: ../imsettings/imsettings/imsettings-info.c:546
 msgid "Whether or not IM is a XIM server."
 msgstr ""
 
 #: ../imsettings/imsettings/imsettings-observer.c:193
-#, c-format
+#, fuzzy, c-format
 msgid "Invalid IM module type: %d"
-msgstr ""
+msgstr "Roher PNM-Bildtyp ist ungültig"
 
 #: ../imsettings/imsettings/imsettings-observer.c:573
+#, fuzzy
 msgid "IM module name"
-msgstr ""
+msgstr "Vorname des Kartenbesitzers:"
 
 #: ../imsettings/imsettings/imsettings-observer.c:574
 msgid "An IM module name to be watched signals"
@@ -193,12 +204,12 @@ msgstr ""
 
 #: ../imsettings/imsettings/imsettings-observer.c:579
 msgid "Replace"
-msgstr ""
+msgstr "Ersetze"
 
 #: ../imsettings/imsettings/imsettings-observer.c:585
 #: ../imsettings/imsettings/imsettings-request.c:182
 msgid "DBus connection"
-msgstr ""
+msgstr "DBus-Verbindung"
 
 #: ../imsettings/imsettings/imsettings-observer.c:586
 #: ../imsettings/imsettings/imsettings-request.c:183
@@ -207,7 +218,7 @@ msgstr ""
 
 #: ../imsettings/imsettings/imsettings-request.c:176
 msgid "DBus Interface"
-msgstr ""
+msgstr "DBus-Schnittstelle"
 
 #: ../imsettings/imsettings/imsettings-request.c:177
 msgid "Interface name to connect to DBus"
@@ -235,43 +246,44 @@ msgstr ""
 #: ../imsettings/imsettings/imsettings-request.c:499
 #: ../imsettings/imsettings/imsettings-request.c:519
 #: ../imsettings/imsettings/imsettings-request.c:557
-#, c-format
+#, fuzzy, c-format
 msgid ""
 "Failed to invoke a method `%s':\n"
 "  %s"
-msgstr ""
+msgstr "%s: konnte Satz nicht anhängen: %s\n"
 
 #: ../imsettings/imsettings/imsettings-request.c:621
-#, c-format
+#, fuzzy, c-format
 msgid ""
 "Failed to invoke a method `%s' on %s:\n"
 "  %s"
-msgstr ""
+msgstr "Versuch, Daten in der Zwischenablage abzulegen, gescheitert"
 
 #: ../imsettings/src/factory.c:71
+#, fuzzy
 msgid "X display to use"
-msgstr ""
+msgstr "X-Anzeige, die verwendet werden soll"
 
 #: ../imsettings/src/factory.c:71
 msgid "DISPLAY"
-msgstr ""
+msgstr "ANZEIGE"
 
 #. FIXME
 #: ../imsettings/src/factory.c:74
+#, fuzzy
 msgid "X screen to use"
-msgstr ""
+msgstr "X-Bildschirm, der verwendet werden soll"
 
 #: ../imsettings/src/factory.c:74
 msgid "SCREEN"
-msgstr ""
+msgstr "BILDSCHIRM"
 
 #: ../imsettings/src/factory.c:106
-#, c-format
+#, fuzzy
 msgid "Failed to open a X display."
-msgstr ""
+msgstr "Datei »%s« konnte nicht geöffnet werden: %s"
 
 #: ../imsettings/src/imsettings-manager.c:167
-#, c-format
 msgid "No input methods is available on your system."
 msgstr ""
 
@@ -281,14 +293,14 @@ msgid "No such input method on your system: %s"
 msgstr ""
 
 #: ../imsettings/src/imsettings-manager.c:204
-#, c-format
+#, fuzzy, c-format
 msgid "Failed to remove a pidfile: %s"
-msgstr ""
+msgstr "Konnte  Sperr-Datei '%s' nicht löschen."
 
 #: ../imsettings/src/imsettings-manager.c:237
-#, c-format
+#, fuzzy, c-format
 msgid "Failed to open a pidfile: %s"
-msgstr ""
+msgstr "Datei »%s« konnte nicht geöffnet werden: %s"
 
 #: ../imsettings/src/imsettings-manager.c:340
 #, c-format
@@ -303,44 +315,43 @@ msgstr ""
 #: ../imsettings/src/imsettings-manager.c:406
 #: ../imsettings/src/imsettings-manager.c:607
 #: ../imsettings/src/imsettings-manager.c:762
-#, c-format
 msgid "Failed to get a place of home directory."
 msgstr ""
 
 #: ../imsettings/src/imsettings-manager.c:418
-#, c-format
+#, fuzzy, c-format
 msgid "Failed to create a backup file: %s"
-msgstr ""
+msgstr "Konnte keinen vorübergehenden Dateinamen erstellen."
 
 #: ../imsettings/src/imsettings-manager.c:427
-#, c-format
+#, fuzzy, c-format
 msgid "Failed to remove a .xinputrc file: %s"
-msgstr ""
+msgstr "Konnte  Sperr-Datei '%s' nicht löschen."
 
 #: ../imsettings/src/imsettings-manager.c:448
-#, c-format
+#, fuzzy, c-format
 msgid "Failed to revert the backup file: %s"
-msgstr ""
+msgstr "Datei »%s« konnte nicht geschlossen werden: fclose() ist fehlgeschlagen: %s"
 
 #: ../imsettings/src/imsettings-manager.c:464
-#, c-format
+#, fuzzy, c-format
 msgid "Failed to make a symlink: %s"
-msgstr ""
+msgstr "\"make_keysig_packet\" fehlgeschlagen: %s\n"
 
 #: ../imsettings/src/imsettings-manager.c:618
 #, c-format
-msgid ""
-"The appropriate configuration file wasn't found. maybe the installation "
-"failed: %s"
+msgid "The appropriate configuration file wasn't found. maybe the installation failed: %s"
 msgstr ""
 
 #: ../imsettings/src/imsettings-manager.c:671
+#, fuzzy
 msgid "X display name"
-msgstr ""
+msgstr "Bildschirmname des Dienstes"
 
 #: ../imsettings/src/imsettings-manager.c:672
+#, fuzzy
 msgid "X display name to use"
-msgstr ""
+msgstr "Der Name der zu verwendenden Vorgabeschrift"
 
 #: ../imsettings/src/imsettings-manager.c:732
 #, c-format
@@ -353,9 +364,7 @@ msgstr ""
 
 #: ../imsettings/src/imsettings-manager.c:750
 #: ../imsettings/src/imsettings-manager.c:776
-msgid ""
-"Looking up the different object with the same key. it may happens due to the "
-"un-unique short description. replacing..."
+msgid "Looking up the different object with the same key. it may happens due to the un-unique short description. replacing..."
 msgstr ""
 
 #: ../imsettings/src/imsettings-manager.c:772
@@ -391,28 +400,20 @@ msgstr "Eingabemethoden-_Funktion aktivieren"
 
 #: ../src/im-chooser-simple.c:392
 #, fuzzy
-msgid ""
-"<small><i>Note: this change will not take effect until you next log in, "
-"except GTK+ applications.</i></small>"
-msgstr ""
-"<small><i>Hinweis: Diese Änderung wird erst aktiv, wenn Sie sich das nächste "
-"Mal anmelden.</i></small>"
+msgid "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications.</i></small>"
+msgstr "<small><i>Hinweis: Diese Änderung wird erst aktiv, wenn Sie sich das nächste Mal anmelden.</i></small>"
 
 #: ../src/im-chooser-simple.c:424
 msgid "Input Method _Preferences..."
 msgstr "_Einstellungen zur Eingabemethode..."
 
 #: ../src/main.c:55
-msgid ""
-"<span weight=\"bold\" size=\"larger\">No input method is available</span>"
-msgstr ""
-"<span weight=\"bold\" size=\"larger\">Keine Eingabemethoden verfügbar</span>"
+msgid "<span weight=\"bold\" size=\"larger\">No input method is available</span>"
+msgstr "<span weight=\"bold\" size=\"larger\">Keine Eingabemethoden verfügbar</span>"
 
 #: ../src/main.c:58
 msgid "Please install any input methods before running if you like."
-msgstr ""
-"Bitte installieren Sie eine Eingabemethode, bevor Sie sie laufen lassen, "
-"wenn Sie wollen."
+msgstr "Bitte installieren Sie eine Eingabemethode, bevor Sie sie laufen lassen, wenn Sie wollen."
 
 #: ../src/main.c:153
 msgid "IM Chooser - Input Method configuration tool"
@@ -423,12 +424,8 @@ msgid "_Log Out"
 msgstr "_Abmelden"
 
 #: ../src/im-chooser.desktop.in.in.h:1
-msgid ""
-"Choose the input method to be used or disable the input method usage on the "
-"desktop"
-msgstr ""
-"Wählen Sie die Eingabemethode, welche verwendet werden soll oder "
-"deaktivieren Sie die Verwendung von Eingabemethoden auf dem Desktop."
+msgid "Choose the input method to be used or disable the input method usage on the desktop"
+msgstr "Wählen Sie die Eingabemethode, welche verwendet werden soll oder deaktivieren Sie die Verwendung von Eingabemethoden auf dem Desktop."
 
 #: ../src/im-chooser.desktop.in.in.h:2
 msgid "Input Method"
@@ -436,48 +433,39 @@ msgstr "Eingabemethode"
 
 #~ msgid "No valid IM installed"
 #~ msgstr "Keine gültige Eingabemethode installiert"
-
 #~ msgid "_Use default Input Method for your language"
 #~ msgstr "_Standardmäßige Eingabemethode für Ihre Sprache verwenden"
-
 #~ msgid ""
 #~ "Your system chooses the appropriate Input Method for your language "
 #~ "automatically from among Input Methods installed on your system."
 #~ msgstr ""
 #~ "Ihr System wählt automatisch die passende Eingabemethode für Ihre Sprache "
 #~ "aus den auf Ihrem System installierten Eingabemethoden."
-
 #~ msgid "Choose _specific Input Method"
 #~ msgstr "_Bestimmte Eingabemethode auswählen"
-
 #~ msgid ""
 #~ "Use the specific Input Method that you prefer regardless what Input "
 #~ "Method the system recommends."
 #~ msgstr ""
 #~ "Verwenden Sie Ihre bevorzugte Eingabemethode, unabhängig davon, welche "
 #~ "Eingabemethode das System empfiehlt."
-
 #~ msgid "_Do not use Input Method"
 #~ msgstr "_Keine Eingabemethode verwenden"
-
 #~ msgid ""
 #~ "Do not use Input Method no matter what language the desktop is running on."
 #~ msgstr ""
 #~ "Eingabemethoden komplett deaktivieren, unabhängig davon, mit welcher "
 #~ "Sprache der Desktop läuft."
-
 #~ msgid "Use legacy _Input Method"
 #~ msgstr "_Alte Eingabemethode verwenden"
-
 #~ msgid ""
 #~ "Use X Input Method anyway. In fact, which input method will be chosen for "
 #~ "the desktop session, depends on the desktop language."
 #~ msgstr ""
 #~ "X-Eingabemethode trotzdem verwenden. Eigentlich hängt die Wahl der "
 #~ "Eingabemethode für die Desktop-Session von der Desktop-Sprache ab."
-
 #~ msgid "xinputrc was modified by the user"
 #~ msgstr "xinputrc wurde durch den Benutzer geändert"
-
 #~ msgid "User Specific"
 #~ msgstr "Benutzerdefiniert"
+
