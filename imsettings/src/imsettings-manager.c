@@ -371,6 +371,9 @@ _build_pidfilename(const gchar *base,
 		gint i;
 
 		hash = g_path_get_basename(base);
+		if (strcmp(hash, IMSETTINGS_USER_XINPUT_CONF ".bak") == 0) {
+			hash[strlen(IMSETTINGS_USER_XINPUT_CONF)] = 0;
+		}
 		for (i = 0; hash[i] != 0; i++) {
 			if (hash[i] < 0x30 ||
 			    (hash[i] >= 0x3a && hash[i] <= 0x3f) ||
@@ -408,37 +411,16 @@ _update_symlink(IMSettingsManagerPrivate  *priv,
 	}
 	conffile = g_build_filename(homedir, IMSETTINGS_USER_XINPUT_CONF, NULL);
 	backfile = g_build_filename(homedir, IMSETTINGS_USER_XINPUT_CONF ".bak", NULL);
-	if (lstat(conffile, &st) == 0) {
-		if (!S_ISLNK (st.st_mode)) {
-			/* .xinputrc was probably made by the hand. */
-			if (g_rename(conffile, backfile) == -1) {
-				save_errno = errno;
-				g_set_error(error, G_FILE_ERROR,
-					    g_file_error_from_errno(save_errno),
-					    _("Failed to create a backup file: %s"),
-					    g_strerror(save_errno));
-				goto end;
-			}
-		} else {
-			if (g_unlink(conffile) == -1) {
-				save_errno = errno;
-				g_set_error(error, G_FILE_ERROR,
-					    g_file_error_from_errno(save_errno),
-					    _("Failed to remove a .xinputrc file: %s"),
-					    g_strerror(save_errno));
-				goto end;
-			}
-		}
-	}
-
 	f = imsettings_info_get_filename(info);
 	if (f == NULL) {
 		g_assert_not_reached();
 	}
 	p = g_path_get_dirname(f);
 	n = g_path_get_basename(f);
-	if (strcmp(p, g_get_home_dir()) == 0 &&
+	if (strcmp(p, homedir) == 0 &&
 	    strcmp(n, IMSETTINGS_USER_XINPUT_CONF) == 0) {
+	} else if (strcmp(p, homedir) == 0 &&
+		   strcmp(n, IMSETTINGS_USER_XINPUT_CONF ".bak") == 0) {
 		/* try to revert the backup file for the user specific conf file */
 		if (g_rename(backfile, conffile) == -1) {
 			save_errno = errno;
@@ -450,6 +432,28 @@ _update_symlink(IMSettingsManagerPrivate  *priv,
 			goto end;
 		}
 	} else {
+		if (lstat(conffile, &st) == 0) {
+			if (!S_ISLNK (st.st_mode)) {
+				/* .xinputrc was probably made by the hand. */
+				if (g_rename(conffile, backfile) == -1) {
+					save_errno = errno;
+					g_set_error(error, G_FILE_ERROR,
+						    g_file_error_from_errno(save_errno),
+						    _("Failed to create a backup file: %s"),
+						    g_strerror(save_errno));
+					goto end;
+				}
+			} else {
+				if (g_unlink(conffile) == -1) {
+					save_errno = errno;
+					g_set_error(error, G_FILE_ERROR,
+						    g_file_error_from_errno(save_errno),
+						    _("Failed to remove a .xinputrc file: %s"),
+						    g_strerror(save_errno));
+					goto end;
+				}
+			}
+		}
 		xinputfile = g_strdup(f);
 	}
 	g_free(n);
@@ -783,5 +787,28 @@ imsettings_manager_load_conf(IMSettingsManager *manager)
 		}
 	} else {
 		g_object_unref(info);
+	}
+	/* to be able to revert the user specific .xinputrc file */
+	filename = g_build_filename(homedir, IMSETTINGS_USER_XINPUT_CONF ".bak", NULL);
+	info = imsettings_info_new(filename);
+	g_free(filename);
+	if (info) {
+		g_object_set(G_OBJECT (info),
+			     "ignore", TRUE,
+			     NULL);
+		name = imsettings_info_get_short_desc(info);
+		if (name == NULL || (p = g_hash_table_lookup(priv->im_info_table, name)) == NULL) {
+			g_warning(_("No user default IM found at the pre-search phase. Adding..."));
+			g_hash_table_insert(priv->im_info_table, g_strdup(name), info);
+		} else {
+			if (!imsettings_info_compare(info, p)) {
+				g_warning(_("Looking up the different object with the same key. it may happens due to the un-unique short description. replacing..."));
+				g_hash_table_replace(priv->im_info_table, g_strdup(name), info);
+			} else {
+				/* reuse the object */
+				g_object_set(G_OBJECT (p), "is_user_default", TRUE, NULL);
+				g_object_unref(info);
+			}
+		}
 	}
 }

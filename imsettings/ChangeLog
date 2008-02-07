@@ -1,3 +1,14 @@
+2008-02-07  Akira TAGOH  <tagoh@redhat.com>
+
+	* src/imsettings-manager.c (_build_pidfilename): get rid of .bak from
+	the filename to make stopping-process working for the user specific
+	xinputrc.
+	(_update_symlink): do nothing if it's going to do something for .xinputrc.
+	(imsettings_manager_load_conf): add the info for .xinputrc.bak too.
+
+	* imsettings/imsettings-info.c (imsettings_info_set_property):
+	Set properties for the user specific xinputrc too. (RH#431291)
+
 2008-01-30  Akira TAGOH  <tagoh@redhat.com>
 
 	* src/imsettings-manager.c (_start_process): set an empty string

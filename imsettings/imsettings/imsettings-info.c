@@ -269,10 +269,12 @@ imsettings_info_set_property(GObject      *object,
 			    g_object_set(object, "ignore", FALSE, NULL);
 		    }
 		    p = g_path_get_dirname(priv->filename);
-		    if (strcmp(n, IMSETTINGS_USER_XINPUT_CONF) == 0 &&
+		    if ((strcmp(n, IMSETTINGS_USER_XINPUT_CONF) == 0 ||
+			 strcmp(n, IMSETTINGS_USER_XINPUT_CONF ".bak") == 0) &&
 			strcmp(p, g_get_home_dir()) == 0 &&
 			lstat(priv->filename, &st) == 0 &&
 			!S_ISLNK (st.st_mode)) {
+			    imsettings_info_notify_properties(object, priv->filename);
 			    /* special case to deal with the user-own conf file */
 			    g_object_set(object,
 					 "short_desc", IMSETTINGS_USER_SPECIFIC_SHORT_DESC,
