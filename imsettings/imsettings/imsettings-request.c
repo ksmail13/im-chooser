@@ -88,10 +88,8 @@ imsettings_request_set_property(GObject      *object,
 
 	switch (prop_id) {
 	    case PROP_INTERFACE:
-		    if (priv->interface)
-			    g_free(priv->interface);
-		    if (priv->path)
-			    g_free(priv->path);
+		    g_free(priv->interface);
+		    g_free(priv->path);
 		    priv->interface = g_strdup(g_value_get_string(value));
 		    priv->path = imsettings_generate_dbus_path_from_interface(priv->interface);
 		    imsettings_request_connect_to(IMSETTINGS_REQUEST (object));
@@ -142,12 +140,9 @@ imsettings_request_finalize(GObject *object)
 {
 	IMSettingsRequestPrivate *priv = IMSETTINGS_REQUEST_GET_PRIVATE (object);
 
-	if (priv->interface)
-		g_free(priv->interface);
-	if (priv->path)
-		g_free(priv->path);
-	if (priv->locale)
-		g_free(priv->locale);
+	g_free(priv->interface);
+	g_free(priv->path);
+	g_free(priv->locale);
 	if (priv->proxy)
 		g_object_unref(priv->proxy);
 	/* XXX: do we need to unref the dbus connection here? */
@@ -224,10 +219,8 @@ imsettings_request_set_locale(IMSettingsRequest *imsettings,
 	g_return_if_fail (IMSETTINGS_IS_REQUEST (imsettings));
 
 	priv = IMSETTINGS_REQUEST_GET_PRIVATE (imsettings);
-	if (priv->locale) {
-		g_free(priv->locale);
-		priv->locale = NULL;
-	}
+	g_free(priv->locale);
+	priv->locale = NULL;
 	if (locale)
 		priv->locale = g_strdup(locale);
 

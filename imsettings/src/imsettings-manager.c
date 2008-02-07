@@ -76,10 +76,8 @@ imsettings_manager_real_set_property(GObject      *object,
 
 	switch (prop_id) {
 	    case PROP_DISPLAY_NAME:
-		    if (priv->display_name)
-			    g_free(priv->display_name);
+		    g_free(priv->display_name);
 		    priv->display_name = g_strdup(g_value_get_string(value));
-		    g_object_notify(object, "display_name");
 		    break;
 	    default:
 		    G_OBJECT_WARN_INVALID_PROPERTY_ID (object, prop_id, pspec);
@@ -120,8 +118,7 @@ imsettings_manager_real_finalize(GObject *object)
 		g_object_unref(priv->xim_req);
 	if (priv->qt_req)
 		g_object_unref(priv->qt_req);
-	if (priv->display_name)
-		g_free(priv->display_name);
+	g_free(priv->display_name);
 
 	if (G_OBJECT_CLASS (imsettings_manager_parent_class)->finalize)
 		G_OBJECT_CLASS (imsettings_manager_parent_class)->finalize(object);
@@ -164,7 +161,7 @@ imsettings_manager_real_get_list(IMSettingsObserver  *imsettings,
 	g_hash_table_foreach(priv->im_info_table, _collect_im_list, &v);
 	if (v.array->len == 0) {
 		g_set_error(error, IMSETTINGS_GERROR, IMSETTINGS_GERROR_NOT_AVAILABLE,
-			    _("No input methods is available on your system."));
+			    _("No input methods available on your system."));
 	}
 	g_ptr_array_add(v.array, NULL);
 
@@ -283,7 +280,7 @@ _start_process(const gchar  *prog_name,
 			envp[i + j] = NULL;
 
 			cmd = g_strdup_printf("%s %s", prog_name, (prog_args ? prog_args : ""));
-			argv = g_strsplit_set(cmd, " \t", -1);
+			g_shell_parse_argv(cmd, NULL, &argv, NULL);
 			if (g_spawn_async(g_get_tmp_dir(), argv, envp,
 					  G_SPAWN_STDOUT_TO_DEV_NULL|
 					  G_SPAWN_STDERR_TO_DEV_NULL,
@@ -291,6 +288,7 @@ _start_process(const gchar  *prog_name,
 				gchar *s = g_strdup_printf("%d", pid);
 
 				write(fd, s, strlen(s));
+				g_free(s);
 				close(fd);
 			} else {
 				close(fd);
@@ -300,11 +298,11 @@ _start_process(const gchar  *prog_name,
 
 			g_free(cmd);
 			g_strfreev(argv);
+			g_strfreev(env_list);
 		}
 	}
   end:
-	if (contents)
-		g_free(contents);
+	g_free(contents);
 
 	return (*error == NULL);
 }
@@ -351,8 +349,7 @@ _stop_process(const gchar  *pidfile,
 		}
 	}
   end:
-	if (contents)
-		g_free(contents);
+	g_free(contents);
 
 	return retval;
 }
@@ -400,7 +397,7 @@ _update_symlink(IMSettingsManagerPrivate  *priv,
 {
 	struct stat st;
 	const gchar *homedir, *f;
-	gchar *conffile = NULL, *backfile = NULL, *xinputfile = NULL, *p, *n;;
+	gchar *conffile = NULL, *backfile = NULL, *xinputfile = NULL, *p = NULL, *n = NULL;
 	int save_errno;
 
 	homedir = g_get_home_dir();
@@ -456,8 +453,6 @@ _update_symlink(IMSettingsManagerPrivate  *priv,
 		}
 		xinputfile = g_strdup(f);
 	}
-	g_free(n);
-	g_free(p);
 
 	if (xinputfile) {
 		if (symlink(xinputfile, conffile) == -1) {
@@ -470,12 +465,11 @@ _update_symlink(IMSettingsManagerPrivate  *priv,
 		}
 	}
   end:
-	if (conffile)
-		g_free(conffile);
-	if (backfile)
-		g_free(backfile);
-	if (xinputfile)
-		g_free(xinputfile);
+	g_free(n);
+	g_free(p);
+	g_free(conffile);
+	g_free(backfile);
+	g_free(xinputfile);
 
 	return (*error == NULL);
 }
@@ -542,8 +536,7 @@ imsettings_manager_real_start_im(IMSettingsObserver  *imsettings,
 		}
 	}
   end:
-	if (pidfile)
-		g_free(pidfile);
+	g_free(pidfile);
 
 	return retval;
 }
@@ -555,7 +548,7 @@ imsettings_manager_real_stop_im(IMSettingsObserver  *imsettings,
 				GError             **error)
 {
 	IMSettingsManagerPrivate *priv = IMSETTINGS_MANAGER_GET_PRIVATE (imsettings);
-	IMSettingsInfo *info, *oinfo;
+	IMSettingsInfo *info, *oinfo = NULL;
 	const gchar *xinputfile, *homedir;
 	gchar *pidfile = NULL, *conffile;
 	gboolean retval = FALSE;
@@ -626,8 +619,6 @@ imsettings_manager_real_stop_im(IMSettingsObserver  *imsettings,
 			if (!_update_symlink(priv, oinfo, error))
 				goto end;
 		}
-		if (oinfo)
-			g_object_unref(oinfo);
 
 		if (*error == NULL) {
 			if (force && strerr->len > 0) {
@@ -645,8 +636,9 @@ imsettings_manager_real_stop_im(IMSettingsObserver  *imsettings,
 		}
 	}
   end:
-	if (pidfile)
-		g_free(pidfile);
+	if (oinfo)
+		g_object_unref(oinfo);
+	g_free(pidfile);
 	g_string_free(strerr, TRUE);
 
 	return retval;
@@ -790,7 +782,11 @@ imsettings_manager_load_conf(IMSettingsManager *manager)
 	}
 	/* to be able to revert the user specific .xinputrc file */
 	filename = g_build_filename(homedir, IMSETTINGS_USER_XINPUT_CONF ".bak", NULL);
-	info = imsettings_info_new(filename);
+	if (g_file_test(filename, G_FILE_TEST_EXISTS)) {
+		info = imsettings_info_new(filename);
+	} else {
+		info = NULL;
+	}
 	g_free(filename);
 	if (info) {
 		g_object_set(G_OBJECT (info),

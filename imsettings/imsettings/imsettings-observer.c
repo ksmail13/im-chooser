@@ -98,8 +98,7 @@ imsettings_get_list(GObject     *object,
 		}
 		if (list) {
 			for (i = 0; i < list->len; i++) {
-				if (g_ptr_array_index(list, i))
-					g_free(g_ptr_array_index(list, i));
+				g_free(g_ptr_array_index(list, i));
 			}
 			g_ptr_array_free(list, TRUE);
 		}
@@ -408,8 +407,7 @@ imsettings_observer_set_property(GObject      *object,
 
 	switch (prop_id) {
 	    case PROP_MODULE:
-		    if (priv->module_name)
-			    g_free(priv->module_name);
+		    g_free(priv->module_name);
 		    priv->module_name = g_strdup(g_value_get_string(value));
 		    g_object_notify(object, "module");
 		    break;
@@ -459,8 +457,7 @@ imsettings_observer_finalize(GObject *object)
 
 	priv = IMSETTINGS_OBSERVER_GET_PRIVATE (object);
 
-	if (priv->module_name)
-		g_free(priv->module_name);
+	g_free(priv->module_name);
 	/* XXX: do we need to unref the dbus connection here? */
 
 	if (G_OBJECT_CLASS (imsettings_observer_parent_class)->finalize)

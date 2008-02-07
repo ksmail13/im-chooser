@@ -229,8 +229,7 @@ imsettings_info_set_property(GObject      *object,
 	G_STMT_START {							\
 		const gchar *v;						\
 									\
-		if (priv->_m_)						\
-			g_free(priv->_m_);				\
+		g_free(priv->_m_);					\
 		v = g_value_get_string(value);				\
 		if (v && v[0] != 0) {					\
 			priv->_m_ = g_strdup(g_value_get_string(value)); \
@@ -413,25 +412,19 @@ imsettings_info_finalize(GObject *object)
 {
 	IMSettingsInfoPrivate *priv = IMSETTINGS_INFO_GET_PRIVATE (object);
 
-#define _my_free(_o_)				\
-	if (priv->_o_)				\
-		g_free(priv->_o_)
-
-	_my_free(language);
-	_my_free(filename);
-	_my_free(gtkimm);
-	_my_free(qtimm);
-	_my_free(xim);
-	_my_free(xim_prog);
-	_my_free(xim_args);
-	_my_free(prefs_prog);
-	_my_free(prefs_args);
-	_my_free(aux_prog);
-	_my_free(aux_args);
-	_my_free(short_desc);
-	_my_free(long_desc);
-
-#undef _my_free
+	g_free(priv->language);
+	g_free(priv->filename);
+	g_free(priv->gtkimm);
+	g_free(priv->qtimm);
+	g_free(priv->xim);
+	g_free(priv->xim_prog);
+	g_free(priv->xim_args);
+	g_free(priv->prefs_prog);
+	g_free(priv->prefs_args);
+	g_free(priv->aux_prog);
+	g_free(priv->aux_args);
+	g_free(priv->short_desc);
+	g_free(priv->long_desc);
 }
 
 static void
