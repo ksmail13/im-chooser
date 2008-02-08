@@ -420,16 +420,13 @@ imsettings_observer_set_property(GObject      *object,
 	    case PROP_MODULE:
 		    g_free(priv->module_name);
 		    priv->module_name = g_strdup(g_value_get_string(value));
-		    g_object_notify(object, "module");
 		    break;
 	    case PROP_REPLACE:
 		    priv->replace = g_value_get_boolean(value);
-		    g_object_notify(object, "replace");
 		    break;
 	    case PROP_CONNECTION:
 		    /* XXX: do we need to close the connection here? */
 		    priv->connection = g_value_get_boxed(value);
-		    g_object_notify(object, "connection");
 		    break;
 	    default:
 		    G_OBJECT_WARN_INVALID_PROPERTY_ID (object, prop_id, pspec);

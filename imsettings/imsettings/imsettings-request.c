@@ -93,13 +93,11 @@ imsettings_request_set_property(GObject      *object,
 		    priv->interface = g_strdup(g_value_get_string(value));
 		    priv->path = imsettings_generate_dbus_path_from_interface(priv->interface);
 		    imsettings_request_connect_to(IMSETTINGS_REQUEST (object));
-		    g_object_notify(object, "interface");
 		    break;
 	    case PROP_CONNECTION:
 		    /* XXX: do we need to close the dbus connection here? */
 		    priv->connection = (DBusConnection *)g_value_get_boxed(value);
 		    imsettings_request_connect_to(IMSETTINGS_REQUEST (object));
-		    g_object_notify(object, "connection");
 		    break;
 	    case PROP_LOCALE:
 		    imsettings_request_set_locale(IMSETTINGS_REQUEST (object),

@@ -236,14 +236,10 @@ imsettings_info_set_property(GObject      *object,
 		} else {						\
 			priv->_m_ = NULL;				\
 		}							\
-		g_object_notify(object, # _m_);				\
 	} G_STMT_END
 #define _set_bool_prop(_m_)				\
 	G_STMT_START {					\
-		gboolean _b_ = priv->_m_;		\
 		priv->_m_ = g_value_get_boolean(value);	\
-		if (_b_ != priv->_m_)			\
-			g_object_notify(object, # _m_);	\
 	} G_STMT_END
 
 	switch (prop_id) {

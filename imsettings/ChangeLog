@@ -1,5 +1,13 @@
 2008-02-08  Akira TAGOH  <tagoh@redhat.com>
 
+	* imsettings/imsettings-info.c (_set_bool_prop): get rid of g_object_notify.
+
+	* imsettings/imsettings-request.c (imsettings_request_set_property):
+	likewise.
+
+	* imsettings/imsettings-observer.c (imsettings_observer_set_property):
+	likewise.
+
 	* backends/gconf/main.c (imsettings_gconf_message_filter): add actions
 	for org.freedesktop.DBus.Local.Disconnected and
 	org.freedesktop.DBus.NameOwnerChanged.
