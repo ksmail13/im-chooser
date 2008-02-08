@@ -1,5 +1,7 @@
 2008-02-08  Akira TAGOH  <tagoh@redhat.com>
 
+	* data/xinput.sh.in.in: get rid of a workaround.
+
 	* configure.ac: add --enable-debug option.
 
 	* src/im-chooser-simple.c (im_chooser_simple_finalize): unref objects.
