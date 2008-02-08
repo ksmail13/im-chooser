@@ -236,6 +236,8 @@ msgstr ""
 #, c-format
 msgid "Reloading...\n"
 msgstr ""
+"এটা প্ৰক্ৰিয়া মাতিবলৈ বিফল `%s':\n"
+"  %s"
 
 #: ../imsettings/src/factory.c:78
 msgid "X display to use"
@@ -394,10 +396,8 @@ msgid "Input Method _Preferences..."
 msgstr "নিবেশ পদ্ধতিৰ পছন্দ (_P)..."
 
 #: ../src/main.c:55
-msgid ""
-"<span weight=\"bold\" size=\"larger\">No input method is available</span>"
-msgstr ""
-"<span weight=\"bold\" size=\"larger\">কোনো নিবেশ পদ্ধতি পোৱা নাযায়</span>"
+msgid "<span weight=\"bold\" size=\"larger\">No input method is available</span>"
+msgstr "<span weight=\"bold\" size=\"larger\">কোনো নিবেশ পদ্ধতি পোৱা নাযায়</span>"
 
 #: ../src/main.c:58
 msgid "Please install any input methods before running if you like."
@@ -423,48 +423,3 @@ msgstr ""
 msgid "Input Method"
 msgstr "নিবেশ পদ্ধতি"
 
-#~ msgid "No valid IM installed"
-#~ msgstr "কোনো বৈধ IM সংস্থাপন কৰা হোৱা নাই"
-
-#~ msgid "_Use default Input Method for your language"
-#~ msgstr "আপোনাৰ ভাষাৰ বাবে অবিকল্পিত নিবেদশ পদ্ধতি ব্যৱহাৰ কৰক (_U)"
-
-#~ msgid ""
-#~ "Your system chooses the appropriate Input Method for your language "
-#~ "automatically from among Input Methods installed on your system."
-#~ msgstr ""
-#~ "আপোনাৰ ব্যৱস্থাপ্ৰণালীত সংস্থাপিত নিবেশ পদ্ধতিৰ পৰা আপোনাৰ ভাষাৰ বাবে উপযুক্ত "
-#~ "নিবেশ পদ্ধতি ব্যৱস্থাপ্ৰণালীয়ে নিজেই নিৰ্ব্বাচন কৰে ।"
-
-#~ msgid "Choose _specific Input Method"
-#~ msgstr "নিৰ্দ্দিষ্ট নিবেশ পদ্ধতি ব্যৱহাৰ কৰক (_c)"
-
-#~ msgid ""
-#~ "Use the specific Input Method that you prefer regardless what Input "
-#~ "Method the system recommends."
-#~ msgstr ""
-#~ "ব্যৱস্থাপ্ৰণালীয়ে কোনতোৰ উপদেশ দিয়ে গণ্য নকৰি আপুনি বাছি লোৱা নিবেশ পদ্ধতি "
-#~ "ব্যৱহাৰ কৰক ।"
-
-#~ msgid "_Do not use Input Method"
-#~ msgstr "নিবেশ পদ্ধতি ব্যৱহাৰ নকৰিব (_D)"
-
-#~ msgid ""
-#~ "Do not use Input Method no matter what language the desktop is running on."
-#~ msgstr "ডেষ্কট'প কোনটো ভাষাত চলিছে গণ্য নকৰি নিবেশ পদ্ধতি সমূলঞ্চে অসমৰ্থ কৰক ।"
-
-#~ msgid "Use legacy _Input Method"
-#~ msgstr "পুৰাতন নিবেশ পদ্ধতি ব্যৱহাৰ কৰক (_I)"
-
-#~ msgid ""
-#~ "Use X Input Method anyway. In fact, which input method will be chosen for "
-#~ "the desktop session, depends on the desktop language."
-#~ msgstr ""
-#~ "যিয়েই নহওক X নিবেশ পদ্ধতি ব্যৱহাৰ কৰক । বাস্তৱতে, কোনতো নিবেশ পদ্ধতি ডেষ্কট'প "
-#~ "অধিবেশনৰ বাবে নিৰ্ব্বাচিত কৰা হ'ব, ডেষ্কট'প ভাষাৰ ওপৰতহে নিৰ্ভৰ কৰে ।"
-
-#~ msgid "xinputrc was modified by the user"
-#~ msgstr "xinputrc ক ব্যৱহাৰকৰোঁতাই সলনি কৰিছে"
-
-#~ msgid "User Specific"
-#~ msgstr "ব্যৱহাৰকৰোঁতাৰ মতে"
