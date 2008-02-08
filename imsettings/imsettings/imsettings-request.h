@@ -96,18 +96,18 @@ gboolean           imsettings_request_reload                 (IMSettingsRequest 
 gboolean           imsettings_request_change_to              (IMSettingsRequest *imsettings,
                                                               const gchar       *module);
 
-gboolean imsettings_request_get_im_list_async(IMSettingsRequest                         *imsettings,
-					      com_redhat_DBus_imsettings_get_list_reply  callback,
-					      gpointer                                   user_data);
-gboolean imsettings_request_start_im_async   (IMSettingsRequest                         *imsettings,
-                                              const gchar                               *module,
-                                              com_redhat_DBus_imsettings_start_im_reply  callback,
-                                              gpointer                                   user_data);
-gboolean imsettings_request_stop_im_async    (IMSettingsRequest                         *imsettings,
-                                              const gchar                               *module,
-					      gboolean                                   force,
-                                              com_redhat_DBus_imsettings_stop_im_reply   callback,
-                                              gpointer                                   user_data);
+gboolean imsettings_request_get_im_list_async(IMSettingsRequest                    *imsettings,
+                                              com_redhat_imsettings_get_list_reply  callback,
+                                              gpointer                              user_data);
+gboolean imsettings_request_start_im_async   (IMSettingsRequest                    *imsettings,
+                                              const gchar                          *module,
+                                              com_redhat_imsettings_start_im_reply  callback,
+                                              gpointer                              user_data);
+gboolean imsettings_request_stop_im_async    (IMSettingsRequest                    *imsettings,
+                                              const gchar                          *module,
+                                              gboolean                              force,
+                                              com_redhat_imsettings_stop_im_reply   callback,
+                                              gpointer                              user_data);
 
 
 G_END_DECLS

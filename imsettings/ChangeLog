@@ -1,5 +1,11 @@
 2008-02-08  Akira TAGOH  <tagoh@redhat.com>
 
+	* imsettings/imsettings-request.c: similar fixes.
+
+	* imsettings/imsettings.xml: similar fixes.
+
+	* imsettings/backends/gconf/introspection.xml: similar fixes.
+
 	* imsettings/imsettings.h: get rid of "DBus" from all the services,
 	paths and interfaces name.
 

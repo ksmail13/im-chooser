@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<node name="/com/redhat/DBus.imsettings">
-  <interface name="com.redhat.DBus.imsettings">
+<node name="/com/redhat/imsettings">
+  <interface name="com.redhat.imsettings">
     <method name="GetList">
       <arg type="s" name="lang" direction="in" />
       <arg type="as" name="ret" direction="out" />
@@ -16,7 +16,7 @@
       <arg type="b" name="ret" direction="out" />
     </method>
   </interface>
-  <interface name="com.redhat.DBus.imsettings.IMInfo">
+  <interface name="com.redhat.imsettings.IMInfo">
     <method name="GetXinputFilename">
       <arg type="s" name="imname" direction="in" />
       <arg type="s" name="ret" direction="out">
