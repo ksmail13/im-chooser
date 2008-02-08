@@ -1,3 +1,9 @@
+2008-02-08  Akira TAGOH  <tagoh@redhat.com>
+
+	* configure.ac: add --enable-debug option.
+
+	* src/im-chooser-simple.c (im_chooser_simple_finalize): unref objects.
+
 2008-02-01  Akira TAGOH  <tagoh@redhat.com>
 
 	* src/im-chooser-simple.c (_im_chooser_simple_update_im_list):

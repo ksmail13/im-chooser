@@ -67,7 +67,7 @@ dnl ======================================================================
 dnl check pkg-config stuff
 dnl ======================================================================
 PKG_CHECK_MODULES(IMCHOOSE, gtk+-2.0)
-PKG_CHECK_MODULES(IMSETTINGS, dbus-1 dbus-glib-1)
+PKG_CHECK_MODULES(IMSETTINGS, dbus-1 >= $DBUS_REQUIRED dbus-glib-1)
 PKG_CHECK_MODULES(GCONF, gconf-2.0,
 	[use_gconf="yes"],
 	[use_gconf="no"])
@@ -123,6 +123,10 @@ AC_ARG_WITH(xinputsh,
 	AC_HELP_STRING([--with-xinputsh], [specify the xinput shell script name])
 	,,
 	with_xinputsh=no)
+AC_ARG_ENABLE(debug,
+	AC_HELP_STRING([--enable-debug], [enable the debugging mode])
+	,,
+	enable_debug=no)
 
 dnl ======================================================================
 dnl options - xinputdir
@@ -188,6 +192,17 @@ else
 fi
 XINPUT_SUFFIX=$with_xinput_suffix
 AC_SUBST(XINPUT_SUFFIX)
+
+dnl ======================================================================
+dnl options - debug
+dnl ======================================================================
+AC_MSG_CHECKING(whether to enable the debugging mode)
+if test "x$enable_debug" = xno; then
+	AC_MSG_RESULT(no)
+else
+	AC_MSG_RESULT(yes)
+	AC_DEFINE(DEBUG,,[Build with the debugging mode])
+fi
 
 dnl ======================================================================
 dnl output

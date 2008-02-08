@@ -61,6 +61,7 @@ struct _IMChooserSimple {
 	gchar              *current_im;
 	gchar              *default_im;
 	gboolean            initialized;
+	DBusConnection     *conn;
 };
 
 
@@ -178,9 +179,27 @@ im_chooser_simple_prefs_button_on_clicked(GtkButton *button,
  * private functions
  */
 static void
+im_chooser_simple_finalize(GObject *object)
+{
+	IMChooserSimple *simple = IM_CHOOSER_SIMPLE (object);
+
+	g_object_unref(simple->imsettings);
+	g_object_unref(simple->imsettings_info);
+	g_strfreev(simple->im_list);
+	g_free(simple->initial_im);
+	g_free(simple->current_im);
+	g_free(simple->default_im);
+	dbus_connection_unref(simple->conn);
+}
+
+static void
 im_chooser_simple_class_init(IMChooserSimpleClass *klass)
 {
+	GObjectClass *object_class = G_OBJECT_CLASS (klass);
+
 	parent_class = g_type_class_peek_parent(klass);
+
+	object_class->finalize = im_chooser_simple_finalize;
 
 	/* signals */
 	signals[CHANGED] = g_signal_new("changed",
@@ -203,14 +222,12 @@ im_chooser_simple_class_init(IMChooserSimpleClass *klass)
 static void
 im_chooser_simple_instance_init(IMChooserSimple *im)
 {
-	DBusConnection *conn;
-
 	im->widget = NULL;
 	im->initialized = FALSE;
 
-	conn = dbus_bus_get(DBUS_BUS_SESSION, NULL);
-	im->imsettings = imsettings_request_new(conn, IMSETTINGS_INTERFACE_DBUS);
-	im->imsettings_info = imsettings_request_new(conn, IMSETTINGS_INFO_INTERFACE_DBUS);
+	im->conn = dbus_bus_get(DBUS_BUS_SESSION, NULL);
+	im->imsettings = imsettings_request_new(im->conn, IMSETTINGS_INTERFACE_DBUS);
+	im->imsettings_info = imsettings_request_new(im->conn, IMSETTINGS_INFO_INTERFACE_DBUS);
 
 	/* get all the info of the xinput script */
 	im->im_list = imsettings_request_get_im_list(im->imsettings);
