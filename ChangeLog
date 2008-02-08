@@ -1,5 +1,7 @@
 2008-02-08  Akira TAGOH  <tagoh@redhat.com>
 
+	* configure.ac: bump to 0.99.1.
+
 	* data/xinput.sh.in.in: get rid of a workaround.
 
 	* configure.ac: add --enable-debug option.
