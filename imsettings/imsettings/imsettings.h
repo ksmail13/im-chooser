@@ -29,15 +29,15 @@
 G_BEGIN_DECLS
 
 #define IMSETTINGS_MODULE_VERSION	"0.6"
-#define IMSETTINGS_SERVICE_DBUS		"com.redhat.DBus.imsettings"
-#define IMSETTINGS_PATH_DBUS		"/com/redhat/DBus/imsettings"
-#define IMSETTINGS_INTERFACE_DBUS	"com.redhat.DBus.imsettings"
-#define IMSETTINGS_INFO_SERVICE_DBUS	"com.redhat.DBus.imsettings.IMInfo"
-#define IMSETTINGS_INFO_PATH_DBUS	"/com/redhat/DBus/imsettings/IMInfo"
-#define IMSETTINGS_INFO_INTERFACE_DBUS	"com.redhat.DBus.imsettings.IMInfo"
-#define IMSETTINGS_GCONF_SERVICE_DBUS	"com.redhat.DBus.imsettings.GConf"
-#define IMSETTINGS_GCONF_PATH_DBUS	"/com/redhat/DBus/imsettings/GConf"
-#define IMSETTINGS_GCONF_INTERFACE_DBUS	"com.redhat.DBus.imsettings.GConf"
+#define IMSETTINGS_SERVICE_DBUS		"com.redhat.imsettings"
+#define IMSETTINGS_PATH_DBUS		"/com/redhat/imsettings"
+#define IMSETTINGS_INTERFACE_DBUS	"com.redhat.imsettings"
+#define IMSETTINGS_INFO_SERVICE_DBUS	"com.redhat.imsettings.IMInfo"
+#define IMSETTINGS_INFO_PATH_DBUS	"/com/redhat/imsettings/IMInfo"
+#define IMSETTINGS_INFO_INTERFACE_DBUS	"com.redhat.imsettings.IMInfo"
+#define IMSETTINGS_GCONF_SERVICE_DBUS	"com.redhat.imsettings.GConf"
+#define IMSETTINGS_GCONF_PATH_DBUS	"/com/redhat/imsettings/GConf"
+#define IMSETTINGS_GCONF_INTERFACE_DBUS	"com.redhat.imsettings.GConf"
 
 enum IMSettingsIMModuleType {
 	IMSETTINGS_IMM_GTK,

@@ -1,3 +1,3 @@
 [D-BUS Service]
-Name=com.redhat.DBus.imsettings.GConf
+Name=com.redhat.imsettings.GConf
 Exec=@libexecdir@/gconf-im-settings-daemon

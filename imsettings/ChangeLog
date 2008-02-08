@@ -1,5 +1,14 @@
 2008-02-08  Akira TAGOH  <tagoh@redhat.com>
 
+	* imsettings/imsettings.h: get rid of "DBus" from all the services,
+	paths and interfaces name.
+
+	* src/im-settings-daemon.service.in: likewise.
+
+	* src/im-info-daemon.service.in: likewise.
+
+	* backends/gconf/gconf-im-settings-daemon.service.in: likewise.
+
 	* imsettings/imsettings-info.c (_set_bool_prop): get rid of g_object_notify.
 
 	* imsettings/imsettings-request.c (imsettings_request_set_property):
