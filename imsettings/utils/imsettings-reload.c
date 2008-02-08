@@ -77,6 +77,7 @@ main(int    argc,
 	g_object_unref(iminfo);
 	g_object_unref(imgconf);
 	g_object_unref(imsettings);
+	dbus_connection_unref(connection);
 
 	return 0;
 }

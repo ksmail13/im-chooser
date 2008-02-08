@@ -26,6 +26,7 @@
 #endif
 
 #include <stdlib.h>
+#include <string.h>
 #include <glib-object.h>
 #include <glib/gi18n.h>
 #include <dbus/dbus.h>
@@ -33,6 +34,12 @@
 #include <gconf/gconf.h>
 #include "imsettings/imsettings.h"
 #include "imsettings/imsettings-request.h"
+
+#ifdef DEBUG
+#define d(e)	e
+#else
+#define d(e)
+#endif
 
 
 typedef struct _IMSettingsGConfClass	IMSettingsGConfClass;
@@ -43,7 +50,8 @@ struct _IMSettingsGConfClass {
 };
 
 struct _IMSettingsGConf {
-	GObject parent_instance;
+	GObject  parent_instance;
+	gchar   *owner;
 };
 
 
@@ -66,7 +74,7 @@ gconf_imsettings_change_to(GObject      *object,
 	if (gval == NULL) {
 		*ret = FALSE;
 	} else {
-		g_print("setting up gconf key to %s\n", module);
+		d(g_print("setting up gconf key to %s\n", module));
 		if (!gconf_engine_set(engine, "/desktop/gnome/interface/gtk-im-module", gval, error)) {
 			*ret = FALSE;
 		} else {
@@ -92,23 +100,53 @@ imsettings_gconf_init(IMSettingsGConf *gconf)
 {
 }
 
+static void
+_disconnected(IMSettingsGConf *gconf)
+{
+	GMainLoop *loop;
+
+	d(g_print("***\n*** Disconnected\n***\n"));
+	loop = g_object_get_data(G_OBJECT (gconf), "imsettings-gconf-loop-main");
+	g_main_loop_quit(loop);
+}
+
 static DBusHandlerResult
 imsettings_gconf_message_filter(DBusConnection *connection,
 				DBusMessage    *message,
 				void           *data)
 {
 	IMSettingsGConf *gconf = G_TYPE_CHECK_INSTANCE_CAST (data, imsettings_gconf_get_type(), IMSettingsGConf);
+	GMainLoop *loop;
 
-	if (dbus_message_is_signal(message, IMSETTINGS_GCONF_INTERFACE_DBUS, "Reload")) {
+	if (dbus_message_is_signal(message, DBUS_INTERFACE_LOCAL, "Disconnected")) {
+		_disconnected(gconf);
+	} else if (dbus_message_is_signal(message, DBUS_INTERFACE_DBUS, "NameOwnerChanged")) {
+		gchar *service, *old_owner, *new_owner;
+
+		dbus_message_get_args(message, NULL,
+				      DBUS_TYPE_STRING, &service,
+				      DBUS_TYPE_STRING, &old_owner,
+				      DBUS_TYPE_STRING, &new_owner,
+				      DBUS_TYPE_INVALID);
+		if (strcmp(service, IMSETTINGS_GCONF_INTERFACE_DBUS) == 0) {
+			d(g_print("OwnerChanged: `%s'->`%s' for %s\n", old_owner, new_owner, IMSETTINGS_GCONF_INTERFACE_DBUS));
+			if (gconf->owner == NULL) {
+				gconf->owner = g_strdup(new_owner);
+			}
+			if (old_owner && strcmp(old_owner, gconf->owner) == 0) {
+				_disconnected(gconf);
+			}
+
+			return DBUS_HANDLER_RESULT_HANDLED;
+		}
+	} else if (dbus_message_is_signal(message, IMSETTINGS_GCONF_INTERFACE_DBUS, "Reload")) {
 		gboolean force = FALSE;
-		GMainLoop *loop;
 
 		dbus_message_get_args(message, NULL, DBUS_TYPE_BOOLEAN, &force, DBUS_TYPE_INVALID);
+		d(g_print("Reloading%s\n", (force ? " forcibly" : "")));
 		if (force) {
 			loop = g_object_get_data(G_OBJECT (gconf), "imsettings-gconf-loop-main");
 			g_main_loop_quit(loop);
-		} else {
-			g_print(_("Reloading...\n"));
 		}
 
 		return DBUS_HANDLER_RESULT_HANDLED;
@@ -134,7 +172,6 @@ main(int    argc,
 	DBusConnection *conn;
 	DBusGConnection *gconn;
 	IMSettingsGConf *gconf;
-	IMSettingsRequest *req;
 	GMainLoop *loop;
 	gint flags, ret;
 	GConfEngine *gengine;
@@ -170,34 +207,24 @@ main(int    argc,
 	g_option_context_free(ctx);
 
 	gengine = gconf_engine_get_default();
-	conn = dbus_bus_get_private(DBUS_BUS_SESSION, NULL);
-
-	if (arg_replace) {
-		req = imsettings_request_new(conn, IMSETTINGS_GCONF_INTERFACE_DBUS);
-		if (!imsettings_request_reload(req, TRUE)) {
-			g_printerr(_("Failed to replace the running settings daemon."));
-			exit(1);
-		}
-		g_object_unref(req);
-	}
 
 	gconn = dbus_g_bus_get(DBUS_BUS_SESSION, NULL);
 	conn = dbus_g_connection_get_connection(gconn);
 
-	flags = DBUS_NAME_FLAG_ALLOW_REPLACEMENT;
+	flags = DBUS_NAME_FLAG_ALLOW_REPLACEMENT | DBUS_NAME_FLAG_DO_NOT_QUEUE;
 	if (arg_replace) {
 		flags |= DBUS_NAME_FLAG_REPLACE_EXISTING;
 	}
 
 	ret = dbus_bus_request_name(conn, IMSETTINGS_GCONF_SERVICE_DBUS, flags, &derror);
 	if (dbus_error_is_set(&derror)) {
-		g_printerr("Failed to acquire im-settings-daemon service:\n  %s\n", derror.message);
+		g_printerr("Failed to acquire IMSettings service for %s:\n  %s\n", IMSETTINGS_GCONF_SERVICE_DBUS, derror.message);
 		dbus_error_free(&derror);
 
 		return 1;
 	}
 	if (ret == DBUS_REQUEST_NAME_REPLY_EXISTS) {
-		g_printerr("im-settings-daemon already running. exiting.\n");
+		g_printerr("IMSettings service for %s already running. exiting.\n", IMSETTINGS_GCONF_SERVICE_DBUS);
 
 		return 1;
 	} else if (ret != DBUS_REQUEST_NAME_REPLY_PRIMARY_OWNER) {
@@ -210,6 +237,11 @@ main(int    argc,
 
 	g_object_set_data(G_OBJECT (gconf), "imsettings-gconf-engine", gengine);
 
+	dbus_bus_add_match(conn,
+			   "type='signal',"
+			   "interface='" DBUS_INTERFACE_DBUS "',"
+			   "sender='" DBUS_SERVICE_DBUS "'",
+			   &derror);
 	dbus_bus_add_match(conn, "type='signal',interface='" IMSETTINGS_GCONF_INTERFACE_DBUS "'", &derror);
 	dbus_connection_add_filter(conn, imsettings_gconf_message_filter, gconf, NULL);
 
@@ -219,6 +251,7 @@ main(int    argc,
 	g_object_set_data(G_OBJECT (gconf), "imsettings-gconf-loop-main", loop);
 	g_main_loop_run(loop);
 
+	dbus_g_connection_unref(gconn);
 	g_object_unref(gconf);
 
 	return 0;

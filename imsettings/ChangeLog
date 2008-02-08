@@ -1,3 +1,40 @@
+2008-02-08  Akira TAGOH  <tagoh@redhat.com>
+
+	* backends/gconf/main.c (imsettings_gconf_message_filter): add actions
+	for org.freedesktop.DBus.Local.Disconnected and
+	org.freedesktop.DBus.NameOwnerChanged.
+
+	* src/factory.c (main): get rid of sending a reload request.
+	(main): connect to the disconnect signal.
+
+	* src/factory_info.c (main): get rid of sending a reload request.
+	(main): connect to the disconnect signal.
+
+	* src/imsettings-manager.c (imsettings_manager_real_finalize):
+	unref a connection for requesting.
+	(imsettings_manager_real_start_im): likewise.
+	(imsettings_manager_real_stop_im): likewise.
+
+	* imsettings/imsettings-observer.c (imsettings_observer_signal_disconnected):
+	new function to handle org.freedesktop.DBus.Local.Disconnected.
+	(imsettings_observer_signal_name_owner_changed): new function to handle
+	org.freedesktop.DBus.NameOwnerChanged.
+	(imsettings_observer_class_init): add a disconnected signal.
+
+	* imsettings/imsettings-utils.c: cleaning up.
+
+	* utils/imsettings-list.c (main): unref a connection.
+
+	* utils/imsettings-reload.c (main): likewise.
+
+	* utils/imsettings-stop.c (main): likewise.
+
+	* utils/imsettings-restart.c (main): likewise.
+
+	* utils/imsettings-start.c (main): likewise.
+
+	* utils/imsettings-info.c (main): likewise.
+
 2008-02-07  Akira TAGOH  <tagoh@redhat.com>
 
 	* src/imsettings-manager.c: cleaning up.

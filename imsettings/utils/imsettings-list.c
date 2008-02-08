@@ -52,6 +52,7 @@ main(int    argc,
 		g_strfreev(list);
 	}
 	g_object_unref(imsettings);
+	dbus_connection_unref(connection);
 
 	return 0;
 }

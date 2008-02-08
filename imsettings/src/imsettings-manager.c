@@ -53,6 +53,7 @@ typedef struct _IMSettingsManagerPrivate {
 	IMSettingsRequest *xim_req;
 	IMSettingsRequest *qt_req;
 	gchar             *display_name;
+	DBusConnection    *req_conn;
 } IMSettingsManagerPrivate;
 
 enum {
@@ -118,6 +119,7 @@ imsettings_manager_real_finalize(GObject *object)
 		g_object_unref(priv->xim_req);
 	if (priv->qt_req)
 		g_object_unref(priv->qt_req);
+	dbus_connection_unref(priv->req_conn);
 	g_free(priv->display_name);
 
 	if (G_OBJECT_CLASS (imsettings_manager_parent_class)->finalize)
@@ -532,6 +534,7 @@ imsettings_manager_real_start_im(IMSettingsObserver  *imsettings,
 			req = imsettings_request_new(conn, IMSETTINGS_INFO_INTERFACE_DBUS);
 			imsettings_request_reload(req, FALSE);
 			g_object_unref(req);
+			dbus_connection_unref(conn);
 			retval = TRUE;
 		}
 	}
@@ -633,6 +636,7 @@ imsettings_manager_real_stop_im(IMSettingsObserver  *imsettings,
 			req = imsettings_request_new(conn, IMSETTINGS_INFO_INTERFACE_DBUS);
 			imsettings_request_reload(req, FALSE);
 			g_object_unref(req);
+			dbus_connection_unref(conn);
 		}
 	}
   end:
@@ -674,15 +678,14 @@ static void
 imsettings_manager_init(IMSettingsManager *manager)
 {
 	IMSettingsManagerPrivate *priv = IMSETTINGS_MANAGER_GET_PRIVATE (manager);
-	DBusConnection *connection;
 
-	connection = dbus_bus_get(DBUS_BUS_SESSION, NULL);
+	priv->req_conn = dbus_bus_get(DBUS_BUS_SESSION, NULL);
 
 	priv->im_info_table = g_hash_table_new_full(g_str_hash, g_str_equal, g_free, g_object_unref);
 
-	priv->gtk_req = imsettings_request_new(connection, IMSETTINGS_GCONF_INTERFACE_DBUS);
-//	priv->xim_req = imsettings_request_new(connection, IMSETTINGS_XIM_INTERFACE_DBUS);
-//	priv->qt_req = imsettings_request_new(connection, IMSETTINGS_QT_INTERFACE_DBUS);
+	priv->gtk_req = imsettings_request_new(priv->req_conn, IMSETTINGS_GCONF_INTERFACE_DBUS);
+//	priv->xim_req = imsettings_request_new(priv->req_conn, IMSETTINGS_XIM_INTERFACE_DBUS);
+//	priv->qt_req = imsettings_request_new(priv->req_conn, IMSETTINGS_QT_INTERFACE_DBUS);
 
 	imsettings_manager_load_conf(manager);
 }

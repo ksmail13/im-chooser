@@ -39,6 +39,14 @@
  * Private functions
  */
 static void
+disconnected_cb(IMSettingsManager *manager)
+{
+	GMainLoop *loop = g_object_get_data(G_OBJECT (manager), "imsettings-daemon-main");
+
+	g_main_loop_quit(loop);
+}
+
+static void
 reload_cb(IMSettingsManager *manager,
 	  gboolean           force)
 {
@@ -62,7 +70,6 @@ main(int    argc,
 	GError *error = NULL;
 	GMainLoop *loop;
 	IMSettingsManager *manager;
-	IMSettingsRequest *req;
 	gboolean arg_replace = FALSE;
 	gchar *arg_display_name = NULL, *display_name = NULL;
 	GOptionContext *ctx = g_option_context_new(NULL);
@@ -75,7 +82,6 @@ main(int    argc,
 #endif
 		{NULL, 0, 0, 0, NULL, NULL, NULL}
 	};
-	DBusConnection *connection;
 	DBusGConnection *gconn;
 	Display *display;
 
@@ -111,19 +117,6 @@ main(int    argc,
 
 	XCloseDisplay(display);
 
-	/* FIXME: value type has to be initialized before using DBusGProxy.
-	 *        and we may want to use a private connection.
-	 */
-	connection = dbus_bus_get_private(DBUS_BUS_SESSION, NULL);
-	if (arg_replace) {
-		req = imsettings_request_new(connection, IMSETTINGS_INTERFACE_DBUS);
-		if (!imsettings_request_reload(req, TRUE)) {
-			g_printerr(_("Failed to replace the running settings daemon."));
-			exit(1);
-		}
-		g_object_unref(req);
-	}
-
 	gconn = dbus_g_bus_get(DBUS_BUS_SESSION, NULL);
 	manager = imsettings_manager_new(gconn, arg_replace);
 	if (manager == NULL) {
@@ -132,6 +125,9 @@ main(int    argc,
 	}
 	g_object_set(G_OBJECT (manager), "display_name", display_name, NULL);
 
+	g_signal_connect(manager, "disconnected",
+			 G_CALLBACK (disconnected_cb),
+			 NULL);
 	g_signal_connect(manager, "reload",
 			 G_CALLBACK (reload_cb),
 			 NULL);
@@ -150,6 +146,7 @@ main(int    argc,
 
 	g_free(display_name);
 	g_object_unref(manager);
+	dbus_g_connection_unref(gconn);
 
 	return 0;
 }

@@ -54,33 +54,3 @@ imsettings_generate_dbus_path_from_interface(const gchar *interface)
 
 	return g_string_free(string, FALSE);
 }
-
-void
-imsettings_dbus_add_match(DBusConnection *connection,
-			  const gchar    *service)
-{
-	gchar *s;
-
-	g_return_if_fail(connection != NULL);
-	g_return_if_fail(service != NULL);
-
-	s = g_strdup_printf("type='signal',sender='" DBUS_SERVICE_DBUS "',interface='" DBUS_INTERFACE_DBUS "',member='NameOwnerChanged',arg0='%s'", service);
-	g_print("%s: %s\n", __FUNCTION__, s);
-	dbus_bus_add_match(connection, s, NULL);
-	g_free(s);
-}
-
-void
-imsettings_dbus_remove_match(DBusConnection *connection,
-			     const gchar    *service)
-{
-	gchar *s;
-
-	g_return_if_fail(connection != NULL);
-	g_return_if_fail(service != NULL);
-
-	s = g_strdup_printf("type='signal',sender='" DBUS_SERVICE_DBUS "',interface='" DBUS_INTERFACE_DBUS "',member='NameOwnerChanged',arg0='%s'", service);
-	g_print("%s: %s\n", __FUNCTION__, s);
-	dbus_bus_remove_match(connection, s, NULL);
-	g_free(s);
-}

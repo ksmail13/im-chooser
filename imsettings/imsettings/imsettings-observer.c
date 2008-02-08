@@ -34,6 +34,11 @@
 #include "imsettings-marshal.h"
 
 #define IMSETTINGS_OBSERVER_GET_PRIVATE(_o_)	(G_TYPE_INSTANCE_GET_PRIVATE ((_o_), IMSETTINGS_TYPE_OBSERVER, IMSettingsObserverPrivate))
+#ifdef DEBUG
+#define d(e)	e
+#else
+#define d(e)
+#endif
 
 
 typedef gboolean (* IMSettingsSignalFunction) (IMSettingsObserver *imsettings,
@@ -46,6 +51,8 @@ typedef gboolean (* IMSettingsSignalFunction) (IMSettingsObserver *imsettings,
 typedef struct _IMSettingsObserverPrivate {
 	DBusGConnection *connection;
 	gchar           *module_name;
+	gchar           *service;
+	gchar           *owner;
 	gboolean         replace;
 } IMSettingsObserverPrivate;
 
@@ -65,6 +72,7 @@ enum {
 	LAST_PROP
 };
 enum {
+	DISCONNECTED,
 	RELOAD,
 	STARTIM,
 	STOPIM,
@@ -90,6 +98,7 @@ imsettings_get_list(GObject     *object,
 	gboolean retval = FALSE;
 	gint i;
 
+	d(g_print("Getting list for `%s' language\n", lang));
 	if (klass->get_list) {
 		list = klass->get_list(IMSETTINGS_OBSERVER (object), lang, error);
 		if (*error == NULL) {
@@ -117,6 +126,7 @@ imsettings_start_im(GObject      *object,
 	IMSettingsObserverClass *klass = IMSETTINGS_OBSERVER_GET_CLASS (object);
 
 	*ret = FALSE;
+	d(g_print("Starting IM `%s' with `%s' language\n", module, lang));
 	if (klass->start_im) {
 		*ret = klass->start_im(IMSETTINGS_OBSERVER (object), lang, module, error);
 	}
@@ -134,6 +144,7 @@ imsettings_stop_im(GObject      *object,
 	IMSettingsObserverClass *klass = IMSETTINGS_OBSERVER_GET_CLASS (object);
 
 	*ret = FALSE;
+	d(g_print("Stopping IM `%s'%s\n", module, (force ? " forcibly" : "")));
 	if (klass->stop_im) {
 		*ret = klass->stop_im(IMSETTINGS_OBSERVER (object), module, force, error);
 	}
@@ -458,10 +469,65 @@ imsettings_observer_finalize(GObject *object)
 	priv = IMSETTINGS_OBSERVER_GET_PRIVATE (object);
 
 	g_free(priv->module_name);
+	g_free(priv->service);
+	g_free(priv->owner);
 	/* XXX: do we need to unref the dbus connection here? */
 
 	if (G_OBJECT_CLASS (imsettings_observer_parent_class)->finalize)
 		G_OBJECT_CLASS (imsettings_observer_parent_class)->finalize(object);
+}
+
+static gboolean
+imsettings_observer_signal_disconnected(IMSettingsObserver *imsettings,
+					DBusMessage        *message,
+					const gchar        *interface,
+					const gchar        *signal_name,
+					guint               class_offset,
+					GError            **error)
+{
+	IMSettingsObserverPrivate *priv = IMSETTINGS_OBSERVER_GET_PRIVATE (imsettings);
+
+	d(g_print("***\n*** Disconnected\n***\n"));
+	priv->connection = NULL;
+
+	g_signal_emit(imsettings, signals[DISCONNECTED], 0, NULL);
+
+	return TRUE;
+}
+
+static gboolean
+imsettings_observer_signal_name_owner_changed(IMSettingsObserver *imsettings,
+					      DBusMessage        *message,
+					      const gchar        *interface,
+					      const gchar        *signal_name,
+					      guint               class_offset,
+					      GError            **error)
+{
+	IMSettingsObserverPrivate *priv = IMSETTINGS_OBSERVER_GET_PRIVATE (imsettings);
+	gchar *service, *old_owner, *new_owner;
+	gboolean retval = FALSE;
+	DBusError derror;
+
+	dbus_error_init(&derror);
+	if (dbus_message_get_args(message, &derror,
+				  DBUS_TYPE_STRING, &service,
+				  DBUS_TYPE_STRING, &old_owner,
+				  DBUS_TYPE_STRING, &new_owner,
+				  DBUS_TYPE_INVALID)) {
+		if (strcmp(service, priv->service) == 0) {
+			d(g_print("OwnerChanged: `%s'->`%s' for %s\n", old_owner, new_owner, service));
+			if (priv->owner == NULL) {
+				priv->owner = g_strdup(new_owner);
+			}
+			if (old_owner && strcmp(old_owner, priv->owner) == 0) {
+				retval = imsettings_observer_signal_disconnected(imsettings, message, interface, signal_name, class_offset, error);
+			}
+		}
+	} else {
+		dbus_set_g_error(error, &derror);
+	}
+
+	return retval;
 }
 
 static gboolean
@@ -475,6 +541,8 @@ imsettings_observer_signal_reload(IMSettingsObserver *imsettings,
 	gboolean force = FALSE;
 
 	dbus_message_get_args(message, NULL, DBUS_TYPE_BOOLEAN, &force, DBUS_TYPE_INVALID);
+
+	d(g_print("Reloading%s for `%s'\n", (force ? " forcibly" : ""), interface));
 
 	g_signal_emit(imsettings, signals[RELOAD], 0, force, NULL);
 
@@ -490,6 +558,12 @@ imsettings_observer_real_message_filter(DBusConnection *connection,
 	DBusError derror;
 	GError *error = NULL;
 	IMSettingsObserverSignal signal_table[] = {
+		{DBUS_INTERFACE_LOCAL, "Disconnected",
+		 0,
+		 imsettings_observer_signal_disconnected},
+		{DBUS_INTERFACE_DBUS, "NameOwnerChanged",
+		 0,
+		 imsettings_observer_signal_name_owner_changed},
 		{IMSETTINGS_INTERFACE_DBUS, "Reload",
 		 0,
 		 imsettings_observer_signal_reload},
@@ -585,6 +659,13 @@ imsettings_observer_class_init(IMSettingsObserverClass *klass)
 							   G_PARAM_READWRITE | G_PARAM_CONSTRUCT));
 
 	/* signals */
+	signals[DISCONNECTED] = g_signal_new("disconnected",
+					     G_OBJECT_CLASS_TYPE (klass),
+					     G_SIGNAL_RUN_FIRST,
+					     G_STRUCT_OFFSET (IMSettingsObserverClass, disconnected),
+					     NULL, NULL,
+					     g_cclosure_marshal_VOID__VOID,
+					     G_TYPE_NONE, 0);
 	signals[RELOAD] = g_signal_new("reload",
 				       G_OBJECT_CLASS_TYPE (klass),
 				       G_SIGNAL_RUN_FIRST,
@@ -632,23 +713,26 @@ imsettings_observer_setup_dbus(IMSettingsObserver *imsettings,
 	gint flags, ret;
 	DBusError derror;
 
+	g_free(priv->service);
+	priv->service = g_strdup(service);
+
 	dbus_error_init(&derror);
 	priv = IMSETTINGS_OBSERVER_GET_PRIVATE (imsettings);
 
-	flags = DBUS_NAME_FLAG_ALLOW_REPLACEMENT;
+	flags = DBUS_NAME_FLAG_ALLOW_REPLACEMENT | DBUS_NAME_FLAG_DO_NOT_QUEUE;
 	if (priv->replace) {
 		flags |= DBUS_NAME_FLAG_REPLACE_EXISTING;
 	}
 
 	ret = dbus_bus_request_name(connection, service, flags, &derror);
 	if (dbus_error_is_set(&derror)) {
-		g_printerr("Failed to acquire im-settings-daemon service:\n  %s\n", derror.message);
+		g_printerr("Failed to acquire IMSettings service for %s:\n  %s\n", service, derror.message);
 		dbus_error_free(&derror);
 
 		return FALSE;
 	}
 	if (ret == DBUS_REQUEST_NAME_REPLY_EXISTS) {
-		g_printerr("im-settings-daemon already running. exiting.\n");
+		g_printerr("IMSettings service for %s already running. exiting.\n", service);
 
 		return FALSE;
 	} else if (ret != DBUS_REQUEST_NAME_REPLY_PRIMARY_OWNER) {
@@ -693,6 +777,12 @@ imsettings_observer_setup(IMSettingsObserver *imsettings,
 
 	if (!imsettings_observer_setup_dbus(imsettings, conn, service))
 		return FALSE;
+
+	dbus_bus_add_match(conn,
+			   "type='signal',"
+			   "interface='" DBUS_INTERFACE_DBUS "',"
+			   "sender='" DBUS_SERVICE_DBUS "'",
+			   &derror);
 
 	s = g_strdup_printf("type='signal',interface='%s'", service);
 	dbus_bus_add_match(conn, s, &derror);

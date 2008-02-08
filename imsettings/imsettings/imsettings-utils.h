@@ -45,10 +45,6 @@ enum {
 
 GQuark  imsettings_g_error_quark                    (void);
 gchar  *imsettings_generate_dbus_path_from_interface(const gchar    *interface) G_GNUC_MALLOC;
-void    imsettings_dbus_add_match                   (DBusConnection *connection,
-                                                     const gchar    *service);
-void    imsettings_dbus_remove_match                (DBusConnection *connection,
-                                                     const gchar    *service);
 
 G_END_DECLS
 

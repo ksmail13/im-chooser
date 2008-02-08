@@ -88,6 +88,7 @@ main(int    argc,
 			(is_xim ? "TRUE" : "FALSE"));
 	}
 	g_object_unref(imsettings);
+	dbus_connection_unref(connection);
 
 	return 0;
 }
