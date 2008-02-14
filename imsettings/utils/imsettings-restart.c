@@ -1,3 +1,4 @@
+/* -*- Mode: C; tab-width: 8; indent-tabs-mode: t; c-basic-offset: 8 -*- */
 /* 
  * imsettings-restart.c
  * Copyright (C) 2008 Red Hat, Inc. All rights reserved.
