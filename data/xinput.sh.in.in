@@ -34,6 +34,9 @@ unset XIM XIM_PROGRAM XIM_ARGS XMODIFIERS GTK_IM_MODULE QT_IM_MODULE AUXILIARY_P
 
 if [ -r "$USER_XINPUTRC" -a "x$IMSETTINGS_DISABLE_USER_XINPUTRC" = "xno" ]; then
     source "$USER_XINPUTRC"
+    if [ ! -h "$USER_XINPUTRC" ]; then
+	SHORT_DESC="User Specific"
+    fi
 elif [ -r "$SYS_XINPUTRC" ]; then
     source "$SYS_XINPUTRC"
 fi

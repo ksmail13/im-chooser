@@ -1,3 +1,16 @@
+2008-02-19  Akira TAGOH  <tagoh@redhat.com>
+
+	* data/xinput.sh.in.in: Add a hack to ensure starting the user specific
+	xinput script.
+
+	* configure.ac: Make sure gamin is installed.
+
+	* src/im-chooser-simple.c (im_chooser_simple_enable_im_on_toggled):
+	Update the list on toggling IM feature activation.
+	(im_chooser_simple_im_list_on_changed): Validate the value to not segfault.
+	(im_chooser_simple_instance_init): Reflect current locale to the requester.
+	(im_chooser_simple_sort_compare): Removed. no longer need to sort in house.
+
 2008-02-08  Akira TAGOH  <tagoh@redhat.com>
 
 	* configure.ac: bump to 0.99.1.

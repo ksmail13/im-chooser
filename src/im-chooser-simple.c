@@ -65,6 +65,9 @@ struct _IMChooserSimple {
 };
 
 
+static void _im_chooser_simple_update_im_list(IMChooserSimple *im);
+
+
 static GObjectClass *parent_class = NULL;
 static guint         signals[LAST_SIGNAL] = { 0 };
 
@@ -94,6 +97,13 @@ im_chooser_simple_enable_im_on_toggled(GtkToggleButton *button,
 		GtkTreeIter iter;
 		gchar *name;
 
+		if (im->initialized) {
+			model = gtk_tree_view_get_model(GTK_TREE_VIEW (im->widget_im_list));
+			gtk_list_store_clear(GTK_LIST_STORE (model));
+			g_strfreev(im->im_list);
+			im->im_list = imsettings_request_get_im_list(im->imsettings_info);
+			_im_chooser_simple_update_im_list(im);
+		}
 		selection = gtk_tree_view_get_selection(GTK_TREE_VIEW (im->widget_im_list));
 		if (gtk_tree_selection_get_selected(selection, &model, &iter)) {
 			gtk_tree_model_get(model, &iter, 1, &name, -1);
@@ -103,8 +113,9 @@ im_chooser_simple_enable_im_on_toggled(GtkToggleButton *button,
 				g_free(im->current_im);
 			}
 			im->current_im = g_strdup(name);
-			if (im->initialized)
+			if (im->initialized) {
 				imsettings_request_start_im(im->imsettings, im->current_im);
+			}
 		}
 	} else {
 		if (im->current_im) {
@@ -138,11 +149,10 @@ im_chooser_simple_im_list_on_changed(GtkTreeSelection *selection,
 
 	if (gtk_tree_selection_get_selected(selection, &model, &iter)) {
 		gtk_tree_model_get(model, &iter, 1, &name, -1);
-		if (strcmp(im->current_im, name) != 0) {
-			if (im->current_im) {
-				imsettings_request_stop_im(im->imsettings, im->current_im, TRUE);
-				g_free(im->current_im);
-			}
+		if (im->current_im &&
+		    strcmp(im->current_im, name) != 0) {
+			imsettings_request_stop_im(im->imsettings, im->current_im, TRUE);
+			g_free(im->current_im);
 			im->current_im = g_strdup(name);
 			imsettings_request_start_im(im->imsettings, im->current_im);
 			if (imsettings_request_get_preferences_program(im->imsettings_info, name, &prog, &args) &&
@@ -222,6 +232,8 @@ im_chooser_simple_class_init(IMChooserSimpleClass *klass)
 static void
 im_chooser_simple_instance_init(IMChooserSimple *im)
 {
+	gchar *locale = setlocale(LC_CTYPE, NULL);
+
 	im->widget = NULL;
 	im->initialized = FALSE;
 
@@ -229,27 +241,16 @@ im_chooser_simple_instance_init(IMChooserSimple *im)
 	im->imsettings = imsettings_request_new(im->conn, IMSETTINGS_INTERFACE_DBUS);
 	im->imsettings_info = imsettings_request_new(im->conn, IMSETTINGS_INFO_INTERFACE_DBUS);
 
+	imsettings_request_set_locale(im->imsettings, locale);
+	imsettings_request_set_locale(im->imsettings_info, locale);
+
 	/* get all the info of the xinput script */
-	im->im_list = imsettings_request_get_im_list(im->imsettings);
+	im->im_list = imsettings_request_get_im_list(im->imsettings_info);
 
 	/* get current im */
 	im->current_im = NULL;
 	im->default_im = NULL;
 	im->initial_im = NULL;
-}
-
-static gint
-im_chooser_simple_sort_compare(GtkTreeModel *model,
-			       GtkTreeIter  *a,
-			       GtkTreeIter  *b,
-			       gpointer      data)
-{
-	GValue value_a = { 0, }, value_b = { 0, };
-
-	gtk_tree_model_get_value(model, a, 2, &value_a);
-	gtk_tree_model_get_value(model, b, 2, &value_b);
-
-	return g_value_get_int(&value_a) - g_value_get_int(&value_b);
 }
 
 static void
@@ -306,13 +307,8 @@ _im_chooser_simple_update_im_list(IMChooserSimple *im)
 		def_iter = NULL;
 	}
 	if (cur_iter != NULL) {
-		gtk_tree_sortable_set_sort_func(GTK_TREE_SORTABLE (list), 0,
-						im_chooser_simple_sort_compare,
-						im, NULL);
 		gtk_tree_view_set_model(GTK_TREE_VIEW (im->widget_im_list), GTK_TREE_MODEL (list));
 		column = gtk_tree_view_get_column(GTK_TREE_VIEW (im->widget_im_list), 0);
-		gtk_tree_view_column_set_sort_column_id(column, 0);
-		gtk_tree_view_column_set_sort_order(column, GTK_SORT_ASCENDING);
 		path = gtk_tree_model_get_path(GTK_TREE_MODEL (list), cur_iter);
 		gtk_tree_view_set_cursor(GTK_TREE_VIEW (im->widget_im_list), path, column, FALSE);
 		gtk_tree_path_free(path);
