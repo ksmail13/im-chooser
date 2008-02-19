@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: im-chooser.trunk.as.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-02-14 17:47-0700\n"
+"POT-Creation-Date: 2008-02-19 19:12+0900\n"
 "PO-Revision-Date: 2008-02-15 11:36+0530\n"
 "Last-Translator: Amitakhya Phukan <aphukan@fedoraproject.org>\n"
 "Language-Team: Assamese\n"
@@ -19,14 +19,14 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n!=1)\n"
 
 #: ../imsettings/backends/gconf/main.c:181
-#: ../imsettings/imsettings/imsettings-observer.c:648
-#: ../imsettings/src/factory.c:77 ../imsettings/src/factory_info.c:74
+#: ../imsettings/imsettings/imsettings-observer.c:690
+#: ../imsettings/src/factory.c:667 ../imsettings/src/factory_info.c:564
 msgid "Replace the running settings daemon with new instance."
 msgstr "প্ৰতিস্থাপন চলমান নতুন."
 
-#: ../imsettings/backends/gconf/main.c:203 ../imsettings/src/factory.c:104
-#: ../imsettings/src/factory_info.c:95
-#: ../imsettings/utils/imsettings-reload.c:62
+#: ../imsettings/backends/gconf/main.c:203 ../imsettings/src/factory.c:694
+#: ../imsettings/src/factory_info.c:585
+#: ../imsettings/utils/imsettings-reload.c:63
 #: ../imsettings/utils/imsettings-restart.c:64
 #: ../imsettings/utils/imsettings-stop.c:62
 msgid "Unknown error in parsing the command lines."
@@ -162,29 +162,30 @@ msgstr "XIM"
 msgid "Whether or not IM is a XIM server."
 msgstr "IM এটা XIM সেৱক হয় নে নহয় ।"
 
-#: ../imsettings/imsettings/imsettings-observer.c:203
+#: ../imsettings/imsettings/imsettings-observer.c:245
 #, c-format
 msgid "Invalid IM module type: %d"
 msgstr "অবৈধ IM অংশৰ ধৰণ: %d"
 
-#: ../imsettings/imsettings/imsettings-observer.c:641
+#: ../imsettings/imsettings/imsettings-observer.c:683
 msgid "IM module name"
 msgstr "IM অংশৰ নাম"
 
-#: ../imsettings/imsettings/imsettings-observer.c:642
-msgid "An IM module name to be watched signals"
+#: ../imsettings/imsettings/imsettings-observer.c:684
+#, fuzzy
+msgid "A target IM module name that to observe signals"
 msgstr "An IM module name to be watched signals"
 
-#: ../imsettings/imsettings/imsettings-observer.c:647
+#: ../imsettings/imsettings/imsettings-observer.c:689
 msgid "Replace"
 msgstr "প্ৰতিস্থাপন"
 
-#: ../imsettings/imsettings/imsettings-observer.c:653
+#: ../imsettings/imsettings/imsettings-observer.c:695
 #: ../imsettings/imsettings/imsettings-request.c:175
 msgid "DBus connection"
 msgstr "DBus সংযোগ"
 
-#: ../imsettings/imsettings/imsettings-observer.c:654
+#: ../imsettings/imsettings/imsettings-observer.c:696
 #: ../imsettings/imsettings/imsettings-request.c:176
 msgid "An object to be a DBus connection"
 msgstr "এটা DBus সংযোগ হ'ব লগা এটা বস্তু"
@@ -206,19 +207,21 @@ msgid "Locale to get the imsettings information"
 msgstr "imsettings তথ্য পোৱাৰ লোকেল"
 
 #: ../imsettings/imsettings/imsettings-request.c:239
-#: ../imsettings/imsettings/imsettings-request.c:274
-#: ../imsettings/imsettings/imsettings-request.c:295
-#: ../imsettings/imsettings/imsettings-request.c:319
-#: ../imsettings/imsettings/imsettings-request.c:344
-#: ../imsettings/imsettings/imsettings-request.c:369
-#: ../imsettings/imsettings/imsettings-request.c:390
-#: ../imsettings/imsettings/imsettings-request.c:410
-#: ../imsettings/imsettings/imsettings-request.c:430
-#: ../imsettings/imsettings/imsettings-request.c:450
-#: ../imsettings/imsettings/imsettings-request.c:470
-#: ../imsettings/imsettings/imsettings-request.c:490
-#: ../imsettings/imsettings/imsettings-request.c:510
-#: ../imsettings/imsettings/imsettings-request.c:548
+#: ../imsettings/imsettings/imsettings-request.c:272
+#: ../imsettings/imsettings/imsettings-request.c:290
+#: ../imsettings/imsettings/imsettings-request.c:310
+#: ../imsettings/imsettings/imsettings-request.c:331
+#: ../imsettings/imsettings/imsettings-request.c:355
+#: ../imsettings/imsettings/imsettings-request.c:380
+#: ../imsettings/imsettings/imsettings-request.c:405
+#: ../imsettings/imsettings/imsettings-request.c:426
+#: ../imsettings/imsettings/imsettings-request.c:446
+#: ../imsettings/imsettings/imsettings-request.c:466
+#: ../imsettings/imsettings/imsettings-request.c:486
+#: ../imsettings/imsettings/imsettings-request.c:506
+#: ../imsettings/imsettings/imsettings-request.c:526
+#: ../imsettings/imsettings/imsettings-request.c:546
+#: ../imsettings/imsettings/imsettings-request.c:584
 #, c-format
 msgid ""
 "Failed to invoke a method `%s':\n"
@@ -227,7 +230,7 @@ msgstr ""
 "এটা প্ৰক্ৰিয়া মাতিবলৈ বিফল `%s':\n"
 "  %s"
 
-#: ../imsettings/imsettings/imsettings-request.c:612
+#: ../imsettings/imsettings/imsettings-request.c:648
 #, c-format
 msgid ""
 "Failed to invoke a method `%s' on %s:\n"
@@ -236,165 +239,145 @@ msgstr ""
 "এটা প্ৰক্ৰিয়া `%s' ক %s ত মাতিবলৈ বিফল:\n"
 "  %s"
 
-#: ../imsettings/src/factory.c:58 ../imsettings/src/factory_info.c:56
-msgid "Reloading...\n"
-msgstr "পুনঃ তোলা হৈছে...\n"
-
-#: ../imsettings/src/factory.c:78
-msgid "X display to use"
-msgstr "ব্যৱহাৰৰ উদ্দেশ্যে X প্ৰদৰ্শন"
-
-#: ../imsettings/src/factory.c:78
-msgid "DISPLAY"
-msgstr "DISPLAY"
-
-#. FIXME
-#: ../imsettings/src/factory.c:81
-msgid "X screen to use"
-msgstr "ব্যৱহাৰৰ উদ্দেশ্যে চিহ্নিত X পৰ্দা"
-
-#: ../imsettings/src/factory.c:81
-msgid "SCREEN"
-msgstr "SCREEN"
-
-#: ../imsettings/src/factory.c:112
-msgid "Failed to open a X display."
-msgstr "এটা X প্ৰদৰ্শন খুলিবলৈ বিফল ।"
-
-#: ../imsettings/src/imsettings-manager.c:166
-msgid "No input methods available on your system."
-msgstr "আপোনাৰ ব্যৱস্থাপ্ৰণালীত কোনো নিবেশ পদ্ধতি পোৱা ন'গ'ল ।"
-
-#: ../imsettings/src/imsettings-manager.c:184
-#, c-format
-msgid "No such input method on your system: %s"
-msgstr "আপোনাৰ ব্যৱস্থাপ্ৰণালীত এনে কোনো নিবেশ পদ্ধতি নাই: %s"
-
-#: ../imsettings/src/imsettings-manager.c:203
+#: ../imsettings/src/factory.c:133
 #, c-format
 msgid "Failed to remove a pidfile: %s"
 msgstr "এটা pidfile আঁতৰুৱাত বিফল: %s"
 
-#: ../imsettings/src/imsettings-manager.c:236
+#: ../imsettings/src/factory.c:166
 #, c-format
 msgid "Failed to open a pidfile: %s"
 msgstr "এটা pidfile খোলোঁতে বিফল: %s"
 
-#: ../imsettings/src/imsettings-manager.c:340
+#: ../imsettings/src/factory.c:270
 #, c-format
 msgid "Couldn't determine the pid for %s process."
 msgstr "%s প্ৰক্ৰিয়াৰ বাবে pid নিৰ্ধাৰণ কৰিব নোৱাৰি ।"
 
-#: ../imsettings/src/imsettings-manager.c:346
+#: ../imsettings/src/factory.c:276
 #, c-format
 msgid "Couldn't send a signal to the %s process successfully."
 msgstr "%s প্ৰক্ৰিয়ালৈ সফলভাবে চিগ্নেল পঠিয়াব নোৱাৰি ।"
 
-#: ../imsettings/src/imsettings-manager.c:408
-#: ../imsettings/src/imsettings-manager.c:607
-#: ../imsettings/src/imsettings-manager.c:761
+#: ../imsettings/src/factory.c:302 ../imsettings/src/factory.c:577
+#, c-format
 msgid "Failed to get a place of home directory."
 msgstr "ঘৰৰ পঞ্জিকাৰ বাবে স্থান পোৱা ন'গ'ল ।"
 
-#: ../imsettings/src/imsettings-manager.c:429
+#: ../imsettings/src/factory.c:319
 #, c-format
 msgid "Failed to revert the backup file: %s"
 msgstr "নকল নথিপত্ৰ ওভতাওঁতে বিফল: %s"
 
-#: ../imsettings/src/imsettings-manager.c:441
+#: ../imsettings/src/factory.c:331
 #, c-format
 msgid "Failed to create a backup file: %s"
 msgstr "নকল নথিপত্ৰ সৃষ্টি কৰোঁতে বিফল: %s"
 
-#: ../imsettings/src/imsettings-manager.c:450
+#: ../imsettings/src/factory.c:340
 #, c-format
 msgid "Failed to remove a .xinputrc file: %s"
 msgstr "এটা .xinputৰc নথিপত্ৰ আঁতৰুৱাত বিফল: %s"
 
-#: ../imsettings/src/imsettings-manager.c:465
+#: ../imsettings/src/factory.c:351
 #, c-format
 msgid "Failed to make a symlink: %s"
 msgstr "এটা symlink বনাবলৈ বিফল: %s"
 
-#: ../imsettings/src/imsettings-manager.c:618
-#, c-format
-msgid ""
-"The appropriate configuration file wasn't found. maybe the installation "
-"failed: %s"
-msgstr "উপযুক্ত বিন্যাস নথিপত্ৰ পোৱা ন'গ'ল । হয়তো সংস্থাপন বিফল হ'ল: %s"
-
-#: ../imsettings/src/imsettings-manager.c:671
+#: ../imsettings/src/factory.c:623
 msgid "X display name"
 msgstr "X প্ৰদৰ্শনৰ নাম"
 
-#: ../imsettings/src/imsettings-manager.c:672
+#: ../imsettings/src/factory.c:624
 msgid "X display name to use"
 msgstr "ব্যৱহাৰ কৰিব লগা X প্ৰদৰ্শনৰ নাম"
 
-#: ../imsettings/src/imsettings-manager.c:731
+#: ../imsettings/src/factory.c:668
+msgid "X display to use"
+msgstr "ব্যৱহাৰৰ উদ্দেশ্যে X প্ৰদৰ্শন"
+
+#: ../imsettings/src/factory.c:668
+msgid "DISPLAY"
+msgstr "DISPLAY"
+
+#. FIXME
+#: ../imsettings/src/factory.c:671
+msgid "X screen to use"
+msgstr "ব্যৱহাৰৰ উদ্দেশ্যে চিহ্নিত X পৰ্দা"
+
+#: ../imsettings/src/factory.c:671
+msgid "SCREEN"
+msgstr "SCREEN"
+
+#: ../imsettings/src/factory.c:702
+#, c-format
+msgid "Failed to open a X display."
+msgstr "এটা X প্ৰদৰ্শন খুলিবলৈ বিফল ।"
+
+#: ../imsettings/src/factory_info.c:123
+#, c-format
+msgid "Reloading...\n"
+msgstr "পুনঃ তোলা হৈছে...\n"
+
+#: ../imsettings/src/factory_info.c:181
 #, c-format
 msgid "Duplicate entry `%s' from %s. SHORT_DESC has to be unique."
 msgstr "দ্বৈধ নিবেশ `%s' %s ৰ পৰা । SHORT_DESC অদ্বিতীয় হ'ব লাগে ।"
 
-#: ../imsettings/src/imsettings-manager.c:745
-msgid "No system default IM found at the pre-search phase. Adding..."
-msgstr "বিচৰাৰ আগৰ পৰ্যায়ত কোনো ব্যৱস্থাপ্ৰণালীৰ অবিকল্পিত IM পোৱা ন'গ'ল । যোগ কৰা হৈছে..."
+#: ../imsettings/src/factory_info.c:410
+#, c-format
+msgid "No input methods available on your system."
+msgstr "আপোনাৰ ব্যৱস্থাপ্ৰণালীত কোনো নিবেশ পদ্ধতি পোৱা ন'গ'ল ।"
 
-#: ../imsettings/src/imsettings-manager.c:749
-#: ../imsettings/src/imsettings-manager.c:775
-#: ../imsettings/src/imsettings-manager.c:804
-msgid ""
-"Looking up the different object with the same key. it may happens due to the "
-"un-unique short description. replacing..."
-msgstr "একেই চাবিৰে অন্য এটা বস্তু বিচৰা হৈছে । দ্বৈত বিৱৰণৰ বাবে এইটো হ'ব পাটে । প্ৰতিস্থাপন কৰা হৈছে..."
+#: ../imsettings/src/factory_info.c:446
+#, c-format
+msgid "No such input method on your system: %s"
+msgstr "আপোনাৰ ব্যৱস্থাপ্ৰণালীত এনে কোনো নিবেশ পদ্ধতি নাই: %s"
 
-#: ../imsettings/src/imsettings-manager.c:771
-#: ../imsettings/src/imsettings-manager.c:800
-msgid "No user default IM found at the pre-search phase. Adding..."
-msgstr "বিচৰাৰ আগৰ পৰ্যায়ত কোনো ব্যৱহাৰকৰোঁতাৰ অবিকল্পিত IM পোৱা ন'গ'ল । যোগ কৰা হৈছে..."
-
-#: ../imsettings/utils/imsettings-reload.c:41
+#: ../imsettings/utils/imsettings-reload.c:42
 #: ../imsettings/utils/imsettings-restart.c:43
 #: ../imsettings/utils/imsettings-stop.c:42
 msgid "Force reloading the configuration, including restarting the process."
 msgstr "বিন্যাস যোৰ কৰি পুনঃ তোলা হৈছে, প্ৰক্ৰিয়া পুনৰাৰম্ভ কৰাৰ লগতে ।"
 
-#: ../src/im-chooser-simple.c:274
+#: ../src/im-chooser-simple.c:275
 #, c-format
 msgid "Use %s"
 msgstr "%s ব্যৱহাৰ কৰক"
 
-#: ../src/im-chooser-simple.c:277
+#: ../src/im-chooser-simple.c:278
 msgid " (legacy)"
 msgstr " (লিগেচি)"
 
-#: ../src/im-chooser-simple.c:281
+#: ../src/im-chooser-simple.c:282
 msgid " (recommended)"
 msgstr " (উপদেশিত)"
 
-#: ../src/im-chooser-simple.c:396
+#: ../src/im-chooser-simple.c:392
 msgid "<b>Input Method</b>"
 msgstr "<b>নিবেশ পদ্ধতি</b>"
 
-#: ../src/im-chooser-simple.c:402
+#: ../src/im-chooser-simple.c:398
 msgid "_Enable input method feature"
 msgstr "নিবেশ পদ্ধতিৰ গুণ সক্ৰিয় কৰে (_E)"
 
-#: ../src/im-chooser-simple.c:409
+#: ../src/im-chooser-simple.c:405
 msgid ""
 "<small><i>Note: this change will not take effect until you next log in, "
 "except GTK+ applications.</i></small>"
 msgstr ""
-"<small><i>মন কৰিব:এই সলনি আপুনি অহা বাৰলৈ প্ৰৱেশ নকৰালৈকে প্ৰযোজ্য নহয়, GTK+ অনুপ্ৰয়োগৰ বাহিৰে ।</i></"
-"small>"
+"<small><i>মন কৰিব:এই সলনি আপুনি অহা বাৰলৈ প্ৰৱেশ নকৰালৈকে প্ৰযোজ্য নহয়, GTK+ "
+"অনুপ্ৰয়োগৰ বাহিৰে ।</i></small>"
 
-#: ../src/im-chooser-simple.c:441
+#: ../src/im-chooser-simple.c:437
 msgid "Input Method _Preferences..."
 msgstr "নিবেশ পদ্ধতিৰ পছন্দ (_P)..."
 
 #: ../src/main.c:55
-msgid "<span weight=\"bold\" size=\"larger\">No input method is available</span>"
-msgstr "<span weight=\"bold\" size=\"laৰgeৰ\">কোনো নিবেশ পদ্ধতি পোৱা নাযায়</span>"
+msgid ""
+"<span weight=\"bold\" size=\"larger\">No input method is available</span>"
+msgstr ""
+"<span weight=\"bold\" size=\"laৰgeৰ\">কোনো নিবেশ পদ্ধতি পোৱা নাযায়</span>"
 
 #: ../src/main.c:58
 msgid "Please install any input methods before running if you like."
@@ -420,3 +403,24 @@ msgstr ""
 msgid "Input Method"
 msgstr "নিবেশ পদ্ধতি"
 
+#~ msgid ""
+#~ "The appropriate configuration file wasn't found. maybe the installation "
+#~ "failed: %s"
+#~ msgstr "উপযুক্ত বিন্যাস নথিপত্ৰ পোৱা ন'গ'ল । হয়তো সংস্থাপন বিফল হ'ল: %s"
+
+#~ msgid "No system default IM found at the pre-search phase. Adding..."
+#~ msgstr ""
+#~ "বিচৰাৰ আগৰ পৰ্যায়ত কোনো ব্যৱস্থাপ্ৰণালীৰ অবিকল্পিত IM পোৱা ন'গ'ল । যোগ কৰা "
+#~ "হৈছে..."
+
+#~ msgid ""
+#~ "Looking up the different object with the same key. it may happens due to "
+#~ "the un-unique short description. replacing..."
+#~ msgstr ""
+#~ "একেই চাবিৰে অন্য এটা বস্তু বিচৰা হৈছে । দ্বৈত বিৱৰণৰ বাবে এইটো হ'ব পাটে । "
+#~ "প্ৰতিস্থাপন কৰা হৈছে..."
+
+#~ msgid "No user default IM found at the pre-search phase. Adding..."
+#~ msgstr ""
+#~ "বিচৰাৰ আগৰ পৰ্যায়ত কোনো ব্যৱহাৰকৰোঁতাৰ অবিকল্পিত IM পোৱা ন'গ'ল । যোগ কৰা "
+#~ "হৈছে..."

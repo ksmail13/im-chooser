@@ -4,7 +4,6 @@ imsettings/imsettings/imsettings-observer.c
 imsettings/imsettings/imsettings-request.c
 imsettings/src/factory.c
 imsettings/src/factory_info.c
-imsettings/src/imsettings-manager.c
 imsettings/utils/imsettings-reload.c
 imsettings/utils/imsettings-restart.c
 imsettings/utils/imsettings-stop.c
