@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: pl\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-02-19 19:12+0900\n"
-"PO-Revision-Date: 2008-02-09 21:13+0200\n"
+"PO-Revision-Date: 2008-02-19 22:07+0200\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish <pl@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -167,9 +167,8 @@ msgid "IM module name"
 msgstr "Nazwa modułu wejścia"
 
 #: ../imsettings/imsettings/imsettings-observer.c:684
-#, fuzzy
 msgid "A target IM module name that to observe signals"
-msgstr "Nazwa modułu wejścia do nadzorowania sygnałów"
+msgstr "Nazwa docelowego modułu wejścia do nadzorowania sygnałów"
 
 #: ../imsettings/imsettings/imsettings-observer.c:689
 msgid "Replace"
@@ -397,26 +396,3 @@ msgstr "Wybieranie metody wejścia lub wyłączanie jej w środowisku graficznym
 #: ../src/im-chooser.desktop.in.in.h:2
 msgid "Input Method"
 msgstr "Metoda wejścia"
-
-#~ msgid ""
-#~ "The appropriate configuration file wasn't found. maybe the installation "
-#~ "failed: %s"
-#~ msgstr ""
-#~ "Nie znaleziono odpowiedniego pliku konfiguracji. Być może instalacja się "
-#~ "nie powiodła: %s"
-
-#~ msgid "No system default IM found at the pre-search phase. Adding..."
-#~ msgstr ""
-#~ "Nie znaleziono domyślnej metody wejścia przed wyszukiwaniem. Dodawanie..."
-
-#~ msgid ""
-#~ "Looking up the different object with the same key. it may happens due to "
-#~ "the un-unique short description. replacing..."
-#~ msgstr ""
-#~ "Wyszukiwanie różnych obiektów z tym samym kluczem. Może to wystąpić z "
-#~ "powodu nie unikalnego krótkiego opisu. Zastępowanie..."
-
-#~ msgid "No user default IM found at the pre-search phase. Adding..."
-#~ msgstr ""
-#~ "Nie znaleziono domyślnej metody wejścia użytkownika przed wyszukiwaniem. "
-#~ "Dodawanie..."
