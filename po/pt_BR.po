@@ -1,4 +1,4 @@
-# translation of pt_BR.po to Brazilian Portuguese
+# translation of im-chooser.trunk.pt_BR.po to Portuguese
 # Brazilian Portuguese translations for im-chooser package.
 # Copyright (C) 2006 Red Hat, Inc. All rights reserved.
 # This file is distributed under the same license as the im-chooser package.
@@ -9,27 +9,28 @@
 # Diego Búrigo Zacarão <diegobz@gmail.com>, 2007.
 # Igor Pires Soares <igor@projetofedora.org>, 2007,2008.
 # Frederico Madeira <fred@madeira.eng.br>, 2008.
+# Glaucia Cintra <gcintra@redhat.com>, 2008.
 msgid ""
 msgstr ""
-"Project-Id-Version: pt_BR\n"
+"Project-Id-Version: im-chooser.trunk.pt_BR\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-02-08 16:15+0900\n"
-"PO-Revision-Date: 2008-02-02 23:11-0300\n"
-"Last-Translator: Frederico Madeira <fred@madeira.eng.br>\n"
-"Language-Team: Brazilian Portuguese <fedora-trans-pt_br@redhat.com>\n"
+"POT-Creation-Date: 2008-02-08 01:42-0700\n"
+"PO-Revision-Date: 2008-02-19 16:08+1000\n"
+"Last-Translator: Glaucia Cintra <gcintra@redhat.com>\n"
+"Language-Team: Portuguese <en@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Poedit-Language: Portuguese\n"
 "X-Poedit-Country: BRAZIL\n"
+"X-Generator: KBabel 1.11.4\n"
 
 #: ../imsettings/backends/gconf/main.c:181
 #: ../imsettings/imsettings/imsettings-observer.c:651
 #: ../imsettings/src/factory.c:77 ../imsettings/src/factory_info.c:74
 msgid "Replace the running settings daemon with new instance."
-msgstr ""
-"Substitua as configurações do daemon que está rodando por uma nova instância"
+msgstr "Substitua as configurações do daemon que está rodando por uma nova instância"
 
 #: ../imsettings/backends/gconf/main.c:203 ../imsettings/src/factory.c:104
 #: ../imsettings/src/factory_info.c:95
@@ -244,7 +245,6 @@ msgstr ""
 "  %s"
 
 #: ../imsettings/src/factory.c:58 ../imsettings/src/factory_info.c:56
-#, c-format
 msgid "Reloading...\n"
 msgstr "Recarregando...\n"
 
@@ -266,14 +266,12 @@ msgid "SCREEN"
 msgstr "TELA"
 
 #: ../imsettings/src/factory.c:112
-#, c-format
 msgid "Failed to open a X display."
 msgstr "Fala ao abrir uma tela X."
 
 #: ../imsettings/src/imsettings-manager.c:166
-#, fuzzy, c-format
 msgid "No input methods available on your system."
-msgstr "Nenhum método de entrada está disponível em seu sistema."
+msgstr "Nenhum método de entrada está disponível em seu sistema. "
 
 #: ../imsettings/src/imsettings-manager.c:184
 #, c-format
@@ -303,7 +301,6 @@ msgstr "Não foi possível enviar com sucesso um sinal para o processo %s."
 #: ../imsettings/src/imsettings-manager.c:408
 #: ../imsettings/src/imsettings-manager.c:607
 #: ../imsettings/src/imsettings-manager.c:761
-#, c-format
 msgid "Failed to get a place of home directory."
 msgstr "Falha ao localizar o diretório home."
 
@@ -410,8 +407,7 @@ msgid "Input Method _Preferences..."
 msgstr "Preferências do Método de Entrada..."
 
 #: ../src/main.c:55
-msgid ""
-"<span weight=\"bold\" size=\"larger\">No input method is available</span>"
+msgid "<span weight=\"bold\" size=\"larger\">No input method is available</span>"
 msgstr ""
 "<span weight=\"bold\" size=\"larger\">Nenhum método de entrada disponível</"
 "span>"
@@ -434,62 +430,9 @@ msgstr "Logoff"
 msgid ""
 "Choose the input method to be used or disable the input method usage on the "
 "desktop"
-msgstr ""
-"Escolha ou desabilite o método de entrada a ser usado no ambiente de trabalho"
+msgstr "Escolha ou desabilite o método de entrada a ser usado no ambiente de trabalho"
 
 #: ../src/im-chooser.desktop.in.in.h:2
 msgid "Input Method"
 msgstr "Método de Entrada"
 
-#~ msgid "Failed to replace the running settings daemon."
-#~ msgstr ""
-#~ "Falha ao substituir as configurações do daemon que está sendo executado."
-
-#~ msgid "No valid IM installed"
-#~ msgstr "Nenhum método de entrada válido instalado"
-
-#~ msgid "_Use default Input Method for your language"
-#~ msgstr "_Use o Método de Entrada padrão para sua língua"
-
-#~ msgid ""
-#~ "Your system chooses the appropriate Input Method for your language "
-#~ "automatically from among Input Methods installed on your system."
-#~ msgstr ""
-#~ "O seu sistema escolhe o Médoto de Entrada apropriado para usa língua "
-#~ "automaticamente dentre os Métodos instalados no sistema."
-
-#~ msgid "Choose _specific Input Method"
-#~ msgstr "E_scolher Método de Entrada específico"
-
-#~ msgid ""
-#~ "Use the specific Input Method that you prefer regardless what Input "
-#~ "Method the system recommends."
-#~ msgstr ""
-#~ "Usar Método de Entrada específico, independentemente do Método de Entrada "
-#~ "recomendado pelo sistema."
-
-#~ msgid "_Do not use Input Method"
-#~ msgstr "_Não usar Métodos de Entrada"
-
-#~ msgid ""
-#~ "Do not use Input Method no matter what language the desktop is running on."
-#~ msgstr ""
-#~ "Não usar o Método de Entrada independentemente do idioma usando para o "
-#~ "ambiente de trabalho."
-
-#~ msgid "Use legacy _Input Method"
-#~ msgstr "_Usar Métodos de Entrada legado"
-
-#~ msgid ""
-#~ "Use X Input Method anyway. In fact, which input method will be chosen for "
-#~ "the desktop session, depends on the desktop language."
-#~ msgstr ""
-#~ "Usar o Método de Entrada do X assim mesmo. Na verdade, o método de "
-#~ "entrada a serescolhido para a sessão do ambiente de trabalho depende do "
-#~ "idioma usado no mesmo."
-
-#~ msgid "xinputrc was modified by the user"
-#~ msgstr "o xinputrc foi modificado pelo usuário"
-
-#~ msgid "User Specific"
-#~ msgstr "Especifico do Usuário"
