@@ -25,6 +25,7 @@
 #include "config.h"
 #endif
 #include <stdlib.h>
+#include <unistd.h>
 #include <glib.h>
 #include <glib/gi18n.h>
 #include "imsettings/imsettings.h"
@@ -72,6 +73,7 @@ main(int    argc,
 	imsettings_request_reload(imsettings, arg_force);
 	imsettings_request_reload(imgconf, arg_force);
 	imsettings_request_reload(iminfo, arg_force);
+	sleep(1);
 
 	g_print("Reloaded.\n");
 

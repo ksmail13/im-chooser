@@ -27,6 +27,7 @@
 #include <glib.h>
 #include <glib-object.h>
 #include <dbus/dbus.h>
+#include <dbus/dbus-glib.h>
 #include <imsettings/imsettings-info.h>
 
 G_BEGIN_DECLS
@@ -65,6 +66,10 @@ struct _IMSettingsObserverClass {
 						    GError             **error);
 	GPtrArray       * (* get_list)             (IMSettingsObserver  *imsettings,
 						    const gchar         *lang,
+						    GError             **error);
+	const gchar     * (* get_current_user_im)  (IMSettingsObserver  *imsettings,
+						    GError             **error);
+	const gchar     * (* get_current_system_im)(IMSettingsObserver  *imsettings,
 						    GError             **error);
 	IMSettingsInfo  * (* get_info)             (IMSettingsObserver  *imsettings,
 						    const gchar         *module,

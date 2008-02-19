@@ -88,35 +88,6 @@ G_DEFINE_TYPE (IMSettingsObserver, imsettings_observer, G_TYPE_OBJECT);
  * Private functions
  */
 static gboolean
-imsettings_get_list(GObject     *object,
-		    const gchar *lang,
-		    gchar     ***ret,
-		    GError     **error)
-{
-	IMSettingsObserverClass *klass = IMSETTINGS_OBSERVER_GET_CLASS (object);
-	GPtrArray *list;
-	gboolean retval = FALSE;
-	gint i;
-
-	d(g_print("Getting list for `%s' language\n", lang));
-	if (klass->get_list) {
-		list = klass->get_list(IMSETTINGS_OBSERVER (object), lang, error);
-		if (*error == NULL) {
-			*ret = g_strdupv((gchar **)list->pdata);
-			retval = TRUE;
-		}
-		if (list) {
-			for (i = 0; i < list->len; i++) {
-				g_free(g_ptr_array_index(list, i));
-			}
-			g_ptr_array_free(list, TRUE);
-		}
-	}
-
-	return retval;
-}
-
-static gboolean
 imsettings_start_im(GObject      *object,
 		    const gchar  *lang,
 		    const gchar  *module,
@@ -150,6 +121,77 @@ imsettings_stop_im(GObject      *object,
 	}
 
 	return *ret;
+}
+
+static gboolean
+imsettings_get_list(GObject     *object,
+		    const gchar *lang,
+		    gchar     ***ret,
+		    GError     **error)
+{
+	IMSettingsObserverClass *klass = IMSETTINGS_OBSERVER_GET_CLASS (object);
+	GPtrArray *list;
+	gboolean retval = FALSE;
+	gint i;
+
+	d(g_print("Getting list for `%s' language\n", lang));
+	if (klass->get_list) {
+		list = klass->get_list(IMSETTINGS_OBSERVER (object), lang, error);
+		if (*error == NULL) {
+			*ret = g_strdupv((gchar **)list->pdata);
+			retval = TRUE;
+		}
+		if (list) {
+			for (i = 0; i < list->len; i++) {
+				g_free(g_ptr_array_index(list, i));
+			}
+			g_ptr_array_free(list, TRUE);
+		}
+	}
+
+	return retval;
+}
+
+static gboolean
+imsettings_get_current_user_im(GObject      *object,
+			       const gchar **ret,
+			       GError      **error)
+{
+	IMSettingsObserverClass *klass = IMSETTINGS_OBSERVER_GET_CLASS (object);
+	gboolean retval = FALSE;
+	const gchar *name;
+
+	d(g_print("Getting current user IM\n"));
+	if (klass->get_current_user_im) {
+		name = klass->get_current_user_im(IMSETTINGS_OBSERVER (object), error);
+		if (*error == NULL) {
+			*ret = g_strdup(name);
+			retval = TRUE;
+		}
+	}
+
+	return retval;
+}
+
+static gboolean
+imsettings_get_current_system_im(GObject      *object,
+				 const gchar **ret,
+				 GError      **error)
+{
+	IMSettingsObserverClass *klass = IMSETTINGS_OBSERVER_GET_CLASS (object);
+	gboolean retval = FALSE;
+	const gchar *name;
+
+	d(g_print("Getting current system IM\n"));
+	if (klass->get_current_system_im) {
+		name = klass->get_current_system_im(IMSETTINGS_OBSERVER (object), error);
+		if (*error == NULL) {
+			*ret = g_strdup(name);
+			retval = TRUE;
+		}
+	}
+
+	return retval;
 }
 
 static gboolean
@@ -639,7 +681,7 @@ imsettings_observer_class_init(IMSettingsObserverClass *klass)
 	g_object_class_install_property(object_class, PROP_MODULE,
 					g_param_spec_string("module",
 							    _("IM module name"),
-							    _("An IM module name to be watched signals"),
+							    _("A target IM module name that to observe signals"),
 							    NULL,
 							    G_PARAM_READWRITE | G_PARAM_CONSTRUCT));
 	g_object_class_install_property(object_class, PROP_REPLACE,

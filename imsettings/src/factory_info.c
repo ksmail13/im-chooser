@@ -25,37 +25,527 @@
 #include "config.h"
 #endif
 
+#include <fam.h>
 #include <stdlib.h>
+#include <string.h>
 #include <glib.h>
 #include <glib/gi18n.h>
 #include <glib-object.h>
-#include "imsettings/imsettings-request.h"
 #include "imsettings/imsettings.h"
-#include "imsettings-manager.h"
+#include "imsettings/imsettings-info-private.h"
+#include "imsettings/imsettings-marshal.h"
+#include "imsettings/imsettings-observer.h"
+#include "imsettings/imsettings-utils.h"
+
+
+typedef struct _IMSettingsInfoManagerClass	IMSettingsInfoManagerClass;
+typedef struct _IMSettingsInfoManager		IMSettingsInfoManager;
+typedef struct _IMSettingsInfoManagerPrivate	IMSettingsInfoManagerPrivate;
+
+
+#define IMSETTINGS_TYPE_INFO_MANAGER			(imsettings_info_manager_get_type())
+#define IMSETTINGS_INFO_MANAGER(_o_)			(G_TYPE_CHECK_INSTANCE_CAST ((_o_), IMSETTINGS_TYPE_INFO_MANAGER, IMSettingsInfoManager))
+#define IMSETTINGS_INFO_MANAGER_CLASS(_c_)		(G_TYPE_CHECK_CLASS_CAST ((_c_), IMSETTINGS_TYPE_INFO_MANAGER, IMSettingsInfoManagerClass))
+#define IMSETTINGS_IS_INFO_MANAGER(_o_)			(G_TYPE_CHECK_INSTANCE_TYPE ((_o_), IMSETTINGS_TYPE_INFO_MANAGER))
+#define IMSETTINGS_IS_INFO_MANAGER_CLASS(_c_)		(G_TYPE_CHECK_CLASS_TYPE ((_c_), IMSETTINGS_TYPE_INFO_MANAGER))
+#define IMSETTINGS_INFO_MANAGER_GET_CLASS(_o_)		(G_TYPE_INSTANCE_GET_CLASS ((_o_), IMSETTINGS_TYPE_INFO_MANAGER, IMSettingsInfoManagerClass))
+#define IMSETTINGS_INFO_MANAGER_GET_PRIVATE(_o_)	(G_TYPE_INSTANCE_GET_PRIVATE ((_o_), IMSETTINGS_TYPE_INFO_MANAGER, IMSettingsInfoManagerPrivate))
+
+enum {
+	FAM_MONITOR_START = 0,
+	FAM_MONITOR_USER_XINPUTRC,
+	FAM_MONITOR_SYSTEM_XINPUTRC,
+	FAM_MONITOR_XINPUTD,
+	FAM_MONITOR_END
+};
+enum {
+	FAM_STAT_UNKNOWN,
+	FAM_STAT_IN_PROGRESS,
+	FAM_STAT_UPDATED,
+	FAM_STAT_END
+};
+enum {
+	STATUS_CHANGED,
+	LAST_SIGNAL
+};
+
+struct _IMSettingsInfoManagerClass {
+	IMSettingsObserverClass parent_class;
+
+	void (* status_changed) (IMSettingsInfoManager *manager,
+				 const gchar           *filename);
+};
+struct _IMSettingsInfoManager {
+	IMSettingsObserver parent_instance;
+};
+struct _IMSettingsInfoManagerPrivate {
+	GHashTable     *im_info_from_name;
+	GHashTable     *im_info_from_filename;
+	DBusConnection *req_conn;
+	FAMConnection   fam_conn;
+	FAMRequest      fam_req[FAM_MONITOR_END];
+	guint           fam_status[FAM_MONITOR_END];
+	guint           fam_source_id;
+	gchar          *current_user_im;
+	gchar          *current_system_im;
+};
+
+guint signals[LAST_SIGNAL] = { 0 };
+
+G_DEFINE_TYPE (IMSettingsInfoManager, imsettings_info_manager, IMSETTINGS_TYPE_OBSERVER);
+
+
+static void imsettings_info_manager_init_fam(IMSettingsInfoManager *manager);
+static void imsettings_info_manager_tini_fam(IMSettingsInfoManager *manager);
 
 
 /*
  * Private functions
  */
 static void
-disconnected_cb(IMSettingsManager *manager,
-		GMainLoop         *loop)
+disconnected_cb(IMSettingsObserver *observer,
+		GMainLoop          *loop)
 {
 	g_main_loop_quit(loop);
 }
 
 static void
-reload_cb(IMSettingsManager *manager,
-	  gboolean           force)
+reload_cb(IMSettingsObserver *observer,
+	  gboolean            force)
 {
 	if (force) {
-		GMainLoop *loop = g_object_get_data(G_OBJECT (manager), "imsettings-daemon-main");
+		GMainLoop *loop = g_object_get_data(G_OBJECT (observer), "imsettings-daemon-main");
 
 		g_main_loop_quit(loop);
 	} else {
+		IMSettingsInfoManager *manager = IMSETTINGS_INFO_MANAGER (observer);
+
 		g_print(_("Reloading...\n"));
-		imsettings_manager_load_conf(manager);
+		imsettings_info_manager_tini_fam(manager);
+		imsettings_info_manager_init_fam(manager);
 	}
+}
+
+
+static gint
+imsettings_info_manager_get_fam_target(IMSettingsInfoManagerPrivate *priv,
+				       FAMRequest                   *req)
+{
+	gint i, retval = 0;
+
+	for (i = FAM_MONITOR_START; i < FAM_MONITOR_END; i++) {
+		if (FAMREQUEST_GETREQNUM (&priv->fam_req[i]) == FAMREQUEST_GETREQNUM (req)) {
+			retval = i;
+			break;
+		}
+	}
+
+	return retval;
+}
+
+static IMSettingsInfo *
+imsettings_info_manager_add_info(IMSettingsInfoManagerPrivate *priv,
+				 const gchar                  *filename,
+				 gboolean                      is_xinputrc)
+{
+	IMSettingsInfo *info, *ret;
+	const gchar *name;
+
+	info = imsettings_info_new(filename);
+	if (info != NULL) {
+		name = imsettings_info_get_short_desc(info);
+		if ((ret = g_hash_table_lookup(priv->im_info_from_name, name)) == NULL) {
+			g_hash_table_insert(priv->im_info_from_name,
+					    g_strdup(name),
+					    info);
+			g_hash_table_insert(priv->im_info_from_filename,
+					    g_strdup(filename),
+					    g_object_ref(info));
+		} else {
+			if (strcmp(name, IMSETTINGS_NONE_CONF) == 0 ||
+			    strcmp(name, IMSETTINGS_USER_SPECIFIC_SHORT_DESC) == 0) {
+				/* We deal with none.conf specially here.
+				 * It has to be registered as is anyway.
+				 */
+				g_hash_table_replace(priv->im_info_from_name,
+						     g_strdup(name),
+						     info);
+				g_hash_table_replace(priv->im_info_from_filename,
+						     g_strdup(filename),
+						     g_object_ref(info));
+			} else if (is_xinputrc) {
+				/* just return the object in the hash */
+				g_object_unref(info);
+				info = ret;
+			} else {
+				g_warning(_("Duplicate entry `%s' from %s. SHORT_DESC has to be unique."),
+					  name, filename);
+				g_object_unref(info);
+				info = NULL;
+			}
+		}
+	}
+
+	return info;
+}
+
+static gboolean
+imsettings_info_manager_remove_info(IMSettingsInfoManagerPrivate *priv,
+				    const gchar                  *filename,
+				    gboolean                      is_xinputrc)
+{
+	IMSettingsInfo *info;
+	const gchar *name;
+	gboolean retval = FALSE;
+
+	if ((info = g_hash_table_lookup(priv->im_info_from_filename, filename))) {
+		name = imsettings_info_get_short_desc(info);
+		g_hash_table_remove(priv->im_info_from_filename, filename);
+		if (!is_xinputrc ||
+		    strcmp(name, IMSETTINGS_USER_SPECIFIC_SHORT_DESC) == 0)
+			g_hash_table_remove(priv->im_info_from_name, name);
+		retval = TRUE;
+	}
+
+	return retval;
+}
+
+static gboolean
+imsettings_info_manager_fam_event_loop(gpointer data)
+{
+	IMSettingsInfoManager *manager = IMSETTINGS_INFO_MANAGER (data);
+	IMSettingsInfoManagerPrivate *priv = IMSETTINGS_INFO_MANAGER_GET_PRIVATE (manager);
+	IMSettingsInfo *info, *old_info;
+	FAMEvent ev;
+	gchar *filename = NULL;
+	gsize suffix_len = strlen(XINPUT_SUFFIX), path_len = strlen(XINPUT_PATH);
+	gsize len;
+	gint target;
+	gboolean proceeded = FALSE;
+
+	if (FAMPending(&priv->fam_conn) > 0) {
+		FAMNextEvent(&priv->fam_conn, &ev);
+		target = imsettings_info_manager_get_fam_target(priv, &ev.fr);
+		switch (target) {
+		    case FAM_MONITOR_USER_XINPUTRC:
+		    case FAM_MONITOR_SYSTEM_XINPUTRC:
+			    filename = g_strdup(ev.filename);
+			    switch (ev.code) {
+				case FAMChanged:
+					imsettings_info_manager_remove_info(priv, filename, TRUE);
+				case FAMCreated:
+				case FAMExists:
+					if (ev.code == FAMExists)
+						priv->fam_status[target] = FAM_STAT_IN_PROGRESS;
+					info = imsettings_info_manager_add_info(priv, filename, TRUE);
+					if (target == FAM_MONITOR_USER_XINPUTRC) {
+						if (priv->current_user_im &&
+						    (old_info = g_hash_table_lookup(priv->im_info_from_name,
+										    priv->current_user_im)))
+							g_object_set(G_OBJECT (old_info),
+								     "is_user_default",
+								     FALSE,
+								     NULL);
+						g_object_set(G_OBJECT (info), "is_user_default", TRUE, NULL);
+						g_free(priv->current_user_im);
+						priv->current_user_im = g_strdup(imsettings_info_get_short_desc(info));
+					} else {
+						if (priv->current_system_im &&
+						    (old_info = g_hash_table_lookup(priv->im_info_from_name,
+										    priv->current_system_im)))
+							g_object_set(G_OBJECT (info),
+								     "is_system_default",
+								     FALSE,
+								     NULL);
+						g_object_set(G_OBJECT (info), "is_system_default", TRUE, NULL);
+						g_free(priv->current_system_im);
+						priv->current_system_im = g_strdup(imsettings_info_get_short_desc(info));
+					}
+					g_hash_table_replace(priv->im_info_from_filename,
+							     g_strdup(filename),
+							     g_object_ref(info));
+					proceeded = TRUE;
+					break;
+				case FAMEndExist:
+					priv->fam_status[target] = FAM_STAT_UPDATED;
+					break;
+				case FAMDeleted:
+					imsettings_info_manager_remove_info(priv, filename, TRUE);
+					proceeded = TRUE;
+					break;
+				case FAMStartExecuting:
+				case FAMStopExecuting:
+				case FAMMoved:
+				case FAMAcknowledge:
+				default:
+					g_warning("Status has been changed on %s with %d", filename, ev.code);
+					break;
+			    }
+			    break;
+		    case FAM_MONITOR_XINPUTD:
+			    len = strlen(ev.filename);
+
+			    /* XXX: it may assume that XINPUT_PATH is valid path
+			     *      and trying to exclude it because it's just reported
+			     *      at the beginning in the transaction, but just contains
+			     *      its filename for each entries.
+			     */
+			    if (len > suffix_len &&
+				strcmp(&ev.filename[len - suffix_len], XINPUT_SUFFIX) == 0) {
+				    if (strncmp(ev.filename, XINPUT_PATH, path_len) != 0)
+					    filename = g_build_filename(XINPUT_PATH, ev.filename, NULL);
+				    else if (ev.code == FAMEndExist)
+					    priv->fam_status[target] = FAM_STAT_UPDATED;
+			    }
+			    if (filename == NULL)
+				    break;
+			    switch (ev.code) {
+				case FAMChanged:
+					/* better recreating an instance */
+					imsettings_info_manager_remove_info(priv, filename, FALSE);
+				case FAMCreated:
+				case FAMExists:
+					if (ev.code == FAMExists)
+						priv->fam_status[target] = FAM_STAT_IN_PROGRESS;
+					imsettings_info_manager_add_info(priv, filename, FALSE);
+					proceeded = TRUE;
+					break;
+				case FAMDeleted:
+					imsettings_info_manager_remove_info(priv, filename, FALSE);
+					proceeded = TRUE;
+					break;
+				case FAMStartExecuting:
+				case FAMStopExecuting:
+				case FAMMoved:
+				case FAMAcknowledge:
+				default:
+					g_warning("Status has been changed on %s with %d", filename, ev.code);
+					break;
+			    }
+			    break;
+		    default:
+			    g_warning("Unknown monitoring type: %d\n", target);
+			    break;
+		}
+		if (proceeded)
+			g_signal_emit(manager, signals[STATUS_CHANGED], 0,
+				      filename, NULL);
+		g_free(filename);
+	}
+
+	return TRUE;
+}
+
+static void
+imsettings_info_manager_real_finalize(GObject *object)
+{
+	IMSettingsInfoManagerPrivate *priv = IMSETTINGS_INFO_MANAGER_GET_PRIVATE (object);
+
+	if (priv->im_info_from_name)
+		g_hash_table_destroy(priv->im_info_from_name);
+	if (priv->im_info_from_filename)
+		g_hash_table_destroy(priv->im_info_from_filename);
+	dbus_connection_unref(priv->req_conn);
+	imsettings_info_manager_tini_fam(IMSETTINGS_INFO_MANAGER (object));
+	FAMClose(&priv->fam_conn);
+
+	if (G_OBJECT_CLASS (imsettings_info_manager_parent_class)->finalize)
+		G_OBJECT_CLASS (imsettings_info_manager_parent_class)->finalize(object);
+}
+
+typedef struct _IMSettingsManagerCollectList {
+	GQueue      *q;
+	const gchar *lang;
+	gchar       *legacy_im;
+} IMSettingsManagerCollectList;
+
+static void
+_collect_im_list(gpointer key,
+		 gpointer val,
+		 gpointer data)
+{
+	IMSettingsManagerCollectList *v = data;
+	IMSettingsInfo *info = IMSETTINGS_INFO (val);
+
+	if (!imsettings_info_is_xim(info)) {
+		if (imsettings_info_is_visible(info)) {
+			if (imsettings_info_is_system_default(info))
+				g_queue_push_head(v->q, g_strdup(key));
+			else
+				g_queue_push_tail(v->q, g_strdup(key));
+		}
+	} else {
+		/* need to update the short description with the lang */
+		g_object_set(G_OBJECT (info), "language", v->lang, NULL);
+		if (imsettings_info_is_visible(info)) {
+			if (v->legacy_im)
+				g_return_if_reached();
+			v->legacy_im = g_strdup(imsettings_info_get_short_desc(info));
+		}
+	}
+}
+
+static GPtrArray *
+imsettings_info_manager_real_get_list(IMSettingsObserver  *observer,
+				      const gchar         *lang,
+				      GError             **error)
+{
+	IMSettingsInfoManagerPrivate *priv = IMSETTINGS_INFO_MANAGER_GET_PRIVATE (observer);
+	IMSettingsManagerCollectList v;
+	GPtrArray *array = g_ptr_array_new();
+	gchar *s;
+
+	v.q = g_queue_new();
+	v.lang = lang;
+	v.legacy_im = NULL;
+	g_queue_init(v.q);
+	g_hash_table_foreach(priv->im_info_from_name, _collect_im_list, &v);
+	while ((s = g_queue_pop_head(v.q)))
+		g_ptr_array_add(array, s);
+	if (v.legacy_im)
+		g_ptr_array_add(array, v.legacy_im);
+	g_queue_free(v.q);
+	if (array->len == 0) {
+		g_set_error(error, IMSETTINGS_GERROR, IMSETTINGS_GERROR_NOT_AVAILABLE,
+			    _("No input methods available on your system."));
+	}
+	g_ptr_array_add(array, NULL);
+
+	return array;
+}
+
+static const gchar *
+imsettings_info_manager_real_get_current_user_im(IMSettingsObserver  *observer,
+						 GError             **error)
+{
+	IMSettingsInfoManagerPrivate *priv = IMSETTINGS_INFO_MANAGER_GET_PRIVATE (observer);
+
+	return priv->current_user_im;
+}
+
+static const gchar *
+imsettings_info_manager_real_get_current_system_im(IMSettingsObserver  *observer,
+						   GError             **error)
+{
+	IMSettingsInfoManagerPrivate *priv = IMSETTINGS_INFO_MANAGER_GET_PRIVATE (observer);
+
+	return priv->current_system_im;
+}
+
+static IMSettingsInfo *
+imsettings_info_manager_real_get_info(IMSettingsObserver  *observer,
+				      const gchar         *module,
+				      GError             **error)
+{
+	IMSettingsInfoManagerPrivate *priv = IMSETTINGS_INFO_MANAGER_GET_PRIVATE (observer);
+	IMSettingsInfo *info;
+
+	info = g_hash_table_lookup(priv->im_info_from_name, module);
+	if (info == NULL) {
+		g_set_error(error, IMSETTINGS_GERROR, IMSETTINGS_GERROR_IM_NOT_FOUND,
+			    _("No such input method on your system: %s"), module);
+	}
+
+	return info;
+}
+
+static void
+imsettings_info_manager_init_fam(IMSettingsInfoManager *manager)
+{
+	IMSettingsInfoManagerPrivate *priv = IMSETTINGS_INFO_MANAGER_GET_PRIVATE (manager);
+	const gchar *homedir;
+	gchar *file;
+	gint i;
+
+	g_hash_table_remove_all(priv->im_info_from_filename);
+	g_hash_table_remove_all(priv->im_info_from_name);
+
+	/* initialize FAM */
+	for (i = FAM_MONITOR_START; i < FAM_MONITOR_END; i++) {
+		priv->fam_status[i] = FAM_STAT_UNKNOWN;
+	}
+	FAMOpen(&priv->fam_conn);
+
+	FAMMonitorDirectory(&priv->fam_conn, XINPUT_PATH, &priv->fam_req[FAM_MONITOR_XINPUTD], NULL);
+	homedir = g_get_home_dir();
+	if (homedir != NULL) {
+		file = g_build_filename(homedir, IMSETTINGS_USER_XINPUT_CONF, NULL);
+		FAMMonitorFile(&priv->fam_conn, file, &priv->fam_req[FAM_MONITOR_USER_XINPUTRC], NULL);
+		g_free(file);
+	}
+	file = g_build_filename(XINPUTRC_PATH, IMSETTINGS_GLOBAL_XINPUT_CONF, NULL);
+	FAMMonitorFile(&priv->fam_conn, file, &priv->fam_req[FAM_MONITOR_SYSTEM_XINPUTRC], NULL);
+	g_free(file);
+
+	priv->fam_source_id = g_idle_add(imsettings_info_manager_fam_event_loop,
+					 manager);
+}
+
+static void
+imsettings_info_manager_tini_fam(IMSettingsInfoManager *manager)
+{
+	IMSettingsInfoManagerPrivate *priv = IMSETTINGS_INFO_MANAGER_GET_PRIVATE (manager);
+
+	g_idle_remove_by_data(manager);
+	FAMCancelMonitor(&priv->fam_conn, &priv->fam_req[FAM_MONITOR_USER_XINPUTRC]);
+	FAMCancelMonitor(&priv->fam_conn, &priv->fam_req[FAM_MONITOR_SYSTEM_XINPUTRC]);
+	FAMCancelMonitor(&priv->fam_conn, &priv->fam_req[FAM_MONITOR_XINPUTD]);
+}
+
+static void
+imsettings_info_manager_class_init(IMSettingsInfoManagerClass *klass)
+{
+	GObjectClass *object_class = G_OBJECT_CLASS (klass);
+	IMSettingsObserverClass *observer_class = IMSETTINGS_OBSERVER_CLASS (klass);
+
+	g_type_class_add_private(klass, sizeof (IMSettingsInfoManagerPrivate));
+
+	object_class->finalize = imsettings_info_manager_real_finalize;
+
+	observer_class->get_list = imsettings_info_manager_real_get_list;
+	observer_class->get_current_user_im = imsettings_info_manager_real_get_current_user_im;
+	observer_class->get_current_system_im = imsettings_info_manager_real_get_current_system_im;
+	observer_class->get_info = imsettings_info_manager_real_get_info;
+
+	/* signals */
+	signals[STATUS_CHANGED] = g_signal_new("status-changed",
+					       G_OBJECT_CLASS_TYPE (klass),
+					       G_SIGNAL_RUN_FIRST,
+					       G_STRUCT_OFFSET (IMSettingsInfoManagerClass, status_changed),
+					       NULL, NULL,
+					       imsettings_marshal_VOID__STRING_INT,
+					       G_TYPE_NONE, 2,
+					       G_TYPE_STRING, G_TYPE_INT);
+}
+
+static void
+imsettings_info_manager_init(IMSettingsInfoManager *manager)
+{
+	IMSettingsInfoManagerPrivate *priv = IMSETTINGS_INFO_MANAGER_GET_PRIVATE (manager);
+
+	priv->req_conn = dbus_bus_get(DBUS_BUS_SESSION, NULL);
+	priv->im_info_from_name = g_hash_table_new_full(g_str_hash,
+							g_str_equal,
+							g_free,
+							g_object_unref);
+	priv->im_info_from_filename = g_hash_table_new_full(g_str_hash,
+							    g_str_equal,
+							    g_free,
+							    g_object_unref);
+
+	imsettings_info_manager_init_fam(manager);
+}
+
+static IMSettingsInfoManager *
+imsettings_info_manager_new(DBusGConnection *conn,
+			    gboolean         replace)
+{
+	g_return_val_if_fail (conn != NULL, NULL);
+
+	return IMSETTINGS_INFO_MANAGER (g_object_new(IMSETTINGS_TYPE_INFO_MANAGER,
+						     "replace", replace,
+						     "connection", conn,
+						     NULL));
 }
 
 /*
@@ -67,7 +557,7 @@ main(int    argc,
 {
 	GError *error = NULL;
 	GMainLoop *loop;
-	IMSettingsManager *manager;
+	IMSettingsInfoManager *manager;
 	gboolean arg_replace = FALSE;
 	GOptionContext *ctx = g_option_context_new(NULL);
 	GOptionEntry entries[] = {
@@ -99,7 +589,7 @@ main(int    argc,
 	g_option_context_free(ctx);
 
 	gconn = dbus_g_bus_get(DBUS_BUS_SESSION, NULL);
-	manager = imsettings_manager_new(gconn, arg_replace);
+	manager = imsettings_info_manager_new(gconn, arg_replace);
 	if (manager == NULL)
 		exit(1);
 

@@ -235,7 +235,7 @@ imsettings_request_get_im_list(IMSettingsRequest *imsettings)
 	g_return_val_if_fail (IMSETTINGS_IS_REQUEST (imsettings), NULL);
 
 	priv = IMSETTINGS_REQUEST_GET_PRIVATE (imsettings);
-	if (!com_redhat_imsettings_get_list(priv->proxy, priv->locale, &retval, &error)) {
+	if (!com_redhat_imsettings_IMInfo_get_list(priv->proxy, priv->locale, &retval, &error)) {
 		g_warning(_("Failed to invoke a method `%s':\n  %s"), "GetList", error->message);
 		g_error_free(error);
 	}
@@ -244,9 +244,9 @@ imsettings_request_get_im_list(IMSettingsRequest *imsettings)
 }
 
 gboolean
-imsettings_request_get_im_list_async(IMSettingsRequest                    *imsettings,
-				     com_redhat_imsettings_get_list_reply  callback,
-				     gpointer                              user_data)
+imsettings_request_get_im_list_async(IMSettingsRequest                           *imsettings,
+				     com_redhat_imsettings_IMInfo_get_list_reply  callback,
+				     gpointer                                     user_data)
 {
 	IMSettingsRequestPrivate *priv;
 
@@ -255,7 +255,43 @@ imsettings_request_get_im_list_async(IMSettingsRequest                    *imset
 
 	priv = IMSETTINGS_REQUEST_GET_PRIVATE (imsettings);
 
-	return com_redhat_imsettings_get_list_async(priv->proxy, priv->locale, callback, user_data) != NULL;
+	return com_redhat_imsettings_IMInfo_get_list_async(priv->proxy, priv->locale, callback, user_data) != NULL;
+}
+
+gchar *
+imsettings_request_get_current_user_im(IMSettingsRequest *imsettings)
+{
+	IMSettingsRequestPrivate *priv;
+	GError *error = NULL;
+	gchar *retval = NULL;
+
+	g_return_val_if_fail (IMSETTINGS_IS_REQUEST (imsettings), NULL);
+
+	priv = IMSETTINGS_REQUEST_GET_PRIVATE (imsettings);
+	if (!com_redhat_imsettings_IMInfo_get_current_user_im(priv->proxy, &retval, &error)) {
+		g_warning(_("Failed to invoke a method `%s':\n  %s"), "GetCurrentUserIM", error->message);
+		g_error_free(error);
+	}
+
+	return retval;
+}
+
+gchar *
+imsettings_request_get_current_system_im(IMSettingsRequest *imsettings)
+{
+	IMSettingsRequestPrivate *priv;
+	GError *error = NULL;
+	gchar *retval = NULL;
+
+	g_return_val_if_fail (IMSETTINGS_IS_REQUEST (imsettings), NULL);
+
+	priv = IMSETTINGS_REQUEST_GET_PRIVATE (imsettings);
+	if (!com_redhat_imsettings_IMInfo_get_current_system_im(priv->proxy, &retval, &error)) {
+		g_warning(_("Failed to invoke a method `%s':\n  %s"), "GetCurrentSystemIM", error->message);
+		g_error_free(error);
+	}
+
+	return retval;
 }
 
 gchar *

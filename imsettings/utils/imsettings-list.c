@@ -22,6 +22,7 @@
  * Boston, MA 02111-1307, USA.
  */
 #include <locale.h>
+#include <string.h>
 #include <glib/gi18n.h>
 #include "imsettings/imsettings.h"
 #include "imsettings/imsettings-request.h"
@@ -33,6 +34,7 @@ main(int    argc,
 	IMSettingsRequest *imsettings;
 	DBusConnection *connection;
 	gchar **list, *locale;
+	gchar *user_im, *system_im;
 	gint i;
 
 	setlocale(LC_ALL, "");
@@ -41,13 +43,19 @@ main(int    argc,
 	g_type_init();
 
 	connection = dbus_bus_get(DBUS_BUS_SESSION, NULL);
-	imsettings = imsettings_request_new(connection, IMSETTINGS_INTERFACE_DBUS);
+	imsettings = imsettings_request_new(connection, IMSETTINGS_INFO_INTERFACE_DBUS);
 	imsettings_request_set_locale(imsettings, locale);
 	if ((list = imsettings_request_get_im_list(imsettings)) == NULL) {
 		g_printerr("Failed to get an IM list.\n");
 	} else {
+		user_im = imsettings_request_get_current_user_im(imsettings);
+		system_im = imsettings_request_get_current_system_im(imsettings);
 		for (i = 0; list[i] != NULL; i++) {
-			g_print("%d: %s\n", i + 1, list[i]);
+			g_print("%s %d: %s %s\n",
+				(strcmp(user_im, list[i]) == 0 ? "*" : " "),
+				i + 1,
+				list[i],
+				(strcmp(system_im, list[i]) == 0 ? "(recommended)" : ""));
 		}
 		g_strfreev(list);
 	}

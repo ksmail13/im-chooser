@@ -57,6 +57,8 @@ IMSettingsRequest *imsettings_request_new                    (DBusConnection    
 void               imsettings_request_set_locale             (IMSettingsRequest *imsettings,
 							      const gchar       *locale);
 gchar            **imsettings_request_get_im_list            (IMSettingsRequest *imsettings);
+gchar             *imsettings_request_get_current_user_im    (IMSettingsRequest *imsettings);
+gchar             *imsettings_request_get_current_system_im  (IMSettingsRequest *imsettings);
 gchar             *imsettings_request_get_xinput_filename    (IMSettingsRequest *imsettings,
                                                               const gchar       *module);
 gchar             *imsettings_request_get_im_module_name     (IMSettingsRequest *imsettings,
@@ -96,18 +98,18 @@ gboolean           imsettings_request_reload                 (IMSettingsRequest 
 gboolean           imsettings_request_change_to              (IMSettingsRequest *imsettings,
                                                               const gchar       *module);
 
-gboolean imsettings_request_get_im_list_async(IMSettingsRequest                    *imsettings,
-                                              com_redhat_imsettings_get_list_reply  callback,
-                                              gpointer                              user_data);
-gboolean imsettings_request_start_im_async   (IMSettingsRequest                    *imsettings,
-                                              const gchar                          *module,
-                                              com_redhat_imsettings_start_im_reply  callback,
-                                              gpointer                              user_data);
-gboolean imsettings_request_stop_im_async    (IMSettingsRequest                    *imsettings,
-                                              const gchar                          *module,
-                                              gboolean                              force,
-                                              com_redhat_imsettings_stop_im_reply   callback,
-                                              gpointer                              user_data);
+gboolean imsettings_request_IMInfo_get_im_list_async(IMSettingsRequest                           *imsettings,
+                                                     com_redhat_imsettings_IMInfo_get_list_reply  callback,
+                                                     gpointer                                     user_data);
+gboolean imsettings_request_start_im_async          (IMSettingsRequest                           *imsettings,
+                                                     const gchar                                 *module,
+                                                     com_redhat_imsettings_start_im_reply         callback,
+                                                     gpointer                                     user_data);
+gboolean imsettings_request_stop_im_async           (IMSettingsRequest                           *imsettings,
+                                                     const gchar                                 *module,
+                                                     gboolean                                     force,
+                                                     com_redhat_imsettings_stop_im_reply          callback,
+                                                     gpointer                                     user_data);
 
 
 G_END_DECLS

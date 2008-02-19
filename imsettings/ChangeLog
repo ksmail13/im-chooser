@@ -1,3 +1,29 @@
+2008-02-19  Akira TAGOH  <tagoh@redhat.com>
+
+	* src/factory.c (reload_cb): Do nothing for reloading anymore.
+
+	* src/factory_info.c: Add new class to deal with the event.
+	(imsettings_info_manager_fam_event_loop): new to deal with FAM event.
+
+	* imsettings/src/imsettings-manager.[ch]: Move into factory.c
+
+	* imsettings/imsettings-request.c (imsettings_request_get_current_user_im):
+	new
+	(imsettings_request_get_current_system_im): new.
+
+	* imsettings/imsettings-observer.c (imsettings_get_current_user_im):
+	new.
+	(imsettings_get_current_system_im): new.
+
+	* imsettings/imsettings.xml: Move GetList method to
+	com.redhat.imsettings.IMInfo interface.
+	Add GetCurrentUserIM and GetCurrentSystemIM.
+
+	* utils/imsettings-reload.c (main): ugly hack to make sure if a signal
+	is delivered. this might not work on some machines.
+
+	* utils/imsettings-list.c (main): change the output a bit friendly.
+
 2008-02-08  Akira TAGOH  <tagoh@redhat.com>
 
 	* imsettings/imsettings-request.c: similar fixes.

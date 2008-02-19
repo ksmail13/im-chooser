@@ -17,15 +17,10 @@ LIBS =									\
 	$(NULL)
 
 
-noinst_HEADERS =							\
-	imsettings-manager.h						\
-	$(NULL)
-
 libexec_PROGRAMS = im-settings-daemon im-info-daemon
 
 im_settings_daemon_SOURCES =						\
 	factory.c							\
-	imsettings-manager.c						\
 	$(NULL)
 im_settings_daemon_CFLAGS =						\
 	-DG_LOG_DOMAIN="\"IM-Settings-Daemon\""				\
@@ -37,7 +32,6 @@ im_settings_daemon_LDADD =						\
 
 im_info_daemon_SOURCES =						\
 	factory_info.c							\
-	imsettings-manager.c						\
 	$(NULL)
 im_info_daemon_CFLAGS =							\
 	-DG_LOG_DOMAIN="\"IM-Info-Daemon\""				\
