@@ -1,5 +1,8 @@
 2008-02-19  Akira TAGOH  <tagoh@redhat.com>
 
+	* src/factory.c (imsettings_manager_real_start_im):
+	Add appropriate error handling.
+
 	* src/factory.c (reload_cb): Do nothing for reloading anymore.
 
 	* src/factory_info.c: Add new class to deal with the event.

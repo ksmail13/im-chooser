@@ -460,21 +460,32 @@ imsettings_manager_real_start_im(IMSettingsObserver  *imsettings,
 	req = imsettings_request_new(conn, IMSETTINGS_INFO_INTERFACE_DBUS);
 	imsettings_request_set_locale(req, lang);
 	xinputfile = imsettings_request_get_xinput_filename(req, module);
-	if (!xinputfile)
+	if (!xinputfile) {
+		g_set_error(error, IMSETTINGS_GERROR, IMSETTINGS_GERROR_IM_NOT_FOUND,
+			    _("No such input method on your system: %s"),
+			    module);
 		goto end;
-	if (!imsettings_request_get_auxiliary_program(req, module, &aux_prog, &aux_args))
-		goto end;
-	pidfile = _build_pidfilename(xinputfile, priv->display_name, "aux");
+	}
+	if (imsettings_request_get_auxiliary_program(req,
+						     module,
+						     &aux_prog,
+						     &aux_args)) {
+		pidfile = _build_pidfilename(xinputfile, priv->display_name, "aux");
 
-	/* bring up an auxiliary program */
-	if (!_start_process(aux_prog, aux_args, pidfile, lang, error))
-		goto end;
+		/* bring up an auxiliary program */
+		if (!_start_process(aux_prog, aux_args, pidfile, lang, error))
+			goto end;
 
-	g_free(pidfile);
-	pidfile = NULL;
+		g_free(pidfile);
+		pidfile = NULL;
+	}
 
-	if (!imsettings_request_get_xim_program(req, module, &xim_prog, &xim_args))
+	if (!imsettings_request_get_xim_program(req, module, &xim_prog, &xim_args)) {
+		g_set_error(error, IMSETTINGS_GERROR, IMSETTINGS_GERROR_INVALID_IMM,
+			    _("No XIM server is available in %s"),
+			    module);
 		goto end;
+	}
 	pidfile = _build_pidfilename(xinputfile, priv->display_name, "xim");
 
 	/* bring up a XIM server */
@@ -483,15 +494,12 @@ imsettings_manager_real_start_im(IMSettingsObserver  *imsettings,
 
 	/* FIXME: We need to take care of imsettings per X screens?
 	 */
-	if (!(imm = imsettings_request_get_im_module_name(req, module, IMSETTINGS_IMM_GTK)))
-		goto end;
+	imm = imsettings_request_get_im_module_name(req, module, IMSETTINGS_IMM_GTK);
 	imsettings_request_change_to(priv->gtk_req, imm);
 #if 0
-	if (!(imm = imsettings_request_get_im_module_name(req, module, IMSETTINGS_IMM_XIM)))
-		goto end;
+	imm = imsettings_request_get_im_module_name(req, module, IMSETTINGS_IMM_XIM);
 	imsettings_request_change_to(priv->xim_req, imm);
-	if (!(imm = imsettings_request_get_im_module_name(req, module, IMSETTINGS_IMM_QT)))
-		goto end;
+	imm = imsettings_request_get_im_module_name(req, module, IMSETTINGS_IMM_QT);
 	imsettings_request_change_to(priv->qt_req, imm);
 #endif
 
