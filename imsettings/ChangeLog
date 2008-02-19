@@ -1,5 +1,15 @@
 2008-02-19  Akira TAGOH  <tagoh@redhat.com>
 
+	* src/factory_info.c (imsettings_info_manager_fam_event_loop):
+	Update the fam status if the result code is FAMEndExist anyway.
+	(imsettings_info_manager_pending_init): new function to check
+	if the initial FAM events are proceeded.
+	(imsettings_info_manager_real_get_list): wait for the initialization
+	finished.
+	(imsettings_info_manager_real_get_current_user_im): likewise.
+	(imsettings_info_manager_real_get_current_system_im): likewise.
+	(imsettings_info_manager_real_get_info): likewise.
+
 	* src/factory.c (imsettings_manager_real_start_im):
 	Add appropriate error handling.
 

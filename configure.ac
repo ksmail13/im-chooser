@@ -68,8 +68,7 @@ dnl check pkg-config stuff
 dnl ======================================================================
 PKG_CHECK_MODULES(IMCHOOSE, gtk+-2.0)
 PKG_CHECK_MODULES(IMSETTINGS, dbus-1 >= $DBUS_REQUIRED
-			      dbus-glib-1
-			      gamin)
+			      dbus-glib-1)
 PKG_CHECK_MODULES(GCONF, gconf-2.0,
 	[use_gconf="yes"],
 	[use_gconf="no"])
@@ -79,6 +78,8 @@ PKG_CHECK_MODULES(GNOME, libgnomeui-2.0,
 	[AC_MSG_RESULT([no])
 	 use_gnome="no"])
 PKG_CHECK_MODULES(IMDAEMON, x11)
+PKG_CHECK_MODULES(IMINFO, gthread-2.0
+			  gamin)
 AC_SUBST(IMCHOOSE_CFLAGS)
 AC_SUBST(IMCHOOSE_LIBS)
 AC_SUBST(IMSETTINGS_CFLAGS)
@@ -89,6 +90,8 @@ AC_SUBST(GNOME_CFLAGS)
 AC_SUBST(GNOME_LIBS)
 AC_SUBST(IMDAEMON_CFLAGS)
 AC_SUBST(IMDAEMON_LIBS)
+AC_SUBST(IMINFO_CFLAGS)
+AC_SUBST(IMINFO_LIBS)
 
 AM_CONDITIONAL(ENABLE_GCONF, test x$use_gconf != xno)
 AM_CONDITIONAL(ENABLE_GNOME, test x$use_gnome != xno)

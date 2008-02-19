@@ -31,6 +31,7 @@
 #include <glib.h>
 #include <glib/gi18n.h>
 #include <glib-object.h>
+#include <glib/gthread.h>
 #include "imsettings/imsettings.h"
 #include "imsettings/imsettings-info-private.h"
 #include "imsettings/imsettings-marshal.h"
@@ -92,6 +93,7 @@ struct _IMSettingsInfoManagerPrivate {
 
 guint signals[LAST_SIGNAL] = { 0 };
 
+G_LOCK_DEFINE_STATIC(imsettings_info_manager);
 G_DEFINE_TYPE (IMSettingsInfoManager, imsettings_info_manager, IMSETTINGS_TYPE_OBSERVER);
 
 
@@ -154,6 +156,9 @@ imsettings_info_manager_add_info(IMSettingsInfoManagerPrivate *priv,
 	info = imsettings_info_new(filename);
 	if (info != NULL) {
 		name = imsettings_info_get_short_desc(info);
+
+		G_LOCK (imsettings_info_manager);
+
 		if ((ret = g_hash_table_lookup(priv->im_info_from_name, name)) == NULL) {
 			g_hash_table_insert(priv->im_info_from_name,
 					    g_strdup(name),
@@ -184,6 +189,8 @@ imsettings_info_manager_add_info(IMSettingsInfoManagerPrivate *priv,
 				info = NULL;
 			}
 		}
+
+		G_UNLOCK (imsettings_info_manager);
 	}
 
 	return info;
@@ -198,6 +205,8 @@ imsettings_info_manager_remove_info(IMSettingsInfoManagerPrivate *priv,
 	const gchar *name;
 	gboolean retval = FALSE;
 
+	G_LOCK (imsettings_info_manager);
+
 	if ((info = g_hash_table_lookup(priv->im_info_from_filename, filename))) {
 		name = imsettings_info_get_short_desc(info);
 		g_hash_table_remove(priv->im_info_from_filename, filename);
@@ -206,6 +215,8 @@ imsettings_info_manager_remove_info(IMSettingsInfoManagerPrivate *priv,
 			g_hash_table_remove(priv->im_info_from_name, name);
 		retval = TRUE;
 	}
+
+	G_UNLOCK (imsettings_info_manager);
 
 	return retval;
 }
@@ -238,6 +249,9 @@ imsettings_info_manager_fam_event_loop(gpointer data)
 					if (ev.code == FAMExists)
 						priv->fam_status[target] = FAM_STAT_IN_PROGRESS;
 					info = imsettings_info_manager_add_info(priv, filename, TRUE);
+
+					G_LOCK (imsettings_info_manager);
+
 					if (target == FAM_MONITOR_USER_XINPUTRC) {
 						if (priv->current_user_im &&
 						    (old_info = g_hash_table_lookup(priv->im_info_from_name,
@@ -264,6 +278,9 @@ imsettings_info_manager_fam_event_loop(gpointer data)
 					g_hash_table_replace(priv->im_info_from_filename,
 							     g_strdup(filename),
 							     g_object_ref(info));
+
+					G_UNLOCK (imsettings_info_manager);
+
 					proceeded = TRUE;
 					break;
 				case FAMEndExist:
@@ -283,6 +300,9 @@ imsettings_info_manager_fam_event_loop(gpointer data)
 			    }
 			    break;
 		    case FAM_MONITOR_XINPUTD:
+			    if (ev.code == FAMEndExist)
+				    priv->fam_status[target] = FAM_STAT_UPDATED;
+
 			    len = strlen(ev.filename);
 
 			    /* XXX: it may assume that XINPUT_PATH is valid path
@@ -291,12 +311,10 @@ imsettings_info_manager_fam_event_loop(gpointer data)
 			     *      its filename for each entries.
 			     */
 			    if (len > suffix_len &&
-				strcmp(&ev.filename[len - suffix_len], XINPUT_SUFFIX) == 0) {
-				    if (strncmp(ev.filename, XINPUT_PATH, path_len) != 0)
-					    filename = g_build_filename(XINPUT_PATH, ev.filename, NULL);
-				    else if (ev.code == FAMEndExist)
-					    priv->fam_status[target] = FAM_STAT_UPDATED;
-			    }
+				strcmp(&ev.filename[len - suffix_len], XINPUT_SUFFIX) == 0 &&
+				strncmp(ev.filename, XINPUT_PATH, path_len) != 0)
+				    filename = g_build_filename(XINPUT_PATH, ev.filename, NULL);
+
 			    if (filename == NULL)
 				    break;
 			    switch (ev.code) {
@@ -385,6 +403,27 @@ _collect_im_list(gpointer key,
 	}
 }
 
+static gboolean
+imsettings_info_manager_pending_init(IMSettingsInfoManagerPrivate *priv)
+{
+	gint i;
+	gboolean retval = TRUE;
+	GTimer *timer;
+
+	timer = g_timer_new();
+	g_timer_start(timer);
+	for (i = FAM_MONITOR_START; i < FAM_MONITOR_END; i++) {
+		while (retval && priv->fam_status[i] != FAM_STAT_UPDATED) {
+			g_main_context_iteration(g_main_context_default(), FALSE);
+			if (g_timer_elapsed(timer, NULL) > 10L)
+				retval = FALSE;
+		}
+	}
+	g_timer_destroy(timer);
+
+	return retval;
+}
+
 static GPtrArray *
 imsettings_info_manager_real_get_list(IMSettingsObserver  *observer,
 				      const gchar         *lang,
@@ -395,11 +434,24 @@ imsettings_info_manager_real_get_list(IMSettingsObserver  *observer,
 	GPtrArray *array = g_ptr_array_new();
 	gchar *s;
 
+	if (!imsettings_info_manager_pending_init(priv)) {
+		g_set_error(error, IMSETTINGS_GERROR, IMSETTINGS_GERROR_FAILED,
+			    _("Timed out to initialize %s services."),
+			    IMSETTINGS_INFO_INTERFACE_DBUS);
+		return NULL;
+	}
+
 	v.q = g_queue_new();
 	v.lang = lang;
 	v.legacy_im = NULL;
 	g_queue_init(v.q);
+
+	G_LOCK (imsettings_info_manager);
+
 	g_hash_table_foreach(priv->im_info_from_name, _collect_im_list, &v);
+
+	G_UNLOCK (imsettings_info_manager);
+
 	while ((s = g_queue_pop_head(v.q)))
 		g_ptr_array_add(array, s);
 	if (v.legacy_im)
@@ -420,6 +472,13 @@ imsettings_info_manager_real_get_current_user_im(IMSettingsObserver  *observer,
 {
 	IMSettingsInfoManagerPrivate *priv = IMSETTINGS_INFO_MANAGER_GET_PRIVATE (observer);
 
+	if (!imsettings_info_manager_pending_init(priv)) {
+		g_set_error(error, IMSETTINGS_GERROR, IMSETTINGS_GERROR_FAILED,
+			    _("Timed out to initialize %s services."),
+			    IMSETTINGS_INFO_INTERFACE_DBUS);
+		return NULL;
+	}
+
 	return priv->current_user_im;
 }
 
@@ -428,6 +487,13 @@ imsettings_info_manager_real_get_current_system_im(IMSettingsObserver  *observer
 						   GError             **error)
 {
 	IMSettingsInfoManagerPrivate *priv = IMSETTINGS_INFO_MANAGER_GET_PRIVATE (observer);
+
+	if (!imsettings_info_manager_pending_init(priv)) {
+		g_set_error(error, IMSETTINGS_GERROR, IMSETTINGS_GERROR_FAILED,
+			    _("Timed out to initialize %s services."),
+			    IMSETTINGS_INFO_INTERFACE_DBUS);
+		return NULL;
+	}
 
 	return priv->current_system_im;
 }
@@ -439,6 +505,13 @@ imsettings_info_manager_real_get_info(IMSettingsObserver  *observer,
 {
 	IMSettingsInfoManagerPrivate *priv = IMSETTINGS_INFO_MANAGER_GET_PRIVATE (observer);
 	IMSettingsInfo *info;
+
+	if (!imsettings_info_manager_pending_init(priv)) {
+		g_set_error(error, IMSETTINGS_GERROR, IMSETTINGS_GERROR_FAILED,
+			    _("Timed out to initialize %s services."),
+			    IMSETTINGS_INFO_INTERFACE_DBUS);
+		return NULL;
+	}
 
 	info = g_hash_table_lookup(priv->im_info_from_name, module);
 	if (info == NULL) {
@@ -461,7 +534,8 @@ imsettings_info_manager_init_fam(IMSettingsInfoManager *manager)
 	g_hash_table_remove_all(priv->im_info_from_name);
 
 	/* initialize FAM */
-	for (i = FAM_MONITOR_START; i < FAM_MONITOR_END; i++) {
+	priv->fam_status[FAM_MONITOR_START] = FAM_STAT_UPDATED;
+	for (i = FAM_MONITOR_START + 1; i < FAM_MONITOR_END; i++) {
 		priv->fam_status[i] = FAM_STAT_UNKNOWN;
 	}
 	FAMOpen(&priv->fam_conn);
@@ -575,6 +649,7 @@ main(int    argc,
 #endif /* ENABLE_NLS */
 
 	g_type_init();
+	g_thread_init(NULL);
 
 	/* deal with the arguments */
 	g_option_context_add_main_entries(ctx, entries, GETTEXT_PACKAGE);

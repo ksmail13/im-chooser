@@ -35,6 +35,11 @@ im_info_daemon_SOURCES =						\
 	$(NULL)
 im_info_daemon_CFLAGS =							\
 	-DG_LOG_DOMAIN="\"IM-Info-Daemon\""				\
+	-fno-strict-aliasing						\
+	$(IMINFO_CFLAGS)						\
+	$(NULL)
+im_info_daemon_LDADD =							\
+	$(IMINFO_LIBS)							\
 	$(NULL)
 
 servicedir = $(DBUS_SERVICE_DIR)
