@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: im-chooser.trunk.pt_BR\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-02-08 01:42-0700\n"
-"PO-Revision-Date: 2008-02-19 16:19+1000\n"
+"PO-Revision-Date: 2008-02-19 16:32+1000\n"
 "Last-Translator: Glaucia Cintra <gcintra@redhat.com>\n"
 "Language-Team: Portuguese <en@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -46,7 +46,7 @@ msgstr "Linguagem"
 
 #: ../imsettings/imsettings/imsettings-info.c:445
 msgid "A language to pull the information in."
-msgstr ""
+msgstr "Um idioma para obter informações"
 
 #: ../imsettings/imsettings/imsettings-info.c:450
 msgid "Filename"
@@ -58,7 +58,7 @@ msgstr "Um nome de arquivo que refere-se a informações do IM."
 
 #: ../imsettings/imsettings/imsettings-info.c:456
 msgid "GTK+ immodule"
-msgstr ""
+msgstr "GTK+ immodule"
 
 #: ../imsettings/imsettings/imsettings-info.c:457
 msgid "A module name used for GTK+"
@@ -66,7 +66,7 @@ msgstr "Um nome de módulo usado pelo GTK+"
 
 #: ../imsettings/imsettings/imsettings-info.c:462
 msgid "Qt immodule"
-msgstr ""
+msgstr "Qt immodule"
 
 #: ../imsettings/imsettings/imsettings-info.c:463
 msgid "A module name used for Qt"
@@ -86,7 +86,7 @@ msgstr "Ignore o sinalizador"
 
 #: ../imsettings/imsettings/imsettings-info.c:475
 msgid "A flag to not list up."
-msgstr ""
+msgstr "Um sinalizador dizendo para não listar."
 
 #: ../imsettings/imsettings/imsettings-info.c:480
 msgid "XIM server program name"
@@ -152,7 +152,7 @@ msgstr "Padrão do Sistema"
 
 #: ../imsettings/imsettings/imsettings-info.c:529
 msgid "Whether or not IM is a system default."
-msgstr ""
+msgstr "Não importando se o IM for um sistema padrão."
 
 #: ../imsettings/imsettings/imsettings-info.c:534
 msgid "User Default"
@@ -160,7 +160,7 @@ msgstr "Padrão do Usuário"
 
 #: ../imsettings/imsettings/imsettings-info.c:535
 msgid "Whether or not IM is an user default."
-msgstr ""
+msgstr "Não importando se o IM for um usuário padrão."
 
 #: ../imsettings/imsettings/imsettings-info.c:540
 msgid "XIM"
@@ -168,7 +168,7 @@ msgstr "XIM"
 
 #: ../imsettings/imsettings/imsettings-info.c:541
 msgid "Whether or not IM is a XIM server."
-msgstr ""
+msgstr "Não importando se o IM for um servidor XIM."
 
 #: ../imsettings/imsettings/imsettings-observer.c:203
 #, c-format
@@ -181,7 +181,7 @@ msgstr "Nome do módulo IM"
 
 #: ../imsettings/imsettings/imsettings-observer.c:645
 msgid "An IM module name to be watched signals"
-msgstr ""
+msgstr "Um nome de módulo do IM a tornar-se sinalizadores assistidos."
 
 #: ../imsettings/imsettings/imsettings-observer.c:650
 msgid "Replace"
@@ -207,11 +207,11 @@ msgstr "Nome da interface para conectar ao DBus"
 
 #: ../imsettings/imsettings/imsettings-request.c:183
 msgid "Locale"
-msgstr ""
+msgstr "Localização"
 
 #: ../imsettings/imsettings/imsettings-request.c:184
 msgid "Locale to get the imsettings information"
-msgstr ""
+msgstr "Localizador para obter informações do imsettings."
 
 #: ../imsettings/imsettings/imsettings-request.c:241
 #: ../imsettings/imsettings/imsettings-request.c:276
@@ -276,7 +276,7 @@ msgstr "Nenhum método de entrada está disponível em seu sistema. "
 #: ../imsettings/src/imsettings-manager.c:184
 #, c-format
 msgid "No such input method on your system: %s"
-msgstr ""
+msgstr "Não há nenhum método de inserção em seu sistema: %s"
 
 #: ../imsettings/src/imsettings-manager.c:203
 #, c-format
@@ -358,7 +358,7 @@ msgstr ""
 msgid ""
 "Looking up the different object with the same key. it may happens due to the "
 "un-unique short description. replacing..."
-msgstr ""
+msgstr "Procurando pelo objeto diferente com a mesma chave. Pode acontecer devido à descrição curta não única. Substituindo..."
 
 #: ../imsettings/src/imsettings-manager.c:771
 #: ../imsettings/src/imsettings-manager.c:800
