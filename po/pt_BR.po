@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: im-chooser.trunk.pt_BR\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-02-08 01:42-0700\n"
-"PO-Revision-Date: 2008-02-19 16:08+1000\n"
+"PO-Revision-Date: 2008-02-19 16:19+1000\n"
 "Last-Translator: Glaucia Cintra <gcintra@redhat.com>\n"
 "Language-Team: Portuguese <en@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -38,7 +38,7 @@ msgstr "Substitua as configurações do daemon que está rodando por uma nova in
 #: ../imsettings/utils/imsettings-restart.c:63
 #: ../imsettings/utils/imsettings-stop.c:61
 msgid "Unknown error in parsing the command lines."
-msgstr ""
+msgstr "Erro desconhecido ao analisar as linhas de comando."
 
 #: ../imsettings/imsettings/imsettings-info.c:444
 msgid "Language"
