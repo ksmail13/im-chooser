@@ -1,5 +1,8 @@
 2008-02-20  Akira TAGOH  <tagoh@redhat.com>
 
+	* imsettings/imsettings-info.c (imsettings_info_notify_properties):
+	Prefer IMSETTINGS_IGNORE_ME rather than IM_CHOOSER_IGNORE_ME.
+
 	* src/factory.c (imsettings_manager_real_start_im): do not update
 	.xinputrc if requested.
 	(imsettings_manager_real_stop_im): likewise.
