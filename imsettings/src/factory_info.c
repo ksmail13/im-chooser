@@ -28,6 +28,7 @@
 #include <fam.h>
 #include <stdlib.h>
 #include <string.h>
+#include <unistd.h>
 #include <glib.h>
 #include <glib/gi18n.h>
 #include <glib-object.h>
@@ -234,7 +235,7 @@ imsettings_info_manager_fam_event_loop(gpointer data)
 	gint target;
 	gboolean proceeded = FALSE;
 
-	if (FAMPending(&priv->fam_conn) > 0) {
+	while (FAMPending(&priv->fam_conn) > 0) {
 		FAMNextEvent(&priv->fam_conn, &ev);
 		target = imsettings_info_manager_get_fam_target(priv, &ev.fr);
 		switch (target) {
@@ -349,7 +350,11 @@ imsettings_info_manager_fam_event_loop(gpointer data)
 			g_signal_emit(manager, signals[STATUS_CHANGED], 0,
 				      filename, NULL);
 		g_free(filename);
+		filename = NULL;
+
+		g_main_context_iteration(g_main_context_default(), FALSE);
 	}
+	sleep(1);
 
 	return TRUE;
 }
@@ -414,6 +419,7 @@ imsettings_info_manager_pending_init(IMSettingsInfoManagerPrivate *priv)
 	g_timer_start(timer);
 	for (i = FAM_MONITOR_START; i < FAM_MONITOR_END; i++) {
 		while (retval && priv->fam_status[i] != FAM_STAT_UPDATED) {
+			sleep(1);
 			g_main_context_iteration(g_main_context_default(), FALSE);
 			if (g_timer_elapsed(timer, NULL) > 10L)
 				retval = FALSE;
