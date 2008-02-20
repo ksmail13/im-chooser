@@ -4,10 +4,12 @@
     <method name="StartIM">
       <arg type="s" name="lang" direction="in" />
       <arg type="s" name="module" direction="in" />
+      <arg type="b" name="update_xinputrc" direction="in" />
       <arg type="b" name="ret" direction="out" />
     </method>
     <method name="StopIM">
       <arg type="s" name="module" direction="in" />
+      <arg type="b" name="update_xinputrc" direction="in" />
       <arg type="b" name="force" direction="in" />
       <arg type="b" name="ret" direction="out" />
     </method>

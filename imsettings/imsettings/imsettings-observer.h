@@ -77,17 +77,22 @@ struct _IMSettingsObserverClass {
 	gboolean          (* start_im)             (IMSettingsObserver  *imsettings,
 						    const gchar         *lang,
 						    const gchar         *module,
+						    gboolean             update_xinputrc,
 						    GError             **error);
 	gboolean          (* stop_im)              (IMSettingsObserver  *imsettings,
 						    const gchar         *module,
+						    gboolean             update_xinputrc,
 						    gboolean             force,
 						    GError             **error);
 
 	/* signals */
 	void              (* s_start_im)           (IMSettingsObserver  *imsettings,
-						    const gchar         *module);
+						    const gchar         *module,
+						    gboolean             update_xinputrc);
 	void              (* s_stop_im)            (IMSettingsObserver  *imsettings,
-						    const gchar         *module);
+						    const gchar         *module,
+						    gboolean             update_xinputrc,
+						    gboolean             force);
 };
 
 struct _IMSettingsObserver {

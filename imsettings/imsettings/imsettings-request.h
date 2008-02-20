@@ -89,9 +89,11 @@ gboolean           imsettings_request_is_xim                 (IMSettingsRequest 
 gchar             *imsettings_request_get_supported_language (IMSettingsRequest *imsettings,
 							      const gchar       *module);
 gboolean           imsettings_request_start_im               (IMSettingsRequest *imsettings,
-                                                              const gchar       *module);
+                                                              const gchar       *module,
+							      gboolean           update_xinputrc);
 gboolean           imsettings_request_stop_im                (IMSettingsRequest *imsettings,
                                                               const gchar       *module,
+							      gboolean           update_xinputrc,
                                                               gboolean           force);
 gboolean           imsettings_request_reload                 (IMSettingsRequest *imsettings,
                                                               gboolean           force);
@@ -103,10 +105,12 @@ gboolean imsettings_request_IMInfo_get_im_list_async(IMSettingsRequest          
                                                      gpointer                                     user_data);
 gboolean imsettings_request_start_im_async          (IMSettingsRequest                           *imsettings,
                                                      const gchar                                 *module,
+						     gboolean                                     update_xinputrc,
                                                      com_redhat_imsettings_start_im_reply         callback,
                                                      gpointer                                     user_data);
 gboolean imsettings_request_stop_im_async           (IMSettingsRequest                           *imsettings,
                                                      const gchar                                 *module,
+						     gboolean                                     update_xinputrc,
                                                      gboolean                                     force,
                                                      com_redhat_imsettings_stop_im_reply          callback,
                                                      gpointer                                     user_data);

@@ -91,6 +91,7 @@ static gboolean
 imsettings_start_im(GObject      *object,
 		    const gchar  *lang,
 		    const gchar  *module,
+		    gboolean      update_xinputrc,
 		    gboolean     *ret,
 		    GError      **error)
 {
@@ -99,7 +100,11 @@ imsettings_start_im(GObject      *object,
 	*ret = FALSE;
 	d(g_print("Starting IM `%s' with `%s' language\n", module, lang));
 	if (klass->start_im) {
-		*ret = klass->start_im(IMSETTINGS_OBSERVER (object), lang, module, error);
+		*ret = klass->start_im(IMSETTINGS_OBSERVER (object),
+				       lang,
+				       module,
+				       update_xinputrc,
+				       error);
 	}
 
 	return *ret;
@@ -108,6 +113,7 @@ imsettings_start_im(GObject      *object,
 static gboolean
 imsettings_stop_im(GObject      *object,
 		   const gchar  *module,
+		   gboolean      update_xinputrc,
 		   gboolean      force,
 		   gboolean     *ret,
 		   GError      **error)
@@ -117,7 +123,11 @@ imsettings_stop_im(GObject      *object,
 	*ret = FALSE;
 	d(g_print("Stopping IM `%s'%s\n", module, (force ? " forcibly" : "")));
 	if (klass->stop_im) {
-		*ret = klass->stop_im(IMSETTINGS_OBSERVER (object), module, force, error);
+		*ret = klass->stop_im(IMSETTINGS_OBSERVER (object),
+				      module,
+				      update_xinputrc,
+				      force,
+				      error);
 	}
 
 	return *ret;
@@ -644,9 +654,10 @@ static gboolean
 imsettings_observer_real_start_im(IMSettingsObserver *imsettings,
 				  const gchar        *lang,
 				  const gchar        *module,
+				  gboolean            update_xinputrc,
 				  GError            **error)
 {
-	g_signal_emit(imsettings, signals[STARTIM], 0, module, NULL);
+	g_signal_emit(imsettings, signals[STARTIM], 0, module, update_xinputrc, NULL);
 
 	return TRUE;
 }
@@ -654,10 +665,11 @@ imsettings_observer_real_start_im(IMSettingsObserver *imsettings,
 static gboolean
 imsettings_observer_real_stop_im(IMSettingsObserver *imsettings,
 				 const gchar        *module,
+				 gboolean            update_xinputrc,
 				 gboolean            force,
 				 GError            **error)
 {
-	g_signal_emit(imsettings, signals[STOPIM], 0, module, force, NULL);
+	g_signal_emit(imsettings, signals[STOPIM], 0, module, update_xinputrc, force, NULL);
 
 	return TRUE;
 }
@@ -718,17 +730,17 @@ imsettings_observer_class_init(IMSettingsObserverClass *klass)
 					G_SIGNAL_RUN_FIRST,
 					G_STRUCT_OFFSET (IMSettingsObserverClass, s_start_im),
 					NULL, NULL,
-					g_cclosure_marshal_VOID__STRING,
-					G_TYPE_NONE, 1,
-					G_TYPE_STRING);
+					imsettings_marshal_VOID__STRING_BOOLEAN,
+					G_TYPE_NONE, 2,
+					G_TYPE_STRING, G_TYPE_BOOLEAN);
 	signals[STOPIM] = g_signal_new("stop_im",
 				       G_OBJECT_CLASS_TYPE (klass),
 				       G_SIGNAL_RUN_FIRST,
 				       G_STRUCT_OFFSET (IMSettingsObserverClass, s_stop_im),
 				       NULL, NULL,
-				       imsettings_marshal_VOID__STRING_BOOLEAN,
-				       G_TYPE_NONE, 2,
-				       G_TYPE_STRING, G_TYPE_BOOLEAN);
+				       imsettings_marshal_VOID__STRING_BOOLEAN_BOOLEAN,
+				       G_TYPE_NONE, 3,
+				       G_TYPE_STRING, G_TYPE_BOOLEAN, G_TYPE_BOOLEAN);
 
 	dbus_g_object_type_install_info(IMSETTINGS_TYPE_OBSERVER,
 					&dbus_glib_imsettings_object_info);

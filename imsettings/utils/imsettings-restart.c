@@ -37,10 +37,11 @@ main(int    argc,
 {
 	IMSettingsRequest *imsettings;
 	DBusConnection *connection;
-	gboolean arg_force = FALSE;
+	gboolean arg_force = FALSE, arg_no_update = FALSE;
 	GOptionContext *ctx = g_option_context_new(NULL);
 	GOptionEntry entries[] = {
 		{"force", 'f', G_OPTION_FLAG_NO_ARG, G_OPTION_ARG_NONE, &arg_force, N_("Force reloading the configuration, including restarting the process.")},
+		{"no-update", 'n', G_OPTION_FLAG_NO_ARG, G_OPTION_ARG_NONE, &arg_no_update, N_("Do not update .xinputrc.")},
 		{NULL, 0, 0, 0, NULL, NULL, NULL}
 	};
 	GError *error = NULL;
@@ -77,14 +78,14 @@ main(int    argc,
 
 	connection = dbus_bus_get(DBUS_BUS_SESSION, NULL);
 	imsettings = imsettings_request_new(connection, IMSETTINGS_INTERFACE_DBUS);
-	if (!(flag = imsettings_request_stop_im(imsettings, argv[1], arg_force))) {
+	if (!(flag = imsettings_request_stop_im(imsettings, argv[1], FALSE, arg_force))) {
 		if (!arg_force) {
 			g_printerr("Failed to stop IM process `%s'\n", argv[1]);
 			exit(1);
 		}
 	}
 	sleep(3);
-	if (imsettings_request_start_im(imsettings, argv[1])) {
+	if (imsettings_request_start_im(imsettings, argv[1], !arg_no_update)) {
 		if (arg_force && flag) {
 			g_print("Forcibly restarted %s, but maybe not completely\n", argv[1]);
 		} else {

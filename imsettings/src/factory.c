@@ -444,6 +444,7 @@ static gboolean
 imsettings_manager_real_start_im(IMSettingsObserver  *imsettings,
 				 const gchar         *lang,
 				 const gchar         *module,
+				 gboolean             update_xinputrc,
 				 GError             **error)
 {
 	IMSettingsManagerPrivate *priv = IMSETTINGS_MANAGER_GET_PRIVATE (imsettings);
@@ -504,7 +505,7 @@ imsettings_manager_real_start_im(IMSettingsObserver  *imsettings,
 #endif
 
 	/* Finally update a symlink on your home */
-	if (!_update_symlink(priv, xinputfile, error))
+	if (update_xinputrc && !_update_symlink(priv, xinputfile, error))
 		goto end;
 
 	retval = TRUE;
@@ -524,6 +525,7 @@ imsettings_manager_real_start_im(IMSettingsObserver  *imsettings,
 static gboolean
 imsettings_manager_real_stop_im(IMSettingsObserver  *imsettings,
 				const gchar         *module,
+				gboolean             update_xinputrc,
 				gboolean             force,
 				GError             **error)
 {
@@ -588,7 +590,7 @@ imsettings_manager_real_stop_im(IMSettingsObserver  *imsettings,
 	if (imsettings_request_is_user_default(req, module)) {
 		g_free(xinputfile);
 		xinputfile = g_build_filename(XINPUT_PATH, IMSETTINGS_NONE_CONF XINPUT_SUFFIX, NULL);
-		if (!_update_symlink(priv, xinputfile, error))
+		if (update_xinputrc && !_update_symlink(priv, xinputfile, error))
 			goto end;
 	}
 	if (*error == NULL) {

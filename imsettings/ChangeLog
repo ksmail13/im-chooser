@@ -1,5 +1,30 @@
 2008-02-20  Akira TAGOH  <tagoh@redhat.com>
 
+	* src/factory.c (imsettings_manager_real_start_im): do not update
+	.xinputrc if requested.
+	(imsettings_manager_real_stop_im): likewise.
+
+	* imsettings/imsettings-request.c (imsettings_request_start_im):
+	Add update_xinputrc option.
+	(imsettings_request_start_im_async): likewise.
+	(imsettings_request_stop_im): likewise.
+	(imsettings_request_stop_im_async): likewise.
+
+	* imsettings/imsettings-observer.c (imsettings_start_im):
+	Add update_xinputrc option.
+	(imsettings_stop_im): likewise.
+	(imsettings_observer_real_start_im): likewise.
+	(imsettings_observer_real_stop_im): likewise.
+
+	* imsettings/imsettings.xml (StartIM): Add update_xinputrc option.
+	(StopIM): likewise.
+
+	* utils/imsettings-stop.c (main): Add --no-update option.
+
+	* utils/imsettings-restart.c (main): Add --no-update option.
+
+	* utils/imsettings-start.c (main): Add --no-update option.
+
 	* imsettings/imsettings-info.c (imsettings_info_finalize):
 	Invoke the finalizer from the parent class.
 

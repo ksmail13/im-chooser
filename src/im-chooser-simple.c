@@ -109,18 +109,26 @@ im_chooser_simple_enable_im_on_toggled(GtkToggleButton *button,
 			gtk_tree_model_get(model, &iter, 1, &name, -1);
 			if (im->current_im) {
 				if (im->initialized)
-					imsettings_request_stop_im(im->imsettings, im->current_im, TRUE);
+					imsettings_request_stop_im(im->imsettings,
+								   im->current_im,
+								   TRUE,
+								   TRUE);
 				g_free(im->current_im);
 			}
 			im->current_im = g_strdup(name);
 			if (im->initialized) {
-				imsettings_request_start_im(im->imsettings, im->current_im);
+				imsettings_request_start_im(im->imsettings,
+							    im->current_im,
+							    TRUE);
 			}
 		}
 	} else {
 		if (im->current_im) {
 			if (im->initialized)
-				imsettings_request_stop_im(im->imsettings, im->current_im, TRUE);
+				imsettings_request_stop_im(im->imsettings,
+							   im->current_im,
+							   TRUE,
+							   TRUE);
 			g_free(im->current_im);
 		}
 		im->current_im = NULL;
@@ -151,10 +159,15 @@ im_chooser_simple_im_list_on_changed(GtkTreeSelection *selection,
 		gtk_tree_model_get(model, &iter, 1, &name, -1);
 		if (im->current_im &&
 		    strcmp(im->current_im, name) != 0) {
-			imsettings_request_stop_im(im->imsettings, im->current_im, TRUE);
+			imsettings_request_stop_im(im->imsettings,
+						   im->current_im,
+						   TRUE,
+						   TRUE);
 			g_free(im->current_im);
 			im->current_im = g_strdup(name);
-			imsettings_request_start_im(im->imsettings, im->current_im);
+			imsettings_request_start_im(im->imsettings,
+						    im->current_im,
+						    TRUE);
 			if (imsettings_request_get_preferences_program(im->imsettings_info, name, &prog, &args) &&
 			    g_file_test(prog, G_FILE_TEST_EXISTS | G_FILE_TEST_IS_EXECUTABLE))
 				gtk_widget_set_sensitive(im->button_im_config, TRUE);
