@@ -476,6 +476,9 @@ imsettings_info_finalize(GObject *object)
 	g_free(priv->aux_args);
 	g_free(priv->short_desc);
 	g_free(priv->long_desc);
+
+	if (G_OBJECT_CLASS (imsettings_info_parent_class)->finalize)
+		G_OBJECT_CLASS (imsettings_info_parent_class)->finalize(object);
 }
 
 static void

@@ -1,5 +1,8 @@
 2008-02-20  Akira TAGOH  <tagoh@redhat.com>
 
+	* imsettings/imsettings-info.c (imsettings_info_finalize):
+	Invoke the finalizer from the parent class.
+
 	* src/factory_info.c (imsettings_info_manager_fam_event_loop):
 	Process the FAM event within one idle call.
 
