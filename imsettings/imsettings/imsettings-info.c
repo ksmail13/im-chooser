@@ -98,6 +98,58 @@ G_DEFINE_TYPE (IMSettingsInfo, imsettings_info, G_TYPE_OBJECT);
 /*
  * Private functions
  */
+static gchar *
+_unquote_string(const gchar *str)
+{
+	gboolean dq = FALSE, sq = FALSE;
+	const gchar *p;
+	GString *retval = g_string_new(NULL);
+
+	for (p = str; *p != 0 && (!isspace(*p) || dq || sq); p++) {
+		if (*p == '"' && !sq)
+			dq = !dq;
+		else if (*p == '\'' && !dq)
+			sq = !sq;
+		else if (*p == '\\' && sq == 0) {
+			switch (*(p + 1)) {
+			    case '"':
+			    case '\'':
+			    case '\\':
+				    g_string_append_c(retval, *(p + 1));
+				    p++;
+				    break;
+			    case 'b':
+				    g_string_append_c(retval, '\b');
+				    p++;
+				    break;
+			    case 'f':
+				    g_string_append_c(retval, '\f');
+				    p++;
+				    break;
+			    case 'n':
+				    g_string_append_c(retval, '\n');
+				    p++;
+				    break;
+			    case 'r':
+				    g_string_append_c(retval, '\r');
+				    p++;
+				    break;
+			    case 't':
+				    g_string_append_c(retval, '\t');
+				    p++;
+				    break;
+			    default:
+				    g_string_append_c(retval, *p);
+				    break;
+			}
+		} else {
+			g_string_append_c(retval, *p);
+		}
+	}
+
+	return g_string_free(retval, FALSE);
+}
+
 static void
 imsettings_info_notify_properties(GObject     *object,
 				  const gchar *filename)
@@ -166,10 +218,13 @@ imsettings_info_notify_properties(GObject     *object,
 						size_t len = strlen(_xinput_tokens[i]);
 
 						if (strncmp(p, _xinput_tokens[i], len) == 0) {
+							gchar *ret;
+
 							prop = i + (PROP_GTK_IMM - PROP_0);
 							p += len;
-							for (; *p != 0 && !isspace(*p); p++)
-								g_string_append_c(str, *p);
+							ret = _unquote_string(p);
+							g_string_append(str, ret);
+							g_free(ret);
 							break;
 						}
 					}

@@ -1,3 +1,8 @@
+2008-02-20  Akira TAGOH  <tagoh@redhat.com>
+
+	* imsettings/imsettings-info.c (_unquote_string): new.
+	(imsettings_info_notify_properties): unquote string for escaped characters.
+
 2008-02-19  Akira TAGOH  <tagoh@redhat.com>
 
 	* src/factory_info.c (imsettings_info_manager_fam_event_loop):

@@ -62,11 +62,11 @@ QT_IM_MODULE=$QT_IM_MODULE
 XIM=$XIM
 IM_CHOOSER_IGNORE_ME=$IM_CHOOSER_IGNORE_ME
 XIM_PROGRAM=$XIM_PROGRAM
-XIM_ARGS=$XIM_ARGS
+XIM_ARGS="`echo $XIM_ARGS | sed -e "s/\\\\([\\"']\\\\)/\\\\\\\\\\\\1/g"`"
 PREFERENCE_PROGRAM=$PREFERENCE_PROGRAM
-PREFERENCE_ARGS=$PREFERENCE_ARGS
+PREFERENCE_ARGS="`echo $PREFERENCE_ARGS | sed -e "s/\\\\([\\"']\\\\)/\\\\\\\\\\\\1/g"`"
 AUXILIARY_PROGRAM=$AUXILIARY_PROGRAM
-AUXILIARY_ARGS=$AUXILIARY_ARGS
-SHORT_DESC=$SHORT_DESC
-LONG_DESC=$LONG_DESC
+AUXILIARY_ARGS="`echo $AUXILIARY_ARGS | sed -e "s/\\\\([\\"']\\\\)/\\\\\\\\\\\\1/g"`"
+SHORT_DESC="`echo $SHORT_DESC | sed -e "s/\\\\([\\"']\\\\)/\\\\\\\\\\\\1/g"`"
+LONG_DESC="`echo $LONG_DESC | sed -e "s/\\\\([\\"']\\\\)/\\\\\\\\\\\\1/g"`"
 EOF
