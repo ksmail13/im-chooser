@@ -40,7 +40,7 @@ GTK_IM_MODULE
 QT_IM_MODULE
 	For Qt immodule.
 
-IM_CHOOSER_IGNORE_ME
+IMSETTINGS_IGNORE_ME
 	For something like that it shouldn't be chosen
 	directly but another one can handle it. if this
 	appears in IM specific configuration, IM Chooser
