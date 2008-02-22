@@ -11,7 +11,6 @@ LIBS =								\
 	@LDFLAGS@						\
 	$(IMSETTINGS_LIBS)					\
 	$(GCONF_LIBS)						\
-	$(top_builddir)/imsettings/imsettings/libimsettings.la	\
 	$(NULL)
 
 

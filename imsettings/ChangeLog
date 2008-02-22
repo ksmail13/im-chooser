@@ -1,5 +1,10 @@
 2008-02-22  Akira TAGOH  <tagoh@redhat.com>
 
+	* backends/gconf/Makefile.am (LIBS): get rid of the unnecessary library
+	linkage.
+
+	* backends/gconf/main.c: clean up.
+
 	* src/Makefile.am (im_settings_daemon_CFLAGS): Use X11_CFLAGS instead of.
 	(im_settings_daemon_LDADD): Use X11_LIBS instead of.
 

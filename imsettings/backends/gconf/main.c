@@ -33,7 +33,6 @@
 #include <dbus/dbus-glib-lowlevel.h>
 #include <gconf/gconf.h>
 #include "imsettings/imsettings.h"
-#include "imsettings/imsettings-request.h"
 
 #ifdef DEBUG
 #define d(e)	e
