@@ -80,6 +80,10 @@ PKG_CHECK_MODULES(GNOME, libgnomeui-2.0,
 	 use_gnome="yes"],
 	[AC_MSG_RESULT([no])
 	 use_gnome="no"])
+PKG_CHECK_MODULES(QT, QtCore
+		      QtDBus,
+	[use_qt="yes"],
+	[use_qt="no"])
 PKG_CHECK_MODULES(X11, x11)
 PKG_CHECK_MODULES(IMINFO, gthread-2.0
 			  gamin)
@@ -91,6 +95,8 @@ AC_SUBST(GCONF_CFLAGS)
 AC_SUBST(GCONF_LIBS)
 AC_SUBST(GNOME_CFLAGS)
 AC_SUBST(GNOME_LIBS)
+AC_SUBST(QT_CFLAGS)
+AC_SUBST(QT_LIBS)
 AC_SUBST(X11_CFLAGS)
 AC_SUBST(X11_LIBS)
 AC_SUBST(IMINFO_CFLAGS)
@@ -98,6 +104,7 @@ AC_SUBST(IMINFO_LIBS)
 
 AM_CONDITIONAL(ENABLE_GCONF, test x$use_gconf != xno)
 AM_CONDITIONAL(ENABLE_GNOME, test x$use_gnome != xno)
+AM_CONDITIONAL(ENABLE_QT, test x$use_qt != xno)
 
 dnl ======================================================================
 dnl check another libraries
@@ -224,6 +231,7 @@ data/xinput.sh.in
 data/xinputinfo.sh
 imsettings/backends/Makefile
 imsettings/backends/gconf/Makefile
+imsettings/backends/qt/Makefile
 imsettings/imsettings/Makefile
 imsettings/src/Makefile
 imsettings/utils/Makefile
@@ -248,4 +256,5 @@ echo " XINIT_PATH:                 $XINIT_PATH"
 echo " XINPUTSH:                   $XINPUTSH"
 echo " XINPUT_SUFFIX:              $XINPUT_SUFFIX"
 echo " GNOME support:              $use_gnome"
+echo " Qt support:                 $use_qt"
 echo ""

@@ -1,5 +1,15 @@
 2008-02-22  Akira TAGOH  <tagoh@redhat.com>
 
+	* backends/qt/introspection.xml:
+	* backends/qt/main.cpp:
+	* backends/qt/qt-imsettings.(cpp|h):
+	* backends/qt/qt-im-settings-daemon.service.in:
+	* backends/qt/Makefile.am: Initial commit for IMSettings service for Qt.
+	* backends/Makefile.am:
+	* configure.ac: Add Qt support.
+
+	* imsettings/imsettings.h: Add defines for Qt interface.
+
 	* backends/gconf/Makefile.am (LIBS): get rid of the unnecessary library
 	linkage.
 
