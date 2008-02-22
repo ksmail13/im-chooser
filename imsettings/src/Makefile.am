@@ -24,10 +24,10 @@ im_settings_daemon_SOURCES =						\
 	$(NULL)
 im_settings_daemon_CFLAGS =						\
 	-DG_LOG_DOMAIN="\"IM-Settings-Daemon\""				\
-	$(IMDAEMON_CFLAGS)						\
+	$(X11_CFLAGS)							\
 	$(NULL)
 im_settings_daemon_LDADD =						\
-	$(IMDAEMON_LIBS)						\
+	$(X11_LIBS)							\
 	$(NULL)
 
 im_info_daemon_SOURCES =						\

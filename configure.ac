@@ -48,6 +48,9 @@ dnl define variables
 dnl ======================================================================
 DBUS_SERVICE_DIR=`pkg-config --variable session_bus_services_dir dbus-1`
 AC_SUBST(DBUS_SERVICE_DIR)
+MOC=`pkg-config --variable moc_location QtCore`
+[ -z $MOC ] && MOC=/bin/true
+AC_SUBST(MOC)
 
 dnl ======================================================================
 dnl functions testing
@@ -77,7 +80,7 @@ PKG_CHECK_MODULES(GNOME, libgnomeui-2.0,
 	 use_gnome="yes"],
 	[AC_MSG_RESULT([no])
 	 use_gnome="no"])
-PKG_CHECK_MODULES(IMDAEMON, x11)
+PKG_CHECK_MODULES(X11, x11)
 PKG_CHECK_MODULES(IMINFO, gthread-2.0
 			  gamin)
 AC_SUBST(IMCHOOSE_CFLAGS)
@@ -88,8 +91,8 @@ AC_SUBST(GCONF_CFLAGS)
 AC_SUBST(GCONF_LIBS)
 AC_SUBST(GNOME_CFLAGS)
 AC_SUBST(GNOME_LIBS)
-AC_SUBST(IMDAEMON_CFLAGS)
-AC_SUBST(IMDAEMON_LIBS)
+AC_SUBST(X11_CFLAGS)
+AC_SUBST(X11_LIBS)
 AC_SUBST(IMINFO_CFLAGS)
 AC_SUBST(IMINFO_LIBS)
 

@@ -1,3 +1,8 @@
+2008-02-22  Akira TAGOH  <tagoh@redhat.com>
+
+	* src/Makefile.am (im_settings_daemon_CFLAGS): Use X11_CFLAGS instead of.
+	(im_settings_daemon_LDADD): Use X11_LIBS instead of.
+
 2008-02-20  Akira TAGOH  <tagoh@redhat.com>
 
 	* imsettings/imsettings-info.c (imsettings_info_notify_properties):
