@@ -2,22 +2,21 @@
 # translation of mn.po to
 # Copyright (C) 2007 THE mn'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the mn package.
-#
-#
 # naranhuu <naranhuu@localhost.localdomain>, 2007.
 # naranhuu <naranhuu@gmail.com>, 2007.
+# 
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: mn\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2007-10-19 01:21-0700\n"
-"PO-Revision-Date: 2007-12-02 11:12+0900\n"
+"PO-Revision-Date: 2008-03-01 18:06+0900\n"
 "Last-Translator: naranhuu <naranhuu@gmail.com>\n"
-"Language-Team: mongolia\n"
+"Language-Team: mongolia <openmn-translation@lists.sf.net>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.11.4\n"
+"Content-Transfer-Encoding: 8bit"
 
 #: ../src/im-chooser.c:482 ../src/im-chooser-simple.c:623
 msgid ""
@@ -80,11 +79,11 @@ msgstr "%s -г ашиглах"
 
 #: ../src/im-chooser-simple.c:448
 msgid " (Legacy)"
-msgstr "· (Legacy)"
+msgstr "(Legacy)"
 
 #: ../src/im-chooser-simple.c:450
 msgid " (Recommend)"
-msgstr "· (Санал болгож байна)"
+msgstr "(Санал болгож байна)"
 
 #: ../src/im-chooser-simple.c:616
 msgid "_Enable input method feature"
