@@ -1,3 +1,11 @@
+2008-03-06  Akira TAGOH  <tagoh@redhat.com>
+
+	* src/factory.c (_child_setup): new function to setup PGID for child
+	process.
+	(_stop_process): send a signal to PGID instread of PID.
+	(imsettings_manager_real_stop_im): make a change in the settings before
+	killing the processes.
+
 2008-02-22  Akira TAGOH  <tagoh@redhat.com>
 
 	* backends/qt/introspection.xml:

@@ -25,6 +25,7 @@
 #include "config.h"
 #endif
 
+#include <features.h>
 #include <errno.h>
 #include <fcntl.h>
 #include <signal.h>
@@ -139,6 +140,15 @@ _remove_pidfile(const gchar  *pidfile,
 	return retval;
 }
 
+static void
+_child_setup(gpointer data)
+{
+	pid_t pid;
+
+	pid = getpid();
+	setpgid(pid, 0);
+}
+
 static gboolean
 _start_process(const gchar  *prog_name,
 	       const gchar  *prog_args,
@@ -216,7 +226,7 @@ _start_process(const gchar  *prog_name,
 			if (g_spawn_async(g_get_tmp_dir(), argv, envp,
 					  G_SPAWN_STDOUT_TO_DEV_NULL|
 					  G_SPAWN_STDERR_TO_DEV_NULL,
-					  NULL, NULL, &pid, error)) {
+					  _child_setup, NULL, &pid, error)) {
 				gchar *s = g_strdup_printf("%d", pid);
 
 				write(fd, s, strlen(s));
@@ -271,7 +281,7 @@ _stop_process(const gchar  *pidfile,
 				    type);
 			goto end;
 		}
-		if (kill(pid, SIGTERM) == -1) {
+		if (kill(-pid, SIGTERM) == -1) {
 			g_set_error(error, IMSETTINGS_GERROR, IMSETTINGS_GERROR_UNABLE_TO_TRACK_IM,
 				    _("Couldn't send a signal to the %s process successfully."),
 				    type);
@@ -539,6 +549,15 @@ imsettings_manager_real_stop_im(IMSettingsObserver  *imsettings,
 
 	g_print("Stopping %s...\n", module);
 
+	/* Change the settings before killing the IM process(es) */
+	/* FIXME: We need to take care of imsettings per X screens?
+	 */
+	imsettings_request_change_to(priv->gtk_req, NULL);
+#if 0
+	imsettings_request_change_to(priv->xim_req, NULL);
+	imsettings_request_change_to(priv->qt_req, NULL);
+#endif
+
 	conn = dbus_bus_get(DBUS_BUS_SESSION, NULL);
 	req = imsettings_request_new(conn, IMSETTINGS_INFO_INTERFACE_DBUS);
 	xinputfile = imsettings_request_get_xinput_filename(req, module);
@@ -571,14 +590,6 @@ imsettings_manager_real_stop_im(IMSettingsObserver  *imsettings,
 			goto end;
 		}
 	}
-
-	/* FIXME: We need to take care of imsettings per X screens?
-	 */
-	imsettings_request_change_to(priv->gtk_req, NULL);
-#if 0
-	imsettings_request_change_to(priv->xim_req, NULL);
-	imsettings_request_change_to(priv->qt_req, NULL);
-#endif
 
 	/* finally update .xinputrc */
 	homedir = g_get_home_dir();
