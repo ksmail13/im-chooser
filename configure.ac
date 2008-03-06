@@ -12,36 +12,12 @@ AC_PROG_INTLTOOL
 
 AC_PROG_CC
 
-dnl ======================================================================
-dnl set CFLAGS
-dnl ======================================================================
-changequote(,)dnl
-if test "x$GCC" = "xyes"; then
-   	if test "x$USE_MAINTAINER_MODE" = "xyes"; then
-		case " $CFLAGS " in
-			*[\ \	]-Wall[\ \	]*) ;;
-			*) CFLAGS="$CFLAGS -Wall"   ;;
-		esac
+GNOME_COMPILE_WARNINGS
+GNOME_CXX_WARNINGS
 
-		case " $CFLAGS " in
-			*[\ \	]-Werror[\ \	]*) ;;
-			*) CFLAGS="$CFLAGS -Werror" ;;
-		esac
-	fi
-
-	if test "x$enable_ansi" = "xyes"; then
-		case " $CFLAGS " in
-		*[\ \	]-ansi[\ \	]*) ;;
-		*) CFLAGS="$CFLAGS -ansi"   ;;
-		esac
-
-		case " $CFLAGS " in
-		*[\ \	]-pedantic[\ \	]*)   ;;
-		*) CFLAGS="$CFLAGS -pedantic" ;;
-		esac
-	fi
-fi
-changequote([,])dnl
+GNOME_COMMON_INIT
+GNOME_DEBUG_CHECK
+GNOME_MAINTAINER_MODE_DEFINES
 
 dnl ======================================================================
 dnl define variables
@@ -138,10 +114,6 @@ AC_ARG_WITH(xinputsh,
 	AC_HELP_STRING([--with-xinputsh], [specify the xinput shell script name])
 	,,
 	with_xinputsh=no)
-AC_ARG_ENABLE(debug,
-	AC_HELP_STRING([--enable-debug], [enable the debugging mode])
-	,,
-	enable_debug=no)
 
 dnl ======================================================================
 dnl options - xinputdir
@@ -207,17 +179,6 @@ else
 fi
 XINPUT_SUFFIX=$with_xinput_suffix
 AC_SUBST(XINPUT_SUFFIX)
-
-dnl ======================================================================
-dnl options - debug
-dnl ======================================================================
-AC_MSG_CHECKING(whether to enable the debugging mode)
-if test "x$enable_debug" = xno; then
-	AC_MSG_RESULT(no)
-else
-	AC_MSG_RESULT(yes)
-	AC_DEFINE(DEBUG,,[Build with the debugging mode])
-fi
 
 dnl ======================================================================
 dnl output

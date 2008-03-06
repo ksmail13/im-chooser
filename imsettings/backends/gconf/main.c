@@ -34,7 +34,7 @@
 #include <gconf/gconf.h>
 #include "imsettings/imsettings.h"
 
-#ifdef DEBUG
+#ifdef GNOME_ENABLE_DEBUG
 #define d(e)	e
 #else
 #define d(e)

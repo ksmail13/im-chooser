@@ -34,7 +34,7 @@
 #include "imsettings-marshal.h"
 
 #define IMSETTINGS_OBSERVER_GET_PRIVATE(_o_)	(G_TYPE_INSTANCE_GET_PRIVATE ((_o_), IMSETTINGS_TYPE_OBSERVER, IMSettingsObserverPrivate))
-#ifdef DEBUG
+#ifdef GNOME_ENABLE_DEBUG
 #define d(e)	e
 #else
 #define d(e)

@@ -6,6 +6,7 @@ INCLUDES =								\
 	-DXINPUTRC_PATH="\"$(XINPUTRC_PATH)\""				\
 	-DXINPUT_PATH="\"$(XINPUT_PATH)\""				\
 	-DXINPUT_SUFFIX="\"$(XINPUT_SUFFIX)\""				\
+	-D_GNU_SOURCE							\
 	-I$(top_srcdir)/imsettings					\
 	$(IMSETTINGS_CFLAGS)						\
 	$(NULL)

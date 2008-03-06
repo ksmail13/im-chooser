@@ -1,3 +1,7 @@
+2008-03-06  Akira TAGOH  <tagoh@redhat.com>
+
+	* configure.ac: Use gnome-common's macro.
+
 2008-02-20  Akira TAGOH  <tagoh@redhat.com>
 
 	* data/xinputinfo.sh.in: Fix to output quoted strings properly.
