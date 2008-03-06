@@ -1,5 +1,8 @@
 2008-03-06  Akira TAGOH  <tagoh@redhat.com>
 
+	* backends/qt/Makefile.am (noinst_HEADERS): missed qt-imsettings.h to
+	be distributed.
+
 	* src/factory.c (_child_setup): new function to setup PGID for child
 	process.
 	(_stop_process): send a signal to PGID instread of PID.

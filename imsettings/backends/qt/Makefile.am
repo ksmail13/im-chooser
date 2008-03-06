@@ -22,6 +22,10 @@ qt_im_settings_daemon_SOURCES =					\
 	qt-imsettings-glue.cpp					\
 	$(NULL)
 
+noinst_HEADERS =						\
+	qt-imsettings.h						\
+	$(NULL)
+
 main.cpp: qt-imsettings-glue.h
 
 qt-imsettings.cpp: moc_qt-imsettings.cpp
