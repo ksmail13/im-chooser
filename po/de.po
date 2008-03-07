@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: Desktop Input Method configuration tool\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-02-20 01:32-0700\n"
-"PO-Revision-Date: 2008-03-03 23:59+0100\n"
+"PO-Revision-Date: 2008-03-07 01:00+0100\n"
 "Last-Translator: Fabian Affolter <fab@fedoraproject.org>\n"
 "Language-Team: German Translation team <fedora-trans-de@redhat.com>\n"
 "MIME-Version: 1.0\n"
@@ -27,7 +27,7 @@ msgstr ""
 #: ../imsettings/src/factory.c:677
 #: ../imsettings/src/factory_info.c:644
 msgid "Replace the running settings daemon with new instance."
-msgstr "Ersetzt den laufenden Einstellungsdaemon mit einer neuen Instanz."
+msgstr "Ersetze den laufenden Einstellungsdämon durch eine neue Instanz."
 
 #: ../imsettings/backends/gconf/main.c:203
 #: ../imsettings/src/factory.c:704
@@ -44,7 +44,7 @@ msgstr "Sprache"
 
 #: ../imsettings/imsettings/imsettings-info.c:499
 msgid "A language to pull the information in."
-msgstr "Eine Sprache zum Einbeziehen der Information."
+msgstr "Eine Sprache zum Beziehen der Informationen."
 
 #: ../imsettings/imsettings/imsettings-info.c:504
 msgid "Filename"
@@ -52,7 +52,7 @@ msgstr "Dateiname"
 
 #: ../imsettings/imsettings/imsettings-info.c:505
 msgid "A filename referring to the IM information."
-msgstr "Ein Dateinamen bezogen auf die IM-Information."
+msgstr "Ein auf die IM-Informationen bezugnehmenden Dateinamen."
 
 #: ../imsettings/imsettings/imsettings-info.c:510
 msgid "GTK+ immodule"
@@ -84,7 +84,7 @@ msgstr "Flag ignorieren"
 
 #: ../imsettings/imsettings/imsettings-info.c:529
 msgid "A flag to not list up."
-msgstr "Ein Flag zum Nicht-Anzeigen."
+msgstr "Ein Flag zum Nichtaufführen."
 
 #: ../imsettings/imsettings/imsettings-info.c:534
 msgid "XIM server program name"
@@ -150,7 +150,7 @@ msgstr "System-Vorgabe"
 
 #: ../imsettings/imsettings/imsettings-info.c:583
 msgid "Whether or not IM is a system default."
-msgstr "Wenn auch oder nicht IM ist System-Standard."
+msgstr "Ob Sie wollen oder nicht IM ist ein System-Standard."
 
 #: ../imsettings/imsettings/imsettings-info.c:588
 msgid "User Default"
@@ -158,7 +158,7 @@ msgstr "Benutzer-Vorgabe"
 
 #: ../imsettings/imsettings/imsettings-info.c:589
 msgid "Whether or not IM is an user default."
-msgstr "Wenn auch oder nicht IM ist ein Benutzerstandard."
+msgstr "Ob Sie wollen oder nicht IM ist Benutzer-Standard."
 
 #: ../imsettings/imsettings/imsettings-info.c:594
 msgid "XIM"
@@ -166,7 +166,7 @@ msgstr "XIM"
 
 #: ../imsettings/imsettings/imsettings-info.c:595
 msgid "Whether or not IM is a XIM server."
-msgstr "Wenn auch oder nicht IM ist ein XIM-Server."
+msgstr "Ob Sie wollen oder nicht IM ist ein XIM-Server."
 
 #: ../imsettings/imsettings/imsettings-observer.c:255
 #, c-format
@@ -178,7 +178,6 @@ msgid "IM module name"
 msgstr "IM-Modulname"
 
 #: ../imsettings/imsettings/imsettings-observer.c:696
-#, fuzzy
 msgid "A target IM module name that to observe signals"
 msgstr "Ein Ziel-IM-Modulname zum Überwachen der Signale"
 
@@ -206,7 +205,7 @@ msgstr "Schnittstellen-Name für die Verbindung zu DBus"
 
 #: ../imsettings/imsettings/imsettings-request.c:181
 msgid "Locale"
-msgstr "Gebietsschema"
+msgstr "Gebietsschema "
 
 #: ../imsettings/imsettings/imsettings-request.c:182
 msgid "Locale to get the imsettings information"
@@ -337,7 +336,7 @@ msgstr "Neuladen...\n"
 #: ../imsettings/src/factory_info.c:187
 #, c-format
 msgid "Duplicate entry `%s' from %s. SHORT_DESC has to be unique."
-msgstr "Doppelter Eintrag `%s' von %s. SHORT_DESC hat einzigartig zu sein."
+msgstr "Doppelter Eintrag `%s' von %s. SHORT_DESC hat einmalig zu sein."
 
 #: ../imsettings/src/factory_info.c:445
 #: ../imsettings/src/factory_info.c:483
@@ -345,7 +344,7 @@ msgstr "Doppelter Eintrag `%s' von %s. SHORT_DESC hat einzigartig zu sein."
 #: ../imsettings/src/factory_info.c:517
 #, c-format
 msgid "Timed out to initialize %s services."
-msgstr "Zeit zum Initialisieren des %s-Dienstes abgelaufen."
+msgstr "Zeit zum Initialisieren der %s-Dienste abgelaufen."
 
 #: ../imsettings/src/factory_info.c:468
 msgid "No input methods available on your system."
@@ -355,12 +354,12 @@ msgstr "Keine Eingabemethoden verfügbar auf Ihrem System."
 #: ../imsettings/utils/imsettings-restart.c:43
 #: ../imsettings/utils/imsettings-stop.c:42
 msgid "Force reloading the configuration, including restarting the process."
-msgstr "Forciert das Neuladen der Konfiguration, inklusive den neustart des Prozess."
+msgstr "Neuladen der Konfiguration forcieren, inklusive neustarten des Prozesses."
 
 #: ../imsettings/utils/imsettings-restart.c:44
 #: ../imsettings/utils/imsettings-stop.c:43
 msgid "Do not update .xinputrc."
-msgstr "Aktualisiere .xinputrc nicht."
+msgstr ".xinputrc nicht aktualisieren."
 
 #: ../imsettings/utils/imsettings-stop.c:80
 #, c-format
@@ -370,7 +369,7 @@ msgstr "Gestoppt %s\n"
 #: ../imsettings/utils/imsettings-stop.c:82
 #, c-format
 msgid "Failed to stop IM process `%s'\n"
-msgstr "Stoppen des IM-Prozesses fehlgeschlagen `%s'\n"
+msgstr "Stoppen des IM-Prozess fehlgeschlagen `%s'\n"
 
 #: ../src/im-chooser-simple.c:288
 #, c-format
