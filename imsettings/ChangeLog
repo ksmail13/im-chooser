@@ -1,3 +1,7 @@
+2008-03-07  Akira TAGOH  <tagoh@redhat.com>
+
+	* imsettings/imsettings-request.h: Fix a typo.
+
 2008-03-06  Akira TAGOH  <tagoh@redhat.com>
 
 	* backends/qt/Makefile.am (noinst_HEADERS): missed qt-imsettings.h to
