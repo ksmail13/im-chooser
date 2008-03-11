@@ -1,5 +1,6 @@
 imsettings/backends/gconf/main.c
 imsettings/imsettings/imsettings-info.c
+imsettings/imsettings/imsettings-info-private.h
 imsettings/imsettings/imsettings-observer.c
 imsettings/imsettings/imsettings-request.c
 imsettings/src/factory.c

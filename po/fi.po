@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: im-chooser 0.3.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-02-19 19:12+0900\n"
+"POT-Creation-Date: 2008-03-11 21:15+0900\n"
 "PO-Revision-Date: 2008-02-03 23:17+0200\n"
 "Last-Translator: Ville-Pekka Vainio <vpivaini@cs.helsinki.fi>\n"
 "Language-Team: Finnish <laatu@lokalisointi.org>\n"
@@ -16,179 +16,187 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../imsettings/backends/gconf/main.c:181
-#: ../imsettings/imsettings/imsettings-observer.c:690
-#: ../imsettings/src/factory.c:667 ../imsettings/src/factory_info.c:564
+#: ../imsettings/backends/gconf/main.c:184
+#: ../imsettings/imsettings/imsettings-observer.c:702
+#: ../imsettings/src/factory.c:690 ../imsettings/src/factory_info.c:645
 msgid "Replace the running settings daemon with new instance."
 msgstr "Korvaa suoritettavana oleva asetustaustaprosessi uudella instanssilla."
 
-#: ../imsettings/backends/gconf/main.c:203 ../imsettings/src/factory.c:694
-#: ../imsettings/src/factory_info.c:585
+#: ../imsettings/backends/gconf/main.c:206 ../imsettings/src/factory.c:717
+#: ../imsettings/src/factory_info.c:667
 #: ../imsettings/utils/imsettings-reload.c:63
-#: ../imsettings/utils/imsettings-restart.c:64
-#: ../imsettings/utils/imsettings-stop.c:62
+#: ../imsettings/utils/imsettings-restart.c:65
+#: ../imsettings/utils/imsettings-stop.c:63
 msgid "Unknown error in parsing the command lines."
 msgstr "Tuntematon virhe komentorivejä jäsennettäessä."
 
-#: ../imsettings/imsettings/imsettings-info.c:440
+#: ../imsettings/imsettings/imsettings-info.c:498
 msgid "Language"
 msgstr "Kieli"
 
-#: ../imsettings/imsettings/imsettings-info.c:441
+#: ../imsettings/imsettings/imsettings-info.c:499
 msgid "A language to pull the information in."
 msgstr "Kieli jonka tiedot haetaan."
 
-#: ../imsettings/imsettings/imsettings-info.c:446
+#: ../imsettings/imsettings/imsettings-info.c:504
 msgid "Filename"
 msgstr "Tiedostonimi"
 
-#: ../imsettings/imsettings/imsettings-info.c:447
+#: ../imsettings/imsettings/imsettings-info.c:505
 msgid "A filename referring to the IM information."
 msgstr "Syöttömenetelmätietoihin viittaavan tiedoston nimi."
 
-#: ../imsettings/imsettings/imsettings-info.c:452
+#: ../imsettings/imsettings/imsettings-info.c:510
 msgid "GTK+ immodule"
 msgstr "GTK+-syöttömenetelmämoduuli"
 
-#: ../imsettings/imsettings/imsettings-info.c:453
+#: ../imsettings/imsettings/imsettings-info.c:511
 msgid "A module name used for GTK+"
 msgstr "GTK+:n käyttämän moduulin nimi."
 
-#: ../imsettings/imsettings/imsettings-info.c:458
+#: ../imsettings/imsettings/imsettings-info.c:516
 msgid "Qt immodule"
 msgstr "Qt-syöttömenetelmämoduuli"
 
-#: ../imsettings/imsettings/imsettings-info.c:459
+#: ../imsettings/imsettings/imsettings-info.c:517
 msgid "A module name used for Qt"
 msgstr "Qt:n käyttämän moduulin nimi"
 
-#: ../imsettings/imsettings/imsettings-info.c:464
+#: ../imsettings/imsettings/imsettings-info.c:522
 msgid "XIM name"
 msgstr "XIM-nimi"
 
-#: ../imsettings/imsettings/imsettings-info.c:465
+#: ../imsettings/imsettings/imsettings-info.c:523
 msgid "XIM server name"
 msgstr "XIM-palvelimen nimi"
 
-#: ../imsettings/imsettings/imsettings-info.c:470
+#: ../imsettings/imsettings/imsettings-info.c:528
 msgid "Ignore flag"
 msgstr "Ohituslippu"
 
-#: ../imsettings/imsettings/imsettings-info.c:471
+#: ../imsettings/imsettings/imsettings-info.c:529
 msgid "A flag to not list up."
 msgstr ""
 
-#: ../imsettings/imsettings/imsettings-info.c:476
+#: ../imsettings/imsettings/imsettings-info.c:534
 msgid "XIM server program name"
 msgstr "XIM-palvelinohjelman nimi"
 
-#: ../imsettings/imsettings/imsettings-info.c:477
+#: ../imsettings/imsettings/imsettings-info.c:535
 msgid "XIM server program to be run"
 msgstr "Suoritettavan XIM-palvelinohjelman nimi"
 
-#: ../imsettings/imsettings/imsettings-info.c:482
+#: ../imsettings/imsettings/imsettings-info.c:540
 msgid "XIM server program's options"
 msgstr "XIM-palvelinohjelman asetukset"
 
-#: ../imsettings/imsettings/imsettings-info.c:483
+#: ../imsettings/imsettings/imsettings-info.c:541
 msgid "Command line options for XIM server program"
 msgstr "XIM-palvelinohjelman komentorivivalitsimet"
 
-#: ../imsettings/imsettings/imsettings-info.c:488
+#: ../imsettings/imsettings/imsettings-info.c:546
 #, fuzzy
 msgid "Preference program name"
 msgstr "Aseta ohjelman nimi"
 
-#: ../imsettings/imsettings/imsettings-info.c:489
+#: ../imsettings/imsettings/imsettings-info.c:547
 #, fuzzy
 msgid "Preference program to be run"
 msgstr "Suoritettavan komennon kuvake."
 
-#: ../imsettings/imsettings/imsettings-info.c:494
+#: ../imsettings/imsettings/imsettings-info.c:552
 #, fuzzy
 msgid "Preference program's options"
 msgstr "Muuta ohjelman asetuksia"
 
-#: ../imsettings/imsettings/imsettings-info.c:495
+#: ../imsettings/imsettings/imsettings-info.c:553
 msgid "Command line options for preference program"
 msgstr ""
 
-#: ../imsettings/imsettings/imsettings-info.c:500
+#: ../imsettings/imsettings/imsettings-info.c:558
 #, fuzzy
 msgid "Auxiliary program name"
 msgstr "Aseta ohjelman nimi"
 
-#: ../imsettings/imsettings/imsettings-info.c:501
+#: ../imsettings/imsettings/imsettings-info.c:559
 #, fuzzy
 msgid "Auxiliary program to be run"
 msgstr "Suoritettavan komennon kuvake."
 
-#: ../imsettings/imsettings/imsettings-info.c:506
+#: ../imsettings/imsettings/imsettings-info.c:564
 #, fuzzy
 msgid "Auxiliary program's options"
 msgstr "Muuta ohjelman asetuksia"
 
-#: ../imsettings/imsettings/imsettings-info.c:507
+#: ../imsettings/imsettings/imsettings-info.c:565
 msgid "Command line options for auxiliary program"
 msgstr ""
 
-#: ../imsettings/imsettings/imsettings-info.c:512
-#: ../imsettings/imsettings/imsettings-info.c:513
+#: ../imsettings/imsettings/imsettings-info.c:570
+#: ../imsettings/imsettings/imsettings-info.c:571
 msgid "Short Description"
 msgstr "Lyhyt kuvaus"
 
-#: ../imsettings/imsettings/imsettings-info.c:518
-#: ../imsettings/imsettings/imsettings-info.c:519
+#: ../imsettings/imsettings/imsettings-info.c:576
+#: ../imsettings/imsettings/imsettings-info.c:577
 msgid "Long Description"
 msgstr "Pitkä kuvaus"
 
-#: ../imsettings/imsettings/imsettings-info.c:524
+#: ../imsettings/imsettings/imsettings-info.c:582
 msgid "System Default"
 msgstr "Järjestelmän oletus"
 
-#: ../imsettings/imsettings/imsettings-info.c:525
+#: ../imsettings/imsettings/imsettings-info.c:583
 msgid "Whether or not IM is a system default."
 msgstr "Onko syöttömenetelmä järjestelmän oletus."
 
-#: ../imsettings/imsettings/imsettings-info.c:530
+#: ../imsettings/imsettings/imsettings-info.c:588
 msgid "User Default"
 msgstr "Käyttäjän oletus"
 
-#: ../imsettings/imsettings/imsettings-info.c:531
+#: ../imsettings/imsettings/imsettings-info.c:589
 msgid "Whether or not IM is an user default."
 msgstr "Onko syöttömenetelmä käyttäjän oletus."
 
-#: ../imsettings/imsettings/imsettings-info.c:536
+#: ../imsettings/imsettings/imsettings-info.c:594
 msgid "XIM"
 msgstr "XIM"
 
-#: ../imsettings/imsettings/imsettings-info.c:537
+#: ../imsettings/imsettings/imsettings-info.c:595
 msgid "Whether or not IM is a XIM server."
 msgstr "Onko syöttömenetelmä XIM-palvelin."
 
-#: ../imsettings/imsettings/imsettings-observer.c:245
+#: ../imsettings/imsettings/imsettings-info-private.h:40
+msgid "User Specific"
+msgstr "Käyttäjäkohtainen"
+
+#: ../imsettings/imsettings/imsettings-info-private.h:41
+msgid "xinputrc was modified by the user"
+msgstr "Käyttäjä on muokannut tiedostoa xinputrc"
+
+#: ../imsettings/imsettings/imsettings-observer.c:255
 #, c-format
 msgid "Invalid IM module type: %d"
 msgstr "Virheellinen syöttömenetelmämoduulityyppi: %d"
 
-#: ../imsettings/imsettings/imsettings-observer.c:683
+#: ../imsettings/imsettings/imsettings-observer.c:695
 msgid "IM module name"
 msgstr "Syöttömenetelmämoduulin nimi"
 
-#: ../imsettings/imsettings/imsettings-observer.c:684
+#: ../imsettings/imsettings/imsettings-observer.c:696
 msgid "A target IM module name that to observe signals"
 msgstr ""
 
-#: ../imsettings/imsettings/imsettings-observer.c:689
+#: ../imsettings/imsettings/imsettings-observer.c:701
 msgid "Replace"
 msgstr "Korvaa"
 
-#: ../imsettings/imsettings/imsettings-observer.c:695
+#: ../imsettings/imsettings/imsettings-observer.c:707
 #: ../imsettings/imsettings/imsettings-request.c:175
 msgid "DBus connection"
 msgstr "DBus-yhteys"
 
-#: ../imsettings/imsettings/imsettings-observer.c:696
+#: ../imsettings/imsettings/imsettings-observer.c:708
 #: ../imsettings/imsettings/imsettings-request.c:176
 #, fuzzy
 msgid "An object to be a DBus connection"
@@ -225,8 +233,8 @@ msgstr "Maa-asetusto jonka syöttömenetelmäasetustiedot haetaan"
 #: ../imsettings/imsettings/imsettings-request.c:486
 #: ../imsettings/imsettings/imsettings-request.c:506
 #: ../imsettings/imsettings/imsettings-request.c:526
-#: ../imsettings/imsettings/imsettings-request.c:546
-#: ../imsettings/imsettings/imsettings-request.c:584
+#: ../imsettings/imsettings/imsettings-request.c:552
+#: ../imsettings/imsettings/imsettings-request.c:602
 #, c-format
 msgid ""
 "Failed to invoke a method `%s':\n"
@@ -235,107 +243,118 @@ msgstr ""
 "Metodin ”%s” kutsuminen epäonnistui:\n"
 "  %s"
 
-#: ../imsettings/imsettings/imsettings-request.c:648
+#: ../imsettings/imsettings/imsettings-request.c:672
 #, fuzzy, c-format
 msgid ""
 "Failed to invoke a method `%s' on %s:\n"
 "  %s"
 msgstr "Tiedoston \"%s\" oikeuksien asettaminen epäonnistui: %s"
 
-#: ../imsettings/src/factory.c:133
+#: ../imsettings/src/factory.c:136
 #, c-format
 msgid "Failed to remove a pidfile: %s"
 msgstr "Pid-tiedoston poistaminen epäonnistui: %s"
 
-#: ../imsettings/src/factory.c:166
+#: ../imsettings/src/factory.c:178
 #, c-format
 msgid "Failed to open a pidfile: %s"
 msgstr "Pid-tiedoston avaaminen epäonnistui: %s"
 
-#: ../imsettings/src/factory.c:270
+#: ../imsettings/src/factory.c:282
 #, c-format
 msgid "Couldn't determine the pid for %s process."
 msgstr "Prosessin %s pidiä ei saatu selville."
 
-#: ../imsettings/src/factory.c:276
+#: ../imsettings/src/factory.c:288
 #, c-format
 msgid "Couldn't send a signal to the %s process successfully."
 msgstr "Signaalia ei voitu lähettää prosessille %s."
 
-#: ../imsettings/src/factory.c:302 ../imsettings/src/factory.c:577
+#: ../imsettings/src/factory.c:314 ../imsettings/src/factory.c:600
 #, c-format
 msgid "Failed to get a place of home directory."
 msgstr "Ei saatu selville kotihakemiston sijaintia."
 
-#: ../imsettings/src/factory.c:319
+#: ../imsettings/src/factory.c:331
 #, c-format
 msgid "Failed to revert the backup file: %s"
 msgstr "Varmuuskopiotiedoston palautus epäonnistui %s"
 
-#: ../imsettings/src/factory.c:331
+#: ../imsettings/src/factory.c:343
 #, c-format
 msgid "Failed to create a backup file: %s"
 msgstr "Varmuuskopiotiedostoa luominen epäonnistui: %s"
 
-#: ../imsettings/src/factory.c:340
+#: ../imsettings/src/factory.c:352
 #, c-format
 msgid "Failed to remove a .xinputrc file: %s"
 msgstr ".xinputrc-tiedoston poisto epäonnistui: %s"
 
-#: ../imsettings/src/factory.c:351
+#: ../imsettings/src/factory.c:363
 #, c-format
 msgid "Failed to make a symlink: %s"
 msgstr "Symbolisen linkin tekeminen epäonnistui: %s"
 
-#: ../imsettings/src/factory.c:623
+#: ../imsettings/src/factory.c:478 ../imsettings/src/factory_info.c:526
+#, c-format
+msgid "No such input method on your system: %s"
+msgstr "Järjestelmässä ei ole syöttömenetelmää: %s"
+
+#: ../imsettings/src/factory.c:498
+#, c-format
+msgid "No XIM server is available in %s"
+msgstr ""
+
+#: ../imsettings/src/factory.c:646
 msgid "X display name"
 msgstr "X-näytön nimi"
 
-#: ../imsettings/src/factory.c:624
+#: ../imsettings/src/factory.c:647
 msgid "X display name to use"
 msgstr "Käytettävän X-näytön nimi"
 
-#: ../imsettings/src/factory.c:668
+#: ../imsettings/src/factory.c:691
 msgid "X display to use"
 msgstr "Käytettävä X-näyttö"
 
-#: ../imsettings/src/factory.c:668
+#: ../imsettings/src/factory.c:691
 msgid "DISPLAY"
 msgstr "NÄYTTÖ"
 
 #. FIXME
-#: ../imsettings/src/factory.c:671
+#: ../imsettings/src/factory.c:694
 msgid "X screen to use"
 msgstr "Käytettävä X-ruutu"
 
-#: ../imsettings/src/factory.c:671
+#: ../imsettings/src/factory.c:694
 msgid "SCREEN"
 msgstr "RUUTU"
 
-#: ../imsettings/src/factory.c:702
+#: ../imsettings/src/factory.c:725
 #, c-format
 msgid "Failed to open a X display."
 msgstr "X-näytön avaaminen epäonnistui."
 
-#: ../imsettings/src/factory_info.c:123
+#: ../imsettings/src/factory_info.c:127
 #, c-format
 msgid "Reloading...\n"
 msgstr "Ladataan uudelleen...\n"
 
-#: ../imsettings/src/factory_info.c:181
+#: ../imsettings/src/factory_info.c:188
 #, c-format
 msgid "Duplicate entry `%s' from %s. SHORT_DESC has to be unique."
 msgstr ""
 
-#: ../imsettings/src/factory_info.c:410
+#: ../imsettings/src/factory_info.c:446 ../imsettings/src/factory_info.c:484
+#: ../imsettings/src/factory_info.c:500 ../imsettings/src/factory_info.c:518
+#, c-format
+msgid "Timed out to initialize %s services."
+msgstr ""
+
+#: ../imsettings/src/factory_info.c:469
 #, fuzzy, c-format
 msgid "No input methods available on your system."
 msgstr "Järjestelmässä ei ole syöttömenetelmiä."
-
-#: ../imsettings/src/factory_info.c:446
-#, c-format
-msgid "No such input method on your system: %s"
-msgstr "Järjestelmässä ei ole syöttömenetelmää: %s"
 
 #: ../imsettings/utils/imsettings-reload.c:42
 #: ../imsettings/utils/imsettings-restart.c:43
@@ -344,28 +363,76 @@ msgid "Force reloading the configuration, including restarting the process."
 msgstr ""
 "Pakota asetusten uudelleenlatus, käynnistetään myös prosessi uudelleen."
 
-#: ../src/im-chooser-simple.c:275
+#: ../imsettings/utils/imsettings-restart.c:44
+#: ../imsettings/utils/imsettings-stop.c:43
+msgid "Do not update .xinputrc."
+msgstr ""
+
+#: ../imsettings/utils/imsettings-stop.c:80
+#, c-format
+msgid "Stopped %s\n"
+msgstr ""
+
+#: ../imsettings/utils/imsettings-stop.c:82
+#, fuzzy, c-format
+msgid "Failed to stop IM process `%s'\n"
+msgstr "Pid-tiedoston avaaminen epäonnistui: %s"
+
+#: ../src/im-chooser-simple.c:145
+#, fuzzy
+msgid "Updating Input Method list"
+msgstr "Syöttömenetelmä"
+
+#: ../src/im-chooser-simple.c:309 ../src/im-chooser-simple.c:343
+#, fuzzy
+msgid "Failed to start Input Method"
+msgstr "Älä käytä syöttömenetelmää"
+
+#: ../src/im-chooser-simple.c:406
+#, fuzzy, c-format
+msgid "Starting Input Method - %s"
+msgstr "Syöttömenetelmä"
+
+#: ../src/im-chooser-simple.c:423
+#, fuzzy, c-format
+msgid "Stopping Input Method - %s"
+msgstr "Syöttömenetelmä"
+
+#: ../src/im-chooser-simple.c:543
+msgid "Parent Window"
+msgstr ""
+
+#: ../src/im-chooser-simple.c:544
+msgid "GtkWindow that points to the parent window"
+msgstr ""
+
+#. setup a progress window
+#: ../src/im-chooser-simple.c:584
+msgid "Work in progress..."
+msgstr ""
+
+#: ../src/im-chooser-simple.c:642
 #, c-format
 msgid "Use %s"
 msgstr "Käytä %s"
 
-#: ../src/im-chooser-simple.c:278
+#: ../src/im-chooser-simple.c:645
 msgid " (legacy)"
 msgstr "(vanhentunut)"
 
-#: ../src/im-chooser-simple.c:282
+#: ../src/im-chooser-simple.c:649
 msgid " (recommended)"
 msgstr "(suositeltu)"
 
-#: ../src/im-chooser-simple.c:392
+#: ../src/im-chooser-simple.c:761
 msgid "<b>Input Method</b>"
 msgstr "<b>Syöttömenetelmä</b>"
 
-#: ../src/im-chooser-simple.c:398
+#: ../src/im-chooser-simple.c:767
 msgid "_Enable input method feature"
 msgstr "Ota käyttöön syöttömenetelmä-ominaisuus"
 
-#: ../src/im-chooser-simple.c:405
+#: ../src/im-chooser-simple.c:774
 msgid ""
 "<small><i>Note: this change will not take effect until you next log in, "
 "except GTK+ applications.</i></small>"
@@ -373,7 +440,7 @@ msgstr ""
 "<small><i>Huomaa: GTK+-ohjelmia lukuun ottamatta tämän asetuksen muutokset "
 "tulevat voimaan vasta seuraavan kerran sisään kirjauduttaessa.</i></small>"
 
-#: ../src/im-chooser-simple.c:437
+#: ../src/im-chooser-simple.c:806
 msgid "Input Method _Preferences..."
 msgstr "Syöttömenetelmien _asetukset..."
 
@@ -446,9 +513,6 @@ msgstr "Syöttömenetelmä"
 #~ "Käytä suosimaasi syöttömenetelmää huolimatta siitä, mitä menetelmää "
 #~ "järjestelmä suosittelee."
 
-#~ msgid "_Do not use Input Method"
-#~ msgstr "Älä käytä syöttömenetelmää"
-
 #~ msgid ""
 #~ "Do not use Input Method no matter what language the desktop is running on."
 #~ msgstr ""
@@ -463,12 +527,6 @@ msgstr "Syöttömenetelmä"
 #~ msgstr ""
 #~ "Käytä X:n syöttömenetelmää joka tapauksessa. Työpöydän kielestä riippuu, "
 #~ "mikä syöttömenetelmä valitaan työpöytäistuntoon."
-
-#~ msgid "xinputrc was modified by the user"
-#~ msgstr "Käyttäjä on muokannut tiedostoa xinputrc"
-
-#~ msgid "User Specific"
-#~ msgstr "Käyttäjäkohtainen"
 
 #~ msgid "_Follow the system-wide configuration"
 #~ msgstr "_Seuraa järjestelmänlaajuisia asetuksia"

@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: im-chooser.trunk.pt_BR\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-02-20 01:32-0700\n"
+"POT-Creation-Date: 2008-03-11 21:15+0900\n"
 "PO-Revision-Date: 2008-02-26 21:32-0300\n"
 "Last-Translator: Frederico Madeira <fred@madeira.eng.br>\n"
 "Language-Team: Brazilian Portuguese <fedora-trans-pt_br@redhat.com>\n"
@@ -26,16 +26,16 @@ msgstr ""
 "X-Poedit-Country: BRAZIL\n"
 "X-Generator: KBabel 1.11.4\n"
 
-#: ../imsettings/backends/gconf/main.c:181
+#: ../imsettings/backends/gconf/main.c:184
 #: ../imsettings/imsettings/imsettings-observer.c:702
-#: ../imsettings/src/factory.c:677
-#: ../imsettings/src/factory_info.c:644
+#: ../imsettings/src/factory.c:690 ../imsettings/src/factory_info.c:645
 msgid "Replace the running settings daemon with new instance."
-msgstr "Substitua as configurações do daemon que estão rodando, por uma nova instância"
+msgstr ""
+"Substitua as configurações do daemon que estão rodando, por uma nova "
+"instância"
 
-#: ../imsettings/backends/gconf/main.c:203
-#: ../imsettings/src/factory.c:704
-#: ../imsettings/src/factory_info.c:666
+#: ../imsettings/backends/gconf/main.c:206 ../imsettings/src/factory.c:717
+#: ../imsettings/src/factory_info.c:667
 #: ../imsettings/utils/imsettings-reload.c:63
 #: ../imsettings/utils/imsettings-restart.c:65
 #: ../imsettings/utils/imsettings-stop.c:63
@@ -172,6 +172,14 @@ msgstr "XIM"
 msgid "Whether or not IM is a XIM server."
 msgstr "Não importa se o IM é um servidor XIM."
 
+#: ../imsettings/imsettings/imsettings-info-private.h:40
+msgid "User Specific"
+msgstr ""
+
+#: ../imsettings/imsettings/imsettings-info-private.h:41
+msgid "xinputrc was modified by the user"
+msgstr ""
+
 #: ../imsettings/imsettings/imsettings-observer.c:255
 #, c-format
 msgid "Invalid IM module type: %d"
@@ -248,109 +256,109 @@ msgstr ""
 "Falha ao chamar o método `%s' em %s:\n"
 "  %s"
 
-#: ../imsettings/src/factory.c:133
+#: ../imsettings/src/factory.c:136
 #, c-format
 msgid "Failed to remove a pidfile: %s"
 msgstr "Falha ao remover o pidfile: %s"
 
-#: ../imsettings/src/factory.c:166
+#: ../imsettings/src/factory.c:178
 #, c-format
 msgid "Failed to open a pidfile: %s"
 msgstr "Falha ao abrir o pidfile: %s"
 
-#: ../imsettings/src/factory.c:270
+#: ../imsettings/src/factory.c:282
 #, c-format
 msgid "Couldn't determine the pid for %s process."
 msgstr "Não foi possível determinar o pid para o processo %s"
 
-#: ../imsettings/src/factory.c:276
+#: ../imsettings/src/factory.c:288
 #, c-format
 msgid "Couldn't send a signal to the %s process successfully."
 msgstr "Não foi possível enviar com sucesso um sinal para o processo %s."
 
-#: ../imsettings/src/factory.c:302
-#: ../imsettings/src/factory.c:587
+#: ../imsettings/src/factory.c:314 ../imsettings/src/factory.c:600
+#, c-format
 msgid "Failed to get a place of home directory."
 msgstr "Falha ao localizar o diretório home."
 
-#: ../imsettings/src/factory.c:319
+#: ../imsettings/src/factory.c:331
 #, c-format
 msgid "Failed to revert the backup file: %s"
 msgstr "Falha ao reverter o arquivo de backup: %s"
 
-#: ../imsettings/src/factory.c:331
+#: ../imsettings/src/factory.c:343
 #, c-format
 msgid "Failed to create a backup file: %s"
 msgstr "Falha ao criar o arquivo de backup: %s"
 
-#: ../imsettings/src/factory.c:340
+#: ../imsettings/src/factory.c:352
 #, c-format
 msgid "Failed to remove a .xinputrc file: %s"
 msgstr "Falha ao remover o arquivo .xinputrc: %s"
 
-#: ../imsettings/src/factory.c:351
+#: ../imsettings/src/factory.c:363
 #, c-format
 msgid "Failed to make a symlink: %s"
 msgstr "Falha ao fazer uma ligação simbólica: %s"
 
-#: ../imsettings/src/factory.c:466
-#: ../imsettings/src/factory_info.c:525
+#: ../imsettings/src/factory.c:478 ../imsettings/src/factory_info.c:526
 #, c-format
 msgid "No such input method on your system: %s"
 msgstr "Não há nenhum método de inserção em seu sistema: %s"
 
-#: ../imsettings/src/factory.c:486
+#: ../imsettings/src/factory.c:498
 #, c-format
 msgid "No XIM server is available in %s"
 msgstr "Nenhum servidor XIM está disponível em %s"
 
-#: ../imsettings/src/factory.c:633
+#: ../imsettings/src/factory.c:646
 msgid "X display name"
 msgstr "nome da tela X"
 
-#: ../imsettings/src/factory.c:634
+#: ../imsettings/src/factory.c:647
 msgid "X display name to use"
 msgstr "nome da tela X a ser usada"
 
-#: ../imsettings/src/factory.c:678
+#: ../imsettings/src/factory.c:691
 msgid "X display to use"
 msgstr "Tela X a ser usada"
 
-#: ../imsettings/src/factory.c:678
+#: ../imsettings/src/factory.c:691
 msgid "DISPLAY"
 msgstr "TELA"
 
 #. FIXME
-#: ../imsettings/src/factory.c:681
+#: ../imsettings/src/factory.c:694
 msgid "X screen to use"
 msgstr "Tela X a ser usada"
 
-#: ../imsettings/src/factory.c:681
+#: ../imsettings/src/factory.c:694
 msgid "SCREEN"
 msgstr "TELA"
 
-#: ../imsettings/src/factory.c:712
+#: ../imsettings/src/factory.c:725
+#, c-format
 msgid "Failed to open a X display."
 msgstr "Fala ao abrir uma tela X."
 
-#: ../imsettings/src/factory_info.c:126
+#: ../imsettings/src/factory_info.c:127
+#, c-format
 msgid "Reloading...\n"
 msgstr "Recarregando...\n"
 
-#: ../imsettings/src/factory_info.c:187
+#: ../imsettings/src/factory_info.c:188
 #, c-format
 msgid "Duplicate entry `%s' from %s. SHORT_DESC has to be unique."
 msgstr "Entrada duplicada `%s' a partir  %s. SHORT_DESC tem que ser única."
 
-#: ../imsettings/src/factory_info.c:445
-#: ../imsettings/src/factory_info.c:483
-#: ../imsettings/src/factory_info.c:499
-#: ../imsettings/src/factory_info.c:517
+#: ../imsettings/src/factory_info.c:446 ../imsettings/src/factory_info.c:484
+#: ../imsettings/src/factory_info.c:500 ../imsettings/src/factory_info.c:518
 #, c-format
 msgid "Timed out to initialize %s services."
 msgstr "Tempo Esgotado para inicializar os serviços %s."
 
-#: ../imsettings/src/factory_info.c:468
+#: ../imsettings/src/factory_info.c:469
+#, c-format
 msgid "No input methods available on your system."
 msgstr "Nenhum método de entrada está disponível em seu sistema. "
 
@@ -375,42 +383,84 @@ msgstr "Parado %s\n"
 msgid "Failed to stop IM process `%s'\n"
 msgstr "Falha ao parar o processo IM `%s'\n"
 
-#: ../src/im-chooser-simple.c:288
+#: ../src/im-chooser-simple.c:145
+#, fuzzy
+msgid "Updating Input Method list"
+msgstr "Método de Entrada"
+
+#: ../src/im-chooser-simple.c:309 ../src/im-chooser-simple.c:343
+#, fuzzy
+msgid "Failed to start Input Method"
+msgstr "Método de Entrada"
+
+#: ../src/im-chooser-simple.c:406
+#, fuzzy, c-format
+msgid "Starting Input Method - %s"
+msgstr "Método de Entrada"
+
+#: ../src/im-chooser-simple.c:423
+#, fuzzy, c-format
+msgid "Stopping Input Method - %s"
+msgstr "Método de Entrada"
+
+#: ../src/im-chooser-simple.c:543
+msgid "Parent Window"
+msgstr ""
+
+#: ../src/im-chooser-simple.c:544
+msgid "GtkWindow that points to the parent window"
+msgstr ""
+
+#. setup a progress window
+#: ../src/im-chooser-simple.c:584
+msgid "Work in progress..."
+msgstr ""
+
+#: ../src/im-chooser-simple.c:642
 #, c-format
 msgid "Use %s"
 msgstr "Usar %s"
 
-#: ../src/im-chooser-simple.c:291
+#: ../src/im-chooser-simple.c:645
 msgid " (legacy)"
 msgstr " (legado)"
 
-#: ../src/im-chooser-simple.c:295
+#: ../src/im-chooser-simple.c:649
 msgid " (recommended)"
 msgstr " (recomendado)"
 
-#: ../src/im-chooser-simple.c:405
+#: ../src/im-chooser-simple.c:761
 msgid "<b>Input Method</b>"
 msgstr "<b>Método de Entrada</b>"
 
-#: ../src/im-chooser-simple.c:411
+#: ../src/im-chooser-simple.c:767
 msgid "_Enable input method feature"
 msgstr "Habilitar recurso do método de  entrada"
 
-#: ../src/im-chooser-simple.c:418
-msgid "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications.</i></small>"
-msgstr "<small><i>Nota: Esta alteração não terá efeito até o seu próximo login, com exceção de aplicações GTK+.</i></small>"
+#: ../src/im-chooser-simple.c:774
+msgid ""
+"<small><i>Note: this change will not take effect until you next log in, "
+"except GTK+ applications.</i></small>"
+msgstr ""
+"<small><i>Nota: Esta alteração não terá efeito até o seu próximo login, com "
+"exceção de aplicações GTK+.</i></small>"
 
-#: ../src/im-chooser-simple.c:450
+#: ../src/im-chooser-simple.c:806
 msgid "Input Method _Preferences..."
 msgstr "Preferências do Método de Entrada..."
 
 #: ../src/main.c:55
-msgid "<span weight=\"bold\" size=\"larger\">No input method is available</span>"
-msgstr "<span weight=\"bold\" size=\"larger\">Nenhum método de entrada disponível</span>"
+msgid ""
+"<span weight=\"bold\" size=\"larger\">No input method is available</span>"
+msgstr ""
+"<span weight=\"bold\" size=\"larger\">Nenhum método de entrada disponível</"
+"span>"
 
 #: ../src/main.c:58
 msgid "Please install any input methods before running if you like."
-msgstr "Por favor, instale quaisquer métodos de entradas antes de executar, se você quiser."
+msgstr ""
+"Por favor, instale quaisquer métodos de entradas antes de executar, se você "
+"quiser."
 
 #: ../src/main.c:153
 msgid "IM Chooser - Input Method configuration tool"
@@ -421,8 +471,11 @@ msgid "_Log Out"
 msgstr "Logoff"
 
 #: ../src/im-chooser.desktop.in.in.h:1
-msgid "Choose the input method to be used or disable the input method usage on the desktop"
-msgstr "Escolha ou desabilite o método de entrada a ser usado no ambiente de trabalho"
+msgid ""
+"Choose the input method to be used or disable the input method usage on the "
+"desktop"
+msgstr ""
+"Escolha ou desabilite o método de entrada a ser usado no ambiente de trabalho"
 
 #: ../src/im-chooser.desktop.in.in.h:2
 msgid "Input Method"
@@ -434,18 +487,20 @@ msgstr "Método de Entrada"
 #~ msgstr ""
 #~ "O arquivo de configuração apropriado não foi encontrado. Talvez a "
 #~ "instalação falhou: %s"
+
 #~ msgid "No system default IM found at the pre-search phase. Adding..."
 #~ msgstr ""
 #~ "Nenhum sistema padrão de IM foi encontrado na fase de pré-pesquisa. "
 #~ "Adicionando..."
+
 #~ msgid ""
 #~ "Looking up the different object with the same key. it may happens due to "
 #~ "the un-unique short description. replacing..."
 #~ msgstr ""
 #~ "Procurando pelo objeto diferente com a mesma chave. Pode acontecer devido "
 #~ "à descrição curta não única. Substituindo..."
+
 #~ msgid "No user default IM found at the pre-search phase. Adding..."
 #~ msgstr ""
 #~ "Nenhum usuário padrão do IM foi encontrado na fase de pré-pesquisa. "
 #~ "Adicionando..."
-
