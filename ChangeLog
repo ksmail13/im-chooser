@@ -1,5 +1,8 @@
 2008-03-11  Akira TAGOH  <tagoh@redhat.com>
 
+	* data/none.in.in (IMSETTINGS_IGNORE_ME): Use new one instead of
+	IM_CHOOSER_IGNORE_ME which is obsolete.
+
 	* src/im-chooser-simple.c (im_chooser_simple_destroy_idle_cb): new.
 	(im_chooser_simple_enable_im_on_toggled): serialize actions to work on
 	imsettings asynchronously.
