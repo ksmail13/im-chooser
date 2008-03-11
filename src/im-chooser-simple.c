@@ -39,6 +39,29 @@ enum {
 	LAST_SIGNAL
 };
 
+enum {
+	PROP_0,
+	PROP_PARENT_WINDOW,
+	LAST_PROP
+};
+
+typedef enum {
+	ACTION_IM_START,
+	ACTION_IM_STARTING,
+	ACTION_IM_STOP,
+	ACTION_IM_STOPPING,
+	ACTION_IM_RESTART,
+	ACTION_IM_UPDATE_PREFS,
+	ACTION_COMPLETE,
+	ACTION_END
+} IMChooserSimpleAction;
+
+typedef struct _IMChooserSimpleActionData {
+	IMChooserSimpleAction action;
+	gpointer              data;
+	GDestroyNotify        destroy;
+} IMChooserSimpleActionData;
+
 struct _IMChooserSimpleClass {
 	GObjectClass parent_class;
 
@@ -54,6 +77,8 @@ struct _IMChooserSimple {
 	GtkWidget          *widget_scrolled;
 	GtkWidget          *widget_im_list;
 	GtkWidget          *button_im_config;
+	GtkWidget          *progress;
+	GtkWidget          *label;
 	IMSettingsRequest  *imsettings;
 	IMSettingsRequest  *imsettings_info;
 	gchar             **im_list;
@@ -62,10 +87,21 @@ struct _IMChooserSimple {
 	gchar              *default_im;
 	gboolean            initialized;
 	DBusConnection     *conn;
+	GQueue             *actionq;
+	gboolean            ignore_actions;
+	guint               idle_source;
 };
 
 
-static void _im_chooser_simple_update_im_list(IMChooserSimple *im);
+static IMChooserSimpleActionData *_action_new                      (IMChooserSimpleAction      act,
+                                                                    gpointer                   data,
+								    GDestroyNotify             func);
+static void                       _action_free                     (IMChooserSimpleActionData *a);
+static void                       im_chooser_simple_show_progress  (IMChooserSimple           *im,
+								    const gchar               *message,
+								    ...);
+static gboolean                   im_chooser_simple_action_loop    (gpointer                   data);
+static void                       _im_chooser_simple_update_im_list(IMChooserSimple           *im);
 
 
 static GObjectClass *parent_class = NULL;
@@ -76,12 +112,20 @@ static guint         signals[LAST_SIGNAL] = { 0 };
  * signal callback functions
  */
 static void
+im_chooser_simple_destroy_idle_cb(gpointer data)
+{
+	IMChooserSimple *im = IM_CHOOSER_SIMPLE (data);
+
+	im->idle_source = 0;
+}
+
+static void
 im_chooser_simple_enable_im_on_toggled(GtkToggleButton *button,
 				       gpointer         user_data)
 {
 	gboolean flag;
 	IMChooserSimple *im;
-	gchar *prog, *args;
+	IMChooserSimpleActionData *a;
 
 	g_return_if_fail (GTK_IS_TOGGLE_BUTTON (button));
 	g_return_if_fail (IM_IS_CHOOSER_SIMPLE (user_data));
@@ -98,6 +142,7 @@ im_chooser_simple_enable_im_on_toggled(GtkToggleButton *button,
 		gchar *name;
 
 		if (im->initialized) {
+			im_chooser_simple_show_progress(im, _("Updating Input Method list"));
 			model = gtk_tree_view_get_model(GTK_TREE_VIEW (im->widget_im_list));
 			gtk_list_store_clear(GTK_LIST_STORE (model));
 			g_strfreev(im->im_list);
@@ -108,39 +153,42 @@ im_chooser_simple_enable_im_on_toggled(GtkToggleButton *button,
 		if (gtk_tree_selection_get_selected(selection, &model, &iter)) {
 			gtk_tree_model_get(model, &iter, 1, &name, -1);
 			if (im->current_im) {
-				if (im->initialized)
-					imsettings_request_stop_im(im->imsettings,
-								   im->current_im,
-								   TRUE,
-								   TRUE);
-				g_free(im->current_im);
+				if (im->initialized) {
+					a = _action_new(ACTION_IM_STOP,
+							g_strdup(im->current_im),
+							g_free);
+					g_queue_push_tail(im->actionq, a);
+				}
 			}
-			im->current_im = g_strdup(name);
 			if (im->initialized) {
-				imsettings_request_start_im(im->imsettings,
-							    im->current_im,
-							    TRUE);
+				a = _action_new(ACTION_IM_START,
+						g_strdup(name),
+						g_free);
+				g_queue_push_tail(im->actionq, a);
 			}
 		}
 	} else {
 		if (im->current_im) {
-			if (im->initialized)
-				imsettings_request_stop_im(im->imsettings,
-							   im->current_im,
-							   TRUE,
-							   TRUE);
+			if (im->initialized) {
+				a = _action_new(ACTION_IM_STOP,
+						g_strdup(im->current_im),
+						g_free);
+				g_queue_push_tail(im->actionq, a);
+			}
 			g_free(im->current_im);
 		}
 		im->current_im = NULL;
 	}
-	if (im->current_im &&
-	    imsettings_request_get_preferences_program(im->imsettings_info, im->current_im, &prog, &args) &&
-	    g_file_test(prog, G_FILE_TEST_EXISTS | G_FILE_TEST_IS_EXECUTABLE))
-		gtk_widget_set_sensitive(im->button_im_config, flag);
-	else
-		gtk_widget_set_sensitive(im->button_im_config, FALSE);
+	a = _action_new(ACTION_IM_UPDATE_PREFS, GINT_TO_POINTER (flag), NULL);
+	g_queue_push_tail(im->actionq, a);
+	a = _action_new(ACTION_COMPLETE, NULL, NULL);
+	g_queue_push_tail(im->actionq, a);
 
-	g_signal_emit(im, signals[CHANGED], 0, NULL);
+	if (im->idle_source == 0)
+		im->idle_source = g_idle_add_full(G_PRIORITY_DEFAULT_IDLE,
+						  im_chooser_simple_action_loop,
+						  im,
+						  im_chooser_simple_destroy_idle_cb);
 }
 
 static void
@@ -150,7 +198,8 @@ im_chooser_simple_im_list_on_changed(GtkTreeSelection *selection,
 	IMChooserSimple *im = user_data;
 	GtkTreeModel *model;
 	GtkTreeIter iter;
-	gchar *name, *prog, *args;
+	gchar *name;
+	IMChooserSimpleActionData *a;
 
 	if (im->initialized == FALSE)
 		return;
@@ -159,21 +208,26 @@ im_chooser_simple_im_list_on_changed(GtkTreeSelection *selection,
 		gtk_tree_model_get(model, &iter, 1, &name, -1);
 		if (im->current_im &&
 		    strcmp(im->current_im, name) != 0) {
-			imsettings_request_stop_im(im->imsettings,
-						   im->current_im,
-						   TRUE,
-						   TRUE);
-			g_free(im->current_im);
-			im->current_im = g_strdup(name);
-			imsettings_request_start_im(im->imsettings,
-						    im->current_im,
-						    TRUE);
-			if (imsettings_request_get_preferences_program(im->imsettings_info, name, &prog, &args) &&
-			    g_file_test(prog, G_FILE_TEST_EXISTS | G_FILE_TEST_IS_EXECUTABLE))
-				gtk_widget_set_sensitive(im->button_im_config, TRUE);
-			else
-				gtk_widget_set_sensitive(im->button_im_config, FALSE);
-			g_signal_emit(im, signals[CHANGED], 0, NULL);
+			a = _action_new(ACTION_IM_STOP,
+					g_strdup(im->current_im),
+					g_free);
+			g_queue_push_tail(im->actionq, a);
+			a = _action_new(ACTION_IM_START,
+					g_strdup(name),
+					g_free);
+			g_queue_push_tail(im->actionq, a);
+			a = _action_new(ACTION_IM_UPDATE_PREFS,
+					GINT_TO_POINTER (TRUE),
+					NULL);
+			g_queue_push_tail(im->actionq, a);
+			a = _action_new(ACTION_COMPLETE, NULL, NULL);
+			g_queue_push_tail(im->actionq, a);
+
+			if (im->idle_source == 0)
+				im->idle_source = g_idle_add_full(G_PRIORITY_DEFAULT_IDLE,
+								  im_chooser_simple_action_loop,
+								  im,
+								  im_chooser_simple_destroy_idle_cb);
 		}
 	}
 }
@@ -201,6 +255,262 @@ im_chooser_simple_prefs_button_on_clicked(GtkButton *button,
 /*
  * private functions
  */
+static IMChooserSimpleActionData *
+_action_new(IMChooserSimpleAction act,
+	    gpointer              data,
+	    GDestroyNotify        func)
+{
+	IMChooserSimpleActionData *retval = g_new0(IMChooserSimpleActionData, 1);
+
+	retval->action = act;
+	retval->data = data;
+	retval->destroy = func;
+
+	return retval;
+}
+
+static void
+_action_free(IMChooserSimpleActionData *a)
+{
+	if (a->destroy)
+		a->destroy(a->data);
+	g_free(a);
+}
+
+static gint
+_action_compare(gconstpointer a,
+		gconstpointer b)
+{
+	const IMChooserSimpleActionData *aa = a;
+	IMChooserSimpleAction ab = GPOINTER_TO_INT (b);
+
+	return aa->action - ab;
+}
+
+static void
+im_chooser_simple_im_start_cb(DBusGProxy *proxy,
+			      gboolean    ret,
+			      GError     *error,
+			      gpointer    data)
+{
+	IMChooserSimple *im = data;
+	GList *l;
+
+	if (ret) {
+	} else {
+		g_free(im->current_im);
+		im->current_im = NULL;
+
+		if (error) {
+			GtkWidget *dlg = gtk_message_dialog_new(GTK_WINDOW (im->progress),
+								GTK_DIALOG_MODAL | GTK_DIALOG_NO_SEPARATOR,
+								GTK_MESSAGE_ERROR,
+								GTK_BUTTONS_OK,
+								_("Failed to start Input Method"));
+
+			gtk_message_dialog_format_secondary_text(GTK_MESSAGE_DIALOG (dlg),
+								 error->message);
+			gtk_dialog_run(GTK_DIALOG (dlg));
+			im->ignore_actions = TRUE;
+		}
+	}
+
+	l = g_queue_find_custom(im->actionq,
+				GINT_TO_POINTER (ACTION_IM_STARTING),
+				_action_compare);
+	if (l)
+		g_queue_delete_link(im->actionq, l);
+}
+
+static void
+im_chooser_simple_im_stop_cb(DBusGProxy *proxy,
+			     gboolean    ret,
+			     GError     *error,
+			     gpointer    data)
+{
+	IMChooserSimple *im = data;
+	GList *l;
+
+	if (ret) {
+		g_free(im->current_im);
+		im->current_im = NULL;
+	} else {
+		if (error) {
+			GtkWidget *dlg = gtk_message_dialog_new(GTK_WINDOW (im->progress),
+								GTK_DIALOG_MODAL | GTK_DIALOG_NO_SEPARATOR,
+								GTK_MESSAGE_ERROR,
+								GTK_BUTTONS_OK,
+								_("Failed to start Input Method"));
+
+			gtk_message_dialog_format_secondary_text(GTK_MESSAGE_DIALOG (dlg),
+								 error->message);
+			gtk_dialog_run(GTK_DIALOG (dlg));
+			im->ignore_actions = TRUE;
+		}
+	}
+
+	l = g_queue_find_custom(im->actionq,
+				GINT_TO_POINTER (ACTION_IM_STOPPING),
+				_action_compare);
+	if (l)
+		g_queue_delete_link(im->actionq, l);
+}
+
+static void
+im_chooser_simple_show_progress(IMChooserSimple *im,
+				const gchar     *message,
+				...)
+{
+	va_list args;
+	gchar *s;
+
+	if (message) {
+		gtk_widget_set_sensitive(im->widget, FALSE);
+
+		va_start(args, message);
+
+		s = g_strdup_vprintf(message, args);
+		gtk_label_set_markup(GTK_LABEL (im->label), s);
+		g_free(s);
+
+		va_end(args);
+
+		gtk_window_set_modal(GTK_WINDOW (im->progress), TRUE);
+		gtk_window_set_position(GTK_WINDOW (im->progress),
+					GTK_WIN_POS_CENTER_ON_PARENT);
+		gtk_widget_show(im->progress);
+	} else {
+		gtk_window_set_modal(GTK_WINDOW (im->progress), FALSE);
+		gtk_widget_hide(im->progress);
+
+		gtk_widget_set_sensitive(im->widget, TRUE);
+	}
+
+	while (g_main_context_pending(NULL))
+		g_main_context_iteration(NULL, FALSE);
+}
+
+static gboolean
+im_chooser_simple_action_loop(gpointer data)
+{
+	IMChooserSimple *im = data;
+	IMChooserSimpleActionData *a;
+	gboolean retval = FALSE;
+	gchar *prog, *args;
+
+	if (!g_queue_is_empty(im->actionq)) {
+		a = g_queue_pop_head(im->actionq);
+		switch (a->action) {
+		    case ACTION_IM_START:
+			    if (im->initialized && !im->ignore_actions) {
+				    im_chooser_simple_show_progress(im, _("Starting Input Method - %s"), a->data);
+				    a->action = ACTION_IM_STARTING;
+				    g_queue_push_head(im->actionq, a);
+				    g_free(im->current_im);
+				    im->current_im = g_strdup(a->data);
+				    imsettings_request_start_im_async(im->imsettings,
+								      a->data,
+								      TRUE,
+								      im_chooser_simple_im_start_cb,
+								      im);
+			    } else {
+				    /* just ignore an action */
+				    _action_free(a);
+			    }
+			    break;
+		    case ACTION_IM_STOP:
+			    if (im->initialized && !im->ignore_actions) {
+				    im_chooser_simple_show_progress(im, _("Stopping Input Method - %s"), a->data);
+				    a->action = ACTION_IM_STOPPING;
+				    g_queue_push_head(im->actionq, a);
+				    imsettings_request_stop_im_async(im->imsettings,
+								     a->data,
+								     TRUE,
+								     TRUE,
+								     im_chooser_simple_im_stop_cb,
+								     im);
+			    } else {
+				    /* just ignore an action */
+				    _action_free(a);
+			    }
+			    break;
+		    case ACTION_IM_RESTART:
+			    break;
+		    case ACTION_IM_STARTING:
+		    case ACTION_IM_STOPPING:
+			    if (!im->ignore_actions) {
+				    /* requeue to wait for finishing an action */
+				    g_queue_push_head(im->actionq, a);
+			    } else {
+				    _action_free(a);
+			    }
+			    break;
+		    case ACTION_IM_UPDATE_PREFS:
+			    if (im->current_im && !im->ignore_actions &&
+				imsettings_request_get_preferences_program(im->imsettings_info,
+									   im->current_im,
+									   &prog,
+									   &args) &&
+				g_file_test(prog,
+					    G_FILE_TEST_EXISTS |
+					    G_FILE_TEST_IS_EXECUTABLE))
+				    gtk_widget_set_sensitive(im->button_im_config,
+							     GPOINTER_TO_INT (a->data));
+			    else
+				    gtk_widget_set_sensitive(im->button_im_config,
+							     FALSE);
+			    _action_free(a);
+			    break;
+		    case ACTION_COMPLETE:
+			    /* get back from "in-progress" mode */
+			    im_chooser_simple_show_progress(im, NULL);
+			    im->ignore_actions = FALSE;
+
+			    g_signal_emit(im, signals[CHANGED], 0, NULL);
+			    break;
+		    default:
+			    g_warning("Unknown action id: %d\n", a->action);
+			    _action_free(a);
+			    break;
+		}
+		retval = TRUE;
+	}
+
+	return retval;
+}
+
+static void
+im_chooser_simple_set_property(GObject      *object,
+			       guint         prop_id,
+			       const GValue *value,
+			       GParamSpec   *pspec)
+{
+	IMChooserSimple *im = IM_CHOOSER_SIMPLE (object);
+
+	switch (prop_id) {
+	    case PROP_PARENT_WINDOW:
+		    gtk_window_set_transient_for(GTK_WINDOW (im->progress),
+						 GTK_WINDOW (g_value_get_object(value)));
+		    break;
+	    default:
+		    G_OBJECT_WARN_INVALID_PROPERTY_ID (object, prop_id, pspec);
+		    break;
+	}
+}
+
+static void
+im_chooser_simple_get_property(GObject    *object,
+			       guint       prop_id,
+			       GValue     *value,
+			       GParamSpec *pspec)
+{
+	switch (prop_id) {
+	    default:
+		    G_OBJECT_WARN_INVALID_PROPERTY_ID (object, prop_id, pspec);
+		    break;
+	}
+}
+
 static void
 im_chooser_simple_finalize(GObject *object)
 {
@@ -213,6 +523,7 @@ im_chooser_simple_finalize(GObject *object)
 	g_free(simple->current_im);
 	g_free(simple->default_im);
 	dbus_connection_unref(simple->conn);
+	g_queue_free(simple->actionq);
 }
 
 static void
@@ -222,7 +533,17 @@ im_chooser_simple_class_init(IMChooserSimpleClass *klass)
 
 	parent_class = g_type_class_peek_parent(klass);
 
+	object_class->set_property = im_chooser_simple_set_property;
+	object_class->get_property = im_chooser_simple_get_property;
 	object_class->finalize = im_chooser_simple_finalize;
+
+	/* properties */
+	g_object_class_install_property(object_class, PROP_PARENT_WINDOW,
+					g_param_spec_object("parent_window",
+							    _("Parent Window"),
+							    _("GtkWindow that points to the parent window"),
+							    GTK_TYPE_WINDOW,
+							    G_PARAM_READWRITE));
 
 	/* signals */
 	signals[CHANGED] = g_signal_new("changed",
@@ -246,9 +567,39 @@ static void
 im_chooser_simple_instance_init(IMChooserSimple *im)
 {
 	gchar *locale = setlocale(LC_CTYPE, NULL);
+	GtkWidget *image, *hbox, *vbox;
 
 	im->widget = NULL;
 	im->initialized = FALSE;
+	im->actionq = g_queue_new();
+	g_queue_init(im->actionq);
+	im->progress = gtk_window_new(GTK_WINDOW_TOPLEVEL);
+	im->label = gtk_label_new(NULL);
+	im->ignore_actions = FALSE;
+	im->idle_source = 0;
+
+	hbox = gtk_hbox_new(FALSE, 12);
+	vbox = gtk_vbox_new(FALSE, 12);
+	/* setup a progress window */
+	gtk_window_set_title(GTK_WINDOW (im->progress), _("Work in progress..."));
+	gtk_window_set_skip_taskbar_hint(GTK_WINDOW (im->progress), TRUE);
+	gtk_window_set_decorated(GTK_WINDOW (im->progress), FALSE);
+	/* setup widgets in the progress window */
+	image = gtk_image_new_from_stock(GTK_STOCK_DIALOG_INFO,
+					 GTK_ICON_SIZE_DIALOG);
+	gtk_misc_set_alignment(GTK_MISC (image), 0.5, 0.0);
+	gtk_label_set_line_wrap(GTK_LABEL (im->label), TRUE);
+	gtk_misc_set_alignment(GTK_MISC (im->label), 0.0, 0.0);
+
+	gtk_box_pack_start(GTK_BOX (vbox), im->label, FALSE, FALSE, 0);
+	gtk_box_pack_start(GTK_BOX (hbox), image, FALSE, FALSE, 0);
+	gtk_box_pack_start(GTK_BOX (hbox), vbox, TRUE, TRUE, 0);
+
+	gtk_container_set_border_width (GTK_CONTAINER (im->progress), 5);
+	gtk_container_set_border_width (GTK_CONTAINER (hbox), 5);
+
+	gtk_container_add(GTK_CONTAINER (im->progress), hbox);
+	gtk_widget_show_all(hbox);
 
 	im->conn = dbus_bus_get(DBUS_BUS_SESSION, NULL);
 	im->imsettings = imsettings_request_new(im->conn, IMSETTINGS_INTERFACE_DBUS);
@@ -276,7 +627,10 @@ _im_chooser_simple_update_im_list(IMChooserSimple *im)
 	GtkRequisition requisition;
 	guint count;
 	gint i, priority = 0;
+	gchar *user_im, *system_im;
 
+	user_im = imsettings_request_get_current_user_im(im->imsettings_info);
+	system_im = imsettings_request_get_current_system_im(im->imsettings_info);
 	count = g_strv_length(im->im_list);
 	list = gtk_list_store_new(3, G_TYPE_STRING, G_TYPE_STRING, G_TYPE_INT);
 	for (i = 0; im->im_list[i] != NULL; i++) {
@@ -290,7 +644,7 @@ _im_chooser_simple_update_im_list(IMChooserSimple *im)
 			priority = 100;
 			g_string_append(string, _(" (legacy)"));
 		}
-		if (imsettings_request_is_system_default(im->imsettings_info, im->im_list[i])) {
+		if (strcmp(system_im, im->im_list[i]) == 0) {
 			priority = 10;
 			g_string_append(string, _(" (recommended)"));
 			if (!im->default_im)
@@ -298,7 +652,7 @@ _im_chooser_simple_update_im_list(IMChooserSimple *im)
 			def_iter = gtk_tree_iter_copy(&iter);
 		}
 		if (im->current_im == NULL &&
-		    imsettings_request_is_user_default(im->imsettings_info, im->im_list[i])) {
+		    strcmp(user_im, im->im_list[i]) == 0) {
 			im->current_im = g_strdup(im->im_list[i]);
 			if (im->initial_im == NULL)
 				im->initial_im = g_strdup(im->current_im);
@@ -333,6 +687,8 @@ _im_chooser_simple_update_im_list(IMChooserSimple *im)
 	if (def_iter)
 		gtk_tree_iter_free(def_iter);
 	g_object_unref(list);
+	g_free(user_im);
+	g_free(system_im);
 
 	if (count == 0) {
 		gtk_widget_set_sensitive(im->checkbox_is_im_enabled, FALSE);

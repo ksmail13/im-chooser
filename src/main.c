@@ -171,6 +171,7 @@ main(int    argc,
 	im = im_chooser_simple_new();
 	g_signal_connect(im, "notify_n_im",
 			 G_CALLBACK (_im_notify_n_im_cb), window);
+	g_object_set(G_OBJECT (im), "parent_window", window, NULL);
 
 	widget = im_chooser_simple_get_widget(im);
 

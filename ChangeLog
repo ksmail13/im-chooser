@@ -1,3 +1,25 @@
+2008-03-11  Akira TAGOH  <tagoh@redhat.com>
+
+	* src/im-chooser-simple.c (im_chooser_simple_destroy_idle_cb): new.
+	(im_chooser_simple_enable_im_on_toggled): serialize actions to work on
+	imsettings asynchronously.
+	(im_chooser_simple_im_list_on_changed): likewise.
+	(_action_new): new.
+	(_action_free): new.
+	(_action_compare): new.
+	(im_chooser_simple_im_start_cb): new.
+	(im_chooser_simple_im_stop_cb): new.
+	(im_chooser_simple_show_progress): new.
+	(im_chooser_simple_action_loop): new.
+	(im_chooser_simple_set_property): new.
+	(im_chooser_simple_get_property): new.
+	(_im_chooser_simple_update_im_list): Use i_r_get_current_user/system_im
+	instead of _is_user/system_im to improve the performance.
+
+	* src/main.c (main): set a parent window.
+
+	* configure.ac: Apply the cflags for warnings.
+
 2008-03-06  Akira TAGOH  <tagoh@redhat.com>
 
 	* configure.ac: Use gnome-common's macro.

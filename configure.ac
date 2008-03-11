@@ -1,5 +1,5 @@
 dnl Process this file with autoconf to produce a configure script.
-AC_INIT([im-chooser], 0.99.3, [https://bugzilla.redhat.com/enter_bug.cgi?product=Fedora&component=im-chooser])
+AC_INIT([im-chooser], 0.99.4, [https://bugzilla.redhat.com/enter_bug.cgi?product=Fedora&component=im-chooser])
 
 . ./requires
 
@@ -18,6 +18,9 @@ GNOME_CXX_WARNINGS
 GNOME_COMMON_INIT
 GNOME_DEBUG_CHECK
 GNOME_MAINTAINER_MODE_DEFINES
+
+CFLAGS="$CFLAGS $WARN_CFLAGS"
+CXXFLAGS="$CXXFLAGS $WARN_CXXFLAGS"
 
 dnl ======================================================================
 dnl define variables
