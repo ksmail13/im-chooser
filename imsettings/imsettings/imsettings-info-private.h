@@ -25,6 +25,7 @@
 #define __IMSETTINGS_IMSETTINGS_INFO_PRIVATE_H__
 
 #include <glib.h>
+#include <gi18n-lib.h>
 
 G_BEGIN_DECLS
 
