@@ -92,14 +92,15 @@ struct _IMSettingsInfoManagerPrivate {
 	gchar          *current_system_im;
 };
 
+static void imsettings_info_manager_init_fam(IMSettingsInfoManager *manager);
+static void imsettings_info_manager_tini_fam(IMSettingsInfoManager *manager);
+GType imsettings_info_manager_get_type(void) G_GNUC_CONST;
+
+
 guint signals[LAST_SIGNAL] = { 0 };
 
 G_LOCK_DEFINE_STATIC(imsettings_info_manager);
 G_DEFINE_TYPE (IMSettingsInfoManager, imsettings_info_manager, IMSETTINGS_TYPE_OBSERVER);
-
-
-static void imsettings_info_manager_init_fam(IMSettingsInfoManager *manager);
-static void imsettings_info_manager_tini_fam(IMSettingsInfoManager *manager);
 
 
 /*

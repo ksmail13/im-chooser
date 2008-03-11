@@ -1,3 +1,18 @@
+2008-03-11  Akira TAGOH  <tagoh@redhat.com>
+
+	* backends/gconf/main.c: Add a prototype declaration for
+	imsettings_gconf_get_type() and imsettings_gconf_new() to shut up
+	a compiler warning.
+
+	* src/factory.c: Add a prototype declaration for
+	imsettings_manager_get_type() to shut up a compiler warning.
+
+	* src/factory_info.c: Add a prototype declaration for
+	imsettings_info_manager_get_type() to shut up a compiler warning.
+
+	* imsettings/Makefile.am ($(srcdir)/imsettings-marshal.c): Add #include
+	"imsettings-marshal.h" to shut up a compiler warning.
+
 2008-03-07  Akira TAGOH  <tagoh@redhat.com>
 
 	* imsettings/imsettings-request.h: Fix a typo.

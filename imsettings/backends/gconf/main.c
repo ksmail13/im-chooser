@@ -54,6 +54,10 @@ struct _IMSettingsGConf {
 };
 
 
+GType            imsettings_gconf_get_type(void) G_GNUC_CONST;
+IMSettingsGConf *imsettings_gconf_new(void);
+
+
 G_DEFINE_TYPE (IMSettingsGConf, imsettings_gconf, G_TYPE_OBJECT);
 
 /*

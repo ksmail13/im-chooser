@@ -77,6 +77,8 @@ enum {
 	PROP_DISPLAY_NAME,
 };
 
+GType imsettings_manager_get_type(void) G_GNUC_CONST;
+
 G_DEFINE_TYPE (IMSettingsManager, imsettings_manager, IMSETTINGS_TYPE_OBSERVER);
 
 /*

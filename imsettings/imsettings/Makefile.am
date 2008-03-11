@@ -62,7 +62,8 @@ $(srcdir)/imsettings-marshal.c: $(srcdir)/marshal.list Makefile
 	( cd $(srcdir) && \
 	@GLIB_GENMARSHAL@ --prefix=imsettings_marshal $(srcdir)/marshal.list \
 			  --body > xgen-imc && \
-	cp xgen-imc imsettings-marshal.c) && \
+	echo "#include \"imsettings-marshal.h\"" > imsettings-marshal.c && \
+	cat xgen-imc >> imsettings-marshal.c) && \
 	rm -f xgen-imc
 
 lib_LTLIBRARIES = 					\
