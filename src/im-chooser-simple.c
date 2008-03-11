@@ -50,7 +50,6 @@ typedef enum {
 	ACTION_IM_STARTING,
 	ACTION_IM_STOP,
 	ACTION_IM_STOPPING,
-	ACTION_IM_RESTART,
 	ACTION_IM_UPDATE_PREFS,
 	ACTION_COMPLETE,
 	ACTION_END
@@ -142,7 +141,9 @@ im_chooser_simple_enable_im_on_toggled(GtkToggleButton *button,
 		gchar *name;
 
 		if (im->initialized) {
+#if 0
 			im_chooser_simple_show_progress(im, _("Updating Input Method list"));
+#endif
 			model = gtk_tree_view_get_model(GTK_TREE_VIEW (im->widget_im_list));
 			gtk_list_store_clear(GTK_LIST_STORE (model));
 			g_strfreev(im->im_list);
@@ -387,7 +388,7 @@ im_chooser_simple_show_progress(IMChooserSimple *im,
 	}
 
 	while (g_main_context_pending(NULL))
-		g_main_context_iteration(NULL, FALSE);
+		g_main_context_iteration(NULL, TRUE);
 }
 
 static gboolean
@@ -433,8 +434,6 @@ im_chooser_simple_action_loop(gpointer data)
 				    /* just ignore an action */
 				    _action_free(a);
 			    }
-			    break;
-		    case ACTION_IM_RESTART:
 			    break;
 		    case ACTION_IM_STARTING:
 		    case ACTION_IM_STOPPING:
