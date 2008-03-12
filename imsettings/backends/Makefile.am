@@ -8,3 +8,6 @@ endif
 if ENABLE_QT
 SUBDIRS += qt
 endif
+if ENABLE_XFCE
+SUBDIRS += xfce
+endif

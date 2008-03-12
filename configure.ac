@@ -63,6 +63,12 @@ PKG_CHECK_MODULES(QT, QtCore
 		      QtDBus,
 	[use_qt="yes"],
 	[use_qt="no"])
+PKG_CHECK_MODULES(XFCE, gconf-2.0
+			libxfce4mcs-manager-1.0
+			libxfce4util-1.0
+			xfce-mcs-manager,
+	[use_xfce="yes"],
+	[use_xfce="no"])
 PKG_CHECK_MODULES(X11, x11)
 PKG_CHECK_MODULES(IMINFO, gthread-2.0
 			  gamin)
@@ -76,14 +82,17 @@ AC_SUBST(GNOME_CFLAGS)
 AC_SUBST(GNOME_LIBS)
 AC_SUBST(QT_CFLAGS)
 AC_SUBST(QT_LIBS)
+AC_SUBST(XFCE_CFLAGS)
+AC_SUBST(XFCE_LIBS)
 AC_SUBST(X11_CFLAGS)
 AC_SUBST(X11_LIBS)
 AC_SUBST(IMINFO_CFLAGS)
 AC_SUBST(IMINFO_LIBS)
 
-AM_CONDITIONAL(ENABLE_GCONF, test x$use_gconf != xno)
 AM_CONDITIONAL(ENABLE_GNOME, test x$use_gnome != xno)
+AM_CONDITIONAL(ENABLE_GCONF, test x$use_gconf != xno)
 AM_CONDITIONAL(ENABLE_QT, test x$use_qt != xno)
+AM_CONDITIONAL(ENABLE_XFCE, test x$use_xfce != xno)
 
 dnl ======================================================================
 dnl check another libraries
@@ -196,6 +205,7 @@ data/xinputinfo.sh
 imsettings/backends/Makefile
 imsettings/backends/gconf/Makefile
 imsettings/backends/qt/Makefile
+imsettings/backends/xfce/Makefile
 imsettings/imsettings/Makefile
 imsettings/src/Makefile
 imsettings/utils/Makefile
@@ -220,5 +230,7 @@ echo " XINIT_PATH:                 $XINIT_PATH"
 echo " XINPUTSH:                   $XINPUTSH"
 echo " XINPUT_SUFFIX:              $XINPUT_SUFFIX"
 echo " GNOME support:              $use_gnome"
+echo " GConf support:              $use_gconf"
 echo " Qt support:                 $use_qt"
+echo " Xfce support:               $use_xfce"
 echo ""
