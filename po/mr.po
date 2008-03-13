@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: im-chooser.trunk.mr\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-02-20 01:39-0700\n"
-"PO-Revision-Date: 2008-03-12 14:43+0530\n"
+"POT-Creation-Date: 2008-03-13 09:57+0000\n"
+"PO-Revision-Date: 2008-03-13 16:48+0530\n"
 "Last-Translator: Sandeep Shedmake <sandeep.shedmake@gmail.com>\n"
 "Language-Team: marathi\n"
 "MIME-Version: 1.0\n"
@@ -20,14 +20,14 @@ msgstr ""
 "X-Generator: KBabel 1.11.4\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
 
-#: ../imsettings/backends/gconf/main.c:181
+#: ../imsettings/backends/gconf/main.c:184
 #: ../imsettings/imsettings/imsettings-observer.c:702
-#: ../imsettings/src/factory.c:677 ../imsettings/src/factory_info.c:644
+#: ../imsettings/src/factory.c:690 ../imsettings/src/factory_info.c:645
 msgid "Replace the running settings daemon with new instance."
 msgstr "नविन कार्यपध्दतीशी कार्यरत संजोजना डीमन बदलवा."
 
-#: ../imsettings/backends/gconf/main.c:203 ../imsettings/src/factory.c:704
-#: ../imsettings/src/factory_info.c:666
+#: ../imsettings/backends/gconf/main.c:206 ../imsettings/src/factory.c:717
+#: ../imsettings/src/factory_info.c:667
 #: ../imsettings/utils/imsettings-reload.c:63
 #: ../imsettings/utils/imsettings-restart.c:65
 #: ../imsettings/utils/imsettings-stop.c:63
@@ -164,6 +164,14 @@ msgstr "XIM"
 msgid "Whether or not IM is a XIM server."
 msgstr "IM XIM सर्वर आहे की नाही."
 
+#: ../imsettings/imsettings/imsettings-info-private.h:39
+msgid "User Specific"
+msgstr "वापरकर्ता क्रेंद्रीत"
+
+#: ../imsettings/imsettings/imsettings-info-private.h:40
+msgid "xinputrc was modified by the user"
+msgstr "xinputrc वापरकर्ता द्वारे संपादीत केले गेले"
+
 #: ../imsettings/imsettings/imsettings-observer.c:255
 #, c-format
 msgid "Invalid IM module type: %d"
@@ -240,105 +248,105 @@ msgstr ""
 "%s वरील पध्दती `%s' प्रारंभ करण्यास अपयशी:\n"
 "  %s"
 
-#: ../imsettings/src/factory.c:133
+#: ../imsettings/src/factory.c:136
 #, c-format
 msgid "Failed to remove a pidfile: %s"
 msgstr "pidfile काढूण टाकण्यास अपयशी: %s"
 
-#: ../imsettings/src/factory.c:166
+#: ../imsettings/src/factory.c:178
 #, c-format
 msgid "Failed to open a pidfile: %s"
 msgstr "pidfile उघडण्यास अपयशी: %s"
 
-#: ../imsettings/src/factory.c:270
+#: ../imsettings/src/factory.c:282
 #, c-format
 msgid "Couldn't determine the pid for %s process."
 msgstr "%s पध्दती करीता pid शोधू शकले नाही."
 
-#: ../imsettings/src/factory.c:276
+#: ../imsettings/src/factory.c:288
 #, c-format
 msgid "Couldn't send a signal to the %s process successfully."
 msgstr "%s पध्दती करीता संकेत यशस्वीरित्या पाठवू शकले नाही."
 
-#: ../imsettings/src/factory.c:302 ../imsettings/src/factory.c:587
+#: ../imsettings/src/factory.c:314 ../imsettings/src/factory.c:600
 msgid "Failed to get a place of home directory."
 msgstr "मुख्य संचयीकाचे स्थान प्राप्त करण्यास अपयशी."
 
-#: ../imsettings/src/factory.c:319
+#: ../imsettings/src/factory.c:331
 #, c-format
 msgid "Failed to revert the backup file: %s"
 msgstr "प्रतिकृती फाइल कडे जाऊ शकण्यास अपयशी: %s"
 
-#: ../imsettings/src/factory.c:331
+#: ../imsettings/src/factory.c:343
 #, c-format
 msgid "Failed to create a backup file: %s"
 msgstr "प्रतिकृती फाइल बनविण्यास अपयशी: %s"
 
-#: ../imsettings/src/factory.c:340
+#: ../imsettings/src/factory.c:352
 #, c-format
 msgid "Failed to remove a .xinputrc file: %s"
 msgstr ".xinputrc फाइल काढूण टाकण्यास अपयशी: %s"
 
-#: ../imsettings/src/factory.c:351
+#: ../imsettings/src/factory.c:363
 #, c-format
 msgid "Failed to make a symlink: %s"
 msgstr "symlink बनविण्यास अपयशी: %s"
 
-#: ../imsettings/src/factory.c:466 ../imsettings/src/factory_info.c:525
+#: ../imsettings/src/factory.c:478 ../imsettings/src/factory_info.c:526
 #, c-format
 msgid "No such input method on your system: %s"
 msgstr "तुमच्या प्रणालीवर इनपुट पध्दती आढळली नाही: %s"
 
-#: ../imsettings/src/factory.c:486
+#: ../imsettings/src/factory.c:498
 #, c-format
 msgid "No XIM server is available in %s"
 msgstr "XIM सर्वर %s मध्ये उपलब्ध नाही"
 
-#: ../imsettings/src/factory.c:633
+#: ../imsettings/src/factory.c:646
 msgid "X display name"
 msgstr "X प्रदर्शकाचे नाव"
 
-#: ../imsettings/src/factory.c:634
+#: ../imsettings/src/factory.c:647
 msgid "X display name to use"
 msgstr "वापरण्याजोगी X प्रदर्शकाचे नाव"
 
-#: ../imsettings/src/factory.c:678
+#: ../imsettings/src/factory.c:691
 msgid "X display to use"
 msgstr "वापरावयाचे X प्रदर्शन"
 
-#: ../imsettings/src/factory.c:678
+#: ../imsettings/src/factory.c:691
 msgid "DISPLAY"
 msgstr "DISPLAY"
 
 #. FIXME
-#: ../imsettings/src/factory.c:681
+#: ../imsettings/src/factory.c:694
 msgid "X screen to use"
 msgstr "वापरावयाची X स्क्रीन"
 
-#: ../imsettings/src/factory.c:681
+#: ../imsettings/src/factory.c:694
 msgid "SCREEN"
 msgstr "SCREEN"
 
-#: ../imsettings/src/factory.c:712
+#: ../imsettings/src/factory.c:725
 msgid "Failed to open a X display."
 msgstr "X प्रदर्शक उघडण्यास अपयशी."
 
-#: ../imsettings/src/factory_info.c:126
+#: ../imsettings/src/factory_info.c:127
 msgid "Reloading...\n"
 msgstr "पुन्हदाखन करीत आहे...\n"
 
-#: ../imsettings/src/factory_info.c:187
+#: ../imsettings/src/factory_info.c:188
 #, c-format
 msgid "Duplicate entry `%s' from %s. SHORT_DESC has to be unique."
 msgstr "%s पासून समानार्थी नोंदणी `%s'. SHORT_DESC एकमेव असायला हवे."
 
-#: ../imsettings/src/factory_info.c:445 ../imsettings/src/factory_info.c:483
-#: ../imsettings/src/factory_info.c:499 ../imsettings/src/factory_info.c:517
+#: ../imsettings/src/factory_info.c:446 ../imsettings/src/factory_info.c:484
+#: ../imsettings/src/factory_info.c:500 ../imsettings/src/factory_info.c:518
 #, c-format
 msgid "Timed out to initialize %s services."
 msgstr "%s सेवा प्रारंभ करण्यास कालबाह्य झाले."
 
-#: ../imsettings/src/factory_info.c:468
+#: ../imsettings/src/factory_info.c:469
 msgid "No input methods available on your system."
 msgstr "तुमच्या प्रणालीवर इंपुट पध्दती आढळले नाही."
 
@@ -363,36 +371,67 @@ msgstr "%s थांबविले\n"
 msgid "Failed to stop IM process `%s'\n"
 msgstr "IM पध्दती `%s' थांबविण्यास अपयशी\n"
 
-#: ../src/im-chooser-simple.c:288
+#: ../src/im-chooser-simple.c:145
+msgid "Updating Input Method list"
+msgstr "इनपुट पद्धती यादी अद्ययावत करीत आहे"
+
+#: ../src/im-chooser-simple.c:310 ../src/im-chooser-simple.c:344
+msgid "Failed to start Input Method"
+msgstr "इनपुट पध्दती सुरू करण्यास अपयशी"
+
+#: ../src/im-chooser-simple.c:407
+#, c-format
+msgid "Starting Input Method - %s"
+msgstr "इनपुट पद्धती सुरू करीत आहे - %s"
+
+#: ../src/im-chooser-simple.c:424
+#, c-format
+msgid "Stopping Input Method - %s"
+msgstr "इनपुट पद्धती थांबवित आहे - %s"
+
+#: ../src/im-chooser-simple.c:542
+msgid "Parent Window"
+msgstr "मुख्य चौकट"
+
+#: ../src/im-chooser-simple.c:543
+msgid "GtkWindow that points to the parent window"
+msgstr "GtkWindow जे मुख्य चौकटकडे निर्देशीत आहे"
+
+#. setup a progress window
+#: ../src/im-chooser-simple.c:583
+msgid "Work in progress..."
+msgstr "कार्य चालू आहे..."
+
+#: ../src/im-chooser-simple.c:641
 #, c-format
 msgid "Use %s"
 msgstr "%s वापरा"
 
-#: ../src/im-chooser-simple.c:291
+#: ../src/im-chooser-simple.c:644
 msgid " (legacy)"
 msgstr " (सर्वसाधारण)"
 
-#: ../src/im-chooser-simple.c:295
+#: ../src/im-chooser-simple.c:648
 msgid " (recommended)"
 msgstr " (सूचविलेले)"
 
-#: ../src/im-chooser-simple.c:405
+#: ../src/im-chooser-simple.c:760
 msgid "<b>Input Method</b>"
 msgstr "<b>इनपुट पद्धती</b>"
 
-#: ../src/im-chooser-simple.c:411
+#: ../src/im-chooser-simple.c:766
 msgid "_Enable input method feature"
 msgstr "इंपुट पध्दती गुणधर्म कार्यान्वीत करा (_E)"
 
-#: ../src/im-chooser-simple.c:418
+#: ../src/im-chooser-simple.c:773
 msgid ""
 "<small><i>Note: this change will not take effect until you next log in, "
 "except GTK+ applications.</i></small>"
 msgstr ""
-"<small><i>टीप: तुम्ही पुन्हा दाखलन करेपर्यंत हा बदल परिणामकारक होणार नाही, GTK+ अनुप्रयोगला वगळता.</i></"
-"small>"
+"<small><i>टीप: तुम्ही पुन्हा दाखलन करेपर्यंत हा बदल परिणामकारक होणार नाही, GTK+ "
+"अनुप्रयोगला वगळता.</i></small>"
 
-#: ../src/im-chooser-simple.c:450
+#: ../src/im-chooser-simple.c:805
 msgid "Input Method _Preferences..."
 msgstr "इंपुट पद्धती प्राधान्यता (_P)..."
 
