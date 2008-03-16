@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: pl\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-03-11 21:15+0900\n"
-"PO-Revision-Date: 2008-02-19 22:07+0200\n"
+"PO-Revision-Date: 2008-03-15 14:59+0200\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish <pl@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -159,11 +159,11 @@ msgstr "Czy metoda wejścia jest serwerem XIM."
 
 #: ../imsettings/imsettings/imsettings-info-private.h:40
 msgid "User Specific"
-msgstr ""
+msgstr "Określone przez użytkownika"
 
 #: ../imsettings/imsettings/imsettings-info-private.h:41
 msgid "xinputrc was modified by the user"
-msgstr ""
+msgstr "xinputrc został zmodyfikowany przez użytkownika"
 
 #: ../imsettings/imsettings/imsettings-observer.c:255
 #, c-format
@@ -294,7 +294,7 @@ msgstr "Brak metody wejścia w systemie: %s"
 #: ../imsettings/src/factory.c:498
 #, c-format
 msgid "No XIM server is available in %s"
-msgstr ""
+msgstr "Brak dostępnego serwera XIM w %s"
 
 #: ../imsettings/src/factory.c:646
 msgid "X display name"
@@ -340,7 +340,7 @@ msgstr "Duplikat wpisu `%s' z %s. SHORT_DESC musi być unikalne."
 #: ../imsettings/src/factory_info.c:500 ../imsettings/src/factory_info.c:518
 #, c-format
 msgid "Timed out to initialize %s services."
-msgstr ""
+msgstr "Przekroczono czas inicjowania usług %s."
 
 #: ../imsettings/src/factory_info.c:469
 #, c-format
@@ -357,50 +357,48 @@ msgstr ""
 #: ../imsettings/utils/imsettings-restart.c:44
 #: ../imsettings/utils/imsettings-stop.c:43
 msgid "Do not update .xinputrc."
-msgstr ""
+msgstr "Nie aktualizuj .xinputrc."
 
 #: ../imsettings/utils/imsettings-stop.c:80
 #, c-format
 msgid "Stopped %s\n"
-msgstr ""
+msgstr "Zatrzymano %s\n"
 
 #: ../imsettings/utils/imsettings-stop.c:82
-#, fuzzy, c-format
+#, c-format
 msgid "Failed to stop IM process `%s'\n"
-msgstr "Otwarcie pliku PID nie powiodło się: %s"
+msgstr "Zatrzymanie procesu IM nie powiodło się: `%s'\n"
 
 #: ../src/im-chooser-simple.c:145
-#, fuzzy
 msgid "Updating Input Method list"
-msgstr "Metoda wejścia"
+msgstr "Aktualizowanie listy metod wejścia"
 
 #: ../src/im-chooser-simple.c:309 ../src/im-chooser-simple.c:343
-#, fuzzy
 msgid "Failed to start Input Method"
-msgstr "Metoda wejścia"
+msgstr "Uruchomienie metody wejścia nie powiodło się"
 
 #: ../src/im-chooser-simple.c:406
-#, fuzzy, c-format
+#, c-format
 msgid "Starting Input Method - %s"
-msgstr "Metoda wejścia"
+msgstr "Uruchomienie metody wejścia - %s"
 
 #: ../src/im-chooser-simple.c:423
-#, fuzzy, c-format
+#, c-format
 msgid "Stopping Input Method - %s"
-msgstr "Metoda wejścia"
+msgstr "Zatrzymywanie metody wejścia - %s"
 
 #: ../src/im-chooser-simple.c:543
 msgid "Parent Window"
-msgstr ""
+msgstr "Okno nadrzędne"
 
 #: ../src/im-chooser-simple.c:544
 msgid "GtkWindow that points to the parent window"
-msgstr ""
+msgstr "GtkWindow wskazujące na okno nadrzędne"
 
 #. setup a progress window
 #: ../src/im-chooser-simple.c:584
 msgid "Work in progress..."
-msgstr ""
+msgstr "Trwa praca..."
 
 #: ../src/im-chooser-simple.c:642
 #, c-format
