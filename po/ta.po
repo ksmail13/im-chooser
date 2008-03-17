@@ -1,219 +1,216 @@
-# translation of ta.po to Tamil
+# translation of im-chooser.trunk.ta.po to Tamil
 # Tamil translations for im-chooser package.
 # Copyright (C) 2006 Red Hat, Inc. All rights reserved.
 # This file is distributed under the same license as the im-chooser package.
+#
 # Automatically generated, 2006.
 # Felix <ifelix@redhat.com>, 2006.
-#
+# I. Felix <ifelix@redhat.com>, 2008.
 msgid ""
 msgstr ""
-"Project-Id-Version: ta\n"
+"Project-Id-Version: im-chooser.trunk.ta\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-03-11 21:15+0900\n"
-"PO-Revision-Date: 2006-09-29 11:47+0530\n"
-"Last-Translator: Felix <ifelix@redhat.com>\n"
-"Language-Team: Tamil <ta@li.org>\n"
+"POT-Creation-Date: 2008-02-20 01:39-0700\n"
+"PO-Revision-Date: 2008-03-15 18:56+0530\n"
+"Last-Translator: I. Felix <ifelix@redhat.com>\n"
+"Language-Team: Tamil <fedora-trans-ta@redhat.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.9.1\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n\n\n"
+"\n"
+"\n"
+"\n"
+"\n"
 "\n"
 
-#: ../imsettings/backends/gconf/main.c:184
+#: ../imsettings/backends/gconf/main.c:181
 #: ../imsettings/imsettings/imsettings-observer.c:702
-#: ../imsettings/src/factory.c:690 ../imsettings/src/factory_info.c:645
+#: ../imsettings/src/factory.c:677 ../imsettings/src/factory_info.c:644
 msgid "Replace the running settings daemon with new instance."
-msgstr ""
+msgstr "புதிய நிகழ்வுடன் இயங்கும் டீமான் அமைவுகளை மாற்றவும்"
 
-#: ../imsettings/backends/gconf/main.c:206 ../imsettings/src/factory.c:717
-#: ../imsettings/src/factory_info.c:667
+#: ../imsettings/backends/gconf/main.c:203 ../imsettings/src/factory.c:704
+#: ../imsettings/src/factory_info.c:666
 #: ../imsettings/utils/imsettings-reload.c:63
 #: ../imsettings/utils/imsettings-restart.c:65
 #: ../imsettings/utils/imsettings-stop.c:63
 msgid "Unknown error in parsing the command lines."
-msgstr ""
+msgstr "கட்டளை வரிகளை பகுக்கும் போது தெரியாத பிழை."
 
 #: ../imsettings/imsettings/imsettings-info.c:498
 msgid "Language"
-msgstr ""
+msgstr "மொழி"
 
 #: ../imsettings/imsettings/imsettings-info.c:499
 msgid "A language to pull the information in."
-msgstr ""
+msgstr "ஒரு மொழி எடுக்கும் தகவல்."
 
 #: ../imsettings/imsettings/imsettings-info.c:504
 msgid "Filename"
-msgstr ""
+msgstr "கோப்பு பெயர்"
 
 #: ../imsettings/imsettings/imsettings-info.c:505
 msgid "A filename referring to the IM information."
-msgstr ""
+msgstr "IM தகவலை குறிப்பிடும் கோப்பு பெயர்."
 
 #: ../imsettings/imsettings/imsettings-info.c:510
 msgid "GTK+ immodule"
-msgstr ""
+msgstr "GTK+ immodule"
 
 #: ../imsettings/imsettings/imsettings-info.c:511
 msgid "A module name used for GTK+"
-msgstr ""
+msgstr "GTK+க்கு பயன்படுத்தப்பட்ட ஒரு தொகுதி பெயர்"
 
 #: ../imsettings/imsettings/imsettings-info.c:516
 msgid "Qt immodule"
-msgstr ""
+msgstr "Qt immodule"
 
 #: ../imsettings/imsettings/imsettings-info.c:517
 msgid "A module name used for Qt"
-msgstr ""
+msgstr "Qtக்கு பயன்படுத்தப்பட்ட ஒரு தொகுதி பெயர்"
 
 #: ../imsettings/imsettings/imsettings-info.c:522
 msgid "XIM name"
-msgstr ""
+msgstr "XIM பெயர்"
 
 #: ../imsettings/imsettings/imsettings-info.c:523
 msgid "XIM server name"
-msgstr ""
+msgstr "XIM சேவையக பெயர்"
 
 #: ../imsettings/imsettings/imsettings-info.c:528
 msgid "Ignore flag"
-msgstr ""
+msgstr "கொடியை தவிர்த்தல்"
 
 #: ../imsettings/imsettings/imsettings-info.c:529
 msgid "A flag to not list up."
-msgstr ""
+msgstr "பட்டியலிட வேண்டாத ஒரு கொடி"
 
 #: ../imsettings/imsettings/imsettings-info.c:534
 msgid "XIM server program name"
-msgstr ""
+msgstr "XIM சேவையக நிரல் பெயர்"
 
 #: ../imsettings/imsettings/imsettings-info.c:535
 msgid "XIM server program to be run"
-msgstr ""
+msgstr "இயங்க வேண்டிய XIM சேவையக பெயர்"
 
 #: ../imsettings/imsettings/imsettings-info.c:540
 msgid "XIM server program's options"
-msgstr ""
+msgstr "XIM சேவையக நிரலின் விருப்பங்கள்"
 
 #: ../imsettings/imsettings/imsettings-info.c:541
 msgid "Command line options for XIM server program"
-msgstr ""
+msgstr "XIM சேவையக நிரலுக்கான கட்டளை வரி விருப்பங்கள்"
 
 #: ../imsettings/imsettings/imsettings-info.c:546
 msgid "Preference program name"
-msgstr ""
+msgstr "விருப்ப நிரல் பெயர்"
 
 #: ../imsettings/imsettings/imsettings-info.c:547
 msgid "Preference program to be run"
-msgstr ""
+msgstr "இயங்க வேண்டிய விருப்ப நிரல்"
 
 #: ../imsettings/imsettings/imsettings-info.c:552
 msgid "Preference program's options"
-msgstr ""
+msgstr "விருப்ப நிரலின் விருப்பங்கள்"
 
 #: ../imsettings/imsettings/imsettings-info.c:553
 msgid "Command line options for preference program"
-msgstr ""
+msgstr "விருப்பமான நிரலுக்கான கட்டளை வரி விருப்பங்கள்"
 
 #: ../imsettings/imsettings/imsettings-info.c:558
 msgid "Auxiliary program name"
-msgstr ""
+msgstr "கூடுதல் நிரல் பெயர்"
 
 #: ../imsettings/imsettings/imsettings-info.c:559
 msgid "Auxiliary program to be run"
-msgstr ""
+msgstr "இயங்க வேண்டிய கூடுதல் நிரல்"
 
 #: ../imsettings/imsettings/imsettings-info.c:564
 msgid "Auxiliary program's options"
-msgstr ""
+msgstr "கூடுதல் நிரலின் விருப்பங்கள்"
 
 #: ../imsettings/imsettings/imsettings-info.c:565
 msgid "Command line options for auxiliary program"
-msgstr ""
+msgstr "கூடுதல் நிரலுக்கான கட்டளை வரி விருப்பங்கள்"
 
 #: ../imsettings/imsettings/imsettings-info.c:570
 #: ../imsettings/imsettings/imsettings-info.c:571
 msgid "Short Description"
-msgstr ""
+msgstr "சிறிய விவரம்"
 
 #: ../imsettings/imsettings/imsettings-info.c:576
 #: ../imsettings/imsettings/imsettings-info.c:577
 msgid "Long Description"
-msgstr ""
+msgstr "நீண்ட விவரம்"
 
 #: ../imsettings/imsettings/imsettings-info.c:582
 msgid "System Default"
-msgstr ""
+msgstr "கணினி முன்னுரிமை"
 
 #: ../imsettings/imsettings/imsettings-info.c:583
 msgid "Whether or not IM is a system default."
-msgstr ""
+msgstr "IM கணினி முன்னிருப்பாக இருக்க வேண்டுமா அல்லது வேண்டாமா."
 
 #: ../imsettings/imsettings/imsettings-info.c:588
 msgid "User Default"
-msgstr ""
+msgstr "பயனர் முன்னிருப்பு"
 
 #: ../imsettings/imsettings/imsettings-info.c:589
 msgid "Whether or not IM is an user default."
-msgstr ""
+msgstr "IM பயனர் முன்னிருப்பாக இருக்க வேண்டுமா அல்லது வேண்டாமா."
 
 #: ../imsettings/imsettings/imsettings-info.c:594
 msgid "XIM"
-msgstr ""
+msgstr "XIM"
 
 #: ../imsettings/imsettings/imsettings-info.c:595
 msgid "Whether or not IM is a XIM server."
-msgstr ""
-
-#: ../imsettings/imsettings/imsettings-info-private.h:40
-msgid "User Specific"
-msgstr ""
-
-#: ../imsettings/imsettings/imsettings-info-private.h:41
-msgid "xinputrc was modified by the user"
-msgstr ""
+msgstr "IM XIM சேவையகமாக இருக்க வேண்டுமா அல்லது வேண்டாமா."
 
 #: ../imsettings/imsettings/imsettings-observer.c:255
 #, c-format
 msgid "Invalid IM module type: %d"
-msgstr ""
+msgstr "தவறான IM தொகுதி வகை: %d"
 
 #: ../imsettings/imsettings/imsettings-observer.c:695
 msgid "IM module name"
-msgstr ""
+msgstr "IM தொகுதி பெயர்"
 
 #: ../imsettings/imsettings/imsettings-observer.c:696
 msgid "A target IM module name that to observe signals"
-msgstr ""
+msgstr "ஒரு இலக்கு IM தொகுதி பெயர் சிக்னல்களை எடுக்கிறது"
 
 #: ../imsettings/imsettings/imsettings-observer.c:701
 msgid "Replace"
-msgstr ""
+msgstr "மாற்றுதல்"
 
 #: ../imsettings/imsettings/imsettings-observer.c:707
 #: ../imsettings/imsettings/imsettings-request.c:175
 msgid "DBus connection"
-msgstr ""
+msgstr "DBus இணைப்பு"
 
 #: ../imsettings/imsettings/imsettings-observer.c:708
 #: ../imsettings/imsettings/imsettings-request.c:176
 msgid "An object to be a DBus connection"
-msgstr ""
+msgstr "ஒரு பொருள் ஒரு DBus இணைப்பாக இருக்கும்"
 
 #: ../imsettings/imsettings/imsettings-request.c:169
 msgid "DBus Interface"
-msgstr ""
+msgstr "DBus முகப்பு"
 
 #: ../imsettings/imsettings/imsettings-request.c:170
 msgid "Interface name to connect to DBus"
-msgstr ""
+msgstr "முகப்பு பெயர் DBusஉடன் இணைக்கப்படும்"
 
 #: ../imsettings/imsettings/imsettings-request.c:181
 msgid "Locale"
-msgstr ""
+msgstr "மொழி"
 
 #: ../imsettings/imsettings/imsettings-request.c:182
 msgid "Locale to get the imsettings information"
-msgstr ""
+msgstr "imsettings தகவலை பெறும் மொழி"
 
 #: ../imsettings/imsettings/imsettings-request.c:239
 #: ../imsettings/imsettings/imsettings-request.c:272
@@ -236,6 +233,8 @@ msgid ""
 "Failed to invoke a method `%s':\n"
 "  %s"
 msgstr ""
+"முறை `%s'ஐ எடுக்க முடியவில்லை:\n"
+"  %s"
 
 #: ../imsettings/imsettings/imsettings-request.c:672
 #, c-format
@@ -243,210 +242,170 @@ msgid ""
 "Failed to invoke a method `%s' on %s:\n"
 "  %s"
 msgstr ""
+"முறை `%s'ஐ %s இல் எடுக்க முடியவில்லை:\n"
+"  %s"
 
-#: ../imsettings/src/factory.c:136
+#: ../imsettings/src/factory.c:133
 #, c-format
 msgid "Failed to remove a pidfile: %s"
-msgstr ""
+msgstr "ஒரு pidfileஐ நீக்க முடியவில்லை: %s"
 
-#: ../imsettings/src/factory.c:178
+#: ../imsettings/src/factory.c:166
 #, c-format
 msgid "Failed to open a pidfile: %s"
-msgstr ""
+msgstr "pidfile ஐ திறக்க முடியவில்லை: %s"
 
-#: ../imsettings/src/factory.c:282
+#: ../imsettings/src/factory.c:270
 #, c-format
 msgid "Couldn't determine the pid for %s process."
-msgstr ""
+msgstr "%s processக்கு pid வரையறுக்க முடியவில்லை."
 
-#: ../imsettings/src/factory.c:288
+#: ../imsettings/src/factory.c:276
 #, c-format
 msgid "Couldn't send a signal to the %s process successfully."
-msgstr ""
+msgstr "ஒரு சிக்னலை %s செயலுக்கு அனுப்ப முடியவில்லை."
 
-#: ../imsettings/src/factory.c:314 ../imsettings/src/factory.c:600
-#, c-format
+#: ../imsettings/src/factory.c:302 ../imsettings/src/factory.c:587
 msgid "Failed to get a place of home directory."
-msgstr ""
+msgstr "இல்ல அடைவில் ஒரு இடத்தைப் பெற முடியவில்லை."
+
+#: ../imsettings/src/factory.c:319
+#, c-format
+msgid "Failed to revert the backup file: %s"
+msgstr "பின்சேமிப்பு கோப்பினை திரும்ப எடுக்க முடியவில்லை: %s"
 
 #: ../imsettings/src/factory.c:331
 #, c-format
-msgid "Failed to revert the backup file: %s"
-msgstr ""
-
-#: ../imsettings/src/factory.c:343
-#, c-format
 msgid "Failed to create a backup file: %s"
-msgstr ""
+msgstr "ஒரு பின் சேமிப்பு கோப்பினை உருவாக்க முடியவில்லை: %s"
 
-#: ../imsettings/src/factory.c:352
+#: ../imsettings/src/factory.c:340
 #, c-format
 msgid "Failed to remove a .xinputrc file: %s"
-msgstr ""
+msgstr "ஒரு .xinputrc கோப்பினை நீக்க முடியவில்லை: %s"
 
-#: ../imsettings/src/factory.c:363
+#: ../imsettings/src/factory.c:351
 #, c-format
 msgid "Failed to make a symlink: %s"
-msgstr ""
+msgstr "ஒரு symlinkஐ உருவாக்க முடியவில்லை: %s"
 
-#: ../imsettings/src/factory.c:478 ../imsettings/src/factory_info.c:526
+#: ../imsettings/src/factory.c:466 ../imsettings/src/factory_info.c:525
 #, c-format
 msgid "No such input method on your system: %s"
-msgstr ""
+msgstr "உங்கள் கணினியில் இதுபோன்ற உள்ளீடு முறை இல்லை: %s"
 
-#: ../imsettings/src/factory.c:498
+#: ../imsettings/src/factory.c:486
 #, c-format
 msgid "No XIM server is available in %s"
-msgstr ""
+msgstr "%s இல் XIM சேவையகம் இல்லை"
 
-#: ../imsettings/src/factory.c:646
+#: ../imsettings/src/factory.c:633
 msgid "X display name"
-msgstr ""
+msgstr "X காட்சி பெயர்"
 
-#: ../imsettings/src/factory.c:647
+#: ../imsettings/src/factory.c:634
 msgid "X display name to use"
-msgstr ""
+msgstr "பயன்படுத்தி X காட்சி பெயர்"
 
-#: ../imsettings/src/factory.c:691
+#: ../imsettings/src/factory.c:678
 msgid "X display to use"
-msgstr ""
+msgstr "பயன்படுத்தி X காட்சி"
 
-#: ../imsettings/src/factory.c:691
+#: ../imsettings/src/factory.c:678
 msgid "DISPLAY"
-msgstr ""
+msgstr "DISPLAY"
 
 #. FIXME
-#: ../imsettings/src/factory.c:694
+#: ../imsettings/src/factory.c:681
 msgid "X screen to use"
-msgstr ""
+msgstr "பயன்படுத்தி X திரை"
 
-#: ../imsettings/src/factory.c:694
+#: ../imsettings/src/factory.c:681
 msgid "SCREEN"
-msgstr ""
+msgstr "SCREEN"
 
-#: ../imsettings/src/factory.c:725
-#, c-format
+#: ../imsettings/src/factory.c:712
 msgid "Failed to open a X display."
-msgstr ""
+msgstr "ஒரு X காட்சியை திறக்க முடியவில்லை."
 
-#: ../imsettings/src/factory_info.c:127
-#, c-format
+#: ../imsettings/src/factory_info.c:126
 msgid "Reloading...\n"
-msgstr ""
+msgstr "மீண்டும் ஏற்றுகிறது...\n"
 
-#: ../imsettings/src/factory_info.c:188
+#: ../imsettings/src/factory_info.c:187
 #, c-format
 msgid "Duplicate entry `%s' from %s. SHORT_DESC has to be unique."
-msgstr ""
+msgstr "`%s' இலிருந்து %sக்கு இரட்டை உள்ளீடு. SHORT_DESC தனித்தன்மையாக இருக்க வேண்டும்."
 
-#: ../imsettings/src/factory_info.c:446 ../imsettings/src/factory_info.c:484
-#: ../imsettings/src/factory_info.c:500 ../imsettings/src/factory_info.c:518
+#: ../imsettings/src/factory_info.c:445 ../imsettings/src/factory_info.c:483
+#: ../imsettings/src/factory_info.c:499 ../imsettings/src/factory_info.c:517
 #, c-format
 msgid "Timed out to initialize %s services."
-msgstr ""
+msgstr "%s சேவைகளை துவக்க நேரம் முடிந்தது."
 
-#: ../imsettings/src/factory_info.c:469
-#, c-format
+#: ../imsettings/src/factory_info.c:468
 msgid "No input methods available on your system."
-msgstr ""
+msgstr "உங்கள் கணினியில் உள்ளீடு முறைகள் எதுவும் இல்லை."
 
 #: ../imsettings/utils/imsettings-reload.c:42
 #: ../imsettings/utils/imsettings-restart.c:43
 #: ../imsettings/utils/imsettings-stop.c:42
 msgid "Force reloading the configuration, including restarting the process."
-msgstr ""
+msgstr "செயல்முறையை மறுதுவக்குவதையும் சேர்த்து கட்டமைப்பையும் மீண்டும் ஏற்றுகிறது."
 
 #: ../imsettings/utils/imsettings-restart.c:44
 #: ../imsettings/utils/imsettings-stop.c:43
 msgid "Do not update .xinputrc."
-msgstr ""
+msgstr ".xinputrc.ஐ மேம்படுத்த வேண்டாம்."
 
 #: ../imsettings/utils/imsettings-stop.c:80
 #, c-format
 msgid "Stopped %s\n"
-msgstr ""
+msgstr "%s நிறுத்தப்பட்டது\n"
 
 #: ../imsettings/utils/imsettings-stop.c:82
 #, c-format
 msgid "Failed to stop IM process `%s'\n"
-msgstr ""
+msgstr "IM செயல் `%s'ஐ நிறுத்த முடியவில்லை\n"
 
-#: ../src/im-chooser-simple.c:145
-#, fuzzy
-msgid "Updating Input Method list"
-msgstr "உள்ளீடு முறை"
-
-#: ../src/im-chooser-simple.c:309 ../src/im-chooser-simple.c:343
-#, fuzzy
-msgid "Failed to start Input Method"
-msgstr "உள்ளீடு முறைகளை ஒருபோதும் பயன்படுத்த வேண்டாம் (_N)"
-
-#: ../src/im-chooser-simple.c:406
-#, fuzzy, c-format
-msgid "Starting Input Method - %s"
-msgstr "உள்ளீடு முறை"
-
-#: ../src/im-chooser-simple.c:423
-#, fuzzy, c-format
-msgid "Stopping Input Method - %s"
-msgstr "உள்ளீடு முறை"
-
-#: ../src/im-chooser-simple.c:543
-msgid "Parent Window"
-msgstr ""
-
-#: ../src/im-chooser-simple.c:544
-msgid "GtkWindow that points to the parent window"
-msgstr ""
-
-#. setup a progress window
-#: ../src/im-chooser-simple.c:584
-msgid "Work in progress..."
-msgstr ""
-
-#: ../src/im-chooser-simple.c:642
+#: ../src/im-chooser-simple.c:288
 #, c-format
 msgid "Use %s"
-msgstr ""
+msgstr "%sஐ பயன்படுத்தல்"
 
-#: ../src/im-chooser-simple.c:645
+#: ../src/im-chooser-simple.c:291
 msgid " (legacy)"
-msgstr ""
+msgstr " (legacy)"
 
-#: ../src/im-chooser-simple.c:649
+#: ../src/im-chooser-simple.c:295
 msgid " (recommended)"
-msgstr ""
+msgstr " (பரிந்துரைக்கப்பட்டது)"
 
-#: ../src/im-chooser-simple.c:761
+#: ../src/im-chooser-simple.c:405
 msgid "<b>Input Method</b>"
 msgstr "<b>உள்ளீடு முறை</b>"
 
-#: ../src/im-chooser-simple.c:767
+#: ../src/im-chooser-simple.c:411
 msgid "_Enable input method feature"
-msgstr ""
+msgstr "உள்ளீடு முறை வசதியை செயல்படுத்தவும் (_E)"
 
-#: ../src/im-chooser-simple.c:774
-#, fuzzy
+#: ../src/im-chooser-simple.c:418
 msgid ""
 "<small><i>Note: this change will not take effect until you next log in, "
 "except GTK+ applications.</i></small>"
-msgstr ""
-"<small><i>குறிப்பு: அடுத்த உள் அனுமதி செய்யும் வரை இந்த மாற்றங்கள் செயல்படுத்தப்படாது.</"
-"i></small>"
+msgstr "<small><i>குறிப்பு: GTK+பயன்பாடுகள் தவிர, மற்றவை அடுத்த புகுபதிவு செய்யும் வரை இந்த மாற்றங்கள் செயல்படுத்தப்படாது.</i></small>"
 
-#: ../src/im-chooser-simple.c:806
-#, fuzzy
+#: ../src/im-chooser-simple.c:450
 msgid "Input Method _Preferences..."
-msgstr "உள்ளீடு முறை"
+msgstr "உள்ளீடு முறை விருப்பங்கள் (_P)..."
 
 #: ../src/main.c:55
-msgid ""
-"<span weight=\"bold\" size=\"larger\">No input method is available</span>"
-msgstr ""
+msgid "<span weight=\"bold\" size=\"larger\">No input method is available</span>"
+msgstr "<span weight=\"bold\" size=\"larger\">உள்ளீடு முறை எதுவும் இல்லை</span>"
 
 #: ../src/main.c:58
 msgid "Please install any input methods before running if you like."
-msgstr ""
+msgstr "விரும்பினால் இயக்கும் முன் ஏதாவது உள்ளீடு முறைகளை நிறுவவும்."
 
 #: ../src/main.c:153
 msgid "IM Chooser - Input Method configuration tool"
@@ -457,57 +416,12 @@ msgid "_Log Out"
 msgstr "வெளியேறுதல் (_L)"
 
 #: ../src/im-chooser.desktop.in.in.h:1
-#, fuzzy
 msgid ""
 "Choose the input method to be used or disable the input method usage on the "
 "desktop"
-msgstr ""
-"உள்ளீடு முறை கட்டமைப்பு கருவி உள்ளிடு முறையை பயன்படுத்த அல்லது உள்ளீடு முறை பயன்பாட்டை "
-"பணிமேடையில் செயல்நீக்க பயன்படுகிறது"
+msgstr "பயன்படுத்த அல்லது உள்ளீடு முறை பயன்பாட்டை பணிமேடையில் செயல்நீக்க உள்ளீடு முறையை தேர்ந்தெடுக்கவும்"
 
 #: ../src/im-chooser.desktop.in.in.h:2
 msgid "Input Method"
 msgstr "உள்ளீடு முறை"
 
-#~ msgid "No valid IM installed"
-#~ msgstr "சரியான IM நிறுவப்படவில்லை"
-
-#, fuzzy
-#~ msgid "Choose _specific Input Method"
-#~ msgstr "தனிபயன் உள்ளீடு முறையை பயன்படுத்தவும் (_c)"
-
-#, fuzzy
-#~ msgid ""
-#~ "Use the specific Input Method that you prefer regardless what Input "
-#~ "Method the system recommends."
-#~ msgstr ""
-#~ "கணினி உள்ளீடு முறையை பரிந்துரை செய்கிறது தவிர உங்களுக்கு விருப்பமான உள்ளீடு "
-#~ "முறையையும் பயன்படுத்தலாம்."
-
-#, fuzzy
-#~ msgid ""
-#~ "Do not use Input Method no matter what language the desktop is running on."
-#~ msgstr ""
-#~ "எந்த மொழி பணிமேடையில் பயன்படுத்தப்படுகிறது தவிர முழு உள்ளிடு முறைகளையும் "
-#~ "பயன்படுத்தலாம்."
-
-#, fuzzy
-#~ msgid "Use legacy _Input Method"
-#~ msgstr "முறையான உள்ளீடு முறைகளை பயன்படுத்தவும் (_U)"
-
-#~ msgid ""
-#~ "Use X Input Method anyway. In fact, which input method will be chosen for "
-#~ "the desktop session, depends on the desktop language."
-#~ msgstr ""
-#~ "X உள்ளீடு முறையை எப்படியும் பயன்படுத்தவும். பணிமேடை மொழியைப் பொருத்து, எந்த உள்ளீடு "
-#~ "முறை பணிமேடை அமர்வுக்கு பயன்படுத்த வேண்டும் என்பதை பார்க்கவும்."
-
-#~ msgid "_Follow the system-wide configuration"
-#~ msgstr "கணினி சார்ந்த கட்டமைப்பினை பின்பற்றவும் (_F)"
-
-#~ msgid ""
-#~ "Follow the system-wide input method configuration to determine which "
-#~ "input method should be used."
-#~ msgstr ""
-#~ "கணினி சார்ந்த உள்ளீடு முறை கட்டமைப்பினை பின்பற்றி எந்த உள்ளீடு முறையை பயன்படுத்த "
-#~ "வேண்டும் என்பதை அறியவும்."
