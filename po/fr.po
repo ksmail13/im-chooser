@@ -1,6 +1,6 @@
-# translation of im-chooser.trunk.fr-3.po to Français
+# translation of im-chooser to Français
 # French translations for im-chooser package.
-# Copyright (C) 2006 Red Hat, Inc. All rights reserved.
+# Copyright (C) 2006-2008 Red Hat, Inc. All rights reserved.
 # This file is distributed under the same license as the im-chooser package.
 #
 # Automatically generated, 2006.
@@ -8,13 +8,15 @@
 # Thomas Canniot <mrtom@fedoraproject.org>, 2006, 2007, 2008.
 # Decroux Fabien <fdecroux@redhat.com>, 2006.
 # Mathieu Schopfer <mat.schopfer@bluewin.ch>, 2008.
+# Robert-André Mauchin <zebob.m@pengzone.org>, 2008.
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: im-chooser.trunk.fr-3\n"
+"Project-Id-Version: im-chooser trunk\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-03-11 21:15+0900\n"
-"PO-Revision-Date: 2008-02-29 22:20+0100\n"
-"Last-Translator: Mathieu Schopfer <mat.schopfer@bluewin.ch>\n"
+"POT-Creation-Date: 2008-03-12 07:57+0000\n"
+"PO-Revision-Date: 2008-03-13 18:37:36+0100\n"
+"Last-Translator: Robert-André Mauchin <zebob.m@pengzone.org>\n"
 "Language-Team: Français <fedora-trans-fr@redhat.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -150,7 +152,7 @@ msgstr "Paramètres par défaut du système"
 
 #: ../imsettings/imsettings/imsettings-info.c:583
 msgid "Whether or not IM is a system default."
-msgstr "Choisir si IM est ou pas un paramètre par défaut du système."
+msgstr "Indique si IM est un paramètre par défaut du système."
 
 #: ../imsettings/imsettings/imsettings-info.c:588
 msgid "User Default"
@@ -158,7 +160,7 @@ msgstr "Paramètres par défaut de l'utilisateur"
 
 #: ../imsettings/imsettings/imsettings-info.c:589
 msgid "Whether or not IM is an user default."
-msgstr "Choisir si IM est ou pas un paramètre par défaut de l'utilisateur."
+msgstr "Indique si IM est un paramètre par défaut de l'utilisateur."
 
 #: ../imsettings/imsettings/imsettings-info.c:594
 msgid "XIM"
@@ -166,29 +168,28 @@ msgstr "XIM"
 
 #: ../imsettings/imsettings/imsettings-info.c:595
 msgid "Whether or not IM is a XIM server."
-msgstr "Choisir si IM est ou pas un serveur XIM."
+msgstr "Indique si IM est un serveur XIM."
+
+#: ../imsettings/imsettings/imsettings-info-private.h:39
+msgid "User Specific"
+msgstr "Spécifique à l'utilisateur"
 
 #: ../imsettings/imsettings/imsettings-info-private.h:40
-msgid "User Specific"
-msgstr ""
-
-#: ../imsettings/imsettings/imsettings-info-private.h:41
 msgid "xinputrc was modified by the user"
-msgstr ""
+msgstr "xinputrc a été modifié par l'utilisateur"
 
 #: ../imsettings/imsettings/imsettings-observer.c:255
 #, c-format
 msgid "Invalid IM module type: %d"
-msgstr "Type de module IM invalide : %d"
+msgstr "Type de module IM invalide : %d"
 
 #: ../imsettings/imsettings/imsettings-observer.c:695
 msgid "IM module name"
 msgstr "Nom du module IM"
 
 #: ../imsettings/imsettings/imsettings-observer.c:696
-#, fuzzy
 msgid "A target IM module name that to observe signals"
-msgstr "Un nom de module IM à surveiller rapporte"
+msgstr "Un nom de module IM cible destiné à surveiller les signaux"
 
 #: ../imsettings/imsettings/imsettings-observer.c:701
 msgid "Replace"
@@ -241,7 +242,7 @@ msgid ""
 "Failed to invoke a method `%s':\n"
 "  %s"
 msgstr ""
-"Impossible d'appeler la méthode « %s » :\n"
+"Échec de l'appel à la méthode « %s » :\n"
 "  %s"
 
 #: ../imsettings/imsettings/imsettings-request.c:672
@@ -250,18 +251,18 @@ msgid ""
 "Failed to invoke a method `%s' on %s:\n"
 "  %s"
 msgstr ""
-"Impossible d'appeler la méthode « %s » sur %s :\n"
+"Échec de l'appel à la méthode « %s » sur %s :\n"
 "  %s"
 
 #: ../imsettings/src/factory.c:136
 #, c-format
 msgid "Failed to remove a pidfile: %s"
-msgstr "Impossible de supprimer un fichier PID : %s"
+msgstr "Échec de la suppression du fichier PID : %s"
 
 #: ../imsettings/src/factory.c:178
 #, c-format
 msgid "Failed to open a pidfile: %s"
-msgstr "Impossible d'ouvrir un fichier PID : %s"
+msgstr "Échec de l'ouverture du fichier PID : %s"
 
 #: ../imsettings/src/factory.c:282
 #, c-format
@@ -274,88 +275,84 @@ msgid "Couldn't send a signal to the %s process successfully."
 msgstr "Aucun signal n'a pu être envoyé au processus %s."
 
 #: ../imsettings/src/factory.c:314 ../imsettings/src/factory.c:600
-#, c-format
 msgid "Failed to get a place of home directory."
-msgstr "Impossible d'obtenir un emplacement de répertoire personnel."
+msgstr "Échec de l'obtention d'un emplacement de répertoire personnel."
 
 #: ../imsettings/src/factory.c:331
 #, c-format
 msgid "Failed to revert the backup file: %s"
-msgstr "Impossible de restaurer le fichier de sauvegarde : %s"
+msgstr "Échec du rétablissement du fichier de sauvegarde : %s"
 
 #: ../imsettings/src/factory.c:343
 #, c-format
 msgid "Failed to create a backup file: %s"
-msgstr "Impossible de créer le fichier de sauvegarde : %s"
+msgstr "Échec de la création d'un fichier de sauvegarde : %s"
 
 #: ../imsettings/src/factory.c:352
 #, c-format
 msgid "Failed to remove a .xinputrc file: %s"
-msgstr "Impossible de supprimer un fichier .xinputrc : %s"
+msgstr "Échec de la suppression d'un fichier .xinputrc : %s"
 
 #: ../imsettings/src/factory.c:363
 #, c-format
 msgid "Failed to make a symlink: %s"
-msgstr "Impossible d'établir un lien symbolique : %s"
+msgstr "Échec de l'établissement d'un lien symbolique : %s"
 
 #: ../imsettings/src/factory.c:478 ../imsettings/src/factory_info.c:526
 #, c-format
 msgid "No such input method on your system: %s"
-msgstr "Cette méthode de saisie est indisponible sur votre système : %s"
+msgstr "Cette méthode de saisie est indisponible sur votre système : %s"
 
 #: ../imsettings/src/factory.c:498
 #, c-format
 msgid "No XIM server is available in %s"
-msgstr ""
+msgstr "Aucun serveur XIM n'est disponible dans %s"
 
 #: ../imsettings/src/factory.c:646
 msgid "X display name"
-msgstr "Nom de la session X"
+msgstr "Nom de l'affichage X"
 
 #: ../imsettings/src/factory.c:647
 msgid "X display name to use"
-msgstr "Nom de la session X à utiliser"
+msgstr "Nom de l'affichage X à utiliser"
 
 #: ../imsettings/src/factory.c:691
 msgid "X display to use"
-msgstr "Session X à utiliser"
+msgstr "Affichage X à utiliser"
 
 #: ../imsettings/src/factory.c:691
 msgid "DISPLAY"
-msgstr "SESSION"
+msgstr "AFFICHAGE"
 
 #. FIXME
 #: ../imsettings/src/factory.c:694
 msgid "X screen to use"
-msgstr "Session X à utiliser"
+msgstr "AFFICHAGE X à utiliser"
 
 #: ../imsettings/src/factory.c:694
 msgid "SCREEN"
 msgstr "ÉCRAN"
 
 #: ../imsettings/src/factory.c:725
-#, c-format
 msgid "Failed to open a X display."
-msgstr "Impossible d'ouvrir une session X."
+msgstr "L'ouverture d'un affichage X a échoué."
 
 #: ../imsettings/src/factory_info.c:127
-#, c-format
 msgid "Reloading...\n"
 msgstr "Rechargement ...\n"
 
 #: ../imsettings/src/factory_info.c:188
 #, c-format
 msgid "Duplicate entry `%s' from %s. SHORT_DESC has to be unique."
-msgstr "Double entrée `%s' depuis %s. SHORT_DESC doit être unique."
+msgstr "Entrée « %s » dupliquée depuis %s. SHORT_DESC doit être unique."
 
 #: ../imsettings/src/factory_info.c:446 ../imsettings/src/factory_info.c:484
 #: ../imsettings/src/factory_info.c:500 ../imsettings/src/factory_info.c:518
 #, c-format
 msgid "Timed out to initialize %s services."
-msgstr ""
+msgstr "Délai dépassé lors de l'initialisation des services %s."
 
 #: ../imsettings/src/factory_info.c:469
-#, c-format
 msgid "No input methods available on your system."
 msgstr "Aucune méthode de saisie disponible sur votre système."
 
@@ -370,81 +367,79 @@ msgstr ""
 #: ../imsettings/utils/imsettings-restart.c:44
 #: ../imsettings/utils/imsettings-stop.c:43
 msgid "Do not update .xinputrc."
-msgstr ""
+msgstr "Ne pas mettre à jour .xinputrc."
 
 #: ../imsettings/utils/imsettings-stop.c:80
 #, c-format
 msgid "Stopped %s\n"
-msgstr ""
+msgstr "%s arrêté\n"
 
 #: ../imsettings/utils/imsettings-stop.c:82
-#, fuzzy, c-format
+#, c-format
 msgid "Failed to stop IM process `%s'\n"
-msgstr "Impossible d'ouvrir un fichier PID : %s"
+msgstr "L'arrêt du processus IM « %s » a échoué\n"
 
 #: ../src/im-chooser-simple.c:145
-#, fuzzy
 msgid "Updating Input Method list"
-msgstr "Méthode de saisie"
+msgstr "Mise à jour de la liste des méthodes de saisie"
 
-#: ../src/im-chooser-simple.c:309 ../src/im-chooser-simple.c:343
-#, fuzzy
+#: ../src/im-chooser-simple.c:310 ../src/im-chooser-simple.c:344
 msgid "Failed to start Input Method"
-msgstr "Méthode de saisie"
+msgstr "Le démarrage de la méthode de saisie a échoué"
 
-#: ../src/im-chooser-simple.c:406
-#, fuzzy, c-format
+#: ../src/im-chooser-simple.c:407
+#, c-format
 msgid "Starting Input Method - %s"
-msgstr "Méthode de saisie"
+msgstr "Démarrage de la méthode de saisie - %s"
 
-#: ../src/im-chooser-simple.c:423
-#, fuzzy, c-format
+#: ../src/im-chooser-simple.c:424
+#, c-format
 msgid "Stopping Input Method - %s"
-msgstr "Méthode de saisie"
+msgstr "Arrêt de la méthode de saisie - %s"
+
+#: ../src/im-chooser-simple.c:542
+msgid "Parent Window"
+msgstr "Fenêtre parente"
 
 #: ../src/im-chooser-simple.c:543
-msgid "Parent Window"
-msgstr ""
-
-#: ../src/im-chooser-simple.c:544
 msgid "GtkWindow that points to the parent window"
-msgstr ""
+msgstr "Fenêtre GtkWindow qui indique la fenêtre parente"
 
 #. setup a progress window
-#: ../src/im-chooser-simple.c:584
+#: ../src/im-chooser-simple.c:583
 msgid "Work in progress..."
-msgstr ""
+msgstr "Traitement en cours..."
 
-#: ../src/im-chooser-simple.c:642
+#: ../src/im-chooser-simple.c:641
 #, c-format
 msgid "Use %s"
 msgstr "Utiliser %s"
 
-#: ../src/im-chooser-simple.c:645
+#: ../src/im-chooser-simple.c:644
 msgid " (legacy)"
 msgstr " (ancienne version)"
 
-#: ../src/im-chooser-simple.c:649
+#: ../src/im-chooser-simple.c:648
 msgid " (recommended)"
 msgstr " (recommandée)"
 
-#: ../src/im-chooser-simple.c:761
+#: ../src/im-chooser-simple.c:760
 msgid "<b>Input Method</b>"
 msgstr "<b>Méthode de saisie</b>"
 
-#: ../src/im-chooser-simple.c:767
+#: ../src/im-chooser-simple.c:766
 msgid "_Enable input method feature"
 msgstr "_Activer les méthodes de saisie"
 
-#: ../src/im-chooser-simple.c:774
+#: ../src/im-chooser-simple.c:773
 msgid ""
 "<small><i>Note: this change will not take effect until you next log in, "
 "except GTK+ applications.</i></small>"
 msgstr ""
-"<small><i>Note : ce changement ne prendra effet qu'à votre prochaine "
+"<small><i>Note : ce changement ne prendra effet qu'à votre prochaine "
 "connexion, sauf pour les applications GTK+.</i></small>"
 
-#: ../src/im-chooser-simple.c:806
+#: ../src/im-chooser-simple.c:805
 msgid "Input Method _Preferences..."
 msgstr "_Préférences des méthodes de saisie..."
 
@@ -461,11 +456,11 @@ msgstr "Veuillez installer une méthode de saisie avant de lancer le logiciel."
 
 #: ../src/main.c:153
 msgid "IM Chooser - Input Method configuration tool"
-msgstr "IM Chooser - Outil de configuration de méthode de saisie"
+msgstr "IM Chooser - Outil de configuration des méthodes de saisie"
 
 #: ../src/main.c:161
 msgid "_Log Out"
-msgstr "_Se déconnecter"
+msgstr "Se _déconnecter"
 
 #: ../src/im-chooser.desktop.in.in.h:1
 msgid ""
