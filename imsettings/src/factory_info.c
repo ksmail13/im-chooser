@@ -486,7 +486,7 @@ imsettings_info_manager_real_get_current_user_im(IMSettingsObserver  *observer,
 		return NULL;
 	}
 
-	return priv->current_user_im;
+	return (priv->current_user_im ? priv->current_user_im : priv->current_system_im);
 }
 
 static const gchar *

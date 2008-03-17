@@ -1,3 +1,8 @@
+2008-03-17  Akira TAGOH  <tagoh@redhat.com>
+
+	* src/factory_info.c (imsettings_info_manager_real_get_current_user_im):
+	Get back current system IM if current user IM is NULL.
+
 2008-03-12  Akira TAGOH  <tagoh@redhat.com>
 
 	* backends/xfce/imsettings_plugin.c: Mcs plugin for imsettings support.
