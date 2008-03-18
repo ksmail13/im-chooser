@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: im-chooser.trunk.ta\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-02-20 01:39-0700\n"
-"PO-Revision-Date: 2008-03-15 18:56+0530\n"
+"POT-Creation-Date: 2008-03-17 09:55+0000\n"
+"PO-Revision-Date: 2008-03-18 08:52+0530\n"
 "Last-Translator: I. Felix <ifelix@redhat.com>\n"
 "Language-Team: Tamil <fedora-trans-ta@redhat.com>\n"
 "MIME-Version: 1.0\n"
@@ -24,15 +24,17 @@ msgstr ""
 "\n"
 "\n"
 "\n"
+"\n"
+"\n"
 
-#: ../imsettings/backends/gconf/main.c:181
+#: ../imsettings/backends/gconf/main.c:184
 #: ../imsettings/imsettings/imsettings-observer.c:702
-#: ../imsettings/src/factory.c:677 ../imsettings/src/factory_info.c:644
+#: ../imsettings/src/factory.c:690 ../imsettings/src/factory_info.c:645
 msgid "Replace the running settings daemon with new instance."
 msgstr "புதிய நிகழ்வுடன் இயங்கும் டீமான் அமைவுகளை மாற்றவும்"
 
-#: ../imsettings/backends/gconf/main.c:203 ../imsettings/src/factory.c:704
-#: ../imsettings/src/factory_info.c:666
+#: ../imsettings/backends/gconf/main.c:206 ../imsettings/src/factory.c:717
+#: ../imsettings/src/factory_info.c:667
 #: ../imsettings/utils/imsettings-reload.c:63
 #: ../imsettings/utils/imsettings-restart.c:65
 #: ../imsettings/utils/imsettings-stop.c:63
@@ -169,6 +171,14 @@ msgstr "XIM"
 msgid "Whether or not IM is a XIM server."
 msgstr "IM XIM சேவையகமாக இருக்க வேண்டுமா அல்லது வேண்டாமா."
 
+#: ../imsettings/imsettings/imsettings-info-private.h:39
+msgid "User Specific"
+msgstr "பயனர் குறிப்பீடு"
+
+#: ../imsettings/imsettings/imsettings-info-private.h:40
+msgid "xinputrc was modified by the user"
+msgstr "xinputrc பயனரால் மாற்றப்பட்டது"
+
 #: ../imsettings/imsettings/imsettings-observer.c:255
 #, c-format
 msgid "Invalid IM module type: %d"
@@ -245,105 +255,105 @@ msgstr ""
 "முறை `%s'ஐ %s இல் எடுக்க முடியவில்லை:\n"
 "  %s"
 
-#: ../imsettings/src/factory.c:133
+#: ../imsettings/src/factory.c:136
 #, c-format
 msgid "Failed to remove a pidfile: %s"
 msgstr "ஒரு pidfileஐ நீக்க முடியவில்லை: %s"
 
-#: ../imsettings/src/factory.c:166
+#: ../imsettings/src/factory.c:178
 #, c-format
 msgid "Failed to open a pidfile: %s"
 msgstr "pidfile ஐ திறக்க முடியவில்லை: %s"
 
-#: ../imsettings/src/factory.c:270
+#: ../imsettings/src/factory.c:282
 #, c-format
 msgid "Couldn't determine the pid for %s process."
 msgstr "%s processக்கு pid வரையறுக்க முடியவில்லை."
 
-#: ../imsettings/src/factory.c:276
+#: ../imsettings/src/factory.c:288
 #, c-format
 msgid "Couldn't send a signal to the %s process successfully."
 msgstr "ஒரு சிக்னலை %s செயலுக்கு அனுப்ப முடியவில்லை."
 
-#: ../imsettings/src/factory.c:302 ../imsettings/src/factory.c:587
+#: ../imsettings/src/factory.c:314 ../imsettings/src/factory.c:600
 msgid "Failed to get a place of home directory."
 msgstr "இல்ல அடைவில் ஒரு இடத்தைப் பெற முடியவில்லை."
 
-#: ../imsettings/src/factory.c:319
+#: ../imsettings/src/factory.c:331
 #, c-format
 msgid "Failed to revert the backup file: %s"
 msgstr "பின்சேமிப்பு கோப்பினை திரும்ப எடுக்க முடியவில்லை: %s"
 
-#: ../imsettings/src/factory.c:331
+#: ../imsettings/src/factory.c:343
 #, c-format
 msgid "Failed to create a backup file: %s"
 msgstr "ஒரு பின் சேமிப்பு கோப்பினை உருவாக்க முடியவில்லை: %s"
 
-#: ../imsettings/src/factory.c:340
+#: ../imsettings/src/factory.c:352
 #, c-format
 msgid "Failed to remove a .xinputrc file: %s"
 msgstr "ஒரு .xinputrc கோப்பினை நீக்க முடியவில்லை: %s"
 
-#: ../imsettings/src/factory.c:351
+#: ../imsettings/src/factory.c:363
 #, c-format
 msgid "Failed to make a symlink: %s"
 msgstr "ஒரு symlinkஐ உருவாக்க முடியவில்லை: %s"
 
-#: ../imsettings/src/factory.c:466 ../imsettings/src/factory_info.c:525
+#: ../imsettings/src/factory.c:478 ../imsettings/src/factory_info.c:526
 #, c-format
 msgid "No such input method on your system: %s"
 msgstr "உங்கள் கணினியில் இதுபோன்ற உள்ளீடு முறை இல்லை: %s"
 
-#: ../imsettings/src/factory.c:486
+#: ../imsettings/src/factory.c:498
 #, c-format
 msgid "No XIM server is available in %s"
 msgstr "%s இல் XIM சேவையகம் இல்லை"
 
-#: ../imsettings/src/factory.c:633
+#: ../imsettings/src/factory.c:646
 msgid "X display name"
 msgstr "X காட்சி பெயர்"
 
-#: ../imsettings/src/factory.c:634
+#: ../imsettings/src/factory.c:647
 msgid "X display name to use"
 msgstr "பயன்படுத்தி X காட்சி பெயர்"
 
-#: ../imsettings/src/factory.c:678
+#: ../imsettings/src/factory.c:691
 msgid "X display to use"
 msgstr "பயன்படுத்தி X காட்சி"
 
-#: ../imsettings/src/factory.c:678
+#: ../imsettings/src/factory.c:691
 msgid "DISPLAY"
 msgstr "DISPLAY"
 
 #. FIXME
-#: ../imsettings/src/factory.c:681
+#: ../imsettings/src/factory.c:694
 msgid "X screen to use"
 msgstr "பயன்படுத்தி X திரை"
 
-#: ../imsettings/src/factory.c:681
+#: ../imsettings/src/factory.c:694
 msgid "SCREEN"
 msgstr "SCREEN"
 
-#: ../imsettings/src/factory.c:712
+#: ../imsettings/src/factory.c:725
 msgid "Failed to open a X display."
 msgstr "ஒரு X காட்சியை திறக்க முடியவில்லை."
 
-#: ../imsettings/src/factory_info.c:126
+#: ../imsettings/src/factory_info.c:127
 msgid "Reloading...\n"
 msgstr "மீண்டும் ஏற்றுகிறது...\n"
 
-#: ../imsettings/src/factory_info.c:187
+#: ../imsettings/src/factory_info.c:188
 #, c-format
 msgid "Duplicate entry `%s' from %s. SHORT_DESC has to be unique."
 msgstr "`%s' இலிருந்து %sக்கு இரட்டை உள்ளீடு. SHORT_DESC தனித்தன்மையாக இருக்க வேண்டும்."
 
-#: ../imsettings/src/factory_info.c:445 ../imsettings/src/factory_info.c:483
-#: ../imsettings/src/factory_info.c:499 ../imsettings/src/factory_info.c:517
+#: ../imsettings/src/factory_info.c:446 ../imsettings/src/factory_info.c:484
+#: ../imsettings/src/factory_info.c:500 ../imsettings/src/factory_info.c:518
 #, c-format
 msgid "Timed out to initialize %s services."
 msgstr "%s சேவைகளை துவக்க நேரம் முடிந்தது."
 
-#: ../imsettings/src/factory_info.c:468
+#: ../imsettings/src/factory_info.c:469
 msgid "No input methods available on your system."
 msgstr "உங்கள் கணினியில் உள்ளீடு முறைகள் எதுவும் இல்லை."
 
@@ -368,34 +378,67 @@ msgstr "%s நிறுத்தப்பட்டது\n"
 msgid "Failed to stop IM process `%s'\n"
 msgstr "IM செயல் `%s'ஐ நிறுத்த முடியவில்லை\n"
 
-#: ../src/im-chooser-simple.c:288
+#: ../src/im-chooser-simple.c:145
+msgid "Updating Input Method list"
+msgstr "உள்ளீடு முறை பட்டியலை மேம்படுத்துதல்"
+
+#: ../src/im-chooser-simple.c:310 ../src/im-chooser-simple.c:344
+msgid "Failed to start Input Method"
+msgstr "உள்ளீடு முறையை துவக்க முடியவில்லை"
+
+#: ../src/im-chooser-simple.c:407
+#, c-format
+msgid "Starting Input Method - %s"
+msgstr "உள்ளீடு முறையை துவக்குகிறது - %s"
+
+#: ../src/im-chooser-simple.c:424
+#, c-format
+msgid "Stopping Input Method - %s"
+msgstr "உள்ளீடு முறையை நிறுத்துகிறது - %s"
+
+#: ../src/im-chooser-simple.c:542
+msgid "Parent Window"
+msgstr "தாய் சாளரம்"
+
+#: ../src/im-chooser-simple.c:543
+msgid "GtkWindow that points to the parent window"
+msgstr "GtkWindow தாய் சாளரத்தை குறிக்கிறது"
+
+#. setup a progress window
+#: ../src/im-chooser-simple.c:583
+msgid "Work in progress..."
+msgstr "பணி நடந்து கொண்டிருக்கிறது..."
+
+#: ../src/im-chooser-simple.c:641
 #, c-format
 msgid "Use %s"
 msgstr "%sஐ பயன்படுத்தல்"
 
-#: ../src/im-chooser-simple.c:291
+#: ../src/im-chooser-simple.c:644
 msgid " (legacy)"
 msgstr " (legacy)"
 
-#: ../src/im-chooser-simple.c:295
+#: ../src/im-chooser-simple.c:648
 msgid " (recommended)"
 msgstr " (பரிந்துரைக்கப்பட்டது)"
 
-#: ../src/im-chooser-simple.c:405
+#: ../src/im-chooser-simple.c:760
 msgid "<b>Input Method</b>"
 msgstr "<b>உள்ளீடு முறை</b>"
 
-#: ../src/im-chooser-simple.c:411
+#: ../src/im-chooser-simple.c:766
 msgid "_Enable input method feature"
 msgstr "உள்ளீடு முறை வசதியை செயல்படுத்தவும் (_E)"
 
-#: ../src/im-chooser-simple.c:418
+#: ../src/im-chooser-simple.c:773
 msgid ""
 "<small><i>Note: this change will not take effect until you next log in, "
 "except GTK+ applications.</i></small>"
-msgstr "<small><i>குறிப்பு: GTK+பயன்பாடுகள் தவிர, மற்றவை அடுத்த புகுபதிவு செய்யும் வரை இந்த மாற்றங்கள் செயல்படுத்தப்படாது.</i></small>"
+msgstr ""
+"<small><i>குறிப்பு: GTK+பயன்பாடுகள் தவிர, மற்றவை அடுத்த புகுபதிவு செய்யும் வரை இந்த "
+"மாற்றங்கள் செயல்படுத்தப்படாது.</i></small>"
 
-#: ../src/im-chooser-simple.c:450
+#: ../src/im-chooser-simple.c:805
 msgid "Input Method _Preferences..."
 msgstr "உள்ளீடு முறை விருப்பங்கள் (_P)..."
 
@@ -419,7 +462,9 @@ msgstr "வெளியேறுதல் (_L)"
 msgid ""
 "Choose the input method to be used or disable the input method usage on the "
 "desktop"
-msgstr "பயன்படுத்த அல்லது உள்ளீடு முறை பயன்பாட்டை பணிமேடையில் செயல்நீக்க உள்ளீடு முறையை தேர்ந்தெடுக்கவும்"
+msgstr ""
+"பயன்படுத்த அல்லது உள்ளீடு முறை பயன்பாட்டை பணிமேடையில் செயல்நீக்க உள்ளீடு முறையை "
+"தேர்ந்தெடுக்கவும்"
 
 #: ../src/im-chooser.desktop.in.in.h:2
 msgid "Input Method"
