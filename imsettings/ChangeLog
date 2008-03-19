@@ -1,3 +1,7 @@
+2008-03-19  Akira TAGOH  <tagoh@redhat.com>
+
+	* imsettings/Makefile.am: Make it more better to generate code from glib-genmarshal.
+
 2008-03-17  Akira TAGOH  <tagoh@redhat.com>
 
 	* src/factory_info.c (imsettings_info_manager_real_get_current_user_im):
