@@ -41,6 +41,9 @@ G_BEGIN_DECLS
 #define IMSETTINGS_QT_SERVICE_DBUS	"com.redhat.imsettings.Qt"
 #define IMSETTINGS_QT_PATH_DBUS		"/com/redhat/imsettings/Qt"
 #define IMSETTINGS_QT_INTERFACE_DBUS	"com.redhat.imsettings.Qt"
+#define IMSETTINGS_XIM_SERVICE_DBUS	"com.redhat.imsettings.XIM"
+#define IMSETTINGS_XIM_PATH_DBUS	"/com/redhat/imsettings/XIM"
+#define IMSETTINGS_XIM_INTERFACE_DBUS	"com.redhat.imsettings.XIM"
 
 enum IMSettingsIMModuleType {
 	IMSETTINGS_IMM_GTK,

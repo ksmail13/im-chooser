@@ -11,3 +11,6 @@ endif
 if ENABLE_XFCE
 SUBDIRS += xfce
 endif
+if ENABLE_XIM
+SUBDIRS += xim
+endif
