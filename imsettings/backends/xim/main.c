@@ -25,6 +25,7 @@
 #include "config.h"
 #endif
 
+#include <locale.h>
 #include <stdlib.h>
 #include <string.h>
 #include <glib/gi18n.h>
@@ -230,7 +231,7 @@ main(int    argc,
 	quark_main_loop = g_quark_from_static_string("xim-server-main-loop");
 
 	conn = dbus_bus_get(DBUS_BUS_SESSION, NULL);
-	req = imsettings_request_new(conn, IMSETTINGS_INTERFACE_DBUS);
+	req = imsettings_request_new(conn, IMSETTINGS_INFO_INTERFACE_DBUS);
 	imsettings_request_set_locale(req, locale);
 	module = imsettings_request_get_current_user_im(req);
 	if (module == NULL) {

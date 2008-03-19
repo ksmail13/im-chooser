@@ -1,5 +1,10 @@
 2008-03-19  Akira TAGOH  <tagoh@redhat.com>
 
+	* backends/xim/main.c: Add a missing header file.
+
+	* backends/xim/connection.c (xim_connection_forward_event):
+	Fix a segfault when the major-opcode is more than expects.
+
 	* imsettings/imsettings-request.c (imsettings_request_change_to_with_signal):
 	Fix a typo.
 

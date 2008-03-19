@@ -32,7 +32,7 @@
 
 
 #define XIM_CONNECTION_GET_PRIVATE(_o_)	(G_TYPE_INSTANCE_GET_PRIVATE ((_o_), XIM_TYPE_CONNECTION, XIMConnectionPrivate))
-#define XIM_CONNECTION_PROTOCOL_NAME(_n_)	(__xim_event_names + __xim_event_map[_n_])
+#define XIM_CONNECTION_PROTOCOL_NAME(_n_)	(__xim_event_names + __xim_event_map[(_n_)])
 
 #ifdef GNOME_ENABLE_DEBUG
 #define d(e)	e
@@ -604,7 +604,7 @@ xim_connection_forward_event(XIMConnection *connection,
 						    d(g_print("%ld: %s: %s on %s with Property\n",
 							      priv->comm_client_window,
 							      direction[(is_reply ? 1 : 0)],
-							      XIM_CONNECTION_PROTOCOL_NAME (event_type),
+							      XIM_CONNECTION_PROTOCOL_NAME (MIN (event_type, G_N_ELEMENTS (__xim_event_map) - 1)),
 							      protocol[protocol_type]));
 					    }
 				    } else if (ecm->format == 8) {
@@ -613,7 +613,7 @@ xim_connection_forward_event(XIMConnection *connection,
 					    d(g_print("%ld: %s: %s on %s\n",
 						      priv->comm_client_window,
 						      direction[(is_reply ? 1 : 0)],
-						      XIM_CONNECTION_PROTOCOL_NAME (event_type),
+						      XIM_CONNECTION_PROTOCOL_NAME (MIN (event_type, G_N_ELEMENTS (__xim_event_map) - 1)),
 						      protocol[protocol_type]));
 				    } else {
 					    g_warning("Invalid packet.");
