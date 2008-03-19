@@ -16,6 +16,12 @@ LIBS =									\
 
 bin_PROGRAMS = imsettings-xim
 
+noinst_HEADERS =							\
+	connection.h							\
+	server.h							\
+	utils.h								\
+	$(NULL)
+
 imsettings_xim_SOURCES =						\
 	connection.c							\
 	main.c								\
