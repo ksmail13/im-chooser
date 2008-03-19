@@ -509,9 +509,9 @@ imsettings_manager_real_start_im(IMSettingsObserver  *imsettings,
 	 */
 	imm = imsettings_request_get_im_module_name(req, module, IMSETTINGS_IMM_GTK);
 	imsettings_request_change_to(priv->gtk_req, imm);
-#if 0
 	imm = imsettings_request_get_im_module_name(req, module, IMSETTINGS_IMM_XIM);
-	imsettings_request_change_to(priv->xim_req, imm);
+	imsettings_request_change_to_with_signal(priv->xim_req, imm);
+#if 0
 	imm = imsettings_request_get_im_module_name(req, module, IMSETTINGS_IMM_QT);
 	imsettings_request_change_to(priv->qt_req, imm);
 #endif
@@ -555,8 +555,8 @@ imsettings_manager_real_stop_im(IMSettingsObserver  *imsettings,
 	/* FIXME: We need to take care of imsettings per X screens?
 	 */
 	imsettings_request_change_to(priv->gtk_req, NULL);
-#if 0
 	imsettings_request_change_to(priv->xim_req, NULL);
+#if 0
 	imsettings_request_change_to(priv->qt_req, NULL);
 #endif
 
@@ -657,7 +657,7 @@ imsettings_manager_init(IMSettingsManager *manager)
 	priv->req_conn = dbus_bus_get(DBUS_BUS_SESSION, NULL);
 
 	priv->gtk_req = imsettings_request_new(priv->req_conn, IMSETTINGS_GCONF_INTERFACE_DBUS);
-//	priv->xim_req = imsettings_request_new(priv->req_conn, IMSETTINGS_XIM_INTERFACE_DBUS);
+	priv->xim_req = imsettings_request_new(priv->req_conn, IMSETTINGS_XIM_INTERFACE_DBUS);
 //	priv->qt_req = imsettings_request_new(priv->req_conn, IMSETTINGS_QT_INTERFACE_DBUS);
 }
 

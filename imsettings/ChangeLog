@@ -1,5 +1,12 @@
 2008-03-19  Akira TAGOH  <tagoh@redhat.com>
 
+	* src/factory.c (imsettings_manager_real_start_im): send a change to
+	XIM server too.
+	(imsettings_manager_real_stop_im): likewise.
+
+	* imsettings/imsettings-request.c (imsettings_request_change_to_with_signal):
+	new to send a ChangeTo signal. particularly for XIM server.
+
 	* imsettings/backends/Makefile.am: Add a rule to build xim support.
 
 	* imsettings/backends/xim/connection.[ch]:

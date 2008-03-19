@@ -99,6 +99,8 @@ gboolean           imsettings_request_reload                 (IMSettingsRequest 
                                                               gboolean           force);
 gboolean           imsettings_request_change_to              (IMSettingsRequest *imsettings,
                                                               const gchar       *module);
+gboolean           imsettings_request_change_to_with_signal  (IMSettingsRequest *imsettings,
+							      const gchar       *module);
 
 gboolean imsettings_request_get_im_list_async(IMSettingsRequest                           *imsettings,
                                               com_redhat_imsettings_IMInfo_get_list_reply  callback,
