@@ -1,5 +1,15 @@
 2008-03-19  Akira TAGOH  <tagoh@redhat.com>
 
+	* imsettings/backends/Makefile.am: Add a rule to build xim support.
+
+	* imsettings/backends/xim/connection.[ch]:
+	* imsettings/backends/xim/main.c:
+	* imsettings/backends/xim/server.[ch]:
+	* imsettings/backends/xim/utils.[ch]:
+	* imsettings/backends/xim/Makefile.am: Initial commit to support XIM.
+
+	* imsettings/imsettings/imsettings.h: Add dbus interface for XIM.
+
 	* imsettings/Makefile.am: Make it more better to generate code from glib-genmarshal.
 
 2008-03-17  Akira TAGOH  <tagoh@redhat.com>
