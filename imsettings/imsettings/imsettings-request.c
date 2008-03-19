@@ -691,7 +691,7 @@ imsettings_request_change_to_with_signal(IMSettingsRequest *imsettings,
 	priv = IMSETTINGS_REQUEST_GET_PRIVATE (imsettings);
 	message = dbus_message_new_signal(priv->path, priv->interface, "ChangeTo");
 	dbus_message_append_args(message,
-				 DBUS_TYPE_STRING, module,
+				 DBUS_TYPE_STRING, &module,
 				 DBUS_TYPE_INVALID);
 	dbus_connection_send(priv->connection, message, NULL);
 	dbus_message_unref(message);

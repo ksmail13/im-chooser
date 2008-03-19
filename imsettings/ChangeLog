@@ -1,5 +1,8 @@
 2008-03-19  Akira TAGOH  <tagoh@redhat.com>
 
+	* imsettings/imsettings-request.c (imsettings_request_change_to_with_signal):
+	Fix a typo.
+
 	* src/factory.c (imsettings_manager_real_start_im): send a change to
 	XIM server too.
 	(imsettings_manager_real_stop_im): likewise.
