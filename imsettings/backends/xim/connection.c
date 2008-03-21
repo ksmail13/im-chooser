@@ -49,7 +49,6 @@ typedef struct _XIMConnectionPrivate {
 	Window    comm_client_window;
 	Window    comm_server_window;
 	Atom      selection;
-	gboolean  connected;
 	gulong    major_transport;
 	gulong    minor_transport;
 } XIMConnectionPrivate;
@@ -61,7 +60,6 @@ enum {
 	PROP_REQUESTOR,
 	PROP_COMM_CLIENT,
 	PROP_COMM_SERVER,
-	PROP_CONNECTED,
 	LAST_PROP
 };
 enum {
@@ -285,9 +283,6 @@ xim_connection_set_property(GObject      *object,
 		    if (priv->dpy && priv->xim_server_name)
 			    xim_connection_create_agent(XIM_CONNECTION (object));
 		    break;
-	    case PROP_CONNECTED:
-		    priv->connected = g_value_get_boolean(value);
-		    break;
 	    default:
 		    G_OBJECT_WARN_INVALID_PROPERTY_ID (object, prop_id, pspec);
 		    break;
@@ -317,9 +312,6 @@ xim_connection_get_property(GObject    *object,
 		    break;
 	    case PROP_COMM_SERVER:
 		    g_value_set_ulong(value, priv->comm_server_window);
-		    break;
-	    case PROP_CONNECTED:
-		    g_value_set_boolean(value, priv->connected);
 		    break;
 	    default:
 		    G_OBJECT_WARN_INVALID_PROPERTY_ID (object, prop_id, pspec);
@@ -385,12 +377,6 @@ xim_connection_class_init(XIMConnectionClass *klass)
 							   G_MAXULONG,
 							   0,
 							   G_PARAM_READABLE));
-	g_object_class_install_property(object_class, PROP_CONNECTED,
-					g_param_spec_boolean("connected",
-							     _("connected flag"),
-							     _("A flag whether the session is established between the client and the real XIM server."),
-							     FALSE,
-							     G_PARAM_READWRITE));
 
 	/* signals */
 }
@@ -541,7 +527,6 @@ xim_connection_forward_event(XIMConnection *connection,
 			    
 			    if (ecm->message_type == priv->atoms->atom_xim_xconnect) {
 				    if (orig == priv->comm_server_window) {
-					    priv->connected = TRUE;
 					    /* have to look at the transport version to pick up
 					     * and deliver Property too perhaps
 					     */
