@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: im-chooser.trunk.es\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-03-11 21:15+0900\n"
-"PO-Revision-Date: 2008-02-20 23:53-0200\n"
+"POT-Creation-Date: 2008-03-12 07:57+0000\n"
+"PO-Revision-Date: 2008-03-22 14:55-0300\n"
 "Last-Translator: Domingo Becker <domingobecker@gmail.com>\n"
 "Language-Team: Spanish <fedora-trans-es@redhat.com>\n"
 "MIME-Version: 1.0\n"
@@ -25,8 +25,7 @@ msgstr ""
 #: ../imsettings/imsettings/imsettings-observer.c:702
 #: ../imsettings/src/factory.c:690 ../imsettings/src/factory_info.c:645
 msgid "Replace the running settings daemon with new instance."
-msgstr ""
-"Reemplazar los parámetros del demonio en ejecución con la nueva instancia."
+msgstr "Reemplazar los parámetros del demonio en ejecución con la nueva instancia."
 
 #: ../imsettings/backends/gconf/main.c:206 ../imsettings/src/factory.c:717
 #: ../imsettings/src/factory_info.c:667
@@ -166,13 +165,13 @@ msgstr "XIM"
 msgid "Whether or not IM is a XIM server."
 msgstr "Sea o no que IM sea un servidor XIM."
 
-#: ../imsettings/imsettings/imsettings-info-private.h:40
+#: ../imsettings/imsettings/imsettings-info-private.h:39
 msgid "User Specific"
-msgstr ""
+msgstr "Específico al Usuario"
 
-#: ../imsettings/imsettings/imsettings-info-private.h:41
+#: ../imsettings/imsettings/imsettings-info-private.h:40
 msgid "xinputrc was modified by the user"
-msgstr ""
+msgstr "xinputrc fue modificado por el usuario"
 
 #: ../imsettings/imsettings/imsettings-observer.c:255
 #, c-format
@@ -271,7 +270,6 @@ msgid "Couldn't send a signal to the %s process successfully."
 msgstr "No se pudo enviar exitosamente una señal al proceso %s."
 
 #: ../imsettings/src/factory.c:314 ../imsettings/src/factory.c:600
-#, c-format
 msgid "Failed to get a place of home directory."
 msgstr "No se pudo obtener un lugar en el directorio de inicio."
 
@@ -331,12 +329,10 @@ msgid "SCREEN"
 msgstr "PANTALLA"
 
 #: ../imsettings/src/factory.c:725
-#, c-format
 msgid "Failed to open a X display."
 msgstr "Falló al abrir una salida X."
 
 #: ../imsettings/src/factory_info.c:127
-#, c-format
 msgid "Reloading...\n"
 msgstr "Recargando...\n"
 
@@ -354,7 +350,6 @@ msgid "Timed out to initialize %s services."
 msgstr "Tiempo de espera superado al inicializar los servicios %s."
 
 #: ../imsettings/src/factory_info.c:469
-#, c-format
 msgid "No input methods available on your system."
 msgstr "No hay métodos de entrada disponibles en su sistema."
 
@@ -362,8 +357,7 @@ msgstr "No hay métodos de entrada disponibles en su sistema."
 #: ../imsettings/utils/imsettings-restart.c:43
 #: ../imsettings/utils/imsettings-stop.c:42
 msgid "Force reloading the configuration, including restarting the process."
-msgstr ""
-"Forzar la recarga de la configuración, incluyendo el proceso de reiniciado."
+msgstr "Forzar la recarga de la configuración, incluyendo el proceso de reiniciado."
 
 #: ../imsettings/utils/imsettings-restart.c:44
 #: ../imsettings/utils/imsettings-stop.c:43
@@ -381,60 +375,58 @@ msgid "Failed to stop IM process `%s'\n"
 msgstr "Fallo al detener un proceso IM `%s'\n"
 
 #: ../src/im-chooser-simple.c:145
-#, fuzzy
 msgid "Updating Input Method list"
-msgstr "Método de Entrada"
+msgstr "Actualizando la lista de Métodos de Entrada"
 
-#: ../src/im-chooser-simple.c:309 ../src/im-chooser-simple.c:343
-#, fuzzy
+#: ../src/im-chooser-simple.c:310 ../src/im-chooser-simple.c:344
 msgid "Failed to start Input Method"
-msgstr "Método de Entrada"
+msgstr "Falló al iniciar el Método de Entrada"
 
-#: ../src/im-chooser-simple.c:406
-#, fuzzy, c-format
+#: ../src/im-chooser-simple.c:407
+#, c-format
 msgid "Starting Input Method - %s"
-msgstr "Método de Entrada"
+msgstr "Iniciando Método de Entrada - %s"
 
-#: ../src/im-chooser-simple.c:423
-#, fuzzy, c-format
+#: ../src/im-chooser-simple.c:424
+#, c-format
 msgid "Stopping Input Method - %s"
-msgstr "Método de Entrada"
+msgstr "Deteniendo el Método de Entrada - %s"
+
+#: ../src/im-chooser-simple.c:542
+msgid "Parent Window"
+msgstr "Ventana Padre"
 
 #: ../src/im-chooser-simple.c:543
-msgid "Parent Window"
-msgstr ""
-
-#: ../src/im-chooser-simple.c:544
 msgid "GtkWindow that points to the parent window"
-msgstr ""
+msgstr "Ventana GtkWindow que apunta a la ventana padre"
 
 #. setup a progress window
-#: ../src/im-chooser-simple.c:584
+#: ../src/im-chooser-simple.c:583
 msgid "Work in progress..."
-msgstr ""
+msgstr "Trabajo en curso..."
 
-#: ../src/im-chooser-simple.c:642
+#: ../src/im-chooser-simple.c:641
 #, c-format
 msgid "Use %s"
 msgstr "Use %s"
 
-#: ../src/im-chooser-simple.c:645
+#: ../src/im-chooser-simple.c:644
 msgid " (legacy)"
 msgstr " (legado)"
 
-#: ../src/im-chooser-simple.c:649
+#: ../src/im-chooser-simple.c:648
 msgid " (recommended)"
 msgstr " (recomendado)"
 
-#: ../src/im-chooser-simple.c:761
+#: ../src/im-chooser-simple.c:760
 msgid "<b>Input Method</b>"
 msgstr "<b>Método de Entrada</b>"
 
-#: ../src/im-chooser-simple.c:767
+#: ../src/im-chooser-simple.c:766
 msgid "_Enable input method feature"
 msgstr "_Habilitar la característica de método de entrada"
 
-#: ../src/im-chooser-simple.c:774
+#: ../src/im-chooser-simple.c:773
 msgid ""
 "<small><i>Note: this change will not take effect until you next log in, "
 "except GTK+ applications.</i></small>"
@@ -442,13 +434,12 @@ msgstr ""
 "<small><i>Nota: este cambio no tendrá efecto hasta que no reingrese la "
 "sesión, excepto para las aplicaciones GTK+.</i></small>"
 
-#: ../src/im-chooser-simple.c:806
+#: ../src/im-chooser-simple.c:805
 msgid "Input Method _Preferences..."
 msgstr "_Preferencias del Método de Entrada..."
 
 #: ../src/main.c:55
-msgid ""
-"<span weight=\"bold\" size=\"larger\">No input method is available</span>"
+msgid "<span weight=\"bold\" size=\"larger\">No input method is available</span>"
 msgstr ""
 "<span weight=\"bold\" size=\"larger\">No hay disponible ningún métido de "
 "entrada</span>"
@@ -478,3 +469,4 @@ msgstr ""
 #: ../src/im-chooser.desktop.in.in.h:2
 msgid "Input Method"
 msgstr "Método de Entrada"
+
