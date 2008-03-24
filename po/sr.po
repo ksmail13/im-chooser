@@ -1,16 +1,17 @@
 # Serbian translations for im-chooser
 # Copyright (C) 2006 Red Hat, Inc.
 # This file is distributed under the same license as the im-chooser package.
-# Miloš Komarčević <kmilos@gmail.com>, 2006.
 #
+# Miloš Komarčević <kmilos@gmail.com>, 2006.
+# Jovan Krunic <jovan.krunic@gmail.com>, 2008.
 msgid ""
 msgstr ""
-"Project-Id-Version: im-chooser 0.3.2\n"
+"Project-Id-Version: im-chooser\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-03-11 21:15+0900\n"
-"PO-Revision-Date: 2007-09-23 11:12-0000\n"
+"PO-Revision-Date: 2008-03-24 19:30+0100\n"
 "Last-Translator: Miloš Komarčević <kmilos@gmail.com>\n"
-"Language-Team: Serbian (sr) <fedora@prevod.org>\n"
+"Language-Team: Serbian (sr) <fedora-trans-sr@redhat.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -22,6 +23,8 @@ msgstr ""
 #: ../imsettings/src/factory.c:690 ../imsettings/src/factory_info.c:645
 msgid "Replace the running settings daemon with new instance."
 msgstr ""
+"Замени демон који се тренутно извршава, са одговарајућим поставкама, новим "
+"примерком."
 
 #: ../imsettings/backends/gconf/main.c:206 ../imsettings/src/factory.c:717
 #: ../imsettings/src/factory_info.c:667
@@ -29,141 +32,141 @@ msgstr ""
 #: ../imsettings/utils/imsettings-restart.c:65
 #: ../imsettings/utils/imsettings-stop.c:63
 msgid "Unknown error in parsing the command lines."
-msgstr ""
+msgstr "Непозната грешка при тумачењу командних линија."
 
 #: ../imsettings/imsettings/imsettings-info.c:498
 msgid "Language"
-msgstr ""
+msgstr "Језик"
 
 #: ../imsettings/imsettings/imsettings-info.c:499
 msgid "A language to pull the information in."
-msgstr ""
+msgstr "Језик на коме се приказују информације."
 
 #: ../imsettings/imsettings/imsettings-info.c:504
 msgid "Filename"
-msgstr ""
+msgstr "Име датотеке"
 
 #: ../imsettings/imsettings/imsettings-info.c:505
 msgid "A filename referring to the IM information."
-msgstr ""
+msgstr "Име датотеке којa се односи на IM информације."
 
 #: ../imsettings/imsettings/imsettings-info.c:510
 msgid "GTK+ immodule"
-msgstr ""
+msgstr "GTK+ immodule"
 
 #: ../imsettings/imsettings/imsettings-info.c:511
 msgid "A module name used for GTK+"
-msgstr ""
+msgstr "Име модула који се користи за GTK+"
 
 #: ../imsettings/imsettings/imsettings-info.c:516
 msgid "Qt immodule"
-msgstr ""
+msgstr "Qt immodule"
 
 #: ../imsettings/imsettings/imsettings-info.c:517
 msgid "A module name used for Qt"
-msgstr ""
+msgstr "Име модула који се користи за Qt"
 
 #: ../imsettings/imsettings/imsettings-info.c:522
 msgid "XIM name"
-msgstr ""
+msgstr "XIM име"
 
 #: ../imsettings/imsettings/imsettings-info.c:523
 msgid "XIM server name"
-msgstr ""
+msgstr "XIM име сервера"
 
 #: ../imsettings/imsettings/imsettings-info.c:528
 msgid "Ignore flag"
-msgstr ""
+msgstr "Застава игнорисања"
 
 #: ../imsettings/imsettings/imsettings-info.c:529
 msgid "A flag to not list up."
-msgstr ""
+msgstr "Застава која се не излистава."
 
 #: ../imsettings/imsettings/imsettings-info.c:534
 msgid "XIM server program name"
-msgstr ""
+msgstr "Име XIM сервер програма"
 
 #: ../imsettings/imsettings/imsettings-info.c:535
 msgid "XIM server program to be run"
-msgstr ""
+msgstr "Програм XIM сервер за извршавање"
 
 #: ../imsettings/imsettings/imsettings-info.c:540
 msgid "XIM server program's options"
-msgstr ""
+msgstr "Програмске опције XIM сервера"
 
 #: ../imsettings/imsettings/imsettings-info.c:541
 msgid "Command line options for XIM server program"
-msgstr ""
+msgstr "Опције командне линије за програм XIM сервера"
 
 #: ../imsettings/imsettings/imsettings-info.c:546
 msgid "Preference program name"
-msgstr ""
+msgstr "Име програма за поставке"
 
 #: ../imsettings/imsettings/imsettings-info.c:547
 msgid "Preference program to be run"
-msgstr ""
+msgstr "Програм за поставке за извршавање"
 
 #: ../imsettings/imsettings/imsettings-info.c:552
 msgid "Preference program's options"
-msgstr ""
+msgstr "Опције програма за поставке"
 
 #: ../imsettings/imsettings/imsettings-info.c:553
 msgid "Command line options for preference program"
-msgstr ""
+msgstr "Опције комадне линије за програм за поставке"
 
 #: ../imsettings/imsettings/imsettings-info.c:558
 msgid "Auxiliary program name"
-msgstr ""
+msgstr "Име програма за подршку"
 
 #: ../imsettings/imsettings/imsettings-info.c:559
 msgid "Auxiliary program to be run"
-msgstr ""
+msgstr "Програм за подршку за извршавање"
 
 #: ../imsettings/imsettings/imsettings-info.c:564
 msgid "Auxiliary program's options"
-msgstr ""
+msgstr "Опције програма за подршку"
 
 #: ../imsettings/imsettings/imsettings-info.c:565
 msgid "Command line options for auxiliary program"
-msgstr ""
+msgstr "Опције командне линије за програм за подршку"
 
 #: ../imsettings/imsettings/imsettings-info.c:570
 #: ../imsettings/imsettings/imsettings-info.c:571
 msgid "Short Description"
-msgstr ""
+msgstr "Кратак опис"
 
 #: ../imsettings/imsettings/imsettings-info.c:576
 #: ../imsettings/imsettings/imsettings-info.c:577
 msgid "Long Description"
-msgstr ""
+msgstr "Опширан опис"
 
 #: ../imsettings/imsettings/imsettings-info.c:582
 msgid "System Default"
-msgstr ""
+msgstr "Подразумевана системска подешавања"
 
 #: ../imsettings/imsettings/imsettings-info.c:583
 msgid "Whether or not IM is a system default."
-msgstr ""
+msgstr "Да ли је, или не, IM системски подразумевани програм."
 
 #: ../imsettings/imsettings/imsettings-info.c:588
 msgid "User Default"
-msgstr ""
+msgstr "Подразумевана подешавања корисника"
 
 #: ../imsettings/imsettings/imsettings-info.c:589
 msgid "Whether or not IM is an user default."
-msgstr ""
+msgstr "Да ли је, или не, IM подразумевани програм корисника."
 
 #: ../imsettings/imsettings/imsettings-info.c:594
 msgid "XIM"
-msgstr ""
+msgstr "XIM"
 
 #: ../imsettings/imsettings/imsettings-info.c:595
 msgid "Whether or not IM is a XIM server."
-msgstr ""
+msgstr "Да ли је IM XIM сервер, или није."
 
 #: ../imsettings/imsettings/imsettings-info-private.h:40
 msgid "User Specific"
-msgstr "Кориснички одређено"
+msgstr "Својствено кориснику"
 
 #: ../imsettings/imsettings/imsettings-info-private.h:41
 msgid "xinputrc was modified by the user"
@@ -172,45 +175,45 @@ msgstr "xinputrc је изменио корисник"
 #: ../imsettings/imsettings/imsettings-observer.c:255
 #, c-format
 msgid "Invalid IM module type: %d"
-msgstr ""
+msgstr "Неисправна врста IM модула: %d"
 
 #: ../imsettings/imsettings/imsettings-observer.c:695
 msgid "IM module name"
-msgstr ""
+msgstr "Име IM модула"
 
 #: ../imsettings/imsettings/imsettings-observer.c:696
 msgid "A target IM module name that to observe signals"
-msgstr ""
+msgstr "Име циљног IM модула чије сигнале желите да посматрате"
 
 #: ../imsettings/imsettings/imsettings-observer.c:701
 msgid "Replace"
-msgstr ""
+msgstr "Замени"
 
 #: ../imsettings/imsettings/imsettings-observer.c:707
 #: ../imsettings/imsettings/imsettings-request.c:175
 msgid "DBus connection"
-msgstr ""
+msgstr "DBus веза"
 
 #: ../imsettings/imsettings/imsettings-observer.c:708
 #: ../imsettings/imsettings/imsettings-request.c:176
 msgid "An object to be a DBus connection"
-msgstr ""
+msgstr "Објекат који треба да буде DBus веза"
 
 #: ../imsettings/imsettings/imsettings-request.c:169
 msgid "DBus Interface"
-msgstr ""
+msgstr "DBus сучеље"
 
 #: ../imsettings/imsettings/imsettings-request.c:170
 msgid "Interface name to connect to DBus"
-msgstr ""
+msgstr "Име сучеља које се повезује на DBus"
 
 #: ../imsettings/imsettings/imsettings-request.c:181
 msgid "Locale"
-msgstr ""
+msgstr "Локалитет"
 
 #: ../imsettings/imsettings/imsettings-request.c:182
 msgid "Locale to get the imsettings information"
-msgstr ""
+msgstr "Локалитет са кога се добијају imsettings информације"
 
 #: ../imsettings/imsettings/imsettings-request.c:239
 #: ../imsettings/imsettings/imsettings-request.c:272
@@ -233,6 +236,8 @@ msgid ""
 "Failed to invoke a method `%s':\n"
 "  %s"
 msgstr ""
+"Нисам успео да позовем методу „%s“:\n"
+"  %s"
 
 #: ../imsettings/imsettings/imsettings-request.c:672
 #, c-format
@@ -240,166 +245,168 @@ msgid ""
 "Failed to invoke a method `%s' on %s:\n"
 "  %s"
 msgstr ""
+"Нисам успео да позовем методу „%s“ над %s:\n"
+"  %s"
 
 #: ../imsettings/src/factory.c:136
 #, c-format
 msgid "Failed to remove a pidfile: %s"
-msgstr ""
+msgstr "Нисам успео да уклоним pidfile: %s"
 
 #: ../imsettings/src/factory.c:178
 #, c-format
 msgid "Failed to open a pidfile: %s"
-msgstr ""
+msgstr "Нисам успео да отворим pidfile: %s"
 
 #: ../imsettings/src/factory.c:282
 #, c-format
 msgid "Couldn't determine the pid for %s process."
-msgstr ""
+msgstr "Не могу да одредим pid за %s процес."
 
 #: ../imsettings/src/factory.c:288
 #, c-format
 msgid "Couldn't send a signal to the %s process successfully."
-msgstr ""
+msgstr "Не могу да успешно пошаљем сигнал процесу %s."
 
 #: ../imsettings/src/factory.c:314 ../imsettings/src/factory.c:600
 #, c-format
 msgid "Failed to get a place of home directory."
-msgstr ""
+msgstr "Нисам успео да добијем место личног директоријума."
 
 #: ../imsettings/src/factory.c:331
 #, c-format
 msgid "Failed to revert the backup file: %s"
-msgstr ""
+msgstr "Нисам успео да повратим резервну копију датотеке: %s"
 
 #: ../imsettings/src/factory.c:343
 #, c-format
 msgid "Failed to create a backup file: %s"
-msgstr ""
+msgstr "Нисам успео да направим резервну копију датотеке: %s"
 
 #: ../imsettings/src/factory.c:352
 #, c-format
 msgid "Failed to remove a .xinputrc file: %s"
-msgstr ""
+msgstr "Нисам успео да уклоним датотеку .xinputrc: %s"
 
 #: ../imsettings/src/factory.c:363
 #, c-format
 msgid "Failed to make a symlink: %s"
-msgstr ""
+msgstr "Нисам успео да направим симболичку везу: %s"
 
 #: ../imsettings/src/factory.c:478 ../imsettings/src/factory_info.c:526
 #, c-format
 msgid "No such input method on your system: %s"
-msgstr ""
+msgstr "Нема таквих метода за унос на вашем систему: %s"
 
 #: ../imsettings/src/factory.c:498
 #, c-format
 msgid "No XIM server is available in %s"
-msgstr ""
+msgstr "Нема доступног XIM сервера у %s"
 
 #: ../imsettings/src/factory.c:646
 msgid "X display name"
-msgstr ""
+msgstr "Име Икс екрана"
 
 #: ../imsettings/src/factory.c:647
 msgid "X display name to use"
-msgstr ""
+msgstr "Име Икс екрана за коришћење"
 
 #: ../imsettings/src/factory.c:691
 msgid "X display to use"
-msgstr ""
+msgstr "Икс екран за коришћење"
 
 #: ../imsettings/src/factory.c:691
 msgid "DISPLAY"
-msgstr ""
+msgstr "ЕКРАН"
 
 #. FIXME
 #: ../imsettings/src/factory.c:694
 msgid "X screen to use"
-msgstr ""
+msgstr "Икс приказ за коришћење"
 
 #: ../imsettings/src/factory.c:694
 msgid "SCREEN"
-msgstr ""
+msgstr "ПРИКАЗ"
 
 #: ../imsettings/src/factory.c:725
 #, c-format
 msgid "Failed to open a X display."
-msgstr ""
+msgstr "Нисам успео да отворим Икс екран."
 
 #: ../imsettings/src/factory_info.c:127
 #, c-format
 msgid "Reloading...\n"
-msgstr ""
+msgstr "Поново учитавам...\n"
 
 #: ../imsettings/src/factory_info.c:188
 #, c-format
 msgid "Duplicate entry `%s' from %s. SHORT_DESC has to be unique."
-msgstr ""
+msgstr "Двострук унос „%s“ у %s. SHORT_DESC мора бити јединствен."
 
 #: ../imsettings/src/factory_info.c:446 ../imsettings/src/factory_info.c:484
 #: ../imsettings/src/factory_info.c:500 ../imsettings/src/factory_info.c:518
 #, c-format
 msgid "Timed out to initialize %s services."
-msgstr ""
+msgstr "Истекло је време чекања на иницијализацију %s сервиса."
 
 #: ../imsettings/src/factory_info.c:469
 #, c-format
 msgid "No input methods available on your system."
-msgstr ""
+msgstr "Нема доступних метода за унос на вашем систему."
 
 #: ../imsettings/utils/imsettings-reload.c:42
 #: ../imsettings/utils/imsettings-restart.c:43
 #: ../imsettings/utils/imsettings-stop.c:42
 msgid "Force reloading the configuration, including restarting the process."
 msgstr ""
+"Приморај да се поново учитају подешавања, укључујући и поновно покретање "
+"процеса."
 
 #: ../imsettings/utils/imsettings-restart.c:44
 #: ../imsettings/utils/imsettings-stop.c:43
 msgid "Do not update .xinputrc."
-msgstr ""
+msgstr "Немој да ажурираш .xinputrc."
 
 #: ../imsettings/utils/imsettings-stop.c:80
 #, c-format
 msgid "Stopped %s\n"
-msgstr ""
+msgstr "Заустављен је %s\n"
 
 #: ../imsettings/utils/imsettings-stop.c:82
 #, c-format
 msgid "Failed to stop IM process `%s'\n"
-msgstr ""
+msgstr "Нисам успео да зауставим IM процес „%s“\n"
 
 #: ../src/im-chooser-simple.c:145
-#, fuzzy
 msgid "Updating Input Method list"
-msgstr "Метод уноса"
+msgstr "Ажурирам списак метода уноса"
 
 #: ../src/im-chooser-simple.c:309 ../src/im-chooser-simple.c:343
-#, fuzzy
 msgid "Failed to start Input Method"
-msgstr "_Не користи методе уноса"
+msgstr "Нисам успео да покренем метод уноса"
 
 #: ../src/im-chooser-simple.c:406
-#, fuzzy, c-format
+#, c-format
 msgid "Starting Input Method - %s"
-msgstr "Метод уноса"
+msgstr "Покрећем метод уноса - %s"
 
 #: ../src/im-chooser-simple.c:423
-#, fuzzy, c-format
+#, c-format
 msgid "Stopping Input Method - %s"
-msgstr "Метод уноса"
+msgstr "Заустављам метод уноса - %s"
 
 #: ../src/im-chooser-simple.c:543
 msgid "Parent Window"
-msgstr ""
+msgstr "Матични прозор"
 
 #: ../src/im-chooser-simple.c:544
 msgid "GtkWindow that points to the parent window"
-msgstr ""
+msgstr "GtkWindow који показује на матични прозор"
 
 #. setup a progress window
 #: ../src/im-chooser-simple.c:584
 msgid "Work in progress..."
-msgstr ""
+msgstr "Рад је у току..."
 
 #: ../src/im-chooser-simple.c:642
 #, c-format
@@ -407,14 +414,12 @@ msgid "Use %s"
 msgstr "Користи %s"
 
 #: ../src/im-chooser-simple.c:645
-#, fuzzy
 msgid " (legacy)"
-msgstr " (Застарело)"
+msgstr " (наслеђено)"
 
 #: ../src/im-chooser-simple.c:649
-#, fuzzy
 msgid " (recommended)"
-msgstr " (Препоручено)"
+msgstr " (препоручено)"
 
 #: ../src/im-chooser-simple.c:761
 msgid "<b>Input Method</b>"
@@ -425,17 +430,16 @@ msgid "_Enable input method feature"
 msgstr "_Укључи могућност метода уноса"
 
 #: ../src/im-chooser-simple.c:774
-#, fuzzy
 msgid ""
 "<small><i>Note: this change will not take effect until you next log in, "
 "except GTK+ applications.</i></small>"
 msgstr ""
 "<small><i>Напомена: ова промена неће прећи у дејство до следећег "
-"пријављивања.</i></small>"
+"пријављивања, осим у GTK+ програмима.</i></small>"
 
 #: ../src/im-chooser-simple.c:806
 msgid "Input Method _Preferences..."
-msgstr "Поставке метода уноса"
+msgstr "Поставке метода _уноса..."
 
 #: ../src/main.c:55
 msgid ""
@@ -445,63 +449,25 @@ msgstr ""
 
 #: ../src/main.c:58
 msgid "Please install any input methods before running if you like."
-msgstr "Инсталирајте било које методе уноса пре покретања ако желите."
+msgstr ""
+"Молим, инсталирајте било које методе уноса пре покретања, ако их желите."
 
 #: ../src/main.c:153
 msgid "IM Chooser - Input Method configuration tool"
-msgstr "IM избирач - Алат за подешавање метода уноса (Input Method)"
+msgstr "IM избирач - алат за подешавање метода уноса"
 
 #: ../src/main.c:161
 msgid "_Log Out"
 msgstr "Од_јави се"
 
 #: ../src/im-chooser.desktop.in.in.h:1
-#, fuzzy
 msgid ""
 "Choose the input method to be used or disable the input method usage on the "
 "desktop"
 msgstr ""
-"Алат за подешавање метода уноса врши избор метода уноса за употребу или "
-"искључивање употребе метода уноса у радном окружењу"
+"Изаберите метод уноса који ће се користити или искључите коришћење метода "
+"уноса на радној површини"
 
 #: ../src/im-chooser.desktop.in.in.h:2
 msgid "Input Method"
 msgstr "Метод уноса"
-
-#~ msgid "No valid IM installed"
-#~ msgstr "Важећи IM није инсталиран"
-
-#~ msgid "_Use default Input Method for your language"
-#~ msgstr "_Користи подразумевани метод уноса за мој језик"
-
-#~ msgid ""
-#~ "Your system chooses the appropriate Input Method for your language "
-#~ "automatically from among Input Methods installed on your system."
-#~ msgstr ""
-#~ "Систем самостално бира одговарајући метод уноса за ваш језик између "
-#~ "метода уноса инсталираних на систему."
-
-#~ msgid "Choose _specific Input Method"
-#~ msgstr "Користи _одређени метод уноса"
-
-#~ msgid ""
-#~ "Use the specific Input Method that you prefer regardless what Input "
-#~ "Method the system recommends."
-#~ msgstr ""
-#~ "Употреба одређеног метода уноса којег желите без обзира који метод уноса "
-#~ "систем препоручује."
-
-#~ msgid ""
-#~ "Do not use Input Method no matter what language the desktop is running on."
-#~ msgstr ""
-#~ "Немој користити методе уноса без обзира на језик у коме је радно окружење."
-
-#~ msgid "Use legacy _Input Method"
-#~ msgstr "Користи застареле методе _уноса"
-
-#~ msgid ""
-#~ "Use X Input Method anyway. In fact, which input method will be chosen for "
-#~ "the desktop session, depends on the desktop language."
-#~ msgstr ""
-#~ "Свеједно користи Иксов метод уноса. У ствари, од језика радног окружења "
-#~ "зависи који ће метод уноса бити одабран за радну сесију."
