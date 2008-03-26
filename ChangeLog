@@ -1,3 +1,7 @@
+2008-03-26  Akira TAGOH  <tagoh@redhat.com>
+
+	* data/xinput.sh.in.in: real fix to not update .xinputrc.
+
 2008-03-19  Akira TAGOH  <tagoh@redhat.com>
 
 	* configure.ac: Add XIM support.

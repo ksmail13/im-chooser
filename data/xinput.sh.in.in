@@ -64,4 +64,4 @@ export GTK_IM_MODULE
 IMSETTINGS_MODULE=${SHORT_DESC:-${XIM}}
 [ -z "$IMSETTINGS_MODULE" ] && IMSETTINGS_MODULE="none"
 # NOTE: Please make sure the session bus is established before running this script.
-which imsettings-start -n > /dev/null 2>&1 && LANG="$tmplang" imsettings-start "$IMSETTINGS_MODULE" || :
+which imsettings-start > /dev/null 2>&1 && LANG="$tmplang" imsettings-start -n "$IMSETTINGS_MODULE" || :
