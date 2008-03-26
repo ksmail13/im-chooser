@@ -1,4 +1,4 @@
-# translation of ja.po to Japanese
+# translation of im-chooser.trunk.ja.po to Japanese
 # im-chooser
 # Copyright (C) 2006 Red Hat, Inc. All rights reserved.
 # This file is distributed under the same license as the PACKAGE package.
@@ -6,23 +6,25 @@
 # Akira TAGOH <tagoh@redhat.com>, 2006,2007.
 # Kiyoto James Hashida <khashida@redhat.com>, 2006.
 # Noriko Mizumoto <noriko@redhat.com>, 2007.
+# Kiyoto Hashida <khashida@redhat.com>, 2008.
 msgid ""
 msgstr ""
-"Project-Id-Version: ja\n"
+"Project-Id-Version: im-chooser.trunk.ja\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-03-11 21:15+0900\n"
-"PO-Revision-Date: 2007-12-27 15:10+0900\n"
-"Last-Translator: Akira TAGOH <tagoh@redhat.com>\n"
-"Language-Team: Japanese\n"
+"POT-Creation-Date: 2008-03-12 07:55+0000\n"
+"PO-Revision-Date: 2008-03-25 16:20+1000\n"
+"Last-Translator: Kiyoto Hashida <khashida@redhat.com>\n"
+"Language-Team: Japanese <jp@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
 
 #: ../imsettings/backends/gconf/main.c:184
 #: ../imsettings/imsettings/imsettings-observer.c:702
 #: ../imsettings/src/factory.c:690 ../imsettings/src/factory_info.c:645
 msgid "Replace the running settings daemon with new instance."
-msgstr ""
+msgstr "実行中の設定デーモンを新規のインスタンスで入れ替えます。"
 
 #: ../imsettings/backends/gconf/main.c:206 ../imsettings/src/factory.c:717
 #: ../imsettings/src/factory_info.c:667
@@ -30,188 +32,188 @@ msgstr ""
 #: ../imsettings/utils/imsettings-restart.c:65
 #: ../imsettings/utils/imsettings-stop.c:63
 msgid "Unknown error in parsing the command lines."
-msgstr ""
+msgstr "コマンドラインの構文解析中に不明なエラー。"
 
 #: ../imsettings/imsettings/imsettings-info.c:498
 msgid "Language"
-msgstr ""
+msgstr "言語"
 
 #: ../imsettings/imsettings/imsettings-info.c:499
 msgid "A language to pull the information in."
-msgstr ""
+msgstr "情報を引き出すのに使用する言語。"
 
 #: ../imsettings/imsettings/imsettings-info.c:504
 msgid "Filename"
-msgstr ""
+msgstr "ファイル名"
 
 #: ../imsettings/imsettings/imsettings-info.c:505
 msgid "A filename referring to the IM information."
-msgstr ""
+msgstr "IM 情報を参照するファイル名。"
 
 #: ../imsettings/imsettings/imsettings-info.c:510
 msgid "GTK+ immodule"
-msgstr ""
+msgstr "GTK+ immodule"
 
 #: ../imsettings/imsettings/imsettings-info.c:511
 msgid "A module name used for GTK+"
-msgstr ""
+msgstr "GTK+ 用に使用されるモジュール名"
 
 #: ../imsettings/imsettings/imsettings-info.c:516
 msgid "Qt immodule"
-msgstr ""
+msgstr "Qt immodule"
 
 #: ../imsettings/imsettings/imsettings-info.c:517
 msgid "A module name used for Qt"
-msgstr ""
+msgstr "Qt 用に使用されるモジュール名"
 
 #: ../imsettings/imsettings/imsettings-info.c:522
 msgid "XIM name"
-msgstr ""
+msgstr "XIM 名"
 
 #: ../imsettings/imsettings/imsettings-info.c:523
 msgid "XIM server name"
-msgstr ""
+msgstr "XIM サーバー名"
 
 #: ../imsettings/imsettings/imsettings-info.c:528
 msgid "Ignore flag"
-msgstr ""
+msgstr "無視フラグ"
 
 #: ../imsettings/imsettings/imsettings-info.c:529
 msgid "A flag to not list up."
-msgstr ""
+msgstr "一覧表示しないフラグ"
 
 #: ../imsettings/imsettings/imsettings-info.c:534
 msgid "XIM server program name"
-msgstr ""
+msgstr "XIM サーバープログラム名"
 
 #: ../imsettings/imsettings/imsettings-info.c:535
 msgid "XIM server program to be run"
-msgstr ""
+msgstr "実行する XIM サーバープログラム"
 
 #: ../imsettings/imsettings/imsettings-info.c:540
 msgid "XIM server program's options"
-msgstr ""
+msgstr "XIM サーバープログラムのオプション"
 
 #: ../imsettings/imsettings/imsettings-info.c:541
 msgid "Command line options for XIM server program"
-msgstr ""
+msgstr "XIM サーバープログラム用のコマンドラインオプション"
 
 #: ../imsettings/imsettings/imsettings-info.c:546
 msgid "Preference program name"
-msgstr ""
+msgstr "個人設定プログラム名"
 
 #: ../imsettings/imsettings/imsettings-info.c:547
 msgid "Preference program to be run"
-msgstr ""
+msgstr "実行する個人設定プログラム"
 
 #: ../imsettings/imsettings/imsettings-info.c:552
 msgid "Preference program's options"
-msgstr ""
+msgstr "個人設定プログラムのオプション"
 
 #: ../imsettings/imsettings/imsettings-info.c:553
 msgid "Command line options for preference program"
-msgstr ""
+msgstr "個人設定プログラム用のコマンドラインオプション"
 
 #: ../imsettings/imsettings/imsettings-info.c:558
 msgid "Auxiliary program name"
-msgstr ""
+msgstr "補助プログラム名"
 
 #: ../imsettings/imsettings/imsettings-info.c:559
 msgid "Auxiliary program to be run"
-msgstr ""
+msgstr "実行する補助プログラム"
 
 #: ../imsettings/imsettings/imsettings-info.c:564
 msgid "Auxiliary program's options"
-msgstr ""
+msgstr "補助プログラムのオプション"
 
 #: ../imsettings/imsettings/imsettings-info.c:565
 msgid "Command line options for auxiliary program"
-msgstr ""
+msgstr "補助プログラム用のコマンドラインオプション"
 
 #: ../imsettings/imsettings/imsettings-info.c:570
 #: ../imsettings/imsettings/imsettings-info.c:571
 msgid "Short Description"
-msgstr ""
+msgstr "簡単な説明"
 
 #: ../imsettings/imsettings/imsettings-info.c:576
 #: ../imsettings/imsettings/imsettings-info.c:577
 msgid "Long Description"
-msgstr ""
+msgstr "詳しい説明"
 
 #: ../imsettings/imsettings/imsettings-info.c:582
 msgid "System Default"
-msgstr ""
+msgstr "システムデフォルト"
 
 #: ../imsettings/imsettings/imsettings-info.c:583
 msgid "Whether or not IM is a system default."
-msgstr ""
+msgstr "IM がシステムデフォルトであるかどうか。"
 
 #: ../imsettings/imsettings/imsettings-info.c:588
 msgid "User Default"
-msgstr ""
+msgstr "ユーザーデフォルト"
 
 #: ../imsettings/imsettings/imsettings-info.c:589
 msgid "Whether or not IM is an user default."
-msgstr ""
+msgstr "IM がユーザーデフォルトであるかどうか"
 
 #: ../imsettings/imsettings/imsettings-info.c:594
 msgid "XIM"
-msgstr ""
+msgstr "XIM"
 
 #: ../imsettings/imsettings/imsettings-info.c:595
 msgid "Whether or not IM is a XIM server."
-msgstr ""
+msgstr "IM が XIM サーバーであるかどうか"
 
-#: ../imsettings/imsettings/imsettings-info-private.h:40
+#: ../imsettings/imsettings/imsettings-info-private.h:39
 msgid "User Specific"
 msgstr "ユーザー固有"
 
-#: ../imsettings/imsettings/imsettings-info-private.h:41
+#: ../imsettings/imsettings/imsettings-info-private.h:40
 msgid "xinputrc was modified by the user"
 msgstr "ユーザーにより xinputrc が変更されました"
 
 #: ../imsettings/imsettings/imsettings-observer.c:255
 #, c-format
 msgid "Invalid IM module type: %d"
-msgstr ""
+msgstr "無効な IM モジュールタイプです: %d"
 
 #: ../imsettings/imsettings/imsettings-observer.c:695
 msgid "IM module name"
-msgstr ""
+msgstr "IM モジュール名"
 
 #: ../imsettings/imsettings/imsettings-observer.c:696
 msgid "A target IM module name that to observe signals"
-msgstr ""
+msgstr "信号を監視するための目標 IM モジュール名"
 
 #: ../imsettings/imsettings/imsettings-observer.c:701
 msgid "Replace"
-msgstr ""
+msgstr "入れ替え"
 
 #: ../imsettings/imsettings/imsettings-observer.c:707
 #: ../imsettings/imsettings/imsettings-request.c:175
 msgid "DBus connection"
-msgstr ""
+msgstr "DBus 接続"
 
 #: ../imsettings/imsettings/imsettings-observer.c:708
 #: ../imsettings/imsettings/imsettings-request.c:176
 msgid "An object to be a DBus connection"
-msgstr ""
+msgstr "DBus 接続となるオブジェクト"
 
 #: ../imsettings/imsettings/imsettings-request.c:169
 msgid "DBus Interface"
-msgstr ""
+msgstr "DBus インターフェイス"
 
 #: ../imsettings/imsettings/imsettings-request.c:170
 msgid "Interface name to connect to DBus"
-msgstr ""
+msgstr "DBus に接続するインターフェイス名"
 
 #: ../imsettings/imsettings/imsettings-request.c:181
 msgid "Locale"
-msgstr ""
+msgstr "言語地域"
 
 #: ../imsettings/imsettings/imsettings-request.c:182
 msgid "Locale to get the imsettings information"
-msgstr ""
+msgstr "im セッティング情報を得る為の言語地域"
 
 #: ../imsettings/imsettings/imsettings-request.c:239
 #: ../imsettings/imsettings/imsettings-request.c:272
@@ -234,6 +236,8 @@ msgid ""
 "Failed to invoke a method `%s':\n"
 "  %s"
 msgstr ""
+"メソッド %s' の呼出に失敗しました :\n"
+"  %s"
 
 #: ../imsettings/imsettings/imsettings-request.c:672
 #, c-format
@@ -241,203 +245,198 @@ msgid ""
 "Failed to invoke a method `%s' on %s:\n"
 "  %s"
 msgstr ""
+" %s 上のメソッド %s' の呼出に失敗しました:\n"
+"  %s"
 
 #: ../imsettings/src/factory.c:136
 #, c-format
 msgid "Failed to remove a pidfile: %s"
-msgstr ""
+msgstr "pidfile の削除に失敗しました: %s"
 
 #: ../imsettings/src/factory.c:178
 #, c-format
 msgid "Failed to open a pidfile: %s"
-msgstr ""
+msgstr "pidfile を開くのに失敗しました: %s"
 
 #: ../imsettings/src/factory.c:282
 #, c-format
 msgid "Couldn't determine the pid for %s process."
-msgstr ""
+msgstr "%s プロセス用の pid を決定できませんでした。"
 
 #: ../imsettings/src/factory.c:288
 #, c-format
 msgid "Couldn't send a signal to the %s process successfully."
-msgstr ""
+msgstr "%s プロセスに信号を正しく送信出来ませんでした。"
 
 #: ../imsettings/src/factory.c:314 ../imsettings/src/factory.c:600
-#, c-format
 msgid "Failed to get a place of home directory."
-msgstr ""
+msgstr "ホームディレクトリの場所確保に失敗しました。"
 
 #: ../imsettings/src/factory.c:331
 #, c-format
 msgid "Failed to revert the backup file: %s"
-msgstr ""
+msgstr "バックアップファイルの復元に失敗しました: %s"
 
 #: ../imsettings/src/factory.c:343
 #, c-format
 msgid "Failed to create a backup file: %s"
-msgstr ""
+msgstr "バックアップファイルの作成に失敗しました: %s"
 
 #: ../imsettings/src/factory.c:352
 #, c-format
 msgid "Failed to remove a .xinputrc file: %s"
-msgstr ""
+msgstr "xinputrc ファイルの削除に失敗しました: %s"
 
 #: ../imsettings/src/factory.c:363
 #, c-format
 msgid "Failed to make a symlink: %s"
-msgstr ""
+msgstr "symlink するのに失敗しました: %s"
 
 #: ../imsettings/src/factory.c:478 ../imsettings/src/factory_info.c:526
 #, c-format
 msgid "No such input method on your system: %s"
-msgstr ""
+msgstr "使用中のシステム上にそのような入力メソッドはありません: %s"
 
 #: ../imsettings/src/factory.c:498
 #, c-format
 msgid "No XIM server is available in %s"
-msgstr ""
+msgstr "%s では XIM サーバーが使用できません。"
 
 #: ../imsettings/src/factory.c:646
 msgid "X display name"
-msgstr ""
+msgstr "X ディスプレイ名"
 
 #: ../imsettings/src/factory.c:647
 msgid "X display name to use"
-msgstr ""
+msgstr "使用する X ディスプレイ名"
 
 #: ../imsettings/src/factory.c:691
 msgid "X display to use"
-msgstr ""
+msgstr "使用する X ディスプレイ"
 
 #: ../imsettings/src/factory.c:691
 msgid "DISPLAY"
-msgstr ""
+msgstr "DISPLAY"
 
 #. FIXME
 #: ../imsettings/src/factory.c:694
 msgid "X screen to use"
-msgstr ""
+msgstr "使用する X 画面"
 
 #: ../imsettings/src/factory.c:694
 msgid "SCREEN"
-msgstr ""
+msgstr "SCREEN"
 
 #: ../imsettings/src/factory.c:725
-#, c-format
 msgid "Failed to open a X display."
-msgstr ""
+msgstr "X ディスプレイを開くのに失敗しました"
 
 #: ../imsettings/src/factory_info.c:127
-#, c-format
 msgid "Reloading...\n"
-msgstr ""
+msgstr "再ロード中... \n"
 
 #: ../imsettings/src/factory_info.c:188
 #, c-format
 msgid "Duplicate entry `%s' from %s. SHORT_DESC has to be unique."
-msgstr ""
+msgstr "%s. SHORT_DESC からの複製エントリ `%s' は特有でなければなりません。"
 
 #: ../imsettings/src/factory_info.c:446 ../imsettings/src/factory_info.c:484
 #: ../imsettings/src/factory_info.c:500 ../imsettings/src/factory_info.c:518
 #, c-format
 msgid "Timed out to initialize %s services."
-msgstr ""
+msgstr "%s サービスの初期化は時間切れです。"
 
 #: ../imsettings/src/factory_info.c:469
-#, c-format
 msgid "No input methods available on your system."
-msgstr ""
+msgstr "使用中のシステム上には入力メソッドがありません。"
 
 #: ../imsettings/utils/imsettings-reload.c:42
 #: ../imsettings/utils/imsettings-restart.c:43
 #: ../imsettings/utils/imsettings-stop.c:42
 msgid "Force reloading the configuration, including restarting the process."
-msgstr ""
+msgstr "プロセスの再スタートを含み、設定の再ロードを強制します。"
 
 #: ../imsettings/utils/imsettings-restart.c:44
 #: ../imsettings/utils/imsettings-stop.c:43
 msgid "Do not update .xinputrc."
-msgstr ""
+msgstr ".xinputrc は更新しないで下さい。"
 
 #: ../imsettings/utils/imsettings-stop.c:80
 #, c-format
 msgid "Stopped %s\n"
-msgstr ""
+msgstr "%s は停止しました\n"
 
 #: ../imsettings/utils/imsettings-stop.c:82
 #, c-format
 msgid "Failed to stop IM process `%s'\n"
-msgstr ""
+msgstr "IM プロセス`%s' の停止に失敗しました\n"
 
 #: ../src/im-chooser-simple.c:145
-#, fuzzy
 msgid "Updating Input Method list"
-msgstr "入力メソッド"
+msgstr "入力メソッド一覧を更新しています"
 
-#: ../src/im-chooser-simple.c:309 ../src/im-chooser-simple.c:343
-#, fuzzy
+#: ../src/im-chooser-simple.c:310 ../src/im-chooser-simple.c:344
 msgid "Failed to start Input Method"
-msgstr "入力メソッドを使わない(_D)"
+msgstr "入力メソッドの開始に失敗しました"
 
-#: ../src/im-chooser-simple.c:406
-#, fuzzy, c-format
+#: ../src/im-chooser-simple.c:407
+#, c-format
 msgid "Starting Input Method - %s"
-msgstr "入力メソッド"
+msgstr "入力メソッド - %s を開始しています"
 
-#: ../src/im-chooser-simple.c:423
-#, fuzzy, c-format
+#: ../src/im-chooser-simple.c:424
+#, c-format
 msgid "Stopping Input Method - %s"
-msgstr "入力メソッド"
+msgstr "入力メソッド - %s を停止しています"
+
+#: ../src/im-chooser-simple.c:542
+msgid "Parent Window"
+msgstr "親ウインドウ"
 
 #: ../src/im-chooser-simple.c:543
-msgid "Parent Window"
-msgstr ""
-
-#: ../src/im-chooser-simple.c:544
 msgid "GtkWindow that points to the parent window"
-msgstr ""
+msgstr "親ウインドウを指す GtkWindow "
 
 #. setup a progress window
-#: ../src/im-chooser-simple.c:584
+#: ../src/im-chooser-simple.c:583
 msgid "Work in progress..."
-msgstr ""
+msgstr "作業は進行中です... "
 
-#: ../src/im-chooser-simple.c:642
+#: ../src/im-chooser-simple.c:641
 #, c-format
 msgid "Use %s"
 msgstr "%s を使用する"
 
-#: ../src/im-chooser-simple.c:645
+#: ../src/im-chooser-simple.c:644
 msgid " (legacy)"
 msgstr " (レガシー)"
 
-#: ../src/im-chooser-simple.c:649
+#: ../src/im-chooser-simple.c:648
 msgid " (recommended)"
 msgstr " (推奨)"
 
-#: ../src/im-chooser-simple.c:761
+#: ../src/im-chooser-simple.c:760
 msgid "<b>Input Method</b>"
 msgstr "<b>入力メソッド</b>"
 
-#: ../src/im-chooser-simple.c:767
+#: ../src/im-chooser-simple.c:766
 msgid "_Enable input method feature"
 msgstr "入力メソッドの機能を有効にする(_E)"
 
-#: ../src/im-chooser-simple.c:774
-#, fuzzy
+#: ../src/im-chooser-simple.c:773
 msgid ""
 "<small><i>Note: this change will not take effect until you next log in, "
 "except GTK+ applications.</i></small>"
 msgstr ""
-"<small><i>注記: この変更は次回ログインするまで反映されません。</i></small>"
+"<small><i>注記: GTK+ アプリケーション以外はこの変更は次回ログインするまで "
+"反映されません。</i></small>"
 
-#: ../src/im-chooser-simple.c:806
+#: ../src/im-chooser-simple.c:805
 msgid "Input Method _Preferences..."
 msgstr "入力メソッドの個人設定(_P)..."
 
 #: ../src/main.c:55
-msgid ""
-"<span weight=\"bold\" size=\"larger\">No input method is available</span>"
+msgid "<span weight=\"bold\" size=\"larger\">No input method is available</span>"
 msgstr ""
 "<span weight=\"bold\" size=\"larger\">使用できる入力メソッドがありません</"
 "span>"
@@ -459,47 +458,10 @@ msgid ""
 "Choose the input method to be used or disable the input method usage on the "
 "desktop"
 msgstr ""
-"使用する入力メソッドを選択、 またはデスクトップで入力メソッドの使用を無効しま"
-"す。"
+"デスクトップで使用する入力メソッドを選択、 または入力メソッドの使用を無効に "
+"します。"
 
 #: ../src/im-chooser.desktop.in.in.h:2
 msgid "Input Method"
 msgstr "入力メソッド"
 
-#~ msgid "No valid IM installed"
-#~ msgstr "有効な入力メソッドがインストールされていません"
-
-#~ msgid "_Use default Input Method for your language"
-#~ msgstr "使用している言語にデフォルトの入力メソッドを使用する(_U)"
-
-#~ msgid ""
-#~ "Your system chooses the appropriate Input Method for your language "
-#~ "automatically from among Input Methods installed on your system."
-#~ msgstr ""
-#~ "ご使用のシステムにインストールされている入力メソッドの中からご使用の言語に"
-#~ "適切な入力メソッドを自動的に選択します。"
-
-#~ msgid "Choose _specific Input Method"
-#~ msgstr "特定の入力メソッドを選択する(_S)"
-
-#~ msgid ""
-#~ "Use the specific Input Method that you prefer regardless what Input "
-#~ "Method the system recommends."
-#~ msgstr ""
-#~ "システムが推奨する入力メソッドに関係なく選択される特定の入力メソッドを使用"
-#~ "します。"
-
-#~ msgid ""
-#~ "Do not use Input Method no matter what language the desktop is running on."
-#~ msgstr ""
-#~ "デスクトップが動作させている言語に関係なく入力メソッドを使用しません。"
-
-#~ msgid "Use legacy _Input Method"
-#~ msgstr "レガシーな入力メソッドを使う(_I)"
-
-#~ msgid ""
-#~ "Use X Input Method anyway. In fact, which input method will be chosen for "
-#~ "the desktop session, depends on the desktop language."
-#~ msgstr ""
-#~ "X 入力メソッドを使います。 実際には、 どの入力メソッドが選ばれるかはデスク"
-#~ "トップの言語に依存します。"
