@@ -554,8 +554,8 @@ imsettings_manager_real_stop_im(IMSettingsObserver  *imsettings,
 	/* Change the settings before killing the IM process(es) */
 	/* FIXME: We need to take care of imsettings per X screens?
 	 */
-	imsettings_request_change_to(priv->gtk_req, NULL);
-	imsettings_request_change_to(priv->xim_req, NULL);
+	imsettings_request_change_to(priv->gtk_req, "");
+	imsettings_request_change_to_with_signal(priv->xim_req, "none");
 #if 0
 	imsettings_request_change_to(priv->qt_req, NULL);
 #endif

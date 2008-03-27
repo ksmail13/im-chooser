@@ -1,3 +1,13 @@
+2008-03-27  Akira TAGOH  <tagoh@redhat.com>
+
+	* src/factory.c (imsettings_manager_real_stop_im): send empty string
+	and "none" for XIM instead of NULL.
+
+	* imsettings/imsettings-request.c (imsettings_request_change_to):
+	disallow to get a NULL as module because DBus doesn't support sending
+	NULL as string.
+	(imsettings_request_change_to_with_signal): likewise.
+
 2008-03-19  Akira TAGOH  <tagoh@redhat.com>
 
 	* backends/xim/main.c: Add a missing header file.

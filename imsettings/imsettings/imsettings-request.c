@@ -662,6 +662,7 @@ imsettings_request_change_to(IMSettingsRequest *imsettings,
 	gboolean retval = FALSE;
 
 	g_return_val_if_fail (IMSETTINGS_IS_REQUEST (imsettings), FALSE);
+	g_return_val_if_fail (module != NULL, FALSE);
 
 	priv = IMSETTINGS_REQUEST_GET_PRIVATE (imsettings);
 	if (!dbus_g_proxy_call(priv->proxy, "ChangeTo", &error,
@@ -687,6 +688,7 @@ imsettings_request_change_to_with_signal(IMSettingsRequest *imsettings,
 	DBusMessage *message;
 
 	g_return_val_if_fail (IMSETTINGS_IS_REQUEST (imsettings), FALSE);
+	g_return_val_if_fail (module != NULL, FALSE);
 
 	priv = IMSETTINGS_REQUEST_GET_PRIVATE (imsettings);
 	message = dbus_message_new_signal(priv->path, priv->interface, "ChangeTo");
