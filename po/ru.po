@@ -1,31 +1,32 @@
-# translation of ru.po to 
+# translation of im-chooser.trunk.ru.po to
+# translation of ru.po to
 # translation of ru.po to
 # Russian translations for im-chooser package.
 # Copyright (C) 2006 Red Hat, Inc. All rights reserved.
 # This file is distributed under the same license as the im-chooser package.
+#
 # Automatically generated, 2006.
 # Yulia Poyarkova <ypoyarko@redhat.com>, 2006.
-#
+# Yulia Poyarkova <yulia.poyarkova@redhat.com>, 2008.
 msgid ""
 msgstr ""
-"Project-Id-Version: ru\n"
+"Project-Id-Version: im-chooser.trunk.ru\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-03-11 21:15+0900\n"
-"PO-Revision-Date: 2006-09-29 10:58+1000\n"
-"Last-Translator: Yulia Poyarkova <ypoyarko@redhat.com>\n"
+"POT-Creation-Date: 2008-03-24 18:11+0000\n"
+"PO-Revision-Date: 2008-03-28 18:53+1100\n"
+"Last-Translator: Yulia Poyarkova <yulia.poyarkova@redhat.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
-"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: KBabel 1.9.1\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: KBabel 1.11.4\n"
 
 #: ../imsettings/backends/gconf/main.c:184
 #: ../imsettings/imsettings/imsettings-observer.c:702
 #: ../imsettings/src/factory.c:690 ../imsettings/src/factory_info.c:645
 msgid "Replace the running settings daemon with new instance."
-msgstr ""
+msgstr "Заменить выполняющийся демон настроек новым экземпляром."
 
 #: ../imsettings/backends/gconf/main.c:206 ../imsettings/src/factory.c:717
 #: ../imsettings/src/factory_info.c:667
@@ -33,188 +34,188 @@ msgstr ""
 #: ../imsettings/utils/imsettings-restart.c:65
 #: ../imsettings/utils/imsettings-stop.c:63
 msgid "Unknown error in parsing the command lines."
-msgstr ""
+msgstr "Неизвестная ошибка при разборе строк команд."
 
 #: ../imsettings/imsettings/imsettings-info.c:498
 msgid "Language"
-msgstr ""
+msgstr "Язык"
 
 #: ../imsettings/imsettings/imsettings-info.c:499
 msgid "A language to pull the information in."
-msgstr ""
+msgstr "Язык отображения информации."
 
 #: ../imsettings/imsettings/imsettings-info.c:504
 msgid "Filename"
-msgstr ""
+msgstr "Имя файла"
 
 #: ../imsettings/imsettings/imsettings-info.c:505
 msgid "A filename referring to the IM information."
-msgstr ""
+msgstr "Имя файла с информацией IM."
 
 #: ../imsettings/imsettings/imsettings-info.c:510
 msgid "GTK+ immodule"
-msgstr ""
+msgstr "GTK+ immodule"
 
 #: ../imsettings/imsettings/imsettings-info.c:511
 msgid "A module name used for GTK+"
-msgstr ""
+msgstr "Имя модуля для GTK+"
 
 #: ../imsettings/imsettings/imsettings-info.c:516
 msgid "Qt immodule"
-msgstr ""
+msgstr "Qt immodule"
 
 #: ../imsettings/imsettings/imsettings-info.c:517
 msgid "A module name used for Qt"
-msgstr ""
+msgstr "Имя модуля для Qt"
 
 #: ../imsettings/imsettings/imsettings-info.c:522
 msgid "XIM name"
-msgstr ""
+msgstr "имя XIM"
 
 #: ../imsettings/imsettings/imsettings-info.c:523
 msgid "XIM server name"
-msgstr ""
+msgstr "Имя сервера XIM"
 
 #: ../imsettings/imsettings/imsettings-info.c:528
 msgid "Ignore flag"
-msgstr ""
+msgstr "Игнорировать флаг"
 
 #: ../imsettings/imsettings/imsettings-info.c:529
 msgid "A flag to not list up."
-msgstr ""
+msgstr "Флаг, который не будет отображен."
 
 #: ../imsettings/imsettings/imsettings-info.c:534
 msgid "XIM server program name"
-msgstr ""
+msgstr "Имя программы сервера XIM"
 
 #: ../imsettings/imsettings/imsettings-info.c:535
 msgid "XIM server program to be run"
-msgstr ""
+msgstr "Имя программы сервера XIM для исполнения"
 
 #: ../imsettings/imsettings/imsettings-info.c:540
 msgid "XIM server program's options"
-msgstr ""
+msgstr "Параметры программы сервера XIM"
 
 #: ../imsettings/imsettings/imsettings-info.c:541
 msgid "Command line options for XIM server program"
-msgstr ""
+msgstr "Параметры командной строки для программы сервера XIM"
 
 #: ../imsettings/imsettings/imsettings-info.c:546
 msgid "Preference program name"
-msgstr ""
+msgstr "Имя предпочитаемой программы"
 
 #: ../imsettings/imsettings/imsettings-info.c:547
 msgid "Preference program to be run"
-msgstr ""
+msgstr "Предпочитаемая программа для выполнения"
 
 #: ../imsettings/imsettings/imsettings-info.c:552
 msgid "Preference program's options"
-msgstr ""
+msgstr "Параметры предпочитаемой программы"
 
 #: ../imsettings/imsettings/imsettings-info.c:553
 msgid "Command line options for preference program"
-msgstr ""
+msgstr "Параметры командной строки для предпочитаемой программы"
 
 #: ../imsettings/imsettings/imsettings-info.c:558
 msgid "Auxiliary program name"
-msgstr ""
+msgstr "Имя произвольной программы"
 
 #: ../imsettings/imsettings/imsettings-info.c:559
 msgid "Auxiliary program to be run"
-msgstr ""
+msgstr "Произвольная программа для выполнения"
 
 #: ../imsettings/imsettings/imsettings-info.c:564
 msgid "Auxiliary program's options"
-msgstr ""
+msgstr "Параметры произвольной программы"
 
 #: ../imsettings/imsettings/imsettings-info.c:565
 msgid "Command line options for auxiliary program"
-msgstr ""
+msgstr "Параметры командной строки для произвольной программы"
 
 #: ../imsettings/imsettings/imsettings-info.c:570
 #: ../imsettings/imsettings/imsettings-info.c:571
 msgid "Short Description"
-msgstr ""
+msgstr "Краткое описание"
 
 #: ../imsettings/imsettings/imsettings-info.c:576
 #: ../imsettings/imsettings/imsettings-info.c:577
 msgid "Long Description"
-msgstr ""
+msgstr "Подробное описание"
 
 #: ../imsettings/imsettings/imsettings-info.c:582
 msgid "System Default"
-msgstr ""
+msgstr "Системные настройки по умолчанию"
 
 #: ../imsettings/imsettings/imsettings-info.c:583
 msgid "Whether or not IM is a system default."
-msgstr ""
+msgstr "Используется ли IM в качестве системных настроек по умолчанию."
 
 #: ../imsettings/imsettings/imsettings-info.c:588
 msgid "User Default"
-msgstr ""
+msgstr "Пользовательские настройки по умолчанию"
 
 #: ../imsettings/imsettings/imsettings-info.c:589
 msgid "Whether or not IM is an user default."
-msgstr ""
+msgstr "Используется ли IM в качестве пользовательских настроек по умолчанию."
 
 #: ../imsettings/imsettings/imsettings-info.c:594
 msgid "XIM"
-msgstr ""
+msgstr "XIM"
 
 #: ../imsettings/imsettings/imsettings-info.c:595
 msgid "Whether or not IM is a XIM server."
-msgstr ""
+msgstr "Является ли IM сервером XIM."
+
+#: ../imsettings/imsettings/imsettings-info-private.h:39
+msgid "User Specific"
+msgstr "Пользовательские параметры"
 
 #: ../imsettings/imsettings/imsettings-info-private.h:40
-msgid "User Specific"
-msgstr ""
-
-#: ../imsettings/imsettings/imsettings-info-private.h:41
 msgid "xinputrc was modified by the user"
-msgstr ""
+msgstr "xinputrc изменен пользователем"
 
 #: ../imsettings/imsettings/imsettings-observer.c:255
 #, c-format
 msgid "Invalid IM module type: %d"
-msgstr ""
+msgstr "Неверный тип модуля IM: %d"
 
 #: ../imsettings/imsettings/imsettings-observer.c:695
 msgid "IM module name"
-msgstr ""
+msgstr "Имя модуля IM"
 
 #: ../imsettings/imsettings/imsettings-observer.c:696
 msgid "A target IM module name that to observe signals"
-msgstr ""
+msgstr "Имя целевого модуля IM, который будет отслеживать сигналы"
 
 #: ../imsettings/imsettings/imsettings-observer.c:701
 msgid "Replace"
-msgstr ""
+msgstr "Заменить"
 
 #: ../imsettings/imsettings/imsettings-observer.c:707
 #: ../imsettings/imsettings/imsettings-request.c:175
 msgid "DBus connection"
-msgstr ""
+msgstr "Соединение DBus"
 
 #: ../imsettings/imsettings/imsettings-observer.c:708
 #: ../imsettings/imsettings/imsettings-request.c:176
 msgid "An object to be a DBus connection"
-msgstr ""
+msgstr "Объект соединения DBus"
 
 #: ../imsettings/imsettings/imsettings-request.c:169
 msgid "DBus Interface"
-msgstr ""
+msgstr "Интерфейс DBus"
 
 #: ../imsettings/imsettings/imsettings-request.c:170
 msgid "Interface name to connect to DBus"
-msgstr ""
+msgstr "Имя интерфейса для подключения к DBus"
 
 #: ../imsettings/imsettings/imsettings-request.c:181
 msgid "Locale"
-msgstr ""
+msgstr "Язык"
 
 #: ../imsettings/imsettings/imsettings-request.c:182
 msgid "Locale to get the imsettings information"
-msgstr ""
+msgstr "Язык получения информации imsettings"
 
 #: ../imsettings/imsettings/imsettings-request.c:239
 #: ../imsettings/imsettings/imsettings-request.c:272
@@ -237,6 +238,8 @@ msgid ""
 "Failed to invoke a method `%s':\n"
 "  %s"
 msgstr ""
+"Не удалось вызвать метод `%s':\n"
+"  %s"
 
 #: ../imsettings/imsettings/imsettings-request.c:672
 #, c-format
@@ -244,210 +247,203 @@ msgid ""
 "Failed to invoke a method `%s' on %s:\n"
 "  %s"
 msgstr ""
+"Не удалось вызвать метод %s' на %s:\n"
+"  %s"
 
 #: ../imsettings/src/factory.c:136
 #, c-format
 msgid "Failed to remove a pidfile: %s"
-msgstr ""
+msgstr "Не удалось удалить файл PID: %s"
 
 #: ../imsettings/src/factory.c:178
 #, c-format
 msgid "Failed to open a pidfile: %s"
-msgstr ""
+msgstr "Не удалось открыть файл PID: %s"
 
 #: ../imsettings/src/factory.c:282
 #, c-format
 msgid "Couldn't determine the pid for %s process."
-msgstr ""
+msgstr "Не удается определить PID процесса %s."
 
 #: ../imsettings/src/factory.c:288
 #, c-format
 msgid "Couldn't send a signal to the %s process successfully."
-msgstr ""
+msgstr "Не удалось отправить сигнал процессу %s."
 
 #: ../imsettings/src/factory.c:314 ../imsettings/src/factory.c:600
-#, c-format
 msgid "Failed to get a place of home directory."
-msgstr ""
+msgstr "Не удалось получить расположение домашнего каталога."
 
 #: ../imsettings/src/factory.c:331
 #, c-format
 msgid "Failed to revert the backup file: %s"
-msgstr ""
+msgstr "Не удалось восстановить файл из резервной копии: %s"
 
 #: ../imsettings/src/factory.c:343
 #, c-format
 msgid "Failed to create a backup file: %s"
-msgstr ""
+msgstr "Не удалось создать резервную копию файла: %s"
 
 #: ../imsettings/src/factory.c:352
 #, c-format
 msgid "Failed to remove a .xinputrc file: %s"
-msgstr ""
+msgstr "Не удалось удалить файл .xinputrc: %s"
 
 #: ../imsettings/src/factory.c:363
 #, c-format
 msgid "Failed to make a symlink: %s"
-msgstr ""
+msgstr "Не удалось создать символьную ссылку: %s"
 
 #: ../imsettings/src/factory.c:478 ../imsettings/src/factory_info.c:526
 #, c-format
 msgid "No such input method on your system: %s"
-msgstr ""
+msgstr "Такой метод не существует в вашей системе: %s"
 
 #: ../imsettings/src/factory.c:498
 #, c-format
 msgid "No XIM server is available in %s"
-msgstr ""
+msgstr "Нет сервера XIM в %s"
 
 #: ../imsettings/src/factory.c:646
 msgid "X display name"
-msgstr ""
+msgstr "имя дисплея X"
 
 #: ../imsettings/src/factory.c:647
 msgid "X display name to use"
-msgstr ""
+msgstr "Имя дисплея Х для использования"
 
 #: ../imsettings/src/factory.c:691
 msgid "X display to use"
-msgstr ""
+msgstr "Дисплей Х для использования"
 
 #: ../imsettings/src/factory.c:691
 msgid "DISPLAY"
-msgstr ""
+msgstr "ДИСПЛЕЙ"
 
 #. FIXME
 #: ../imsettings/src/factory.c:694
 msgid "X screen to use"
-msgstr ""
+msgstr "Экран Х для использования"
 
 #: ../imsettings/src/factory.c:694
 msgid "SCREEN"
-msgstr ""
+msgstr "ЭКРАН"
 
 #: ../imsettings/src/factory.c:725
-#, c-format
 msgid "Failed to open a X display."
-msgstr ""
+msgstr "Не удалось открыть дисплей Х."
 
 #: ../imsettings/src/factory_info.c:127
-#, c-format
 msgid "Reloading...\n"
-msgstr ""
+msgstr "Выполняется перезагрузка...\n"
 
 #: ../imsettings/src/factory_info.c:188
 #, c-format
 msgid "Duplicate entry `%s' from %s. SHORT_DESC has to be unique."
-msgstr ""
+msgstr "Дубликат записи `%s' из %s. Значение SHORT_DESC должно быть уникальным."
 
 #: ../imsettings/src/factory_info.c:446 ../imsettings/src/factory_info.c:484
 #: ../imsettings/src/factory_info.c:500 ../imsettings/src/factory_info.c:518
 #, c-format
 msgid "Timed out to initialize %s services."
-msgstr ""
+msgstr "Таймаут при инициализации служб %s."
 
 #: ../imsettings/src/factory_info.c:469
-#, c-format
 msgid "No input methods available on your system."
-msgstr ""
+msgstr "Нет доступных методов ввода в вашей системе."
 
 #: ../imsettings/utils/imsettings-reload.c:42
 #: ../imsettings/utils/imsettings-restart.c:43
 #: ../imsettings/utils/imsettings-stop.c:42
 msgid "Force reloading the configuration, including restarting the process."
-msgstr ""
+msgstr "Принудительная загрузка конфигурации, включая рестарт процесса."
 
 #: ../imsettings/utils/imsettings-restart.c:44
 #: ../imsettings/utils/imsettings-stop.c:43
 msgid "Do not update .xinputrc."
-msgstr ""
+msgstr "Не обновлять .xinputrc."
 
 #: ../imsettings/utils/imsettings-stop.c:80
 #, c-format
 msgid "Stopped %s\n"
-msgstr ""
+msgstr "Остановлен %s\n"
 
 #: ../imsettings/utils/imsettings-stop.c:82
 #, c-format
 msgid "Failed to stop IM process `%s'\n"
-msgstr ""
+msgstr "Не удалось остановить процесс IM: `%s'\n"
 
 #: ../src/im-chooser-simple.c:145
-#, fuzzy
 msgid "Updating Input Method list"
-msgstr "Метод ввода"
+msgstr "Обновление списка методов ввода"
 
-#: ../src/im-chooser-simple.c:309 ../src/im-chooser-simple.c:343
-#, fuzzy
+#: ../src/im-chooser-simple.c:310 ../src/im-chooser-simple.c:344
 msgid "Failed to start Input Method"
-msgstr "_Не использовать методы ввода"
+msgstr "Не удалось инициализировать метод ввода"
 
-#: ../src/im-chooser-simple.c:406
-#, fuzzy, c-format
+#: ../src/im-chooser-simple.c:407
+#, c-format
 msgid "Starting Input Method - %s"
-msgstr "Метод ввода"
+msgstr "Инициализация метода ввода - %s"
 
-#: ../src/im-chooser-simple.c:423
-#, fuzzy, c-format
+#: ../src/im-chooser-simple.c:424
+#, c-format
 msgid "Stopping Input Method - %s"
-msgstr "Метод ввода"
+msgstr "Остановка метода ввода - %s"
+
+#: ../src/im-chooser-simple.c:542
+msgid "Parent Window"
+msgstr "Родительское окно"
 
 #: ../src/im-chooser-simple.c:543
-msgid "Parent Window"
-msgstr ""
-
-#: ../src/im-chooser-simple.c:544
 msgid "GtkWindow that points to the parent window"
-msgstr ""
+msgstr "GtkWindow указывает на родительское окно"
 
 #. setup a progress window
-#: ../src/im-chooser-simple.c:584
+#: ../src/im-chooser-simple.c:583
 msgid "Work in progress..."
-msgstr ""
+msgstr "В процессе..."
 
-#: ../src/im-chooser-simple.c:642
+#: ../src/im-chooser-simple.c:641
 #, c-format
 msgid "Use %s"
-msgstr ""
+msgstr "Использовать %s"
 
-#: ../src/im-chooser-simple.c:645
+#: ../src/im-chooser-simple.c:644
 msgid " (legacy)"
-msgstr ""
+msgstr " (устаревший)"
 
-#: ../src/im-chooser-simple.c:649
+#: ../src/im-chooser-simple.c:648
 msgid " (recommended)"
-msgstr ""
+msgstr " (рекомендуется)"
 
-#: ../src/im-chooser-simple.c:761
+#: ../src/im-chooser-simple.c:760
 msgid "<b>Input Method</b>"
 msgstr "<b>Метод ввода</b>"
 
-#: ../src/im-chooser-simple.c:767
+#: ../src/im-chooser-simple.c:766
 msgid "_Enable input method feature"
-msgstr ""
+msgstr "_Включить возможность метода ввода"
 
-#: ../src/im-chooser-simple.c:774
-#, fuzzy
+#: ../src/im-chooser-simple.c:773
 msgid ""
 "<small><i>Note: this change will not take effect until you next log in, "
 "except GTK+ applications.</i></small>"
 msgstr ""
-"<small><i>Замечание: это изменение не вступит в силу до следующего входа.</"
+"<small><i>Замечание: это изменение не вступит в силу до следующего входа. Исключение составляют приложения GTK+.</"
 "i></small>"
 
-#: ../src/im-chooser-simple.c:806
-#, fuzzy
+#: ../src/im-chooser-simple.c:805
 msgid "Input Method _Preferences..."
-msgstr "Метод ввода"
+msgstr "_Параметры метода ввода"
 
 #: ../src/main.c:55
-msgid ""
-"<span weight=\"bold\" size=\"larger\">No input method is available</span>"
-msgstr ""
+msgid "<span weight=\"bold\" size=\"larger\">No input method is available</span>"
+msgstr "<span weight=\"bold\" size=\"larger\">Нет доступных методов ввода</span>"
 
 #: ../src/main.c:58
 msgid "Please install any input methods before running if you like."
-msgstr ""
+msgstr "Сначала установите методы ввода."
 
 #: ../src/main.c:153
 msgid "IM Chooser - Input Method configuration tool"
@@ -458,55 +454,14 @@ msgid "_Log Out"
 msgstr "В_ыход"
 
 #: ../src/im-chooser.desktop.in.in.h:1
-#, fuzzy
 msgid ""
 "Choose the input method to be used or disable the input method usage on the "
 "desktop"
 msgstr ""
-"Утилита настройки метода ввода позволяет выбрать метод ввода или вообще "
-"отключить использование метода ввода."
+"На рабочем столе можно выбрать метод ввода или вообще "
+"отключить использование метода ввода"
 
 #: ../src/im-chooser.desktop.in.in.h:2
 msgid "Input Method"
 msgstr "Метод ввода"
 
-#~ msgid "No valid IM installed"
-#~ msgstr "Не установлен метод ввода"
-
-#, fuzzy
-#~ msgid "Choose _specific Input Method"
-#~ msgstr "Использовать п_ользовательский метод ввода"
-
-#, fuzzy
-#~ msgid ""
-#~ "Use the specific Input Method that you prefer regardless what Input "
-#~ "Method the system recommends."
-#~ msgstr ""
-#~ "Использовать заданный метод ввода независимо от метода, рекомендуемого "
-#~ "системой."
-
-#, fuzzy
-#~ msgid ""
-#~ "Do not use Input Method no matter what language the desktop is running on."
-#~ msgstr "Деактивировать методы ввода независимо от языка системы."
-
-#, fuzzy
-#~ msgid "Use legacy _Input Method"
-#~ msgstr "Использовать _стандартные методы ввода"
-
-#~ msgid ""
-#~ "Use X Input Method anyway. In fact, which input method will be chosen for "
-#~ "the desktop session, depends on the desktop language."
-#~ msgstr ""
-#~ "Использовать метод ввода X. Другими словами, метод ввода будет зависеть "
-#~ "от языка системы."
-
-#~ msgid "_Follow the system-wide configuration"
-#~ msgstr "_Принять общесистемную конфигурацию"
-
-#~ msgid ""
-#~ "Follow the system-wide input method configuration to determine which "
-#~ "input method should be used."
-#~ msgstr ""
-#~ "Принять системную конфигурацию метода ввода для задания используемого "
-#~ "метода ввода."
