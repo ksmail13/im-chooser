@@ -1,4 +1,4 @@
-# translation of im-chooser.trunk.as.1.po to Assamese
+# translation of im-chooser.trunk.as.po to Assamese
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 #
@@ -6,12 +6,12 @@
 # Amitakhya Phukan <aphukan@fedoraproject.org>, 2008.
 msgid ""
 msgstr ""
-"Project-Id-Version: im-chooser.trunk.as.1\n"
+"Project-Id-Version: im-chooser.trunk.as\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-03-11 21:15+0900\n"
-"PO-Revision-Date: 2008-02-15 11:36+0530\n"
+"POT-Creation-Date: 2008-03-12 07:55+0000\n"
+"PO-Revision-Date: 2008-03-31 15:28+0530\n"
 "Last-Translator: Amitakhya Phukan <aphukan@fedoraproject.org>\n"
-"Language-Team: Assamese\n"
+"Language-Team: Assamese <fedora-trans-as@redhat.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -162,13 +162,13 @@ msgstr "XIM"
 msgid "Whether or not IM is a XIM server."
 msgstr "IM এটা XIM সেৱক হয় নে নহয় ।"
 
-#: ../imsettings/imsettings/imsettings-info-private.h:40
+#: ../imsettings/imsettings/imsettings-info-private.h:39
 msgid "User Specific"
-msgstr ""
+msgstr "ব্যৱহাৰকৰোঁতাৰ দ্বাৰা নিৰ্দ্দিষ্ট"
 
-#: ../imsettings/imsettings/imsettings-info-private.h:41
+#: ../imsettings/imsettings/imsettings-info-private.h:40
 msgid "xinputrc was modified by the user"
-msgstr ""
+msgstr "ব্যৱহাৰকৰোঁতাৰ দ্বাৰা xinputrc সলনি কৰা হৈছিল"
 
 #: ../imsettings/imsettings/imsettings-observer.c:255
 #, c-format
@@ -180,9 +180,8 @@ msgid "IM module name"
 msgstr "IM অংশৰ নাম"
 
 #: ../imsettings/imsettings/imsettings-observer.c:696
-#, fuzzy
 msgid "A target IM module name that to observe signals"
-msgstr "An IM module name to be watched signals"
+msgstr "চিগ্নেল চাবলৈ এটা লক্ষ্য IM অংশ"
 
 #: ../imsettings/imsettings/imsettings-observer.c:701
 msgid "Replace"
@@ -268,7 +267,6 @@ msgid "Couldn't send a signal to the %s process successfully."
 msgstr "%s প্ৰক্ৰিয়ালৈ সফলভাবে চিগ্নেল পঠিয়াব নোৱাৰি ।"
 
 #: ../imsettings/src/factory.c:314 ../imsettings/src/factory.c:600
-#, c-format
 msgid "Failed to get a place of home directory."
 msgstr "ঘৰৰ পঞ্জিকাৰ বাবে স্থান পোৱা ন'গ'ল ।"
 
@@ -300,7 +298,7 @@ msgstr "আপোনাৰ ব্যৱস্থাপ্ৰণালীত এ�
 #: ../imsettings/src/factory.c:498
 #, c-format
 msgid "No XIM server is available in %s"
-msgstr ""
+msgstr "%s ত কোনো XIM সেৱক নাই"
 
 #: ../imsettings/src/factory.c:646
 msgid "X display name"
@@ -328,12 +326,10 @@ msgid "SCREEN"
 msgstr "SCREEN"
 
 #: ../imsettings/src/factory.c:725
-#, c-format
 msgid "Failed to open a X display."
 msgstr "এটা X প্ৰদৰ্শন খুলিবলৈ বিফল ।"
 
 #: ../imsettings/src/factory_info.c:127
-#, c-format
 msgid "Reloading...\n"
 msgstr "পুনঃ তোলা হৈছে...\n"
 
@@ -346,10 +342,9 @@ msgstr "দ্বৈধ নিবেশ `%s' %s ৰ পৰা । SHORT_DESC অ
 #: ../imsettings/src/factory_info.c:500 ../imsettings/src/factory_info.c:518
 #, c-format
 msgid "Timed out to initialize %s services."
-msgstr ""
+msgstr "%s সেৱা আৰম্ভ কৰোঁতে সময় শেষ হ'ল ।"
 
 #: ../imsettings/src/factory_info.c:469
-#, c-format
 msgid "No input methods available on your system."
 msgstr "আপোনাৰ ব্যৱস্থাপ্ৰণালীত কোনো নিবেশ পদ্ধতি পোৱা ন'গ'ল ।"
 
@@ -362,73 +357,71 @@ msgstr "বিন্যাস যোৰ কৰি পুনঃ তোলা হ�
 #: ../imsettings/utils/imsettings-restart.c:44
 #: ../imsettings/utils/imsettings-stop.c:43
 msgid "Do not update .xinputrc."
-msgstr ""
+msgstr ".xinputrc উন্নত নকৰিব ।"
 
 #: ../imsettings/utils/imsettings-stop.c:80
 #, c-format
 msgid "Stopped %s\n"
-msgstr ""
+msgstr "%s বন্ধ কৰা হ'ল\n"
 
 #: ../imsettings/utils/imsettings-stop.c:82
-#, fuzzy, c-format
+#, c-format
 msgid "Failed to stop IM process `%s'\n"
-msgstr "এটা pidfile খোলোঁতে বিফল: %s"
+msgstr "IM প্ৰক্ৰিয়া `%s' বন্ধ কৰাত বিফল\n"
 
 #: ../src/im-chooser-simple.c:145
-#, fuzzy
 msgid "Updating Input Method list"
-msgstr "নিবেশ পদ্ধতি"
+msgstr "নিবেশ পদ্ধতিৰ তালিকা উন্নত কৰা হৈছে"
 
-#: ../src/im-chooser-simple.c:309 ../src/im-chooser-simple.c:343
-#, fuzzy
+#: ../src/im-chooser-simple.c:310 ../src/im-chooser-simple.c:344
 msgid "Failed to start Input Method"
-msgstr "নিবেশ পদ্ধতি"
+msgstr "নিবেশ পদ্ধতি আৰম্ভ কৰাত বিফল"
 
-#: ../src/im-chooser-simple.c:406
-#, fuzzy, c-format
+#: ../src/im-chooser-simple.c:407
+#, c-format
 msgid "Starting Input Method - %s"
-msgstr "নিবেশ পদ্ধতি"
+msgstr "নিবেশ পদ্ধতি আৰম্ভ কৰা হৈছে - %s"
 
-#: ../src/im-chooser-simple.c:423
-#, fuzzy, c-format
+#: ../src/im-chooser-simple.c:424
+#, c-format
 msgid "Stopping Input Method - %s"
-msgstr "নিবেশ পদ্ধতি"
+msgstr "নিবেশ পদ্ধতি বন্ধ কৰা হৈছে - %s"
+
+#: ../src/im-chooser-simple.c:542
+msgid "Parent Window"
+msgstr "পেৰেন্ট সংযোগক্ষেত্ৰ"
 
 #: ../src/im-chooser-simple.c:543
-msgid "Parent Window"
-msgstr ""
-
-#: ../src/im-chooser-simple.c:544
 msgid "GtkWindow that points to the parent window"
-msgstr ""
+msgstr "পেৰেন্ট সংযোগক্ষেত্ৰলৈ আঙুলিয়াই দিয়া GtkWindow"
 
 #. setup a progress window
-#: ../src/im-chooser-simple.c:584
+#: ../src/im-chooser-simple.c:583
 msgid "Work in progress..."
-msgstr ""
+msgstr "কাম চলি আছে..."
 
-#: ../src/im-chooser-simple.c:642
+#: ../src/im-chooser-simple.c:641
 #, c-format
 msgid "Use %s"
 msgstr "%s ব্যৱহাৰ কৰক"
 
-#: ../src/im-chooser-simple.c:645
+#: ../src/im-chooser-simple.c:644
 msgid " (legacy)"
 msgstr " (লিগেচি)"
 
-#: ../src/im-chooser-simple.c:649
+#: ../src/im-chooser-simple.c:648
 msgid " (recommended)"
 msgstr " (উপদেশিত)"
 
-#: ../src/im-chooser-simple.c:761
+#: ../src/im-chooser-simple.c:760
 msgid "<b>Input Method</b>"
 msgstr "<b>নিবেশ পদ্ধতি</b>"
 
-#: ../src/im-chooser-simple.c:767
+#: ../src/im-chooser-simple.c:766
 msgid "_Enable input method feature"
 msgstr "নিবেশ পদ্ধতিৰ গুণ সক্ৰিয় কৰে (_E)"
 
-#: ../src/im-chooser-simple.c:774
+#: ../src/im-chooser-simple.c:773
 msgid ""
 "<small><i>Note: this change will not take effect until you next log in, "
 "except GTK+ applications.</i></small>"
@@ -436,15 +429,13 @@ msgstr ""
 "<small><i>মন কৰিব:এই সলনি আপুনি অহা বাৰলৈ প্ৰৱেশ নকৰালৈকে প্ৰযোজ্য নহয়, GTK+ "
 "অনুপ্ৰয়োগৰ বাহিৰে ।</i></small>"
 
-#: ../src/im-chooser-simple.c:806
+#: ../src/im-chooser-simple.c:805
 msgid "Input Method _Preferences..."
 msgstr "নিবেশ পদ্ধতিৰ পছন্দ (_P)..."
 
 #: ../src/main.c:55
-msgid ""
-"<span weight=\"bold\" size=\"larger\">No input method is available</span>"
-msgstr ""
-"<span weight=\"bold\" size=\"laৰgeৰ\">কোনো নিবেশ পদ্ধতি পোৱা নাযায়</span>"
+msgid "<span weight=\"bold\" size=\"larger\">No input method is available</span>"
+msgstr "<span weight=\"bold\" size=\"laৰgeৰ\">কোনো নিবেশ পদ্ধতি পোৱা নাযায়</span>"
 
 #: ../src/main.c:58
 msgid "Please install any input methods before running if you like."
@@ -470,24 +461,3 @@ msgstr ""
 msgid "Input Method"
 msgstr "নিবেশ পদ্ধতি"
 
-#~ msgid ""
-#~ "The appropriate configuration file wasn't found. maybe the installation "
-#~ "failed: %s"
-#~ msgstr "উপযুক্ত বিন্যাস নথিপত্ৰ পোৱা ন'গ'ল । হয়তো সংস্থাপন বিফল হ'ল: %s"
-
-#~ msgid "No system default IM found at the pre-search phase. Adding..."
-#~ msgstr ""
-#~ "বিচৰাৰ আগৰ পৰ্যায়ত কোনো ব্যৱস্থাপ্ৰণালীৰ অবিকল্পিত IM পোৱা ন'গ'ল । যোগ কৰা "
-#~ "হৈছে..."
-
-#~ msgid ""
-#~ "Looking up the different object with the same key. it may happens due to "
-#~ "the un-unique short description. replacing..."
-#~ msgstr ""
-#~ "একেই চাবিৰে অন্য এটা বস্তু বিচৰা হৈছে । দ্বৈত বিৱৰণৰ বাবে এইটো হ'ব পাটে । "
-#~ "প্ৰতিস্থাপন কৰা হৈছে..."
-
-#~ msgid "No user default IM found at the pre-search phase. Adding..."
-#~ msgstr ""
-#~ "বিচৰাৰ আগৰ পৰ্যায়ত কোনো ব্যৱহাৰকৰোঁতাৰ অবিকল্পিত IM পোৱা ন'গ'ল । যোগ কৰা "
-#~ "হৈছে..."
