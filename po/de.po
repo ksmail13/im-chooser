@@ -5,14 +5,15 @@
 # Automatically generated, 2006.
 # Timo Trinks <ttrinks@redhat.com>, 2006.
 # Fabian Affolter <fab@fedoraproject.org>, 2007,2008.
+# Dominik Sandjaja <dominiksandjaja@fedoraproject.org>, 2008.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: Desktop Input Method configuration tool\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-03-12 07:55+0000\n"
-"PO-Revision-Date: 2008-03-17 19:55+0100\n"
-"Last-Translator: Fabian Affolter <fab@fedoraproject.org>\n"
+"POT-Creation-Date: 2008-04-02 09:41+0000\n"
+"PO-Revision-Date: 2008-04-03 09:40+0100\n"
+"Last-Translator: Dominik Sandjaja <dominiksandjaja@fedoraproject.org>\n"
 "Language-Team: German Translation team <fedora-trans-de@redhat.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -243,7 +244,7 @@ msgstr ""
 "Aufruf einer Methode fehlgeschlagen `%s':\n"
 "  %s"
 
-#: ../imsettings/imsettings/imsettings-request.c:672
+#: ../imsettings/imsettings/imsettings-request.c:673
 #, c-format
 msgid ""
 "Failed to invoke a method `%s' on %s:\n"
@@ -359,10 +360,13 @@ msgid "No input methods available on your system."
 msgstr "Keine Eingabemethoden verfügbar auf Ihrem System."
 
 #: ../imsettings/utils/imsettings-reload.c:42
-#: ../imsettings/utils/imsettings-restart.c:43
 #: ../imsettings/utils/imsettings-stop.c:42
 msgid "Force reloading the configuration, including restarting the process."
 msgstr "Neuladen der Konfiguration forcieren, inklusive neustarten des Prozesses."
+
+#: ../imsettings/utils/imsettings-restart.c:43
+msgid "Force restarting the IM process regradless of any errors."
+msgstr "Erzwinge Neustart des IM-Prozesses, auch bei Fehlern."
 
 #: ../imsettings/utils/imsettings-restart.c:44
 #: ../imsettings/utils/imsettings-stop.c:43
@@ -409,7 +413,7 @@ msgstr "GtkWindow welches auf das Elternfenster verweist"
 #. setup a progress window
 #: ../src/im-chooser-simple.c:583
 msgid "Work in progress..."
-msgstr "In Arbeit..."
+msgstr "In Arbeit …"
 
 #: ../src/im-chooser-simple.c:641
 #, c-format
@@ -434,7 +438,7 @@ msgstr "Eingabemethoden-_Funktion aktivieren"
 
 #: ../src/im-chooser-simple.c:773
 msgid "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications.</i></small>"
-msgstr "<small><i>Hinweis: Diese Änderung wird erst aktiv, wenn Sie sich das nächste Mal anmelden, ausser bei GTK+-Anwendungen.</i></small>"
+msgstr "<small><i>Hinweis: Diese Änderung wird erst aktiv, wenn Sie sich das nächste Mal anmelden, außer bei GTK+-Anwendungen.</i></small>"
 
 #: ../src/im-chooser-simple.c:805
 msgid "Input Method _Preferences..."
