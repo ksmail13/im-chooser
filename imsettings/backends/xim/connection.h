@@ -51,12 +51,20 @@ struct _XIMConnection {
 };
 
 
-GType          xim_connection_get_type     (void) G_GNUC_CONST;
-XIMConnection *xim_connection_new          (Display       *dpy,
-                                            Window         requestor,
-                                            const gchar   *xim_server_name);
-void           xim_connection_forward_event(XIMConnection *connection,
-                                            XEvent        *event);
+GType          xim_connection_get_type                (void) G_GNUC_CONST;
+XIMConnection *xim_connection_new                     (Display       *dpy,
+						       GType          protocol_type,
+                                                       Window         client_window);
+void           xim_connection_forward_event           (XIMConnection *from,
+						       XIMConnection *to,
+                                                       XEvent        *event);
+gboolean       xim_connection_send_via_cm             (XIMConnection *conn,
+                                                       gsize          threshold,
+                                                       const GString *packets);
+gboolean       xim_connection_send_via_property       (XIMConnection *conn,
+                                                       const GString *packets);
+gboolean       xim_connection_send_via_property_notify(XIMConnection *conn,
+                                                       const GString *packets);
 
 
 G_END_DECLS

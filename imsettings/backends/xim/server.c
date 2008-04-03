@@ -26,10 +26,12 @@
 #endif
 
 #include <stdint.h>
+#include <string.h>
 #include <glib/gi18n-lib.h>
 #include <X11/Xatom.h>
 #include "imsettings/imsettings-marshal.h"
 #include "connection.h"
+#include "protocol.h"
 #include "utils.h"
 #include "server.h"
 
@@ -55,13 +57,18 @@ typedef struct _XIMServerPrivate {
 	gchar           *target_xim_name;
 	Window           selection_window;
 	Window           target_xim_window;
+	Atom             atom_selection;
 	gboolean         initialized;
+	gboolean         verbose;
+	gboolean         is_locked;
 } XIMServerPrivate;
 
 enum {
 	PROP_0,
 	PROP_DISPLAY,
 	PROP_XIM,
+	PROP_VERBOSE,
+	PROP_LOCK,
 	LAST_PROP
 };
 enum {
@@ -86,6 +93,7 @@ static GSourceFuncs source_funcs = {
 	_source_dispatch,
 	_source_finalize
 };
+static GQuark quark_opposite_conn = 0;
 
 G_DEFINE_TYPE (XIMServer, xim_server, G_TYPE_OBJECT);
 
@@ -98,12 +106,18 @@ _weak_notify_connection_cb(gpointer  data,
 {
 	GHashTable *conn_table = data;
 	gconstpointer wc, ws;
+	GObject *o;
+	gboolean verbose;
 
-	g_object_get(object, "comm_client_window", &wc, NULL);
-	g_object_get(object, "comm_server_window", &ws, NULL);
+	g_object_get(object, "comm_window", &wc, NULL);
+	o = g_object_get_qdata(object, quark_opposite_conn);
+	g_object_get(o, "comm_window", &ws, NULL);
+	g_object_weak_unref(o, _weak_notify_connection_cb, data);
 	g_hash_table_remove(conn_table, wc);
 	g_hash_table_remove(conn_table, ws);
-	d(g_print("%ld: DBG: EOL'd an instance\n", (gulong)wc));
+	g_object_get(object, "verbose", &verbose, NULL);
+	if (verbose)
+		g_print("%ld: EOL'd an instance\n", (gulong)wc);
 }
 
 static gboolean
@@ -111,9 +125,16 @@ _source_prepare(GSource *source,
 		gint    *timeout)
 {
 	XIMServerSource *s = (XIMServerSource *)source;
+	XIMServerPrivate *priv = XIM_SERVER_GET_PRIVATE (s->xim);
 
-	/* just waiting for polling fd */
-	*timeout = -1;
+	if (priv->is_locked) {
+		*timeout = 5;
+
+		return FALSE;
+	} else {
+		/* just waiting for polling fd */
+		*timeout = -1;
+	}
 
 	return XPending(s->xim->dpy) > 0;
 }
@@ -122,39 +143,63 @@ static gboolean
 _source_check(GSource *source)
 {
 	XIMServerSource *s = (XIMServerSource *)source;
+	XIMServerPrivate *priv = XIM_SERVER_GET_PRIVATE (s->xim);
 	gboolean retval = FALSE;
 
 	if (s->poll_fd.revents & G_IO_IN)
 		retval = XPending(s->xim->dpy) > 0;
 
-	return retval;
+	return retval && !priv->is_locked;
 }
 
 static XIMConnection *
 _create_connection(XIMServer *server,
 		   Window     requestor)
 {
-	XIMConnection *conn;
+	XIMConnection *connc, *conns;
 	XIMServerPrivate *priv = XIM_SERVER_GET_PRIVATE (server);
 	Window wc, ws;
 
-	conn = xim_connection_new(server->dpy,
-				  requestor,
-				  priv->target_xim_name);
-	g_object_get(G_OBJECT (conn), "comm_client_window", &wc, NULL);
-	g_object_get(G_OBJECT (conn), "comm_server_window", &ws, NULL);
-	d(g_print("%ld: DBG: Adding client %ld\n", wc, requestor));
+	if (!quark_opposite_conn)
+		quark_opposite_conn = g_quark_from_static_string("xim-opposite-connection");
+
+	connc = xim_connection_new(server->dpy,
+				   XIM_TYPE_PROTOCOL,
+				   requestor);
+	if (priv->verbose)
+		g_object_set(G_OBJECT (connc), "verbose", priv->verbose, NULL);
+
+	g_object_get(G_OBJECT (connc), "comm_window", &wc, NULL);
 	g_hash_table_insert(priv->conn_table,
 			    (gpointer)wc,
-			    conn);
-	g_hash_table_insert(priv->conn_table,
-			    (gpointer)ws,
-			    conn);
-	g_object_weak_ref(G_OBJECT (conn),
+			    connc);
+	g_object_weak_ref(G_OBJECT (connc),
 			  _weak_notify_connection_cb,
 			  priv->conn_table);
 
-	return conn;
+	/* create a connection to the server */
+	conns = xim_connection_new(server->dpy,
+				   XIM_TYPE_PROTOCOL,
+				   priv->target_xim_window);
+	if (priv->verbose)
+		g_object_set(G_OBJECT (conns), "verbose", priv->verbose, NULL);
+	g_object_set(G_OBJECT (conns), "selection", priv->atom_selection, NULL);
+	g_object_get(G_OBJECT (conns), "comm_window", &ws, NULL);
+	g_hash_table_insert(priv->conn_table,
+			    (gpointer)ws,
+			    conns);
+	g_object_weak_ref(G_OBJECT (conns),
+			  _weak_notify_connection_cb,
+			  priv->conn_table);
+
+	g_object_set_qdata(G_OBJECT (connc), quark_opposite_conn, conns);
+	g_object_set_qdata(G_OBJECT (conns), quark_opposite_conn, connc);
+
+	if (priv->verbose) {
+		g_print("%ld: Adding connection for %ld [server comm:%ld]\n", wc, requestor, ws);
+	}
+
+	return connc;
 }
 
 static gboolean
@@ -175,10 +220,12 @@ _source_dispatch(GSource     *source,
 
 		switch (xevent.type) {
 		    case SelectionRequest:
+			    d(g_print("EV: SelectionRequest\n"));
 			    possibly_new = TRUE;
 			    requestor = xevent.xselectionrequest.requestor;
 			    break;
 		    case SelectionNotify:
+			    d(g_print("EV: SelectionNotify\n"));
 			    requestor = xevent.xselection.requestor;
 			    eol = TRUE;
 			    break;
@@ -222,15 +269,19 @@ _source_dispatch(GSource     *source,
 			    break;
 		}
 		if (requestor != 0) {
+			XIMConnection *to;
+
 			conn = g_hash_table_lookup(priv->conn_table, (gpointer)requestor);
 			if (conn) {
-				xim_connection_forward_event(conn, &xevent);
+				to = g_object_get_qdata(G_OBJECT (conn), quark_opposite_conn);
+				xim_connection_forward_event(conn, to, &xevent);
 				if (eol)
 					g_object_unref(G_OBJECT (conn));
 			} else {
 				if (possibly_new) {
 					conn = _create_connection(s->xim, requestor);
-					xim_connection_forward_event(conn, &xevent);
+					to = g_object_get_qdata(G_OBJECT (conn), quark_opposite_conn);
+					xim_connection_forward_event(conn, to, &xevent);
 				} else {
 					g_warning("Invalid eventflow detected. no connection is established for %ld. discarding...", requestor);
 				}
@@ -273,7 +324,11 @@ xim_server_set_property(GObject      *object,
 		    break;
 	    case PROP_XIM:
 		    name = g_value_get_string(value);
-		    if ((a = xim_lookup_atom(xim->dpy, name)) != None) {
+		    if (strcmp(name, "none") == 0) {
+			    priv->target_xim_name = g_strdup(name);
+			    /* create the dummy XIM server */
+			    g_print("XXX: creating dummy XIM server\n");
+		    } else if ((a = xim_lookup_atom(xim->dpy, name)) != None) {
 			    Window w = XGetSelectionOwner(xim->dpy, a);
 			    gchar *old_xim;
 
@@ -281,12 +336,17 @@ xim_server_set_property(GObject      *object,
 				    priv->target_xim_window = w;
 				    old_xim = priv->target_xim_name;
 				    priv->target_xim_name = g_strdup(name);
+				    priv->atom_selection = a;
 
 				    g_hash_table_foreach(priv->conn_table,
 							 xim_server_update_xim_server,
 							 priv->target_xim_name);
 
-				    d(g_print("INF: XIM server changes: %s->%s\n", old_xim, name));
+				    if (strcmp(old_xim, "none") == 0) {
+					    /* destroy the dummy XIM server */
+					    g_print("XXX: destroying dummy XIM server\n");
+				    }
+
 				    g_free(old_xim);
 			    } else {
 				    gchar *s = XGetAtomName(xim->dpy, a);
@@ -297,6 +357,16 @@ xim_server_set_property(GObject      *object,
 		    } else {
 			    g_warning("No such XIM server is running: %s", name);
 		    }
+		    break;
+	    case PROP_VERBOSE:
+		    priv->verbose = g_value_get_boolean(value);
+		    d(g_print("D: setting \"verbose\" flag to %s\n", priv->verbose ? "true" : "false"));
+		    break;
+	    case PROP_LOCK:
+		    if (g_value_get_boolean(value))
+			    xim_server_freeze_event(XIM_SERVER (object));
+		    else
+			    xim_server_thaw_event(XIM_SERVER (object));
 		    break;
 	    default:
 		    G_OBJECT_WARN_INVALID_PROPERTY_ID (object, prop_id, pspec);
@@ -319,6 +389,12 @@ xim_server_get_property(GObject    *object,
 		    break;
 	    case PROP_XIM:
 		    g_value_set_string(value, priv->target_xim_name);
+		    break;
+	    case PROP_VERBOSE:
+		    g_value_set_boolean(value, priv->verbose);
+		    break;
+	    case PROP_LOCK:
+		    g_value_set_boolean(value, priv->is_locked);
 		    break;
 	    default:
 		    G_OBJECT_WARN_INVALID_PROPERTY_ID (object, prop_id, pspec);
@@ -364,6 +440,18 @@ xim_server_class_init(XIMServerClass *klass)
 							    _("XIM server name to be connected"),
 							    NULL,
 							     G_PARAM_READWRITE));
+	g_object_class_install_property(object_class, PROP_VERBOSE,
+					g_param_spec_boolean("verbose",
+							     _("Verbose flag"),
+							     _("Output a lot of helpful messages to debug"),
+							     FALSE,
+							     G_PARAM_READWRITE));
+	g_object_class_install_property(object_class, PROP_LOCK,
+					g_param_spec_boolean("lock",
+							     _("Event Lock"),
+							     _("A flag to freeze the event queue"),
+							     FALSE,
+							     G_PARAM_READWRITE));
 
 	/* signals */
 	signals[DESTROY] = g_signal_new("destroy",
@@ -386,7 +474,7 @@ xim_server_init(XIMServer *xim)
 	priv->conn_table = g_hash_table_new(g_direct_hash, g_direct_equal);
 	priv->selection_window = 0;
 	priv->event_loop = NULL;
-	priv->target_xim_name = NULL;
+	priv->target_xim_name = g_strdup("none");
 }
 
 /*
@@ -507,4 +595,24 @@ xim_server_setup(XIMServer *xim,
 	priv->initialized = TRUE;
 
 	return TRUE;
+}
+
+void
+xim_server_freeze_event(XIMServer *server)
+{
+	XIMServerPrivate *priv;
+	g_return_if_fail (XIM_IS_SERVER (server));
+
+	priv = XIM_SERVER_GET_PRIVATE (server);
+//	priv->is_locked = TRUE;
+}
+
+void
+xim_server_thaw_event(XIMServer *server)
+{
+	XIMServerPrivate *priv;
+	g_return_if_fail (XIM_IS_SERVER (server));
+
+	priv = XIM_SERVER_GET_PRIVATE (server);
+	priv->is_locked = FALSE;
 }

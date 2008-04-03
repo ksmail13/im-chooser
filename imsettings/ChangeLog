@@ -1,3 +1,22 @@
+2008-04-03  Akira TAGOH  <tagoh@redhat.com>
+
+	* backends/xim/server.c: a lot of changes to have separate connection
+	management.
+
+	* backends/xim/protocol.[ch]: new.
+
+	* backends/xim/utils.c (xim_lookup_atom): more sanity check.
+	(xim_ximattr_free): new.
+	(xim_xicattr_free): new.
+	(xim_ext_free): new.
+	(xim_ximattribute_free): new.
+	(xim_xicattribute_free): new.
+	(xim_strconvtext_free): new.
+	(xim_protocol_name): new.
+
+	* backends/xim/connection.c: a lot of changes to have separate class
+	for protocol processor.
+
 2008-04-02  Akira TAGOH  <tagoh@redhat.com>
 
 	* utils/imsettings-restart.c (main): Fix a typo.

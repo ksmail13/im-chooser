@@ -26,6 +26,7 @@
 
 #include <glib.h>
 #include <X11/Xlib.h>
+#include "protocol.h"
 
 G_BEGIN_DECLS
 
@@ -47,13 +48,20 @@ enum {
 	XIM_G_FAILED
 };
 
-void      xim_init          (Display     *dpy);
-gboolean  xim_is_initialized(Display     *dpy);
-void      xim_destroy       (Display     *dpy);
-XIMAtoms *xim_get_atoms     (Display     *dpy);
-GQuark    xim_g_error_quark (void);
-Atom      xim_lookup_atom   (Display     *dpy,
-                             const gchar *xim_server_name);
+void         xim_init             (Display      *dpy);
+gboolean     xim_is_initialized   (Display      *dpy);
+void         xim_destroy          (Display      *dpy);
+XIMAtoms    *xim_get_atoms        (Display      *dpy);
+GQuark       xim_g_error_quark    (void);
+Atom         xim_lookup_atom      (Display      *dpy,
+                                   const gchar  *xim_server_name);
+void         xim_ximattr_free     (gpointer      data);
+void         xim_xicattr_free     (gpointer      data);
+void         xim_ext_free         (gpointer      data);
+void         xim_ximattribute_free(gpointer      data);
+void         xim_xicattribute_free(gpointer      data);
+void         xim_strconvtext_free (gpointer      data);
+const gchar *xim_protocol_name    (XIMEventType  major_opcode);
 
 
 G_END_DECLS

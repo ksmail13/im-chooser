@@ -58,9 +58,11 @@ struct _XIMServer {
 GType      xim_server_get_type      (void) G_GNUC_CONST;
 XIMServer *xim_server_new           (Display     *dpy,
                                      const gchar *xim);
-gboolean   xim_server_is_initialized(XIMServer   *xim);
-gboolean   xim_server_setup         (XIMServer   *xim,
+gboolean   xim_server_is_initialized(XIMServer   *server);
+gboolean   xim_server_setup         (XIMServer   *server,
 				     gboolean     replace);
+void       xim_server_freeze_event  (XIMServer   *server);
+void       xim_server_thaw_event    (XIMServer   *server);
 
 
 G_END_DECLS

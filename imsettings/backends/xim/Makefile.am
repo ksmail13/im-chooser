@@ -18,6 +18,7 @@ bin_PROGRAMS = imsettings-xim
 
 noinst_HEADERS =							\
 	connection.h							\
+	protocol.h							\
 	server.h							\
 	utils.h								\
 	$(NULL)
@@ -25,6 +26,7 @@ noinst_HEADERS =							\
 imsettings_xim_SOURCES =						\
 	connection.c							\
 	main.c								\
+	protocol.c							\
 	server.c							\
 	utils.c								\
 	$(NULL)
