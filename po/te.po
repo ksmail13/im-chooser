@@ -11,8 +11,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: im-chooser.trunk.te\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-03-12 07:55+0000\n"
-"PO-Revision-Date: 2008-03-25 20:30+0530\n"
+"POT-Creation-Date: 2008-04-02 09:41+0000\n"
+"PO-Revision-Date: 2008-04-03 17:50+0530\n"
 "Last-Translator: Krishna Babu K <kkrothap@redhat.com>\n"
 "Language-Team: Telugu <en@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -20,6 +20,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.11.4\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n\n"
+"\n"
 
 #: ../imsettings/backends/gconf/main.c:184
 #: ../imsettings/imsettings/imsettings-observer.c:702
@@ -240,7 +241,7 @@ msgstr ""
 "పద్దతిని రేపుటలో విఫలమైనది `%s':\n"
 "  %s"
 
-#: ../imsettings/imsettings/imsettings-request.c:672
+#: ../imsettings/imsettings/imsettings-request.c:673
 #, c-format
 msgid ""
 "Failed to invoke a method `%s' on %s:\n"
@@ -352,10 +353,13 @@ msgid "No input methods available on your system."
 msgstr "మీ సిస్టమ్ నందు ఏ ఇన్‌పుట్ పద్దతులు అందుబాటులోలేవు."
 
 #: ../imsettings/utils/imsettings-reload.c:42
-#: ../imsettings/utils/imsettings-restart.c:43
 #: ../imsettings/utils/imsettings-stop.c:42
 msgid "Force reloading the configuration, including restarting the process."
 msgstr "ఆకృతీకరణను బలవంతంగా తిరిగినింపుతోంది, కార్యము పునఃప్రారంభంతో కలిపి."
+
+#: ../imsettings/utils/imsettings-restart.c:43
+msgid "Force restarting the IM process regradless of any errors."
+msgstr "ఏ దోషముల దృష్ట్యాకాకుండా IM కార్యక్రమాన్ని బలవంతపు పునఃప్రారంభాన్ని చేస్తోంది."
 
 #: ../imsettings/utils/imsettings-restart.c:44
 #: ../imsettings/utils/imsettings-stop.c:43
@@ -429,8 +433,8 @@ msgid ""
 "<small><i>Note: this change will not take effect until you next log in, "
 "except GTK+ applications.</i></small>"
 msgstr ""
-"<small><i>గమనిక: మీరు తరువాత లాగిన్ అగునంతవరకు ఈ మార్పు ప్రభావితం కాదు, "
-"GTK+ అనువర్తనములు కాక.</i></small>"
+"<small><i>గమనిక: మీరు తరువాత లాగిన్ అగునంతవరకు ఈ మార్పు ప్రభావితం కాదు, GTK+ అనువర్తనములు "
+"కాక.</i></small>"
 
 #: ../src/im-chooser-simple.c:805
 msgid "Input Method _Preferences..."
@@ -456,9 +460,7 @@ msgstr "బయటకు రా (_L)"
 msgid ""
 "Choose the input method to be used or disable the input method usage on the "
 "desktop"
-msgstr ""
-"ఉపయోగించుటకు ఇన్‌పుట్ పద్దతిని ఎంచుకొనుము లేదా ఇన్‌పుట్ పద్దతి ఉపయోగాన్ని డెస్క్‍‌టాప్ పైన "
-"అచేతనం చేయుము"
+msgstr "ఉపయోగించుటకు ఇన్‌పుట్ పద్దతిని ఎంచుకొనుము లేదా ఇన్‌పుట్ పద్దతి ఉపయోగాన్ని డెస్క్‍‌టాప్ పైన అచేతనం చేయుము"
 
 #: ../src/im-chooser.desktop.in.in.h:2
 msgid "Input Method"
