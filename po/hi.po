@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: im-chooser.trunk.hi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-03-12 07:55+0000\n"
-"PO-Revision-Date: 2008-03-26 15:33+0530\n"
+"POT-Creation-Date: 2008-04-02 09:41+0000\n"
+"PO-Revision-Date: 2008-04-04 11:46+0530\n"
 "Last-Translator: Rajesh Ranjan <rranjan@redhat.com>\n"
 "Language-Team: Hindi <hindi.sf.net>\n"
 "MIME-Version: 1.0\n"
@@ -18,6 +18,8 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.11.4\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n\n\n"
+"\n"
+"\n"
 "\n"
 
 #: ../imsettings/backends/gconf/main.c:184
@@ -239,7 +241,7 @@ msgstr ""
 "विधि `%s' वापस लाने के लिए विफल:\n"
 "  %s"
 
-#: ../imsettings/imsettings/imsettings-request.c:672
+#: ../imsettings/imsettings/imsettings-request.c:673
 #, c-format
 msgid ""
 "Failed to invoke a method `%s' on %s:\n"
@@ -351,10 +353,13 @@ msgid "No input methods available on your system."
 msgstr "आपके सिस्टम पर कोई इनपुट विधि उपलब्ध नहीं."
 
 #: ../imsettings/utils/imsettings-reload.c:42
-#: ../imsettings/utils/imsettings-restart.c:43
 #: ../imsettings/utils/imsettings-stop.c:42
 msgid "Force reloading the configuration, including restarting the process."
 msgstr "विन्यास का बलपूर्वक रिलोडिंग, प्रक्रिया के फिर आरंभ करने के साथ."
+
+#: ../imsettings/utils/imsettings-restart.c:43
+msgid "Force restarting the IM process regradless of any errors."
+msgstr "बिना किसी त्रुटि के IM प्रक्रिया का बलपूर्वक फिर आरंभ किया जाना."
 
 #: ../imsettings/utils/imsettings-restart.c:44
 #: ../imsettings/utils/imsettings-stop.c:43
@@ -428,8 +433,8 @@ msgid ""
 "<small><i>Note: this change will not take effect until you next log in, "
 "except GTK+ applications.</i></small>"
 msgstr ""
-"<small><i>नोट: यह बदलाव तबतक प्रभावी नहीं होगा जबतक आप अगली बार लॉगिन नहीं होते हैं सिवाय GTK+ अनुप्रयोग के.</i></"
-"small>"
+"<small><i>नोट: यह बदलाव तबतक प्रभावी नहीं होगा जबतक आप अगली बार लॉगिन नहीं होते "
+"हैं सिवाय GTK+ अनुप्रयोग के.</i></small>"
 
 #: ../src/im-chooser-simple.c:805
 msgid "Input Method _Preferences..."
@@ -456,8 +461,8 @@ msgid ""
 "Choose the input method to be used or disable the input method usage on the "
 "desktop"
 msgstr ""
-"इनपुट विधि को प्रयोग किये जाने के लिये चुनें या डेस्कटॉप पर "
-"इनपुट विधि प्रयोग को निष्क्रिय करें"
+"इनपुट विधि को प्रयोग किये जाने के लिये चुनें या डेस्कटॉप पर इनपुट विधि प्रयोग को निष्क्रिय "
+"करें"
 
 #: ../src/im-chooser.desktop.in.in.h:2
 msgid "Input Method"
