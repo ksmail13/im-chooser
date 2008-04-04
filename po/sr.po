@@ -1,30 +1,31 @@
+# translation of sr.po to Serbian
 # Serbian translations for im-chooser
 # Copyright (C) 2006 Red Hat, Inc.
 # This file is distributed under the same license as the im-chooser package.
 #
 # Miloš Komarčević <kmilos@gmail.com>, 2006.
 # Jovan Krunic <jovan.krunic@gmail.com>, 2008.
+# Nikola Pajtic <salgeras@gmail.com>, 2008.
 msgid ""
 msgstr ""
 "Project-Id-Version: im-chooser\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-03-11 21:15+0900\n"
-"PO-Revision-Date: 2008-03-24 19:30+0100\n"
-"Last-Translator: Miloš Komarčević <kmilos@gmail.com>\n"
+"POT-Creation-Date: 2008-04-04 18:09+0000\n"
+"PO-Revision-Date: 2008-04-03 21:34+0200\n"
+"Last-Translator: Nikola Pajtic <salgeras@gmail.com>\n"
 "Language-Team: Serbian (sr) <fedora-trans-sr@redhat.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
 "10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: KBabel 1.11.4\n"
 
 #: ../imsettings/backends/gconf/main.c:184
 #: ../imsettings/imsettings/imsettings-observer.c:702
 #: ../imsettings/src/factory.c:690 ../imsettings/src/factory_info.c:645
 msgid "Replace the running settings daemon with new instance."
-msgstr ""
-"Замени демон који се тренутно извршава, са одговарајућим поставкама, новим "
-"примерком."
+msgstr "Замени системску услугу текућих поставки новим примерком."
 
 #: ../imsettings/backends/gconf/main.c:206 ../imsettings/src/factory.c:717
 #: ../imsettings/src/factory_info.c:667
@@ -32,7 +33,7 @@ msgstr ""
 #: ../imsettings/utils/imsettings-restart.c:65
 #: ../imsettings/utils/imsettings-stop.c:63
 msgid "Unknown error in parsing the command lines."
-msgstr "Непозната грешка при тумачењу командних линија."
+msgstr "Непозната грешка при рашчлањивању командних линија."
 
 #: ../imsettings/imsettings/imsettings-info.c:498
 msgid "Language"
@@ -104,7 +105,7 @@ msgstr "Име програма за поставке"
 
 #: ../imsettings/imsettings/imsettings-info.c:547
 msgid "Preference program to be run"
-msgstr "Програм за поставке за извршавање"
+msgstr "Програм за поставке који ће бити покренут"
 
 #: ../imsettings/imsettings/imsettings-info.c:552
 msgid "Preference program's options"
@@ -112,7 +113,7 @@ msgstr "Опције програма за поставке"
 
 #: ../imsettings/imsettings/imsettings-info.c:553
 msgid "Command line options for preference program"
-msgstr "Опције комадне линије за програм за поставке"
+msgstr "Опције комадне линије програма за поставке"
 
 #: ../imsettings/imsettings/imsettings-info.c:558
 msgid "Auxiliary program name"
@@ -120,7 +121,7 @@ msgstr "Име програма за подршку"
 
 #: ../imsettings/imsettings/imsettings-info.c:559
 msgid "Auxiliary program to be run"
-msgstr "Програм за подршку за извршавање"
+msgstr "Програм за подршку који ће бити покренут"
 
 #: ../imsettings/imsettings/imsettings-info.c:564
 msgid "Auxiliary program's options"
@@ -128,7 +129,7 @@ msgstr "Опције програма за подршку"
 
 #: ../imsettings/imsettings/imsettings-info.c:565
 msgid "Command line options for auxiliary program"
-msgstr "Опције командне линије за програм за подршку"
+msgstr "Опције командне линије програма за подршку"
 
 #: ../imsettings/imsettings/imsettings-info.c:570
 #: ../imsettings/imsettings/imsettings-info.c:571
@@ -164,11 +165,11 @@ msgstr "XIM"
 msgid "Whether or not IM is a XIM server."
 msgstr "Да ли је IM XIM сервер, или није."
 
-#: ../imsettings/imsettings/imsettings-info-private.h:40
+#: ../imsettings/imsettings/imsettings-info-private.h:39
 msgid "User Specific"
 msgstr "Својствено кориснику"
 
-#: ../imsettings/imsettings/imsettings-info-private.h:41
+#: ../imsettings/imsettings/imsettings-info-private.h:40
 msgid "xinputrc was modified by the user"
 msgstr "xinputrc је изменио корисник"
 
@@ -239,7 +240,7 @@ msgstr ""
 "Нисам успео да позовем методу „%s“:\n"
 "  %s"
 
-#: ../imsettings/imsettings/imsettings-request.c:672
+#: ../imsettings/imsettings/imsettings-request.c:673
 #, c-format
 msgid ""
 "Failed to invoke a method `%s' on %s:\n"
@@ -269,7 +270,6 @@ msgid "Couldn't send a signal to the %s process successfully."
 msgstr "Не могу да успешно пошаљем сигнал процесу %s."
 
 #: ../imsettings/src/factory.c:314 ../imsettings/src/factory.c:600
-#, c-format
 msgid "Failed to get a place of home directory."
 msgstr "Нисам успео да добијем место личног директоријума."
 
@@ -329,19 +329,17 @@ msgid "SCREEN"
 msgstr "ПРИКАЗ"
 
 #: ../imsettings/src/factory.c:725
-#, c-format
 msgid "Failed to open a X display."
 msgstr "Нисам успео да отворим Икс екран."
 
 #: ../imsettings/src/factory_info.c:127
-#, c-format
 msgid "Reloading...\n"
 msgstr "Поново учитавам...\n"
 
 #: ../imsettings/src/factory_info.c:188
 #, c-format
 msgid "Duplicate entry `%s' from %s. SHORT_DESC has to be unique."
-msgstr "Двострук унос „%s“ у %s. SHORT_DESC мора бити јединствен."
+msgstr "Двоструки унос „%s“ у %s. SHORT_DESC мора бити јединствен."
 
 #: ../imsettings/src/factory_info.c:446 ../imsettings/src/factory_info.c:484
 #: ../imsettings/src/factory_info.c:500 ../imsettings/src/factory_info.c:518
@@ -350,17 +348,19 @@ msgid "Timed out to initialize %s services."
 msgstr "Истекло је време чекања на иницијализацију %s сервиса."
 
 #: ../imsettings/src/factory_info.c:469
-#, c-format
 msgid "No input methods available on your system."
 msgstr "Нема доступних метода за унос на вашем систему."
 
 #: ../imsettings/utils/imsettings-reload.c:42
-#: ../imsettings/utils/imsettings-restart.c:43
 #: ../imsettings/utils/imsettings-stop.c:42
 msgid "Force reloading the configuration, including restarting the process."
 msgstr ""
 "Приморај да се поново учитају подешавања, укључујући и поновно покретање "
 "процеса."
+
+#: ../imsettings/utils/imsettings-restart.c:43
+msgid "Force restarting the IM process regradless of any errors."
+msgstr "Приморај поновно покретање IM процеса без обзира на грешке."
 
 #: ../imsettings/utils/imsettings-restart.c:44
 #: ../imsettings/utils/imsettings-stop.c:43
@@ -381,55 +381,55 @@ msgstr "Нисам успео да зауставим IM процес „%s“\n
 msgid "Updating Input Method list"
 msgstr "Ажурирам списак метода уноса"
 
-#: ../src/im-chooser-simple.c:309 ../src/im-chooser-simple.c:343
+#: ../src/im-chooser-simple.c:310 ../src/im-chooser-simple.c:344
 msgid "Failed to start Input Method"
 msgstr "Нисам успео да покренем метод уноса"
 
-#: ../src/im-chooser-simple.c:406
+#: ../src/im-chooser-simple.c:407
 #, c-format
 msgid "Starting Input Method - %s"
 msgstr "Покрећем метод уноса - %s"
 
-#: ../src/im-chooser-simple.c:423
+#: ../src/im-chooser-simple.c:424
 #, c-format
 msgid "Stopping Input Method - %s"
 msgstr "Заустављам метод уноса - %s"
 
-#: ../src/im-chooser-simple.c:543
+#: ../src/im-chooser-simple.c:542
 msgid "Parent Window"
 msgstr "Матични прозор"
 
-#: ../src/im-chooser-simple.c:544
+#: ../src/im-chooser-simple.c:543
 msgid "GtkWindow that points to the parent window"
 msgstr "GtkWindow који показује на матични прозор"
 
 #. setup a progress window
-#: ../src/im-chooser-simple.c:584
+#: ../src/im-chooser-simple.c:583
 msgid "Work in progress..."
 msgstr "Рад је у току..."
 
-#: ../src/im-chooser-simple.c:642
+#: ../src/im-chooser-simple.c:641
 #, c-format
 msgid "Use %s"
 msgstr "Користи %s"
 
-#: ../src/im-chooser-simple.c:645
+#: ../src/im-chooser-simple.c:644
 msgid " (legacy)"
 msgstr " (наслеђено)"
 
-#: ../src/im-chooser-simple.c:649
+#: ../src/im-chooser-simple.c:648
 msgid " (recommended)"
 msgstr " (препоручено)"
 
-#: ../src/im-chooser-simple.c:761
+#: ../src/im-chooser-simple.c:760
 msgid "<b>Input Method</b>"
 msgstr "<b>Метод уноса</b>"
 
-#: ../src/im-chooser-simple.c:767
+#: ../src/im-chooser-simple.c:766
 msgid "_Enable input method feature"
 msgstr "_Укључи могућност метода уноса"
 
-#: ../src/im-chooser-simple.c:774
+#: ../src/im-chooser-simple.c:773
 msgid ""
 "<small><i>Note: this change will not take effect until you next log in, "
 "except GTK+ applications.</i></small>"
@@ -437,7 +437,7 @@ msgstr ""
 "<small><i>Напомена: ова промена неће прећи у дејство до следећег "
 "пријављивања, осим у GTK+ програмима.</i></small>"
 
-#: ../src/im-chooser-simple.c:806
+#: ../src/im-chooser-simple.c:805
 msgid "Input Method _Preferences..."
 msgstr "Поставке метода _уноса..."
 
