@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: im-chooser 0.3.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-03-11 21:15+0900\n"
-"PO-Revision-Date: 2008-02-03 23:17+0200\n"
+"POT-Creation-Date: 2008-04-02 09:41+0000\n"
+"PO-Revision-Date: 2008-04-06 13:23+0300\n"
 "Last-Translator: Ville-Pekka Vainio <vpivaini@cs.helsinki.fi>\n"
 "Language-Team: Finnish <laatu@lokalisointi.org>\n"
 "MIME-Version: 1.0\n"
@@ -166,11 +166,11 @@ msgstr "XIM"
 msgid "Whether or not IM is a XIM server."
 msgstr "Onko syöttömenetelmä XIM-palvelin."
 
-#: ../imsettings/imsettings/imsettings-info-private.h:40
+#: ../imsettings/imsettings/imsettings-info-private.h:39
 msgid "User Specific"
 msgstr "Käyttäjäkohtainen"
 
-#: ../imsettings/imsettings/imsettings-info-private.h:41
+#: ../imsettings/imsettings/imsettings-info-private.h:40
 msgid "xinputrc was modified by the user"
 msgstr "Käyttäjä on muokannut tiedostoa xinputrc"
 
@@ -198,10 +198,8 @@ msgstr "DBus-yhteys"
 
 #: ../imsettings/imsettings/imsettings-observer.c:708
 #: ../imsettings/imsettings/imsettings-request.c:176
-#, fuzzy
 msgid "An object to be a DBus connection"
-msgstr ""
-"Muutokset pitää tallentaa, jotta IPsec-yhteys %s voidaan ottaa käyttöön."
+msgstr "Objekti, joka on DBus-yhteys"
 
 #: ../imsettings/imsettings/imsettings-request.c:169
 msgid "DBus Interface"
@@ -243,7 +241,7 @@ msgstr ""
 "Metodin ”%s” kutsuminen epäonnistui:\n"
 "  %s"
 
-#: ../imsettings/imsettings/imsettings-request.c:672
+#: ../imsettings/imsettings/imsettings-request.c:673
 #, fuzzy, c-format
 msgid ""
 "Failed to invoke a method `%s' on %s:\n"
@@ -271,7 +269,6 @@ msgid "Couldn't send a signal to the %s process successfully."
 msgstr "Signaalia ei voitu lähettää prosessille %s."
 
 #: ../imsettings/src/factory.c:314 ../imsettings/src/factory.c:600
-#, c-format
 msgid "Failed to get a place of home directory."
 msgstr "Ei saatu selville kotihakemiston sijaintia."
 
@@ -331,12 +328,10 @@ msgid "SCREEN"
 msgstr "RUUTU"
 
 #: ../imsettings/src/factory.c:725
-#, c-format
 msgid "Failed to open a X display."
 msgstr "X-näytön avaaminen epäonnistui."
 
 #: ../imsettings/src/factory_info.c:127
-#, c-format
 msgid "Reloading...\n"
 msgstr "Ladataan uudelleen...\n"
 
@@ -349,90 +344,90 @@ msgstr ""
 #: ../imsettings/src/factory_info.c:500 ../imsettings/src/factory_info.c:518
 #, c-format
 msgid "Timed out to initialize %s services."
-msgstr ""
+msgstr "Aikakatkaisu alustettaessa %s-palveluja."
 
 #: ../imsettings/src/factory_info.c:469
-#, fuzzy, c-format
 msgid "No input methods available on your system."
 msgstr "Järjestelmässä ei ole syöttömenetelmiä."
 
 #: ../imsettings/utils/imsettings-reload.c:42
-#: ../imsettings/utils/imsettings-restart.c:43
 #: ../imsettings/utils/imsettings-stop.c:42
 msgid "Force reloading the configuration, including restarting the process."
 msgstr ""
 "Pakota asetusten uudelleenlatus, käynnistetään myös prosessi uudelleen."
 
+#: ../imsettings/utils/imsettings-restart.c:43
+msgid "Force restarting the IM process regradless of any errors."
+msgstr "Pakota syöttömenetelmäprosessin käynnistäminen uudelleen virheistä huolimatta."
+
 #: ../imsettings/utils/imsettings-restart.c:44
 #: ../imsettings/utils/imsettings-stop.c:43
 msgid "Do not update .xinputrc."
-msgstr ""
+msgstr "Älä päivitä tiedostoa .xinputrc."
 
 #: ../imsettings/utils/imsettings-stop.c:80
 #, c-format
 msgid "Stopped %s\n"
-msgstr ""
+msgstr "Pysäytettiin %s\n"
 
 #: ../imsettings/utils/imsettings-stop.c:82
-#, fuzzy, c-format
+#, c-format
 msgid "Failed to stop IM process `%s'\n"
-msgstr "Pid-tiedoston avaaminen epäonnistui: %s"
+msgstr "Syöttömenetelmäprosessin ”%s” pysäyttäminen epäonnistui\n"
 
 #: ../src/im-chooser-simple.c:145
-#, fuzzy
 msgid "Updating Input Method list"
-msgstr "Syöttömenetelmä"
+msgstr "Päivitetään syöttömenetelmäluetteloa"
 
-#: ../src/im-chooser-simple.c:309 ../src/im-chooser-simple.c:343
-#, fuzzy
+#: ../src/im-chooser-simple.c:310 ../src/im-chooser-simple.c:344
 msgid "Failed to start Input Method"
-msgstr "Älä käytä syöttömenetelmää"
+msgstr "Syöttömenetelmän käynnistäminen epäonnistui"
 
-#: ../src/im-chooser-simple.c:406
-#, fuzzy, c-format
+#: ../src/im-chooser-simple.c:407
+#, c-format
 msgid "Starting Input Method - %s"
-msgstr "Syöttömenetelmä"
+msgstr "Käynnistetään syöttömenetelmä - %s"
 
-#: ../src/im-chooser-simple.c:423
-#, fuzzy, c-format
+#: ../src/im-chooser-simple.c:424
+#, c-format
 msgid "Stopping Input Method - %s"
-msgstr "Syöttömenetelmä"
+msgstr "Pysäytetään syöttömenetelmä - %s"
 
-#: ../src/im-chooser-simple.c:543
+#: ../src/im-chooser-simple.c:542
 msgid "Parent Window"
 msgstr ""
 
-#: ../src/im-chooser-simple.c:544
+#: ../src/im-chooser-simple.c:543
 msgid "GtkWindow that points to the parent window"
 msgstr ""
 
 #. setup a progress window
-#: ../src/im-chooser-simple.c:584
+#: ../src/im-chooser-simple.c:583
 msgid "Work in progress..."
 msgstr ""
 
-#: ../src/im-chooser-simple.c:642
+#: ../src/im-chooser-simple.c:641
 #, c-format
 msgid "Use %s"
 msgstr "Käytä %s"
 
-#: ../src/im-chooser-simple.c:645
+#: ../src/im-chooser-simple.c:644
 msgid " (legacy)"
 msgstr "(vanhentunut)"
 
-#: ../src/im-chooser-simple.c:649
+#: ../src/im-chooser-simple.c:648
 msgid " (recommended)"
 msgstr "(suositeltu)"
 
-#: ../src/im-chooser-simple.c:761
+#: ../src/im-chooser-simple.c:760
 msgid "<b>Input Method</b>"
 msgstr "<b>Syöttömenetelmä</b>"
 
-#: ../src/im-chooser-simple.c:767
+#: ../src/im-chooser-simple.c:766
 msgid "_Enable input method feature"
 msgstr "Ota käyttöön syöttömenetelmä-ominaisuus"
 
-#: ../src/im-chooser-simple.c:774
+#: ../src/im-chooser-simple.c:773
 msgid ""
 "<small><i>Note: this change will not take effect until you next log in, "
 "except GTK+ applications.</i></small>"
@@ -440,7 +435,7 @@ msgstr ""
 "<small><i>Huomaa: GTK+-ohjelmia lukuun ottamatta tämän asetuksen muutokset "
 "tulevat voimaan vasta seuraavan kerran sisään kirjauduttaessa.</i></small>"
 
-#: ../src/im-chooser-simple.c:806
+#: ../src/im-chooser-simple.c:805
 msgid "Input Method _Preferences..."
 msgstr "Syöttömenetelmien _asetukset..."
 
