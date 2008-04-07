@@ -1,3 +1,12 @@
+2008-04-07  Akira TAGOH  <tagoh@redhat.com>
+
+	* backends/xim/server.c: clean up.
+
+	* backends/xim/main.c (imsettings_xim_message_filter):
+	get more debugging message with appropriate option.
+	(imsettings_xim_message_filter): don't create an instance if no changes
+	of XIM server.
+
 2008-04-03  Akira TAGOH  <tagoh@redhat.com>
 
 	* backends/xim/server.c: a lot of changes to have separate connection

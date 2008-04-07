@@ -44,7 +44,8 @@
 static XIMServer *_create_server(GMainLoop   *loop,
                                  Display     *dpy,
                                  const gchar *xim_server,
-                                 gboolean     replace);
+                                 gboolean     replace,
+				 gboolean     verbose);
 static void       _quit_cb      (XIMServer   *server,
                                  gpointer     data);
 
@@ -65,14 +66,29 @@ imsettings_xim_message_filter(DBusConnection *connection,
 		gchar *module;
 		Display *dpy = server->dpy;
 		GMainLoop *loop;
+		gboolean verbose;
+		const gchar *s;
 
 		loop = g_object_get_qdata(G_OBJECT (server), quark_main_loop);
 		dbus_message_get_args(message, NULL,
 				      DBUS_TYPE_STRING, &module,
 				      DBUS_TYPE_INVALID);
+		g_object_get(G_OBJECT (server),
+			     "verbose", &verbose,
+			     "xim", &s,
+			     NULL);
+		if (strcmp(module, s) == 0) {
+			/* No changes */
+			return DBUS_HANDLER_RESULT_HANDLED;
+		}
 		dbus_connection_remove_filter(connection, imsettings_xim_message_filter, server);
 		g_object_unref(G_OBJECT (server));
-		server = _create_server(loop, dpy, module, TRUE);
+		if (verbose) {
+			g_print("Changing XIM server: `%s'->`%s'\n",
+				(s && s[0] == 0 ? "none" : s),
+				(module && module[0] == 0 ? "none" : module));
+		}
+		server = _create_server(loop, dpy, module, TRUE, verbose);
 		dbus_connection_add_filter(connection, imsettings_xim_message_filter, server, NULL);
 
 		return DBUS_HANDLER_RESULT_HANDLED;
@@ -136,22 +152,31 @@ static XIMServer *
 _create_server(GMainLoop   *loop,
 	       Display     *dpy,
 	       const gchar *xim_server,
-	       gboolean     replace)
+	       gboolean     replace,
+	       gboolean     verbose)
 {
 	XIMServer *server;
 
 	server = xim_server_new(dpy, xim_server);
-	if (server == NULL ||
-	    xim_server_setup(server, replace) == FALSE ||
-	    !xim_server_is_initialized(server)) {
-		g_print("Failed to initialize XIM server.\n");
-		exit(1);
-	}
+	if (server == NULL)
+		goto error;
+
+	g_object_set(G_OBJECT (server),
+		     "verbose", verbose,
+		     NULL);
+	if (xim_server_setup(server, replace) == FALSE ||
+	    !xim_server_is_initialized(server))
+		goto error;
+
 	g_signal_connect(server, "destroy",
 			 G_CALLBACK (_quit_cb),
 			 loop);
 
 	return server;
+
+  error:
+	g_printerr("Failed to initialize XIM server.\n");
+	exit(1);
 }
 
 static void
@@ -175,11 +200,12 @@ main(int    argc,
 	GMainLoop *loop;
 	XIMServer *server;
 	gchar *arg_display_name = NULL, *dpy_name;
-	gboolean arg_replace = FALSE;
+	gboolean arg_replace = FALSE, arg_verbose = FALSE;
 	GOptionContext *ctx = g_option_context_new(NULL);
 	GOptionEntry entries[] = {
 		{"display", 0, G_OPTION_FLAG_IN_MAIN, G_OPTION_ARG_STRING, &arg_display_name, N_("X display to use"), N_("DISPLAY")},
 		{"replace", 0, G_OPTION_FLAG_NO_ARG, G_OPTION_ARG_NONE, &arg_replace, N_("Replace the running XIM server with new instance."), NULL},
+		{"verbose", 0, G_OPTION_FLAG_NO_ARG, G_OPTION_ARG_NONE, &arg_verbose, N_("Output the debugging logs"), NULL},
 		{NULL, 0, 0, 0, NULL, NULL, NULL}
 	};
 	GError *error = NULL;
@@ -242,7 +268,7 @@ main(int    argc,
 	g_free(module);
 
 	loop = g_main_loop_new(NULL, FALSE);
-	server = _create_server(loop, dpy, xim, arg_replace);
+	server = _create_server(loop, dpy, xim, arg_replace, arg_verbose);
 	if (server == NULL)
 		exit(1);
 	g_object_set_qdata(G_OBJECT (server), quark_main_loop, loop);

@@ -46,6 +46,11 @@
 			break;				\
 		(_str)++;				\
 	}
+#ifdef GNOME_ENABLE_DEBUG
+#define d(e)	e
+#else
+#define d(e)
+#endif
 
 
 typedef struct _IMSettingsInfoPrivate {
@@ -244,6 +249,9 @@ imsettings_info_notify_properties(GObject     *object,
 					    case PROP_AUX_PROG_ARGS:
 					    case PROP_SHORT_DESC:
 					    case PROP_LONG_DESC:
+						    d(g_print("  %s: %s\n",
+							      _xinput_tokens[prop - (PROP_GTK_IMM - PROP_0)],
+							      str->str));
 						    g_object_set(object,
 								 properties[prop - (PROP_GTK_IMM - PROP_0)], str->str,
 								 NULL);

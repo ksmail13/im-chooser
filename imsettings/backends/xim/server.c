@@ -60,7 +60,6 @@ typedef struct _XIMServerPrivate {
 	Atom             atom_selection;
 	gboolean         initialized;
 	gboolean         verbose;
-	gboolean         is_locked;
 } XIMServerPrivate;
 
 enum {
@@ -68,7 +67,6 @@ enum {
 	PROP_DISPLAY,
 	PROP_XIM,
 	PROP_VERBOSE,
-	PROP_LOCK,
 	LAST_PROP
 };
 enum {
@@ -125,16 +123,9 @@ _source_prepare(GSource *source,
 		gint    *timeout)
 {
 	XIMServerSource *s = (XIMServerSource *)source;
-	XIMServerPrivate *priv = XIM_SERVER_GET_PRIVATE (s->xim);
 
-	if (priv->is_locked) {
-		*timeout = 5;
-
-		return FALSE;
-	} else {
-		/* just waiting for polling fd */
-		*timeout = -1;
-	}
+	/* just waiting for polling fd */
+	*timeout = -1;
 
 	return XPending(s->xim->dpy) > 0;
 }
@@ -143,13 +134,12 @@ static gboolean
 _source_check(GSource *source)
 {
 	XIMServerSource *s = (XIMServerSource *)source;
-	XIMServerPrivate *priv = XIM_SERVER_GET_PRIVATE (s->xim);
 	gboolean retval = FALSE;
 
 	if (s->poll_fd.revents & G_IO_IN)
 		retval = XPending(s->xim->dpy) > 0;
 
-	return retval && !priv->is_locked;
+	return retval;
 }
 
 static XIMConnection *
@@ -362,12 +352,6 @@ xim_server_set_property(GObject      *object,
 		    priv->verbose = g_value_get_boolean(value);
 		    d(g_print("D: setting \"verbose\" flag to %s\n", priv->verbose ? "true" : "false"));
 		    break;
-	    case PROP_LOCK:
-		    if (g_value_get_boolean(value))
-			    xim_server_freeze_event(XIM_SERVER (object));
-		    else
-			    xim_server_thaw_event(XIM_SERVER (object));
-		    break;
 	    default:
 		    G_OBJECT_WARN_INVALID_PROPERTY_ID (object, prop_id, pspec);
 		    break;
@@ -392,9 +376,6 @@ xim_server_get_property(GObject    *object,
 		    break;
 	    case PROP_VERBOSE:
 		    g_value_set_boolean(value, priv->verbose);
-		    break;
-	    case PROP_LOCK:
-		    g_value_set_boolean(value, priv->is_locked);
 		    break;
 	    default:
 		    G_OBJECT_WARN_INVALID_PROPERTY_ID (object, prop_id, pspec);
@@ -444,12 +425,6 @@ xim_server_class_init(XIMServerClass *klass)
 					g_param_spec_boolean("verbose",
 							     _("Verbose flag"),
 							     _("Output a lot of helpful messages to debug"),
-							     FALSE,
-							     G_PARAM_READWRITE));
-	g_object_class_install_property(object_class, PROP_LOCK,
-					g_param_spec_boolean("lock",
-							     _("Event Lock"),
-							     _("A flag to freeze the event queue"),
 							     FALSE,
 							     G_PARAM_READWRITE));
 
@@ -595,24 +570,4 @@ xim_server_setup(XIMServer *xim,
 	priv->initialized = TRUE;
 
 	return TRUE;
-}
-
-void
-xim_server_freeze_event(XIMServer *server)
-{
-	XIMServerPrivate *priv;
-	g_return_if_fail (XIM_IS_SERVER (server));
-
-	priv = XIM_SERVER_GET_PRIVATE (server);
-//	priv->is_locked = TRUE;
-}
-
-void
-xim_server_thaw_event(XIMServer *server)
-{
-	XIMServerPrivate *priv;
-	g_return_if_fail (XIM_IS_SERVER (server));
-
-	priv = XIM_SERVER_GET_PRIVATE (server);
-	priv->is_locked = FALSE;
 }
