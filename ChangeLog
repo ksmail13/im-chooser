@@ -1,5 +1,7 @@
 2008-04-07  Akira TAGOH  <tagoh@redhat.com>
 
+	* src/im-chooser-simple.c: clean up.
+
 	* src/im-chooser-simple.c (_im_chooser_simple_update_im_list):
 	don't update the IM list if no IM is available. (RH#440519)
 
