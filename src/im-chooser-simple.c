@@ -46,6 +46,7 @@ enum {
 };
 
 typedef enum {
+	ACTION_IM_FREEZE,
 	ACTION_IM_START,
 	ACTION_IM_STARTING,
 	ACTION_IM_STOP,
@@ -80,6 +81,7 @@ struct _IMChooserSimple {
 	GtkWidget          *label;
 	IMSettingsRequest  *imsettings;
 	IMSettingsRequest  *imsettings_info;
+	IMSettingsRequest  *imsettings_xim;
 	gchar             **im_list;
 	gchar              *initial_im;
 	gchar              *current_im;
@@ -153,6 +155,8 @@ im_chooser_simple_enable_im_on_toggled(GtkToggleButton *button,
 		selection = gtk_tree_view_get_selection(GTK_TREE_VIEW (im->widget_im_list));
 		if (gtk_tree_selection_get_selected(selection, &model, &iter)) {
 			gtk_tree_model_get(model, &iter, 1, &name, -1);
+			a = _action_new(ACTION_IM_FREEZE, NULL, NULL);
+			g_queue_push_tail(im->actionq, a);
 			if (im->current_im) {
 				if (im->initialized) {
 					a = _action_new(ACTION_IM_STOP,
@@ -171,6 +175,8 @@ im_chooser_simple_enable_im_on_toggled(GtkToggleButton *button,
 	} else {
 		if (im->current_im) {
 			if (im->initialized) {
+				a = _action_new(ACTION_IM_FREEZE, NULL, NULL);
+				g_queue_push_tail(im->actionq, a);
 				a = _action_new(ACTION_IM_STOP,
 						g_strdup(im->current_im),
 						g_free);
@@ -209,6 +215,8 @@ im_chooser_simple_im_list_on_changed(GtkTreeSelection *selection,
 		gtk_tree_model_get(model, &iter, 1, &name, -1);
 		if (im->current_im &&
 		    strcmp(im->current_im, name) != 0) {
+			a = _action_new(ACTION_IM_FREEZE, NULL, NULL);
+			g_queue_push_tail(im->actionq, a);
 			a = _action_new(ACTION_IM_STOP,
 					g_strdup(im->current_im),
 					g_free);
@@ -402,6 +410,9 @@ im_chooser_simple_action_loop(gpointer data)
 	if (!g_queue_is_empty(im->actionq)) {
 		a = g_queue_pop_head(im->actionq);
 		switch (a->action) {
+		    case ACTION_IM_FREEZE:
+			    imsettings_request_freeze_event(im->imsettings_xim);
+			    break;
 		    case ACTION_IM_START:
 			    if (im->initialized && !im->ignore_actions) {
 				    im_chooser_simple_show_progress(im, _("Starting Input Method - %s"), a->data);
@@ -464,6 +475,7 @@ im_chooser_simple_action_loop(gpointer data)
 			    /* get back from "in-progress" mode */
 			    im_chooser_simple_show_progress(im, NULL);
 			    im->ignore_actions = FALSE;
+			    imsettings_request_thaw_event(im->imsettings_xim);
 
 			    g_signal_emit(im, signals[CHANGED], 0, NULL);
 			    break;
@@ -603,6 +615,7 @@ im_chooser_simple_instance_init(IMChooserSimple *im)
 	im->conn = dbus_bus_get(DBUS_BUS_SESSION, NULL);
 	im->imsettings = imsettings_request_new(im->conn, IMSETTINGS_INTERFACE_DBUS);
 	im->imsettings_info = imsettings_request_new(im->conn, IMSETTINGS_INFO_INTERFACE_DBUS);
+	im->imsettings_xim = imsettings_request_new(im->conn, IMSETTINGS_XIM_INTERFACE_DBUS);
 
 	imsettings_request_set_locale(im->imsettings, locale);
 	imsettings_request_set_locale(im->imsettings_info, locale);
@@ -624,12 +637,15 @@ _im_chooser_simple_update_im_list(IMChooserSimple *im)
 	GtkTreePath *path;
 	GtkTreeViewColumn *column;
 	GtkRequisition requisition;
-	guint count;
+	guint count = 0;
 	gint i, priority = 0;
 	gchar *user_im, *system_im;
 
 	user_im = imsettings_request_get_current_user_im(im->imsettings_info);
 	system_im = imsettings_request_get_current_system_im(im->imsettings_info);
+	if (im->im_list == NULL)
+		goto end;
+
 	count = g_strv_length(im->im_list);
 	list = gtk_list_store_new(3, G_TYPE_STRING, G_TYPE_STRING, G_TYPE_INT);
 	for (i = 0; im->im_list[i] != NULL; i++) {
@@ -689,6 +705,7 @@ _im_chooser_simple_update_im_list(IMChooserSimple *im)
 	g_free(user_im);
 	g_free(system_im);
 
+  end:
 	if (count == 0) {
 		gtk_widget_set_sensitive(im->checkbox_is_im_enabled, FALSE);
 		gtk_widget_hide(im->widget_scrolled);
