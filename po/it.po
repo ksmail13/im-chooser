@@ -1,4 +1,4 @@
-# translation of revisionato.po to
+# translation of im-chooser.trunk.po to Italiano
 # Copyright (C) 2006 Red Hat, Inc. All rights reserved.
 # This file is distributed under the same license as the im-chooser package.
 #
@@ -7,16 +7,16 @@
 # Silvio Pierro <perplesso82@gmail.com>, 2008.
 msgid ""
 msgstr ""
-"Project-Id-Version: revisionato\n"
+"Project-Id-Version: im-chooser.trunk\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-03-12 07:57+0000\n"
-"PO-Revision-Date: 2008-03-18 14:37+0100\n"
+"POT-Creation-Date: 2008-04-02 09:41+0000\n"
+"PO-Revision-Date: 2008-04-08 05:36+0200\n"
 "Last-Translator: Francesco Tombolini <tombo@adamantio.net>\n"
-"Language-Team:  <fedora-trans-it@redhat.com>\n"
+"Language-Team: Italiano <fedora-trans-it@redhat.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms:  nplurals=2; plural=(n != 1);"
+"Plural-Forms:  nplurals=2; plural=(n != 1);\n"
 "X-Generator: KBabel 1.11.4\n"
 
 #: ../imsettings/backends/gconf/main.c:184
@@ -238,7 +238,7 @@ msgstr ""
 "Impossibile invocare un metodo `%s':\n"
 "  %s"
 
-#: ../imsettings/imsettings/imsettings-request.c:672
+#: ../imsettings/imsettings/imsettings-request.c:673
 #, c-format
 msgid ""
 "Failed to invoke a method `%s' on %s:\n"
@@ -350,10 +350,13 @@ msgid "No input methods available on your system."
 msgstr "Nessun metodo di input disponibile sul sistema."
 
 #: ../imsettings/utils/imsettings-reload.c:42
-#: ../imsettings/utils/imsettings-restart.c:43
 #: ../imsettings/utils/imsettings-stop.c:42
 msgid "Force reloading the configuration, including restarting the process."
 msgstr "Forzo il ricaricamento della configurazione, incluso il riavvio del processo."
+
+#: ../imsettings/utils/imsettings-restart.c:43
+msgid "Force restarting the IM process regradless of any errors."
+msgstr "Forza il riavvio del processo IM senza riguardo di qualsiasi errore."
 
 #: ../imsettings/utils/imsettings-restart.c:44
 #: ../imsettings/utils/imsettings-stop.c:43
