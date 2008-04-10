@@ -54,11 +54,11 @@ export GTK_IM_MODULE
 #        We still need to go with the older way.
 [ -n "$QT_IM_MODULE" ] && export QT_IM_MODULE
 
-# FIXME: XIM doesn't support XSETTINGS yet.
-#        We still need to go with the older way.
 # setup XMODIFIERS
-[ -z "$XMODIFIERS" -a -n "$XIM" ] && XMODIFIERS="@im=$XIM"
-[ -n "$XMODIFIERS" ] && export XMODIFIERS
+XMODIFIERS="@im=imsettings"
+export XMODIFIERS
+
+which imsettings-xim > /dev/null 2>&1 && imsettings-xim || :
 
 # start IM via imsettings
 IMSETTINGS_MODULE=${SHORT_DESC:-${XIM}}
