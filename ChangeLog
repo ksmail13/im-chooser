@@ -1,5 +1,7 @@
 2008-04-10  Akira TAGOH  <tagoh@redhat.com>
 
+	* README: Add xinputrc stuff.
+
 	* data/xinput.sh.in.in: Add settings for XIM support.
 
 2008-04-07  Akira TAGOH  <tagoh@redhat.com>

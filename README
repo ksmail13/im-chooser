@@ -10,7 +10,12 @@ IM Chooser relies on xinput.sh script that you may need to
 install it onto the proper place where your system provides
 a hook to bring something up during X server is starting,
 such as /etc/X11/xinit/xinitrc.d on Fedora and
-/etc/X11/Xsession.d on Debian.
+/etc/X11/Xsession.d on Debian. and /etc/X11/xinit/xinputrc
+is read to determine which Input Method is used by default
+(you can change the base dir with --with-xinputrcdir). once
+you have made any changes from im-chooser, it will be stored
+in $HOME/.xinputrc as symlink to the real config file where
+put on /etc/X11/xinit/xinput.d say.
 For XIM servers, you will have to provide symlinks for them
 with ll_CC style of locale on /etc/X11/xinit/xinput.d by
 default (it's configurable with --with-xinputdir option). if
