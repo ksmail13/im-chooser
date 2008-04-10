@@ -1,3 +1,21 @@
+2008-04-10  Akira TAGOH  <tagoh@redhat.com>
+
+	* backends/xim/server.c (xim_server_set_property): create a loopback
+	server as needed.
+
+	* backends/xim/protocol.c (xim_protocol_real_open): fix a typo.
+	(xim_protocol_class_init): Add missing signals, get_ic_values,
+	get_ic_values_reply.
+	(xim_protocol_process_event): Get CARD8 directly so that the byte order
+	may be unsure at this moment.
+	(xim_protocol_send): Fix the packet length to be
+	"the number of 4 bytes elements".
+
+	* backends/xim/utils.c (xim_substitute_display_name): make this
+	function public from main.c.
+
+	* backends/xim/loopback.[ch]: new.
+
 2008-04-07  Akira TAGOH  <tagoh@redhat.com>
 
 	* backends/xim/server.c: clean up.

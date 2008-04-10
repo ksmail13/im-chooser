@@ -62,6 +62,7 @@ void         xim_ximattribute_free(gpointer      data);
 void         xim_xicattribute_free(gpointer      data);
 void         xim_strconvtext_free (gpointer      data);
 const gchar *xim_protocol_name    (XIMEventType  major_opcode);
+gchar       *xim_substitute_display_name(const gchar *display_name) G_GNUC_MALLOC;
 
 
 G_END_DECLS

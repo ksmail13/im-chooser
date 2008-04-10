@@ -376,3 +376,32 @@ xim_protocol_name(XIMEventType major_opcode)
 		return &__xim_event_names[__xim_event_map[major_opcode]];
 	}
 }
+
+gchar *
+xim_substitute_display_name(const gchar *display_name)
+{
+	GString *str;
+	gchar *p;
+
+	if (display_name == NULL)
+		display_name = g_getenv("DISPLAY");
+	if (display_name == NULL)
+		return NULL;
+
+	str = g_string_new(display_name);
+	p = strrchr(str->str, '.');
+	if (p && p > strchr(str->str, ':'))
+		g_string_truncate(str, p - str->str);
+
+	/* Quote:
+	 * 3.  Default Preconnection Convention
+	 *
+	 * IM Servers are strongly encouraged to register their sym-
+	 * bolic names as the ATOM names into the IM Server directory
+	 * property, XIM_SERVERS, on the root window of the screen_num-
+	 * ber 0.
+	 */
+	g_string_append_printf(str, ".0");
+
+	return g_string_free(str, FALSE);
+}

@@ -257,6 +257,7 @@ struct _XIMProtocolClass {
 struct _XIMProtocol {
 	GObject  parent_instance;
 	Display *dpy;
+	gboolean verbose;
 };
 
 struct _XIMAttr {
@@ -380,6 +381,26 @@ typedef enum {
 	XIM_TYPE_RESETSTATE,
 	XIM_TYPE_NESTEDLIST = 0x7fff
 } XIMValueType;
+
+typedef enum {
+	XIM_ERR_BadAlloc = 1,
+	XIM_ERR_BadStyle,
+	XIM_ERR_BadClientWindow,
+	XIM_ERR_BadFocusWindow,
+	XIM_ERR_BadArea,
+	XIM_ERR_BadSpotLocation,
+	XIM_ERR_BadColormap,
+	XIM_ERR_BadAtom,
+	XIM_ERR_BadPixel,
+	XIM_ERR_BadPixmap,
+	XIM_ERR_BadName,
+	XIM_ERR_BadCursor,
+	XIM_ERR_BadProtocol,
+	XIM_ERR_BadForeground,
+	XIM_ERR_BadBackground,
+	XIM_ERR_LocaleNotSupported,
+	XIM_ERR_BadSomething = 999
+} XIMErrorCode;
 
 GType           xim_protocol_get_type           (void) G_GNUC_CONST;
 XIMProtocol    *xim_protocol_new                (const Display       *dpy,

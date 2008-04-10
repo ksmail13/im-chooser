@@ -52,7 +52,6 @@ typedef struct _XIMProtocolPrivate {
 	guint8         byte_order;
 	guint32        major_version;
 	guint32        minor_version;
-	gboolean       verbose;
 } XIMProtocolPrivate;
 
 enum {
@@ -278,10 +277,12 @@ _signal_accumulator(GSignalInvocationHint *hints,
 		    const GValue          *handler_return,
 		    gpointer               data)
 {
-	/* actually the return value doesn't take any effects */
-	g_value_set_boolean(return_accu, g_value_get_boolean(handler_return));
+	gboolean ret = g_value_get_boolean(handler_return);
 
-	return !g_value_get_boolean(handler_return);
+	/* actually the return value doesn't take any effects */
+	g_value_set_boolean(return_accu, ret);
+
+	return !ret;
 }
 
 static void
@@ -300,14 +301,14 @@ xim_protocol_real_forward_raw_packets(XIMProtocol *proto,
 }
 
 static gboolean
-xim_protocol_real_connect(XIMProtocol    *proto,
-			  guint16         major_version,
-			  guint16         minor_version,
-			  const GSList   *list)
+xim_protocol_real_connect(XIMProtocol  *proto,
+			  guint16       major_version,
+			  guint16       minor_version,
+			  const GSList *list)
 {
 	XIMProtocolPrivate *priv = XIM_PROTOCOL_GET_PRIVATE (proto);
 
-	if (priv->verbose) {
+	if (proto->verbose) {
 		Window comm_window;
 
 		g_object_get(priv->conn, "comm_window", &comm_window, NULL);
@@ -324,13 +325,13 @@ xim_protocol_real_connect(XIMProtocol    *proto,
 }
 
 static gboolean
-xim_protocol_real_connect_reply(XIMProtocol    *proto,
-				guint16         major_version,
-				guint16         minor_version)
+xim_protocol_real_connect_reply(XIMProtocol *proto,
+				guint16      major_version,
+				guint16      minor_version)
 {
 	XIMProtocolPrivate *priv = XIM_PROTOCOL_GET_PRIVATE (proto);
 
-	if (priv->verbose) {
+	if (proto->verbose) {
 		Window comm_window;
 
 		g_object_get(priv->conn, "comm_window", &comm_window, NULL);
@@ -343,11 +344,11 @@ xim_protocol_real_connect_reply(XIMProtocol    *proto,
 }
 
 static gboolean
-xim_protocol_real_disconnect(XIMProtocol    *proto)
+xim_protocol_real_disconnect(XIMProtocol *proto)
 {
 	XIMProtocolPrivate *priv = XIM_PROTOCOL_GET_PRIVATE (proto);
 
-	if (priv->verbose) {
+	if (proto->verbose) {
 		Window comm_window;
 
 		g_object_get(priv->conn, "comm_window", &comm_window, NULL);
@@ -361,11 +362,11 @@ xim_protocol_real_disconnect(XIMProtocol    *proto)
 }
 
 static gboolean
-xim_protocol_real_disconnect_reply(XIMProtocol    *proto)
+xim_protocol_real_disconnect_reply(XIMProtocol *proto)
 {
 	XIMProtocolPrivate *priv = XIM_PROTOCOL_GET_PRIVATE (proto);
 
-	if (priv->verbose) {
+	if (proto->verbose) {
 		Window comm_window;
 
 		g_object_get(priv->conn, "comm_window", &comm_window, NULL);
@@ -379,13 +380,13 @@ xim_protocol_real_disconnect_reply(XIMProtocol    *proto)
 }
 
 static gboolean
-xim_protocol_real_auth_required(XIMProtocol    *proto,
-				const gchar    *auth_data,
-				gsize           length)
+xim_protocol_real_auth_required(XIMProtocol *proto,
+				const gchar *auth_data,
+				gsize        length)
 {
 	XIMProtocolPrivate *priv = XIM_PROTOCOL_GET_PRIVATE (proto);
 
-	if (priv->verbose) {
+	if (proto->verbose) {
 		Window comm_window;
 
 		g_object_get(priv->conn, "comm_window", &comm_window, NULL);
@@ -399,13 +400,13 @@ xim_protocol_real_auth_required(XIMProtocol    *proto,
 }
 
 static gboolean
-xim_protocol_real_auth_reply(XIMProtocol    *proto,
-			     const gchar    *auth_data,
-			     gsize           length)
+xim_protocol_real_auth_reply(XIMProtocol *proto,
+			     const gchar *auth_data,
+			     gsize        length)
 {
 	XIMProtocolPrivate *priv = XIM_PROTOCOL_GET_PRIVATE (proto);
 
-	if (priv->verbose) {
+	if (proto->verbose) {
 		Window comm_window;
 
 		g_object_get(priv->conn, "comm_window", &comm_window, NULL);
@@ -419,13 +420,13 @@ xim_protocol_real_auth_reply(XIMProtocol    *proto,
 }
 
 static gboolean
-xim_protocol_real_auth_next(XIMProtocol    *proto,
-			    const gchar    *auth_data,
-			    gsize           length)
+xim_protocol_real_auth_next(XIMProtocol *proto,
+			    const gchar *auth_data,
+			    gsize        length)
 {
 	XIMProtocolPrivate *priv = XIM_PROTOCOL_GET_PRIVATE (proto);
 
-	if (priv->verbose) {
+	if (proto->verbose) {
 		Window comm_window;
 
 		g_object_get(priv->conn, "comm_window", &comm_window, NULL);
@@ -439,12 +440,12 @@ xim_protocol_real_auth_next(XIMProtocol    *proto,
 }
 
 static gboolean
-xim_protocol_real_auth_setup(XIMProtocol    *proto,
-			     const GSList   *list)
+xim_protocol_real_auth_setup(XIMProtocol  *proto,
+			     const GSList *list)
 {
 	XIMProtocolPrivate *priv = XIM_PROTOCOL_GET_PRIVATE (proto);
 
-	if (priv->verbose) {
+	if (proto->verbose) {
 		Window comm_window;
 
 		g_object_get(priv->conn, "comm_window", &comm_window, NULL);
@@ -458,11 +459,11 @@ xim_protocol_real_auth_setup(XIMProtocol    *proto,
 }
 
 static gboolean
-xim_protocol_real_auth_ng(XIMProtocol    *proto)
+xim_protocol_real_auth_ng(XIMProtocol *proto)
 {
 	XIMProtocolPrivate *priv = XIM_PROTOCOL_GET_PRIVATE (proto);
 
-	if (priv->verbose) {
+	if (proto->verbose) {
 		Window comm_window;
 
 		g_object_get(priv->conn, "comm_window", &comm_window, NULL);
@@ -476,15 +477,15 @@ xim_protocol_real_auth_ng(XIMProtocol    *proto)
 }
 
 static gboolean
-xim_protocol_real_error(XIMProtocol    *proto,
-			guint16         imid,
-			guint16         icid,
-			guint16         mask,
-			guint16         error_code)
+xim_protocol_real_error(XIMProtocol *proto,
+			guint16      imid,
+			guint16      icid,
+			guint16      mask,
+			guint16      error_code)
 {
 	XIMProtocolPrivate *priv = XIM_PROTOCOL_GET_PRIVATE (proto);
 
-	if (priv->verbose) {
+	if (proto->verbose) {
 		Window comm_window;
 
 		g_object_get(priv->conn, "comm_window", &comm_window, NULL);
@@ -498,8 +499,8 @@ xim_protocol_real_error(XIMProtocol    *proto,
 }
 
 static gboolean
-xim_protocol_real_open(XIMProtocol    *proto,
-		       const gchar    *locale)
+xim_protocol_real_open(XIMProtocol *proto,
+		       const gchar *locale)
 {
 	XIMProtocolPrivate *priv = XIM_PROTOCOL_GET_PRIVATE (proto);
 	static const gchar message[] = "No valid real XIM server available.";
@@ -508,7 +509,7 @@ xim_protocol_real_open(XIMProtocol    *proto,
 	if (len == 0)
 		len = strlen(message);
 
-	if (priv->verbose) {
+	if (proto->verbose) {
 		Window comm_window;
 
 		g_object_get(priv->conn, "comm_window", &comm_window, NULL);
@@ -517,12 +518,13 @@ xim_protocol_real_open(XIMProtocol    *proto,
 	}
 
 	xim_protocol_send(proto, XIM_ERROR, 0,
-			  7,
+			  8,
 			  XIM_TYPE_WORD, 0,
 			  XIM_TYPE_WORD, 0,
 			  XIM_TYPE_WORD, 0, /* both imid and icid are invalid */
-			  XIM_TYPE_WORD, 999, /* BadSomething */
+			  XIM_TYPE_WORD, XIM_ERR_LocaleNotSupported,
 			  XIM_TYPE_WORD, len,
+			  XIM_TYPE_WORD, 0, /* reserved area */
 			  XIM_TYPE_CHAR, message,
 			  XIM_TYPE_BYTE, PAD4 (len));
 
@@ -530,13 +532,13 @@ xim_protocol_real_open(XIMProtocol    *proto,
 }
 
 static gboolean
-xim_protocol_real_open_reply(XIMProtocol    *proto,
-			     const GSList   *imattrs,
-			     const GSList   *icattrs)
+xim_protocol_real_open_reply(XIMProtocol  *proto,
+			     const GSList *imattrs,
+			     const GSList *icattrs)
 {
 	XIMProtocolPrivate *priv = XIM_PROTOCOL_GET_PRIVATE (proto);
 
-	if (priv->verbose) {
+	if (proto->verbose) {
 		Window comm_window;
 		const GSList *l;
 
@@ -563,8 +565,8 @@ xim_protocol_real_open_reply(XIMProtocol    *proto,
 }
 
 static gboolean
-xim_protocol_real_close(XIMProtocol    *proto,
-			guint16         imid)
+xim_protocol_real_close(XIMProtocol *proto,
+			guint16      imid)
 {
 	XIMProtocolPrivate *priv = XIM_PROTOCOL_GET_PRIVATE (proto);
 	static const gchar message[] = "No valid real XIM server available.";
@@ -573,7 +575,7 @@ xim_protocol_real_close(XIMProtocol    *proto,
 	if (len == 0)
 		len = strlen(message);
 
-	if (priv->verbose) {
+	if (proto->verbose) {
 		Window comm_window;
 
 		g_object_get(priv->conn, "comm_window", &comm_window, NULL);
@@ -595,12 +597,12 @@ xim_protocol_real_close(XIMProtocol    *proto,
 }
 
 static gboolean
-xim_protocol_real_close_reply(XIMProtocol    *proto,
-			      guint16         imid)
+xim_protocol_real_close_reply(XIMProtocol *proto,
+			      guint16      imid)
 {
 	XIMProtocolPrivate *priv = XIM_PROTOCOL_GET_PRIVATE (proto);
 
-	if (priv->verbose) {
+	if (proto->verbose) {
 		Window comm_window;
 
 		g_object_get(priv->conn, "comm_window", &comm_window, NULL);
@@ -638,13 +640,13 @@ xim_protocol_real_trigger_notify(XIMProtocol    *proto,
 }
 
 static gboolean
-xim_protocol_real_trigger_notify_reply(XIMProtocol    *proto,
-				       guint16         imid,
-				       guint16         icid)
+xim_protocol_real_trigger_notify_reply(XIMProtocol *proto,
+				       guint16      imid,
+				       guint16      icid)
 {
 	XIMProtocolPrivate *priv = XIM_PROTOCOL_GET_PRIVATE (proto);
 
-	if (priv->verbose) {
+	if (proto->verbose) {
 		Window comm_window;
 
 		g_object_get(priv->conn, "comm_window", &comm_window, NULL);
@@ -680,14 +682,14 @@ xim_protocol_real_encoding_negotiation(XIMProtocol    *proto,
 }
 
 static gboolean
-xim_protocol_real_encoding_negotiation_reply(XIMProtocol    *proto,
-					     guint16         imid,
-					     guint16         category,
-					     gint16          index)
+xim_protocol_real_encoding_negotiation_reply(XIMProtocol *proto,
+					     guint16      imid,
+					     guint16      category,
+					     gint16       index)
 {
 	XIMProtocolPrivate *priv = XIM_PROTOCOL_GET_PRIVATE (proto);
 
-	if (priv->verbose) {
+	if (proto->verbose) {
 		Window comm_window;
 
 		g_object_get(priv->conn, "comm_window", &comm_window, NULL);
@@ -711,13 +713,13 @@ xim_protocol_real_query_extension(XIMProtocol    *proto,
 }
 
 static gboolean
-xim_protocol_real_query_extension_reply(XIMProtocol    *proto,
-					guint16         imid,
-					const GSList   *extensions)
+xim_protocol_real_query_extension_reply(XIMProtocol  *proto,
+					guint16       imid,
+					const GSList *extensions)
 {
 	XIMProtocolPrivate *priv = XIM_PROTOCOL_GET_PRIVATE (proto);
 
-	if (priv->verbose) {
+	if (proto->verbose) {
 		Window comm_window;
 		const GSList *l;
 
@@ -748,12 +750,12 @@ xim_protocol_real_set_im_values(XIMProtocol    *proto,
 }
 
 static gboolean
-xim_protocol_real_set_im_values_reply(XIMProtocol    *proto,
-				      guint16         imid)
+xim_protocol_real_set_im_values_reply(XIMProtocol *proto,
+				      guint16      imid)
 {
 	XIMProtocolPrivate *priv = XIM_PROTOCOL_GET_PRIVATE (proto);
 
-	if (priv->verbose) {
+	if (proto->verbose) {
 		Window comm_window;
 
 		g_object_get(priv->conn, "comm_window", &comm_window, NULL);
@@ -777,13 +779,13 @@ xim_protocol_real_get_im_values(XIMProtocol    *proto,
 }
 
 static gboolean
-xim_protocol_real_get_im_values_reply(XIMProtocol    *proto,
-				      guint16         imid,
-				      const GSList   *attributes)
+xim_protocol_real_get_im_values_reply(XIMProtocol  *proto,
+				      guint16       imid,
+				      const GSList *attributes)
 {
 	XIMProtocolPrivate *priv = XIM_PROTOCOL_GET_PRIVATE (proto);
 
-	if (priv->verbose) {
+	if (proto->verbose) {
 		Window comm_window;
 		const GSList *l;
 
@@ -814,13 +816,13 @@ xim_protocol_real_create_ic(XIMProtocol    *proto,
 }
 
 static gboolean
-xim_protocol_real_create_ic_reply(XIMProtocol    *proto,
-				  guint16         imid,
-				  guint16         icid)
+xim_protocol_real_create_ic_reply(XIMProtocol *proto,
+				  guint16      imid,
+				  guint16      icid)
 {
 	XIMProtocolPrivate *priv = XIM_PROTOCOL_GET_PRIVATE (proto);
 
-	if (priv->verbose) {
+	if (proto->verbose) {
 		Window comm_window;
 
 		g_object_get(priv->conn, "comm_window", &comm_window, NULL);
@@ -844,13 +846,13 @@ xim_protocol_real_destroy_ic(XIMProtocol    *proto,
 }
 
 static gboolean
-xim_protocol_real_destroy_ic_reply(XIMProtocol    *proto,
-				   guint16         imid,
-				   guint16         icid)
+xim_protocol_real_destroy_ic_reply(XIMProtocol *proto,
+				   guint16      imid,
+				   guint16      icid)
 {
 	XIMProtocolPrivate *priv = XIM_PROTOCOL_GET_PRIVATE (proto);
 
-	if (priv->verbose) {
+	if (proto->verbose) {
 		Window comm_window;
 
 		g_object_get(priv->conn, "comm_window", &comm_window, NULL);
@@ -875,13 +877,13 @@ xim_protocol_real_set_ic_values(XIMProtocol    *proto,
 }
 
 static gboolean
-xim_protocol_real_set_ic_values_reply(XIMProtocol    *proto,
-				      guint16         imid,
-				      guint16         icid)
+xim_protocol_real_set_ic_values_reply(XIMProtocol *proto,
+				      guint16      imid,
+				      guint16      icid)
 {
 	XIMProtocolPrivate *priv = XIM_PROTOCOL_GET_PRIVATE (proto);
 
-	if (priv->verbose) {
+	if (proto->verbose) {
 		Window comm_window;
 
 		g_object_get(priv->conn, "comm_window", &comm_window, NULL);
@@ -906,14 +908,14 @@ xim_protocol_real_get_ic_values(XIMProtocol    *proto,
 }
 
 static gboolean
-xim_protocol_real_get_ic_values_reply(XIMProtocol    *proto,
-				      guint16         imid,
-				      guint16         icid,
-				      const GSList   *attributes)
+xim_protocol_real_get_ic_values_reply(XIMProtocol  *proto,
+				      guint16       imid,
+				      guint16       icid,
+				      const GSList *attributes)
 {
 	XIMProtocolPrivate *priv = XIM_PROTOCOL_GET_PRIVATE (proto);
 
-	if (priv->verbose) {
+	if (proto->verbose) {
 		Window comm_window;
 		const GSList *l;
 
@@ -976,13 +978,13 @@ xim_protocol_real_sync(XIMProtocol    *proto,
 }
 
 static gboolean
-xim_protocol_real_sync_reply(XIMProtocol    *proto,
-			     guint16         imid,
-			     guint16         icid)
+xim_protocol_real_sync_reply(XIMProtocol *proto,
+			     guint16      imid,
+			     guint16      icid)
 {
 	XIMProtocolPrivate *priv = XIM_PROTOCOL_GET_PRIVATE (proto);
 
-	if (priv->verbose) {
+	if (proto->verbose) {
 		Window comm_window;
 
 		g_object_get(priv->conn, "comm_window", &comm_window, NULL);
@@ -1019,14 +1021,14 @@ xim_protocol_real_reset_ic(XIMProtocol    *proto,
 }
 
 static gboolean
-xim_protocol_real_reset_ic_reply(XIMProtocol    *proto,
-				 guint16         imid,
-				 guint16         icid,
-				 GString        *string)
+xim_protocol_real_reset_ic_reply(XIMProtocol *proto,
+				 guint16      imid,
+				 guint16      icid,
+				 GString     *string)
 {
 	XIMProtocolPrivate *priv = XIM_PROTOCOL_GET_PRIVATE (proto);
 
-	if (priv->verbose) {
+	if (proto->verbose) {
 		Window comm_window;
 
 		g_object_get(priv->conn, "comm_window", &comm_window, NULL);
@@ -1073,7 +1075,7 @@ xim_protocol_real_str_conversion_reply(XIMProtocol    *proto,
 {
 	XIMProtocolPrivate *priv = XIM_PROTOCOL_GET_PRIVATE (proto);
 
-	if (priv->verbose) {
+	if (proto->verbose) {
 		Window comm_window;
 
 		g_object_get(priv->conn, "comm_window", &comm_window, NULL);
@@ -1098,14 +1100,14 @@ xim_protocol_real_preedit_start(XIMProtocol    *proto,
 }
 
 static gboolean
-xim_protocol_real_preedit_start_reply(XIMProtocol    *proto,
-				      guint16         imid,
-				      guint16         icid,
-				      gint32          return_value)
+xim_protocol_real_preedit_start_reply(XIMProtocol *proto,
+				      guint16      imid,
+				      guint16      icid,
+				      gint32       return_value)
 {
 	XIMProtocolPrivate *priv = XIM_PROTOCOL_GET_PRIVATE (proto);
 
-	if (priv->verbose) {
+	if (proto->verbose) {
 		Window comm_window;
 
 		g_object_get(priv->conn, "comm_window", &comm_window, NULL);
@@ -1148,14 +1150,14 @@ xim_protocol_real_preedit_caret(XIMProtocol    *proto,
 }
 
 static gboolean
-xim_protocol_real_preedit_caret_reply(XIMProtocol    *proto,
-				      guint16         imid,
-				      guint16         icid,
-				      guint32         position)
+xim_protocol_real_preedit_caret_reply(XIMProtocol *proto,
+				      guint16      imid,
+				      guint16      icid,
+				      guint32      position)
 {
 	XIMProtocolPrivate *priv = XIM_PROTOCOL_GET_PRIVATE (proto);
 
-	if (priv->verbose) {
+	if (proto->verbose) {
 		Window comm_window;
 
 		g_object_get(priv->conn, "comm_window", &comm_window, NULL);
@@ -1237,7 +1239,7 @@ xim_protocol_set_property(GObject      *object,
 		    priv->atoms = xim_get_atoms(proto->dpy);
 		    break;
 	    case PROP_VERBOSE:
-		    priv->verbose = g_value_get_boolean(value);
+		    proto->verbose = g_value_get_boolean(value);
 		    break;
 	    case PROP_CONN:
 		    priv->conn = g_value_get_object(value);
@@ -1262,7 +1264,7 @@ xim_protocol_get_property(GObject    *object,
 		    g_value_set_pointer(value, proto->dpy);
 		    break;
 	    case PROP_VERBOSE:
-		    g_value_set_boolean(value, priv->verbose);
+		    g_value_set_boolean(value, proto->verbose);
 		    break;
 	    case PROP_CONN:
 		    g_value_set_object(value, priv->conn);
@@ -1613,6 +1615,22 @@ xim_protocol_class_init(XIMProtocolClass *klass)
 							imsettings_marshal_BOOLEAN__UINT_UINT,
 							G_TYPE_BOOLEAN, 2,
 							G_TYPE_UINT, G_TYPE_UINT);
+	signals[XIM_GET_IC_VALUES] = g_signal_new("get_ic_values",
+						  G_OBJECT_CLASS_TYPE (klass),
+						  G_SIGNAL_RUN_LAST,
+						  G_STRUCT_OFFSET (XIMProtocolClass, get_ic_values),
+						  _signal_accumulator, NULL,
+						  imsettings_marshal_BOOLEAN__UINT_UINT_POINTER,
+						  G_TYPE_BOOLEAN, 3,
+						  G_TYPE_UINT, G_TYPE_UINT, G_TYPE_POINTER);
+	signals[XIM_GET_IC_VALUES_REPLY] = g_signal_new("get_ic_values_reply",
+							G_OBJECT_CLASS_TYPE (klass),
+							G_SIGNAL_RUN_LAST,
+							G_STRUCT_OFFSET (XIMProtocolClass, get_ic_values_reply),
+							_signal_accumulator, NULL,
+							imsettings_marshal_BOOLEAN__UINT_UINT_POINTER,
+							G_TYPE_BOOLEAN, 3,
+							G_TYPE_UINT, G_TYPE_UINT, G_TYPE_POINTER);
 	signals[XIM_SET_IC_FOCUS] = g_signal_new("set_ic_focus",
 						 G_OBJECT_CLASS_TYPE (klass),
 						 G_SIGNAL_RUN_LAST,
@@ -1842,8 +1860,12 @@ xim_protocol_process_event(XIMProtocol *proto,
 	priv = XIM_PROTOCOL_GET_PRIVATE (proto);
 	klass = XIM_PROTOCOL_GET_CLASS (proto);
 
-	major_opcode = xim_protocol_get_card8(proto, &packets[*length - len], &len);
-	minor_opcode = xim_protocol_get_card8(proto, &packets[*length - len], &len);
+	/* no need to rely on the byte order here */
+	major_opcode = packets[0];
+	minor_opcode = packets[1];
+	if (major_opcode == XIM_CONNECT)
+		priv->byte_order = packets[4];
+	len -= 2;
 	packlen = xim_protocol_get_card16(proto, &packets[*length - len], &len);
 
 	switch (major_opcode) {
@@ -1852,10 +1874,9 @@ xim_protocol_process_event(XIMProtocol *proto,
 			    guint16 major, minor, nitems, i;
 			    GSList *list = NULL, *ll;
 
-			    priv->byte_order = packets[*length - len];
-			    len--;
-			    /* unused byte */
-			    len--;
+			    /* byte order + unused area */
+			    len -= 2;
+
 			    major = xim_protocol_get_card16(proto, &packets[*length - len], &len);
 			    minor = xim_protocol_get_card16(proto, &packets[*length - len], &len);
 			    nitems = xim_protocol_get_card16(proto, &packets[*length - len], &len);
@@ -2746,6 +2767,8 @@ xim_protocol_process_event(XIMProtocol *proto,
 		    g_warning("Unknown packets received on XIM protocol: major opcode: %02X, minor opcode: %02X, length: %d", major_opcode, minor_opcode, packlen);
 		    break;
 	}
+	if (ret)
+		*length = len;
 }
 
 guint8
@@ -3355,6 +3378,14 @@ xim_protocol_send_packets(XIMProtocol   *proto,
 {
 	XIMProtocolPrivate *priv;
 	gboolean retval = FALSE;
+	guint send_by = 0;
+	static const gchar *methods[] = {
+		"???",
+		"only-CM",
+		"Property-with-CM",
+		"multi-CM",
+		"PropertyNotify"
+	};
 
 	g_return_val_if_fail (XIM_IS_PROTOCOL (proto), FALSE);
 	g_return_val_if_fail (packets != NULL, FALSE);
@@ -3369,11 +3400,13 @@ xim_protocol_send_packets(XIMProtocol   *proto,
 					/* Send data via Property */
 					retval = xim_connection_send_via_property(priv->conn,
 										  packets);
+					send_by = 2;
 				} else {
 					/* Send data via ClientMessage */
 					retval = xim_connection_send_via_cm(priv->conn,
 									    TRANSPORT_SIZE,
 									    packets);
+					send_by = 1;
 				}
 				break;
 			case 1:
@@ -3381,17 +3414,26 @@ xim_protocol_send_packets(XIMProtocol   *proto,
 				retval = xim_connection_send_via_cm(priv->conn,
 								    TRANSPORT_SIZE,
 								    packets);
+				if (packets->len > TRANSPORT_SIZE)
+					send_by = 3;
+				else
+					send_by = 1;
 				break;
 			case 2:
 				if (packets->len > TRANSPORT_MAX) {
 					/* Send data via Property */
 					retval = xim_connection_send_via_property(priv->conn,
 										  packets);
+					send_by = 2;
 				} else {
 					/* Send data via ClientMessage */
 					retval = xim_connection_send_via_cm(priv->conn,
 									    TRANSPORT_SIZE,
 									    packets);
+					if (packets->len > TRANSPORT_SIZE)
+						send_by = 3;
+					else
+						send_by = 1;
 				}
 				break;
 			default:
@@ -3406,6 +3448,7 @@ xim_protocol_send_packets(XIMProtocol   *proto,
 				/* Send data via Property to PrioertyNotify */
 				retval = xim_connection_send_via_property_notify(priv->conn,
 										 packets);
+				send_by = 4;
 				break;
 			default:
 				g_warning("Unsupported protocol version: major: %d minor %d",
@@ -3420,11 +3463,16 @@ xim_protocol_send_packets(XIMProtocol   *proto,
 					/* Send data via PropertyNotify */
 					retval = xim_connection_send_via_property_notify(priv->conn,
 											 packets);
+					send_by = 4;
 				} else {
 					/* Send data via ClientMessage */
 					retval = xim_connection_send_via_cm(priv->conn,
 									    TRANSPORT_SIZE,
 									    packets);
+					if (packets->len > TRANSPORT_SIZE)
+						send_by = 3;
+					else
+						send_by = 1;
 				}
 				break;
 			case 1:
@@ -3432,11 +3480,16 @@ xim_protocol_send_packets(XIMProtocol   *proto,
 					/* Send data via Property */
 					retval = xim_connection_send_via_property_notify(priv->conn,
 											 packets);
+					send_by = 4;
 				} else {
 					/* Send data via ClientMessage */
 					retval = xim_connection_send_via_cm(priv->conn,
 									    TRANSPORT_SIZE,
 									    packets);
+					if (packets->len > TRANSPORT_SIZE)
+						send_by = 3;
+					else
+						send_by = 1;
 				}
 				break;
 			default:
@@ -3450,7 +3503,7 @@ xim_protocol_send_packets(XIMProtocol   *proto,
 			      priv->major_version, priv->minor_version);
 		    break;
 	}
-	if (priv->verbose) {
+	if (proto->verbose) {
 		Window comm_window;
 		Atom selection;
 
@@ -3458,10 +3511,12 @@ xim_protocol_send_packets(XIMProtocol   *proto,
 			     "comm_window", &comm_window,
 			     "selection", &selection,
 			     NULL);
-		g_print("%ld: %s: %s [sent? %s]\n",
+		g_print("%ld: %s: %s [sent? %s via %s (major: %d, minor: %d)]\n",
 			comm_window, selection == None ? "<-" : "->",
 			xim_protocol_name(packets->str[0]),
-			retval ? "true" : "false");
+			retval ? "true" : "false",
+			methods[send_by],
+			priv->major_version, priv->minor_version);
 	}
 
 	return retval;
@@ -3536,7 +3591,10 @@ xim_protocol_send(XIMProtocol *proto,
 	G_STMT_START {
 		GString *s = g_string_new(NULL);
 
-		xim_protocol_put_card16(proto, s, packets->len - 4);
+		if (packets->len % 4)
+			g_warning("Bad padding: the number of packets: %d", packets->len);
+
+		xim_protocol_put_card16(proto, s, (packets->len - 4) / 4);
 		packets->str[2] = s->str[0];
 		packets->str[3] = s->str[1];
 

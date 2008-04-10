@@ -62,6 +62,7 @@ enum {
 	PROP_SELECTION,
 	PROP_VERBOSE,
 	PROP_PROTOCOL,
+	PROP_PROTOCOL_OBJECT,
 	LAST_PROP
 };
 enum {
@@ -156,6 +157,9 @@ xim_connection_get_property(GObject    *object,
 	    case PROP_VERBOSE:
 		    g_value_set_boolean(value, priv->verbose);
 		    break;
+	    case PROP_PROTOCOL_OBJECT:
+		    g_value_set_object(value, priv->proto);
+		    break;
 	    default:
 		    G_OBJECT_WARN_INVALID_PROPERTY_ID (object, prop_id, pspec);
 		    break;
@@ -225,10 +229,16 @@ xim_connection_class_init(XIMConnectionClass *klass)
 							     G_PARAM_READWRITE));
 	g_object_class_install_property(object_class, PROP_PROTOCOL,
 					g_param_spec_gtype("protocol",
-							   _("protocol"),
+							   _("Protocol"),
 							   _("GType to deal with the XIM protocol"),
 							   XIM_TYPE_PROTOCOL,
 							   G_PARAM_WRITABLE|G_PARAM_CONSTRUCT));
+	g_object_class_install_property(object_class, PROP_PROTOCOL_OBJECT,
+					g_param_spec_object("protocol_object",
+							    _("XIMProtocol"),
+							    _("GObject of GObject"),
+							    XIM_TYPE_PROTOCOL,
+							    G_PARAM_READABLE));
 
 	/* signals */
 }
@@ -339,7 +349,8 @@ xim_connection_forward_client_message_event(XIMConnection       *from,
 			op = tpriv->packet_cache->str[0];
 			g_string_erase(tpriv->packet_cache, 0, tpriv->packet_cache->len - packlen);
 			if (tpriv->packet_cache->len > 0) {
-				g_warning("There may be unprocessed packets in the cache.");
+				g_warning("There may be unprocessed packets in the cache: %d packets.",
+					  tpriv->packet_cache->len);
 			};
 		} else if (event->format == 8) {
 			for (i = 0; i < TRANSPORT_SIZE; i++) {
@@ -350,7 +361,8 @@ xim_connection_forward_client_message_event(XIMConnection       *from,
 			op = tpriv->packet_cache->str[0];
 			g_string_erase(tpriv->packet_cache, 0, tpriv->packet_cache->len - packlen);
 			if (tpriv->packet_cache->len > 0) {
-				g_warning("There may be unprocessed packets in the cache.");
+				g_warning("There may be unprocessed packets in the cache: %d packets.",
+					  tpriv->packet_cache->len);
 			};
 		} else {
 			g_warning("Invalid packet.");
@@ -449,11 +461,22 @@ xim_connection_forward_event(XIMConnection *from,
 	switch (event->type) {
 	    case SelectionRequest:
 		    /* from the client */
+		    esr = (XSelectionRequestEvent *)event;
 		    if (tpriv->selection == None) {
-			    g_warning("Getting SelectionRequest from the XIM server side is unlikely.");
+			    g_warning("Getting SelectionRequest from the XIM server side is unlikely.\n"
+				      "    From:   comm_window: %ld\n"
+				      "          client_window: %ld\n"
+				      "              selection: %ld\n"
+				      "      To:   comm_window: %ld\n"
+				      "          client_window: %ld\n"
+				      "              selection: %ld\n"
+				      "   Event:     requestor: %ld\n"
+				      "                  owner: %ld",
+				      fpriv->comm_window, fpriv->client_window, fpriv->selection,
+				      tpriv->comm_window, tpriv->client_window, tpriv->selection,
+				      esr->requestor, esr->owner);
 			    return;
 		    }
-		    esr = (XSelectionRequestEvent *)event;
 		    if (fpriv->verbose) {
 			    g_print("%ld: FWD: %s: %ld(%ld)->%ld(%ld)[->%ld]\n",
 				    fpriv->comm_window,

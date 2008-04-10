@@ -31,6 +31,7 @@
 #include <X11/Xatom.h>
 #include "imsettings/imsettings-marshal.h"
 #include "connection.h"
+#include "loopback.h"
 #include "protocol.h"
 #include "utils.h"
 #include "server.h"
@@ -53,6 +54,7 @@ typedef struct _XIMServerSource {
 typedef struct _XIMServerPrivate {
 	XIMServerSource *event_loop;
 	XIMAtoms        *atoms;
+	XIMLoopback     *loopback;
 	GHashTable      *conn_table;
 	gchar           *target_xim_name;
 	Window           selection_window;
@@ -317,7 +319,23 @@ xim_server_set_property(GObject      *object,
 		    if (strcmp(name, "none") == 0) {
 			    priv->target_xim_name = g_strdup(name);
 			    /* create the dummy XIM server */
-			    g_print("XXX: creating dummy XIM server\n");
+			    priv->loopback = xim_loopback_new(DisplayString(xim->dpy));
+			    if (priv->loopback) {
+				    g_object_set(G_OBJECT (priv->loopback),
+						 "verbose", priv->verbose,
+						 NULL);
+			    }
+			    if (priv->loopback == NULL ||
+				!xim_loopback_setup(priv->loopback)) {
+				    g_warning("Failed to create an instance of loopback server.");
+			    } else {
+				    if (priv->verbose)
+					    g_print("D: Creating an instance of loopback server.\n");
+				    g_object_get(G_OBJECT (priv->loopback),
+						 "selection_window", &priv->target_xim_window,
+						 "selection_atom", &priv->atom_selection,
+						 NULL);
+			    }
 		    } else if ((a = xim_lookup_atom(xim->dpy, name)) != None) {
 			    Window w = XGetSelectionOwner(xim->dpy, a);
 			    gchar *old_xim;
@@ -334,7 +352,12 @@ xim_server_set_property(GObject      *object,
 
 				    if (strcmp(old_xim, "none") == 0) {
 					    /* destroy the dummy XIM server */
-					    g_print("XXX: destroying dummy XIM server\n");
+					    if (priv->verbose)
+						    g_print("D: Destroying an instance of loopback server.\n");
+					    if (priv->loopback) {
+						    g_object_unref(priv->loopback);
+						    priv->loopback = NULL;
+					    }
 				    }
 
 				    g_free(old_xim);
@@ -350,6 +373,10 @@ xim_server_set_property(GObject      *object,
 		    break;
 	    case PROP_VERBOSE:
 		    priv->verbose = g_value_get_boolean(value);
+		    if (priv->loopback)
+			    g_object_set(G_OBJECT (priv->loopback),
+					 "verbose", priv->verbose,
+					 NULL);
 		    d(g_print("D: setting \"verbose\" flag to %s\n", priv->verbose ? "true" : "false"));
 		    break;
 	    default:
@@ -393,6 +420,8 @@ xim_server_finalize(GObject *object)
 	g_hash_table_destroy(priv->conn_table);
 	XDestroyWindow(xim->dpy, priv->selection_window);
 	g_free(priv->target_xim_name);
+	if (priv->loopback)
+		g_object_unref(priv->loopback);
 
 	if (G_OBJECT_CLASS (xim_server_parent_class)->finalize)
 		G_OBJECT_CLASS (xim_server_parent_class)->finalize(object);

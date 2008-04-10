@@ -119,35 +119,6 @@ _io_error_cb(Display *dpy)
 	return 0;
 }
 
-static gchar *
-_substitute_display_name(const gchar *display_name)
-{
-	GString *str;
-	gchar *p;
-
-	if (display_name == NULL)
-		display_name = g_getenv("DISPLAY");
-	if (display_name == NULL)
-		return NULL;
-
-	str = g_string_new(display_name);
-	p = strrchr(str->str, '.');
-	if (p && p > strchr(str->str, ':'))
-		g_string_truncate(str, p - str->str);
-
-	/* Quote:
-	 * 3.  Default Preconnection Convention
-	 *
-	 * IM Servers are strongly encouraged to register their sym-
-	 * bolic names as the ATOM names into the IM Server directory
-	 * property, XIM_SERVERS, on the root window of the screen_num-
-	 * ber 0.
-	 */
-	g_string_append_printf(str, ".0");
-
-	return g_string_free(str, FALSE);
-}
-
 static XIMServer *
 _create_server(GMainLoop   *loop,
 	       Display     *dpy,
@@ -241,7 +212,7 @@ main(int    argc,
 	}
 	g_option_context_free(ctx);
 
-	dpy_name = _substitute_display_name(arg_display_name);
+	dpy_name = xim_substitute_display_name(arg_display_name);
 	dpy = XOpenDisplay(dpy_name);
 	if (dpy == NULL) {
 		g_print("Can't open a X display: %s\n", dpy_name);
