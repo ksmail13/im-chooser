@@ -2302,7 +2302,7 @@ xim_protocol_process_event(XIMProtocol *proto,
 				    gsize t = len;
 				    guint16 id = xim_protocol_get_card16(proto, &packets[*length - len], &len);
 
-				    lattrid = g_slist_append(lattrid, (gpointer)(guint32)id);
+				    lattrid = g_slist_append(lattrid, GUINT_TO_POINTER (id));
 				    i -= (t - len);
 			    }
 			    len -= PAD4 (nbytes);
@@ -2440,7 +2440,7 @@ xim_protocol_process_event(XIMProtocol *proto,
 				    gsize t = len;
 				    guint16 id = xim_protocol_get_card16(proto, &packets[*length - len], &len);
 
-				    lattrid = g_slist_append(lattrid, (gpointer)(guint32)id);
+				    lattrid = g_slist_append(lattrid, GUINT_TO_POINTER (id));
 				    i -= (t - len);
 			    }
 			    len -= PAD4 (2 + nbytes);
@@ -2673,7 +2673,7 @@ xim_protocol_process_event(XIMProtocol *proto,
 				    guint32 feedback;
 
 				    feedback = xim_protocol_get_card32(proto, &packets[*length - len], &len);
-				    lfeedback = g_slist_append(lfeedback, (gpointer)feedback);
+				    lfeedback = g_slist_append(lfeedback, GUINT_TO_POINTER (feedback));
 			    }
 
 			    g_signal_emit(proto, signals[XIM_PREEDIT_DRAW], 0, imid, icid, caret, chg_first, chg_length, mask, string, lfeedback, &ret);
@@ -3592,7 +3592,7 @@ xim_protocol_send(XIMProtocol *proto,
 		GString *s = g_string_new(NULL);
 
 		if (packets->len % 4)
-			g_warning("Bad padding: the number of packets: %d", packets->len);
+			g_warning("Bad padding: the number of packets: %" G_GSIZE_FORMAT, packets->len);
 
 		xim_protocol_put_card16(proto, s, (packets->len - 4) / 4);
 		packets->str[2] = s->str[0];

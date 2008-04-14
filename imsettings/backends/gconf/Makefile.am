@@ -27,6 +27,7 @@ noinst_HEADERS =						\
 	gconf-imsettings-glue.h					\
 	$(NULL)
 
+main.c: gconf-imsettings-glue.h Makefile
 gconf-imsettings-glue.h: stamp-glue.h
 	@true
 stamp-glue.h: $(srcdir)/introspection.xml Makefile

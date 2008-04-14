@@ -349,7 +349,7 @@ xim_connection_forward_client_message_event(XIMConnection       *from,
 			op = tpriv->packet_cache->str[0];
 			g_string_erase(tpriv->packet_cache, 0, tpriv->packet_cache->len - packlen);
 			if (tpriv->packet_cache->len > 0) {
-				g_warning("There may be unprocessed packets in the cache: %d packets.",
+				g_warning("There may be unprocessed packets in the cache: %" G_GSIZE_FORMAT " packets.",
 					  tpriv->packet_cache->len);
 			};
 		} else if (event->format == 8) {
@@ -361,7 +361,7 @@ xim_connection_forward_client_message_event(XIMConnection       *from,
 			op = tpriv->packet_cache->str[0];
 			g_string_erase(tpriv->packet_cache, 0, tpriv->packet_cache->len - packlen);
 			if (tpriv->packet_cache->len > 0) {
-				g_warning("There may be unprocessed packets in the cache: %d packets.",
+				g_warning("There may be unprocessed packets in the cache: %" G_GSIZE_FORMAT " packets.",
 					  tpriv->packet_cache->len);
 			};
 		} else {

@@ -593,7 +593,7 @@ _source_dispatch(GSource     *source,
 								   0,
 								   conn->packet_cache->len - packlen);
 						    if (conn->packet_cache->len > 0) {
-							    g_warning("There may be unprocessed packets in the cache: %d packets.",
+							    g_warning("There may be unprocessed packets in the cache: %" G_GSIZE_FORMAT " packets.",
 								      conn->packet_cache->len);
 						    };
 					    } else if (xevent.xclient.format == 8) {

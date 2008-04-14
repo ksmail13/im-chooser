@@ -1,5 +1,23 @@
 2008-04-14  Akira TAGOH  <tagoh@redhat.com>
 
+	* backends/xim/loopback.c (_source_dispatch): Use G_GSIZE_FORMAT macro
+	instead of "d".
+
+	* backends/xim/protocol.c (xim_protocol_process_event):
+	Use GUINT_TO_POINTER macro instead of direct casting.
+	(xim_protocol_send): Use G_GSIZE_FORMAT macro instead of "d".
+
+	* backends/xim/connection.c (xim_connection_forward_client_message_event):
+	Use G_GSIZE_FORMAT macro instead of "d".
+
+	* backends/gconf/Makefile.am (main.c): Add deps of
+	gconf-imsettings-glue.h to ensure its creation at bootstrap.
+
+	* imsettings/Makefile.am (imsettings-observer.c): Add deps of
+	stamp-bindings.h to ensure its creation at bootstrap.
+
+2008-04-14  Akira TAGOH  <tagoh@redhat.com>
+
 	* backends/xim/loopback.c (xim_loopback_finalize): destroy GSource.
 
 2008-04-10  Akira TAGOH  <tagoh@redhat.com>

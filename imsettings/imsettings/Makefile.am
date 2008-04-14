@@ -37,6 +37,7 @@ noinst_HEADERS =					\
 	imsettings-marshal.h				\
 	$(NULL)
 
+imsettings-observer.c: stamp-bindings.h Makefile
 imsettings.h: stamp-bindings.h $(srcdir)/imsettings-marshal.h $(srcdir)/imsettings-marshal.c
 $(top_srcdir)/imsettings/imsettings/imsettings-glib-bindings.h: stamp-bindings.h Makefile
 	@true
