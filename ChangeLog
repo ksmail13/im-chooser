@@ -1,3 +1,8 @@
+2008-04-14  Akira TAGOH  <tagoh@redhat.com>
+
+	* data/xinput.sh.in.in: run imsettings-xim after imsettings-start.
+	ensure dbus session is established before doing something with imsettings.
+
 2008-04-10  Akira TAGOH  <tagoh@redhat.com>
 
 	* README: Add xinputrc stuff.
