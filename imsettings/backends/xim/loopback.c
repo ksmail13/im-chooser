@@ -711,6 +711,7 @@ xim_loopback_finalize(GObject *object)
 	if (priv->selection_window)
 		XDestroyWindow(proto->dpy, priv->selection_window);
 	g_hash_table_destroy(priv->comm_table);
+	g_source_destroy((GSource *)priv->event_loop);
 
 	if (G_OBJECT_CLASS (xim_loopback_parent_class)->finalize)
 		G_OBJECT_CLASS (xim_loopback_parent_class)->finalize(object);
