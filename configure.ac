@@ -127,7 +127,7 @@ AC_ARG_WITH(xinitdir,
 AC_ARG_WITH(xinput-suffix,
 	AC_HELP_STRING([--with-xinput-suffix], [specify the xinput file suffix])
 	,,
-	with_xinput_suffix=no)
+	with_xinput_suffix=".conf")
 AC_ARG_WITH(xinputsh,
 	AC_HELP_STRING([--with-xinputsh], [specify the xinput shell script name])
 	,,

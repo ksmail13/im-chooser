@@ -1,3 +1,7 @@
+2008-04-18  Akira TAGOH  <tagoh@redhat.com>
+
+	* configure.ac: change the default suffix to .conf.
+
 2008-04-14  Akira TAGOH  <tagoh@redhat.com>
 
 	* data/xinput.sh.in.in: run imsettings-xim after imsettings-start.
