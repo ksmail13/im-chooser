@@ -1,3 +1,7 @@
+2008-04-23  Akira TAGOH  <tagoh@redhat.com>
+
+	* backends/xim/protocol.c (xim_protocol_swap32): Fix a typo.
+
 2008-04-14  Akira TAGOH  <tagoh@redhat.com>
 
 	* backends/xim/loopback.c (_source_dispatch): Use G_GSIZE_FORMAT macro

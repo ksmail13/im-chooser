@@ -2956,7 +2956,7 @@ xim_protocol_swap32(XIMProtocol *proto,
 	priv = XIM_PROTOCOL_GET_PRIVATE (proto);
 	p = (gchar *)&val;
 	if (priv->byte_order == XIM_ORDER_LSB) {
-		retval = (p[0] << 24) + (p[1] << 16) + (p[2] << 24) + p[3];
+		retval = (p[0] << 24) + (p[1] << 16) + (p[2] << 8) + p[3];
 	} else if (priv->byte_order == XIM_ORDER_MSB) {
 		retval = (p[3] << 24) + (p[2] << 16) + (p[1] << 8) + p[0];
 	} else {
