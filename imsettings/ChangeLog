@@ -1,5 +1,7 @@
 2008-04-25  Akira TAGOH  <tagoh@redhat.com>
 
+	* imsettings/Makefile.am: correct build order.
+
 	* src/factory.c (imsettings_manager_real_what_im_is_running):
 	real function to check what IM is running.
 

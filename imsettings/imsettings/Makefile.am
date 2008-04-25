@@ -37,8 +37,8 @@ noinst_HEADERS =					\
 	imsettings-marshal.h				\
 	$(NULL)
 
-imsettings-observer.c: stamp-bindings.h Makefile
-imsettings.h: stamp-bindings.h $(srcdir)/imsettings-marshal.h $(srcdir)/imsettings-marshal.c
+imsettings-observer.c: stamp-bindings.h $(srcdir)/imsettings-marshal.h Makefile
+imsettings-request.c: stamp-bindings.h Makefile
 $(top_srcdir)/imsettings/imsettings/imsettings-glib-bindings.h: stamp-bindings.h Makefile
 	@true
 stamp-bindings.h: $(srcdir)/imsettings.xml Makefile
@@ -50,13 +50,13 @@ stamp-bindings.h: $(srcdir)/imsettings.xml Makefile
 			  --mode=glib-server \
 			  --output=$(srcdir)/imsettings-glib-glue.h $(srcdir)/imsettings.xml ) && \
 	echo timestamp > $(@F)
-$(srcdir)/imsettings-marshal.h: $(srcdir)/marshal.list $(srcdir)/imsettings-marshal.c Makefile
+$(srcdir)/imsettings-marshal.h: $(srcdir)/marshal.list Makefile
 	( cd $(srcdir) && \
 	@GLIB_GENMARSHAL@ --prefix=imsettings_marshal $(srcdir)/marshal.list \
 			  --header > xgen-imh && \
 	(cmp -s xgen-imh imsettings-marshal.h || cp xgen-imh imsettings-marshal.h) && \
 	rm -f xgen-imh)
-$(srcdir)/imsettings-marshal.c: $(srcdir)/marshal.list $(srcdir)/imsettings-marshal.h Makefile
+$(srcdir)/imsettings-marshal.c: $(srcdir)/imsettings-marshal.h Makefile
 	( cd $(srcdir) && \
 	@GLIB_GENMARSHAL@ --prefix=imsettings_marshal $(srcdir)/marshal.list \
 			  --body > xgen-imc && \
