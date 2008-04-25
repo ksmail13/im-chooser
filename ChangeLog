@@ -1,3 +1,9 @@
+2008-04-25  Akira TAGOH  <tagoh@redhat.com>
+
+	* configure.ac:
+	* requires: Require dbus-glib >= 0.74 for
+	dbus_connection_get_g_connection.
+
 2008-04-18  Akira TAGOH  <tagoh@redhat.com>
 
 	* configure.ac: change the default suffix to .conf.

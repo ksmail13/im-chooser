@@ -50,7 +50,7 @@ dnl check pkg-config stuff
 dnl ======================================================================
 PKG_CHECK_MODULES(IMCHOOSE, gtk+-2.0)
 PKG_CHECK_MODULES(IMSETTINGS, dbus-1 >= $DBUS_REQUIRED
-			      dbus-glib-1)
+			      dbus-glib-1 >= $DBUS_GLIB_REQUIRED)
 PKG_CHECK_MODULES(GCONF, gconf-2.0,
 	[use_gconf="yes"],
 	[use_gconf="no"])
