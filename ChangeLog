@@ -1,5 +1,8 @@
 2008-04-25  Akira TAGOH  <tagoh@redhat.com>
 
+	* src/im-chooser-simple.c (_im_chooser_simple_update_im_list):
+	Do not turn on the "Enable input method feature" check box if IM isn't running. (RH#443765)
+
 	* configure.ac:
 	* requires: Require dbus-glib >= 0.74 for
 	dbus_connection_get_g_connection.

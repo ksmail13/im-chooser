@@ -31,10 +31,10 @@ int
 main(int    argc,
      char **argv)
 {
-	IMSettingsRequest *imsettings;
+	IMSettingsRequest *imsettings_info, *imsettings;
 	DBusConnection *connection;
 	gchar **list, *locale;
-	gchar *user_im, *system_im;
+	gchar *user_im, *system_im, *running_im;
 	gint i;
 
 	setlocale(LC_ALL, "");
@@ -43,16 +43,18 @@ main(int    argc,
 	g_type_init();
 
 	connection = dbus_bus_get(DBUS_BUS_SESSION, NULL);
-	imsettings = imsettings_request_new(connection, IMSETTINGS_INFO_INTERFACE_DBUS);
-	imsettings_request_set_locale(imsettings, locale);
-	if ((list = imsettings_request_get_im_list(imsettings)) == NULL) {
+	imsettings = imsettings_request_new(connection, IMSETTINGS_INTERFACE_DBUS);
+	imsettings_info = imsettings_request_new(connection, IMSETTINGS_INFO_INTERFACE_DBUS);
+	imsettings_request_set_locale(imsettings_info, locale);
+	if ((list = imsettings_request_get_im_list(imsettings_info)) == NULL) {
 		g_printerr("Failed to get an IM list.\n");
 	} else {
-		user_im = imsettings_request_get_current_user_im(imsettings);
-		system_im = imsettings_request_get_current_system_im(imsettings);
+		user_im = imsettings_request_get_current_user_im(imsettings_info);
+		system_im = imsettings_request_get_current_system_im(imsettings_info);
+		running_im = imsettings_request_what_im_is_running(imsettings);
 		for (i = 0; list[i] != NULL; i++) {
 			g_print("%s %d: %s %s\n",
-				(strcmp(user_im, list[i]) == 0 ? "*" : " "),
+				(strcmp(running_im, list[i]) == 0 ? "*" : (strcmp(user_im, list[i]) == 0 ? "-" : " ")),
 				i + 1,
 				list[i],
 				(strcmp(system_im, list[i]) == 0 ? "(recommended)" : ""));
@@ -60,6 +62,7 @@ main(int    argc,
 		g_strfreev(list);
 	}
 	g_object_unref(imsettings);
+	g_object_unref(imsettings_info);
 	dbus_connection_unref(connection);
 
 	return 0;

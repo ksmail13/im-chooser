@@ -626,10 +626,11 @@ _im_chooser_simple_update_im_list(IMChooserSimple *im)
 	GtkRequisition requisition;
 	guint count = 0;
 	gint i, priority = 0;
-	gchar *user_im, *system_im;
+	gchar *user_im, *system_im, *running_im;
 
 	user_im = imsettings_request_get_current_user_im(im->imsettings_info);
 	system_im = imsettings_request_get_current_system_im(im->imsettings_info);
+	running_im = imsettings_request_what_im_is_running(im->imsettings);
 	if (im->im_list == NULL)
 		goto end;
 
@@ -654,7 +655,7 @@ _im_chooser_simple_update_im_list(IMChooserSimple *im)
 			def_iter = gtk_tree_iter_copy(&iter);
 		}
 		if (im->current_im == NULL &&
-		    strcmp(user_im, im->im_list[i]) == 0) {
+		    strcmp(running_im, im->im_list[i]) == 0) {
 			im->current_im = g_strdup(im->im_list[i]);
 			if (im->initial_im == NULL)
 				im->initial_im = g_strdup(im->current_im);

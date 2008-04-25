@@ -134,6 +134,28 @@ imsettings_stop_im(GObject      *object,
 }
 
 static gboolean
+imsettings_what_input_method_is_running(GObject      *object,
+					const gchar **ret,
+					GError      **error)
+{
+	IMSettingsObserverClass *klass = IMSETTINGS_OBSERVER_GET_CLASS (object);
+	const gchar *module;
+	gboolean retval = FALSE;
+
+	d(g_print("Getting current IM running\n"));
+	if (klass->what_im_is_running) {
+		module = klass->what_im_is_running(IMSETTINGS_OBSERVER (object),
+						   error);
+		if (*error == NULL) {
+			*ret = g_strdup(module);
+			retval = TRUE;
+		}
+	}
+
+	return retval;
+}
+
+static gboolean
 imsettings_get_list(GObject     *object,
 		    const gchar *lang,
 		    gchar     ***ret,

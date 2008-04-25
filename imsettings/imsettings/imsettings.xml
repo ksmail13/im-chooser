@@ -13,6 +13,11 @@
       <arg type="b" name="force" direction="in" />
       <arg type="b" name="ret" direction="out" />
     </method>
+    <method name="WhatInputMethodIsRunning">
+      <arg type="s" name="ret" direction="out">
+	<annotation name="org.freedesktop.DBus.GLib.Const" value="" />
+      </arg>
+    </method>
   </interface>
   <interface name="com.redhat.imsettings.IMInfo">
     <method name="GetList">

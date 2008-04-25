@@ -625,6 +625,41 @@ imsettings_manager_real_stop_im(IMSettingsObserver  *imsettings,
 	return retval;
 }
 
+const gchar *
+imsettings_manager_real_what_im_is_running(IMSettingsObserver  *observer,
+					   GError             **error)
+{
+	IMSettingsManagerPrivate *priv = IMSETTINGS_MANAGER_GET_PRIVATE (observer);
+	IMSettingsRequest *req;
+	DBusConnection *conn;
+	gchar *module, *xinputfile = NULL, *pidfile = NULL;
+
+	conn = dbus_bus_get(DBUS_BUS_SESSION, NULL);
+	req = imsettings_request_new(conn, IMSETTINGS_INFO_INTERFACE_DBUS);
+	module = imsettings_request_get_current_user_im(req);
+	if (module) {
+		xinputfile = imsettings_request_get_xinput_filename(req, module);
+		if (!xinputfile) {
+			g_set_error(error, IMSETTINGS_GERROR, IMSETTINGS_GERROR_IM_NOT_FOUND,
+				    _("No such input method on your system: %s"),
+				    module);
+			goto end;
+		}
+		pidfile = _build_pidfilename(xinputfile, priv->display_name, "xim");
+		if (!g_file_test(pidfile, G_FILE_TEST_EXISTS)) {
+			g_free(module);
+			module = NULL;
+		}
+	}
+  end:
+	g_free(xinputfile);
+	g_free(pidfile);
+	g_object_unref(req);
+	dbus_connection_unref(conn);
+
+	return module;
+}
+
 static void
 imsettings_manager_class_init(IMSettingsManagerClass *klass)
 {
@@ -637,8 +672,9 @@ imsettings_manager_class_init(IMSettingsManagerClass *klass)
 	object_class->get_property = imsettings_manager_real_get_property;
 	object_class->finalize     = imsettings_manager_real_finalize;
 
-	observer_class->start_im = imsettings_manager_real_start_im;
-	observer_class->stop_im  = imsettings_manager_real_stop_im;
+	observer_class->start_im           = imsettings_manager_real_start_im;
+	observer_class->stop_im            = imsettings_manager_real_stop_im;
+	observer_class->what_im_is_running = imsettings_manager_real_what_im_is_running;
 
 	/* properties */
 	g_object_class_install_property(object_class, PROP_DISPLAY_NAME,

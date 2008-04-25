@@ -95,6 +95,7 @@ gboolean           imsettings_request_stop_im                (IMSettingsRequest 
                                                               const gchar       *module,
 							      gboolean           update_xinputrc,
                                                               gboolean           force);
+gchar             *imsettings_request_what_im_is_running     (IMSettingsRequest *imsettings);
 gboolean           imsettings_request_reload                 (IMSettingsRequest *imsettings,
                                                               gboolean           force);
 gboolean           imsettings_request_change_to              (IMSettingsRequest *imsettings,

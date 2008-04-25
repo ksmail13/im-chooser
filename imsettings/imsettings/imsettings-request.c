@@ -633,6 +633,28 @@ imsettings_request_stop_im_async(IMSettingsRequest                   *imsettings
 						   user_data) != NULL;
 }
 
+gchar *
+imsettings_request_what_im_is_running(IMSettingsRequest *imsettings)
+{
+	IMSettingsRequestPrivate *priv;
+	GError *error = NULL;
+	gchar *retval;
+
+	g_return_val_if_fail (IMSETTINGS_IS_REQUEST (imsettings), FALSE);
+
+	priv = IMSETTINGS_REQUEST_GET_PRIVATE (imsettings);
+	if (!com_redhat_imsettings_what_input_method_is_running(priv->proxy,
+								&retval,
+								&error)) {
+		g_warning(_("Failed to invoke a method `%s':\n  %s"), "WhatInputMethodIsRunning", error->message);
+		g_error_free(error);
+
+		return NULL;
+	}
+
+	return retval;
+}
+
 gboolean
 imsettings_request_reload(IMSettingsRequest *imsettings,
 			  gboolean           force)

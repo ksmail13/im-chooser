@@ -84,6 +84,8 @@ struct _IMSettingsObserverClass {
 						    gboolean             update_xinputrc,
 						    gboolean             force,
 						    GError             **error);
+	const gchar     * (* what_im_is_running)   (IMSettingsObserver  *imsettings,
+						    GError             **error);
 
 	/* signals */
 	void              (* s_start_im)           (IMSettingsObserver  *imsettings,

@@ -1,3 +1,19 @@
+2008-04-25  Akira TAGOH  <tagoh@redhat.com>
+
+	* src/factory.c (imsettings_manager_real_what_im_is_running):
+	real function to check what IM is running.
+
+	* imsettings/imsettings-request.c (imsettings_request_what_im_is_running):
+	new function.
+
+	* imsettings/imsettings-observer.c (imsettings_what_input_method_is_running):
+	new function.
+
+	* imsettings/imsettings.xml (WhatInputMethodIsRunning): new method.
+
+	* utils/imsettings-list.c (main): Show "*" if IM is really running and
+	"-" for not running but is supposed to run by default for user.
+
 2008-04-23  Akira TAGOH  <tagoh@redhat.com>
 
 	* backends/xim/protocol.c (xim_protocol_swap32): Fix a typo.
