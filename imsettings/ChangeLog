@@ -1,3 +1,8 @@
+2008-04-28  Akira TAGOH  <tagoh@redhat.com>
+
+	* backends/xim/protocol.c (xim_protocol_process_event): proper casting
+	to the pointer.
+
 2008-04-25  Akira TAGOH  <tagoh@redhat.com>
 
 	* imsettings/Makefile.am: correct build order.

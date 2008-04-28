@@ -2302,7 +2302,7 @@ xim_protocol_process_event(XIMProtocol *proto,
 				    gsize t = len;
 				    guint16 id = xim_protocol_get_card16(proto, &packets[*length - len], &len);
 
-				    lattrid = g_slist_append(lattrid, GUINT_TO_POINTER (id));
+				    lattrid = g_slist_append(lattrid, GUINT_TO_POINTER ((guint32)id));
 				    i -= (t - len);
 			    }
 			    len -= PAD4 (nbytes);
@@ -2440,7 +2440,7 @@ xim_protocol_process_event(XIMProtocol *proto,
 				    gsize t = len;
 				    guint16 id = xim_protocol_get_card16(proto, &packets[*length - len], &len);
 
-				    lattrid = g_slist_append(lattrid, GUINT_TO_POINTER (id));
+				    lattrid = g_slist_append(lattrid, GUINT_TO_POINTER ((guint32)id));
 				    i -= (t - len);
 			    }
 			    len -= PAD4 (2 + nbytes);
