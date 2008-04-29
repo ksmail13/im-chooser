@@ -1,3 +1,8 @@
+2008-04-29  Akira TAGOH  <tagoh@redhat.com>
+
+	* utils/imsettings-reload.c (main): exit if opening session bus
+	is failed.
+
 2008-04-28  Akira TAGOH  <tagoh@redhat.com>
 
 	* backends/xim/protocol.c (xim_protocol_process_event): proper casting
