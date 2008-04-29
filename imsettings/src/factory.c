@@ -77,7 +77,9 @@ enum {
 	PROP_DISPLAY_NAME,
 };
 
-GType imsettings_manager_get_type(void) G_GNUC_CONST;
+GType        imsettings_manager_get_type               (void) G_GNUC_CONST;
+const gchar *imsettings_manager_real_what_im_is_running(IMSettingsObserver  *observer,
+							GError             **error);
 
 G_DEFINE_TYPE (IMSettingsManager, imsettings_manager, IMSETTINGS_TYPE_OBSERVER);
 
@@ -251,17 +253,39 @@ _start_process(const gchar  *prog_name,
 	return (*error == NULL);
 }
 
+static pid_t
+_get_pid(const gchar  *pidfile,
+	 const gchar  *type,
+	 GError      **error)
+{
+	pid_t pid;
+	gchar *contents = NULL;
+	gsize len = 0;
+
+	if (!g_file_get_contents(pidfile, &contents, &len, error))
+		return 0;
+
+	if ((pid = atoi(contents)) == 0) {
+		/* maybe invalid pidfile. */
+		g_set_error(error, IMSETTINGS_GERROR, IMSETTINGS_GERROR_UNABLE_TO_TRACK_IM,
+			    _("Couldn't determine the pid for %s process."),
+			    type);
+	}
+	g_free(contents);
+
+	return pid;
+}
+
 static gboolean
 _stop_process(const gchar  *pidfile,
 	      const gchar  *type,
 	      GError      **error)
 {
-	gchar *contents = NULL;
-	gsize len = 0;
 	pid_t pid;
 	gboolean retval = FALSE;
 
-	if (!g_file_get_contents(pidfile, &contents, &len, error)) {
+	pid = _get_pid(pidfile, type, error);
+	if (pid == 0) {
 		if (g_error_matches(*error, G_FILE_ERROR, G_FILE_ERROR_NOENT)) {
 			/* No pidfile is available. there aren't anything else to do.
 			 * basically this is no problem. someone may just did stop an IM
@@ -270,19 +294,8 @@ _stop_process(const gchar  *pidfile,
 			g_error_free(*error);
 			*error = NULL;
 			retval = TRUE;
-		} else {
-			/* Otherwise that shouldn't be happened.
-			 */
-			g_return_val_if_reached(FALSE);
 		}
 	} else {
-		if ((pid = atoi(contents)) == 0) {
-			/* maybe invalid pidfile. */
-			g_set_error(error, IMSETTINGS_GERROR, IMSETTINGS_GERROR_UNABLE_TO_TRACK_IM,
-				    _("Couldn't determine the pid for %s process."),
-				    type);
-			goto end;
-		}
 		if (kill(-pid, SIGTERM) == -1) {
 			g_set_error(error, IMSETTINGS_GERROR, IMSETTINGS_GERROR_UNABLE_TO_TRACK_IM,
 				    _("Couldn't send a signal to the %s process successfully."),
@@ -292,8 +305,6 @@ _stop_process(const gchar  *pidfile,
 			retval = TRUE;
 		}
 	}
-  end:
-	g_free(contents);
 
 	return retval;
 }
@@ -633,6 +644,7 @@ imsettings_manager_real_what_im_is_running(IMSettingsObserver  *observer,
 	IMSettingsRequest *req;
 	DBusConnection *conn;
 	gchar *module, *xinputfile = NULL, *pidfile = NULL;
+	pid_t pid;
 
 	conn = dbus_bus_get(DBUS_BUS_SESSION, NULL);
 	req = imsettings_request_new(conn, IMSETTINGS_INFO_INTERFACE_DBUS);
@@ -646,9 +658,15 @@ imsettings_manager_real_what_im_is_running(IMSettingsObserver  *observer,
 			goto end;
 		}
 		pidfile = _build_pidfilename(xinputfile, priv->display_name, "xim");
-		if (!g_file_test(pidfile, G_FILE_TEST_EXISTS)) {
+		pid = _get_pid(pidfile, "xim", error);
+		if (pid == 0) {
 			g_free(module);
 			module = NULL;
+		} else {
+			if (kill(pid, 0) == -1) {
+				g_free(module);
+				module = NULL;
+			}
 		}
 	}
   end:

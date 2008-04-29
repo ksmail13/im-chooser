@@ -1,5 +1,9 @@
 2008-04-29  Akira TAGOH  <tagoh@redhat.com>
 
+	* src/factory.c (_get_pid): new.
+	(imsettings_manager_real_what_im_is_running): check if pid is valid
+	or not.
+
 	* utils/imsettings-reload.c (main): exit if opening session bus
 	is failed.
 
