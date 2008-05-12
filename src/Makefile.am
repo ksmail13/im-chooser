@@ -4,7 +4,6 @@ INCLUDES =							\
 	-DG_LOG_DOMAIN="\"IM-Chooser\""				\
 	-DICONDIR="\"$(datadir)/pixmaps\""			\
 	-DIMCHOOSE_LOCALEDIR="\"$(datadir)/locale\""		\
-	-I$(top_srcdir)/imsettings				\
 	$(IMCHOOSE_CFLAGS)					\
 	$(IMSETTINGS_CFLAGS)					\
 	$(GNOME_CFLAGS)						\
@@ -23,9 +22,6 @@ im_chooser_SOURCES =						\
 	main.c							\
 	im-chooser-simple.c					\
 	im-chooser-simple.h					\
-	$(NULL)
-im_chooser_LDADD =						\
-	$(top_builddir)/imsettings/imsettings/libimsettings.la	\
 	$(NULL)
 
 desktopdir = $(datadir)/applications

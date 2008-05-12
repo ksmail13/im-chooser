@@ -1,5 +1,9 @@
 NULL =
-SUBDIRS = imsettings src data po
+SUBDIRS = src data po
+
+CONFIGURE_DEPENDENCIES =	\
+	requires		\
+	$(NULL)
 
 EXTRA_DIST =			\
 	intltool-extract.in	\
