@@ -1,5 +1,7 @@
 2008-05-14  Akira TAGOH  <tagoh@redhat.com>
 
+	* src/im-chooser-simple.c (_im_chooser_simple_update_im_list): clean up.
+
 	* src/im-chooser-simple.c (im_chooser_simple_instance_init):
 	Make the window border to the progress window. (RH#444818)
 
