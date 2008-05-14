@@ -582,7 +582,6 @@ im_chooser_simple_instance_init(IMChooserSimple *im)
 	/* setup a progress window */
 	gtk_window_set_title(GTK_WINDOW (im->progress), _("Work in progress..."));
 	gtk_window_set_skip_taskbar_hint(GTK_WINDOW (im->progress), TRUE);
-	gtk_window_set_decorated(GTK_WINDOW (im->progress), FALSE);
 	/* setup widgets in the progress window */
 	image = gtk_image_new_from_stock(GTK_STOCK_DIALOG_INFO,
 					 GTK_ICON_SIZE_DIALOG);
