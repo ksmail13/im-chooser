@@ -1,73 +1,15 @@
 IM Chooser
 =============
-IM Chooser is a GUI configuration tool for Input Method to
-choose the Input Method to be used or disable Input Method
-usage on the desktop.
+IM Chooser is a GUI configuration tool for IMSettings to
+choose Input Method you want to use or disable it entirely
+on the desktop.
 
-How does IM Chooser work?
-============================
-IM Chooser relies on xinput.sh script that you may need to
-install it onto the proper place where your system provides
-a hook to bring something up during X server is starting,
-such as /etc/X11/xinit/xinitrc.d on Fedora and
-/etc/X11/Xsession.d on Debian. and /etc/X11/xinit/xinputrc
-is read to determine which Input Method is used by default
-(you can change the base dir with --with-xinputrcdir). once
-you have made any changes from im-chooser, it will be stored
-in $HOME/.xinputrc as symlink to the real config file where
-put on /etc/X11/xinit/xinput.d say.
-For XIM servers, you will have to provide symlinks for them
-with ll_CC style of locale on /etc/X11/xinit/xinput.d by
-default (it's configurable with --with-xinputdir option). if
-your system has alternatives system, it might stands to do
-so.  Also, you can drop the improper XIM servers from the
-selection list if you specify --with-xinput-suffix and no
-such suffix is given to the xinput script of XIM servers,
-because im-chooser tries to pick up the xinput script with
-the name + --with-xinput-suffix. therefore "xim" xinput
-script provided by this displays the proper XIM servers for
-your language then.
-
-What variables are available for the IM specific configuration?
-==================================================================
-XIM
-	For settings of XIM. actually it will be used like
-	XMODIFIERS=@im=$XIM.
-
-XIM_PROGRAM
-	A XIM server be brought up to communicate through
-	XIM protocol. XIM_ARGS can be used to give any
-	options for XIM_PROGRAM.
-
-GTK_IM_MODULE
-	For GTK+ immodule.
-
-QT_IM_MODULE
-	For Qt immodule.
-
-IMSETTINGS_IGNORE_ME
-	For something like that it shouldn't be chosen
-	directly but another one can handle it. if this
-	appears in IM specific configuration, IM Chooser
-	just ignore it and hide it from the custom choices.
-
-AUXILIARY_PROGRAM
-	an optional program that may want to bring up for
-	IM. AUXILIARY_ARGS can be used to give any options
-	for AUXLIARY_PROGRAM.
-
-PREFERENCE_PROGRAM
-	an optional program that sets up the input method.
-	This program will be brought up from im-chooser.
-	PREFERENCE_ARGS can be used to give any options for
-	PREFERENCE_PROGRAM.
-
-SHORT_DESC
-	an optional short description to explain the input method.
-	This variable is particularly used to display the input method
-	name at the input method selection list. otherwise XIM variable
-	will be used for that.
-
-LONG_DESC
-	an optional long description to explain the input method.
-	This variable isn't actually used yet.
+Features
+===========
+ * List Input Method available on the system.
+ * Switch Input Method on demand without restarting
+   applications and the desktop.
+ * Enable/Disable Input Method by turning on/off the check
+   box on GUI.
+ * Invoke the preference application for Input Method on
+   demand.
