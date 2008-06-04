@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: im-chooser\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-04-04 18:09+0000\n"
+"POT-Creation-Date: 2008-06-04 12:36+0900\n"
 "PO-Revision-Date: 2008-04-03 21:34+0200\n"
 "Last-Translator: Nikola Pajtic <salgeras@gmail.com>\n"
 "Language-Team: Serbian (sr) <fedora-trans-sr@redhat.com>\n"
@@ -21,444 +21,95 @@ msgstr ""
 "10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Generator: KBabel 1.11.4\n"
 
-#: ../imsettings/backends/gconf/main.c:184
-#: ../imsettings/imsettings/imsettings-observer.c:702
-#: ../imsettings/src/factory.c:690 ../imsettings/src/factory_info.c:645
-msgid "Replace the running settings daemon with new instance."
-msgstr "Zameni sistemsku uslugu tekućih postavki novim primerkom."
-
-#: ../imsettings/backends/gconf/main.c:206 ../imsettings/src/factory.c:717
-#: ../imsettings/src/factory_info.c:667
-#: ../imsettings/utils/imsettings-reload.c:63
-#: ../imsettings/utils/imsettings-restart.c:65
-#: ../imsettings/utils/imsettings-stop.c:63
-msgid "Unknown error in parsing the command lines."
-msgstr "Nepoznata greška pri raščlanjivanju komandnih linija."
-
-#: ../imsettings/imsettings/imsettings-info.c:498
-msgid "Language"
-msgstr "Jezik"
-
-#: ../imsettings/imsettings/imsettings-info.c:499
-msgid "A language to pull the information in."
-msgstr "Jezik na kome se prikazuju informacije."
-
-#: ../imsettings/imsettings/imsettings-info.c:504
-msgid "Filename"
-msgstr "Ime datoteke"
-
-#: ../imsettings/imsettings/imsettings-info.c:505
-msgid "A filename referring to the IM information."
-msgstr "Ime datoteke koja se odnosi na IM informacije."
-
-#: ../imsettings/imsettings/imsettings-info.c:510
-msgid "GTK+ immodule"
-msgstr "GTK+ immodule"
-
-#: ../imsettings/imsettings/imsettings-info.c:511
-msgid "A module name used for GTK+"
-msgstr "Ime modula koji se koristi za GTK+"
-
-#: ../imsettings/imsettings/imsettings-info.c:516
-msgid "Qt immodule"
-msgstr "Qt immodule"
-
-#: ../imsettings/imsettings/imsettings-info.c:517
-msgid "A module name used for Qt"
-msgstr "Ime modula koji se koristi za Qt"
-
-#: ../imsettings/imsettings/imsettings-info.c:522
-msgid "XIM name"
-msgstr "XIM ime"
-
-#: ../imsettings/imsettings/imsettings-info.c:523
-msgid "XIM server name"
-msgstr "XIM ime servera"
-
-#: ../imsettings/imsettings/imsettings-info.c:528
-msgid "Ignore flag"
-msgstr "Zastava ignorisanja"
-
-#: ../imsettings/imsettings/imsettings-info.c:529
-msgid "A flag to not list up."
-msgstr "Zastava koja se ne izlistava."
-
-#: ../imsettings/imsettings/imsettings-info.c:534
-msgid "XIM server program name"
-msgstr "Ime XIM server programa"
-
-#: ../imsettings/imsettings/imsettings-info.c:535
-msgid "XIM server program to be run"
-msgstr "Program XIM server za izvršavanje"
-
-#: ../imsettings/imsettings/imsettings-info.c:540
-msgid "XIM server program's options"
-msgstr "Programske opcije XIM servera"
-
-#: ../imsettings/imsettings/imsettings-info.c:541
-msgid "Command line options for XIM server program"
-msgstr "Opcije komandne linije za program XIM servera"
-
-#: ../imsettings/imsettings/imsettings-info.c:546
-msgid "Preference program name"
-msgstr "Ime programa za postavke"
-
-#: ../imsettings/imsettings/imsettings-info.c:547
-msgid "Preference program to be run"
-msgstr "Program za postavke koji će biti pokrenut"
-
-#: ../imsettings/imsettings/imsettings-info.c:552
-msgid "Preference program's options"
-msgstr "Opcije programa za postavke"
-
-#: ../imsettings/imsettings/imsettings-info.c:553
-msgid "Command line options for preference program"
-msgstr "Opcije komadne linije programa za postavke"
-
-#: ../imsettings/imsettings/imsettings-info.c:558
-msgid "Auxiliary program name"
-msgstr "Ime programa za podršku"
-
-#: ../imsettings/imsettings/imsettings-info.c:559
-msgid "Auxiliary program to be run"
-msgstr "Program za podršku koji će biti pokrenut"
-
-#: ../imsettings/imsettings/imsettings-info.c:564
-msgid "Auxiliary program's options"
-msgstr "Opcije programa za podršku"
-
-#: ../imsettings/imsettings/imsettings-info.c:565
-msgid "Command line options for auxiliary program"
-msgstr "Opcije komandne linije programa za podršku"
-
-#: ../imsettings/imsettings/imsettings-info.c:570
-#: ../imsettings/imsettings/imsettings-info.c:571
-msgid "Short Description"
-msgstr "Kratak opis"
-
-#: ../imsettings/imsettings/imsettings-info.c:576
-#: ../imsettings/imsettings/imsettings-info.c:577
-msgid "Long Description"
-msgstr "Opširan opis"
-
-#: ../imsettings/imsettings/imsettings-info.c:582
-msgid "System Default"
-msgstr "Podrazumevana sistemska podešavanja"
-
-#: ../imsettings/imsettings/imsettings-info.c:583
-msgid "Whether or not IM is a system default."
-msgstr "Da li je, ili ne, IM sistemski podrazumevani program."
-
-#: ../imsettings/imsettings/imsettings-info.c:588
-msgid "User Default"
-msgstr "Podrazumevana podešavanja korisnika"
-
-#: ../imsettings/imsettings/imsettings-info.c:589
-msgid "Whether or not IM is an user default."
-msgstr "Da li je, ili ne, IM podrazumevani program korisnika."
-
-#: ../imsettings/imsettings/imsettings-info.c:594
-msgid "XIM"
-msgstr "XIM"
-
-#: ../imsettings/imsettings/imsettings-info.c:595
-msgid "Whether or not IM is a XIM server."
-msgstr "Da li je IM XIM server, ili nije."
-
-#: ../imsettings/imsettings/imsettings-info-private.h:39
-msgid "User Specific"
-msgstr "Svojstveno korisniku"
-
-#: ../imsettings/imsettings/imsettings-info-private.h:40
-msgid "xinputrc was modified by the user"
-msgstr "xinputrc je izmenio korisnik"
-
-#: ../imsettings/imsettings/imsettings-observer.c:255
-#, c-format
-msgid "Invalid IM module type: %d"
-msgstr "Neispravna vrsta IM modula: %d"
-
-#: ../imsettings/imsettings/imsettings-observer.c:695
-msgid "IM module name"
-msgstr "Ime IM modula"
-
-#: ../imsettings/imsettings/imsettings-observer.c:696
-msgid "A target IM module name that to observe signals"
-msgstr "Ime ciljnog IM modula čije signale želite da posmatrate"
-
-#: ../imsettings/imsettings/imsettings-observer.c:701
-msgid "Replace"
-msgstr "Zameni"
-
-#: ../imsettings/imsettings/imsettings-observer.c:707
-#: ../imsettings/imsettings/imsettings-request.c:175
-msgid "DBus connection"
-msgstr "DBus veza"
-
-#: ../imsettings/imsettings/imsettings-observer.c:708
-#: ../imsettings/imsettings/imsettings-request.c:176
-msgid "An object to be a DBus connection"
-msgstr "Objekat koji treba da bude DBus veza"
-
-#: ../imsettings/imsettings/imsettings-request.c:169
-msgid "DBus Interface"
-msgstr "DBus sučelje"
-
-#: ../imsettings/imsettings/imsettings-request.c:170
-msgid "Interface name to connect to DBus"
-msgstr "Ime sučelja koje se povezuje na DBus"
-
-#: ../imsettings/imsettings/imsettings-request.c:181
-msgid "Locale"
-msgstr "Lokalitet"
-
-#: ../imsettings/imsettings/imsettings-request.c:182
-msgid "Locale to get the imsettings information"
-msgstr "Lokalitet sa koga se dobijaju imsettings informacije"
-
-#: ../imsettings/imsettings/imsettings-request.c:239
-#: ../imsettings/imsettings/imsettings-request.c:272
-#: ../imsettings/imsettings/imsettings-request.c:290
-#: ../imsettings/imsettings/imsettings-request.c:310
-#: ../imsettings/imsettings/imsettings-request.c:331
-#: ../imsettings/imsettings/imsettings-request.c:355
-#: ../imsettings/imsettings/imsettings-request.c:380
-#: ../imsettings/imsettings/imsettings-request.c:405
-#: ../imsettings/imsettings/imsettings-request.c:426
-#: ../imsettings/imsettings/imsettings-request.c:446
-#: ../imsettings/imsettings/imsettings-request.c:466
-#: ../imsettings/imsettings/imsettings-request.c:486
-#: ../imsettings/imsettings/imsettings-request.c:506
-#: ../imsettings/imsettings/imsettings-request.c:526
-#: ../imsettings/imsettings/imsettings-request.c:552
-#: ../imsettings/imsettings/imsettings-request.c:602
-#, c-format
-msgid ""
-"Failed to invoke a method `%s':\n"
-"  %s"
-msgstr ""
-"Nisam uspeo da pozovem metodu „%s“:\n"
-"  %s"
-
-#: ../imsettings/imsettings/imsettings-request.c:673
-#, c-format
-msgid ""
-"Failed to invoke a method `%s' on %s:\n"
-"  %s"
-msgstr ""
-"Nisam uspeo da pozovem metodu „%s“ nad %s:\n"
-"  %s"
-
-#: ../imsettings/src/factory.c:136
-#, c-format
-msgid "Failed to remove a pidfile: %s"
-msgstr "Nisam uspeo da uklonim pidfile: %s"
-
-#: ../imsettings/src/factory.c:178
-#, c-format
-msgid "Failed to open a pidfile: %s"
-msgstr "Nisam uspeo da otvorim pidfile: %s"
-
-#: ../imsettings/src/factory.c:282
-#, c-format
-msgid "Couldn't determine the pid for %s process."
-msgstr "Ne mogu da odredim pid za %s proces."
-
-#: ../imsettings/src/factory.c:288
-#, c-format
-msgid "Couldn't send a signal to the %s process successfully."
-msgstr "Ne mogu da uspešno pošaljem signal procesu %s."
-
-#: ../imsettings/src/factory.c:314 ../imsettings/src/factory.c:600
-msgid "Failed to get a place of home directory."
-msgstr "Nisam uspeo da dobijem mesto ličnog direktorijuma."
-
-#: ../imsettings/src/factory.c:331
-#, c-format
-msgid "Failed to revert the backup file: %s"
-msgstr "Nisam uspeo da povratim rezervnu kopiju datoteke: %s"
-
-#: ../imsettings/src/factory.c:343
-#, c-format
-msgid "Failed to create a backup file: %s"
-msgstr "Nisam uspeo da napravim rezervnu kopiju datoteke: %s"
-
-#: ../imsettings/src/factory.c:352
-#, c-format
-msgid "Failed to remove a .xinputrc file: %s"
-msgstr "Nisam uspeo da uklonim datoteku .xinputrc: %s"
-
-#: ../imsettings/src/factory.c:363
-#, c-format
-msgid "Failed to make a symlink: %s"
-msgstr "Nisam uspeo da napravim simboličku vezu: %s"
-
-#: ../imsettings/src/factory.c:478 ../imsettings/src/factory_info.c:526
-#, c-format
-msgid "No such input method on your system: %s"
-msgstr "Nema takvih metoda za unos na vašem sistemu: %s"
-
-#: ../imsettings/src/factory.c:498
-#, c-format
-msgid "No XIM server is available in %s"
-msgstr "Nema dostupnog XIM servera u %s"
-
-#: ../imsettings/src/factory.c:646
-msgid "X display name"
-msgstr "Ime X ekrana"
-
-#: ../imsettings/src/factory.c:647
-msgid "X display name to use"
-msgstr "Ime X ekrana za korišćenje"
-
-#: ../imsettings/src/factory.c:691
-msgid "X display to use"
-msgstr "X ekran za korišćenje"
-
-#: ../imsettings/src/factory.c:691
-msgid "DISPLAY"
-msgstr "EKRAN"
-
-#. FIXME
-#: ../imsettings/src/factory.c:694
-msgid "X screen to use"
-msgstr "X prikaz za korišćenje"
-
-#: ../imsettings/src/factory.c:694
-msgid "SCREEN"
-msgstr "PRIKAZ"
-
-#: ../imsettings/src/factory.c:725
-msgid "Failed to open a X display."
-msgstr "Nisam uspeo da otvorim X ekran."
-
-#: ../imsettings/src/factory_info.c:127
-msgid "Reloading...\n"
-msgstr "Ponovo učitavam...\n"
-
-#: ../imsettings/src/factory_info.c:188
-#, c-format
-msgid "Duplicate entry `%s' from %s. SHORT_DESC has to be unique."
-msgstr "Dvostruki unos „%s“ u %s. SHORT_DESC mora biti jedinstven."
-
-#: ../imsettings/src/factory_info.c:446 ../imsettings/src/factory_info.c:484
-#: ../imsettings/src/factory_info.c:500 ../imsettings/src/factory_info.c:518
-#, c-format
-msgid "Timed out to initialize %s services."
-msgstr "Isteklo je vreme čekanja na inicijalizaciju %s servisa."
-
-#: ../imsettings/src/factory_info.c:469
-msgid "No input methods available on your system."
-msgstr "Nema dostupnih metoda za unos na vašem sistemu."
-
-#: ../imsettings/utils/imsettings-reload.c:42
-#: ../imsettings/utils/imsettings-stop.c:42
-msgid "Force reloading the configuration, including restarting the process."
-msgstr ""
-"Primoraj da se ponovo učitaju podešavanja, uključujući i ponovno pokretanje "
-"procesa."
-
-#: ../imsettings/utils/imsettings-restart.c:43
-msgid "Force restarting the IM process regradless of any errors."
-msgstr "Primoraj ponovno pokretanje IM procesa bez obzira na greške."
-
-#: ../imsettings/utils/imsettings-restart.c:44
-#: ../imsettings/utils/imsettings-stop.c:43
-msgid "Do not update .xinputrc."
-msgstr "Nemoj da ažuriraš .xinputrc."
-
-#: ../imsettings/utils/imsettings-stop.c:80
-#, c-format
-msgid "Stopped %s\n"
-msgstr "Zaustavljen je %s\n"
-
-#: ../imsettings/utils/imsettings-stop.c:82
-#, c-format
-msgid "Failed to stop IM process `%s'\n"
-msgstr "Nisam uspeo da zaustavim IM proces „%s“\n"
-
-#: ../src/im-chooser-simple.c:145
+#: ../src/im-chooser-simple.c:148
 msgid "Updating Input Method list"
 msgstr "Ažuriram spisak metoda unosa"
 
-#: ../src/im-chooser-simple.c:310 ../src/im-chooser-simple.c:344
+#: ../src/im-chooser-simple.c:157 ../src/im-chooser-simple.c:646
+#, fuzzy
+msgid "Unable to get Input Method list"
+msgstr "Ažuriram spisak metoda unosa"
+
+#: ../src/im-chooser-simple.c:262
+#, fuzzy
+msgid "Unable to get the information"
+msgstr "Lokalitet sa koga se dobijaju imsettings informacije"
+
+#: ../src/im-chooser-simple.c:324
 msgid "Failed to start Input Method"
 msgstr "Nisam uspeo da pokrenem metod unosa"
 
-#: ../src/im-chooser-simple.c:407
+#: ../src/im-chooser-simple.c:351
+#, fuzzy
+msgid "Failed to stop Input Method"
+msgstr "Nisam uspeo da pokrenem metod unosa"
+
+#: ../src/im-chooser-simple.c:438
 #, c-format
 msgid "Starting Input Method - %s"
 msgstr "Pokrećem metod unosa - %s"
 
-#: ../src/im-chooser-simple.c:424
+#: ../src/im-chooser-simple.c:455
 #, c-format
 msgid "Stopping Input Method - %s"
 msgstr "Zaustavljam metod unosa - %s"
 
-#: ../src/im-chooser-simple.c:542
+#: ../src/im-chooser-simple.c:573
 msgid "Parent Window"
 msgstr "Matični prozor"
 
-#: ../src/im-chooser-simple.c:543
+#: ../src/im-chooser-simple.c:574
 msgid "GtkWindow that points to the parent window"
 msgstr "GtkWindow koji pokazuje na matični prozor"
 
 #. setup a progress window
-#: ../src/im-chooser-simple.c:583
+#: ../src/im-chooser-simple.c:615
 msgid "Work in progress..."
 msgstr "Rad je u toku..."
 
-#: ../src/im-chooser-simple.c:641
+#: ../src/im-chooser-simple.c:674
+msgid "Unable to gather current status"
+msgstr ""
+
+#: ../src/im-chooser-simple.c:689
 #, c-format
 msgid "Use %s"
 msgstr "Koristi %s"
 
-#: ../src/im-chooser-simple.c:644
+#: ../src/im-chooser-simple.c:692
 msgid " (legacy)"
 msgstr " (nasleđeno)"
 
-#: ../src/im-chooser-simple.c:648
+#: ../src/im-chooser-simple.c:696
 msgid " (recommended)"
 msgstr " (preporučeno)"
 
-#: ../src/im-chooser-simple.c:760
+#: ../src/im-chooser-simple.c:804
 msgid "<b>Input Method</b>"
 msgstr "<b>Metod unosa</b>"
 
-#: ../src/im-chooser-simple.c:766
+#: ../src/im-chooser-simple.c:810
 msgid "_Enable input method feature"
 msgstr "_Uključi mogućnost metoda unosa"
 
-#: ../src/im-chooser-simple.c:773
-msgid ""
-"<small><i>Note: this change will not take effect until you next log in, "
-"except GTK+ applications.</i></small>"
-msgstr ""
-"<small><i>Napomena: ova promena neće preći u dejstvo do sledećeg "
-"prijavljivanja, osim u GTK+ programima.</i></small>"
-
-#: ../src/im-chooser-simple.c:805
+#: ../src/im-chooser-simple.c:841
 msgid "Input Method _Preferences..."
 msgstr "Postavke metoda _unosa..."
 
-#: ../src/main.c:55
+#: ../src/main.c:43
 msgid ""
 "<span weight=\"bold\" size=\"larger\">No input method is available</span>"
 msgstr ""
 "<span weight=\"bold\" size=\"larger\">Nema dostupnih metoda unosa</span>"
 
-#: ../src/main.c:58
+#: ../src/main.c:46
 msgid "Please install any input methods before running if you like."
 msgstr ""
 "Molim, instalirajte bilo koje metode unosa pre pokretanja, ako ih želite."
 
-#: ../src/main.c:153
+#: ../src/main.c:110
 msgid "IM Chooser - Input Method configuration tool"
 msgstr "IM izbirač - alat za podešavanje metoda unosa"
-
-#: ../src/main.c:161
-msgid "_Log Out"
-msgstr "Od_javi se"
 
 #: ../src/im-chooser.desktop.in.in.h:1
 msgid ""
@@ -471,3 +122,245 @@ msgstr ""
 #: ../src/im-chooser.desktop.in.in.h:2
 msgid "Input Method"
 msgstr "Metod unosa"
+
+#~ msgid "Replace the running settings daemon with new instance."
+#~ msgstr "Zameni sistemsku uslugu tekućih postavki novim primerkom."
+
+#~ msgid "Unknown error in parsing the command lines."
+#~ msgstr "Nepoznata greška pri raščlanjivanju komandnih linija."
+
+#~ msgid "Language"
+#~ msgstr "Jezik"
+
+#~ msgid "A language to pull the information in."
+#~ msgstr "Jezik na kome se prikazuju informacije."
+
+#~ msgid "Filename"
+#~ msgstr "Ime datoteke"
+
+#~ msgid "A filename referring to the IM information."
+#~ msgstr "Ime datoteke koja se odnosi na IM informacije."
+
+#~ msgid "GTK+ immodule"
+#~ msgstr "GTK+ immodule"
+
+#~ msgid "A module name used for GTK+"
+#~ msgstr "Ime modula koji se koristi za GTK+"
+
+#~ msgid "Qt immodule"
+#~ msgstr "Qt immodule"
+
+#~ msgid "A module name used for Qt"
+#~ msgstr "Ime modula koji se koristi za Qt"
+
+#~ msgid "XIM name"
+#~ msgstr "XIM ime"
+
+#~ msgid "XIM server name"
+#~ msgstr "XIM ime servera"
+
+#~ msgid "Ignore flag"
+#~ msgstr "Zastava ignorisanja"
+
+#~ msgid "A flag to not list up."
+#~ msgstr "Zastava koja se ne izlistava."
+
+#~ msgid "XIM server program name"
+#~ msgstr "Ime XIM server programa"
+
+#~ msgid "XIM server program to be run"
+#~ msgstr "Program XIM server za izvršavanje"
+
+#~ msgid "XIM server program's options"
+#~ msgstr "Programske opcije XIM servera"
+
+#~ msgid "Command line options for XIM server program"
+#~ msgstr "Opcije komandne linije za program XIM servera"
+
+#~ msgid "Preference program name"
+#~ msgstr "Ime programa za postavke"
+
+#~ msgid "Preference program to be run"
+#~ msgstr "Program za postavke koji će biti pokrenut"
+
+#~ msgid "Preference program's options"
+#~ msgstr "Opcije programa za postavke"
+
+#~ msgid "Command line options for preference program"
+#~ msgstr "Opcije komadne linije programa za postavke"
+
+#~ msgid "Auxiliary program name"
+#~ msgstr "Ime programa za podršku"
+
+#~ msgid "Auxiliary program to be run"
+#~ msgstr "Program za podršku koji će biti pokrenut"
+
+#~ msgid "Auxiliary program's options"
+#~ msgstr "Opcije programa za podršku"
+
+#~ msgid "Command line options for auxiliary program"
+#~ msgstr "Opcije komandne linije programa za podršku"
+
+#~ msgid "Short Description"
+#~ msgstr "Kratak opis"
+
+#~ msgid "Long Description"
+#~ msgstr "Opširan opis"
+
+#~ msgid "System Default"
+#~ msgstr "Podrazumevana sistemska podešavanja"
+
+#~ msgid "Whether or not IM is a system default."
+#~ msgstr "Da li je, ili ne, IM sistemski podrazumevani program."
+
+#~ msgid "User Default"
+#~ msgstr "Podrazumevana podešavanja korisnika"
+
+#~ msgid "Whether or not IM is an user default."
+#~ msgstr "Da li je, ili ne, IM podrazumevani program korisnika."
+
+#~ msgid "XIM"
+#~ msgstr "XIM"
+
+#~ msgid "Whether or not IM is a XIM server."
+#~ msgstr "Da li je IM XIM server, ili nije."
+
+#~ msgid "User Specific"
+#~ msgstr "Svojstveno korisniku"
+
+#~ msgid "xinputrc was modified by the user"
+#~ msgstr "xinputrc je izmenio korisnik"
+
+#~ msgid "Invalid IM module type: %d"
+#~ msgstr "Neispravna vrsta IM modula: %d"
+
+#~ msgid "IM module name"
+#~ msgstr "Ime IM modula"
+
+#~ msgid "A target IM module name that to observe signals"
+#~ msgstr "Ime ciljnog IM modula čije signale želite da posmatrate"
+
+#~ msgid "Replace"
+#~ msgstr "Zameni"
+
+#~ msgid "DBus connection"
+#~ msgstr "DBus veza"
+
+#~ msgid "An object to be a DBus connection"
+#~ msgstr "Objekat koji treba da bude DBus veza"
+
+#~ msgid "DBus Interface"
+#~ msgstr "DBus sučelje"
+
+#~ msgid "Interface name to connect to DBus"
+#~ msgstr "Ime sučelja koje se povezuje na DBus"
+
+#~ msgid "Locale"
+#~ msgstr "Lokalitet"
+
+#~ msgid ""
+#~ "Failed to invoke a method `%s':\n"
+#~ "  %s"
+#~ msgstr ""
+#~ "Nisam uspeo da pozovem metodu „%s“:\n"
+#~ "  %s"
+
+#~ msgid ""
+#~ "Failed to invoke a method `%s' on %s:\n"
+#~ "  %s"
+#~ msgstr ""
+#~ "Nisam uspeo da pozovem metodu „%s“ nad %s:\n"
+#~ "  %s"
+
+#~ msgid "Failed to remove a pidfile: %s"
+#~ msgstr "Nisam uspeo da uklonim pidfile: %s"
+
+#~ msgid "Failed to open a pidfile: %s"
+#~ msgstr "Nisam uspeo da otvorim pidfile: %s"
+
+#~ msgid "Couldn't determine the pid for %s process."
+#~ msgstr "Ne mogu da odredim pid za %s proces."
+
+#~ msgid "Couldn't send a signal to the %s process successfully."
+#~ msgstr "Ne mogu da uspešno pošaljem signal procesu %s."
+
+#~ msgid "Failed to get a place of home directory."
+#~ msgstr "Nisam uspeo da dobijem mesto ličnog direktorijuma."
+
+#~ msgid "Failed to revert the backup file: %s"
+#~ msgstr "Nisam uspeo da povratim rezervnu kopiju datoteke: %s"
+
+#~ msgid "Failed to create a backup file: %s"
+#~ msgstr "Nisam uspeo da napravim rezervnu kopiju datoteke: %s"
+
+#~ msgid "Failed to remove a .xinputrc file: %s"
+#~ msgstr "Nisam uspeo da uklonim datoteku .xinputrc: %s"
+
+#~ msgid "Failed to make a symlink: %s"
+#~ msgstr "Nisam uspeo da napravim simboličku vezu: %s"
+
+#~ msgid "No such input method on your system: %s"
+#~ msgstr "Nema takvih metoda za unos na vašem sistemu: %s"
+
+#~ msgid "No XIM server is available in %s"
+#~ msgstr "Nema dostupnog XIM servera u %s"
+
+#~ msgid "X display name"
+#~ msgstr "Ime X ekrana"
+
+#~ msgid "X display name to use"
+#~ msgstr "Ime X ekrana za korišćenje"
+
+#~ msgid "X display to use"
+#~ msgstr "X ekran za korišćenje"
+
+#~ msgid "DISPLAY"
+#~ msgstr "EKRAN"
+
+#~ msgid "X screen to use"
+#~ msgstr "X prikaz za korišćenje"
+
+#~ msgid "SCREEN"
+#~ msgstr "PRIKAZ"
+
+#~ msgid "Failed to open a X display."
+#~ msgstr "Nisam uspeo da otvorim X ekran."
+
+#~ msgid "Reloading...\n"
+#~ msgstr "Ponovo učitavam...\n"
+
+#~ msgid "Duplicate entry `%s' from %s. SHORT_DESC has to be unique."
+#~ msgstr "Dvostruki unos „%s“ u %s. SHORT_DESC mora biti jedinstven."
+
+#~ msgid "Timed out to initialize %s services."
+#~ msgstr "Isteklo je vreme čekanja na inicijalizaciju %s servisa."
+
+#~ msgid "No input methods available on your system."
+#~ msgstr "Nema dostupnih metoda za unos na vašem sistemu."
+
+#~ msgid "Force reloading the configuration, including restarting the process."
+#~ msgstr ""
+#~ "Primoraj da se ponovo učitaju podešavanja, uključujući i ponovno "
+#~ "pokretanje procesa."
+
+#~ msgid "Force restarting the IM process regradless of any errors."
+#~ msgstr "Primoraj ponovno pokretanje IM procesa bez obzira na greške."
+
+#~ msgid "Do not update .xinputrc."
+#~ msgstr "Nemoj da ažuriraš .xinputrc."
+
+#~ msgid "Stopped %s\n"
+#~ msgstr "Zaustavljen je %s\n"
+
+#~ msgid "Failed to stop IM process `%s'\n"
+#~ msgstr "Nisam uspeo da zaustavim IM proces „%s“\n"
+
+#~ msgid ""
+#~ "<small><i>Note: this change will not take effect until you next log in, "
+#~ "except GTK+ applications.</i></small>"
+#~ msgstr ""
+#~ "<small><i>Napomena: ova promena neće preći u dejstvo do sledećeg "
+#~ "prijavljivanja, osim u GTK+ programima.</i></small>"
+
+#~ msgid "_Log Out"
+#~ msgstr "Od_javi se"

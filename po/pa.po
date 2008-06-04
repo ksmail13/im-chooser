@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pa\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-03-12 07:55+0000\n"
+"POT-Creation-Date: 2008-06-04 12:36+0900\n"
 "PO-Revision-Date: 2008-03-28 11:18+0530\n"
 "Last-Translator: Jaswinder Singh <jsingh@redhat.com>\n"
 "Language-Team: Punjabi <fedora-trans-pa@redhat.com>\n"
@@ -21,434 +21,93 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "\n"
 
-#: ../imsettings/backends/gconf/main.c:184
-#: ../imsettings/imsettings/imsettings-observer.c:702
-#: ../imsettings/src/factory.c:690 ../imsettings/src/factory_info.c:645
-msgid "Replace the running settings daemon with new instance."
-msgstr "ਚੱਲ ਰਹੇ ਸੈਟਿੰਗ ਡੈਮਨ ਨੂੰ ਨਵੇਂ ਨਿਰਧਾਰਨ ਨਾਲ ਤਬਦੀਲ ਕਰੋ।"
-
-#: ../imsettings/backends/gconf/main.c:206 ../imsettings/src/factory.c:717
-#: ../imsettings/src/factory_info.c:667
-#: ../imsettings/utils/imsettings-reload.c:63
-#: ../imsettings/utils/imsettings-restart.c:65
-#: ../imsettings/utils/imsettings-stop.c:63
-msgid "Unknown error in parsing the command lines."
-msgstr "ਕਮਾਂਡ ਲਾਈਵ ਪਾਰਸ ਕਰਨ ਵੇਲੇ ਅਣਜਾਣੀ ਗਲਤੀ।"
-
-#: ../imsettings/imsettings/imsettings-info.c:498
-msgid "Language"
-msgstr "ਭਾਸ਼ਾ"
-
-#: ../imsettings/imsettings/imsettings-info.c:499
-msgid "A language to pull the information in."
-msgstr "ਜਾਣਕਾਰੀ ਦੇਣ ਲਈ ਭਾਸ਼ਾ।"
-
-#: ../imsettings/imsettings/imsettings-info.c:504
-msgid "Filename"
-msgstr "ਫਾਇਲ-ਨਾਂ"
-
-#: ../imsettings/imsettings/imsettings-info.c:505
-msgid "A filename referring to the IM information."
-msgstr "IM ਜਾਣਕਾਰੀ ਦਾ ਹਵਾਲਾ ਦੇਣ ਵਾਲੀ ਇੱਕ ਫਾਇਲ।"
-
-#: ../imsettings/imsettings/imsettings-info.c:510
-msgid "GTK+ immodule"
-msgstr "GTK+ immodule"
-
-#: ../imsettings/imsettings/imsettings-info.c:511
-msgid "A module name used for GTK+"
-msgstr "GTK+ ਲਈ ਵਰਤਿਆ ਜਾਂਦਾ ਇੱਕ ਮੈਡਿਊਲ ਨਾਂ"
-
-#: ../imsettings/imsettings/imsettings-info.c:516
-msgid "Qt immodule"
-msgstr "Qt immodule"
-
-#: ../imsettings/imsettings/imsettings-info.c:517
-msgid "A module name used for Qt"
-msgstr "Qt ਲਈ ਵਰਤਿਆ ਜਾਂਦਾ ਇੱਕ ਮੈਡਿਊਲ ਨਾਂ"
-
-#: ../imsettings/imsettings/imsettings-info.c:522
-msgid "XIM name"
-msgstr "XIM ਨਾਂ"
-
-#: ../imsettings/imsettings/imsettings-info.c:523
-msgid "XIM server name"
-msgstr "XIM ਸਰਵਰ ਨਾਂ"
-
-#: ../imsettings/imsettings/imsettings-info.c:528
-msgid "Ignore flag"
-msgstr "ਫਲੈਗ ਅਣਡਿੱਠਾ"
-
-#: ../imsettings/imsettings/imsettings-info.c:529
-msgid "A flag to not list up."
-msgstr "ਨਾ ਵੇਖਾਉਣ ਲਈ ਫਲੈਗ।"
-
-#: ../imsettings/imsettings/imsettings-info.c:534
-msgid "XIM server program name"
-msgstr "XIM ਸਰਵਰ ਪਰੋਗਰਾਮ ਨਾਂ"
-
-#: ../imsettings/imsettings/imsettings-info.c:535
-msgid "XIM server program to be run"
-msgstr "ਚੱਲਾਉਣ ਲਈ XIM ਸਰਵਰ ਪਰੋਗਰਾਮ"
-
-#: ../imsettings/imsettings/imsettings-info.c:540
-msgid "XIM server program's options"
-msgstr "XIM ਸਰਵਰ ਪਰੋਗਰਾਮ ਦੀਆਂ ਚੋਣਾਂ"
-
-#: ../imsettings/imsettings/imsettings-info.c:541
-msgid "Command line options for XIM server program"
-msgstr "XIM ਸਰਵਰ ਪਰੋਗਰਾਮ ਲਈ ਕਮਾਂਡ ਲਾਈਨ ਚੋਣਾਂ"
-
-#: ../imsettings/imsettings/imsettings-info.c:546
-msgid "Preference program name"
-msgstr "ਪਸੰਦ ਪਰੋਗਰਾਮ ਨਾਂ"
-
-#: ../imsettings/imsettings/imsettings-info.c:547
-msgid "Preference program to be run"
-msgstr "ਚਲਾਉਣ ਲਈ ਪਸੰਦ ਪਰੋਗਰਾਮ"
-
-#: ../imsettings/imsettings/imsettings-info.c:552
-msgid "Preference program's options"
-msgstr "ਪਸੰਦ ਪਰੋਗਰਾਮ ਦੀਆਂ ਚੋਣਾਂ"
-
-#: ../imsettings/imsettings/imsettings-info.c:553
-msgid "Command line options for preference program"
-msgstr "ਪਸੰਦ ਪਰੋਗਰਾਮ ਲਈ ਕਮਾਂਡ ਲਾਈਨ ਚੋਣਾਂ"
-
-#: ../imsettings/imsettings/imsettings-info.c:558
-msgid "Auxiliary program name"
-msgstr "Auxiliary ਪਰੋਗਰਾਮ ਨਾਂ"
-
-#: ../imsettings/imsettings/imsettings-info.c:559
-msgid "Auxiliary program to be run"
-msgstr "ਚਲਾਉਣ ਲਈ Auxiliary ਪਰੋਗਰਾਮ"
-
-#: ../imsettings/imsettings/imsettings-info.c:564
-msgid "Auxiliary program's options"
-msgstr "Auxiliary ਪਰਗੋਰਾਮ ਦੀਆਂ ਚੋਣਾਂ"
-
-#: ../imsettings/imsettings/imsettings-info.c:565
-msgid "Command line options for auxiliary program"
-msgstr "auxiliary ਪਰੋਗਰਾਮ ਲਈ ਕਮਾਂਡ ਲਾਈਨ ਚੋਣਾਂ"
-
-#: ../imsettings/imsettings/imsettings-info.c:570
-#: ../imsettings/imsettings/imsettings-info.c:571
-msgid "Short Description"
-msgstr "ਸੰਖੇਪ ਵੇਰਵਾ"
-
-#: ../imsettings/imsettings/imsettings-info.c:576
-#: ../imsettings/imsettings/imsettings-info.c:577
-msgid "Long Description"
-msgstr "ਵਿਸਥਾਰ ਵੇਰਵਾ"
-
-#: ../imsettings/imsettings/imsettings-info.c:582
-msgid "System Default"
-msgstr "ਸਿਸਟਮ ਮੂਲ"
-
-#: ../imsettings/imsettings/imsettings-info.c:583
-msgid "Whether or not IM is a system default."
-msgstr "IM ਇੱਕ ਸਿਸਟਮ ਮੂਲ ਹੈ ਜਾਂ ਨਹੀਂ।"
-
-#: ../imsettings/imsettings/imsettings-info.c:588
-msgid "User Default"
-msgstr "ਉਪਭੋਗੀ ਮੂਲ"
-
-#: ../imsettings/imsettings/imsettings-info.c:589
-msgid "Whether or not IM is an user default."
-msgstr "IM ਇੱਕ ਉਪਭੋਗੀ ਮੂਲ ਹੈ ਜਾਂ ਨਹੀਂ।"
-
-#: ../imsettings/imsettings/imsettings-info.c:594
-msgid "XIM"
-msgstr "XIM"
-
-#: ../imsettings/imsettings/imsettings-info.c:595
-msgid "Whether or not IM is a XIM server."
-msgstr "IM ਇੱਕ XIM ਸਰਵਰ ਹੈ ਜਾਂ ਨਹੀਂ।"
-
-#: ../imsettings/imsettings/imsettings-info-private.h:39
-msgid "User Specific"
-msgstr "ਉਪਭੋਗੀ ਖਾਸ"
-
-#: ../imsettings/imsettings/imsettings-info-private.h:40
-msgid "xinputrc was modified by the user"
-msgstr "xinputrc ਨੂੰ ਉਪਭੋਗੀ ਨੇ ਸੋਧਿਆ ਸੀ"
-
-#: ../imsettings/imsettings/imsettings-observer.c:255
-#, c-format
-msgid "Invalid IM module type: %d"
-msgstr "ਗਲਤ IM ਮੈਡਿਊਲ ਕਿਸਮ: %d"
-
-#: ../imsettings/imsettings/imsettings-observer.c:695
-msgid "IM module name"
-msgstr "IM ਮੈਡਿਊਲ ਨਾਂ"
-
-#: ../imsettings/imsettings/imsettings-observer.c:696
-msgid "A target IM module name that to observe signals"
-msgstr "ਇੱਕ ਟਾਰਗਿਟ IM ਮੈਡਿਊਲ ਨਾਂ ਜੋ ਸੰਕੇਤ ਪ੍ਰਾਪਤ ਕਰਦਾ ਹੈ"
-
-#: ../imsettings/imsettings/imsettings-observer.c:701
-msgid "Replace"
-msgstr "ਤਬਦੀਲ"
-
-#: ../imsettings/imsettings/imsettings-observer.c:707
-#: ../imsettings/imsettings/imsettings-request.c:175
-msgid "DBus connection"
-msgstr "DBus ਕੁਨੈਕਸ਼ਨ"
-
-#: ../imsettings/imsettings/imsettings-observer.c:708
-#: ../imsettings/imsettings/imsettings-request.c:176
-msgid "An object to be a DBus connection"
-msgstr "ਇੱਕ ਆਬਜੈਕਟ ਜੋ DBus ਕੁਨੈਕਸ਼ਨ ਹੋਵੇਗਾ"
-
-#: ../imsettings/imsettings/imsettings-request.c:169
-msgid "DBus Interface"
-msgstr "DBus ਇੰਟਰਫੇਸ"
-
-#: ../imsettings/imsettings/imsettings-request.c:170
-msgid "Interface name to connect to DBus"
-msgstr "ਇੰਟਰਫੇਸ ਨਾਂ ਜੋ DBus ਨਾਲ ਜੁੜਦਾ ਹੈ"
-
-#: ../imsettings/imsettings/imsettings-request.c:181
-msgid "Locale"
-msgstr "ਲੋਕੇਲ"
-
-#: ../imsettings/imsettings/imsettings-request.c:182
-msgid "Locale to get the imsettings information"
-msgstr "im-ਸੈਟਿੰਗ ਜਾਣਕਾਰੀ ਲੈਣ ਲਈ ਲੋਕੇਲ"
-
-#: ../imsettings/imsettings/imsettings-request.c:239
-#: ../imsettings/imsettings/imsettings-request.c:272
-#: ../imsettings/imsettings/imsettings-request.c:290
-#: ../imsettings/imsettings/imsettings-request.c:310
-#: ../imsettings/imsettings/imsettings-request.c:331
-#: ../imsettings/imsettings/imsettings-request.c:355
-#: ../imsettings/imsettings/imsettings-request.c:380
-#: ../imsettings/imsettings/imsettings-request.c:405
-#: ../imsettings/imsettings/imsettings-request.c:426
-#: ../imsettings/imsettings/imsettings-request.c:446
-#: ../imsettings/imsettings/imsettings-request.c:466
-#: ../imsettings/imsettings/imsettings-request.c:486
-#: ../imsettings/imsettings/imsettings-request.c:506
-#: ../imsettings/imsettings/imsettings-request.c:526
-#: ../imsettings/imsettings/imsettings-request.c:552
-#: ../imsettings/imsettings/imsettings-request.c:602
-#, c-format
-msgid ""
-"Failed to invoke a method `%s':\n"
-"  %s"
-msgstr ""
-"ਇੱਕ ਢੰਗ `%s' ਨੂੰ ਵਰਤਣ ਵਿੱਚ ਫੇਲ:\n"
-"  %s"
-
-#: ../imsettings/imsettings/imsettings-request.c:672
-#, c-format
-msgid ""
-"Failed to invoke a method `%s' on %s:\n"
-"  %s"
-msgstr ""
-"ਇੱਕ ਢੰਗ `%s' ਨੂੰ %s ਉੱਪਰ ਵਰਤਣ ਵਿੱਚ ਫੇਲ:\n"
-"  %s"
-
-#: ../imsettings/src/factory.c:136
-#, c-format
-msgid "Failed to remove a pidfile: %s"
-msgstr "ਇੱਕ pidfile ਨੂੰ ਹਟਾਉਣ ਵਿੱਚ ਫੇਲ: %s"
-
-#: ../imsettings/src/factory.c:178
-#, c-format
-msgid "Failed to open a pidfile: %s"
-msgstr "ਇੱਕ pidfile ਨੂੰ ਖੋਲਣ ਵਿੱਚ ਫੇਲ: %s"
-
-#: ../imsettings/src/factory.c:282
-#, c-format
-msgid "Couldn't determine the pid for %s process."
-msgstr "%s ਕਾਰਜ ਲਈ pid ਤਾ ਕਰਨ ਵਿੱਚ ਫੇਲ ਹੋਇਆ।"
-
-#: ../imsettings/src/factory.c:288
-#, c-format
-msgid "Couldn't send a signal to the %s process successfully."
-msgstr "%s ਕਾਰਜ ਨੂੰ ਸਫਲਤਾਪੂਰਕ ਸਿਗਨਲ ਨਹੀਂ ਭੇਜ ਸਕਿਆ।"
-
-#: ../imsettings/src/factory.c:314 ../imsettings/src/factory.c:600
-msgid "Failed to get a place of home directory."
-msgstr "ਘਰੇਲੂ ਡਾਇਰੈਕਟਰੀ ਦਾ ਥਾਂ ਪਤਾ ਕਰਨ ਵਿੱਚ ਫੇਲ ਹੋਇਆ।"
-
-#: ../imsettings/src/factory.c:331
-#, c-format
-msgid "Failed to revert the backup file: %s"
-msgstr "ਬੈਕਅੱਪ ਫਾਇਲ ਪ੍ਰਾਪਤ ਕਰਨ ਵਿੱਚ ਫੇਲ : %s"
-
-#: ../imsettings/src/factory.c:343
-#, c-format
-msgid "Failed to create a backup file: %s"
-msgstr "ਬੈਕਅੱਪ ਫਾਇਲ ਬਣਾਉਣ ਵਿੱਚ ਫੇਲ: %s"
-
-#: ../imsettings/src/factory.c:352
-#, c-format
-msgid "Failed to remove a .xinputrc file: %s"
-msgstr "ਇੱਕ .xinputrc ਫਾਇਲ ਹਟਾਉਣ ਵਿੱਚ ਫੇਲ: %s"
-
-#: ../imsettings/src/factory.c:363
-#, c-format
-msgid "Failed to make a symlink: %s"
-msgstr "symlink ਬਣਾਉਣ ਵਿੱਚ ਫੇਲ: %s"
-
-#: ../imsettings/src/factory.c:478 ../imsettings/src/factory_info.c:526
-#, c-format
-msgid "No such input method on your system: %s"
-msgstr "ਤੁਹਾਡੇ ਸਿਸਟਮ ਉੱਪਰ ਕੋਈ ਅਜਿਹਾ ਇੰਪੁੱਟ ਢੰਗ ਨਹੀਂ ਹੈ: %s"
-
-#: ../imsettings/src/factory.c:498
-#, c-format
-msgid "No XIM server is available in %s"
-msgstr "%s ਵਿੱਚ ਕੋਈ XIM ਸਰਵਰ ਉਪਲੱਬਧ ਨਹੀਂ ਹੈ"
-
-#: ../imsettings/src/factory.c:646
-msgid "X display name"
-msgstr "X ਦਰਿਸ਼ ਨਾਂ"
-
-#: ../imsettings/src/factory.c:647
-msgid "X display name to use"
-msgstr "ਵਰਤਣ ਲਈ X ਦਰਿਸ਼ ਨਾਂ"
-
-#: ../imsettings/src/factory.c:691
-msgid "X display to use"
-msgstr "ਵਰਤਣ ਲਈ X ਦਰਿਸ਼"
-
-#: ../imsettings/src/factory.c:691
-msgid "DISPLAY"
-msgstr "DISPLAY"
-
-#. FIXME
-#: ../imsettings/src/factory.c:694
-msgid "X screen to use"
-msgstr "ਵਰਤਣ ਲਈ X ਸਕਰੀਨ"
-
-#: ../imsettings/src/factory.c:694
-msgid "SCREEN"
-msgstr "SCREEN"
-
-#: ../imsettings/src/factory.c:725
-msgid "Failed to open a X display."
-msgstr "X ਦਰਿਸ਼ ਖੋਲਣ ਲਈ ਫੇਲ।"
-
-#: ../imsettings/src/factory_info.c:127
-msgid "Reloading...\n"
-msgstr "ਮੁੜ-ਲੋਡ ਕਰ ਰਿਹਾ...\n"
-
-#: ../imsettings/src/factory_info.c:188
-#, c-format
-msgid "Duplicate entry `%s' from %s. SHORT_DESC has to be unique."
-msgstr "ਗਲਤੀ ਐਂਟਰੀ `%s' ਜੋ %s ਤੋਂ ਹੈ। SHORT_DESC ਵੱਖਰਾ ਹੋਣਾ ਚਾਹੀਦਾ ਹੈ।"
-
-#: ../imsettings/src/factory_info.c:446 ../imsettings/src/factory_info.c:484
-#: ../imsettings/src/factory_info.c:500 ../imsettings/src/factory_info.c:518
-#, c-format
-msgid "Timed out to initialize %s services."
-msgstr "%s ਸਰਵਿਸਾਂ ਚਾਲੂ ਕਰਨ ਦਾ ਸਮਾਂ ਲੰਘ ਗਿਆ ਹੈ।"
-
-#: ../imsettings/src/factory_info.c:469
-msgid "No input methods available on your system."
-msgstr "ਤੁਹਾਡੇ ਸਿਸਟਮ ਉੱਪਰ ਕੋਈ ਇੰਪੁੱਟ ਵਿਧੀ ਉਪਲੱਬਧ ਨਹੀਂ ਹੈ।"
-
-#: ../imsettings/utils/imsettings-reload.c:42
-#: ../imsettings/utils/imsettings-restart.c:43
-#: ../imsettings/utils/imsettings-stop.c:42
-msgid "Force reloading the configuration, including restarting the process."
-msgstr "ਸੰਰਚਨਾ ਮੁੜ-ਲੋਡ ਕਰਨ ਲਈ ਮਜਬੂਰ ਕਰੋ, ਕਾਰਜ ਮੁੜ-ਚਾਲੂ ਕਰਨ ਸਮੇਤ।"
-
-#: ../imsettings/utils/imsettings-restart.c:44
-#: ../imsettings/utils/imsettings-stop.c:43
-msgid "Do not update .xinputrc."
-msgstr ".xinputrc ਨੂੰ ਅੱਪਡੇਟ ਨਾ ਕਰੋ।"
-
-#: ../imsettings/utils/imsettings-stop.c:80
-#, c-format
-msgid "Stopped %s\n"
-msgstr "%s ਨੂੰ ਰੋਕਿਆ ਗਿਆ ਹੈ\n"
-
-#: ../imsettings/utils/imsettings-stop.c:82
-#, c-format
-msgid "Failed to stop IM process `%s'\n"
-msgstr "IM ਕਾਰਜ `%s' ਨੂੰ ਰੋਕਣ ਵਿੱਚ ਫੇਲ\n"
-
-#: ../src/im-chooser-simple.c:145
+#: ../src/im-chooser-simple.c:148
 msgid "Updating Input Method list"
 msgstr "ਇੰਪੁੱਟ ਢੰਗ ਸੂਚੀ ਅੱਪਡੇਟ ਕਰ ਰਿਹਾ ਹੈ"
 
-#: ../src/im-chooser-simple.c:310 ../src/im-chooser-simple.c:344
+#: ../src/im-chooser-simple.c:157 ../src/im-chooser-simple.c:646
+#, fuzzy
+msgid "Unable to get Input Method list"
+msgstr "ਇੰਪੁੱਟ ਢੰਗ ਸੂਚੀ ਅੱਪਡੇਟ ਕਰ ਰਿਹਾ ਹੈ"
+
+#: ../src/im-chooser-simple.c:262
+#, fuzzy
+msgid "Unable to get the information"
+msgstr "im-ਸੈਟਿੰਗ ਜਾਣਕਾਰੀ ਲੈਣ ਲਈ ਲੋਕੇਲ"
+
+#: ../src/im-chooser-simple.c:324
 msgid "Failed to start Input Method"
 msgstr "ਇੰਪੁੱਟ ਢੰਗ ਚਾਲੂ ਕਰਨ ਵਿੱਚ ਫੇਲ"
 
-#: ../src/im-chooser-simple.c:407
+#: ../src/im-chooser-simple.c:351
+#, fuzzy
+msgid "Failed to stop Input Method"
+msgstr "ਇੰਪੁੱਟ ਢੰਗ ਚਾਲੂ ਕਰਨ ਵਿੱਚ ਫੇਲ"
+
+#: ../src/im-chooser-simple.c:438
 #, c-format
 msgid "Starting Input Method - %s"
 msgstr "ਇੰਪੁੱਟ ਢੰਗ ਚਾਲੂ ਕਰਨ ਵਿੱਚ ਫੇਲ - %s"
 
-#: ../src/im-chooser-simple.c:424
+#: ../src/im-chooser-simple.c:455
 #, c-format
 msgid "Stopping Input Method - %s"
 msgstr "ਇੰਪੁੱਟ ਢੰਗ ਰੋਕ ਰਿਹਾ ਹੈ - %s"
 
-#: ../src/im-chooser-simple.c:542
+#: ../src/im-chooser-simple.c:573
 msgid "Parent Window"
 msgstr "ਅਧਾਰ ਵਿੰਡੋ"
 
-#: ../src/im-chooser-simple.c:543
+#: ../src/im-chooser-simple.c:574
 msgid "GtkWindow that points to the parent window"
 msgstr "GtkWindow ਜੋ ਅਧਾਰ ਵਿੰਡੋ ਵੱਲ ਉਦੇਸ਼ ਕਰਦਾ ਹੈ"
 
 #. setup a progress window
-#: ../src/im-chooser-simple.c:583
+#: ../src/im-chooser-simple.c:615
 msgid "Work in progress..."
 msgstr "ਕੰਮ ਚੱਲ ਰਿਹਾ ਹੈ..."
 
-#: ../src/im-chooser-simple.c:641
+#: ../src/im-chooser-simple.c:674
+msgid "Unable to gather current status"
+msgstr ""
+
+#: ../src/im-chooser-simple.c:689
 #, c-format
 msgid "Use %s"
 msgstr "%s ਵਰਤੋ"
 
-#: ../src/im-chooser-simple.c:644
+#: ../src/im-chooser-simple.c:692
 msgid " (legacy)"
 msgstr " (ਪੁਰਾਤਨ)"
 
-#: ../src/im-chooser-simple.c:648
+#: ../src/im-chooser-simple.c:696
 msgid " (recommended)"
 msgstr " (ਸਿਫਰਾਸ਼-ਕੀਤਾ)"
 
-#: ../src/im-chooser-simple.c:760
+#: ../src/im-chooser-simple.c:804
 msgid "<b>Input Method</b>"
 msgstr "<b>ਇੰਪੁੱਟ ਢੰਗ</b>"
 
-#: ../src/im-chooser-simple.c:766
+#: ../src/im-chooser-simple.c:810
 msgid "_Enable input method feature"
 msgstr "ਇੰਪੁੱਟ ਢੰਗ ਵਿਸ਼ੇਸ਼ਤਾ ਯੋਗ ਕਰੋ(_E)"
 
-#: ../src/im-chooser-simple.c:773
-msgid ""
-"<small><i>Note: this change will not take effect until you next log in, "
-"except GTK+ applications.</i></small>"
-msgstr "<small><i>ਸੂਚਨਾ: ਇਹ ਤਬਦੀਲੀ ਤੁਹਾਡੇ ਮੁੜ ਲਾਗਇਨ ਹੋਣ ਤੱਕ ਲਾਗੂ ਨਹੀਂ ਹੋਵੇਗੀ, GTK+ ਕਰਾਜਾਂ ਨੂੰ ਛੱਡ ਕੇ।</i></small>"
-
-#: ../src/im-chooser-simple.c:805
+#: ../src/im-chooser-simple.c:841
 msgid "Input Method _Preferences..."
 msgstr "ਇੰਪੁੱਟ ਢੰਗ ਪਸੰਦ(_P)..."
 
-#: ../src/main.c:55
-msgid "<span weight=\"bold\" size=\"larger\">No input method is available</span>"
+#: ../src/main.c:43
+msgid ""
+"<span weight=\"bold\" size=\"larger\">No input method is available</span>"
 msgstr "<span weight=\"bold\" size=\"larger\">ਕੋਈ ਇੱਪੁੱਟ ਢੰਗ ਉਪਲੱਬਧ ਨਹੀਂ ਹੈ</span>"
 
-#: ../src/main.c:58
+#: ../src/main.c:46
 msgid "Please install any input methods before running if you like."
 msgstr "ਜੋ ਤੁਸੀਂ ਚਾਹੁੰਦੇ ਹੋ ਤਾਂ ਚਲਾਉਣ ਤੋਂ ਪਹਿਲਾਂ ਕੋਈ ਵੀ ਇੱਪੁੱਟ ਢੰਗ ਇੰਸਟਾਲ ਕਰੋ।"
 
-#: ../src/main.c:153
+#: ../src/main.c:110
 msgid "IM Chooser - Input Method configuration tool"
 msgstr "IM ਚੋਣਕਾਰ - ਇੰਪੁੱਟ ਢੰਗ ਸੰਰਚਨਾ ਸੰਦ"
-
-#: ../src/main.c:161
-msgid "_Log Out"
-msgstr "ਲਾਗ ਆਉਟ(_L)"
 
 #: ../src/im-chooser.desktop.in.in.h:1
 msgid ""
@@ -460,3 +119,239 @@ msgstr "ਵਰਤਣ ਲਈ ਇੰਪੁੱਟ ਢੰਗ ਚੁਣੋ ਜਾਂ 
 msgid "Input Method"
 msgstr "ਇੰਪੁੱਟ ਢੰਗ1"
 
+#~ msgid "Replace the running settings daemon with new instance."
+#~ msgstr "ਚੱਲ ਰਹੇ ਸੈਟਿੰਗ ਡੈਮਨ ਨੂੰ ਨਵੇਂ ਨਿਰਧਾਰਨ ਨਾਲ ਤਬਦੀਲ ਕਰੋ।"
+
+#~ msgid "Unknown error in parsing the command lines."
+#~ msgstr "ਕਮਾਂਡ ਲਾਈਵ ਪਾਰਸ ਕਰਨ ਵੇਲੇ ਅਣਜਾਣੀ ਗਲਤੀ।"
+
+#~ msgid "Language"
+#~ msgstr "ਭਾਸ਼ਾ"
+
+#~ msgid "A language to pull the information in."
+#~ msgstr "ਜਾਣਕਾਰੀ ਦੇਣ ਲਈ ਭਾਸ਼ਾ।"
+
+#~ msgid "Filename"
+#~ msgstr "ਫਾਇਲ-ਨਾਂ"
+
+#~ msgid "A filename referring to the IM information."
+#~ msgstr "IM ਜਾਣਕਾਰੀ ਦਾ ਹਵਾਲਾ ਦੇਣ ਵਾਲੀ ਇੱਕ ਫਾਇਲ।"
+
+#~ msgid "GTK+ immodule"
+#~ msgstr "GTK+ immodule"
+
+#~ msgid "A module name used for GTK+"
+#~ msgstr "GTK+ ਲਈ ਵਰਤਿਆ ਜਾਂਦਾ ਇੱਕ ਮੈਡਿਊਲ ਨਾਂ"
+
+#~ msgid "Qt immodule"
+#~ msgstr "Qt immodule"
+
+#~ msgid "A module name used for Qt"
+#~ msgstr "Qt ਲਈ ਵਰਤਿਆ ਜਾਂਦਾ ਇੱਕ ਮੈਡਿਊਲ ਨਾਂ"
+
+#~ msgid "XIM name"
+#~ msgstr "XIM ਨਾਂ"
+
+#~ msgid "XIM server name"
+#~ msgstr "XIM ਸਰਵਰ ਨਾਂ"
+
+#~ msgid "Ignore flag"
+#~ msgstr "ਫਲੈਗ ਅਣਡਿੱਠਾ"
+
+#~ msgid "A flag to not list up."
+#~ msgstr "ਨਾ ਵੇਖਾਉਣ ਲਈ ਫਲੈਗ।"
+
+#~ msgid "XIM server program name"
+#~ msgstr "XIM ਸਰਵਰ ਪਰੋਗਰਾਮ ਨਾਂ"
+
+#~ msgid "XIM server program to be run"
+#~ msgstr "ਚੱਲਾਉਣ ਲਈ XIM ਸਰਵਰ ਪਰੋਗਰਾਮ"
+
+#~ msgid "XIM server program's options"
+#~ msgstr "XIM ਸਰਵਰ ਪਰੋਗਰਾਮ ਦੀਆਂ ਚੋਣਾਂ"
+
+#~ msgid "Command line options for XIM server program"
+#~ msgstr "XIM ਸਰਵਰ ਪਰੋਗਰਾਮ ਲਈ ਕਮਾਂਡ ਲਾਈਨ ਚੋਣਾਂ"
+
+#~ msgid "Preference program name"
+#~ msgstr "ਪਸੰਦ ਪਰੋਗਰਾਮ ਨਾਂ"
+
+#~ msgid "Preference program to be run"
+#~ msgstr "ਚਲਾਉਣ ਲਈ ਪਸੰਦ ਪਰੋਗਰਾਮ"
+
+#~ msgid "Preference program's options"
+#~ msgstr "ਪਸੰਦ ਪਰੋਗਰਾਮ ਦੀਆਂ ਚੋਣਾਂ"
+
+#~ msgid "Command line options for preference program"
+#~ msgstr "ਪਸੰਦ ਪਰੋਗਰਾਮ ਲਈ ਕਮਾਂਡ ਲਾਈਨ ਚੋਣਾਂ"
+
+#~ msgid "Auxiliary program name"
+#~ msgstr "Auxiliary ਪਰੋਗਰਾਮ ਨਾਂ"
+
+#~ msgid "Auxiliary program to be run"
+#~ msgstr "ਚਲਾਉਣ ਲਈ Auxiliary ਪਰੋਗਰਾਮ"
+
+#~ msgid "Auxiliary program's options"
+#~ msgstr "Auxiliary ਪਰਗੋਰਾਮ ਦੀਆਂ ਚੋਣਾਂ"
+
+#~ msgid "Command line options for auxiliary program"
+#~ msgstr "auxiliary ਪਰੋਗਰਾਮ ਲਈ ਕਮਾਂਡ ਲਾਈਨ ਚੋਣਾਂ"
+
+#~ msgid "Short Description"
+#~ msgstr "ਸੰਖੇਪ ਵੇਰਵਾ"
+
+#~ msgid "Long Description"
+#~ msgstr "ਵਿਸਥਾਰ ਵੇਰਵਾ"
+
+#~ msgid "System Default"
+#~ msgstr "ਸਿਸਟਮ ਮੂਲ"
+
+#~ msgid "Whether or not IM is a system default."
+#~ msgstr "IM ਇੱਕ ਸਿਸਟਮ ਮੂਲ ਹੈ ਜਾਂ ਨਹੀਂ।"
+
+#~ msgid "User Default"
+#~ msgstr "ਉਪਭੋਗੀ ਮੂਲ"
+
+#~ msgid "Whether or not IM is an user default."
+#~ msgstr "IM ਇੱਕ ਉਪਭੋਗੀ ਮੂਲ ਹੈ ਜਾਂ ਨਹੀਂ।"
+
+#~ msgid "XIM"
+#~ msgstr "XIM"
+
+#~ msgid "Whether or not IM is a XIM server."
+#~ msgstr "IM ਇੱਕ XIM ਸਰਵਰ ਹੈ ਜਾਂ ਨਹੀਂ।"
+
+#~ msgid "User Specific"
+#~ msgstr "ਉਪਭੋਗੀ ਖਾਸ"
+
+#~ msgid "xinputrc was modified by the user"
+#~ msgstr "xinputrc ਨੂੰ ਉਪਭੋਗੀ ਨੇ ਸੋਧਿਆ ਸੀ"
+
+#~ msgid "Invalid IM module type: %d"
+#~ msgstr "ਗਲਤ IM ਮੈਡਿਊਲ ਕਿਸਮ: %d"
+
+#~ msgid "IM module name"
+#~ msgstr "IM ਮੈਡਿਊਲ ਨਾਂ"
+
+#~ msgid "A target IM module name that to observe signals"
+#~ msgstr "ਇੱਕ ਟਾਰਗਿਟ IM ਮੈਡਿਊਲ ਨਾਂ ਜੋ ਸੰਕੇਤ ਪ੍ਰਾਪਤ ਕਰਦਾ ਹੈ"
+
+#~ msgid "Replace"
+#~ msgstr "ਤਬਦੀਲ"
+
+#~ msgid "DBus connection"
+#~ msgstr "DBus ਕੁਨੈਕਸ਼ਨ"
+
+#~ msgid "An object to be a DBus connection"
+#~ msgstr "ਇੱਕ ਆਬਜੈਕਟ ਜੋ DBus ਕੁਨੈਕਸ਼ਨ ਹੋਵੇਗਾ"
+
+#~ msgid "DBus Interface"
+#~ msgstr "DBus ਇੰਟਰਫੇਸ"
+
+#~ msgid "Interface name to connect to DBus"
+#~ msgstr "ਇੰਟਰਫੇਸ ਨਾਂ ਜੋ DBus ਨਾਲ ਜੁੜਦਾ ਹੈ"
+
+#~ msgid "Locale"
+#~ msgstr "ਲੋਕੇਲ"
+
+#~ msgid ""
+#~ "Failed to invoke a method `%s':\n"
+#~ "  %s"
+#~ msgstr ""
+#~ "ਇੱਕ ਢੰਗ `%s' ਨੂੰ ਵਰਤਣ ਵਿੱਚ ਫੇਲ:\n"
+#~ "  %s"
+
+#~ msgid ""
+#~ "Failed to invoke a method `%s' on %s:\n"
+#~ "  %s"
+#~ msgstr ""
+#~ "ਇੱਕ ਢੰਗ `%s' ਨੂੰ %s ਉੱਪਰ ਵਰਤਣ ਵਿੱਚ ਫੇਲ:\n"
+#~ "  %s"
+
+#~ msgid "Failed to remove a pidfile: %s"
+#~ msgstr "ਇੱਕ pidfile ਨੂੰ ਹਟਾਉਣ ਵਿੱਚ ਫੇਲ: %s"
+
+#~ msgid "Failed to open a pidfile: %s"
+#~ msgstr "ਇੱਕ pidfile ਨੂੰ ਖੋਲਣ ਵਿੱਚ ਫੇਲ: %s"
+
+#~ msgid "Couldn't determine the pid for %s process."
+#~ msgstr "%s ਕਾਰਜ ਲਈ pid ਤਾ ਕਰਨ ਵਿੱਚ ਫੇਲ ਹੋਇਆ।"
+
+#~ msgid "Couldn't send a signal to the %s process successfully."
+#~ msgstr "%s ਕਾਰਜ ਨੂੰ ਸਫਲਤਾਪੂਰਕ ਸਿਗਨਲ ਨਹੀਂ ਭੇਜ ਸਕਿਆ।"
+
+#~ msgid "Failed to get a place of home directory."
+#~ msgstr "ਘਰੇਲੂ ਡਾਇਰੈਕਟਰੀ ਦਾ ਥਾਂ ਪਤਾ ਕਰਨ ਵਿੱਚ ਫੇਲ ਹੋਇਆ।"
+
+#~ msgid "Failed to revert the backup file: %s"
+#~ msgstr "ਬੈਕਅੱਪ ਫਾਇਲ ਪ੍ਰਾਪਤ ਕਰਨ ਵਿੱਚ ਫੇਲ : %s"
+
+#~ msgid "Failed to create a backup file: %s"
+#~ msgstr "ਬੈਕਅੱਪ ਫਾਇਲ ਬਣਾਉਣ ਵਿੱਚ ਫੇਲ: %s"
+
+#~ msgid "Failed to remove a .xinputrc file: %s"
+#~ msgstr "ਇੱਕ .xinputrc ਫਾਇਲ ਹਟਾਉਣ ਵਿੱਚ ਫੇਲ: %s"
+
+#~ msgid "Failed to make a symlink: %s"
+#~ msgstr "symlink ਬਣਾਉਣ ਵਿੱਚ ਫੇਲ: %s"
+
+#~ msgid "No such input method on your system: %s"
+#~ msgstr "ਤੁਹਾਡੇ ਸਿਸਟਮ ਉੱਪਰ ਕੋਈ ਅਜਿਹਾ ਇੰਪੁੱਟ ਢੰਗ ਨਹੀਂ ਹੈ: %s"
+
+#~ msgid "No XIM server is available in %s"
+#~ msgstr "%s ਵਿੱਚ ਕੋਈ XIM ਸਰਵਰ ਉਪਲੱਬਧ ਨਹੀਂ ਹੈ"
+
+#~ msgid "X display name"
+#~ msgstr "X ਦਰਿਸ਼ ਨਾਂ"
+
+#~ msgid "X display name to use"
+#~ msgstr "ਵਰਤਣ ਲਈ X ਦਰਿਸ਼ ਨਾਂ"
+
+#~ msgid "X display to use"
+#~ msgstr "ਵਰਤਣ ਲਈ X ਦਰਿਸ਼"
+
+#~ msgid "DISPLAY"
+#~ msgstr "DISPLAY"
+
+#~ msgid "X screen to use"
+#~ msgstr "ਵਰਤਣ ਲਈ X ਸਕਰੀਨ"
+
+#~ msgid "SCREEN"
+#~ msgstr "SCREEN"
+
+#~ msgid "Failed to open a X display."
+#~ msgstr "X ਦਰਿਸ਼ ਖੋਲਣ ਲਈ ਫੇਲ।"
+
+#~ msgid "Reloading...\n"
+#~ msgstr "ਮੁੜ-ਲੋਡ ਕਰ ਰਿਹਾ...\n"
+
+#~ msgid "Duplicate entry `%s' from %s. SHORT_DESC has to be unique."
+#~ msgstr "ਗਲਤੀ ਐਂਟਰੀ `%s' ਜੋ %s ਤੋਂ ਹੈ। SHORT_DESC ਵੱਖਰਾ ਹੋਣਾ ਚਾਹੀਦਾ ਹੈ।"
+
+#~ msgid "Timed out to initialize %s services."
+#~ msgstr "%s ਸਰਵਿਸਾਂ ਚਾਲੂ ਕਰਨ ਦਾ ਸਮਾਂ ਲੰਘ ਗਿਆ ਹੈ।"
+
+#~ msgid "No input methods available on your system."
+#~ msgstr "ਤੁਹਾਡੇ ਸਿਸਟਮ ਉੱਪਰ ਕੋਈ ਇੰਪੁੱਟ ਵਿਧੀ ਉਪਲੱਬਧ ਨਹੀਂ ਹੈ।"
+
+#~ msgid "Force reloading the configuration, including restarting the process."
+#~ msgstr "ਸੰਰਚਨਾ ਮੁੜ-ਲੋਡ ਕਰਨ ਲਈ ਮਜਬੂਰ ਕਰੋ, ਕਾਰਜ ਮੁੜ-ਚਾਲੂ ਕਰਨ ਸਮੇਤ।"
+
+#~ msgid "Do not update .xinputrc."
+#~ msgstr ".xinputrc ਨੂੰ ਅੱਪਡੇਟ ਨਾ ਕਰੋ।"
+
+#~ msgid "Stopped %s\n"
+#~ msgstr "%s ਨੂੰ ਰੋਕਿਆ ਗਿਆ ਹੈ\n"
+
+#~ msgid "Failed to stop IM process `%s'\n"
+#~ msgstr "IM ਕਾਰਜ `%s' ਨੂੰ ਰੋਕਣ ਵਿੱਚ ਫੇਲ\n"
+
+#~ msgid ""
+#~ "<small><i>Note: this change will not take effect until you next log in, "
+#~ "except GTK+ applications.</i></small>"
+#~ msgstr ""
+#~ "<small><i>ਸੂਚਨਾ: ਇਹ ਤਬਦੀਲੀ ਤੁਹਾਡੇ ਮੁੜ ਲਾਗਇਨ ਹੋਣ ਤੱਕ ਲਾਗੂ ਨਹੀਂ ਹੋਵੇਗੀ, GTK+ ਕਰਾਜਾਂ ਨੂੰ "
+#~ "ਛੱਡ ਕੇ।</i></small>"
+
+#~ msgid "_Log Out"
+#~ msgstr "ਲਾਗ ਆਉਟ(_L)"
