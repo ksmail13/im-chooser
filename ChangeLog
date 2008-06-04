@@ -1,5 +1,16 @@
 2008-06-04  Akira TAGOH  <tagoh@redhat.com>
 
+	* src/im-chooser-simple.c (im_chooser_simple_enable_im_on_toggled):
+	more error handling.
+	(im_chooser_simple_prefs_button_on_clicked): likewise.
+	(im_chooser_simple_im_start_cb): likewise.
+	(im_chooser_simple_im_stop_cb): likewise.
+	(im_chooser_simple_instance_init): likewise.
+	(im_chooser_simple_show_error): new function.
+	(im_chooser_simple_get_widget): get rid of the note.
+
+	* src/main.c: clean up and trivial changes for imsettings-0.100.
+
 	* README: Update since imsettings is now separate project.
 
 2008-05-14  Akira TAGOH  <tagoh@redhat.com>

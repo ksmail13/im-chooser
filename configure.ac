@@ -1,5 +1,5 @@
 dnl Process this file with autoconf to produce a configure script.
-AC_INIT([im-chooser], 0.99.6, [https://bugzilla.redhat.com/enter_bug.cgi?product=Fedora&component=im-chooser])
+AC_INIT([im-chooser], 1.0.0, [https://bugzilla.redhat.com/enter_bug.cgi?product=Fedora&component=im-chooser])
 
 . ./requires
 
@@ -45,19 +45,10 @@ dnl check pkg-config stuff
 dnl ======================================================================
 PKG_CHECK_MODULES(IMCHOOSE, gtk+-2.0)
 PKG_CHECK_MODULES(IMSETTINGS, imsettings >= $IMSETTINGS_REQUIRED)
-PKG_CHECK_MODULES(GNOME, libgnomeui-2.0,
-	[AC_DEFINE(USE_GNOME,,[use GNOME library])
-	 use_gnome="yes"],
-	[AC_MSG_RESULT([no])
-	 use_gnome="no"])
 AC_SUBST(IMCHOOSE_CFLAGS)
 AC_SUBST(IMCHOOSE_LIBS)
 AC_SUBST(IMSETTINGS_CFLAGS)
 AC_SUBST(IMSETTINGS_LIBS)
-AC_SUBST(GNOME_CFLAGS)
-AC_SUBST(GNOME_LIBS)
-
-AM_CONDITIONAL(ENABLE_GNOME, test x$use_gnome != xno)
 
 dnl ======================================================================
 dnl check another libraries
@@ -91,5 +82,4 @@ echo ""
 echo "========== Build Information =========="
 echo " CFLAGS:                     $CFLAGS $IMCHOOSE_CFLAGS $IMSETTINGS_CFLAGS"
 echo " LIBS:                       $LDFLAGS $IMCHOOSE_LIBS $IMSETTINGS_LIBS"
-echo " GNOME support:              $use_gnome"
 echo ""

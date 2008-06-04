@@ -24,9 +24,8 @@
 #ifdef HAVE_CONFIG_H
 #include "config.h"
 #endif
+#include <stdlib.h>
 #include <string.h>
-#include <unistd.h>
-#include <sys/stat.h>
 #include <glib/gi18n.h>
 #include "imsettings/imsettings.h"
 #include "imsettings/imsettings-request.h"
@@ -101,6 +100,9 @@ static void                       im_chooser_simple_show_progress  (IMChooserSim
 								    ...);
 static gboolean                   im_chooser_simple_action_loop    (gpointer                   data);
 static void                       _im_chooser_simple_update_im_list(IMChooserSimple           *im);
+static void                       im_chooser_simple_show_error     (IMChooserSimple           *im,
+								    GError                    *error,
+								    const gchar               *message);
 
 
 static GObjectClass *parent_class = NULL;
@@ -125,6 +127,7 @@ im_chooser_simple_enable_im_on_toggled(GtkToggleButton *button,
 	gboolean flag;
 	IMChooserSimple *im;
 	IMChooserSimpleActionData *a;
+	GError *error = NULL;
 
 	g_return_if_fail (GTK_IS_TOGGLE_BUTTON (button));
 	g_return_if_fail (IM_IS_CHOOSER_SIMPLE (user_data));
@@ -147,7 +150,14 @@ im_chooser_simple_enable_im_on_toggled(GtkToggleButton *button,
 			model = gtk_tree_view_get_model(GTK_TREE_VIEW (im->widget_im_list));
 			gtk_list_store_clear(GTK_LIST_STORE (model));
 			g_strfreev(im->im_list);
-			im->im_list = imsettings_request_get_im_list(im->imsettings_info);
+			im->im_list = imsettings_request_get_im_list(im->imsettings_info,
+								     &error);
+			if (error) {
+				im_chooser_simple_show_error(im, error,
+							     _("Unable to get Input Method list"));
+				g_error_free(error);
+				gtk_main_quit();
+			}
 			_im_chooser_simple_update_im_list(im);
 		}
 		selection = gtk_tree_view_get_selection(GTK_TREE_VIEW (im->widget_im_list));
@@ -239,10 +249,18 @@ im_chooser_simple_prefs_button_on_clicked(GtkButton *button,
 {
 	IMChooserSimple *im = IM_CHOOSER_SIMPLE (user_data);
 	gchar *prog = NULL, *args = NULL, *cmdline = NULL;
+	GError *error = NULL;
 
-	if (imsettings_request_get_preferences_program(im->imsettings_info, im->current_im, &prog, &args)) {
+	if (imsettings_request_get_preferences_program(im->imsettings_info,
+						       im->current_im,
+						       &prog, &args,
+						       &error)) {
 		cmdline = g_strconcat(prog, args, NULL);
 		g_spawn_command_line_async(cmdline, NULL);
+	}
+	if (error) {
+		im_chooser_simple_show_error(im, error, _("Unable to get the information"));
+		g_error_free(error);
 	}
 
 	if (cmdline)
@@ -303,15 +321,8 @@ im_chooser_simple_im_start_cb(DBusGProxy *proxy,
 		im->current_im = NULL;
 
 		if (error) {
-			GtkWidget *dlg = gtk_message_dialog_new(GTK_WINDOW (im->progress),
-								GTK_DIALOG_MODAL | GTK_DIALOG_NO_SEPARATOR,
-								GTK_MESSAGE_ERROR,
-								GTK_BUTTONS_OK,
-								_("Failed to start Input Method"));
-
-			gtk_message_dialog_format_secondary_text(GTK_MESSAGE_DIALOG (dlg),
-								 error->message);
-			gtk_dialog_run(GTK_DIALOG (dlg));
+			im_chooser_simple_show_error(im, error, _("Failed to start Input Method"));
+			g_error_free(error);
 			im->ignore_actions = TRUE;
 		}
 	}
@@ -337,15 +348,7 @@ im_chooser_simple_im_stop_cb(DBusGProxy *proxy,
 		im->current_im = NULL;
 	} else {
 		if (error) {
-			GtkWidget *dlg = gtk_message_dialog_new(GTK_WINDOW (im->progress),
-								GTK_DIALOG_MODAL | GTK_DIALOG_NO_SEPARATOR,
-								GTK_MESSAGE_ERROR,
-								GTK_BUTTONS_OK,
-								_("Failed to start Input Method"));
-
-			gtk_message_dialog_format_secondary_text(GTK_MESSAGE_DIALOG (dlg),
-								 error->message);
-			gtk_dialog_run(GTK_DIALOG (dlg));
+			im_chooser_simple_show_error(im, error, _("Failed to stop Input Method"));
 			im->ignore_actions = TRUE;
 		}
 	}
@@ -389,6 +392,34 @@ im_chooser_simple_show_progress(IMChooserSimple *im,
 
 	while (g_main_context_pending(NULL))
 		g_main_context_iteration(NULL, TRUE);
+}
+
+static void
+im_chooser_simple_show_error(IMChooserSimple *im,
+			     GError          *error,
+			     const gchar     *message)
+{
+	GtkWidget *dlg;
+	gchar *p;
+	GtkBox *vbox, *hbox;
+
+	p = g_strdup_printf("<span weight=\"bold\" size=\"larger\">%s</span>", message);
+	dlg = gtk_message_dialog_new_with_markup(GTK_WINDOW (im->progress),
+						 GTK_DIALOG_MODAL,
+						 GTK_MESSAGE_ERROR,
+						 GTK_BUTTONS_OK,
+						 p);
+	gtk_message_dialog_format_secondary_text(GTK_MESSAGE_DIALOG (dlg), error->message);
+
+	/* for GNOME HIG compliance */
+	vbox = GTK_BOX (GTK_DIALOG (dlg)->vbox);
+	hbox = GTK_BOX (((GtkBoxChild *)vbox->children->data)->widget);
+	gtk_box_set_spacing(vbox, 12);
+	gtk_box_set_spacing(hbox, 12);
+	gtk_container_set_border_width(GTK_CONTAINER (hbox), 6);
+
+	gtk_dialog_run(GTK_DIALOG (dlg));
+	g_free(p);
 }
 
 static gboolean
@@ -449,7 +480,7 @@ im_chooser_simple_action_loop(gpointer data)
 				imsettings_request_get_preferences_program(im->imsettings_info,
 									   im->current_im,
 									   &prog,
-									   &args) &&
+									   &args, NULL) &&
 				g_file_test(prog,
 					    G_FILE_TEST_EXISTS |
 					    G_FILE_TEST_IS_EXECUTABLE))
@@ -567,6 +598,7 @@ im_chooser_simple_instance_init(IMChooserSimple *im)
 {
 	gchar *locale = setlocale(LC_CTYPE, NULL);
 	GtkWidget *image, *hbox, *vbox;
+	GError *error = NULL;
 
 	im->widget = NULL;
 	im->initialized = FALSE;
@@ -609,7 +641,12 @@ im_chooser_simple_instance_init(IMChooserSimple *im)
 	imsettings_request_set_locale(im->imsettings_info, locale);
 
 	/* get all the info of the xinput script */
-	im->im_list = imsettings_request_get_im_list(im->imsettings_info);
+	im->im_list = imsettings_request_get_im_list(im->imsettings_info, &error);
+	if (error) {
+		im_chooser_simple_show_error(im, error, _("Unable to get Input Method list"));
+		g_error_free(error);
+		exit(1);
+	}
 
 	/* get current im */
 	im->current_im = NULL;
@@ -628,10 +665,16 @@ _im_chooser_simple_update_im_list(IMChooserSimple *im)
 	guint count = 0;
 	gint i, priority = 0;
 	gchar *user_im, *system_im, *running_im;
+	GError *error = NULL;
 
-	user_im = imsettings_request_get_current_user_im(im->imsettings_info);
-	system_im = imsettings_request_get_current_system_im(im->imsettings_info);
-	running_im = imsettings_request_what_im_is_running(im->imsettings);
+	user_im = imsettings_request_get_current_user_im(im->imsettings_info, &error);
+	system_im = imsettings_request_get_current_system_im(im->imsettings_info, &error);
+	running_im = imsettings_request_what_im_is_running(im->imsettings, &error);
+	if (error) {
+		im_chooser_simple_show_error(im, error, _("Unable to gather current status"));
+		g_error_free(error);
+		gtk_main_quit();
+	}
 	if (im->im_list == NULL)
 		goto end;
 
@@ -644,7 +687,7 @@ _im_chooser_simple_update_im_list(IMChooserSimple *im)
 		gtk_list_store_append(list, &iter);
 		g_string_append(string, "<i>");
 		g_string_append_printf(string, _("Use %s"), im->im_list[i]);
-		if (imsettings_request_is_xim(im->imsettings_info, im->im_list[i])) {
+		if (imsettings_request_is_xim(im->imsettings_info, im->im_list[i], NULL)) {
 			priority = 100;
 			g_string_append(string, _(" (legacy)"));
 		}
@@ -744,7 +787,7 @@ GtkWidget *
 im_chooser_simple_get_widget(IMChooserSimple *im)
 {
 	GtkWidget *vbox, *align, *label, *align2, *checkbox;
-	GtkWidget *align3, *label3, *align4, *align5, *button;
+	GtkWidget *align4, *align5, *button;
 	GtkWidget *image, *hbox, *list, *scrolled;
 	GtkCellRenderer *renderer;
 	GtkTreeViewColumn *column;
@@ -769,14 +812,6 @@ im_chooser_simple_get_widget(IMChooserSimple *im)
 		gtk_alignment_set_padding(GTK_ALIGNMENT (align2), 3, 6, 6, 6);
 		g_signal_connect(checkbox, "toggled",
 				 G_CALLBACK (im_chooser_simple_enable_im_on_toggled), im);
-
-		align3 = gtk_alignment_new(0.1, 0, 1.0, 1.0);
-		label3 = gtk_label_new(_("<small><i>Note: this change will not take effect until you next log in, except GTK+ applications.</i></small>"));
-		gtk_label_set_use_markup(GTK_LABEL (label3), TRUE);
-		gtk_label_set_line_wrap(GTK_LABEL (label3), TRUE);
-		gtk_misc_set_alignment(GTK_MISC (label3), 0, 0);
-		gtk_container_add(GTK_CONTAINER (align3), label3);
-		gtk_alignment_set_padding(GTK_ALIGNMENT (align3), 3, 6, 6, 6);
 
 		align4 = gtk_alignment_new(0.1, 0, 1.0, 1.0);
 		im->widget_scrolled = scrolled = gtk_scrolled_window_new(NULL, NULL);
@@ -817,7 +852,6 @@ im_chooser_simple_get_widget(IMChooserSimple *im)
 		gtk_box_pack_start(GTK_BOX (vbox), align, FALSE, TRUE, 0);
 		gtk_box_pack_start(GTK_BOX (vbox), align4, TRUE, TRUE, 0);
 		gtk_box_pack_start(GTK_BOX (vbox), hbox, FALSE, TRUE, 0);
-		gtk_box_pack_start(GTK_BOX (vbox), align3, FALSE, FALSE, 0);
 
 		im->widget = vbox;
 	}

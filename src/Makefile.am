@@ -6,14 +6,12 @@ INCLUDES =							\
 	-DIMCHOOSE_LOCALEDIR="\"$(datadir)/locale\""		\
 	$(IMCHOOSE_CFLAGS)					\
 	$(IMSETTINGS_CFLAGS)					\
-	$(GNOME_CFLAGS)						\
 	$(NULL)
 
 LIBS =								\
 	@LDFLAGS@						\
 	$(IMCHOOSE_LIBS)					\
 	$(IMSETTINGS_LIBS)					\
-	$(GNOME_LIBS)						\
 	$(NULL)
 
 bin_PROGRAMS = im-chooser
