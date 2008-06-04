@@ -1,4 +1,5 @@
 NULL =
+AUTOMAKE_OPTIONS = dist-bzip2
 SUBDIRS = src data po
 
 CONFIGURE_DEPENDENCIES =	\
