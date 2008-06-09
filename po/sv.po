@@ -4,14 +4,14 @@
 # Magnus Larsson <fedoratrans@gmail.com>, 2006.
 # Göran Uddeborg <goeran@uddeborg.se>, 2008.
 #
-# $Revision: 1.2 $
+# $Revision: 1.3 $
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: im-chooser 0.3.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-06-04 12:36+0900\n"
-"PO-Revision-Date: 2008-05-25 13:03+0200\n"
+"POT-Creation-Date: 2008-04-02 09:41+0000\n"
+"PO-Revision-Date: 2008-06-09 21:01+0200\n"
 "Last-Translator: Göran Uddeborg <goeran@uddeborg.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "MIME-Version: 1.0\n"
@@ -19,345 +19,445 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../src/im-chooser-simple.c:148
+#: ../imsettings/backends/gconf/main.c:184
+#: ../imsettings/imsettings/imsettings-observer.c:702
+#: ../imsettings/src/factory.c:690 ../imsettings/src/factory_info.c:645
+msgid "Replace the running settings daemon with new instance."
+msgstr "Ersätt den körande inställningsdemonen med en ny instans."
+
+#: ../imsettings/backends/gconf/main.c:206 ../imsettings/src/factory.c:717
+#: ../imsettings/src/factory_info.c:667
+#: ../imsettings/utils/imsettings-reload.c:63
+#: ../imsettings/utils/imsettings-restart.c:65
+#: ../imsettings/utils/imsettings-stop.c:63
+msgid "Unknown error in parsing the command lines."
+msgstr "Okänt fel i tolkning av kommandorader."
+
+#: ../imsettings/imsettings/imsettings-info.c:498
+msgid "Language"
+msgstr "Språk"
+
+#: ../imsettings/imsettings/imsettings-info.c:499
+msgid "A language to pull the information in."
+msgstr "Ett språk att hämta informationen i."
+
+#: ../imsettings/imsettings/imsettings-info.c:504
+msgid "Filename"
+msgstr "Filnamn"
+
+#: ../imsettings/imsettings/imsettings-info.c:505
+msgid "A filename referring to the IM information."
+msgstr "Ett filnamn som refererar till IM-informationen."
+
+#: ../imsettings/imsettings/imsettings-info.c:510
+msgid "GTK+ immodule"
+msgstr "GTK+ im-modul"
+
+#: ../imsettings/imsettings/imsettings-info.c:511
+msgid "A module name used for GTK+"
+msgstr "Ett modulnamn att använda för GTK+"
+
+#: ../imsettings/imsettings/imsettings-info.c:516
+msgid "Qt immodule"
+msgstr "Qt im-modul"
+
+#: ../imsettings/imsettings/imsettings-info.c:517
+msgid "A module name used for Qt"
+msgstr "Ett modulnamn att använda för Qt"
+
+#: ../imsettings/imsettings/imsettings-info.c:522
+msgid "XIM name"
+msgstr "XIM-namn"
+
+#: ../imsettings/imsettings/imsettings-info.c:523
+msgid "XIM server name"
+msgstr "XIM-servernamn"
+
+#: ../imsettings/imsettings/imsettings-info.c:528
+msgid "Ignore flag"
+msgstr "Ignoreraflagga"
+
+#: ../imsettings/imsettings/imsettings-info.c:529
+msgid "A flag to not list up."
+msgstr "En flagga att inte lista."
+
+#: ../imsettings/imsettings/imsettings-info.c:534
+msgid "XIM server program name"
+msgstr "XIM-serverprogramnamn"
+
+#: ../imsettings/imsettings/imsettings-info.c:535
+msgid "XIM server program to be run"
+msgstr "XIM-serverprogram att köra"
+
+#: ../imsettings/imsettings/imsettings-info.c:540
+msgid "XIM server program's options"
+msgstr "XIM-serverprogrammets flaggor"
+
+#: ../imsettings/imsettings/imsettings-info.c:541
+msgid "Command line options for XIM server program"
+msgstr "Kommandoradsflaggor till XIM-serverprogrammet"
+
+#: ../imsettings/imsettings/imsettings-info.c:546
+msgid "Preference program name"
+msgstr "Inställningsprogramnamn"
+
+#: ../imsettings/imsettings/imsettings-info.c:547
+msgid "Preference program to be run"
+msgstr "Inställningsprogram att köra"
+
+#: ../imsettings/imsettings/imsettings-info.c:552
+msgid "Preference program's options"
+msgstr "Inställningsprogrammets flaggor"
+
+#: ../imsettings/imsettings/imsettings-info.c:553
+msgid "Command line options for preference program"
+msgstr "Kommandoradsflaggor till inställningsprogrammet"
+
+#: ../imsettings/imsettings/imsettings-info.c:558
+msgid "Auxiliary program name"
+msgstr "Stödprograms namn"
+
+#: ../imsettings/imsettings/imsettings-info.c:559
+msgid "Auxiliary program to be run"
+msgstr "Stödprogram att köra"
+
+#: ../imsettings/imsettings/imsettings-info.c:564
+msgid "Auxiliary program's options"
+msgstr "Stödprograms flaggor"
+
+#: ../imsettings/imsettings/imsettings-info.c:565
+msgid "Command line options for auxiliary program"
+msgstr "Kommandoradsflaggor för stödprogram"
+
+#: ../imsettings/imsettings/imsettings-info.c:570
+#: ../imsettings/imsettings/imsettings-info.c:571
+msgid "Short Description"
+msgstr "Kort beskrivning"
+
+#: ../imsettings/imsettings/imsettings-info.c:576
+#: ../imsettings/imsettings/imsettings-info.c:577
+msgid "Long Description"
+msgstr "Lång beskrivning"
+
+#: ../imsettings/imsettings/imsettings-info.c:582
+msgid "System Default"
+msgstr "Systemstandard"
+
+#: ../imsettings/imsettings/imsettings-info.c:583
+msgid "Whether or not IM is a system default."
+msgstr "Huruvida IM är en systemstandard eller inte."
+
+#: ../imsettings/imsettings/imsettings-info.c:588
+msgid "User Default"
+msgstr "Användarstandard"
+
+#: ../imsettings/imsettings/imsettings-info.c:589
+msgid "Whether or not IM is an user default."
+msgstr "Huruvida IM är en användarstandard eller inte"
+
+#: ../imsettings/imsettings/imsettings-info.c:594
+msgid "XIM"
+msgstr "XIM"
+
+#: ../imsettings/imsettings/imsettings-info.c:595
+msgid "Whether or not IM is a XIM server."
+msgstr "Huruvida IM är en XIM-server eller inte."
+
+#: ../imsettings/imsettings/imsettings-info-private.h:39
+msgid "User Specific"
+msgstr "Användarspecifik"
+
+#: ../imsettings/imsettings/imsettings-info-private.h:40
+msgid "xinputrc was modified by the user"
+msgstr "xinputrc har ändrats av användaren"
+
+#: ../imsettings/imsettings/imsettings-observer.c:255
+#, c-format
+msgid "Invalid IM module type: %d"
+msgstr "Ogiltig IM-modultyp: %d"
+
+#: ../imsettings/imsettings/imsettings-observer.c:695
+msgid "IM module name"
+msgstr "IM-modulnamn"
+
+#: ../imsettings/imsettings/imsettings-observer.c:696
+msgid "A target IM module name that to observe signals"
+msgstr "Ett mål-IM-modulnamn för att observera signaler"
+
+#: ../imsettings/imsettings/imsettings-observer.c:701
+msgid "Replace"
+msgstr "Ersätt"
+
+#: ../imsettings/imsettings/imsettings-observer.c:707
+#: ../imsettings/imsettings/imsettings-request.c:175
+msgid "DBus connection"
+msgstr "DBus-förbindelse"
+
+#: ../imsettings/imsettings/imsettings-observer.c:708
+#: ../imsettings/imsettings/imsettings-request.c:176
+msgid "An object to be a DBus connection"
+msgstr "Ett objekt att vara en DBus-förbindelse"
+
+#: ../imsettings/imsettings/imsettings-request.c:169
+msgid "DBus Interface"
+msgstr "DBus-gränssnitt"
+
+#: ../imsettings/imsettings/imsettings-request.c:170
+msgid "Interface name to connect to DBus"
+msgstr "Gränssnittsnamn för att ansluta till DBus"
+
+#: ../imsettings/imsettings/imsettings-request.c:181
+msgid "Locale"
+msgstr "Lokal"
+
+#: ../imsettings/imsettings/imsettings-request.c:182
+msgid "Locale to get the imsettings information"
+msgstr "Lokal att hämta informationen för imsettings ifrån"
+
+#: ../imsettings/imsettings/imsettings-request.c:239
+#: ../imsettings/imsettings/imsettings-request.c:272
+#: ../imsettings/imsettings/imsettings-request.c:290
+#: ../imsettings/imsettings/imsettings-request.c:310
+#: ../imsettings/imsettings/imsettings-request.c:331
+#: ../imsettings/imsettings/imsettings-request.c:355
+#: ../imsettings/imsettings/imsettings-request.c:380
+#: ../imsettings/imsettings/imsettings-request.c:405
+#: ../imsettings/imsettings/imsettings-request.c:426
+#: ../imsettings/imsettings/imsettings-request.c:446
+#: ../imsettings/imsettings/imsettings-request.c:466
+#: ../imsettings/imsettings/imsettings-request.c:486
+#: ../imsettings/imsettings/imsettings-request.c:506
+#: ../imsettings/imsettings/imsettings-request.c:526
+#: ../imsettings/imsettings/imsettings-request.c:552
+#: ../imsettings/imsettings/imsettings-request.c:602
+#, c-format
+msgid ""
+"Failed to invoke a method `%s':\n"
+"  %s"
+msgstr ""
+"Misslyckades att starta en metod \"%s\":\n"
+"  %s"
+
+#: ../imsettings/imsettings/imsettings-request.c:673
+#, c-format
+msgid ""
+"Failed to invoke a method `%s' on %s:\n"
+"  %s"
+msgstr ""
+"Misslyckades att starta en metod \"%s\" på %s:\n"
+"  %s"
+
+#: ../imsettings/src/factory.c:136
+#, c-format
+msgid "Failed to remove a pidfile: %s"
+msgstr "Misslyckades att ta bort en pidfil: %s"
+
+#: ../imsettings/src/factory.c:178
+#, c-format
+msgid "Failed to open a pidfile: %s"
+msgstr "Misslyckades att öppna en pidfil: %s"
+
+#: ../imsettings/src/factory.c:282
+#, c-format
+msgid "Couldn't determine the pid for %s process."
+msgstr "Kunde inte avgöra pid för processen %s."
+
+#: ../imsettings/src/factory.c:288
+#, c-format
+msgid "Couldn't send a signal to the %s process successfully."
+msgstr "Kunde inte skicka en signal till processen %s."
+
+#: ../imsettings/src/factory.c:314 ../imsettings/src/factory.c:600
+msgid "Failed to get a place of home directory."
+msgstr "Misslyckades att ta reda på en plats för hemkatalogen."
+
+#: ../imsettings/src/factory.c:331
+#, c-format
+msgid "Failed to revert the backup file: %s"
+msgstr "Misslyckades att återgå till säkerhetskopiefilen: %s"
+
+#: ../imsettings/src/factory.c:343
+#, c-format
+msgid "Failed to create a backup file: %s"
+msgstr "Misslyckades att skapa en säkerhetskopiefil: %s"
+
+#: ../imsettings/src/factory.c:352
+#, c-format
+msgid "Failed to remove a .xinputrc file: %s"
+msgstr "Misslyckades att ta bort en .xinputrc-fil: %s"
+
+#: ../imsettings/src/factory.c:363
+#, c-format
+msgid "Failed to make a symlink: %s"
+msgstr "Misslyckades att skapa en symlänk: %s"
+
+#: ../imsettings/src/factory.c:478 ../imsettings/src/factory_info.c:526
+#, c-format
+msgid "No such input method on your system: %s"
+msgstr "Det finns ingen sådan inmatningsmetod på ditt system: %s"
+
+#: ../imsettings/src/factory.c:498
+#, c-format
+msgid "No XIM server is available in %s"
+msgstr "Ingen XIM-server är tillgänglig i %s"
+
+#: ../imsettings/src/factory.c:646
+msgid "X display name"
+msgstr "X-displaynamn"
+
+#: ../imsettings/src/factory.c:647
+msgid "X display name to use"
+msgstr "X-displaynamn att använda"
+
+#: ../imsettings/src/factory.c:691
+msgid "X display to use"
+msgstr "X-display att använda"
+
+#: ../imsettings/src/factory.c:691
+msgid "DISPLAY"
+msgstr "DISPLAY"
+
+#. FIXME
+#: ../imsettings/src/factory.c:694
+msgid "X screen to use"
+msgstr "X-skärm att använda"
+
+#: ../imsettings/src/factory.c:694
+msgid "SCREEN"
+msgstr "SKÄRM"
+
+#: ../imsettings/src/factory.c:725
+msgid "Failed to open a X display."
+msgstr "Misslyckades att öppna en X-display."
+
+#: ../imsettings/src/factory_info.c:127
+msgid "Reloading...\n"
+msgstr "Läser om...\n"
+
+#: ../imsettings/src/factory_info.c:188
+#, c-format
+msgid "Duplicate entry `%s' from %s. SHORT_DESC has to be unique."
+msgstr "Dubblerad post \"%s\" från %s.  SHORT_DESC måste vara unik."
+
+#: ../imsettings/src/factory_info.c:446 ../imsettings/src/factory_info.c:484
+#: ../imsettings/src/factory_info.c:500 ../imsettings/src/factory_info.c:518
+#, c-format
+msgid "Timed out to initialize %s services."
+msgstr "Tiden gick ut vid initiering av %s-tjänster."
+
+#: ../imsettings/src/factory_info.c:469
+msgid "No input methods available on your system."
+msgstr "Ingen inmatningsmetod finns tillgänglig på ditt system."
+
+#: ../imsettings/utils/imsettings-reload.c:42
+#: ../imsettings/utils/imsettings-stop.c:42
+msgid "Force reloading the configuration, including restarting the process."
+msgstr "Framtvinga omläsning av konfigurationen, inklusive omstart av processen."
+
+#: ../imsettings/utils/imsettings-restart.c:43
+msgid "Force restarting the IM process regradless of any errors."
+msgstr "Framtvinga omstart av IM-processen oavsett eventuella fel."
+
+#: ../imsettings/utils/imsettings-restart.c:44
+#: ../imsettings/utils/imsettings-stop.c:43
+msgid "Do not update .xinputrc."
+msgstr "Uppdatera inte .xinputrc."
+
+#: ../imsettings/utils/imsettings-stop.c:80
+#, c-format
+msgid "Stopped %s\n"
+msgstr "Stoppade %s\n"
+
+#: ../imsettings/utils/imsettings-stop.c:82
+#, c-format
+msgid "Failed to stop IM process `%s'\n"
+msgstr "Det gick inte att stoppa IM-processen \"%s\"\n"
+
+#: ../src/im-chooser-simple.c:145
 msgid "Updating Input Method list"
 msgstr "Uppdaterar lista över inmatningsmetoder"
 
-#: ../src/im-chooser-simple.c:157 ../src/im-chooser-simple.c:646
-#, fuzzy
-msgid "Unable to get Input Method list"
-msgstr "Uppdaterar lista över inmatningsmetoder"
-
-#: ../src/im-chooser-simple.c:262
-#, fuzzy
-msgid "Unable to get the information"
-msgstr "Lokal att hämta informationen för imsettings ifrån"
-
-#: ../src/im-chooser-simple.c:324
+#: ../src/im-chooser-simple.c:310 ../src/im-chooser-simple.c:344
 msgid "Failed to start Input Method"
 msgstr "Misslyckades att starta inmatningsmetod"
 
-#: ../src/im-chooser-simple.c:351
-#, fuzzy
-msgid "Failed to stop Input Method"
-msgstr "Misslyckades att starta inmatningsmetod"
-
-#: ../src/im-chooser-simple.c:438
+#: ../src/im-chooser-simple.c:407
 #, c-format
 msgid "Starting Input Method - %s"
 msgstr "Startar inmatningsmetod - %s"
 
-#: ../src/im-chooser-simple.c:455
+#: ../src/im-chooser-simple.c:424
 #, c-format
 msgid "Stopping Input Method - %s"
 msgstr "Stoppar inmatningsmetod - %s"
 
-#: ../src/im-chooser-simple.c:573
+#: ../src/im-chooser-simple.c:542
 msgid "Parent Window"
-msgstr "Förädlrafönster"
+msgstr "Föräldrafönster"
 
-#: ../src/im-chooser-simple.c:574
+#: ../src/im-chooser-simple.c:543
 msgid "GtkWindow that points to the parent window"
 msgstr "GtkWindow som pekar på föräldrafönstret"
 
 #. setup a progress window
-#: ../src/im-chooser-simple.c:615
+#: ../src/im-chooser-simple.c:583
 msgid "Work in progress..."
 msgstr "Arbete pågår ..."
 
-#: ../src/im-chooser-simple.c:674
-msgid "Unable to gather current status"
-msgstr ""
-
-#: ../src/im-chooser-simple.c:689
+#: ../src/im-chooser-simple.c:641
 #, c-format
 msgid "Use %s"
 msgstr "Använd %s"
 
-#: ../src/im-chooser-simple.c:692
+#: ../src/im-chooser-simple.c:644
 msgid " (legacy)"
 msgstr " (föråldrad)"
 
-#: ../src/im-chooser-simple.c:696
+#: ../src/im-chooser-simple.c:648
 msgid " (recommended)"
 msgstr " (rekommenderad)"
 
-#: ../src/im-chooser-simple.c:804
+#: ../src/im-chooser-simple.c:760
 msgid "<b>Input Method</b>"
 msgstr "<b>Inmatningsmetod</b>"
 
-#: ../src/im-chooser-simple.c:810
+#: ../src/im-chooser-simple.c:766
 msgid "_Enable input method feature"
 msgstr "_Aktivera funktionen inmatningsmetod"
 
-#: ../src/im-chooser-simple.c:841
+#: ../src/im-chooser-simple.c:773
+msgid ""
+"<small><i>Note: this change will not take effect until you next log in, "
+"except GTK+ applications.</i></small>"
+msgstr "<small><i>Observera: denna ändring kommer inte gälla förrän nästa gång du loggar in, utom för GTK+-program.</i></small>"
+
+#: ../src/im-chooser-simple.c:805
 msgid "Input Method _Preferences..."
 msgstr "_Inställningar för inmatningsmetod"
 
-#: ../src/main.c:43
+#: ../src/main.c:55
 msgid ""
 "<span weight=\"bold\" size=\"larger\">No input method is available</span>"
-msgstr ""
-"<span weight=\"bold\" size=\"larger\">Ingen inmatningsmetod är tillgänglig</"
-"span>"
+msgstr "<span weight=\"bold\" size=\"larger\">Ingen inmatningsmetod är tillgänglig</span>"
 
-#: ../src/main.c:46
+#: ../src/main.c:58
 msgid "Please install any input methods before running if you like."
-msgstr "Installera någon inmatningsmetod före du kör om du vill ha en."
+msgstr "Om du så önskar, installera eventuella inmatningsmetoder före du kör."
 
-#: ../src/main.c:110
+#: ../src/main.c:153
 msgid "IM Chooser - Input Method configuration tool"
 msgstr "IM Väljare - Verktyg för konfiguration av inmatningsmetod"
+
+#: ../src/main.c:161
+msgid "_Log Out"
+msgstr "_Logga ut"
 
 #: ../src/im-chooser.desktop.in.in.h:1
 msgid ""
 "Choose the input method to be used or disable the input method usage on the "
 "desktop"
-msgstr ""
-"Välj inmatningsmetod att använda eller avaktivera användning av "
-"inmatningsmetod på skrivbordet"
+msgstr "Välj inmatningsmetod att använda eller avaktivera användning av inmatningsmetod på skrivbordet"
 
 #: ../src/im-chooser.desktop.in.in.h:2
 msgid "Input Method"
 msgstr "Inmatningsmetod"
-
-#~ msgid "Replace the running settings daemon with new instance."
-#~ msgstr "Ersätt den körande inställningsdemonen med en ny instans."
-
-#~ msgid "Unknown error in parsing the command lines."
-#~ msgstr "Okänt fel i tolkning av kommandorader."
-
-#~ msgid "Language"
-#~ msgstr "Språk"
-
-#~ msgid "A language to pull the information in."
-#~ msgstr "Ett språk att hämta informationen i."
-
-#~ msgid "Filename"
-#~ msgstr "Filnamn"
-
-#~ msgid "A filename referring to the IM information."
-#~ msgstr "Ett filnamn som refererar till IM-informationen."
-
-#~ msgid "GTK+ immodule"
-#~ msgstr "GTK+ im-modul"
-
-#~ msgid "A module name used for GTK+"
-#~ msgstr "Ett modulnamn att använda för GTK+"
-
-#~ msgid "Qt immodule"
-#~ msgstr "Qt im-modul"
-
-#~ msgid "A module name used for Qt"
-#~ msgstr "Ett modulnamn att använda för Qt"
-
-#~ msgid "XIM name"
-#~ msgstr "XIM-namn"
-
-#~ msgid "XIM server name"
-#~ msgstr "XIM-servernamn"
-
-#~ msgid "Ignore flag"
-#~ msgstr "Ignoreraflagga"
-
-#~ msgid "A flag to not list up."
-#~ msgstr "En flagga att inte lista."
-
-#~ msgid "XIM server program name"
-#~ msgstr "XIM-serverprogramnamn"
-
-#~ msgid "XIM server program to be run"
-#~ msgstr "XIM-serverprogram att köra"
-
-#~ msgid "XIM server program's options"
-#~ msgstr "XIM-serverprogrammets flaggor"
-
-#~ msgid "Command line options for XIM server program"
-#~ msgstr "Kommandoradsflaggor till XIM-serverprogrammet"
-
-#~ msgid "Preference program name"
-#~ msgstr "Inställningsprogramnamn"
-
-#~ msgid "Preference program to be run"
-#~ msgstr "Inställningsprogram att köra"
-
-#~ msgid "Preference program's options"
-#~ msgstr "Inställningsprogrammets flaggor"
-
-#~ msgid "Command line options for preference program"
-#~ msgstr "Kommandoradsflaggor till inställningsprogrammet"
-
-#~ msgid "Auxiliary program name"
-#~ msgstr "Extra programs namn"
-
-#~ msgid "Auxiliary program to be run"
-#~ msgstr "Extra program att köra"
-
-#~ msgid "Auxiliary program's options"
-#~ msgstr "Extra programs flaggor"
-
-#~ msgid "Command line options for auxiliary program"
-#~ msgstr "Kommandoradsflaggor för extra program"
-
-#~ msgid "Short Description"
-#~ msgstr "Kort beskrivning"
-
-#~ msgid "Long Description"
-#~ msgstr "Lång beskrivning"
-
-#~ msgid "System Default"
-#~ msgstr "Systemstandard"
-
-#~ msgid "Whether or not IM is a system default."
-#~ msgstr "Om IM är en systemstandard eller inte."
-
-#~ msgid "User Default"
-#~ msgstr "Användarstandard"
-
-#~ msgid "Whether or not IM is an user default."
-#~ msgstr "Om IM är en användarstandard eller inte"
-
-#~ msgid "XIM"
-#~ msgstr "XIM"
-
-#~ msgid "Whether or not IM is a XIM server."
-#~ msgstr "om IM är en XIM-server eller inte."
-
-#~ msgid "User Specific"
-#~ msgstr "Användarspecifik"
-
-#~ msgid "xinputrc was modified by the user"
-#~ msgstr "xinputrc var ändrad av användaren"
-
-#~ msgid "Invalid IM module type: %d"
-#~ msgstr "Ogiltig IM-modultyp: %d"
-
-#~ msgid "IM module name"
-#~ msgstr "IM-modulnamn"
-
-#~ msgid "A target IM module name that to observe signals"
-#~ msgstr "Ett mål-IM-modulnamn för att observera signaler"
-
-#~ msgid "Replace"
-#~ msgstr "Ersätt"
-
-#~ msgid "DBus connection"
-#~ msgstr "DBus-förbindelse"
-
-#~ msgid "An object to be a DBus connection"
-#~ msgstr "Ett objekt att vara en DBus-förbindelse"
-
-#~ msgid "DBus Interface"
-#~ msgstr "DBus-gränssnitt"
-
-#~ msgid "Interface name to connect to DBus"
-#~ msgstr "Gränssnittsnamn för att ansluta till DBus"
-
-#~ msgid "Locale"
-#~ msgstr "Lokal"
-
-#~ msgid ""
-#~ "Failed to invoke a method `%s':\n"
-#~ "  %s"
-#~ msgstr ""
-#~ "Misslyckades att starta en metod \"%s\":\n"
-#~ "  %s"
-
-#~ msgid ""
-#~ "Failed to invoke a method `%s' on %s:\n"
-#~ "  %s"
-#~ msgstr ""
-#~ "Misslyckades att starta en metod \"%s\" på %s:\n"
-#~ "  %s"
-
-#~ msgid "Failed to remove a pidfile: %s"
-#~ msgstr "Misslyckades att ta bort en pidfil: %s"
-
-#~ msgid "Failed to open a pidfile: %s"
-#~ msgstr "Misslyckades att öppna en pidfil: %s"
-
-#~ msgid "Couldn't determine the pid for %s process."
-#~ msgstr "Kunde inte avgöra pid för processen %s."
-
-#~ msgid "Couldn't send a signal to the %s process successfully."
-#~ msgstr "Kunde inte skicka en signal till procesen %s."
-
-#~ msgid "Failed to get a place of home directory."
-#~ msgstr "Misslyckades att ta reda på en plats för hemkatalogen."
-
-#~ msgid "Failed to revert the backup file: %s"
-#~ msgstr "Misslyckades att återgå till säkerhetskopiefilen: %s"
-
-#~ msgid "Failed to create a backup file: %s"
-#~ msgstr "Misslyckades att skapa en säkerhetskopiefil: %s"
-
-#~ msgid "Failed to remove a .xinputrc file: %s"
-#~ msgstr "Misslyckades att ta bort en .xinputrc-fil: %s"
-
-#~ msgid "Failed to make a symlink: %s"
-#~ msgstr "Misslyckades att skapa en symlänk: %s"
-
-#~ msgid "No such input method on your system: %s"
-#~ msgstr "Det finns ingen sådan inmatningsmetod på ditt system: %s"
-
-#~ msgid "No XIM server is available in %s"
-#~ msgstr "Ingen XIM-server är tillgänglig i %s"
-
-#~ msgid "X display name"
-#~ msgstr "X-displaynamn"
-
-#~ msgid "X display name to use"
-#~ msgstr "X-displaynamn att använda"
-
-#~ msgid "X display to use"
-#~ msgstr "X-display att använda"
-
-#~ msgid "DISPLAY"
-#~ msgstr "DISPLAY"
-
-#~ msgid "X screen to use"
-#~ msgstr "X-skärm att använda"
-
-#~ msgid "SCREEN"
-#~ msgstr "SKÄRM"
-
-#~ msgid "Failed to open a X display."
-#~ msgstr "Misslyckades att öppna en X-display."
-
-#~ msgid "Reloading...\n"
-#~ msgstr "Läser om...\n"
-
-#~ msgid "Duplicate entry `%s' from %s. SHORT_DESC has to be unique."
-#~ msgstr "Dubblerad post \"%s\" från %s.  SHORT_DESC måste vara unik."
-
-#~ msgid "Timed out to initialize %s services."
-#~ msgstr "Tiden gick ut vid initiering av %s-tjänster."
-
-#~ msgid "No input methods available on your system."
-#~ msgstr "Ingen inmatningsmetod finns tillgänglig på ditt system."
-
-#~ msgid "Force reloading the configuration, including restarting the process."
-#~ msgstr ""
-#~ "Framtvinga omläsning av konfigurationen, inklusive omstart av processen."
-
-#~ msgid "Force restarting the IM process regradless of any errors."
-#~ msgstr "Framtvinga omstart av IM-processen oavsett eventuella fel."
-
-#~ msgid "Do not update .xinputrc."
-#~ msgstr "Uppdatera inte .xinputrc."
-
-#~ msgid "Stopped %s\n"
-#~ msgstr "Stoppade %s\n"
-
-#~ msgid "Failed to stop IM process `%s'\n"
-#~ msgstr "Det gick inte att stoppa IM-processen \"%s\"\n"
-
-#~ msgid ""
-#~ "<small><i>Note: this change will not take effect until you next log in, "
-#~ "except GTK+ applications.</i></small>"
-#~ msgstr ""
-#~ "<small><i>Observera: denna ändring kommer inte gälla förrän nästa gång du "
-#~ "loggar in, utom för GTK+-program.</i></small>"
-
-#~ msgid "_Log Out"
-#~ msgstr "_Logga ut"
