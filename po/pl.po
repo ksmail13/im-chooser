@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: pl\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-06-04 12:36+0900\n"
-"PO-Revision-Date: 2008-03-15 14:59+0200\n"
+"PO-Revision-Date: 2008-06-13 01:14+0200\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish <pl@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -18,28 +18,25 @@ msgid "Updating Input Method list"
 msgstr "Aktualizowanie listy metod wejścia"
 
 #: ../src/im-chooser-simple.c:157 ../src/im-chooser-simple.c:646
-#, fuzzy
 msgid "Unable to get Input Method list"
-msgstr "Aktualizowanie listy metod wejścia"
+msgstr "Nie można uzyskać listy metod wejścia"
 
 #: ../src/im-chooser-simple.c:262
-#, fuzzy
 msgid "Unable to get the information"
-msgstr "Lokalizacja do uzyskania informacji o ustawieniach metody wejścia"
+msgstr "Nie można uzyskać informacji"
 
 #: ../src/im-chooser-simple.c:324
 msgid "Failed to start Input Method"
 msgstr "Uruchomienie metody wejścia nie powiodło się"
 
 #: ../src/im-chooser-simple.c:351
-#, fuzzy
 msgid "Failed to stop Input Method"
-msgstr "Uruchomienie metody wejścia nie powiodło się"
+msgstr "Zatrzymanie metody wejścia nie powiodło się"
 
 #: ../src/im-chooser-simple.c:438
 #, c-format
 msgid "Starting Input Method - %s"
-msgstr "Uruchomienie metody wejścia - %s"
+msgstr "Uruchamianie metody wejścia - %s"
 
 #: ../src/im-chooser-simple.c:455
 #, c-format
@@ -61,7 +58,7 @@ msgstr "Trwa praca..."
 
 #: ../src/im-chooser-simple.c:674
 msgid "Unable to gather current status"
-msgstr ""
+msgstr "Nie można uzyskać obecnego stanu"
 
 #: ../src/im-chooser-simple.c:689
 #, c-format
@@ -112,241 +109,3 @@ msgstr "Wybieranie metody wejścia lub wyłączanie jej w środowisku graficznym
 #: ../src/im-chooser.desktop.in.in.h:2
 msgid "Input Method"
 msgstr "Metoda wejścia"
-
-#~ msgid "Replace the running settings daemon with new instance."
-#~ msgstr "Zastąp uruchomionego demona ustawień nowym."
-
-#~ msgid "Unknown error in parsing the command lines."
-#~ msgstr "Nieznany błąd podczas analizowania wierszy poleceń."
-
-#~ msgid "Language"
-#~ msgstr "Język"
-
-#~ msgid "A language to pull the information in."
-#~ msgstr "Język, w którym wyświetlić informacje."
-
-#~ msgid "Filename"
-#~ msgstr "Nazwa pliku"
-
-#~ msgid "A filename referring to the IM information."
-#~ msgstr "Nazwa pliku odnoszącego się do informacji o metodzie wejścia."
-
-#~ msgid "GTK+ immodule"
-#~ msgstr "Moduł metody wejścia GTK+"
-
-#~ msgid "A module name used for GTK+"
-#~ msgstr "Nazwa modułu używanego przez GTK+"
-
-#~ msgid "Qt immodule"
-#~ msgstr "Moduł metody wejścia Qt"
-
-#~ msgid "A module name used for Qt"
-#~ msgstr "Nazwa modułu używanego przez Qt"
-
-#~ msgid "XIM name"
-#~ msgstr "Nazwa XIM"
-
-#~ msgid "XIM server name"
-#~ msgstr "Nazwa serwera XIM"
-
-#~ msgid "Ignore flag"
-#~ msgstr "Flaga ignorowania"
-
-#~ msgid "A flag to not list up."
-#~ msgstr "Flaga, której nie słuchać."
-
-#~ msgid "XIM server program name"
-#~ msgstr "Nazwa programu serwera XIM"
-
-#~ msgid "XIM server program to be run"
-#~ msgstr "Program serwera XIM do uruchomienia"
-
-#~ msgid "XIM server program's options"
-#~ msgstr "Opcje programu serwera XIM"
-
-#~ msgid "Command line options for XIM server program"
-#~ msgstr "Opcje wiersza poleceń programu serwera XIM"
-
-#~ msgid "Preference program name"
-#~ msgstr "Nazwa programu preferencji"
-
-#~ msgid "Preference program to be run"
-#~ msgstr "Program preferencji do uruchomienia"
-
-#~ msgid "Preference program's options"
-#~ msgstr "Opcje programu preferencji"
-
-#~ msgid "Command line options for preference program"
-#~ msgstr "Opcje wiersza poleceń programu preferencji"
-
-#~ msgid "Auxiliary program name"
-#~ msgstr "Nazwa programu pomocniczego"
-
-#~ msgid "Auxiliary program to be run"
-#~ msgstr "Program pomocniczy do uruchomienia"
-
-#~ msgid "Auxiliary program's options"
-#~ msgstr "Opcje programu pomocniczego"
-
-#~ msgid "Command line options for auxiliary program"
-#~ msgstr "Opcje wiersza poleceń programu pomocniczego"
-
-#~ msgid "Short Description"
-#~ msgstr "Krótki opis"
-
-#~ msgid "Long Description"
-#~ msgstr "Długi opis"
-
-#~ msgid "System Default"
-#~ msgstr "Domyślnie w systemie"
-
-#~ msgid "Whether or not IM is a system default."
-#~ msgstr "Czy metoda wejścia jest domyślna w całym systemie."
-
-#~ msgid "User Default"
-#~ msgstr "Domyślne dla użytkownika"
-
-#~ msgid "Whether or not IM is an user default."
-#~ msgstr "Czy metoda wejścia jest domyślna dla użytkownika."
-
-#~ msgid "XIM"
-#~ msgstr "XIM"
-
-#~ msgid "Whether or not IM is a XIM server."
-#~ msgstr "Czy metoda wejścia jest serwerem XIM."
-
-#~ msgid "User Specific"
-#~ msgstr "Określone przez użytkownika"
-
-#~ msgid "xinputrc was modified by the user"
-#~ msgstr "xinputrc został zmodyfikowany przez użytkownika"
-
-#~ msgid "Invalid IM module type: %d"
-#~ msgstr "Nieprawidłowy typ modułu wejścia: %d"
-
-#~ msgid "IM module name"
-#~ msgstr "Nazwa modułu wejścia"
-
-#~ msgid "A target IM module name that to observe signals"
-#~ msgstr "Nazwa docelowego modułu wejścia do nadzorowania sygnałów"
-
-#~ msgid "Replace"
-#~ msgstr "Zastąp"
-
-#~ msgid "DBus connection"
-#~ msgstr "Połączenie D-Bus"
-
-#~ msgid "An object to be a DBus connection"
-#~ msgstr "Obiekt będący połączeniem D-Bus"
-
-#~ msgid "DBus Interface"
-#~ msgstr "Interfejs D-Bus"
-
-#~ msgid "Interface name to connect to DBus"
-#~ msgstr "Nazwa interfejsu do łączenia się z D-Bus"
-
-#~ msgid "Locale"
-#~ msgstr "Lokalizacja"
-
-#~ msgid ""
-#~ "Failed to invoke a method `%s':\n"
-#~ "  %s"
-#~ msgstr ""
-#~ "Wywołanie metody `%s' nie powiodło się:\n"
-#~ "  %s"
-
-#~ msgid ""
-#~ "Failed to invoke a method `%s' on %s:\n"
-#~ "  %s"
-#~ msgstr ""
-#~ "Wywołanie metody `%s' na %s nie powiodło się:\n"
-#~ "  %s"
-
-#~ msgid "Failed to remove a pidfile: %s"
-#~ msgstr "Usunięcie pliku PID nie powiodło się: %s"
-
-#~ msgid "Failed to open a pidfile: %s"
-#~ msgstr "Otwarcie pliku PID nie powiodło się: %s"
-
-#~ msgid "Couldn't determine the pid for %s process."
-#~ msgstr "Nie można określić PID-u procesu %s."
-
-#~ msgid "Couldn't send a signal to the %s process successfully."
-#~ msgstr "Nie można pomyślnie wysłać sygnału do procesu %s."
-
-#~ msgid "Failed to get a place of home directory."
-#~ msgstr "Uzyskanie miejsca folderu domowego nie powiodło się."
-
-#~ msgid "Failed to revert the backup file: %s"
-#~ msgstr "Przywrócenie pliku zapasowego nie powiodło się: %s"
-
-#~ msgid "Failed to create a backup file: %s"
-#~ msgstr "Utworzenie pliku zapasowego nie powiodło się: %s"
-
-#~ msgid "Failed to remove a .xinputrc file: %s"
-#~ msgstr "Usunięcie pliku .xinputrc nie powiodło się: %s"
-
-#~ msgid "Failed to make a symlink: %s"
-#~ msgstr "Utworzenie dowiązania symbolicznego nie powiodło się: %s"
-
-#~ msgid "No such input method on your system: %s"
-#~ msgstr "Brak metody wejścia w systemie: %s"
-
-#~ msgid "No XIM server is available in %s"
-#~ msgstr "Brak dostępnego serwera XIM w %s"
-
-#~ msgid "X display name"
-#~ msgstr "Nazwa ekranu X Window"
-
-#~ msgid "X display name to use"
-#~ msgstr "Nazwa użytego ekranu X Window"
-
-#~ msgid "X display to use"
-#~ msgstr "Użyty ekran X Window"
-
-#~ msgid "DISPLAY"
-#~ msgstr "EKRAN"
-
-#~ msgid "X screen to use"
-#~ msgstr "Użyty ekran X Window"
-
-#~ msgid "SCREEN"
-#~ msgstr "EKRAN"
-
-#~ msgid "Failed to open a X display."
-#~ msgstr "Otwarcie ekranu X Window nie powiodło się."
-
-#~ msgid "Reloading...\n"
-#~ msgstr "Ponowne wczytywanie...\n"
-
-#~ msgid "Duplicate entry `%s' from %s. SHORT_DESC has to be unique."
-#~ msgstr "Duplikat wpisu `%s' z %s. SHORT_DESC musi być unikalne."
-
-#~ msgid "Timed out to initialize %s services."
-#~ msgstr "Przekroczono czas inicjowania usług %s."
-
-#~ msgid "No input methods available on your system."
-#~ msgstr "Brak dostępnych metod wejścia w systemie."
-
-#~ msgid "Force reloading the configuration, including restarting the process."
-#~ msgstr ""
-#~ "Wymuś ponowne wczytanie konfiguracji, w tym ponowne uruchomienie procesu."
-
-#~ msgid "Do not update .xinputrc."
-#~ msgstr "Nie aktualizuj .xinputrc."
-
-#~ msgid "Stopped %s\n"
-#~ msgstr "Zatrzymano %s\n"
-
-#~ msgid "Failed to stop IM process `%s'\n"
-#~ msgstr "Zatrzymanie procesu IM nie powiodło się: `%s'\n"
-
-#~ msgid ""
-#~ "<small><i>Note: this change will not take effect until you next log in, "
-#~ "except GTK+ applications.</i></small>"
-#~ msgstr ""
-#~ "<small><i>Uwaga: ta zmiana zostanie uwzględniona po następnym "
-#~ "zalogowaniu, poza aplikacjami GTK+.</i></small>"
-
-#~ msgid "_Log Out"
-#~ msgstr "Wy_loguj się"
