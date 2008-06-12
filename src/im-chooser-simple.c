@@ -26,11 +26,13 @@
 #endif
 #include <stdlib.h>
 #include <string.h>
+#include <unistd.h>
 #include <glib/gi18n.h>
 #include "imsettings/imsettings.h"
 #include "imsettings/imsettings-request.h"
 #include "im-chooser-simple.h"
 
+#define IMCHOOSER_GERROR	(im_chooser_simple_g_error_quark())
 
 enum {
 	CHANGED,
@@ -79,7 +81,6 @@ struct _IMChooserSimple {
 	GtkWidget          *label;
 	IMSettingsRequest  *imsettings;
 	IMSettingsRequest  *imsettings_info;
-	gchar             **im_list;
 	gchar              *initial_im;
 	gchar              *current_im;
 	gchar              *default_im;
@@ -88,6 +89,7 @@ struct _IMChooserSimple {
 	GQueue             *actionq;
 	gboolean            ignore_actions;
 	guint               idle_source;
+	guint               progress_id;
 };
 
 
@@ -127,7 +129,6 @@ im_chooser_simple_enable_im_on_toggled(GtkToggleButton *button,
 	gboolean flag;
 	IMChooserSimple *im;
 	IMChooserSimpleActionData *a;
-	GError *error = NULL;
 
 	g_return_if_fail (GTK_IS_TOGGLE_BUTTON (button));
 	g_return_if_fail (IM_IS_CHOOSER_SIMPLE (user_data));
@@ -149,15 +150,6 @@ im_chooser_simple_enable_im_on_toggled(GtkToggleButton *button,
 #endif
 			model = gtk_tree_view_get_model(GTK_TREE_VIEW (im->widget_im_list));
 			gtk_list_store_clear(GTK_LIST_STORE (model));
-			g_strfreev(im->im_list);
-			im->im_list = imsettings_request_get_im_list(im->imsettings_info,
-								     &error);
-			if (error) {
-				im_chooser_simple_show_error(im, error,
-							     _("Unable to get Input Method list"));
-				g_error_free(error);
-				gtk_main_quit();
-			}
 			_im_chooser_simple_update_im_list(im);
 		}
 		selection = gtk_tree_view_get_selection(GTK_TREE_VIEW (im->widget_im_list));
@@ -248,32 +240,45 @@ im_chooser_simple_prefs_button_on_clicked(GtkButton *button,
 					  gpointer   user_data)
 {
 	IMChooserSimple *im = IM_CHOOSER_SIMPLE (user_data);
-	gchar *prog = NULL, *args = NULL, *cmdline = NULL;
+	IMSettingsInfo *info = NULL;
+	const gchar *prog = NULL, *args = NULL;
+	gchar *cmdline = NULL;
 	GError *error = NULL;
 
-	if (imsettings_request_get_preferences_program(im->imsettings_info,
-						       im->current_im,
-						       &prog, &args,
-						       &error)) {
-		cmdline = g_strconcat(prog, args, NULL);
-		g_spawn_command_line_async(cmdline, NULL);
-	}
+	info = imsettings_request_get_info_object(im->imsettings_info,
+						  im->current_im,
+						  &error);
 	if (error) {
 		im_chooser_simple_show_error(im, error, _("Unable to get the information"));
 		g_error_free(error);
+	} else {
+		prog = imsettings_info_get_prefs_program(info);
+		args = imsettings_info_get_prefs_args(info);
+
+		cmdline = g_strconcat(prog, args, NULL);
+		g_spawn_command_line_async(cmdline, NULL);
 	}
 
+	if (info)
+		g_object_unref(info);
 	if (cmdline)
 		g_free(cmdline);
-	if (prog)
-		g_free(prog);
-	if (args)
-		g_free(args);
 }
 
 /*
  * private functions
  */
+static GQuark
+im_chooser_simple_g_error_quark(void)
+{
+	static GQuark quark = 0;
+
+	if (quark == 0)
+		quark = g_quark_from_static_string("im-chooser-simple-error-quark");
+
+	return quark;
+}
+
 static IMChooserSimpleActionData *
 _action_new(IMChooserSimpleAction act,
 	    gpointer              data,
@@ -360,6 +365,20 @@ im_chooser_simple_im_stop_cb(DBusGProxy *proxy,
 		g_queue_delete_link(im->actionq, l);
 }
 
+static gboolean
+im_chooser_simple_activate_progress(gpointer data)
+{
+	IMChooserSimple *im = IM_CHOOSER_SIMPLE (data);
+
+	gtk_widget_set_sensitive(im->widget, FALSE);
+	gtk_window_set_modal(GTK_WINDOW (im->progress), TRUE);
+	gtk_window_set_position(GTK_WINDOW (im->progress),
+				GTK_WIN_POS_CENTER_ON_PARENT);
+	gtk_widget_show(im->progress);
+
+	return FALSE;
+}
+
 static void
 im_chooser_simple_show_progress(IMChooserSimple *im,
 				const gchar     *message,
@@ -369,8 +388,6 @@ im_chooser_simple_show_progress(IMChooserSimple *im,
 	gchar *s;
 
 	if (message) {
-		gtk_widget_set_sensitive(im->widget, FALSE);
-
 		va_start(args, message);
 
 		s = g_strdup_vprintf(message, args);
@@ -379,11 +396,13 @@ im_chooser_simple_show_progress(IMChooserSimple *im,
 
 		va_end(args);
 
-		gtk_window_set_modal(GTK_WINDOW (im->progress), TRUE);
-		gtk_window_set_position(GTK_WINDOW (im->progress),
-					GTK_WIN_POS_CENTER_ON_PARENT);
-		gtk_widget_show(im->progress);
+		if (im->progress_id != 0)
+			g_source_remove(im->progress_id);
+		im->progress_id = g_timeout_add_seconds(2, im_chooser_simple_activate_progress, im);
 	} else {
+		if (im->progress_id != 0)
+			g_source_remove(im->progress_id);
+		im->progress_id = 0;
 		gtk_window_set_modal(GTK_WINDOW (im->progress), FALSE);
 		gtk_widget_hide(im->progress);
 
@@ -427,8 +446,9 @@ im_chooser_simple_action_loop(gpointer data)
 {
 	IMChooserSimple *im = data;
 	IMChooserSimpleActionData *a;
+	IMSettingsInfo *info = NULL;
 	gboolean retval = FALSE;
-	gchar *prog, *args;
+	const gchar *prog = NULL;
 
 	if (!g_queue_is_empty(im->actionq)) {
 		a = g_queue_pop_head(im->actionq);
@@ -476,11 +496,15 @@ im_chooser_simple_action_loop(gpointer data)
 			    }
 			    break;
 		    case ACTION_IM_UPDATE_PREFS:
-			    if (im->current_im && !im->ignore_actions &&
-				imsettings_request_get_preferences_program(im->imsettings_info,
-									   im->current_im,
-									   &prog,
-									   &args, NULL) &&
+			    if (im->current_im)
+				    info = imsettings_request_get_info_object(im->imsettings_info,
+									      im->current_im,
+									      NULL);
+			    if (info)
+				    prog = imsettings_info_get_prefs_program(info);
+			    if (im->current_im &&
+				!im->ignore_actions &&
+				prog &&
 				g_file_test(prog,
 					    G_FILE_TEST_EXISTS |
 					    G_FILE_TEST_IS_EXECUTABLE))
@@ -489,6 +513,8 @@ im_chooser_simple_action_loop(gpointer data)
 			    else
 				    gtk_widget_set_sensitive(im->button_im_config,
 							     FALSE);
+			    if (info)
+				    g_object_unref(info);
 			    _action_free(a);
 			    break;
 		    case ACTION_COMPLETE:
@@ -548,7 +574,6 @@ im_chooser_simple_finalize(GObject *object)
 
 	g_object_unref(simple->imsettings);
 	g_object_unref(simple->imsettings_info);
-	g_strfreev(simple->im_list);
 	g_free(simple->initial_im);
 	g_free(simple->current_im);
 	g_free(simple->default_im);
@@ -598,7 +623,6 @@ im_chooser_simple_instance_init(IMChooserSimple *im)
 {
 	gchar *locale = setlocale(LC_CTYPE, NULL);
 	GtkWidget *image, *hbox, *vbox;
-	GError *error = NULL;
 
 	im->widget = NULL;
 	im->initialized = FALSE;
@@ -608,6 +632,7 @@ im_chooser_simple_instance_init(IMChooserSimple *im)
 	im->label = gtk_label_new(NULL);
 	im->ignore_actions = FALSE;
 	im->idle_source = 0;
+	im->progress_id = 0;
 
 	hbox = gtk_hbox_new(FALSE, 12);
 	vbox = gtk_vbox_new(FALSE, 12);
@@ -640,14 +665,6 @@ im_chooser_simple_instance_init(IMChooserSimple *im)
 	imsettings_request_set_locale(im->imsettings, locale);
 	imsettings_request_set_locale(im->imsettings_info, locale);
 
-	/* get all the info of the xinput script */
-	im->im_list = imsettings_request_get_im_list(im->imsettings_info, &error);
-	if (error) {
-		im_chooser_simple_show_error(im, error, _("Unable to get Input Method list"));
-		g_error_free(error);
-		exit(1);
-	}
-
 	/* get current im */
 	im->current_im = NULL;
 	im->default_im = NULL;
@@ -662,45 +679,82 @@ _im_chooser_simple_update_im_list(IMChooserSimple *im)
 	GtkTreePath *path;
 	GtkTreeViewColumn *column;
 	GtkRequisition requisition;
-	guint count = 0;
-	gint i, priority = 0;
-	gchar *user_im, *system_im, *running_im;
+	gint i;
+	gchar *running_im;
 	GError *error = NULL;
+	GPtrArray *array;
+	guint n_retry = 0, n_info_retry = 0;
 
-	user_im = imsettings_request_get_current_user_im(im->imsettings_info, &error);
-	system_im = imsettings_request_get_current_system_im(im->imsettings_info, &error);
+  retry:
+	if (imsettings_request_get_version(im->imsettings, NULL) != IMSETTINGS_SETTINGS_DAEMON_VERSION) {
+		if (n_retry > 0) {
+			g_set_error(&error, IMCHOOSER_GERROR, 0,
+				    _("Unable to communicate to IMSettings services"));
+			im_chooser_simple_show_error(im, error, _("Version mismatch"));
+			g_clear_error(&error);
+			exit(1);
+		}
+		/* version is inconsistent. try to reload the process */
+		imsettings_request_reload(im->imsettings, TRUE);
+		/* XXX */
+		sleep(1);
+		n_retry++;
+		goto retry;
+	}
+  info_retry:
+	if (imsettings_request_get_version(im->imsettings_info, NULL) != IMSETTINGS_IMINFO_DAEMON_VERSION) {
+		if (n_info_retry > 0) {
+			g_set_error(&error, IMCHOOSER_GERROR, 0,
+				    _("Unable to communicate to IMSettings services"));
+			im_chooser_simple_show_error(im, error, _("Version mismatch"));
+			g_clear_error(&error);
+			exit(1);
+		}
+		/* version is inconsistent. try to reload the process */
+		imsettings_request_reload(im->imsettings_info, TRUE);
+		/* XXX */
+		sleep(1);
+		n_info_retry++;
+		goto info_retry;
+	}
+
 	running_im = imsettings_request_what_im_is_running(im->imsettings, &error);
 	if (error) {
 		im_chooser_simple_show_error(im, error, _("Unable to gather current status"));
 		g_error_free(error);
 		gtk_main_quit();
 	}
-	if (im->im_list == NULL)
-		goto end;
+	array = imsettings_request_get_info_objects(im->imsettings_info, &error);
+	if (error) {
+		im_chooser_simple_show_error(im, error, _("Unable to get Input Method information"));
+		g_error_free(error);
+		gtk_main_quit();
+	}
 
-	count = g_strv_length(im->im_list);
-	list = gtk_list_store_new(3, G_TYPE_STRING, G_TYPE_STRING, G_TYPE_INT);
-	for (i = 0; im->im_list[i] != NULL; i++) {
+	list = gtk_list_store_new(3, G_TYPE_STRING, G_TYPE_STRING, G_TYPE_OBJECT);
+	for (i = 0; i < array->len; i++) {
 		GString *string = g_string_new(NULL);
+		const gchar *name;
+		IMSettingsInfo *info;
 
-		priority = 50;
+		info = IMSETTINGS_INFO (g_ptr_array_index(array, i));
+		name = imsettings_info_get_short_desc(info);
+
 		gtk_list_store_append(list, &iter);
 		g_string_append(string, "<i>");
-		g_string_append_printf(string, _("Use %s"), im->im_list[i]);
-		if (imsettings_request_is_xim(im->imsettings_info, im->im_list[i], NULL)) {
-			priority = 100;
+		g_string_append_printf(string, _("Use %s"), name);
+
+		if (imsettings_info_is_xim(info))
 			g_string_append(string, _(" (legacy)"));
-		}
-		if (strcmp(system_im, im->im_list[i]) == 0) {
-			priority = 10;
+		if (imsettings_info_is_system_default(info)) {
 			g_string_append(string, _(" (recommended)"));
 			if (!im->default_im)
-				im->default_im = g_strdup(im->im_list[i]);
+				im->default_im = g_strdup(name);
 			def_iter = gtk_tree_iter_copy(&iter);
 		}
 		if (im->current_im == NULL &&
-		    strcmp(running_im, im->im_list[i]) == 0) {
-			im->current_im = g_strdup(im->im_list[i]);
+		    strcmp(running_im, name) == 0) {
+			im->current_im = g_strdup(name);
 			if (im->initial_im == NULL)
 				im->initial_im = g_strdup(im->current_im);
 			cur_iter = gtk_tree_iter_copy(&iter);
@@ -708,8 +762,8 @@ _im_chooser_simple_update_im_list(IMChooserSimple *im)
 		g_string_append(string, "</i>");
 		gtk_list_store_set(list, &iter,
 				   0, string->str,
-				   1, im->im_list[i],
-				   2, priority,
+				   1, name,
+				   2, info,
 				   -1);
 		g_string_free(string, TRUE);
 	}
@@ -729,11 +783,8 @@ _im_chooser_simple_update_im_list(IMChooserSimple *im)
 	if (def_iter)
 		gtk_tree_iter_free(def_iter);
 	g_object_unref(list);
-	g_free(user_im);
-	g_free(system_im);
 
-  end:
-	if (count == 0) {
+	if (array->len == 0) {
 		gtk_widget_set_sensitive(im->checkbox_is_im_enabled, FALSE);
 		gtk_widget_hide(im->widget_scrolled);
 	} else {
@@ -745,7 +796,9 @@ _im_chooser_simple_update_im_list(IMChooserSimple *im)
 		requisition.height = 120;
 	gtk_widget_set_size_request(im->widget_im_list, -1, requisition.height);
 
-	g_signal_emit(im, signals[NOTIFY_N_IM], 0, count);
+	g_signal_emit(im, signals[NOTIFY_N_IM], 0, array->len);
+
+	g_ptr_array_free(array, TRUE);
 }
 
 /*

@@ -1,3 +1,14 @@
+2008-06-12  Akira TAGOH  <tagoh@redhat.com>
+
+	* src/im-chooser-simple.c (im_chooser_simple_prefs_button_on_clicked):
+	code clean up for new imsettings API.
+	(im_chooser_simple_g_error_quark): new.
+	(im_chooser_simple_activate_progress): delay display for the progress
+	window.
+	(im_chooser_simple_action_loop): do not try to get information for preference apps if IM is being turned off.
+	(_im_chooser_simple_update_im_list): check the version before doing
+	something. and reload the services as needed.
+
 2008-06-04  Akira TAGOH  <tagoh@redhat.com>
 
 	* src/im-chooser-simple.c (im_chooser_simple_enable_im_on_toggled):
