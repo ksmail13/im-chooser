@@ -1,3 +1,8 @@
+2008-06-27  Akira TAGOH  <tagoh@redhat.com>
+
+	* src/im-chooser-simple.c (_im_chooser_simple_update_im_list): Invoke
+	exit(2) instead of gtk_main_quit().
+
 2008-06-12  Akira TAGOH  <tagoh@redhat.com>
 
 	* src/im-chooser-simple.c (im_chooser_simple_prefs_button_on_clicked):

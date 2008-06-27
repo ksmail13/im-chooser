@@ -722,13 +722,13 @@ _im_chooser_simple_update_im_list(IMChooserSimple *im)
 	if (error) {
 		im_chooser_simple_show_error(im, error, _("Unable to gather current status"));
 		g_error_free(error);
-		gtk_main_quit();
+		exit(1);
 	}
 	array = imsettings_request_get_info_objects(im->imsettings_info, &error);
 	if (error) {
 		im_chooser_simple_show_error(im, error, _("Unable to get Input Method information"));
 		g_error_free(error);
-		gtk_main_quit();
+		exit(1);
 	}
 
 	list = gtk_list_store_new(3, G_TYPE_STRING, G_TYPE_STRING, G_TYPE_OBJECT);
