@@ -1,0 +1,8 @@
+1.1.0 -> 1.1.1
+=================
+* Bug Fix
+  * Fix a segfault issue when no Input Method installed.
+* Translations updated
+  * Dutch
+  * Oriya
+  * Polish
