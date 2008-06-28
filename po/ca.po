@@ -1,5 +1,5 @@
 # Catalan translations for im-chooser package.
-# Copyright (C) 2006 Red Hat, Inc.
+# Copyright (C) 2008 Red Hat, Inc.
 # This file is distributed under the same license as the
 #  im-chooser package.
 #
@@ -19,168 +19,456 @@ msgid ""
 msgstr ""
 "Project-Id-Version: im-chooser 0.3.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-06-04 12:36+0900\n"
-"PO-Revision-Date: 2006-09-28 14:38+0900\n"
-"Last-Translator: Xavier Conde Rueda <xavi.conde@gmail.com>\n"
-"Language-Team: none\n"
+"POT-Creation-Date: 2008-04-02 10:15+0000\n"
+"PO-Revision-Date: 2008-06-28 10:01+0100\n"
+"Last-Translator: Oriol Miro <oriolmiro@gmail.com>\n"
+"Language-Team: Catalan <fedora@softcatala.net>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../src/im-chooser-simple.c:148
-#, fuzzy
+#: ../imsettings/backends/gconf/main.c:184
+#: ../imsettings/imsettings/imsettings-observer.c:702
+#: ../imsettings/src/factory.c:690
+#: ../imsettings/src/factory_info.c:645
+msgid "Replace the running settings daemon with new instance."
+msgstr "Reemplaça els paràmetres del dimoni en execució amb una nova instància."
+
+#: ../imsettings/backends/gconf/main.c:206
+#: ../imsettings/src/factory.c:717
+#: ../imsettings/src/factory_info.c:667
+#: ../imsettings/utils/imsettings-reload.c:63
+#: ../imsettings/utils/imsettings-restart.c:65
+#: ../imsettings/utils/imsettings-stop.c:63
+msgid "Unknown error in parsing the command lines."
+msgstr "Error desconegut en analitzar les línies d'ordre."
+
+#: ../imsettings/imsettings/imsettings-info.c:498
+msgid "Language"
+msgstr "Idioma"
+
+#: ../imsettings/imsettings/imsettings-info.c:499
+msgid "A language to pull the information in."
+msgstr "Un idioma des d'on extreure informació."
+
+#: ../imsettings/imsettings/imsettings-info.c:504
+msgid "Filename"
+msgstr "Nom del fitxer"
+
+#: ../imsettings/imsettings/imsettings-info.c:505
+msgid "A filename referring to the IM information."
+msgstr "Un nom de fitxer que fa referència a la informació de ME."
+
+#: ../imsettings/imsettings/imsettings-info.c:510
+msgid "GTK+ immodule"
+msgstr "Mòdul ME de GTK+"
+
+#: ../imsettings/imsettings/imsettings-info.c:511
+msgid "A module name used for GTK+"
+msgstr "Nom del mòdul utilitzat per a GTK+"
+
+#: ../imsettings/imsettings/imsettings-info.c:516
+msgid "Qt immodule"
+msgstr "Mòdul ME de Qt"
+
+#: ../imsettings/imsettings/imsettings-info.c:517
+msgid "A module name used for Qt"
+msgstr "Nom de mòdul utilitzat per a Qt"
+
+#: ../imsettings/imsettings/imsettings-info.c:522
+msgid "XIM name"
+msgstr "Nom XIM"
+
+#: ../imsettings/imsettings/imsettings-info.c:523
+msgid "XIM server name"
+msgstr "Nom del servidor XIM"
+
+#: ../imsettings/imsettings/imsettings-info.c:528
+msgid "Ignore flag"
+msgstr "Ignora l'indicador"
+
+#: ../imsettings/imsettings/imsettings-info.c:529
+msgid "A flag to not list up."
+msgstr "Un indicador per a no llistar."
+
+#: ../imsettings/imsettings/imsettings-info.c:534
+msgid "XIM server program name"
+msgstr "Nom del programa del servidor XIM"
+
+#: ../imsettings/imsettings/imsettings-info.c:535
+msgid "XIM server program to be run"
+msgstr "Servidor XIM a executar"
+
+#: ../imsettings/imsettings/imsettings-info.c:540
+msgid "XIM server program's options"
+msgstr "Opcions del programa servidor XIM"
+
+#: ../imsettings/imsettings/imsettings-info.c:541
+msgid "Command line options for XIM server program"
+msgstr "Opcions de la línia d'ordres per al servidor XIM"
+
+#: ../imsettings/imsettings/imsettings-info.c:546
+msgid "Preference program name"
+msgstr "El nom del programa de prefèrencia"
+
+#: ../imsettings/imsettings/imsettings-info.c:547
+msgid "Preference program to be run"
+msgstr "Programa de la preferència a executar"
+
+#: ../imsettings/imsettings/imsettings-info.c:552
+msgid "Preference program's options"
+msgstr "Opcions del programa de preferència"
+
+#: ../imsettings/imsettings/imsettings-info.c:553
+msgid "Command line options for preference program"
+msgstr "Opcions de la línia d'ordres per al programa de preferència"
+
+#: ../imsettings/imsettings/imsettings-info.c:558
+msgid "Auxiliary program name"
+msgstr "Nom del programa auxiliar"
+
+#: ../imsettings/imsettings/imsettings-info.c:559
+msgid "Auxiliary program to be run"
+msgstr "Programa auxiliar a executar"
+
+#: ../imsettings/imsettings/imsettings-info.c:564
+msgid "Auxiliary program's options"
+msgstr "Opcions del programa auxiliar"
+
+#: ../imsettings/imsettings/imsettings-info.c:565
+msgid "Command line options for auxiliary program"
+msgstr "Opcions de la línia d'ordres per al programa auxiliar"
+
+#: ../imsettings/imsettings/imsettings-info.c:570
+#: ../imsettings/imsettings/imsettings-info.c:571
+msgid "Short Description"
+msgstr "Descripció curta"
+
+#: ../imsettings/imsettings/imsettings-info.c:576
+#: ../imsettings/imsettings/imsettings-info.c:577
+msgid "Long Description"
+msgstr "Descripció llarga"
+
+#: ../imsettings/imsettings/imsettings-info.c:582
+msgid "System Default"
+msgstr "Valor per defecte del sistema"
+
+#: ../imsettings/imsettings/imsettings-info.c:583
+msgid "Whether or not IM is a system default."
+msgstr "Si el ME és predeterminat del sistema."
+
+#: ../imsettings/imsettings/imsettings-info.c:588
+msgid "User Default"
+msgstr "Usuari per defecte"
+
+#: ../imsettings/imsettings/imsettings-info.c:589
+msgid "Whether or not IM is an user default."
+msgstr "Si el ME és predeterminat de l'usuari."
+
+#: ../imsettings/imsettings/imsettings-info.c:594
+msgid "XIM"
+msgstr "XIM"
+
+#: ../imsettings/imsettings/imsettings-info.c:595
+msgid "Whether or not IM is a XIM server."
+msgstr "Si el ME és un servidor XIM."
+
+#: ../imsettings/imsettings/imsettings-info-private.h:39
+msgid "User Specific"
+msgstr "Especificat per l'usuari"
+
+#: ../imsettings/imsettings/imsettings-info-private.h:40
+msgid "xinputrc was modified by the user"
+msgstr "xinputrc ha sigut modificat per l'usuari"
+
+#: ../imsettings/imsettings/imsettings-observer.c:255
+#, c-format
+msgid "Invalid IM module type: %d"
+msgstr "El tipus de mòdul ME no és vàlid: %d"
+
+#: ../imsettings/imsettings/imsettings-observer.c:695
+msgid "IM module name"
+msgstr "Nom del mòdul ME"
+
+#: ../imsettings/imsettings/imsettings-observer.c:696
+msgid "A target IM module name that to observe signals"
+msgstr "Un nom de mòdul ME del qual monitoritzar les senyals"
+
+#: ../imsettings/imsettings/imsettings-observer.c:701
+msgid "Replace"
+msgstr "Reemplaça"
+
+#: ../imsettings/imsettings/imsettings-observer.c:707
+#: ../imsettings/imsettings/imsettings-request.c:175
+msgid "DBus connection"
+msgstr "Connexió DBus"
+
+#: ../imsettings/imsettings/imsettings-observer.c:708
+#: ../imsettings/imsettings/imsettings-request.c:176
+msgid "An object to be a DBus connection"
+msgstr "Un objecte que serà una connexió DBus"
+
+#: ../imsettings/imsettings/imsettings-request.c:169
+msgid "DBus Interface"
+msgstr "Interfície DBus"
+
+#: ../imsettings/imsettings/imsettings-request.c:170
+msgid "Interface name to connect to DBus"
+msgstr "Nom de la interfície per conectar-se a DBus"
+
+#: ../imsettings/imsettings/imsettings-request.c:181
+msgid "Locale"
+msgstr "Localització"
+
+#: ../imsettings/imsettings/imsettings-request.c:182
+msgid "Locale to get the imsettings information"
+msgstr "Localització des d'on obtenir els paràmetres de configuració de ME"
+
+#: ../imsettings/imsettings/imsettings-request.c:239
+#: ../imsettings/imsettings/imsettings-request.c:272
+#: ../imsettings/imsettings/imsettings-request.c:290
+#: ../imsettings/imsettings/imsettings-request.c:310
+#: ../imsettings/imsettings/imsettings-request.c:331
+#: ../imsettings/imsettings/imsettings-request.c:355
+#: ../imsettings/imsettings/imsettings-request.c:380
+#: ../imsettings/imsettings/imsettings-request.c:405
+#: ../imsettings/imsettings/imsettings-request.c:426
+#: ../imsettings/imsettings/imsettings-request.c:446
+#: ../imsettings/imsettings/imsettings-request.c:466
+#: ../imsettings/imsettings/imsettings-request.c:486
+#: ../imsettings/imsettings/imsettings-request.c:506
+#: ../imsettings/imsettings/imsettings-request.c:526
+#: ../imsettings/imsettings/imsettings-request.c:552
+#: ../imsettings/imsettings/imsettings-request.c:602
+#, c-format
+msgid ""
+"Failed to invoke a method `%s':\n"
+"  %s"
+msgstr ""
+"No s'ha pogut cridar el mètode  '%s':\n"
+"  %s"
+
+#: ../imsettings/imsettings/imsettings-request.c:673
+#, c-format
+msgid ""
+"Failed to invoke a method `%s' on %s:\n"
+"  %s"
+msgstr ""
+"No s'ha pogut cridar el mètode '%s' a %s:\n"
+"  %s"
+
+#: ../imsettings/src/factory.c:136
+#, c-format
+msgid "Failed to remove a pidfile: %s"
+msgstr "No s'ha pogut suprimir el fitxer de pid: %s"
+
+#: ../imsettings/src/factory.c:178
+#, c-format
+msgid "Failed to open a pidfile: %s"
+msgstr "No s'ha pogut obrir el fitxer de pid: %s"
+
+#: ../imsettings/src/factory.c:282
+#, c-format
+msgid "Couldn't determine the pid for %s process."
+msgstr "No s'ha pogut determinar el pid del procés %s."
+
+#: ../imsettings/src/factory.c:288
+#, c-format
+msgid "Couldn't send a signal to the %s process successfully."
+msgstr "No s'ha pogut enviar una senyal al procés %s."
+
+#: ../imsettings/src/factory.c:314
+#: ../imsettings/src/factory.c:600
+msgid "Failed to get a place of home directory."
+msgstr "No s'ha pogut obtenir un lloc per al directori inici."
+
+#: ../imsettings/src/factory.c:331
+#, c-format
+msgid "Failed to revert the backup file: %s"
+msgstr "No s'ha pogut recuperar la còpia de seguretat del fitxer: %s"
+
+#: ../imsettings/src/factory.c:343
+#, c-format
+msgid "Failed to create a backup file: %s"
+msgstr "Impossible de crear la còpia de seguretat del fitxer: %s"
+
+#: ../imsettings/src/factory.c:352
+#, c-format
+msgid "Failed to remove a .xinputrc file: %s"
+msgstr "No s'ha pogut eliminar el fitxer .xinputrc: %s"
+
+#: ../imsettings/src/factory.c:363
+#, c-format
+msgid "Failed to make a symlink: %s"
+msgstr "No s'ha pogut fer l'enllaç simbòlic: %s"
+
+#: ../imsettings/src/factory.c:478
+#: ../imsettings/src/factory_info.c:526
+#, c-format
+msgid "No such input method on your system: %s"
+msgstr "No està disponible aquest mètode d'entrada en el vostre sistema: %s"
+
+#: ../imsettings/src/factory.c:498
+#, c-format
+msgid "No XIM server is available in %s"
+msgstr "No hi ha disponible cap servidor XIM en %s"
+
+#: ../imsettings/src/factory.c:646
+msgid "X display name"
+msgstr "Nom de la visualització X"
+
+#: ../imsettings/src/factory.c:647
+msgid "X display name to use"
+msgstr "Nom de la visualització X per utilitzar"
+
+#: ../imsettings/src/factory.c:691
+msgid "X display to use"
+msgstr "Visualització X per a utilitzar"
+
+#: ../imsettings/src/factory.c:691
+msgid "DISPLAY"
+msgstr "VISUALITZACIÓ"
+
+#. FIXME
+#: ../imsettings/src/factory.c:694
+msgid "X screen to use"
+msgstr "Pantalla X per a utilitzar"
+
+#: ../imsettings/src/factory.c:694
+msgid "SCREEN"
+msgstr "PANTALLA"
+
+#: ../imsettings/src/factory.c:725
+msgid "Failed to open a X display."
+msgstr "No s'ha pogut obrir cap visualització X."
+
+#: ../imsettings/src/factory_info.c:127
+msgid "Reloading...\n"
+msgstr "S'està actualitzant...\n"
+
+#: ../imsettings/src/factory_info.c:188
+#, c-format
+msgid "Duplicate entry `%s' from %s. SHORT_DESC has to be unique."
+msgstr "Hi ha una entrada duplicada «%s» de «%s». SHORT_DESC ha de ser únic."
+
+#: ../imsettings/src/factory_info.c:446
+#: ../imsettings/src/factory_info.c:484
+#: ../imsettings/src/factory_info.c:500
+#: ../imsettings/src/factory_info.c:518
+#, c-format
+msgid "Timed out to initialize %s services."
+msgstr "S'ha excedit el temps màxim d'espera per inicialitzar els serveis de %s."
+
+#: ../imsettings/src/factory_info.c:469
+msgid "No input methods available on your system."
+msgstr "No hi ha mètodes d'entrada disponibles en el vostre sistema."
+
+#: ../imsettings/utils/imsettings-reload.c:42
+#: ../imsettings/utils/imsettings-stop.c:42
+msgid "Force reloading the configuration, including restarting the process."
+msgstr "Força la recàrrega de la configuració, incloent reiniciar el procés."
+
+#: ../imsettings/utils/imsettings-restart.c:43
+msgid "Force restarting the IM process regradless of any errors."
+msgstr "Força el reinici del procés del ME independentment dels errors que es produeixin."
+
+#: ../imsettings/utils/imsettings-restart.c:44
+#: ../imsettings/utils/imsettings-stop.c:43
+msgid "Do not update .xinputrc."
+msgstr "No actualitzi .xinputrc."
+
+#: ../imsettings/utils/imsettings-stop.c:80
+#, c-format
+msgid "Stopped %s\n"
+msgstr "S'ha aturat %s\n"
+
+#: ../imsettings/utils/imsettings-stop.c:82
+#, c-format
+msgid "Failed to stop IM process `%s'\n"
+msgstr "No s'ha pogut aturar el process del ME '%s'\n"
+
+#: ../src/im-chooser-simple.c:145
 msgid "Updating Input Method list"
-msgstr "Mètode d'entrada"
+msgstr "Actualitzant la llista de mètodes d'entrada"
 
-#: ../src/im-chooser-simple.c:157 ../src/im-chooser-simple.c:646
-#, fuzzy
-msgid "Unable to get Input Method list"
-msgstr "Mètode d'entrada"
-
-#: ../src/im-chooser-simple.c:262
-msgid "Unable to get the information"
-msgstr ""
-
-#: ../src/im-chooser-simple.c:324
-#, fuzzy
+#: ../src/im-chooser-simple.c:310
+#: ../src/im-chooser-simple.c:344
 msgid "Failed to start Input Method"
-msgstr "_No usis mètodes d'entrada"
+msgstr "Impossible d'iniciar els mètodes d'entrada"
 
-#: ../src/im-chooser-simple.c:351
-#, fuzzy
-msgid "Failed to stop Input Method"
-msgstr "_No usis mètodes d'entrada"
-
-#: ../src/im-chooser-simple.c:438
-#, fuzzy, c-format
+#: ../src/im-chooser-simple.c:407
+#, c-format
 msgid "Starting Input Method - %s"
-msgstr "Mètode d'entrada"
+msgstr "S'està iniciant el mètode d'entrada - %s"
 
-#: ../src/im-chooser-simple.c:455
-#, fuzzy, c-format
+#: ../src/im-chooser-simple.c:424
+#, c-format
 msgid "Stopping Input Method - %s"
-msgstr "Mètode d'entrada"
+msgstr "S'està aturant el mètode d'entrada - %s"
 
-#: ../src/im-chooser-simple.c:573
+#: ../src/im-chooser-simple.c:542
 msgid "Parent Window"
-msgstr ""
+msgstr "Finestra pare"
 
-#: ../src/im-chooser-simple.c:574
+#: ../src/im-chooser-simple.c:543
 msgid "GtkWindow that points to the parent window"
-msgstr ""
+msgstr "Finestra GtkWindow que apunta a la finestra pare."
 
 #. setup a progress window
-#: ../src/im-chooser-simple.c:615
+#: ../src/im-chooser-simple.c:583
 msgid "Work in progress..."
-msgstr ""
+msgstr "Treball en curs..."
 
-#: ../src/im-chooser-simple.c:674
-msgid "Unable to gather current status"
-msgstr ""
-
-#: ../src/im-chooser-simple.c:689
+#: ../src/im-chooser-simple.c:641
 #, c-format
 msgid "Use %s"
-msgstr ""
+msgstr "Utilitza %s"
 
-#: ../src/im-chooser-simple.c:692
+#: ../src/im-chooser-simple.c:644
 msgid " (legacy)"
-msgstr ""
+msgstr " (herencia)"
 
-#: ../src/im-chooser-simple.c:696
+#: ../src/im-chooser-simple.c:648
 msgid " (recommended)"
-msgstr ""
+msgstr " (recomanat)"
 
-#: ../src/im-chooser-simple.c:804
+#: ../src/im-chooser-simple.c:760
 msgid "<b>Input Method</b>"
 msgstr "<b>Mètode d'entrada</b>"
 
-#: ../src/im-chooser-simple.c:810
+#: ../src/im-chooser-simple.c:766
 msgid "_Enable input method feature"
-msgstr ""
+msgstr "_Habilita la funcionalitat del mètode d'entrada"
 
-#: ../src/im-chooser-simple.c:841
-#, fuzzy
+#: ../src/im-chooser-simple.c:773
+msgid "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications.</i></small>"
+msgstr "<small><i>Nota: aquest canvi no s'aplicarà fins que entreu de nou, exepte les aplicacions GTK+.</i></small>"
+
+#: ../src/im-chooser-simple.c:805
 msgid "Input Method _Preferences..."
-msgstr "Mètode d'entrada"
+msgstr "Preferències de mètode d'entrada..."
 
-#: ../src/main.c:43
-msgid ""
-"<span weight=\"bold\" size=\"larger\">No input method is available</span>"
-msgstr ""
+#: ../src/main.c:55
+msgid "<span weight=\"bold\" size=\"larger\">No input method is available</span>"
+msgstr "<span weight=\"bold\" size=\"larger\">No hi ha disponible cap mètode d'entrada</span>"
 
-#: ../src/main.c:46
+#: ../src/main.c:58
 msgid "Please install any input methods before running if you like."
-msgstr ""
+msgstr "Opcionalment, podeu instal·lar qualsevol mètode d’entrada abans d’executar-lo."
 
-#: ../src/main.c:110
+#: ../src/main.c:153
 msgid "IM Chooser - Input Method configuration tool"
-msgstr "Eina de configuració de mètodes d'entrada"
+msgstr "IM Chooser - Eina de configuració de Mètodes d'Entrada"
+
+#: ../src/main.c:161
+msgid "_Log Out"
+msgstr "_Surt"
 
 #: ../src/im-chooser.desktop.in.in.h:1
-#, fuzzy
-msgid ""
-"Choose the input method to be used or disable the input method usage on the "
-"desktop"
-msgstr ""
-"Eina de configuració del mètode d'entrada, per a escollir el mètode "
-"d'entrada que es farà servir o per a inhabilitar-ne l'ús"
+msgid "Choose the input method to be used or disable the input method usage on the desktop"
+msgstr "Seleccioneu el mètode d’entrada a utilitzar o desactiveu els mètodes d’entrada en l’escriptori."
 
 #: ../src/im-chooser.desktop.in.in.h:2
 msgid "Input Method"
 msgstr "Mètode d'entrada"
 
-#, fuzzy
-#~ msgid ""
-#~ "<small><i>Note: this change will not take effect until you next log in, "
-#~ "except GTK+ applications.</i></small>"
-#~ msgstr ""
-#~ "<small><i>Nota: aquest canvi no s'aplicarà fins que entreu de nou.</i></"
-#~ "small>"
-
-#~ msgid "_Log Out"
-#~ msgstr "_Surt"
-
-#~ msgid "No valid IM installed"
-#~ msgstr "No hi ha cap ME instal·lat vàlid"
-
-#, fuzzy
-#~ msgid "Choose _specific Input Method"
-#~ msgstr "Usa el mètode _personalitzat"
-
-#, fuzzy
-#~ msgid ""
-#~ "Use the specific Input Method that you prefer regardless what Input "
-#~ "Method the system recommends."
-#~ msgstr ""
-#~ "Usa el mètode d'entrada preferit sense tenir en compte el recomenat pel "
-#~ "sistema."
-
-#, fuzzy
-#~ msgid ""
-#~ "Do not use Input Method no matter what language the desktop is running on."
-#~ msgstr ""
-#~ "Inhabilita completament els mètodes d'entrada sense tenir en compte la "
-#~ "localització actual de l'escriptori."
-
-#, fuzzy
-#~ msgid "Use legacy _Input Method"
-#~ msgstr "_Usa els mètodes predeterminats"
-
-#~ msgid ""
-#~ "Use X Input Method anyway. In fact, which input method will be chosen for "
-#~ "the desktop session, depends on the desktop language."
-#~ msgstr ""
-#~ "Usa el mètode d'entrada d'X igualment. De fet, el mètode d'entrada "
-#~ "escollit per a la sessió de l'escriptori depén del llenguatge de "
-#~ "l'escriptori."
-
-#~ msgid "_Follow the system-wide configuration"
-#~ msgstr "_Segueix la configuració global del sistema"
-
-#~ msgid ""
-#~ "Follow the system-wide input method configuration to determine which "
-#~ "input method should be used."
-#~ msgstr ""
-#~ "Segueix el mètode d'entrada global del sistema per determinar quin mètode "
-#~ "d'entrada s'ha de fer servir."
