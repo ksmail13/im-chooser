@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: im-chooser.trunk.gu\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-06-04 12:36+0900\n"
+"POT-Creation-Date: 2008-07-08 17:38+0900\n"
 "PO-Revision-Date: 2008-04-03 12:40+0530\n"
 "Last-Translator: Ankit Patel <ankit@redhat.com>\n"
 "Language-Team: Gujarati <fedora-trans-gu@redhat.com>\n"
@@ -26,93 +26,123 @@ msgstr ""
 "\n"
 "\n"
 
-#: ../src/im-chooser-simple.c:148
+#: ../src/im-chooser-simple.c:152
 msgid "Updating Input Method list"
 msgstr "ઈનપુટ પદ્ધતિ યાદી સુધારી રહ્યા છીએ"
 
-#: ../src/im-chooser-simple.c:157 ../src/im-chooser-simple.c:646
-#, fuzzy
-msgid "Unable to get Input Method list"
-msgstr "ઈનપુટ પદ્ધતિ યાદી સુધારી રહ્યા છીએ"
-
-#: ../src/im-chooser-simple.c:262
+#: ../src/im-chooser-simple.c:255
 #, fuzzy
 msgid "Unable to get the information"
 msgstr "imsettings જાણકારી મેળવવા માટેનું લોકેલ"
 
-#: ../src/im-chooser-simple.c:324
+#: ../src/im-chooser-simple.c:332
 msgid "Failed to start Input Method"
 msgstr "ઈનપુટ પદ્ધતિ શરૂ કરવામાં નિષ્ફળ"
 
-#: ../src/im-chooser-simple.c:351
+#: ../src/im-chooser-simple.c:359
 #, fuzzy
 msgid "Failed to stop Input Method"
 msgstr "ઈનપુટ પદ્ધતિ શરૂ કરવામાં નિષ્ફળ"
 
-#: ../src/im-chooser-simple.c:438
+#: ../src/im-chooser-simple.c:461
 #, c-format
 msgid "Starting Input Method - %s"
 msgstr "ઈનપુટ પદ્ધતિ શરૂ કરી રહ્યા છીએ - %s"
 
-#: ../src/im-chooser-simple.c:455
+#: ../src/im-chooser-simple.c:478
 #, c-format
 msgid "Stopping Input Method - %s"
 msgstr "ઈનપુટ પદ્ધતિ અટકાવી રહ્યા છીએ - %s"
 
-#: ../src/im-chooser-simple.c:573
+#: ../src/im-chooser-simple.c:615
 msgid "Parent Window"
 msgstr "પિતૃ વિન્ડો"
 
-#: ../src/im-chooser-simple.c:574
+#: ../src/im-chooser-simple.c:616
 msgid "GtkWindow that points to the parent window"
 msgstr "GtkWindow કે જે પિતૃ વિન્ડોનો નિર્દેશ કરે છે"
 
+#: ../src/im-chooser-simple.c:621
+msgid "Show note"
+msgstr ""
+
+#: ../src/im-chooser-simple.c:622
+msgid "Show note logs out to apply the change"
+msgstr ""
+
 #. setup a progress window
-#: ../src/im-chooser-simple.c:615
+#: ../src/im-chooser-simple.c:663
 msgid "Work in progress..."
 msgstr "કામ ચાલુ છે..."
 
-#: ../src/im-chooser-simple.c:674
+#: ../src/im-chooser-simple.c:715 ../src/im-chooser-simple.c:731
+#, c-format
+msgid "Unable to communicate to IMSettings services"
+msgstr ""
+
+#: ../src/im-chooser-simple.c:716 ../src/im-chooser-simple.c:732
+msgid "Version mismatch"
+msgstr ""
+
+#: ../src/im-chooser-simple.c:746
 msgid "Unable to gather current status"
 msgstr ""
 
-#: ../src/im-chooser-simple.c:689
+#: ../src/im-chooser-simple.c:752
+#, fuzzy
+msgid "Unable to get Input Method information"
+msgstr "ઈનપુટ પદ્ધતિ યાદી સુધારી રહ્યા છીએ"
+
+#: ../src/im-chooser-simple.c:768
 #, c-format
 msgid "Use %s"
 msgstr "%s વાપરો"
 
-#: ../src/im-chooser-simple.c:692
+#: ../src/im-chooser-simple.c:771
 msgid " (legacy)"
 msgstr " (લીગસી)"
 
-#: ../src/im-chooser-simple.c:696
+#: ../src/im-chooser-simple.c:773
 msgid " (recommended)"
 msgstr " (આગ્રહણીય)"
 
-#: ../src/im-chooser-simple.c:804
+#: ../src/im-chooser-simple.c:880
 msgid "<b>Input Method</b>"
 msgstr "<b>ઈનપુટ પદ્ધતિ</b>"
 
-#: ../src/im-chooser-simple.c:810
+#: ../src/im-chooser-simple.c:886
 msgid "_Enable input method feature"
 msgstr "ઈનપુટ પદ્ધતિ લક્ષણ સક્રિય કરો (_E)"
 
-#: ../src/im-chooser-simple.c:841
+#: ../src/im-chooser-simple.c:893
+msgid ""
+"<small><i>Note: this change will not take effect until you next log in, "
+"except GTK+ applications.</i></small>"
+msgstr ""
+"<small><i>નોંધ: આ ફેરફાર જ્યાં સુધી આગળ તમે પ્રવેશ કરો નહિં ત્યાં સુધી અસર કરશે નહિં, "
+"અપવાદરૂપે GTK+ કાર્યક્રમો.</i></small>"
+
+#: ../src/im-chooser-simple.c:925
 msgid "Input Method _Preferences..."
 msgstr "ઈનપુટ પદ્ધતિ પસંદગીઓ (_P)..."
 
-#: ../src/main.c:43
+#: ../src/main.c:53
 msgid ""
 "<span weight=\"bold\" size=\"larger\">No input method is available</span>"
 msgstr "<span weight=\"bold\" size=\"larger\">કોઈ ઈનપુટ પદ્ધતિ ઉપલબ્ધ નથી</span>"
 
-#: ../src/main.c:46
+#: ../src/main.c:56
 msgid "Please install any input methods before running if you like."
 msgstr "મહેરબાની કરીને ચલાવવા પહેલાં કોઈપણ ઈનપુટ પદ્ધતિઓ પસંદ કરો કે જે તમને ગમે."
 
-#: ../src/main.c:110
+#: ../src/main.c:143
 msgid "IM Chooser - Input Method configuration tool"
 msgstr "IM પસંદગીકારક - ઈનપુટ પદ્ધતિ રૂપરેખાંકન સાધન"
+
+#: ../src/main.c:157
+#, fuzzy
+msgid "Log Out"
+msgstr "બહાર નીકળો (_L)"
 
 #: ../src/im-chooser.desktop.in.in.h:1
 msgid ""
@@ -354,13 +384,3 @@ msgstr "ઈનપુટ પદ્ધતિ"
 
 #~ msgid "Failed to stop IM process `%s'\n"
 #~ msgstr "IM પ્રક્રિયા `%s' અટકાવવામાં નિષ્ફળ\n"
-
-#~ msgid ""
-#~ "<small><i>Note: this change will not take effect until you next log in, "
-#~ "except GTK+ applications.</i></small>"
-#~ msgstr ""
-#~ "<small><i>નોંધ: આ ફેરફાર જ્યાં સુધી આગળ તમે પ્રવેશ કરો નહિં ત્યાં સુધી અસર કરશે નહિં, "
-#~ "અપવાદરૂપે GTK+ કાર્યક્રમો.</i></small>"
-
-#~ msgid "_Log Out"
-#~ msgstr "બહાર નીકળો (_L)"

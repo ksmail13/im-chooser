@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: im-chooser.trunk.ml\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-06-04 12:36+0900\n"
+"POT-Creation-Date: 2008-07-08 17:38+0900\n"
 "PO-Revision-Date: 2008-04-16 09:01+0530\n"
 "Last-Translator: \n"
 "Language-Team:  <en@li.org>\n"
@@ -21,94 +21,124 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "\n"
 
-#: ../src/im-chooser-simple.c:148
+#: ../src/im-chooser-simple.c:152
 msgid "Updating Input Method list"
 msgstr "ഇന്‍പുട്ട് രീതിയുടെ പട്ടിക പരിഷ്കരിക്കുന്നു"
 
-#: ../src/im-chooser-simple.c:157 ../src/im-chooser-simple.c:646
-#, fuzzy
-msgid "Unable to get Input Method list"
-msgstr "ഇന്‍പുട്ട് രീതിയുടെ പട്ടിക പരിഷ്കരിക്കുന്നു"
-
-#: ../src/im-chooser-simple.c:262
+#: ../src/im-chooser-simple.c:255
 #, fuzzy
 msgid "Unable to get the information"
 msgstr "ഐഎം വിവരങ്ങള്‍ ലഭ്യമാകുന്നതിനുള്ള ലൊക്കെയില്‍"
 
-#: ../src/im-chooser-simple.c:324
+#: ../src/im-chooser-simple.c:332
 msgid "Failed to start Input Method"
 msgstr "ഇന്‍പുട്ട് രീതി ആരംഭിക്കുവാന്‍ സാധിച്ചില്ല"
 
-#: ../src/im-chooser-simple.c:351
+#: ../src/im-chooser-simple.c:359
 #, fuzzy
 msgid "Failed to stop Input Method"
 msgstr "ഇന്‍പുട്ട് രീതി ആരംഭിക്കുവാന്‍ സാധിച്ചില്ല"
 
-#: ../src/im-chooser-simple.c:438
+#: ../src/im-chooser-simple.c:461
 #, c-format
 msgid "Starting Input Method - %s"
 msgstr "ഇന്‍പുട്ട് രീതി ആരംഭിക്കുന്നു - %s"
 
-#: ../src/im-chooser-simple.c:455
+#: ../src/im-chooser-simple.c:478
 #, c-format
 msgid "Stopping Input Method - %s"
 msgstr "ഇന്‍പുട്ട് രീതി നിര്‍ത്തുന്നു - %s"
 
-#: ../src/im-chooser-simple.c:573
+#: ../src/im-chooser-simple.c:615
 msgid "Parent Window"
 msgstr "പേരന്റ് ജാലകം"
 
-#: ../src/im-chooser-simple.c:574
+#: ../src/im-chooser-simple.c:616
 msgid "GtkWindow that points to the parent window"
 msgstr "പേരന്റ് ജാലകത്തിലേക്ക് സൂചിപ്പിക്കുന്ന GtkWindow"
 
+#: ../src/im-chooser-simple.c:621
+msgid "Show note"
+msgstr ""
+
+#: ../src/im-chooser-simple.c:622
+msgid "Show note logs out to apply the change"
+msgstr ""
+
 #. setup a progress window
-#: ../src/im-chooser-simple.c:615
+#: ../src/im-chooser-simple.c:663
 msgid "Work in progress..."
 msgstr "ജോലി പുരോഗതിയില്‍..."
 
-#: ../src/im-chooser-simple.c:674
+#: ../src/im-chooser-simple.c:715 ../src/im-chooser-simple.c:731
+#, c-format
+msgid "Unable to communicate to IMSettings services"
+msgstr ""
+
+#: ../src/im-chooser-simple.c:716 ../src/im-chooser-simple.c:732
+msgid "Version mismatch"
+msgstr ""
+
+#: ../src/im-chooser-simple.c:746
 msgid "Unable to gather current status"
 msgstr ""
 
-#: ../src/im-chooser-simple.c:689
+#: ../src/im-chooser-simple.c:752
+#, fuzzy
+msgid "Unable to get Input Method information"
+msgstr "ഇന്‍പുട്ട് രീതിയുടെ പട്ടിക പരിഷ്കരിക്കുന്നു"
+
+#: ../src/im-chooser-simple.c:768
 #, c-format
 msgid "Use %s"
 msgstr "%s ഉപയോഗിക്കുക"
 
-#: ../src/im-chooser-simple.c:692
+#: ../src/im-chooser-simple.c:771
 msgid " (legacy)"
 msgstr " (പാരമ്പര്യം)"
 
-#: ../src/im-chooser-simple.c:696
+#: ../src/im-chooser-simple.c:773
 msgid " (recommended)"
 msgstr " (ഉചിതമായ)"
 
-#: ../src/im-chooser-simple.c:804
+#: ../src/im-chooser-simple.c:880
 msgid "<b>Input Method</b>"
 msgstr "<b>ഇന്‍പുട്ട് രീതി</b>"
 
-#: ../src/im-chooser-simple.c:810
+#: ../src/im-chooser-simple.c:886
 msgid "_Enable input method feature"
 msgstr "ഇന്‍പുട്ട് രീതി _സജ്ജമാക്കുക"
 
-#: ../src/im-chooser-simple.c:841
+#: ../src/im-chooser-simple.c:893
+msgid ""
+"<small><i>Note: this change will not take effect until you next log in, "
+"except GTK+ applications.</i></small>"
+msgstr ""
+"<small><i>കുറിപ്പ്: GTK+ പ്രയോഗങ്ങള്‍ക്ക് ഒഴികെ, നിങ്ങള്‍ അടുത്ത തവണ ലോഗിന്‍ ചെയ്യുമ്പോള്‍ മാത്രമേ "
+"ഈ മാറ്റം കംപ്യൂട്ടര്‍ അംഗീകരിക്കൂ.</i></small>"
+
+#: ../src/im-chooser-simple.c:925
 msgid "Input Method _Preferences..."
 msgstr "ഇന്‍പുട്ട് രീതിയ്ക്കുള്ള _മുന്‍ഗണനകള്‍..."
 
-#: ../src/main.c:43
+#: ../src/main.c:53
 msgid ""
 "<span weight=\"bold\" size=\"larger\">No input method is available</span>"
 msgstr "<span weight=\"bold\" size=\"larger\">ഒരു ഇന്‍പുട്ട് രീതിയും ലഭ്യമല്ല</span>"
 
-#: ../src/main.c:46
+#: ../src/main.c:56
 msgid "Please install any input methods before running if you like."
 msgstr ""
 "നിങ്ങള്‍ക്ക് ആവശ്യമെങ്കില്‍, പ്രവര്‍ത്തനത്തിന് മുമ്പ് ഏതെങ്കിലും ഇന്‍പുട്ട് രീതി ദയവായി ഇന്‍സ്റ്റോള്‍ ചെയ്യുക."
 
-#: ../src/main.c:110
+#: ../src/main.c:143
 msgid "IM Chooser - Input Method configuration tool"
 msgstr "IM ചൂസര്‍ - ഇന്‍പുട്ട് രീതി സജ്ജമാക്കുന്ന സംവിധാനം"
+
+#: ../src/main.c:157
+#, fuzzy
+msgid "Log Out"
+msgstr "പുറത്ത് കടക്കുക (_L)"
 
 #: ../src/im-chooser.desktop.in.in.h:1
 msgid ""
@@ -351,13 +381,3 @@ msgstr "ഇന്‍പുട്ട് രീതി"
 
 #~ msgid "Failed to stop IM process `%s'\n"
 #~ msgstr "IM പ്രക്രിയ `%s' നിര്‍ത്തുന്നതില്‍ പരാജയം\n"
-
-#~ msgid ""
-#~ "<small><i>Note: this change will not take effect until you next log in, "
-#~ "except GTK+ applications.</i></small>"
-#~ msgstr ""
-#~ "<small><i>കുറിപ്പ്: GTK+ പ്രയോഗങ്ങള്‍ക്ക് ഒഴികെ, നിങ്ങള്‍ അടുത്ത തവണ ലോഗിന്‍ ചെയ്യുമ്പോള്‍ "
-#~ "മാത്രമേ ഈ മാറ്റം കംപ്യൂട്ടര്‍ അംഗീകരിക്കൂ.</i></small>"
-
-#~ msgid "_Log Out"
-#~ msgstr "പുറത്ത് കടക്കുക (_L)"

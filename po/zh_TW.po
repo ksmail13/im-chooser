@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: zh_TW\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-06-04 12:36+0900\n"
+"POT-Creation-Date: 2008-07-08 17:38+0900\n"
 "PO-Revision-Date: 2007-02-05 01:46+1000\n"
 "Last-Translator: Chester Cheng <ccheng@redhat.com>\n"
 "Language-Team: Chinese, Traditional <zh_TW@li.org>\n"
@@ -19,95 +19,124 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.9.1\n"
 
-#: ../src/im-chooser-simple.c:148
+#: ../src/im-chooser-simple.c:152
 #, fuzzy
 msgid "Updating Input Method list"
 msgstr "輸入法"
 
-#: ../src/im-chooser-simple.c:157 ../src/im-chooser-simple.c:646
-#, fuzzy
-msgid "Unable to get Input Method list"
-msgstr "輸入法"
-
-#: ../src/im-chooser-simple.c:262
+#: ../src/im-chooser-simple.c:255
 msgid "Unable to get the information"
 msgstr ""
 
-#: ../src/im-chooser-simple.c:324
+#: ../src/im-chooser-simple.c:332
 #, fuzzy
 msgid "Failed to start Input Method"
 msgstr "永不使用輸入法(_N)"
 
-#: ../src/im-chooser-simple.c:351
+#: ../src/im-chooser-simple.c:359
 #, fuzzy
 msgid "Failed to stop Input Method"
 msgstr "永不使用輸入法(_N)"
 
-#: ../src/im-chooser-simple.c:438
+#: ../src/im-chooser-simple.c:461
 #, fuzzy, c-format
 msgid "Starting Input Method - %s"
 msgstr "輸入法"
 
-#: ../src/im-chooser-simple.c:455
+#: ../src/im-chooser-simple.c:478
 #, fuzzy, c-format
 msgid "Stopping Input Method - %s"
 msgstr "輸入法"
 
-#: ../src/im-chooser-simple.c:573
+#: ../src/im-chooser-simple.c:615
 msgid "Parent Window"
 msgstr ""
 
-#: ../src/im-chooser-simple.c:574
+#: ../src/im-chooser-simple.c:616
 msgid "GtkWindow that points to the parent window"
 msgstr ""
 
+#: ../src/im-chooser-simple.c:621
+msgid "Show note"
+msgstr ""
+
+#: ../src/im-chooser-simple.c:622
+msgid "Show note logs out to apply the change"
+msgstr ""
+
 #. setup a progress window
-#: ../src/im-chooser-simple.c:615
+#: ../src/im-chooser-simple.c:663
 msgid "Work in progress..."
 msgstr ""
 
-#: ../src/im-chooser-simple.c:674
+#: ../src/im-chooser-simple.c:715 ../src/im-chooser-simple.c:731
+#, c-format
+msgid "Unable to communicate to IMSettings services"
+msgstr ""
+
+#: ../src/im-chooser-simple.c:716 ../src/im-chooser-simple.c:732
+msgid "Version mismatch"
+msgstr ""
+
+#: ../src/im-chooser-simple.c:746
 msgid "Unable to gather current status"
 msgstr ""
 
-#: ../src/im-chooser-simple.c:689
+#: ../src/im-chooser-simple.c:752
+#, fuzzy
+msgid "Unable to get Input Method information"
+msgstr "輸入法"
+
+#: ../src/im-chooser-simple.c:768
 #, c-format
 msgid "Use %s"
 msgstr ""
 
-#: ../src/im-chooser-simple.c:692
+#: ../src/im-chooser-simple.c:771
 msgid " (legacy)"
 msgstr ""
 
-#: ../src/im-chooser-simple.c:696
+#: ../src/im-chooser-simple.c:773
 msgid " (recommended)"
 msgstr ""
 
-#: ../src/im-chooser-simple.c:804
+#: ../src/im-chooser-simple.c:880
 msgid "<b>Input Method</b>"
 msgstr "<b>輸入法</b>"
 
-#: ../src/im-chooser-simple.c:810
+#: ../src/im-chooser-simple.c:886
 msgid "_Enable input method feature"
 msgstr ""
 
-#: ../src/im-chooser-simple.c:841
+#: ../src/im-chooser-simple.c:893
+#, fuzzy
+msgid ""
+"<small><i>Note: this change will not take effect until you next log in, "
+"except GTK+ applications.</i></small>"
+msgstr "<small><i>注意：這項改變要到下次登入後，才會生效。</i></small>"
+
+#: ../src/im-chooser-simple.c:925
 #, fuzzy
 msgid "Input Method _Preferences..."
 msgstr "輸入法"
 
-#: ../src/main.c:43
+#: ../src/main.c:53
 msgid ""
 "<span weight=\"bold\" size=\"larger\">No input method is available</span>"
 msgstr ""
 
-#: ../src/main.c:46
+#: ../src/main.c:56
 msgid "Please install any input methods before running if you like."
 msgstr ""
 
-#: ../src/main.c:110
+#: ../src/main.c:143
 msgid "IM Chooser - Input Method configuration tool"
 msgstr "IM Chooser - 輸入法設定工具"
+
+#: ../src/main.c:157
+#, fuzzy
+msgid "Log Out"
+msgstr "登出(_L)"
 
 #: ../src/im-chooser.desktop.in.in.h:1
 #, fuzzy
@@ -119,15 +148,6 @@ msgstr "輸入法設定工具可以用來選擇輸入法，或停用桌面環境
 #: ../src/im-chooser.desktop.in.in.h:2
 msgid "Input Method"
 msgstr "輸入法"
-
-#, fuzzy
-#~ msgid ""
-#~ "<small><i>Note: this change will not take effect until you next log in, "
-#~ "except GTK+ applications.</i></small>"
-#~ msgstr "<small><i>注意：這項改變要到下次登入後，才會生效。</i></small>"
-
-#~ msgid "_Log Out"
-#~ msgstr "登出(_L)"
 
 #~ msgid "No valid IM installed"
 #~ msgstr "並未安裝有效的輸入法"

@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: im-chooser.trunk\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-06-04 12:36+0900\n"
+"POT-Creation-Date: 2008-07-08 17:38+0900\n"
 "PO-Revision-Date: 2008-03-20 11:51+1000\n"
 "Last-Translator: Leah Liu <lliu@redhat.com>\n"
 "Language-Team: Simplified Chinese <zh@li.org>\n"
@@ -20,93 +20,123 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.11.4\n"
 
-#: ../src/im-chooser-simple.c:148
+#: ../src/im-chooser-simple.c:152
 msgid "Updating Input Method list"
 msgstr "更新输入法列表"
 
-#: ../src/im-chooser-simple.c:157 ../src/im-chooser-simple.c:646
-#, fuzzy
-msgid "Unable to get Input Method list"
-msgstr "更新输入法列表"
-
-#: ../src/im-chooser-simple.c:262
+#: ../src/im-chooser-simple.c:255
 #, fuzzy
 msgid "Unable to get the information"
 msgstr "获得输入设置信息的地点"
 
-#: ../src/im-chooser-simple.c:324
+#: ../src/im-chooser-simple.c:332
 msgid "Failed to start Input Method"
 msgstr "启动输入法失败"
 
-#: ../src/im-chooser-simple.c:351
+#: ../src/im-chooser-simple.c:359
 #, fuzzy
 msgid "Failed to stop Input Method"
 msgstr "启动输入法失败"
 
-#: ../src/im-chooser-simple.c:438
+#: ../src/im-chooser-simple.c:461
 #, c-format
 msgid "Starting Input Method - %s"
 msgstr "启动输入法 - %s"
 
-#: ../src/im-chooser-simple.c:455
+#: ../src/im-chooser-simple.c:478
 #, c-format
 msgid "Stopping Input Method - %s"
 msgstr "终止输入法 - %s"
 
-#: ../src/im-chooser-simple.c:573
+#: ../src/im-chooser-simple.c:615
 msgid "Parent Window"
 msgstr "上一级窗口"
 
-#: ../src/im-chooser-simple.c:574
+#: ../src/im-chooser-simple.c:616
 msgid "GtkWindow that points to the parent window"
 msgstr "指向上一级窗口的 Gtk 窗口"
 
+#: ../src/im-chooser-simple.c:621
+msgid "Show note"
+msgstr ""
+
+#: ../src/im-chooser-simple.c:622
+msgid "Show note logs out to apply the change"
+msgstr ""
+
 #. setup a progress window
-#: ../src/im-chooser-simple.c:615
+#: ../src/im-chooser-simple.c:663
 msgid "Work in progress..."
 msgstr "处理中... "
 
-#: ../src/im-chooser-simple.c:674
+#: ../src/im-chooser-simple.c:715 ../src/im-chooser-simple.c:731
+#, c-format
+msgid "Unable to communicate to IMSettings services"
+msgstr ""
+
+#: ../src/im-chooser-simple.c:716 ../src/im-chooser-simple.c:732
+msgid "Version mismatch"
+msgstr ""
+
+#: ../src/im-chooser-simple.c:746
 msgid "Unable to gather current status"
 msgstr ""
 
-#: ../src/im-chooser-simple.c:689
+#: ../src/im-chooser-simple.c:752
+#, fuzzy
+msgid "Unable to get Input Method information"
+msgstr "更新输入法列表"
+
+#: ../src/im-chooser-simple.c:768
 #, c-format
 msgid "Use %s"
 msgstr "使用 %s"
 
-#: ../src/im-chooser-simple.c:692
+#: ../src/im-chooser-simple.c:771
 msgid " (legacy)"
 msgstr "（继承）"
 
-#: ../src/im-chooser-simple.c:696
+#: ../src/im-chooser-simple.c:773
 msgid " (recommended)"
 msgstr "（推荐）"
 
-#: ../src/im-chooser-simple.c:804
+#: ../src/im-chooser-simple.c:880
 msgid "<b>Input Method</b>"
 msgstr "<b>输入方法</b>"
 
-#: ../src/im-chooser-simple.c:810
+#: ../src/im-chooser-simple.c:886
 msgid "_Enable input method feature"
 msgstr "启用输入法特性（_E）"
 
-#: ../src/im-chooser-simple.c:841
+#: ../src/im-chooser-simple.c:893
+msgid ""
+"<small><i>Note: this change will not take effect until you next log in, "
+"except GTK+ applications.</i></small>"
+msgstr ""
+"<small><i>请注意：这个修改在您下一次登录后才会生效，GTK+ 应用程序除外。</i></"
+"small>"
+
+#: ../src/im-chooser-simple.c:925
 msgid "Input Method _Preferences..."
 msgstr "首选输入法（_P）"
 
-#: ../src/main.c:43
+#: ../src/main.c:53
 msgid ""
 "<span weight=\"bold\" size=\"larger\">No input method is available</span>"
 msgstr "<span weight=\"bold\" size=\"larger\">没有可用的输入法</span>"
 
-#: ../src/main.c:46
+#: ../src/main.c:56
 msgid "Please install any input methods before running if you like."
 msgstr "如果您愿意，请在运行前安装输入法。"
 
-#: ../src/main.c:110
+#: ../src/main.c:143
 msgid "IM Chooser - Input Method configuration tool"
 msgstr "IM Chooser - 输入法配置工具"
+
+#: ../src/main.c:157
+#, fuzzy
+msgid "Log Out"
+msgstr "（_L）注销"
 
 #: ../src/im-chooser.desktop.in.in.h:1
 msgid ""
@@ -344,13 +374,3 @@ msgstr "输入法"
 
 #~ msgid "Failed to stop IM process `%s'\n"
 #~ msgstr "终止 IM 进程 `%s' 失败\n"
-
-#~ msgid ""
-#~ "<small><i>Note: this change will not take effect until you next log in, "
-#~ "except GTK+ applications.</i></small>"
-#~ msgstr ""
-#~ "<small><i>请注意：这个修改在您下一次登录后才会生效，GTK+ 应用程序除外。</"
-#~ "i></small>"
-
-#~ msgid "_Log Out"
-#~ msgstr "（_L）注销"

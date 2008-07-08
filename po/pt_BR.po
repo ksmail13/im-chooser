@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: im-chooser.trunk\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-06-04 12:36+0900\n"
+"POT-Creation-Date: 2008-07-08 17:38+0900\n"
 "PO-Revision-Date: 2008-03-18 11:35-0300\n"
 "Last-Translator: Diego Búrigo Zacarão <diegobz@projetofedora.org>\n"
 "Language-Team: Brazilian Portuguese <fedora-docs-br@redhat.com>\n"
@@ -27,97 +27,127 @@ msgstr ""
 "X-Poedit-Country: BRAZIL\n"
 "X-Generator: KBabel 1.11.4\n"
 
-#: ../src/im-chooser-simple.c:148
+#: ../src/im-chooser-simple.c:152
 msgid "Updating Input Method list"
 msgstr "Atualizando a Lista de Métodos de Entrada"
 
-#: ../src/im-chooser-simple.c:157 ../src/im-chooser-simple.c:646
-#, fuzzy
-msgid "Unable to get Input Method list"
-msgstr "Atualizando a Lista de Métodos de Entrada"
-
-#: ../src/im-chooser-simple.c:262
+#: ../src/im-chooser-simple.c:255
 #, fuzzy
 msgid "Unable to get the information"
 msgstr "Localizador para obter informações do imsettings."
 
-#: ../src/im-chooser-simple.c:324
+#: ../src/im-chooser-simple.c:332
 msgid "Failed to start Input Method"
 msgstr "Falha ao iniciar Método de Entrada"
 
-#: ../src/im-chooser-simple.c:351
+#: ../src/im-chooser-simple.c:359
 #, fuzzy
 msgid "Failed to stop Input Method"
 msgstr "Falha ao iniciar Método de Entrada"
 
-#: ../src/im-chooser-simple.c:438
+#: ../src/im-chooser-simple.c:461
 #, c-format
 msgid "Starting Input Method - %s"
 msgstr "Iniciando Método de Entrada - %s"
 
-#: ../src/im-chooser-simple.c:455
+#: ../src/im-chooser-simple.c:478
 #, c-format
 msgid "Stopping Input Method - %s"
 msgstr "Parando Método de Entrada - %s"
 
-#: ../src/im-chooser-simple.c:573
+#: ../src/im-chooser-simple.c:615
 msgid "Parent Window"
 msgstr "Janela Mãe"
 
-#: ../src/im-chooser-simple.c:574
+#: ../src/im-chooser-simple.c:616
 msgid "GtkWindow that points to the parent window"
 msgstr "GtkWindow que aponta para a janela mãe"
 
+#: ../src/im-chooser-simple.c:621
+msgid "Show note"
+msgstr ""
+
+#: ../src/im-chooser-simple.c:622
+msgid "Show note logs out to apply the change"
+msgstr ""
+
 #. setup a progress window
-#: ../src/im-chooser-simple.c:615
+#: ../src/im-chooser-simple.c:663
 msgid "Work in progress..."
 msgstr "Trabalho em andamento..."
 
-#: ../src/im-chooser-simple.c:674
+#: ../src/im-chooser-simple.c:715 ../src/im-chooser-simple.c:731
+#, c-format
+msgid "Unable to communicate to IMSettings services"
+msgstr ""
+
+#: ../src/im-chooser-simple.c:716 ../src/im-chooser-simple.c:732
+msgid "Version mismatch"
+msgstr ""
+
+#: ../src/im-chooser-simple.c:746
 msgid "Unable to gather current status"
 msgstr ""
 
-#: ../src/im-chooser-simple.c:689
+#: ../src/im-chooser-simple.c:752
+#, fuzzy
+msgid "Unable to get Input Method information"
+msgstr "Atualizando a Lista de Métodos de Entrada"
+
+#: ../src/im-chooser-simple.c:768
 #, c-format
 msgid "Use %s"
 msgstr "Usar %s"
 
-#: ../src/im-chooser-simple.c:692
+#: ../src/im-chooser-simple.c:771
 msgid " (legacy)"
 msgstr " (legado)"
 
-#: ../src/im-chooser-simple.c:696
+#: ../src/im-chooser-simple.c:773
 msgid " (recommended)"
 msgstr " (recomendado)"
 
-#: ../src/im-chooser-simple.c:804
+#: ../src/im-chooser-simple.c:880
 msgid "<b>Input Method</b>"
 msgstr "<b>Método de Entrada</b>"
 
-#: ../src/im-chooser-simple.c:810
+#: ../src/im-chooser-simple.c:886
 msgid "_Enable input method feature"
 msgstr "Habilitar recurso do método de  entrada"
 
-#: ../src/im-chooser-simple.c:841
+#: ../src/im-chooser-simple.c:893
+msgid ""
+"<small><i>Note: this change will not take effect until you next log in, "
+"except GTK+ applications.</i></small>"
+msgstr ""
+"<small><i>Nota: Esta alteração não terá efeito até o seu próximo login, com "
+"exceção de aplicações GTK+.</i></small>"
+
+#: ../src/im-chooser-simple.c:925
 msgid "Input Method _Preferences..."
 msgstr "Preferências do Método de Entrada..."
 
-#: ../src/main.c:43
+#: ../src/main.c:53
 msgid ""
 "<span weight=\"bold\" size=\"larger\">No input method is available</span>"
 msgstr ""
 "<span weight=\"bold\" size=\"larger\">Nenhum método de entrada disponível</"
 "span>"
 
-#: ../src/main.c:46
+#: ../src/main.c:56
 msgid "Please install any input methods before running if you like."
 msgstr ""
 "Por favor, instale quaisquer métodos de entradas antes de executar, se você "
 "quiser."
 
-#: ../src/main.c:110
+#: ../src/main.c:143
 msgid "IM Chooser - Input Method configuration tool"
 msgstr "IM Chooser - Ferramenta de configuração do Método de Entrada"
+
+#: ../src/main.c:157
+#, fuzzy
+msgid "Log Out"
+msgstr "Logoff"
 
 #: ../src/im-chooser.desktop.in.in.h:1
 msgid ""
@@ -358,13 +388,3 @@ msgstr "Método de Entrada"
 
 #~ msgid "Failed to stop IM process `%s'\n"
 #~ msgstr "Falha ao parar o processo IM `%s'\n"
-
-#~ msgid ""
-#~ "<small><i>Note: this change will not take effect until you next log in, "
-#~ "except GTK+ applications.</i></small>"
-#~ msgstr ""
-#~ "<small><i>Nota: Esta alteração não terá efeito até o seu próximo login, "
-#~ "com exceção de aplicações GTK+.</i></small>"
-
-#~ msgid "_Log Out"
-#~ msgstr "Logoff"

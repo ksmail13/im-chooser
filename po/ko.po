@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: im-chooser.trunk\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-06-04 12:36+0900\n"
+"POT-Creation-Date: 2008-07-08 17:38+0900\n"
 "PO-Revision-Date: 2008-04-07 17:29+1000\n"
 "Last-Translator: Eunju Kim <eukim@redhat.com>\n"
 "Language-Team: Korean <ko@li.org>\n"
@@ -20,94 +20,124 @@ msgstr ""
 "\n"
 "X-Generator: KBabel 1.11.4\n"
 
-#: ../src/im-chooser-simple.c:148
+#: ../src/im-chooser-simple.c:152
 msgid "Updating Input Method list"
 msgstr "입력 방식 목록 업데이트 "
 
-#: ../src/im-chooser-simple.c:157 ../src/im-chooser-simple.c:646
-#, fuzzy
-msgid "Unable to get Input Method list"
-msgstr "입력 방식 목록 업데이트 "
-
-#: ../src/im-chooser-simple.c:262
+#: ../src/im-chooser-simple.c:255
 #, fuzzy
 msgid "Unable to get the information"
 msgstr "imsettings 정보를 얻기 위한 로케일 "
 
-#: ../src/im-chooser-simple.c:324
+#: ../src/im-chooser-simple.c:332
 msgid "Failed to start Input Method"
 msgstr "입력 방식 시작 실패 "
 
-#: ../src/im-chooser-simple.c:351
+#: ../src/im-chooser-simple.c:359
 #, fuzzy
 msgid "Failed to stop Input Method"
 msgstr "입력 방식 시작 실패 "
 
-#: ../src/im-chooser-simple.c:438
+#: ../src/im-chooser-simple.c:461
 #, c-format
 msgid "Starting Input Method - %s"
 msgstr "입력 방식 시작 - %s"
 
-#: ../src/im-chooser-simple.c:455
+#: ../src/im-chooser-simple.c:478
 #, c-format
 msgid "Stopping Input Method - %s"
 msgstr "입력 방식 중지 - %s"
 
-#: ../src/im-chooser-simple.c:573
+#: ../src/im-chooser-simple.c:615
 msgid "Parent Window"
 msgstr "부모창 "
 
-#: ../src/im-chooser-simple.c:574
+#: ../src/im-chooser-simple.c:616
 msgid "GtkWindow that points to the parent window"
 msgstr "부모창을 가리키는 GtkWindow "
 
+#: ../src/im-chooser-simple.c:621
+msgid "Show note"
+msgstr ""
+
+#: ../src/im-chooser-simple.c:622
+msgid "Show note logs out to apply the change"
+msgstr ""
+
 #. setup a progress window
-#: ../src/im-chooser-simple.c:615
+#: ../src/im-chooser-simple.c:663
 msgid "Work in progress..."
 msgstr "실행 중..."
 
-#: ../src/im-chooser-simple.c:674
+#: ../src/im-chooser-simple.c:715 ../src/im-chooser-simple.c:731
+#, c-format
+msgid "Unable to communicate to IMSettings services"
+msgstr ""
+
+#: ../src/im-chooser-simple.c:716 ../src/im-chooser-simple.c:732
+msgid "Version mismatch"
+msgstr ""
+
+#: ../src/im-chooser-simple.c:746
 msgid "Unable to gather current status"
 msgstr ""
 
-#: ../src/im-chooser-simple.c:689
+#: ../src/im-chooser-simple.c:752
+#, fuzzy
+msgid "Unable to get Input Method information"
+msgstr "입력 방식 목록 업데이트 "
+
+#: ../src/im-chooser-simple.c:768
 #, c-format
 msgid "Use %s"
 msgstr "%s 사용 "
 
-#: ../src/im-chooser-simple.c:692
+#: ../src/im-chooser-simple.c:771
 msgid " (legacy)"
 msgstr " (레거시)"
 
-#: ../src/im-chooser-simple.c:696
+#: ../src/im-chooser-simple.c:773
 msgid " (recommended)"
 msgstr " (권장 사항)"
 
-#: ../src/im-chooser-simple.c:804
+#: ../src/im-chooser-simple.c:880
 msgid "<b>Input Method</b>"
 msgstr "<b>입력 방식</b>"
 
-#: ../src/im-chooser-simple.c:810
+#: ../src/im-chooser-simple.c:886
 msgid "_Enable input method feature"
 msgstr "입력 방식 기능 활성화 (_E)"
 
-#: ../src/im-chooser-simple.c:841
+#: ../src/im-chooser-simple.c:893
+msgid ""
+"<small><i>Note: this change will not take effect until you next log in, "
+"except GTK+ applications.</i></small>"
+msgstr ""
+"<small><i>알림: GTK+ 어플리케이션을 제외하고, 변경사항은 다음번 로그인 하실"
+"때 까지 적용되지 않습니다.</i></small>"
+
+#: ../src/im-chooser-simple.c:925
 msgid "Input Method _Preferences..."
 msgstr "입력 방식 설정 (_P) "
 
-#: ../src/main.c:43
+#: ../src/main.c:53
 msgid ""
 "<span weight=\"bold\" size=\"larger\">No input method is available</span>"
 msgstr ""
 "<span weight=\"bold\" size=\"larger\">사용 가능한 입력 방식이 없음</span> "
 
-#: ../src/main.c:46
+#: ../src/main.c:56
 msgid "Please install any input methods before running if you like."
 msgstr "실행하시기 전 입력 방식을 설치하시기 바랍니다."
 
-#: ../src/main.c:110
+#: ../src/main.c:143
 msgid "IM Chooser - Input Method configuration tool"
 msgstr "IM 선택자 - 입력 방식 설정 도구"
+
+#: ../src/main.c:157
+#, fuzzy
+msgid "Log Out"
+msgstr "로그 아웃(_L)"
 
 #: ../src/im-chooser.desktop.in.in.h:1
 msgid ""
@@ -349,13 +379,3 @@ msgstr "입력 방식"
 
 #~ msgid "Failed to stop IM process `%s'\n"
 #~ msgstr "IM 프로세스 `%s' 중지 실패 \n"
-
-#~ msgid ""
-#~ "<small><i>Note: this change will not take effect until you next log in, "
-#~ "except GTK+ applications.</i></small>"
-#~ msgstr ""
-#~ "<small><i>알림: GTK+ 어플리케이션을 제외하고, 변경사항은 다음번 로그인 하"
-#~ "실때 까지 적용되지 않습니다.</i></small>"
-
-#~ msgid "_Log Out"
-#~ msgstr "로그 아웃(_L)"
