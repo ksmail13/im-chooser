@@ -1,3 +1,15 @@
+2008-07-08  Akira TAGOH  <tagoh@redhat.com>
+
+	* src/im-chooser-simple.c (im_chooser_simple_set_property):
+	toggle showing up the note.
+	(im_chooser_simple_get_widget): show up the note as needed.
+
+	* src/main.c (_im_changed_cb): new.
+	(_dialog_response_cb): Add GTK_RESPONSE_APPLY handler.
+	(main): run as GNOME apps to deal with the log out button.
+
+	* configure.ac: requires libgnomeui-2.0 again.
+
 2008-06-27  Akira TAGOH  <tagoh@redhat.com>
 
 	* src/im-chooser-simple.c (_im_chooser_simple_update_im_list): Invoke

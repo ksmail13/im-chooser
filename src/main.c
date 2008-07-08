@@ -26,7 +26,17 @@
 #endif
 #include <stdlib.h>
 #include <glib/gi18n.h>
+#include <gnome.h>
 #include "im-chooser-simple.h"
+
+static void
+_im_changed_cb(IMChooserSimple *im,
+	       gpointer         data)
+{
+	GtkWidget *button = GTK_WIDGET (data);
+
+	gtk_widget_set_sensitive(button, im_chooser_simple_is_modified(im));
+}
 
 static void
 _im_notify_n_im_cb(IMChooserSimple *im,
@@ -80,6 +90,23 @@ _dialog_response_cb(GtkDialog *dialog,
 	    case GTK_RESPONSE_DELETE_EVENT:
 	    case GTK_RESPONSE_OK:
 		    break;
+	    case GTK_RESPONSE_APPLY:
+		    G_STMT_START {
+			    GnomeClient *client;
+
+			    if ((client = gnome_master_client()) == NULL) {
+				    g_warning("Failed to get the master client instance.");
+				    return;
+			    }
+			    gnome_client_request_save(client,
+						      GNOME_SAVE_GLOBAL,
+						      TRUE,
+						      GNOME_INTERACT_ANY,
+						      FALSE,
+						      TRUE);
+			    return;
+		    } G_STMT_END;
+		    break;
 	    default:
 		    g_warning("Unknown response id: %d", response_id);
 		    return;
@@ -92,9 +119,12 @@ int
 main(int    argc,
      char **argv)
 {
+	GnomeProgram *program;
+	GtkWidget *logout_button, *logout_image;
 	GtkWidget *window, *widget, *close_button;
 	IMChooserSimple *im;
 	gchar *iconfile;
+	const gchar *xmodifiers;
 
 #ifdef ENABLE_NLS
 	bindtextdomain (GETTEXT_PACKAGE, IMCHOOSE_LOCALEDIR);
@@ -104,7 +134,10 @@ main(int    argc,
 	textdomain (GETTEXT_PACKAGE);
 #endif /* ENABLE_NLS */
 
-	gtk_init(&argc, &argv);
+	program = gnome_program_init("im-chooser", VERSION,
+				     LIBGNOMEUI_MODULE,
+				     argc, argv,
+				     NULL);
 
 	window = gtk_dialog_new();
 	gtk_window_set_title(GTK_WINDOW (window), _("IM Chooser - Input Method configuration tool"));
@@ -113,11 +146,29 @@ main(int    argc,
 	gtk_window_set_icon_from_file(GTK_WINDOW (window), iconfile, NULL);
 	gtk_container_set_border_width(GTK_CONTAINER (window), 4);
 	gtk_container_set_border_width(GTK_CONTAINER (GTK_DIALOG (window)->vbox), 0);
-	close_button = gtk_button_new_from_stock(GTK_STOCK_OK);
+
+	im = im_chooser_simple_new();
+	xmodifiers = g_getenv("XMODIFIERS");
+	if (xmodifiers == NULL || strcmp(xmodifiers, "@im=imsettings") != 0) {
+		/* restarting is required to apply the changes for XIM at least.
+		 * so we show up the logout button.
+		 */
+		close_button = gtk_button_new_from_stock(GTK_STOCK_CLOSE);
+		logout_button = gtk_button_new_with_mnemonic(_("Log Out"));
+		gtk_widget_set_sensitive(logout_button, FALSE);
+		logout_image = gtk_image_new_from_stock(GTK_STOCK_QUIT, GTK_ICON_SIZE_BUTTON);
+		gtk_button_set_image(GTK_BUTTON (logout_button), logout_image);
+		gtk_dialog_add_action_widget(GTK_DIALOG (window), logout_button, GTK_RESPONSE_APPLY);
+
+		g_signal_connect(im, "changed",
+				 G_CALLBACK (_im_changed_cb), logout_button);
+		g_object_set(im, "show_note", TRUE, NULL);
+	} else {
+		close_button = gtk_button_new_from_stock(GTK_STOCK_OK);
+	}
 	gtk_dialog_add_action_widget(GTK_DIALOG (window), close_button, GTK_RESPONSE_OK);
 	gtk_dialog_set_has_separator(GTK_DIALOG (window), FALSE);
 
-	im = im_chooser_simple_new();
 	g_signal_connect(im, "notify_n_im",
 			 G_CALLBACK (_im_notify_n_im_cb), window);
 	g_object_set(G_OBJECT (im), "parent_window", window, NULL);
@@ -135,6 +186,7 @@ main(int    argc,
 	gtk_main();
 
 	g_object_unref(im);
+	g_object_unref(program);
 
 	return 0;
 }

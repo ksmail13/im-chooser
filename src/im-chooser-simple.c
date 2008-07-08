@@ -43,6 +43,7 @@ enum {
 enum {
 	PROP_0,
 	PROP_PARENT_WINDOW,
+	PROP_SHOW_NOTE,
 	LAST_PROP
 };
 
@@ -79,6 +80,7 @@ struct _IMChooserSimple {
 	GtkWidget          *button_im_config;
 	GtkWidget          *progress;
 	GtkWidget          *label;
+	GtkWidget          *note;
 	IMSettingsRequest  *imsettings;
 	IMSettingsRequest  *imsettings_info;
 	gchar              *initial_im;
@@ -90,6 +92,7 @@ struct _IMChooserSimple {
 	gboolean            ignore_actions;
 	guint               idle_source;
 	guint               progress_id;
+	gboolean            is_note_shown;
 };
 
 
@@ -548,6 +551,15 @@ im_chooser_simple_set_property(GObject      *object,
 		    gtk_window_set_transient_for(GTK_WINDOW (im->progress),
 						 GTK_WINDOW (g_value_get_object(value)));
 		    break;
+	    case PROP_SHOW_NOTE:
+		    im->is_note_shown = g_value_get_boolean(value);
+		    if (im->note && GTK_IS_WIDGET (im->note)) {
+			    if (im->is_note_shown)
+				    gtk_widget_show(im->note);
+			    else
+				    gtk_widget_hide(im->note);
+		    }
+		    break;
 	    default:
 		    G_OBJECT_WARN_INVALID_PROPERTY_ID (object, prop_id, pspec);
 		    break;
@@ -560,7 +572,12 @@ im_chooser_simple_get_property(GObject    *object,
 			       GValue     *value,
 			       GParamSpec *pspec)
 {
+	IMChooserSimple *im = IM_CHOOSER_SIMPLE (object);
+
 	switch (prop_id) {
+	    case PROP_SHOW_NOTE:
+		    g_value_set_boolean(value, im->is_note_shown);
+		    break;
 	    default:
 		    G_OBJECT_WARN_INVALID_PROPERTY_ID (object, prop_id, pspec);
 		    break;
@@ -599,6 +616,12 @@ im_chooser_simple_class_init(IMChooserSimpleClass *klass)
 							    _("GtkWindow that points to the parent window"),
 							    GTK_TYPE_WINDOW,
 							    G_PARAM_READWRITE));
+	g_object_class_install_property(object_class, PROP_SHOW_NOTE,
+					g_param_spec_boolean("show_note",
+							     _("Show note"),
+							     _("Show note logs out to apply the change"),
+							     FALSE,
+							     G_PARAM_READWRITE));
 
 	/* signals */
 	signals[CHANGED] = g_signal_new("changed",
@@ -840,7 +863,7 @@ GtkWidget *
 im_chooser_simple_get_widget(IMChooserSimple *im)
 {
 	GtkWidget *vbox, *align, *label, *align2, *checkbox;
-	GtkWidget *align4, *align5, *button;
+	GtkWidget *label3, *align4, *align5, *button;
 	GtkWidget *image, *hbox, *list, *scrolled;
 	GtkCellRenderer *renderer;
 	GtkTreeViewColumn *column;
@@ -865,6 +888,14 @@ im_chooser_simple_get_widget(IMChooserSimple *im)
 		gtk_alignment_set_padding(GTK_ALIGNMENT (align2), 3, 6, 6, 6);
 		g_signal_connect(checkbox, "toggled",
 				 G_CALLBACK (im_chooser_simple_enable_im_on_toggled), im);
+
+		im->note = gtk_alignment_new(0.1, 0, 1.0, 1.0);
+		label3 = gtk_label_new(_("<small><i>Note: this change will not take effect until you next log in, except GTK+ applications.</i></small>"));
+		gtk_label_set_use_markup(GTK_LABEL (label3), TRUE);
+		gtk_label_set_line_wrap(GTK_LABEL (label3), TRUE);
+		gtk_misc_set_alignment(GTK_MISC (label3), 0, 0);
+		gtk_container_add(GTK_CONTAINER (im->note), label3);
+		gtk_alignment_set_padding(GTK_ALIGNMENT (im->note), 3, 6, 6, 6);
 
 		align4 = gtk_alignment_new(0.1, 0, 1.0, 1.0);
 		im->widget_scrolled = scrolled = gtk_scrolled_window_new(NULL, NULL);
@@ -905,6 +936,7 @@ im_chooser_simple_get_widget(IMChooserSimple *im)
 		gtk_box_pack_start(GTK_BOX (vbox), align, FALSE, TRUE, 0);
 		gtk_box_pack_start(GTK_BOX (vbox), align4, TRUE, TRUE, 0);
 		gtk_box_pack_start(GTK_BOX (vbox), hbox, FALSE, TRUE, 0);
+		gtk_box_pack_start(GTK_BOX (vbox), im->note, FALSE, FALSE, 0);
 
 		im->widget = vbox;
 	}
@@ -917,6 +949,8 @@ im_chooser_simple_get_widget(IMChooserSimple *im)
 				     FALSE);
 	gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON (im->checkbox_is_im_enabled),
 				     (im->current_im != NULL));
+	if (!im->is_note_shown)
+		gtk_widget_hide(im->note);
 
 	im->initialized = TRUE;
 

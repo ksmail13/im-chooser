@@ -43,7 +43,8 @@ AM_GLIB_GNU_GETTEXT
 dnl ======================================================================
 dnl check pkg-config stuff
 dnl ======================================================================
-PKG_CHECK_MODULES(IMCHOOSE, gtk+-2.0)
+PKG_CHECK_MODULES(IMCHOOSE, gtk+-2.0
+			    libgnomeui-2.0)
 PKG_CHECK_MODULES(IMSETTINGS, imsettings >= $IMSETTINGS_REQUIRED)
 AC_SUBST(IMCHOOSE_CFLAGS)
 AC_SUBST(IMCHOOSE_LIBS)
