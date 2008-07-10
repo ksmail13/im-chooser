@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: pl\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-07-08 17:38+0900\n"
-"PO-Revision-Date: 2008-06-23 22:10+0200\n"
+"PO-Revision-Date: 2008-07-10 23:28+0200\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish <pl@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -49,11 +49,11 @@ msgstr "GtkWindow wskazujące na okno nadrzędne"
 
 #: ../src/im-chooser-simple.c:621
 msgid "Show note"
-msgstr ""
+msgstr "Wyświetl uwagę"
 
 #: ../src/im-chooser-simple.c:622
 msgid "Show note logs out to apply the change"
-msgstr ""
+msgstr "Wyświetlenie uwagi wylogowuje, aby zastosować zmiany"
 
 #. setup a progress window
 #: ../src/im-chooser-simple.c:663
@@ -63,20 +63,19 @@ msgstr "Trwa praca..."
 #: ../src/im-chooser-simple.c:715 ../src/im-chooser-simple.c:731
 #, c-format
 msgid "Unable to communicate to IMSettings services"
-msgstr ""
+msgstr "Nie można komunikować się z usługami IMSettings"
 
 #: ../src/im-chooser-simple.c:716 ../src/im-chooser-simple.c:732
 msgid "Version mismatch"
-msgstr ""
+msgstr "Wersja nie zgadza się"
 
 #: ../src/im-chooser-simple.c:746
 msgid "Unable to gather current status"
 msgstr "Nie można uzyskać obecnego stanu"
 
 #: ../src/im-chooser-simple.c:752
-#, fuzzy
 msgid "Unable to get Input Method information"
-msgstr "Nie można uzyskać listy metod wejścia"
+msgstr "Nie można uzyskać informacji o metodzie wejścia"
 
 #: ../src/im-chooser-simple.c:768
 #, c-format
@@ -104,6 +103,8 @@ msgid ""
 "<small><i>Note: this change will not take effect until you next log in, "
 "except GTK+ applications.</i></small>"
 msgstr ""
+"<small><i>Uwaga: ta zmiana nie zostanie uwzględniona przed następnym "
+"logowaniem, oprócz aplikacji GTK+.</i></small>"
 
 #: ../src/im-chooser-simple.c:925
 msgid "Input Method _Preferences..."
@@ -125,7 +126,7 @@ msgstr "Wybór metody wejścia - narzędzie konfiguracji metody wejścia"
 
 #: ../src/main.c:157
 msgid "Log Out"
-msgstr ""
+msgstr "Wyloguj"
 
 #: ../src/im-chooser.desktop.in.in.h:1
 msgid ""
