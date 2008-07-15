@@ -1,3 +1,8 @@
+2008-07-15  Akira TAGOH  <tagoh@redhat.com>
+
+	* src/im-chooser-simple.c (_im_chooser_simple_update_im_list):
+	show up the icon if available in IMInfo. (rhbz#454371)
+
 2008-07-08  Akira TAGOH  <tagoh@redhat.com>
 
 	* src/im-chooser-simple.c (im_chooser_simple_set_property):

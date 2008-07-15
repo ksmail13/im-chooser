@@ -34,6 +34,11 @@
 
 #define IMCHOOSER_GERROR	(im_chooser_simple_g_error_quark())
 
+#define POS_ICON	0
+#define POS_LABEL	1
+#define POS_IMNAME	2
+#define POS_IMINFO	3
+
 enum {
 	CHANGED,
 	NOTIFY_N_IM,
@@ -157,7 +162,7 @@ im_chooser_simple_enable_im_on_toggled(GtkToggleButton *button,
 		}
 		selection = gtk_tree_view_get_selection(GTK_TREE_VIEW (im->widget_im_list));
 		if (gtk_tree_selection_get_selected(selection, &model, &iter)) {
-			gtk_tree_model_get(model, &iter, 1, &name, -1);
+			gtk_tree_model_get(model, &iter, POS_IMNAME, &name, -1);
 			if (im->current_im) {
 				if (im->initialized) {
 					a = _action_new(ACTION_IM_STOP,
@@ -211,7 +216,7 @@ im_chooser_simple_im_list_on_changed(GtkTreeSelection *selection,
 		return;
 
 	if (gtk_tree_selection_get_selected(selection, &model, &iter)) {
-		gtk_tree_model_get(model, &iter, 1, &name, -1);
+		gtk_tree_model_get(model, &iter, POS_IMNAME, &name, -1);
 		if (im->current_im &&
 		    strcmp(im->current_im, name) != 0) {
 			a = _action_new(ACTION_IM_STOP,
@@ -754,15 +759,46 @@ _im_chooser_simple_update_im_list(IMChooserSimple *im)
 		exit(1);
 	}
 
-	list = gtk_list_store_new(3, G_TYPE_STRING, G_TYPE_STRING, G_TYPE_OBJECT);
+	list = gtk_list_store_new(4, GDK_TYPE_PIXBUF, G_TYPE_STRING, G_TYPE_STRING, G_TYPE_OBJECT);
 	for (i = 0; i < array->len; i++) {
 		GString *string = g_string_new(NULL);
-		const gchar *name;
+		const gchar *name, *iconfile;
 		IMSettingsInfo *info;
+		GdkPixbuf *pixbuf = NULL;
 
 		info = IMSETTINGS_INFO (g_ptr_array_index(array, i));
 		name = imsettings_info_get_short_desc(info);
+		iconfile = imsettings_info_get_icon_file(info);
 
+		if (iconfile) {
+			pixbuf = gdk_pixbuf_new_from_file_at_scale(iconfile,
+								   18, 18,
+								   TRUE, NULL);
+		} else {
+			static const char *foo_xpm[] = {
+				"18 18 1 1",
+				" 	c None",
+				"                  ",
+				"                  ",
+				"                  ",
+				"                  ",
+				"                  ",
+				"                  ",
+				"                  ",
+				"                  ",
+				"                  ",
+				"                  ",
+				"                  ",
+				"                  ",
+				"                  ",
+				"                  ",
+				"                  ",
+				"                  ",
+				"                  ",
+				"                  "};
+
+			pixbuf = gdk_pixbuf_new_from_xpm_data(foo_xpm);
+		}
 		gtk_list_store_append(list, &iter);
 		g_string_append(string, "<i>");
 		g_string_append_printf(string, _("Use %s"), name);
@@ -784,9 +820,10 @@ _im_chooser_simple_update_im_list(IMChooserSimple *im)
 		}
 		g_string_append(string, "</i>");
 		gtk_list_store_set(list, &iter,
-				   0, string->str,
-				   1, name,
-				   2, info,
+				   POS_ICON, pixbuf,
+				   POS_LABEL, string->str,
+				   POS_IMNAME, name,
+				   POS_IMINFO, info,
 				   -1);
 		g_string_free(string, TRUE);
 	}
@@ -908,10 +945,17 @@ im_chooser_simple_get_widget(IMChooserSimple *im)
 		gtk_container_add(GTK_CONTAINER (scrolled), list);
 		gtk_container_add(GTK_CONTAINER (align4), scrolled);
 		gtk_alignment_set_padding(GTK_ALIGNMENT (align4), 0, 6, 18, 6);
+
+		renderer = gtk_cell_renderer_pixbuf_new();
+		column = gtk_tree_view_column_new_with_attributes("",
+								  renderer,
+								  "pixbuf", POS_ICON,
+								  NULL);
+		gtk_tree_view_append_column(GTK_TREE_VIEW (list), column);
 		renderer = gtk_cell_renderer_text_new();
 		column = gtk_tree_view_column_new_with_attributes("",
 								  renderer,
-								  "markup", 0,
+								  "markup", POS_LABEL,
 								  NULL);
 		gtk_tree_view_append_column(GTK_TREE_VIEW (list), column);
 
