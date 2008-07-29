@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ar\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-07-08 17:38+0900\n"
+"POT-Creation-Date: 2008-07-29 18:12+0900\n"
 "PO-Revision-Date: 2007-01-12 08:23+0200\n"
 "Last-Translator: Ali Ghareb <ali.gareb@gmail.com>\n"
 "Language-Team: Arabic <en@li.org>\n"
@@ -18,103 +18,103 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.11.4\n"
 
-#: ../src/im-chooser-simple.c:152
+#: ../src/im-chooser-simple.c:157
 #, fuzzy
 msgid "Updating Input Method list"
 msgstr "طريقة ادخال"
 
-#: ../src/im-chooser-simple.c:255
+#: ../src/im-chooser-simple.c:260
 msgid "Unable to get the information"
 msgstr ""
 
-#: ../src/im-chooser-simple.c:332
+#: ../src/im-chooser-simple.c:337
 #, fuzzy
 msgid "Failed to start Input Method"
 msgstr "لا تستخدم طرق ادخال مطلقا"
 
-#: ../src/im-chooser-simple.c:359
+#: ../src/im-chooser-simple.c:364
 #, fuzzy
 msgid "Failed to stop Input Method"
 msgstr "لا تستخدم طرق ادخال مطلقا"
 
-#: ../src/im-chooser-simple.c:461
+#: ../src/im-chooser-simple.c:466
 #, fuzzy, c-format
 msgid "Starting Input Method - %s"
 msgstr "طريقة ادخال"
 
-#: ../src/im-chooser-simple.c:478
+#: ../src/im-chooser-simple.c:483
 #, fuzzy, c-format
 msgid "Stopping Input Method - %s"
 msgstr "طريقة ادخال"
 
-#: ../src/im-chooser-simple.c:615
+#: ../src/im-chooser-simple.c:620
 msgid "Parent Window"
 msgstr ""
 
-#: ../src/im-chooser-simple.c:616
+#: ../src/im-chooser-simple.c:621
 msgid "GtkWindow that points to the parent window"
 msgstr ""
 
-#: ../src/im-chooser-simple.c:621
+#: ../src/im-chooser-simple.c:626
 msgid "Show note"
 msgstr ""
 
-#: ../src/im-chooser-simple.c:622
+#: ../src/im-chooser-simple.c:627
 msgid "Show note logs out to apply the change"
 msgstr ""
 
 #. setup a progress window
-#: ../src/im-chooser-simple.c:663
+#: ../src/im-chooser-simple.c:668
 msgid "Work in progress..."
 msgstr ""
 
-#: ../src/im-chooser-simple.c:715 ../src/im-chooser-simple.c:731
+#: ../src/im-chooser-simple.c:720 ../src/im-chooser-simple.c:736
 #, c-format
 msgid "Unable to communicate to IMSettings services"
 msgstr ""
 
-#: ../src/im-chooser-simple.c:716 ../src/im-chooser-simple.c:732
+#: ../src/im-chooser-simple.c:721 ../src/im-chooser-simple.c:737
 msgid "Version mismatch"
 msgstr ""
 
-#: ../src/im-chooser-simple.c:746
+#: ../src/im-chooser-simple.c:751
 msgid "Unable to gather current status"
 msgstr ""
 
-#: ../src/im-chooser-simple.c:752
+#: ../src/im-chooser-simple.c:757
 #, fuzzy
 msgid "Unable to get Input Method information"
 msgstr "طريقة ادخال"
 
-#: ../src/im-chooser-simple.c:768
+#: ../src/im-chooser-simple.c:804
 #, c-format
 msgid "Use %s"
 msgstr ""
 
-#: ../src/im-chooser-simple.c:771
+#: ../src/im-chooser-simple.c:807
 msgid " (legacy)"
 msgstr ""
 
-#: ../src/im-chooser-simple.c:773
+#: ../src/im-chooser-simple.c:809
 msgid " (recommended)"
 msgstr ""
 
-#: ../src/im-chooser-simple.c:880
+#: ../src/im-chooser-simple.c:917
 msgid "<b>Input Method</b>"
 msgstr "<b>طريقة الادخال</b>"
 
-#: ../src/im-chooser-simple.c:886
+#: ../src/im-chooser-simple.c:923
 msgid "_Enable input method feature"
 msgstr ""
 
-#: ../src/im-chooser-simple.c:893
+#: ../src/im-chooser-simple.c:930
 #, fuzzy
 msgid ""
 "<small><i>Note: this change will not take effect until you next log in, "
 "except GTK+ applications.</i></small>"
 msgstr "<small><i>ملاحظة: هذا التغيير لن يتم حتى دخولك مرة أخرى</i></small>"
 
-#: ../src/im-chooser-simple.c:925
+#: ../src/im-chooser-simple.c:969
 #, fuzzy
 msgid "Input Method _Preferences..."
 msgstr "طريقة ادخال"
