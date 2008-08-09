@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: im-chooser\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-07-08 17:38+0900\n"
-"PO-Revision-Date: 2008-06-14 22:36+0200\n"
+"POT-Creation-Date: 2008-07-22 21:05+0000\n"
+"PO-Revision-Date: 2008-08-09 18:42+0200\n"
 "Last-Translator: Peter van Egdom <p.van.egdom@gmail.com>\n"
 "Language-Team: Dutch <fedora-trans-list@redhat.com>\n"
 "MIME-Version: 1.0\n"
@@ -17,94 +17,91 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../src/im-chooser-simple.c:152
+#: ../src/im-chooser-simple.c:157
 msgid "Updating Input Method list"
-msgstr "Bijwerken van invoermethode-lijst"
+msgstr "Bijwerken van invoermethodelijst"
 
-#: ../src/im-chooser-simple.c:255
+#: ../src/im-chooser-simple.c:260
 msgid "Unable to get the information"
-msgstr ""
+msgstr "Niet in staat om de informatie te verkrijgen"
 
-#: ../src/im-chooser-simple.c:332
+#: ../src/im-chooser-simple.c:337
 msgid "Failed to start Input Method"
 msgstr "Starten van invoermethode is mislukt"
 
-#: ../src/im-chooser-simple.c:359
-#, fuzzy
+#: ../src/im-chooser-simple.c:364
 msgid "Failed to stop Input Method"
-msgstr "Starten van invoermethode is mislukt"
+msgstr "Stoppen van invoermethode is mislukt"
 
-#: ../src/im-chooser-simple.c:461
+#: ../src/im-chooser-simple.c:466
 #, c-format
 msgid "Starting Input Method - %s"
 msgstr "Starten van invoermethode - %s"
 
-#: ../src/im-chooser-simple.c:478
+#: ../src/im-chooser-simple.c:483
 #, c-format
 msgid "Stopping Input Method - %s"
 msgstr "Stoppen van invoermethode - %s"
 
-#: ../src/im-chooser-simple.c:615
+#: ../src/im-chooser-simple.c:620
 msgid "Parent Window"
-msgstr ""
-
-#: ../src/im-chooser-simple.c:616
-msgid "GtkWindow that points to the parent window"
-msgstr ""
+msgstr "Bovenliggend venster"
 
 #: ../src/im-chooser-simple.c:621
-msgid "Show note"
-msgstr ""
+msgid "GtkWindow that points to the parent window"
+msgstr "GtkWindow dat naar het bovenliggend venster verwijst"
 
-#: ../src/im-chooser-simple.c:622
+#: ../src/im-chooser-simple.c:626
+msgid "Show note"
+msgstr "Opmerking tonen"
+
+#: ../src/im-chooser-simple.c:627
 msgid "Show note logs out to apply the change"
-msgstr ""
+msgstr "Opmerking tonen zal afmelden om de verandering toe te passen"
 
 #. setup a progress window
-#: ../src/im-chooser-simple.c:663
+#: ../src/im-chooser-simple.c:668
 msgid "Work in progress..."
-msgstr ""
+msgstr "Werk in uitvoering..."
 
-#: ../src/im-chooser-simple.c:715 ../src/im-chooser-simple.c:731
-#, c-format
+#: ../src/im-chooser-simple.c:720 ../src/im-chooser-simple.c:736
 msgid "Unable to communicate to IMSettings services"
-msgstr ""
+msgstr "Niet in staat om te communiceren met IMSettings diensten"
 
-#: ../src/im-chooser-simple.c:716 ../src/im-chooser-simple.c:732
+#: ../src/im-chooser-simple.c:721 ../src/im-chooser-simple.c:737
 msgid "Version mismatch"
-msgstr ""
+msgstr "Versies komen niet overeen"
 
-#: ../src/im-chooser-simple.c:746
+#: ../src/im-chooser-simple.c:751
 msgid "Unable to gather current status"
-msgstr ""
+msgstr "Niet in staat om de huidige status te verzamelen"
 
-#: ../src/im-chooser-simple.c:752
-#, fuzzy
+#: ../src/im-chooser-simple.c:757
 msgid "Unable to get Input Method information"
-msgstr "Starten van invoermethode is mislukt"
+msgstr "Niet in staat om invoermethodeinformatie te verkrijgen"
 
-#: ../src/im-chooser-simple.c:768
+#: ../src/im-chooser-simple.c:804
 #, c-format
 msgid "Use %s"
 msgstr "%s gebruiken"
 
-#: ../src/im-chooser-simple.c:771
+#: ../src/im-chooser-simple.c:807
 msgid " (legacy)"
 msgstr " (verouderd)"
 
-#: ../src/im-chooser-simple.c:773
+#: ../src/im-chooser-simple.c:809
 msgid " (recommended)"
 msgstr " (aanbevolen)"
 
-#: ../src/im-chooser-simple.c:880
+#: ../src/im-chooser-simple.c:917
 msgid "<b>Input Method</b>"
 msgstr "<b>Invoermethode</b>"
 
-#: ../src/im-chooser-simple.c:886
+#: ../src/im-chooser-simple.c:923
 msgid "_Enable input method feature"
-msgstr "Invoermethode-functie _aanzetten"
+msgstr "Invoermethodefunctie _aanzetten"
 
-#: ../src/im-chooser-simple.c:893
+#: ../src/im-chooser-simple.c:930
 msgid ""
 "<small><i>Note: this change will not take effect until you next log in, "
 "except GTK+ applications.</i></small>"
@@ -112,9 +109,9 @@ msgstr ""
 "<small><i>Let op: deze wijziging zal pas actief worden wanneer u zich "
 "opnieuw aanmeldt, met uitzondering van GTK+ toepassingen.</i></small>"
 
-#: ../src/im-chooser-simple.c:925
+#: ../src/im-chooser-simple.c:969
 msgid "Input Method _Preferences..."
-msgstr "Voorkeuren voor invoermethode..."
+msgstr "Invoermethode _voorkeuren..."
 
 #: ../src/main.c:53
 msgid ""
@@ -132,9 +129,8 @@ msgid "IM Chooser - Input Method configuration tool"
 msgstr "IM Chooser - Configuratiehulpmiddel voor invoermethode"
 
 #: ../src/main.c:157
-#, fuzzy
 msgid "Log Out"
-msgstr "_Afmelden"
+msgstr "Afmelden"
 
 #: ../src/im-chooser.desktop.in.in.h:1
 msgid ""
