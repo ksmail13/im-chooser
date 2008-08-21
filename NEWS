@@ -1,3 +1,9 @@
+1.2.1 ->
+=================
+* Bug Fixes
+  * Unable to close the error dialog
+  * Display the progress dialog unexpectedly when the error dialog is bringing up.
+
 1.2.0 -> 1.2.1
 =================
 * Feature

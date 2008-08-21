@@ -430,6 +430,8 @@ im_chooser_simple_show_error(IMChooserSimple *im,
 	gchar *p;
 	GtkBox *vbox, *hbox;
 
+	if (im->progress_id != 0)
+		g_source_remove(im->progress_id);
 	p = g_strdup_printf("<span weight=\"bold\" size=\"larger\">%s</span>", message);
 	dlg = gtk_message_dialog_new_with_markup(GTK_WINDOW (im->progress),
 						 GTK_DIALOG_MODAL,
@@ -446,6 +448,7 @@ im_chooser_simple_show_error(IMChooserSimple *im,
 	gtk_container_set_border_width(GTK_CONTAINER (hbox), 6);
 
 	gtk_dialog_run(GTK_DIALOG (dlg));
+	gtk_widget_destroy(dlg);
 	g_free(p);
 }
 

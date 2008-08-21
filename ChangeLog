@@ -1,3 +1,10 @@
+2008-08-18  Akira TAGOH  <tagoh@redhat.com>
+
+	* src/im-chooser-simple.c (im_chooser_simple_show_error): remove
+	the timout source before opening a dialog to prevent unable to take
+	any action on the dialog.
+	(im_chooser_simple_show_error): destroy the dialog.
+
 2008-07-15  Akira TAGOH  <tagoh@redhat.com>
 
 	* src/im-chooser-simple.c (_im_chooser_simple_update_im_list):
