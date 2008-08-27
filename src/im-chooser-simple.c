@@ -48,7 +48,7 @@ enum {
 enum {
 	PROP_0,
 	PROP_PARENT_WINDOW,
-	PROP_SHOW_NOTE,
+	PROP_NOTE_TYPE,
 	LAST_PROP
 };
 
@@ -86,6 +86,7 @@ struct _IMChooserSimple {
 	GtkWidget          *progress;
 	GtkWidget          *label;
 	GtkWidget          *note;
+	GtkWidget          *note_label;
 	IMSettingsRequest  *imsettings;
 	IMSettingsRequest  *imsettings_info;
 	gchar              *initial_im;
@@ -97,7 +98,7 @@ struct _IMChooserSimple {
 	gboolean            ignore_actions;
 	guint               idle_source;
 	guint               progress_id;
-	gboolean            is_note_shown;
+	NoteType            note_type;
 };
 
 
@@ -117,7 +118,11 @@ static void                       im_chooser_simple_show_error     (IMChooserSim
 
 static GObjectClass *parent_class = NULL;
 static guint         signals[LAST_SIGNAL] = { 0 };
-
+static const gchar note_exception[5][256] = {
+	N_("X applications"),
+	N_("GTK+ applications"),
+	N_("Qt applications")
+};
 
 /*
  * signal callback functions
@@ -553,20 +558,49 @@ im_chooser_simple_set_property(GObject      *object,
 			       GParamSpec   *pspec)
 {
 	IMChooserSimple *im = IM_CHOOSER_SIMPLE (object);
+	gchar *s, *exception;
 
 	switch (prop_id) {
 	    case PROP_PARENT_WINDOW:
 		    gtk_window_set_transient_for(GTK_WINDOW (im->progress),
 						 GTK_WINDOW (g_value_get_object(value)));
 		    break;
-	    case PROP_SHOW_NOTE:
-		    im->is_note_shown = g_value_get_boolean(value);
-		    if (im->note && GTK_IS_WIDGET (im->note)) {
-			    if (im->is_note_shown)
-				    gtk_widget_show(im->note);
-			    else
-				    gtk_widget_hide(im->note);
+	    case PROP_NOTE_TYPE:
+		    im->note_type = g_value_get_uint(value);
+		    if (im->note == NULL || !GTK_IS_WIDGET (im->note))
+			    return;
+		    if (im->note_type == (NOTE_TYPE_X | NOTE_TYPE_GTK | NOTE_TYPE_QT)) {
+			    gtk_widget_hide(im->note);
+		    } else {
+			    if (im->note_type == (NOTE_TYPE_X | NOTE_TYPE_QT)) {
+				    /* This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications and Qt applications</i></small>" */
+				    exception = g_strdup_printf(N_(", except %s and %s"), note_exception[0], note_exception[2]);
+			    } else if (im->note_type == (NOTE_TYPE_X | NOTE_TYPE_GTK)) {
+				    /* This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications and GTK+ applications</i></small>" */
+				    exception = g_strdup_printf(N_(", except %s and %s"), note_exception[0], note_exception[1]);
+			    } else if (im->note_type == (NOTE_TYPE_GTK | NOTE_TYPE_QT)) {
+				    /* This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications and Qt applications</i></small>" */
+				    exception = g_strdup_printf(N_(", except %s and %s"), note_exception[1], note_exception[2]);
+			    } else if (im->note_type == NOTE_TYPE_X) {
+				    /* This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications</i></small>" */
+				    exception = g_strdup_printf(N_(", except %s"), note_exception[0]);
+			    } else if (im->note_type == NOTE_TYPE_GTK) {
+				    /* This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications</i></small>" */
+				    exception = g_strdup_printf(N_(", except %s"), note_exception[1]);
+			    } else if (im->note_type == NOTE_TYPE_QT) {
+				    /* This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except Qt applications</i></small>" */
+				    exception = g_strdup_printf(N_(", except %s"), note_exception[2]);
+			    } else {
+				    exception = g_strdup("");
+			    }
+			    /* This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications</i></small>" */
+			    s = g_strdup_printf(N_("<small><i>Note: this change will not take effect until you next log in%s</i></small>"), exception);
+			    gtk_label_set_markup(GTK_LABEL (im->note_label), s);
+			    gtk_widget_show(im->note);
+			    g_free(exception);
+			    g_free(s);
 		    }
+		    gtk_widget_set_size_request(im->note_label, -1, -1);
 		    break;
 	    default:
 		    G_OBJECT_WARN_INVALID_PROPERTY_ID (object, prop_id, pspec);
@@ -583,8 +617,8 @@ im_chooser_simple_get_property(GObject    *object,
 	IMChooserSimple *im = IM_CHOOSER_SIMPLE (object);
 
 	switch (prop_id) {
-	    case PROP_SHOW_NOTE:
-		    g_value_set_boolean(value, im->is_note_shown);
+	    case PROP_NOTE_TYPE:
+		    g_value_set_uint(value, im->note_type);
 		    break;
 	    default:
 		    G_OBJECT_WARN_INVALID_PROPERTY_ID (object, prop_id, pspec);
@@ -624,12 +658,14 @@ im_chooser_simple_class_init(IMChooserSimpleClass *klass)
 							    _("GtkWindow that points to the parent window"),
 							    GTK_TYPE_WINDOW,
 							    G_PARAM_READWRITE));
-	g_object_class_install_property(object_class, PROP_SHOW_NOTE,
-					g_param_spec_boolean("show_note",
-							     _("Show note"),
-							     _("Show note logs out to apply the change"),
-							     FALSE,
-							     G_PARAM_READWRITE));
+	g_object_class_install_property(object_class, PROP_NOTE_TYPE,
+					g_param_spec_uint("note_type",
+							  _("Note type"),
+							  _("A enum value to determine which notes should be displayed"),
+							  0,
+							  G_MAXUINT,
+							  0,
+							  G_PARAM_READWRITE));
 
 	/* signals */
 	signals[CHANGED] = g_signal_new("changed",
@@ -903,7 +939,7 @@ GtkWidget *
 im_chooser_simple_get_widget(IMChooserSimple *im)
 {
 	GtkWidget *vbox, *align, *label, *align2, *checkbox;
-	GtkWidget *label3, *align4, *align5, *button;
+	GtkWidget *align4, *align5, *button;
 	GtkWidget *image, *hbox, *list, *scrolled;
 	GtkCellRenderer *renderer;
 	GtkTreeViewColumn *column;
@@ -930,11 +966,11 @@ im_chooser_simple_get_widget(IMChooserSimple *im)
 				 G_CALLBACK (im_chooser_simple_enable_im_on_toggled), im);
 
 		im->note = gtk_alignment_new(0.1, 0, 1.0, 1.0);
-		label3 = gtk_label_new(_("<small><i>Note: this change will not take effect until you next log in, except GTK+ applications.</i></small>"));
-		gtk_label_set_use_markup(GTK_LABEL (label3), TRUE);
-		gtk_label_set_line_wrap(GTK_LABEL (label3), TRUE);
-		gtk_misc_set_alignment(GTK_MISC (label3), 0, 0);
-		gtk_container_add(GTK_CONTAINER (im->note), label3);
+		im->note_label = gtk_label_new(NULL);
+		gtk_label_set_use_markup(GTK_LABEL (im->note_label), TRUE);
+		gtk_label_set_line_wrap(GTK_LABEL (im->note_label), TRUE);
+		gtk_misc_set_alignment(GTK_MISC (im->note_label), 0, 0);
+		gtk_container_add(GTK_CONTAINER (im->note), im->note_label);
 		gtk_alignment_set_padding(GTK_ALIGNMENT (im->note), 3, 6, 6, 6);
 
 		align4 = gtk_alignment_new(0.1, 0, 1.0, 1.0);
@@ -996,8 +1032,7 @@ im_chooser_simple_get_widget(IMChooserSimple *im)
 				     FALSE);
 	gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON (im->checkbox_is_im_enabled),
 				     (im->current_im != NULL));
-	if (!im->is_note_shown)
-		gtk_widget_hide(im->note);
+	g_object_set(im, "note_type", im->note_type, NULL);
 
 	im->initialized = TRUE;
 

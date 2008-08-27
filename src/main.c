@@ -124,7 +124,8 @@ main(int    argc,
 	GtkWidget *window, *widget, *close_button;
 	IMChooserSimple *im;
 	gchar *iconfile;
-	const gchar *xmodifiers;
+	const gchar *xmodifiers, *gtk_immodule, *qt_immodule;
+	guint note_type = 0;
 
 #ifdef ENABLE_NLS
 	bindtextdomain (GETTEXT_PACKAGE, IMCHOOSE_LOCALEDIR);
@@ -149,6 +150,8 @@ main(int    argc,
 
 	im = im_chooser_simple_new();
 	xmodifiers = g_getenv("XMODIFIERS");
+	gtk_immodule = g_getenv("GTK_IM_MODULE");
+	qt_immodule = g_getenv("QT_IM_MODULE");
 	if (xmodifiers == NULL || strcmp(xmodifiers, "@im=imsettings") != 0) {
 		/* restarting is required to apply the changes for XIM at least.
 		 * so we show up the logout button.
@@ -162,10 +165,19 @@ main(int    argc,
 
 		g_signal_connect(im, "changed",
 				 G_CALLBACK (_im_changed_cb), logout_button);
-		g_object_set(im, "show_note", TRUE, NULL);
 	} else {
 		close_button = gtk_button_new_from_stock(GTK_STOCK_OK);
+		note_type |= NOTE_TYPE_X;
 	}
+	if (gtk_immodule == NULL ||
+	    (strcmp(gtk_immodule, "xim") == 0 && (note_type & NOTE_TYPE_X))) {
+		note_type |= NOTE_TYPE_GTK;
+	}
+	if (qt_immodule == NULL ||
+	    (strcmp(qt_immodule, "xim") == 0 && (note_type & NOTE_TYPE_X))) {
+		note_type |= NOTE_TYPE_QT;
+	}
+	g_object_set(im, "note_type", note_type, NULL);
 	gtk_dialog_add_action_widget(GTK_DIALOG (window), close_button, GTK_RESPONSE_OK);
 	gtk_dialog_set_has_separator(GTK_DIALOG (window), FALSE);
 

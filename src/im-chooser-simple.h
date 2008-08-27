@@ -39,6 +39,12 @@ G_BEGIN_DECLS
 typedef struct _IMChooserSimple		IMChooserSimple;
 typedef struct _IMChooserSimpleClass	IMChooserSimpleClass;
 
+typedef enum {
+	NOTE_TYPE_X = 1 << 0,
+	NOTE_TYPE_GTK = 1 << 1,
+	NOTE_TYPE_QT = 1 << 2,
+} NoteType;
+
 
 GType            im_chooser_simple_get_type   (void) G_GNUC_CONST;
 IMChooserSimple *im_chooser_simple_new        (void);

@@ -1,3 +1,11 @@
+2008-08-27  Akira TAGOH  <tagoh@redhat.com>
+
+	* src/im-chooser-simple.c (im_chooser_simple_set_property): set proper
+	label according to the request.
+
+	* src/main.c (main): set proper notice type according to the current
+	envvars.
+
 2008-08-18  Akira TAGOH  <tagoh@redhat.com>
 
 	* src/im-chooser-simple.c (im_chooser_simple_show_error): remove
