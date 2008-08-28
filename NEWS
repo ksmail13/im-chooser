@@ -3,6 +3,13 @@
 * Bug Fixes
   * Unable to close the error dialog
   * Display the progress dialog unexpectedly when the error dialog is bringing up.
+* Improvements
+  * Display the proper notice against current status.
+* Translations updated
+  * Brazilian
+  * Dutch
+  * Japanese
+  * Norwegian Bokmål
 
 1.2.0 -> 1.2.1
 =================
