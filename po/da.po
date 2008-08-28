@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: im-chooser 0.3.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-07-29 18:12+0900\n"
+"POT-Creation-Date: 2008-08-28 14:46+0900\n"
 "PO-Revision-Date: 2006-09-29 04:28-0400\n"
 "Last-Translator: Keld Simonsen <keld@dkuug.dk>\n"
 "Language-Team: Danish <dansk@klid.dk>\n"
@@ -18,105 +18,136 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../src/im-chooser-simple.c:157
+#: ../src/im-chooser-simple.c:122
+msgid "X applications"
+msgstr ""
+
+#: ../src/im-chooser-simple.c:123
+msgid "GTK+ applications"
+msgstr ""
+
+#: ../src/im-chooser-simple.c:124
+msgid "Qt applications"
+msgstr ""
+
+#: ../src/im-chooser-simple.c:162
 #, fuzzy
 msgid "Updating Input Method list"
 msgstr "Indtastningsmetode"
 
-#: ../src/im-chooser-simple.c:260
+#: ../src/im-chooser-simple.c:265
 msgid "Unable to get the information"
 msgstr ""
 
-#: ../src/im-chooser-simple.c:337
+#: ../src/im-chooser-simple.c:342
 #, fuzzy
 msgid "Failed to start Input Method"
 msgstr "_Brug aldrig indtastningsmetoder"
 
-#: ../src/im-chooser-simple.c:364
+#: ../src/im-chooser-simple.c:369
 #, fuzzy
 msgid "Failed to stop Input Method"
 msgstr "_Brug aldrig indtastningsmetoder"
 
-#: ../src/im-chooser-simple.c:466
+#: ../src/im-chooser-simple.c:474
 #, fuzzy, c-format
 msgid "Starting Input Method - %s"
 msgstr "Indtastningsmetode"
 
-#: ../src/im-chooser-simple.c:483
+#: ../src/im-chooser-simple.c:491
 #, fuzzy, c-format
 msgid "Stopping Input Method - %s"
 msgstr "Indtastningsmetode"
 
-#: ../src/im-chooser-simple.c:620
-msgid "Parent Window"
-msgstr ""
-
-#: ../src/im-chooser-simple.c:621
-msgid "GtkWindow that points to the parent window"
-msgstr ""
-
-#: ../src/im-chooser-simple.c:626
-msgid "Show note"
-msgstr ""
-
-#: ../src/im-chooser-simple.c:627
-msgid "Show note logs out to apply the change"
-msgstr ""
-
-#. setup a progress window
-#: ../src/im-chooser-simple.c:668
-msgid "Work in progress..."
-msgstr ""
-
-#: ../src/im-chooser-simple.c:720 ../src/im-chooser-simple.c:736
+#. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications and Qt applications</i></small>"
+#. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications and GTK+ applications</i></small>"
+#. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications and Qt applications</i></small>"
+#: ../src/im-chooser-simple.c:577 ../src/im-chooser-simple.c:580
+#: ../src/im-chooser-simple.c:583
 #, c-format
-msgid "Unable to communicate to IMSettings services"
+msgid ", except %s and %s"
 msgstr ""
 
-#: ../src/im-chooser-simple.c:721 ../src/im-chooser-simple.c:737
-msgid "Version mismatch"
-msgstr ""
-
-#: ../src/im-chooser-simple.c:751
-msgid "Unable to gather current status"
-msgstr ""
-
-#: ../src/im-chooser-simple.c:757
-#, fuzzy
-msgid "Unable to get Input Method information"
-msgstr "Indtastningsmetode"
-
-#: ../src/im-chooser-simple.c:804
+#. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications</i></small>"
+#. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications</i></small>"
+#. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except Qt applications</i></small>"
+#: ../src/im-chooser-simple.c:586 ../src/im-chooser-simple.c:589
+#: ../src/im-chooser-simple.c:592
 #, c-format
-msgid "Use %s"
+msgid ", except %s"
 msgstr ""
 
-#: ../src/im-chooser-simple.c:807
-msgid " (legacy)"
-msgstr ""
-
-#: ../src/im-chooser-simple.c:809
-msgid " (recommended)"
-msgstr ""
-
-#: ../src/im-chooser-simple.c:917
-msgid "<b>Input Method</b>"
-msgstr "<b>Indtastningsmetode</b>"
-
-#: ../src/im-chooser-simple.c:923
-msgid "_Enable input method feature"
-msgstr ""
-
-#: ../src/im-chooser-simple.c:930
-#, fuzzy
+#. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications</i></small>"
+#: ../src/im-chooser-simple.c:597
+#, fuzzy, c-format
 msgid ""
-"<small><i>Note: this change will not take effect until you next log in, "
-"except GTK+ applications.</i></small>"
+"<small><i>Note: this change will not take effect until you next log in%s</"
+"i></small>"
 msgstr ""
 "<small><i>Bemærk: denne ændring vil ikke gælde før næste gang du logger ind."
 "</i></small>"
 
-#: ../src/im-chooser-simple.c:969
+#: ../src/im-chooser-simple.c:657
+msgid "Parent Window"
+msgstr ""
+
+#: ../src/im-chooser-simple.c:658
+msgid "GtkWindow that points to the parent window"
+msgstr ""
+
+#: ../src/im-chooser-simple.c:663
+msgid "Note type"
+msgstr ""
+
+#: ../src/im-chooser-simple.c:664
+msgid "A enum value to determine which notes should be displayed"
+msgstr ""
+
+#. setup a progress window
+#: ../src/im-chooser-simple.c:707
+msgid "Work in progress..."
+msgstr ""
+
+#: ../src/im-chooser-simple.c:759 ../src/im-chooser-simple.c:775
+#, c-format
+msgid "Unable to communicate to IMSettings services"
+msgstr ""
+
+#: ../src/im-chooser-simple.c:760 ../src/im-chooser-simple.c:776
+msgid "Version mismatch"
+msgstr ""
+
+#: ../src/im-chooser-simple.c:790
+msgid "Unable to gather current status"
+msgstr ""
+
+#: ../src/im-chooser-simple.c:796
+#, fuzzy
+msgid "Unable to get Input Method information"
+msgstr "Indtastningsmetode"
+
+#: ../src/im-chooser-simple.c:843
+#, c-format
+msgid "Use %s"
+msgstr ""
+
+#: ../src/im-chooser-simple.c:846
+msgid " (legacy)"
+msgstr ""
+
+#: ../src/im-chooser-simple.c:848
+msgid " (recommended)"
+msgstr ""
+
+#: ../src/im-chooser-simple.c:956
+msgid "<b>Input Method</b>"
+msgstr "<b>Indtastningsmetode</b>"
+
+#: ../src/im-chooser-simple.c:962
+msgid "_Enable input method feature"
+msgstr ""
+
+#: ../src/im-chooser-simple.c:1008
 #, fuzzy
 msgid "Input Method _Preferences..."
 msgstr "Indtastningsmetode"
@@ -130,11 +161,11 @@ msgstr ""
 msgid "Please install any input methods before running if you like."
 msgstr ""
 
-#: ../src/main.c:143
+#: ../src/main.c:144
 msgid "IM Chooser - Input Method configuration tool"
 msgstr "IM Vælger - Værktøj for konfiguration af indtastningsmetode"
 
-#: ../src/main.c:157
+#: ../src/main.c:160
 #, fuzzy
 msgid "Log Out"
 msgstr "_Log ud"

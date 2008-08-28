@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: im-chooser.trunk\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-07-22 21:05+0000\n"
+"POT-Creation-Date: 2008-08-28 14:46+0900\n"
 "PO-Revision-Date: 2008-07-24 06:49+0200\n"
 "Last-Translator: Francesco Tombolini <tombo@adamantio.net>\n"
 "Language-Team: Italian <fedora-trans-it@redhat.com>\n"
@@ -19,99 +19,132 @@ msgstr ""
 "Plural-Forms:  nplurals=2; plural=(n != 1);\n"
 "X-Generator: KAider 0.1\n"
 
-#: ../src/im-chooser-simple.c:157
+#: ../src/im-chooser-simple.c:122
+msgid "X applications"
+msgstr ""
+
+#: ../src/im-chooser-simple.c:123
+msgid "GTK+ applications"
+msgstr ""
+
+#: ../src/im-chooser-simple.c:124
+msgid "Qt applications"
+msgstr ""
+
+#: ../src/im-chooser-simple.c:162
 msgid "Updating Input Method list"
 msgstr "Aggiornamento elenco metodo di input"
 
-#: ../src/im-chooser-simple.c:260
+#: ../src/im-chooser-simple.c:265
 msgid "Unable to get the information"
 msgstr "Impossibile ottenere informazioni"
 
-#: ../src/im-chooser-simple.c:337
+#: ../src/im-chooser-simple.c:342
 msgid "Failed to start Input Method"
 msgstr "Impossibile avviare metodo di input"
 
-#: ../src/im-chooser-simple.c:364
+#: ../src/im-chooser-simple.c:369
 msgid "Failed to stop Input Method"
 msgstr "Arresto metodo di input fallito"
 
-#: ../src/im-chooser-simple.c:466
+#: ../src/im-chooser-simple.c:474
 #, c-format
 msgid "Starting Input Method - %s"
 msgstr "Avvio metodo di input - %s"
 
-#: ../src/im-chooser-simple.c:483
+#: ../src/im-chooser-simple.c:491
 #, c-format
 msgid "Stopping Input Method - %s"
 msgstr "Arresto metodo di input - %s"
 
-#: ../src/im-chooser-simple.c:620
-msgid "Parent Window"
-msgstr "Finestra principale"
-
-#: ../src/im-chooser-simple.c:621
-msgid "GtkWindow that points to the parent window"
-msgstr "GtkWindow che punta alla finestra principale"
-
-#: ../src/im-chooser-simple.c:626
-msgid "Show note"
-msgstr "Mostra nota"
-
-#: ../src/im-chooser-simple.c:627
-msgid "Show note logs out to apply the change"
-msgstr "Mostra una nota per applicare i cambiamenti"
-
-#. setup a progress window
-#: ../src/im-chooser-simple.c:668
-msgid "Work in progress..."
-msgstr "Lavoro in corso..."
-
-#: ../src/im-chooser-simple.c:720 ../src/im-chooser-simple.c:736
-msgid "Unable to communicate to IMSettings services"
-msgstr "Impossibile comunicare con i servizi IMSettings"
-
-#: ../src/im-chooser-simple.c:721 ../src/im-chooser-simple.c:737
-msgid "Version mismatch"
-msgstr "Versione non corrispondente"
-
-#: ../src/im-chooser-simple.c:751
-msgid "Unable to gather current status"
-msgstr "Impossibile ricavare lo status corrente"
-
-#: ../src/im-chooser-simple.c:757
-msgid "Unable to get Input Method information"
-msgstr "Impossibile ottenere informazioni sul metodo di input"
-
-#: ../src/im-chooser-simple.c:804
+#. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications and Qt applications</i></small>"
+#. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications and GTK+ applications</i></small>"
+#. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications and Qt applications</i></small>"
+#: ../src/im-chooser-simple.c:577 ../src/im-chooser-simple.c:580
+#: ../src/im-chooser-simple.c:583
 #, c-format
-msgid "Use %s"
-msgstr "Usare %s"
+msgid ", except %s and %s"
+msgstr ""
 
-#: ../src/im-chooser-simple.c:807
-msgid " (legacy)"
-msgstr " (legacy)"
+#. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications</i></small>"
+#. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications</i></small>"
+#. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except Qt applications</i></small>"
+#: ../src/im-chooser-simple.c:586 ../src/im-chooser-simple.c:589
+#: ../src/im-chooser-simple.c:592
+#, c-format
+msgid ", except %s"
+msgstr ""
 
-#: ../src/im-chooser-simple.c:809
-msgid " (recommended)"
-msgstr " (raccomandato)"
-
-#: ../src/im-chooser-simple.c:917
-msgid "<b>Input Method</b>"
-msgstr "<b>Input Method</b>"
-
-#: ../src/im-chooser-simple.c:923
-msgid "_Enable input method feature"
-msgstr "Abilitar_e caratteristica del metodo di input"
-
-#: ../src/im-chooser-simple.c:930
+#. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications</i></small>"
+#: ../src/im-chooser-simple.c:597
+#, fuzzy, c-format
 msgid ""
-"<small><i>Note: this change will not take effect until you next log in, "
-"except GTK+ applications.</i></small>"
+"<small><i>Note: this change will not take effect until you next log in%s</"
+"i></small>"
 msgstr ""
 "<small><i>Nota: questa modifica non avrà effetto fino al login successivo, "
 "ad eccezione delle applicazioni GTK+.</i></small>"
 
-#: ../src/im-chooser-simple.c:969
+#: ../src/im-chooser-simple.c:657
+msgid "Parent Window"
+msgstr "Finestra principale"
+
+#: ../src/im-chooser-simple.c:658
+msgid "GtkWindow that points to the parent window"
+msgstr "GtkWindow che punta alla finestra principale"
+
+#: ../src/im-chooser-simple.c:663
+msgid "Note type"
+msgstr ""
+
+#: ../src/im-chooser-simple.c:664
+msgid "A enum value to determine which notes should be displayed"
+msgstr ""
+
+#. setup a progress window
+#: ../src/im-chooser-simple.c:707
+msgid "Work in progress..."
+msgstr "Lavoro in corso..."
+
+#: ../src/im-chooser-simple.c:759 ../src/im-chooser-simple.c:775
+#, c-format
+msgid "Unable to communicate to IMSettings services"
+msgstr "Impossibile comunicare con i servizi IMSettings"
+
+#: ../src/im-chooser-simple.c:760 ../src/im-chooser-simple.c:776
+msgid "Version mismatch"
+msgstr "Versione non corrispondente"
+
+#: ../src/im-chooser-simple.c:790
+msgid "Unable to gather current status"
+msgstr "Impossibile ricavare lo status corrente"
+
+#: ../src/im-chooser-simple.c:796
+msgid "Unable to get Input Method information"
+msgstr "Impossibile ottenere informazioni sul metodo di input"
+
+#: ../src/im-chooser-simple.c:843
+#, c-format
+msgid "Use %s"
+msgstr "Usare %s"
+
+#: ../src/im-chooser-simple.c:846
+msgid " (legacy)"
+msgstr " (legacy)"
+
+#: ../src/im-chooser-simple.c:848
+msgid " (recommended)"
+msgstr " (raccomandato)"
+
+#: ../src/im-chooser-simple.c:956
+msgid "<b>Input Method</b>"
+msgstr "<b>Input Method</b>"
+
+#: ../src/im-chooser-simple.c:962
+msgid "_Enable input method feature"
+msgstr "Abilitar_e caratteristica del metodo di input"
+
+#: ../src/im-chooser-simple.c:1008
 msgid "Input Method _Preferences..."
 msgstr "_Preferenze del metodo di input..."
 
@@ -127,11 +160,11 @@ msgid "Please install any input methods before running if you like."
 msgstr ""
 "Si prega di installare un qualsiasi metodo di input prima dell'esecuzione."
 
-#: ../src/main.c:143
+#: ../src/main.c:144
 msgid "IM Chooser - Input Method configuration tool"
 msgstr "IM Chooser - Tool di configurazione del Metodo di input"
 
-#: ../src/main.c:157
+#: ../src/main.c:160
 msgid "Log Out"
 msgstr "Log Out"
 
@@ -146,6 +179,12 @@ msgstr ""
 #: ../src/im-chooser.desktop.in.in.h:2
 msgid "Input Method"
 msgstr "Metodo di input"
+
+#~ msgid "Show note"
+#~ msgstr "Mostra nota"
+
+#~ msgid "Show note logs out to apply the change"
+#~ msgstr "Mostra una nota per applicare i cambiamenti"
 
 #~ msgid "Replace the running settings daemon with new instance."
 #~ msgstr ""
@@ -380,4 +419,3 @@ msgstr "Metodo di input"
 
 #~ msgid "Failed to stop IM process `%s'\n"
 #~ msgstr "Impossibile arrestare il processo IM `%s'\n"
-

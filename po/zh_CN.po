@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: im-chooser.trunk\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-07-08 17:38+0900\n"
+"POT-Creation-Date: 2008-08-28 14:46+0900\n"
 "PO-Revision-Date: 2008-03-20 11:51+1000\n"
 "Last-Translator: Leah Liu <lliu@redhat.com>\n"
 "Language-Team: Simplified Chinese <zh@li.org>\n"
@@ -20,103 +20,135 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.11.4\n"
 
-#: ../src/im-chooser-simple.c:152
+#: ../src/im-chooser-simple.c:122
+msgid "X applications"
+msgstr ""
+
+#: ../src/im-chooser-simple.c:123
+msgid "GTK+ applications"
+msgstr ""
+
+#: ../src/im-chooser-simple.c:124
+msgid "Qt applications"
+msgstr ""
+
+#: ../src/im-chooser-simple.c:162
 msgid "Updating Input Method list"
 msgstr "更新输入法列表"
 
-#: ../src/im-chooser-simple.c:255
+#: ../src/im-chooser-simple.c:265
 #, fuzzy
 msgid "Unable to get the information"
 msgstr "获得输入设置信息的地点"
 
-#: ../src/im-chooser-simple.c:332
+#: ../src/im-chooser-simple.c:342
 msgid "Failed to start Input Method"
 msgstr "启动输入法失败"
 
-#: ../src/im-chooser-simple.c:359
+#: ../src/im-chooser-simple.c:369
 #, fuzzy
 msgid "Failed to stop Input Method"
 msgstr "启动输入法失败"
 
-#: ../src/im-chooser-simple.c:461
+#: ../src/im-chooser-simple.c:474
 #, c-format
 msgid "Starting Input Method - %s"
 msgstr "启动输入法 - %s"
 
-#: ../src/im-chooser-simple.c:478
+#: ../src/im-chooser-simple.c:491
 #, c-format
 msgid "Stopping Input Method - %s"
 msgstr "终止输入法 - %s"
 
-#: ../src/im-chooser-simple.c:615
-msgid "Parent Window"
-msgstr "上一级窗口"
-
-#: ../src/im-chooser-simple.c:616
-msgid "GtkWindow that points to the parent window"
-msgstr "指向上一级窗口的 Gtk 窗口"
-
-#: ../src/im-chooser-simple.c:621
-msgid "Show note"
-msgstr ""
-
-#: ../src/im-chooser-simple.c:622
-msgid "Show note logs out to apply the change"
-msgstr ""
-
-#. setup a progress window
-#: ../src/im-chooser-simple.c:663
-msgid "Work in progress..."
-msgstr "处理中... "
-
-#: ../src/im-chooser-simple.c:715 ../src/im-chooser-simple.c:731
+#. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications and Qt applications</i></small>"
+#. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications and GTK+ applications</i></small>"
+#. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications and Qt applications</i></small>"
+#: ../src/im-chooser-simple.c:577 ../src/im-chooser-simple.c:580
+#: ../src/im-chooser-simple.c:583
 #, c-format
-msgid "Unable to communicate to IMSettings services"
+msgid ", except %s and %s"
 msgstr ""
 
-#: ../src/im-chooser-simple.c:716 ../src/im-chooser-simple.c:732
-msgid "Version mismatch"
-msgstr ""
-
-#: ../src/im-chooser-simple.c:746
-msgid "Unable to gather current status"
-msgstr ""
-
-#: ../src/im-chooser-simple.c:752
-#, fuzzy
-msgid "Unable to get Input Method information"
-msgstr "更新输入法列表"
-
-#: ../src/im-chooser-simple.c:768
+#. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications</i></small>"
+#. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications</i></small>"
+#. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except Qt applications</i></small>"
+#: ../src/im-chooser-simple.c:586 ../src/im-chooser-simple.c:589
+#: ../src/im-chooser-simple.c:592
 #, c-format
-msgid "Use %s"
-msgstr "使用 %s"
+msgid ", except %s"
+msgstr ""
 
-#: ../src/im-chooser-simple.c:771
-msgid " (legacy)"
-msgstr "（继承）"
-
-#: ../src/im-chooser-simple.c:773
-msgid " (recommended)"
-msgstr "（推荐）"
-
-#: ../src/im-chooser-simple.c:880
-msgid "<b>Input Method</b>"
-msgstr "<b>输入方法</b>"
-
-#: ../src/im-chooser-simple.c:886
-msgid "_Enable input method feature"
-msgstr "启用输入法特性（_E）"
-
-#: ../src/im-chooser-simple.c:893
+#. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications</i></small>"
+#: ../src/im-chooser-simple.c:597
+#, fuzzy, c-format
 msgid ""
-"<small><i>Note: this change will not take effect until you next log in, "
-"except GTK+ applications.</i></small>"
+"<small><i>Note: this change will not take effect until you next log in%s</"
+"i></small>"
 msgstr ""
 "<small><i>请注意：这个修改在您下一次登录后才会生效，GTK+ 应用程序除外。</i></"
 "small>"
 
-#: ../src/im-chooser-simple.c:925
+#: ../src/im-chooser-simple.c:657
+msgid "Parent Window"
+msgstr "上一级窗口"
+
+#: ../src/im-chooser-simple.c:658
+msgid "GtkWindow that points to the parent window"
+msgstr "指向上一级窗口的 Gtk 窗口"
+
+#: ../src/im-chooser-simple.c:663
+msgid "Note type"
+msgstr ""
+
+#: ../src/im-chooser-simple.c:664
+msgid "A enum value to determine which notes should be displayed"
+msgstr ""
+
+#. setup a progress window
+#: ../src/im-chooser-simple.c:707
+msgid "Work in progress..."
+msgstr "处理中... "
+
+#: ../src/im-chooser-simple.c:759 ../src/im-chooser-simple.c:775
+#, c-format
+msgid "Unable to communicate to IMSettings services"
+msgstr ""
+
+#: ../src/im-chooser-simple.c:760 ../src/im-chooser-simple.c:776
+msgid "Version mismatch"
+msgstr ""
+
+#: ../src/im-chooser-simple.c:790
+msgid "Unable to gather current status"
+msgstr ""
+
+#: ../src/im-chooser-simple.c:796
+#, fuzzy
+msgid "Unable to get Input Method information"
+msgstr "更新输入法列表"
+
+#: ../src/im-chooser-simple.c:843
+#, c-format
+msgid "Use %s"
+msgstr "使用 %s"
+
+#: ../src/im-chooser-simple.c:846
+msgid " (legacy)"
+msgstr "（继承）"
+
+#: ../src/im-chooser-simple.c:848
+msgid " (recommended)"
+msgstr "（推荐）"
+
+#: ../src/im-chooser-simple.c:956
+msgid "<b>Input Method</b>"
+msgstr "<b>输入方法</b>"
+
+#: ../src/im-chooser-simple.c:962
+msgid "_Enable input method feature"
+msgstr "启用输入法特性（_E）"
+
+#: ../src/im-chooser-simple.c:1008
 msgid "Input Method _Preferences..."
 msgstr "首选输入法（_P）"
 
@@ -129,11 +161,11 @@ msgstr "<span weight=\"bold\" size=\"larger\">没有可用的输入法</span>"
 msgid "Please install any input methods before running if you like."
 msgstr "如果您愿意，请在运行前安装输入法。"
 
-#: ../src/main.c:143
+#: ../src/main.c:144
 msgid "IM Chooser - Input Method configuration tool"
 msgstr "IM Chooser - 输入法配置工具"
 
-#: ../src/main.c:157
+#: ../src/main.c:160
 #, fuzzy
 msgid "Log Out"
 msgstr "（_L）注销"
