@@ -1,4 +1,4 @@
-1.2.1 ->
+1.2.1 -> 1.2.2
 =================
 * Bug Fixes
   * Unable to close the error dialog
@@ -8,8 +8,10 @@
 * Translations updated
   * Brazilian
   * Dutch
+  * German
   * Japanese
   * Norwegian Bokmål
+  * Polish
 
 1.2.0 -> 1.2.1
 =================
