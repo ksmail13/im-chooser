@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: im-chooser 0.3.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-08-28 14:46+0900\n"
-"PO-Revision-Date: 2008-04-06 13:23+0300\n"
+"POT-Creation-Date: 2008-08-28 11:20+0000\n"
+"PO-Revision-Date: 2008-08-31 01:17+0300\n"
 "Last-Translator: Ville-Pekka Vainio <vpivaini@cs.helsinki.fi>\n"
 "Language-Team: Finnish <laatu@lokalisointi.org>\n"
 "MIME-Version: 1.0\n"
@@ -18,33 +18,31 @@ msgstr ""
 
 #: ../src/im-chooser-simple.c:122
 msgid "X applications"
-msgstr ""
+msgstr "X-ohjelmissa"
 
 #: ../src/im-chooser-simple.c:123
 msgid "GTK+ applications"
-msgstr ""
+msgstr "GTK+-ohjelmissa"
 
 #: ../src/im-chooser-simple.c:124
 msgid "Qt applications"
-msgstr ""
+msgstr "Qt-ohjelmissa"
 
 #: ../src/im-chooser-simple.c:162
 msgid "Updating Input Method list"
 msgstr "Päivitetään syöttömenetelmäluetteloa"
 
 #: ../src/im-chooser-simple.c:265
-#, fuzzy
 msgid "Unable to get the information"
-msgstr "Maa-asetusto jonka syöttömenetelmäasetustiedot haetaan"
+msgstr "Tietojen hakeminen epäonnistui"
 
 #: ../src/im-chooser-simple.c:342
 msgid "Failed to start Input Method"
 msgstr "Syöttömenetelmän käynnistäminen epäonnistui"
 
 #: ../src/im-chooser-simple.c:369
-#, fuzzy
 msgid "Failed to stop Input Method"
-msgstr "Syöttömenetelmän käynnistäminen epäonnistui"
+msgstr "Syöttömenetelmän pysäyttäminen epäonnistui"
 
 #: ../src/im-chooser-simple.c:474
 #, c-format
@@ -63,7 +61,7 @@ msgstr "Pysäytetään syöttömenetelmä - %s"
 #: ../src/im-chooser-simple.c:583
 #, c-format
 msgid ", except %s and %s"
-msgstr ""
+msgstr ", paitsi %s ja %s"
 
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications</i></small>"
@@ -72,17 +70,17 @@ msgstr ""
 #: ../src/im-chooser-simple.c:592
 #, c-format
 msgid ", except %s"
-msgstr ""
+msgstr ", paitsi %s"
 
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications</i></small>"
 #: ../src/im-chooser-simple.c:597
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "<small><i>Note: this change will not take effect until you next log in%s</"
 "i></small>"
 msgstr ""
-"<small><i>Huomaa: GTK+-ohjelmia lukuun ottamatta tämän asetuksen muutokset "
-"tulevat voimaan vasta seuraavan kerran sisään kirjauduttaessa.</i></small>"
+"<small><i>Huomaa: tämä muutos tulee voimaan vasta seuraavan kerran sisään "
+"kirjauduttaessa%s</i></small>"
 
 #: ../src/im-chooser-simple.c:657
 msgid "Parent Window"
@@ -106,22 +104,20 @@ msgid "Work in progress..."
 msgstr ""
 
 #: ../src/im-chooser-simple.c:759 ../src/im-chooser-simple.c:775
-#, c-format
 msgid "Unable to communicate to IMSettings services"
-msgstr ""
+msgstr "IMSettings-palvelujen kanssa ei voida kommunikoida"
 
 #: ../src/im-chooser-simple.c:760 ../src/im-chooser-simple.c:776
 msgid "Version mismatch"
-msgstr ""
+msgstr "Versioristiriita"
 
 #: ../src/im-chooser-simple.c:790
 msgid "Unable to gather current status"
-msgstr ""
+msgstr "Nykyistä tilaa ei voida hakea"
 
 #: ../src/im-chooser-simple.c:796
-#, fuzzy
 msgid "Unable to get Input Method information"
-msgstr "Päivitetään syöttömenetelmäluetteloa"
+msgstr "Syöttömenetelmätietoja ei voida hakea"
 
 #: ../src/im-chooser-simple.c:843
 #, c-format
@@ -164,9 +160,8 @@ msgid "IM Chooser - Input Method configuration tool"
 msgstr "Syöttötavan valintatyökalu"
 
 #: ../src/main.c:160
-#, fuzzy
 msgid "Log Out"
-msgstr "_Kirjaudu ulos"
+msgstr "Kirjaudu ulos"
 
 #: ../src/im-chooser.desktop.in.in.h:1
 msgid ""
