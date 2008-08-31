@@ -1,55 +1,51 @@
-# translation of sr.po to Serbian
 # Serbian translations for im-chooser
 # Copyright (C) 2006 Red Hat, Inc.
 # This file is distributed under the same license as the im-chooser package.
-#
 # Miloš Komarčević <kmilos@gmail.com>, 2006.
 # Jovan Krunic <jovan.krunic@gmail.com>, 2008.
 # Nikola Pajtic <salgeras@gmail.com>, 2008.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: im-chooser\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-08-28 14:46+0900\n"
-"PO-Revision-Date: 2008-04-03 21:34+0200\n"
-"Last-Translator: Nikola Pajtic <salgeras@gmail.com>\n"
+"PO-Revision-Date: 2008-08-31 16:44-0000\n"
+"Last-Translator: Miloš Komarčević <kmilos@gmail.com>\n"
 "Language-Team: Serbian (sr) <fedora-trans-sr@redhat.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
 "10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: KBabel 1.11.4\n"
 
 #: ../src/im-chooser-simple.c:122
 msgid "X applications"
-msgstr ""
+msgstr "Икс програмима"
 
 #: ../src/im-chooser-simple.c:123
 msgid "GTK+ applications"
-msgstr ""
+msgstr "GTK+ програмима"
 
 #: ../src/im-chooser-simple.c:124
 msgid "Qt applications"
-msgstr ""
+msgstr "Qt програмима"
 
 #: ../src/im-chooser-simple.c:162
 msgid "Updating Input Method list"
 msgstr "Ажурирам списак метода уноса"
 
 #: ../src/im-chooser-simple.c:265
-#, fuzzy
 msgid "Unable to get the information"
-msgstr "Локалитет са кога се добијају imsettings информације"
+msgstr "Не могу да добавим податке"
 
 #: ../src/im-chooser-simple.c:342
 msgid "Failed to start Input Method"
-msgstr "Нисам успео да покренем метод уноса"
+msgstr "Није успело покретање метод уноса"
 
 #: ../src/im-chooser-simple.c:369
-#, fuzzy
 msgid "Failed to stop Input Method"
-msgstr "Нисам успео да покренем метод уноса"
+msgstr "Није успело заустављање метод уноса"
 
 #: ../src/im-chooser-simple.c:474
 #, c-format
@@ -68,7 +64,7 @@ msgstr "Заустављам метод уноса - %s"
 #: ../src/im-chooser-simple.c:583
 #, c-format
 msgid ", except %s and %s"
-msgstr ""
+msgstr ", осим у %s и %s"
 
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications</i></small>"
@@ -77,17 +73,17 @@ msgstr ""
 #: ../src/im-chooser-simple.c:592
 #, c-format
 msgid ", except %s"
-msgstr ""
+msgstr ", осим у %s"
 
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications</i></small>"
 #: ../src/im-chooser-simple.c:597
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "<small><i>Note: this change will not take effect until you next log in%s</"
 "i></small>"
 msgstr ""
-"<small><i>Напомена: ова промена неће прећи у дејство до следећег "
-"пријављивања, осим у GTK+ програмима.</i></small>"
+"<small><i>Напомена: ова промена неће прећи у дејство до следећег пријављивања"
+"%s</i></small>"
 
 #: ../src/im-chooser-simple.c:657
 msgid "Parent Window"
@@ -99,11 +95,11 @@ msgstr "GtkWindow који показује на матични прозор"
 
 #: ../src/im-chooser-simple.c:663
 msgid "Note type"
-msgstr ""
+msgstr "Врста обавештења"
 
 #: ../src/im-chooser-simple.c:664
 msgid "A enum value to determine which notes should be displayed"
-msgstr ""
+msgstr "Набројана вредност која одређује која се обавештења приказују"
 
 #. setup a progress window
 #: ../src/im-chooser-simple.c:707
@@ -113,20 +109,19 @@ msgstr "Рад је у току..."
 #: ../src/im-chooser-simple.c:759 ../src/im-chooser-simple.c:775
 #, c-format
 msgid "Unable to communicate to IMSettings services"
-msgstr ""
+msgstr "Не могу да комуницирам са IMSettings сервисима"
 
 #: ../src/im-chooser-simple.c:760 ../src/im-chooser-simple.c:776
 msgid "Version mismatch"
-msgstr ""
+msgstr "Верзије се не слажу"
 
 #: ../src/im-chooser-simple.c:790
 msgid "Unable to gather current status"
-msgstr ""
+msgstr "Не могу да закључим тренутни статус"
 
 #: ../src/im-chooser-simple.c:796
-#, fuzzy
 msgid "Unable to get Input Method information"
-msgstr "Ажурирам списак метода уноса"
+msgstr "Не могу да добавим податке о методу уноса"
 
 #: ../src/im-chooser-simple.c:843
 #, c-format
@@ -135,11 +130,11 @@ msgstr "Користи %s"
 
 #: ../src/im-chooser-simple.c:846
 msgid " (legacy)"
-msgstr " (наслеђено)"
+msgstr " (превазиђен)"
 
 #: ../src/im-chooser-simple.c:848
 msgid " (recommended)"
-msgstr " (препоручено)"
+msgstr " (препоручен)"
 
 #: ../src/im-chooser-simple.c:956
 msgid "<b>Input Method</b>"
@@ -169,9 +164,8 @@ msgid "IM Chooser - Input Method configuration tool"
 msgstr "IM избирач - алат за подешавање метода уноса"
 
 #: ../src/main.c:160
-#, fuzzy
 msgid "Log Out"
-msgstr "Од_јави се"
+msgstr "Одјави се"
 
 #: ../src/im-chooser.desktop.in.in.h:1
 msgid ""
@@ -184,235 +178,3 @@ msgstr ""
 #: ../src/im-chooser.desktop.in.in.h:2
 msgid "Input Method"
 msgstr "Метод уноса"
-
-#~ msgid "Replace the running settings daemon with new instance."
-#~ msgstr "Замени системску услугу текућих поставки новим примерком."
-
-#~ msgid "Unknown error in parsing the command lines."
-#~ msgstr "Непозната грешка при рашчлањивању командних линија."
-
-#~ msgid "Language"
-#~ msgstr "Језик"
-
-#~ msgid "A language to pull the information in."
-#~ msgstr "Језик на коме се приказују информације."
-
-#~ msgid "Filename"
-#~ msgstr "Име датотеке"
-
-#~ msgid "A filename referring to the IM information."
-#~ msgstr "Име датотеке којa се односи на IM информације."
-
-#~ msgid "GTK+ immodule"
-#~ msgstr "GTK+ immodule"
-
-#~ msgid "A module name used for GTK+"
-#~ msgstr "Име модула који се користи за GTK+"
-
-#~ msgid "Qt immodule"
-#~ msgstr "Qt immodule"
-
-#~ msgid "A module name used for Qt"
-#~ msgstr "Име модула који се користи за Qt"
-
-#~ msgid "XIM name"
-#~ msgstr "XIM име"
-
-#~ msgid "XIM server name"
-#~ msgstr "XIM име сервера"
-
-#~ msgid "Ignore flag"
-#~ msgstr "Застава игнорисања"
-
-#~ msgid "A flag to not list up."
-#~ msgstr "Застава која се не излистава."
-
-#~ msgid "XIM server program name"
-#~ msgstr "Име XIM сервер програма"
-
-#~ msgid "XIM server program to be run"
-#~ msgstr "Програм XIM сервер за извршавање"
-
-#~ msgid "XIM server program's options"
-#~ msgstr "Програмске опције XIM сервера"
-
-#~ msgid "Command line options for XIM server program"
-#~ msgstr "Опције командне линије за програм XIM сервера"
-
-#~ msgid "Preference program name"
-#~ msgstr "Име програма за поставке"
-
-#~ msgid "Preference program to be run"
-#~ msgstr "Програм за поставке који ће бити покренут"
-
-#~ msgid "Preference program's options"
-#~ msgstr "Опције програма за поставке"
-
-#~ msgid "Command line options for preference program"
-#~ msgstr "Опције комадне линије програма за поставке"
-
-#~ msgid "Auxiliary program name"
-#~ msgstr "Име програма за подршку"
-
-#~ msgid "Auxiliary program to be run"
-#~ msgstr "Програм за подршку који ће бити покренут"
-
-#~ msgid "Auxiliary program's options"
-#~ msgstr "Опције програма за подршку"
-
-#~ msgid "Command line options for auxiliary program"
-#~ msgstr "Опције командне линије програма за подршку"
-
-#~ msgid "Short Description"
-#~ msgstr "Кратак опис"
-
-#~ msgid "Long Description"
-#~ msgstr "Опширан опис"
-
-#~ msgid "System Default"
-#~ msgstr "Подразумевана системска подешавања"
-
-#~ msgid "Whether or not IM is a system default."
-#~ msgstr "Да ли је, или не, IM системски подразумевани програм."
-
-#~ msgid "User Default"
-#~ msgstr "Подразумевана подешавања корисника"
-
-#~ msgid "Whether or not IM is an user default."
-#~ msgstr "Да ли је, или не, IM подразумевани програм корисника."
-
-#~ msgid "XIM"
-#~ msgstr "XIM"
-
-#~ msgid "Whether or not IM is a XIM server."
-#~ msgstr "Да ли је IM XIM сервер, или није."
-
-#~ msgid "User Specific"
-#~ msgstr "Својствено кориснику"
-
-#~ msgid "xinputrc was modified by the user"
-#~ msgstr "xinputrc је изменио корисник"
-
-#~ msgid "Invalid IM module type: %d"
-#~ msgstr "Неисправна врста IM модула: %d"
-
-#~ msgid "IM module name"
-#~ msgstr "Име IM модула"
-
-#~ msgid "A target IM module name that to observe signals"
-#~ msgstr "Име циљног IM модула чије сигнале желите да посматрате"
-
-#~ msgid "Replace"
-#~ msgstr "Замени"
-
-#~ msgid "DBus connection"
-#~ msgstr "DBus веза"
-
-#~ msgid "An object to be a DBus connection"
-#~ msgstr "Објекат који треба да буде DBus веза"
-
-#~ msgid "DBus Interface"
-#~ msgstr "DBus сучеље"
-
-#~ msgid "Interface name to connect to DBus"
-#~ msgstr "Име сучеља које се повезује на DBus"
-
-#~ msgid "Locale"
-#~ msgstr "Локалитет"
-
-#~ msgid ""
-#~ "Failed to invoke a method `%s':\n"
-#~ "  %s"
-#~ msgstr ""
-#~ "Нисам успео да позовем методу „%s“:\n"
-#~ "  %s"
-
-#~ msgid ""
-#~ "Failed to invoke a method `%s' on %s:\n"
-#~ "  %s"
-#~ msgstr ""
-#~ "Нисам успео да позовем методу „%s“ над %s:\n"
-#~ "  %s"
-
-#~ msgid "Failed to remove a pidfile: %s"
-#~ msgstr "Нисам успео да уклоним pidfile: %s"
-
-#~ msgid "Failed to open a pidfile: %s"
-#~ msgstr "Нисам успео да отворим pidfile: %s"
-
-#~ msgid "Couldn't determine the pid for %s process."
-#~ msgstr "Не могу да одредим pid за %s процес."
-
-#~ msgid "Couldn't send a signal to the %s process successfully."
-#~ msgstr "Не могу да успешно пошаљем сигнал процесу %s."
-
-#~ msgid "Failed to get a place of home directory."
-#~ msgstr "Нисам успео да добијем место личног директоријума."
-
-#~ msgid "Failed to revert the backup file: %s"
-#~ msgstr "Нисам успео да повратим резервну копију датотеке: %s"
-
-#~ msgid "Failed to create a backup file: %s"
-#~ msgstr "Нисам успео да направим резервну копију датотеке: %s"
-
-#~ msgid "Failed to remove a .xinputrc file: %s"
-#~ msgstr "Нисам успео да уклоним датотеку .xinputrc: %s"
-
-#~ msgid "Failed to make a symlink: %s"
-#~ msgstr "Нисам успео да направим симболичку везу: %s"
-
-#~ msgid "No such input method on your system: %s"
-#~ msgstr "Нема таквих метода за унос на вашем систему: %s"
-
-#~ msgid "No XIM server is available in %s"
-#~ msgstr "Нема доступног XIM сервера у %s"
-
-#~ msgid "X display name"
-#~ msgstr "Име Икс екрана"
-
-#~ msgid "X display name to use"
-#~ msgstr "Име Икс екрана за коришћење"
-
-#~ msgid "X display to use"
-#~ msgstr "Икс екран за коришћење"
-
-#~ msgid "DISPLAY"
-#~ msgstr "ЕКРАН"
-
-#~ msgid "X screen to use"
-#~ msgstr "Икс приказ за коришћење"
-
-#~ msgid "SCREEN"
-#~ msgstr "ПРИКАЗ"
-
-#~ msgid "Failed to open a X display."
-#~ msgstr "Нисам успео да отворим Икс екран."
-
-#~ msgid "Reloading...\n"
-#~ msgstr "Поново учитавам...\n"
-
-#~ msgid "Duplicate entry `%s' from %s. SHORT_DESC has to be unique."
-#~ msgstr "Двоструки унос „%s“ у %s. SHORT_DESC мора бити јединствен."
-
-#~ msgid "Timed out to initialize %s services."
-#~ msgstr "Истекло је време чекања на иницијализацију %s сервиса."
-
-#~ msgid "No input methods available on your system."
-#~ msgstr "Нема доступних метода за унос на вашем систему."
-
-#~ msgid "Force reloading the configuration, including restarting the process."
-#~ msgstr ""
-#~ "Приморај да се поново учитају подешавања, укључујући и поновно покретање "
-#~ "процеса."
-
-#~ msgid "Force restarting the IM process regradless of any errors."
-#~ msgstr "Приморај поновно покретање IM процеса без обзира на грешке."
-
-#~ msgid "Do not update .xinputrc."
-#~ msgstr "Немој да ажурираш .xinputrc."
-
-#~ msgid "Stopped %s\n"
-#~ msgstr "Заустављен је %s\n"
-
-#~ msgid "Failed to stop IM process `%s'\n"
-#~ msgstr "Нисам успео да зауставим IM процес „%s“\n"
