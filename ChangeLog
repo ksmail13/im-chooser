@@ -1,3 +1,7 @@
+2008-09-01  Akira TAGOH  <tagoh@redhat.com>
+
+	* src/im-chooser.desktop.in.in (Icon): Get rid of the extension.
+
 2008-08-27  Akira TAGOH  <tagoh@redhat.com>
 
 	* src/im-chooser-simple.c (im_chooser_simple_set_property): set proper
