@@ -9,46 +9,44 @@ msgid ""
 msgstr ""
 "Project-Id-Version: im-chooser.trunk\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-08-28 14:46+0900\n"
-"PO-Revision-Date: 2008-04-07 17:29+1000\n"
+"POT-Creation-Date: 2008-08-28 09:20+0000\n"
+"PO-Revision-Date: 2008-09-03 12:19+1000\n"
 "Last-Translator: Eunju Kim <eukim@redhat.com>\n"
 "Language-Team: Korean <ko@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms:  nplurals=2; plural=(n!=1);\n"
+"Plural-Forms:  nplurals=2; plural=(n!=1);\n\n"
 "\n"
 "X-Generator: KBabel 1.11.4\n"
 
 #: ../src/im-chooser-simple.c:122
 msgid "X applications"
-msgstr ""
+msgstr "X 어플리케이션 "
 
 #: ../src/im-chooser-simple.c:123
 msgid "GTK+ applications"
-msgstr ""
+msgstr "GTK+ 어플리케이션 "
 
 #: ../src/im-chooser-simple.c:124
 msgid "Qt applications"
-msgstr ""
+msgstr "Qt 어플리케이션 "
 
 #: ../src/im-chooser-simple.c:162
 msgid "Updating Input Method list"
 msgstr "입력 방식 목록 업데이트 "
 
 #: ../src/im-chooser-simple.c:265
-#, fuzzy
 msgid "Unable to get the information"
-msgstr "imsettings 정보를 얻기 위한 로케일 "
+msgstr "정보를 얻을 수 없음 "
 
 #: ../src/im-chooser-simple.c:342
 msgid "Failed to start Input Method"
 msgstr "입력 방식 시작 실패 "
 
 #: ../src/im-chooser-simple.c:369
-#, fuzzy
 msgid "Failed to stop Input Method"
-msgstr "입력 방식 시작 실패 "
+msgstr "입력 방식 중지 실패  "
 
 #: ../src/im-chooser-simple.c:474
 #, c-format
@@ -67,7 +65,7 @@ msgstr "입력 방식 중지 - %s"
 #: ../src/im-chooser-simple.c:583
 #, c-format
 msgid ", except %s and %s"
-msgstr ""
+msgstr ", %s 및 %s 제외  "
 
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications</i></small>"
@@ -76,17 +74,15 @@ msgstr ""
 #: ../src/im-chooser-simple.c:592
 #, c-format
 msgid ", except %s"
-msgstr ""
+msgstr ", %s 제외 "
 
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications</i></small>"
 #: ../src/im-chooser-simple.c:597
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "<small><i>Note: this change will not take effect until you next log in%s</"
 "i></small>"
-msgstr ""
-"<small><i>알림: GTK+ 어플리케이션을 제외하고, 변경사항은 다음번 로그인 하실"
-"때 까지 적용되지 않습니다.</i></small>"
+msgstr "<small><i>알림: 변경사항은 다음번 %s 로그인 하실때 까지 적용되지 않습니다.</i></small>"
 
 #: ../src/im-chooser-simple.c:657
 msgid "Parent Window"
@@ -98,11 +94,11 @@ msgstr "부모창을 가리키는 GtkWindow "
 
 #: ../src/im-chooser-simple.c:663
 msgid "Note type"
-msgstr ""
+msgstr "알림 유형 "
 
 #: ../src/im-chooser-simple.c:664
 msgid "A enum value to determine which notes should be displayed"
-msgstr ""
+msgstr "어떤 알림이 나타나게 할 지를 결정하는 enum 값      "
 
 #. setup a progress window
 #: ../src/im-chooser-simple.c:707
@@ -110,22 +106,20 @@ msgid "Work in progress..."
 msgstr "실행 중..."
 
 #: ../src/im-chooser-simple.c:759 ../src/im-chooser-simple.c:775
-#, c-format
 msgid "Unable to communicate to IMSettings services"
-msgstr ""
+msgstr "IMSettings 서비스와 통신할 수 없음     "
 
 #: ../src/im-chooser-simple.c:760 ../src/im-chooser-simple.c:776
 msgid "Version mismatch"
-msgstr ""
+msgstr "버전 불일치 "
 
 #: ../src/im-chooser-simple.c:790
 msgid "Unable to gather current status"
-msgstr ""
+msgstr "현재 상태를 알 수 없음 "
 
 #: ../src/im-chooser-simple.c:796
-#, fuzzy
 msgid "Unable to get Input Method information"
-msgstr "입력 방식 목록 업데이트 "
+msgstr "입력 방식 정보를 얻을 수 없음 "
 
 #: ../src/im-chooser-simple.c:843
 #, c-format
@@ -153,10 +147,8 @@ msgid "Input Method _Preferences..."
 msgstr "입력 방식 설정 (_P) "
 
 #: ../src/main.c:53
-msgid ""
-"<span weight=\"bold\" size=\"larger\">No input method is available</span>"
-msgstr ""
-"<span weight=\"bold\" size=\"larger\">사용 가능한 입력 방식이 없음</span> "
+msgid "<span weight=\"bold\" size=\"larger\">No input method is available</span>"
+msgstr "<span weight=\"bold\" size=\"larger\">사용 가능한 입력 방식이 없음</span> "
 
 #: ../src/main.c:56
 msgid "Please install any input methods before running if you like."
@@ -167,247 +159,16 @@ msgid "IM Chooser - Input Method configuration tool"
 msgstr "IM 선택자 - 입력 방식 설정 도구"
 
 #: ../src/main.c:160
-#, fuzzy
 msgid "Log Out"
-msgstr "로그 아웃(_L)"
+msgstr "로그 아웃 "
 
 #: ../src/im-chooser.desktop.in.in.h:1
 msgid ""
 "Choose the input method to be used or disable the input method usage on the "
 "desktop"
-msgstr ""
-"데스크탑에서 입력 방식 사용을 비활성화하거나 또는 사용할 입력 방식 선택 "
+msgstr "데스크탑에서 입력 방식 사용을 비활성화하거나 또는 사용할 입력 방식 선택 "
 
 #: ../src/im-chooser.desktop.in.in.h:2
 msgid "Input Method"
 msgstr "입력 방식"
 
-#~ msgid "Replace the running settings daemon with new instance."
-#~ msgstr "실행 중인 설정 데몬을 새 인스턴스로 교체합니다. "
-
-#~ msgid "Unknown error in parsing the command lines."
-#~ msgstr "명령행을 구문 분석하는 도중 알려지지 않은 오류가 발생했습니다. "
-
-#~ msgid "Language"
-#~ msgstr "언어 "
-
-#~ msgid "A language to pull the information in."
-#~ msgstr "정보를 입력하는데 사용할 언어 "
-
-#~ msgid "Filename"
-#~ msgstr "파일 이름 "
-
-#~ msgid "A filename referring to the IM information."
-#~ msgstr "IM 정보를 참조하는 파일 이름 "
-
-#~ msgid "GTK+ immodule"
-#~ msgstr "GTK+ immodule"
-
-#~ msgid "A module name used for GTK+"
-#~ msgstr "GTK+ 용으로 사용할 모듈 이름 "
-
-#~ msgid "Qt immodule"
-#~ msgstr "Qt immodule"
-
-#~ msgid "A module name used for Qt"
-#~ msgstr "Qt 용으로 사용할 모듈 이름 "
-
-#~ msgid "XIM name"
-#~ msgstr "XIM 이름 "
-
-#~ msgid "XIM server name"
-#~ msgstr "XIM 서버 이름 "
-
-#~ msgid "Ignore flag"
-#~ msgstr "플래그 무시 "
-
-#~ msgid "A flag to not list up."
-#~ msgstr "나열되지 않은 플래그"
-
-#~ msgid "XIM server program name"
-#~ msgstr "XIM 서버 프로그램 이름 "
-
-#~ msgid "XIM server program to be run"
-#~ msgstr "실행될 XIM 서버 프로그램 "
-
-#~ msgid "XIM server program's options"
-#~ msgstr "XIM 서버 프로그램 옵션 "
-
-#~ msgid "Command line options for XIM server program"
-#~ msgstr "XIM 서버 프로그램 용 명령행 옵션 "
-
-#~ msgid "Preference program name"
-#~ msgstr "기본 설정 프로그램 이름 "
-
-#~ msgid "Preference program to be run"
-#~ msgstr "실행될 기본 설정 프로그램 "
-
-#~ msgid "Preference program's options"
-#~ msgstr "기본 설정 프로그램 옵션 "
-
-#~ msgid "Command line options for preference program"
-#~ msgstr "기본 설정 프로그램 용 명령행 옵션 "
-
-#~ msgid "Auxiliary program name"
-#~ msgstr "보조 프로그램 이름 "
-
-#~ msgid "Auxiliary program to be run"
-#~ msgstr "실행될 보조 프로그램 "
-
-#~ msgid "Auxiliary program's options"
-#~ msgstr "보조 프로그램 옵션 "
-
-#~ msgid "Command line options for auxiliary program"
-#~ msgstr "보조 프로그램 용 명령행 옵션 "
-
-#~ msgid "Short Description"
-#~ msgstr "간단한 설명 "
-
-#~ msgid "Long Description"
-#~ msgstr "자세한 설명 "
-
-#~ msgid "System Default"
-#~ msgstr "시스템 기본값 "
-
-#~ msgid "Whether or not IM is a system default."
-#~ msgstr "IM을 시스템 기본값으로 할 지에 대한 여부 "
-
-#~ msgid "User Default"
-#~ msgstr "사용자 기본값 "
-
-#~ msgid "Whether or not IM is an user default."
-#~ msgstr "IM을 사용자 기본값으로 할 지에 대한 여부 "
-
-#~ msgid "XIM"
-#~ msgstr "XIM"
-
-#~ msgid "Whether or not IM is a XIM server."
-#~ msgstr "IM을 XIM 서버로 할 지에 대한 여부 "
-
-#~ msgid "User Specific"
-#~ msgstr "사용자 지정 "
-
-#~ msgid "xinputrc was modified by the user"
-#~ msgstr "xinputrc은 사용자에 의해 수정됨 "
-
-#~ msgid "Invalid IM module type: %d"
-#~ msgstr "잘못된 IM 모듈 유형: %d"
-
-#~ msgid "IM module name"
-#~ msgstr "IM 모듈 이름 "
-
-#~ msgid "A target IM module name that to observe signals"
-#~ msgstr "신호를 감지하기 위한 대상 IM 모듈 이름 "
-
-#~ msgid "Replace"
-#~ msgstr "교체 "
-
-#~ msgid "DBus connection"
-#~ msgstr "DBus 연결 "
-
-#~ msgid "An object to be a DBus connection"
-#~ msgstr "DBus 연결 대상 "
-
-#~ msgid "DBus Interface"
-#~ msgstr "DBus 인터페이스 "
-
-#~ msgid "Interface name to connect to DBus"
-#~ msgstr "DBus로 연결할 인터페이스 이름 "
-
-#~ msgid "Locale"
-#~ msgstr "로케일 "
-
-#~ msgid ""
-#~ "Failed to invoke a method `%s':\n"
-#~ "  %s"
-#~ msgstr ""
-#~ "`%s' 방식 불러오기 실패:\n"
-#~ "  %s"
-
-#~ msgid ""
-#~ "Failed to invoke a method `%s' on %s:\n"
-#~ "  %s"
-#~ msgstr ""
-#~ "%s 상의 `%s' 방식 불러오기 실패:\n"
-#~ "  %s"
-
-#~ msgid "Failed to remove a pidfile: %s"
-#~ msgstr "pidfile 삭제 실패: %s"
-
-#~ msgid "Failed to open a pidfile: %s"
-#~ msgstr "pidfile 열기 실패: %s"
-
-#~ msgid "Couldn't determine the pid for %s process."
-#~ msgstr "%s 프로세스를 위해 pid를 지정할 수 없음  "
-
-#~ msgid "Couldn't send a signal to the %s process successfully."
-#~ msgstr "%s 프로세스를 위해 신호를 보낼 수 없음  "
-
-#~ msgid "Failed to get a place of home directory."
-#~ msgstr "홈 디렉토리 위치 지정 실패 "
-
-#~ msgid "Failed to revert the backup file: %s"
-#~ msgstr "백업 파일 되돌리기 실패: %s"
-
-#~ msgid "Failed to create a backup file: %s"
-#~ msgstr "백업 파일 생성 실패: %s"
-
-#~ msgid "Failed to remove a .xinputrc file: %s"
-#~ msgstr ".xinputrc 파일 삭제 실패: %s"
-
-#~ msgid "Failed to make a symlink: %s"
-#~ msgstr "심볼릭 링크 생성 실패: %s"
-
-#~ msgid "No such input method on your system: %s"
-#~ msgstr "시스템에 없는 입력 방식: %s"
-
-#~ msgid "No XIM server is available in %s"
-#~ msgstr "%s에 사용 가능한 XIM 서버가 없음 "
-
-#~ msgid "X display name"
-#~ msgstr "X 디스플레이 이름 "
-
-#~ msgid "X display name to use"
-#~ msgstr "사용할 X 디스플레이 이름 "
-
-#~ msgid "X display to use"
-#~ msgstr "사용할 X 디스플레이 "
-
-#~ msgid "DISPLAY"
-#~ msgstr "DISPLAY"
-
-#~ msgid "X screen to use"
-#~ msgstr "사용할 X 화면 "
-
-#~ msgid "SCREEN"
-#~ msgstr "SCREEN"
-
-#~ msgid "Failed to open a X display."
-#~ msgstr "X 디스플레이 열기 실패 "
-
-#~ msgid "Reloading...\n"
-#~ msgstr "다시 읽어오는 중...\n"
-
-#~ msgid "Duplicate entry `%s' from %s. SHORT_DESC has to be unique."
-#~ msgstr "%s에서 중복된 항목 `%s'. SHORT_DESC은 고유한 것이어야 합니다. "
-
-#~ msgid "Timed out to initialize %s services."
-#~ msgstr "%s 서비스 초기화하기 시간 초과 "
-
-#~ msgid "No input methods available on your system."
-#~ msgstr "시스템에 사용 가능한 입력 방식이 없음 "
-
-#~ msgid "Force reloading the configuration, including restarting the process."
-#~ msgstr "프로세스 재시작을 포함하여 설정 사항을 강제로 다시 읽어옴 "
-
-#~ msgid "Force restarting the IM process regradless of any errors."
-#~ msgstr "오류와 관계없이 IM 프로세스를 강제로 다시 시작함"
-
-#~ msgid "Do not update .xinputrc."
-#~ msgstr ".xinputrc을 업데이트하지 않음 "
-
-#~ msgid "Stopped %s\n"
-#~ msgstr "중지됨 %s\n"
-
-#~ msgid "Failed to stop IM process `%s'\n"
-#~ msgstr "IM 프로세스 `%s' 중지 실패 \n"
