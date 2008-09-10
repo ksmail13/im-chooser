@@ -4,52 +4,51 @@
 # Russian translations for im-chooser package.
 # Copyright (C) 2006 Red Hat, Inc. All rights reserved.
 # This file is distributed under the same license as the im-chooser package.
+#
+#
 # Automatically generated, 2006.
 # Yulia Poyarkova <ypoyarko@redhat.com>, 2006.
 # Yulia Poyarkova <yulia.poyarkova@redhat.com>, 2008.
-#
-#
 msgid ""
 msgstr ""
 "Project-Id-Version: im-chooser.trunk.ru\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-08-28 14:46+0900\n"
-"PO-Revision-Date: 2008-04-10 17:06+0300\n"
+"POT-Creation-Date: 2008-08-28 09:20+0000\n"
+"PO-Revision-Date: 2008-09-10 11:58+1000\n"
 "Last-Translator: Yulia Poyarkova <yulia.poyarkova@redhat.com>\n"
-"Language-Team:  <ru@li.org>\n"
+"Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
 
 #: ../src/im-chooser-simple.c:122
 msgid "X applications"
-msgstr ""
+msgstr "Приложения X"
 
 #: ../src/im-chooser-simple.c:123
 msgid "GTK+ applications"
-msgstr ""
+msgstr "Приложения GTK+ "
 
 #: ../src/im-chooser-simple.c:124
 msgid "Qt applications"
-msgstr ""
+msgstr "Приложения Qt"
 
 #: ../src/im-chooser-simple.c:162
 msgid "Updating Input Method list"
 msgstr "Обновление списка методов ввода"
 
 #: ../src/im-chooser-simple.c:265
-#, fuzzy
 msgid "Unable to get the information"
-msgstr "Язык получения информации imsettings"
+msgstr "Не удается получить информацию"
 
 #: ../src/im-chooser-simple.c:342
 msgid "Failed to start Input Method"
 msgstr "Не удалось инициализировать метод ввода"
 
 #: ../src/im-chooser-simple.c:369
-#, fuzzy
 msgid "Failed to stop Input Method"
-msgstr "Не удалось инициализировать метод ввода"
+msgstr "Не удалось остановить метод ввода"
 
 #: ../src/im-chooser-simple.c:474
 #, c-format
@@ -68,7 +67,7 @@ msgstr "Остановка метода ввода - %s"
 #: ../src/im-chooser-simple.c:583
 #, c-format
 msgid ", except %s and %s"
-msgstr ""
+msgstr " за исключением %s и %s"
 
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications</i></small>"
@@ -77,17 +76,15 @@ msgstr ""
 #: ../src/im-chooser-simple.c:592
 #, c-format
 msgid ", except %s"
-msgstr ""
+msgstr " за исключением %s"
 
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications</i></small>"
 #: ../src/im-chooser-simple.c:597
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "<small><i>Note: this change will not take effect until you next log in%s</"
 "i></small>"
-msgstr ""
-"<small><i>Замечание: это изменение не вступит в силу до следующего входа. "
-"Исключение составляют приложения GTK+.</i></small>"
+msgstr "<small><i>Замечание: Это изменение не вступит в силу до следующего входа в %s.</i></small>"
 
 #: ../src/im-chooser-simple.c:657
 msgid "Parent Window"
@@ -99,11 +96,11 @@ msgstr "GtkWindow указывает на родительское окно"
 
 #: ../src/im-chooser-simple.c:663
 msgid "Note type"
-msgstr ""
+msgstr "Тип замечаний"
 
 #: ../src/im-chooser-simple.c:664
 msgid "A enum value to determine which notes should be displayed"
-msgstr ""
+msgstr "Значение типа enum, определяющее отображаемые замечания"
 
 #. setup a progress window
 #: ../src/im-chooser-simple.c:707
@@ -111,22 +108,20 @@ msgid "Work in progress..."
 msgstr "В процессе..."
 
 #: ../src/im-chooser-simple.c:759 ../src/im-chooser-simple.c:775
-#, c-format
 msgid "Unable to communicate to IMSettings services"
-msgstr ""
+msgstr "Не удается связаться со службами IMSettings"
 
 #: ../src/im-chooser-simple.c:760 ../src/im-chooser-simple.c:776
 msgid "Version mismatch"
-msgstr ""
+msgstr "Несоответствие версий"
 
 #: ../src/im-chooser-simple.c:790
 msgid "Unable to gather current status"
-msgstr ""
+msgstr "Не удается получить текущий статус"
 
 #: ../src/im-chooser-simple.c:796
-#, fuzzy
 msgid "Unable to get Input Method information"
-msgstr "Обновление списка методов ввода"
+msgstr "Не удается получить информацию о методе ввода"
 
 #: ../src/im-chooser-simple.c:843
 #, c-format
@@ -154,10 +149,8 @@ msgid "Input Method _Preferences..."
 msgstr "_Параметры метода ввода"
 
 #: ../src/main.c:53
-msgid ""
-"<span weight=\"bold\" size=\"larger\">No input method is available</span>"
-msgstr ""
-"<span weight=\"bold\" size=\"larger\">Нет доступных методов ввода</span>"
+msgid "<span weight=\"bold\" size=\"larger\">No input method is available</span>"
+msgstr "<span weight=\"bold\" size=\"larger\">Нет доступных методов ввода</span>"
 
 #: ../src/main.c:56
 msgid "Please install any input methods before running if you like."
@@ -168,250 +161,18 @@ msgid "IM Chooser - Input Method configuration tool"
 msgstr "Утилита настройки метода ввода - IM Chooser"
 
 #: ../src/main.c:160
-#, fuzzy
 msgid "Log Out"
-msgstr "В_ыход"
+msgstr "Выход"
 
 #: ../src/im-chooser.desktop.in.in.h:1
 msgid ""
 "Choose the input method to be used or disable the input method usage on the "
 "desktop"
 msgstr ""
-"На рабочем столе можно выбрать метод ввода или вообще отключить "
+"Выберите метод ввода или отключите "
 "использование метода ввода"
 
 #: ../src/im-chooser.desktop.in.in.h:2
 msgid "Input Method"
 msgstr "Метод ввода"
 
-#~ msgid "Replace the running settings daemon with new instance."
-#~ msgstr "Заменить выполняющийся демон настроек новым экземпляром."
-
-#~ msgid "Unknown error in parsing the command lines."
-#~ msgstr "Неизвестная ошибка при разборе строк команд."
-
-#~ msgid "Language"
-#~ msgstr "Язык"
-
-#~ msgid "A language to pull the information in."
-#~ msgstr "Язык отображения информации."
-
-#~ msgid "Filename"
-#~ msgstr "Имя файла"
-
-#~ msgid "A filename referring to the IM information."
-#~ msgstr "Имя файла с информацией IM."
-
-#~ msgid "GTK+ immodule"
-#~ msgstr "GTK+ immodule"
-
-#~ msgid "A module name used for GTK+"
-#~ msgstr "Имя модуля для GTK+"
-
-#~ msgid "Qt immodule"
-#~ msgstr "Qt immodule"
-
-#~ msgid "A module name used for Qt"
-#~ msgstr "Имя модуля для Qt"
-
-#~ msgid "XIM name"
-#~ msgstr "имя XIM"
-
-#~ msgid "XIM server name"
-#~ msgstr "Имя сервера XIM"
-
-#~ msgid "Ignore flag"
-#~ msgstr "Игнорировать флаг"
-
-#~ msgid "A flag to not list up."
-#~ msgstr "Флаг, который не будет отображен."
-
-#~ msgid "XIM server program name"
-#~ msgstr "Имя программы сервера XIM"
-
-#~ msgid "XIM server program to be run"
-#~ msgstr "Имя программы сервера XIM для исполнения"
-
-#~ msgid "XIM server program's options"
-#~ msgstr "Параметры программы сервера XIM"
-
-#~ msgid "Command line options for XIM server program"
-#~ msgstr "Параметры командной строки для программы сервера XIM"
-
-#~ msgid "Preference program name"
-#~ msgstr "Имя предпочитаемой программы"
-
-#~ msgid "Preference program to be run"
-#~ msgstr "Предпочитаемая программа для выполнения"
-
-#~ msgid "Preference program's options"
-#~ msgstr "Параметры предпочитаемой программы"
-
-#~ msgid "Command line options for preference program"
-#~ msgstr "Параметры командной строки для предпочитаемой программы"
-
-#~ msgid "Auxiliary program name"
-#~ msgstr "Имя произвольной программы"
-
-#~ msgid "Auxiliary program to be run"
-#~ msgstr "Произвольная программа для выполнения"
-
-#~ msgid "Auxiliary program's options"
-#~ msgstr "Параметры произвольной программы"
-
-#~ msgid "Command line options for auxiliary program"
-#~ msgstr "Параметры командной строки для произвольной программы"
-
-#~ msgid "Short Description"
-#~ msgstr "Краткое описание"
-
-#~ msgid "Long Description"
-#~ msgstr "Подробное описание"
-
-#~ msgid "System Default"
-#~ msgstr "Системные настройки по умолчанию"
-
-#~ msgid "Whether or not IM is a system default."
-#~ msgstr "Используется ли IM в качестве системных настроек по умолчанию."
-
-#~ msgid "User Default"
-#~ msgstr "Пользовательские настройки по умолчанию"
-
-#~ msgid "Whether or not IM is an user default."
-#~ msgstr ""
-#~ "Используется ли IM в качестве пользовательских настроек по умолчанию."
-
-#~ msgid "XIM"
-#~ msgstr "XIM"
-
-#~ msgid "Whether or not IM is a XIM server."
-#~ msgstr "Является ли IM сервером XIM."
-
-#~ msgid "User Specific"
-#~ msgstr "Пользовательские параметры"
-
-#~ msgid "xinputrc was modified by the user"
-#~ msgstr "xinputrc изменен пользователем"
-
-#~ msgid "Invalid IM module type: %d"
-#~ msgstr "Неверный тип модуля IM: %d"
-
-#~ msgid "IM module name"
-#~ msgstr "Имя модуля IM"
-
-#~ msgid "A target IM module name that to observe signals"
-#~ msgstr "Имя целевого модуля IM, который будет отслеживать сигналы"
-
-#~ msgid "Replace"
-#~ msgstr "Заменить"
-
-#~ msgid "DBus connection"
-#~ msgstr "Соединение DBus"
-
-#~ msgid "An object to be a DBus connection"
-#~ msgstr "Объект соединения DBus"
-
-#~ msgid "DBus Interface"
-#~ msgstr "Интерфейс DBus"
-
-#~ msgid "Interface name to connect to DBus"
-#~ msgstr "Имя интерфейса для подключения к DBus"
-
-#~ msgid "Locale"
-#~ msgstr "Язык"
-
-#~ msgid ""
-#~ "Failed to invoke a method `%s':\n"
-#~ "  %s"
-#~ msgstr ""
-#~ "Не удалось вызвать метод `%s':\n"
-#~ "  %s"
-
-#~ msgid ""
-#~ "Failed to invoke a method `%s' on %s:\n"
-#~ "  %s"
-#~ msgstr ""
-#~ "Не удалось вызвать метод %s' на %s:\n"
-#~ "  %s"
-
-#~ msgid "Failed to remove a pidfile: %s"
-#~ msgstr "Не удалось удалить файл PID: %s"
-
-#~ msgid "Failed to open a pidfile: %s"
-#~ msgstr "Не удалось открыть файл PID: %s"
-
-#~ msgid "Couldn't determine the pid for %s process."
-#~ msgstr "Не удается определить PID процесса %s."
-
-#~ msgid "Couldn't send a signal to the %s process successfully."
-#~ msgstr "Не удалось отправить сигнал процессу %s."
-
-#~ msgid "Failed to get a place of home directory."
-#~ msgstr "Не удалось получить расположение домашнего каталога."
-
-#~ msgid "Failed to revert the backup file: %s"
-#~ msgstr "Не удалось восстановить файл из резервной копии: %s"
-
-#~ msgid "Failed to create a backup file: %s"
-#~ msgstr "Не удалось создать резервную копию файла: %s"
-
-#~ msgid "Failed to remove a .xinputrc file: %s"
-#~ msgstr "Не удалось удалить файл .xinputrc: %s"
-
-#~ msgid "Failed to make a symlink: %s"
-#~ msgstr "Не удалось создать символьную ссылку: %s"
-
-#~ msgid "No such input method on your system: %s"
-#~ msgstr "Такой метод не существует в вашей системе: %s"
-
-#~ msgid "No XIM server is available in %s"
-#~ msgstr "Нет сервера XIM в %s"
-
-#~ msgid "X display name"
-#~ msgstr "имя дисплея X"
-
-#~ msgid "X display name to use"
-#~ msgstr "Имя дисплея Х для использования"
-
-#~ msgid "X display to use"
-#~ msgstr "Дисплей Х для использования"
-
-#~ msgid "DISPLAY"
-#~ msgstr "ДИСПЛЕЙ"
-
-#~ msgid "X screen to use"
-#~ msgstr "Экран Х для использования"
-
-#~ msgid "SCREEN"
-#~ msgstr "ЭКРАН"
-
-#~ msgid "Failed to open a X display."
-#~ msgstr "Не удалось открыть дисплей Х."
-
-#~ msgid "Reloading...\n"
-#~ msgstr "Выполняется перезагрузка...\n"
-
-#~ msgid "Duplicate entry `%s' from %s. SHORT_DESC has to be unique."
-#~ msgstr ""
-#~ "Дубликат записи `%s' из %s. Значение SHORT_DESC должно быть уникальным."
-
-#~ msgid "Timed out to initialize %s services."
-#~ msgstr "Таймаут при инициализации служб %s."
-
-#~ msgid "No input methods available on your system."
-#~ msgstr "Нет доступных методов ввода в вашей системе."
-
-#~ msgid "Force reloading the configuration, including restarting the process."
-#~ msgstr "Принудительная загрузка конфигурации, включая рестарт процесса."
-
-#~ msgid "Force restarting the IM process regradless of any errors."
-#~ msgstr "Принудительный перезапуск процесса IM независим для любых ошибок."
-
-#~ msgid "Do not update .xinputrc."
-#~ msgstr "Не обновлять .xinputrc."
-
-#~ msgid "Stopped %s\n"
-#~ msgstr "Остановлен %s\n"
-
-#~ msgid "Failed to stop IM process `%s'\n"
-#~ msgstr "Не удалось остановить процесс IM: `%s'\n"
