@@ -1,3 +1,10 @@
+2008-09-15  Akira TAGOH  <tagoh@redhat.com>
+
+	* src/im-chooser-simple.c (im_chooser_simple_show_status_icon_on_toggled): 
+	new.
+	(im_chooser_simple_get_widget): Add an option whether or not
+	the applet icon is displayed at the systray. (rhbz#460703)
+
 2008-09-01  Akira TAGOH  <tagoh@redhat.com>
 
 	* src/im-chooser.desktop.in.in (Icon): Get rid of the extension.

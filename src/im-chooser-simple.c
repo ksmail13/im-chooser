@@ -28,6 +28,8 @@
 #include <string.h>
 #include <unistd.h>
 #include <glib/gi18n.h>
+#include <gconf/gconf.h>
+#include <gconf/gconf-client.h>
 #include "imsettings/imsettings.h"
 #include "imsettings/imsettings-request.h"
 #include "im-chooser-simple.h"
@@ -79,6 +81,7 @@ struct _IMChooserSimpleClass {
 struct _IMChooserSimple {
 	GObject             parent_instance;
 	GtkWidget          *widget;
+	GtkWidget          *checkbox_is_applet_shown;
 	GtkWidget          *checkbox_is_im_enabled;
 	GtkWidget          *widget_scrolled;
 	GtkWidget          *widget_im_list;
@@ -133,6 +136,20 @@ im_chooser_simple_destroy_idle_cb(gpointer data)
 	IMChooserSimple *im = IM_CHOOSER_SIMPLE (data);
 
 	im->idle_source = 0;
+}
+
+static void
+im_chooser_simple_show_status_icon_on_toggled(GtkToggleButton *button,
+					      gpointer         user_data)
+{
+	GConfClient *client = gconf_client_get_default();
+	GConfValue *val = gconf_value_new(GCONF_VALUE_BOOL);
+
+	gconf_value_set_bool(val, gtk_toggle_button_get_active(button));
+	gconf_client_set(client, "/apps/imsettings-applet/show_icon",
+			 val, NULL);
+	gconf_value_free(val);
+	g_object_unref(client);
 }
 
 static void
@@ -940,10 +957,13 @@ im_chooser_simple_get_widget(IMChooserSimple *im)
 {
 	GtkWidget *vbox, *align, *label, *align2, *checkbox;
 	GtkWidget *align4, *align5, *button;
+	GtkWidget *align_applet;
 	GtkWidget *image, *hbox, *list, *scrolled;
 	GtkCellRenderer *renderer;
 	GtkTreeViewColumn *column;
 	GtkTreeSelection *selection;
+	GConfClient *client;
+	GConfValue *val;
 
 	g_return_val_if_fail (IM_IS_CHOOSER_SIMPLE (im), NULL);
 
@@ -957,6 +977,13 @@ im_chooser_simple_get_widget(IMChooserSimple *im)
 		gtk_label_set_use_markup(GTK_LABEL (label), TRUE);
 		gtk_container_add(GTK_CONTAINER (align), label);
 		gtk_alignment_set_padding(GTK_ALIGNMENT (align), 9, 6, 6, 6);
+
+		align_applet = gtk_alignment_new(0, 0, 0, 0);
+		im->checkbox_is_applet_shown = checkbox = gtk_check_button_new_with_mnemonic(_("Show the status icon"));
+		gtk_container_add(GTK_CONTAINER(align_applet), checkbox);
+		gtk_alignment_set_padding(GTK_ALIGNMENT (align_applet), 3, 6, 6, 6);
+		g_signal_connect(checkbox, "toggled",
+				 G_CALLBACK (im_chooser_simple_show_status_icon_on_toggled), im);
 
 		align2 = gtk_alignment_new(0, 0, 0, 0);
 		im->checkbox_is_im_enabled = checkbox = gtk_check_button_new_with_mnemonic(_("_Enable input method feature"));
@@ -1015,6 +1042,7 @@ im_chooser_simple_get_widget(IMChooserSimple *im)
 				 G_CALLBACK (im_chooser_simple_prefs_button_on_clicked), im);
 
 		gtk_container_set_border_width(GTK_CONTAINER (vbox), 0);
+		gtk_box_pack_start(GTK_BOX (vbox), align_applet, FALSE, TRUE, 0);
 		gtk_box_pack_start(GTK_BOX (vbox), align2, FALSE, TRUE, 0);
 		gtk_box_pack_start(GTK_BOX (vbox), align, FALSE, TRUE, 0);
 		gtk_box_pack_start(GTK_BOX (vbox), align4, TRUE, TRUE, 0);
@@ -1028,6 +1056,16 @@ im_chooser_simple_get_widget(IMChooserSimple *im)
 
 	gtk_widget_set_sensitive(im->widget_scrolled, FALSE);
 	gtk_widget_set_sensitive(im->button_im_config, FALSE);
+
+	client = gconf_client_get_default();
+	val = gconf_client_get(client, "/apps/imsettings-applet/show_icon", NULL);
+	if (val && gconf_value_get_bool(val))
+		gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON (im->checkbox_is_applet_shown),
+					     TRUE);
+	else
+		gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON (im->checkbox_is_applet_shown),
+					     FALSE);
+
 	gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON (im->checkbox_is_im_enabled),
 				     FALSE);
 	gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON (im->checkbox_is_im_enabled),
