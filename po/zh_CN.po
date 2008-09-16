@@ -11,8 +11,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: im-chooser.trunk\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-08-28 11:20+0000\n"
-"PO-Revision-Date: 2008-09-01 10:07+1000\n"
+"POT-Creation-Date: 2008-09-15 09:21+0000\n"
+"PO-Revision-Date: 2008-09-16 15:55+1000\n"
 "Last-Translator: Leah Liu <lliu@redhat.com>\n"
 "Language-Team: Simplified Chinese <zh@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -20,40 +20,40 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.11.4\n"
 
-#: ../src/im-chooser-simple.c:122
+#: ../src/im-chooser-simple.c:125
 msgid "X applications"
 msgstr "X 应用程序"
 
-#: ../src/im-chooser-simple.c:123
+#: ../src/im-chooser-simple.c:126
 msgid "GTK+ applications"
 msgstr "GTK+ 应用程序"
 
-#: ../src/im-chooser-simple.c:124
+#: ../src/im-chooser-simple.c:127
 msgid "Qt applications"
 msgstr "Qt 应用程序"
 
-#: ../src/im-chooser-simple.c:162
+#: ../src/im-chooser-simple.c:179
 msgid "Updating Input Method list"
 msgstr "更新输入法列表"
 
-#: ../src/im-chooser-simple.c:265
+#: ../src/im-chooser-simple.c:282
 msgid "Unable to get the information"
 msgstr "无法获得信息"
 
-#: ../src/im-chooser-simple.c:342
+#: ../src/im-chooser-simple.c:359
 msgid "Failed to start Input Method"
 msgstr "启动输入法失败"
 
-#: ../src/im-chooser-simple.c:369
+#: ../src/im-chooser-simple.c:386
 msgid "Failed to stop Input Method"
 msgstr "无法停止输入法"
 
-#: ../src/im-chooser-simple.c:474
+#: ../src/im-chooser-simple.c:491
 #, c-format
 msgid "Starting Input Method - %s"
 msgstr "启动输入法 - %s"
 
-#: ../src/im-chooser-simple.c:491
+#: ../src/im-chooser-simple.c:508
 #, c-format
 msgid "Stopping Input Method - %s"
 msgstr "终止输入法 - %s"
@@ -61,8 +61,8 @@ msgstr "终止输入法 - %s"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications and Qt applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications and GTK+ applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications and Qt applications</i></small>"
-#: ../src/im-chooser-simple.c:577 ../src/im-chooser-simple.c:580
-#: ../src/im-chooser-simple.c:583
+#: ../src/im-chooser-simple.c:594 ../src/im-chooser-simple.c:597
+#: ../src/im-chooser-simple.c:600
 #, c-format
 msgid ", except %s and %s"
 msgstr "，除 %s 和 %s 之外"
@@ -70,81 +70,83 @@ msgstr "，除 %s 和 %s 之外"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except Qt applications</i></small>"
-#: ../src/im-chooser-simple.c:586 ../src/im-chooser-simple.c:589
-#: ../src/im-chooser-simple.c:592
+#: ../src/im-chooser-simple.c:603 ../src/im-chooser-simple.c:606
+#: ../src/im-chooser-simple.c:609
 #, c-format
 msgid ", except %s"
 msgstr "，除 %s 之外"
 
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications</i></small>"
-#: ../src/im-chooser-simple.c:597
+#: ../src/im-chooser-simple.c:614
 #, c-format
 msgid ""
 "<small><i>Note: this change will not take effect until you next log in%s</"
 "i></small>"
-msgstr ""
-"<small><i>请注意：这个修改在您下一次登录 %s 时才会生效</i></"
-"small>"
+msgstr "<small><i>请注意：这个修改在您下一次登录 %s 时才会生效</i></small>"
 
-#: ../src/im-chooser-simple.c:657
+#: ../src/im-chooser-simple.c:674
 msgid "Parent Window"
 msgstr "上一级窗口"
 
-#: ../src/im-chooser-simple.c:658
+#: ../src/im-chooser-simple.c:675
 msgid "GtkWindow that points to the parent window"
 msgstr "指向上一级窗口的 Gtk 窗口"
 
-#: ../src/im-chooser-simple.c:663
+#: ../src/im-chooser-simple.c:680
 msgid "Note type"
 msgstr "备注类型"
 
-#: ../src/im-chooser-simple.c:664
+#: ../src/im-chooser-simple.c:681
 msgid "A enum value to determine which notes should be displayed"
 msgstr "用来决定应该显示哪些注释的 enum 值"
 
 #. setup a progress window
-#: ../src/im-chooser-simple.c:707
+#: ../src/im-chooser-simple.c:724
 msgid "Work in progress..."
 msgstr "处理中... "
 
-#: ../src/im-chooser-simple.c:759 ../src/im-chooser-simple.c:775
+#: ../src/im-chooser-simple.c:776 ../src/im-chooser-simple.c:792
 msgid "Unable to communicate to IMSettings services"
 msgstr "无法联络 IMSetting 服务"
 
-#: ../src/im-chooser-simple.c:760 ../src/im-chooser-simple.c:776
+#: ../src/im-chooser-simple.c:777 ../src/im-chooser-simple.c:793
 msgid "Version mismatch"
 msgstr "版本不匹配"
 
-#: ../src/im-chooser-simple.c:790
+#: ../src/im-chooser-simple.c:807
 msgid "Unable to gather current status"
 msgstr "无法收集当前状态"
 
-#: ../src/im-chooser-simple.c:796
+#: ../src/im-chooser-simple.c:813
 msgid "Unable to get Input Method information"
 msgstr "无法获得输入法信息"
 
-#: ../src/im-chooser-simple.c:843
+#: ../src/im-chooser-simple.c:860
 #, c-format
 msgid "Use %s"
 msgstr "使用 %s"
 
-#: ../src/im-chooser-simple.c:846
+#: ../src/im-chooser-simple.c:863
 msgid " (legacy)"
 msgstr "（继承）"
 
-#: ../src/im-chooser-simple.c:848
+#: ../src/im-chooser-simple.c:865
 msgid " (recommended)"
 msgstr "（推荐）"
 
-#: ../src/im-chooser-simple.c:956
+#: ../src/im-chooser-simple.c:976
 msgid "<b>Input Method</b>"
 msgstr "<b>输入方法</b>"
 
-#: ../src/im-chooser-simple.c:962
+#: ../src/im-chooser-simple.c:982
+msgid "Show the status icon"
+msgstr "显示状态图标"
+
+#: ../src/im-chooser-simple.c:989
 msgid "_Enable input method feature"
 msgstr "启用输入法特性（_E）"
 
-#: ../src/im-chooser-simple.c:1008
+#: ../src/im-chooser-simple.c:1035
 msgid "Input Method _Preferences..."
 msgstr "首选输入法（_P）"
 
