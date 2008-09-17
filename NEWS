@@ -1,4 +1,4 @@
-1.2.2 ->
+1.2.2 -> 1.2.3
 =================
 * Enhancement
   * Add an option to show/hide the applet icon at the systray.
@@ -7,7 +7,9 @@
   * Dutch
   * Finnish
   * French
+  * German
   * Hungarian
+  * Italian
   * Japanese
   * Korean
   * Norwegian Bokmål

@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: im-chooser.trunk\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-09-15 09:21+0000\n"
+"POT-Creation-Date: 2008-09-17 23:32+0900\n"
 "PO-Revision-Date: 2008-09-16 15:55+1000\n"
 "Last-Translator: Leah Liu <lliu@redhat.com>\n"
 "Language-Team: Simplified Chinese <zh@li.org>\n"
@@ -106,6 +106,7 @@ msgid "Work in progress..."
 msgstr "处理中... "
 
 #: ../src/im-chooser-simple.c:776 ../src/im-chooser-simple.c:792
+#, c-format
 msgid "Unable to communicate to IMSettings services"
 msgstr "无法联络 IMSetting 服务"
 
@@ -151,7 +152,8 @@ msgid "Input Method _Preferences..."
 msgstr "首选输入法（_P）"
 
 #: ../src/main.c:53
-msgid "<span weight=\"bold\" size=\"larger\">No input method is available</span>"
+msgid ""
+"<span weight=\"bold\" size=\"larger\">No input method is available</span>"
 msgstr "<span weight=\"bold\" size=\"larger\">没有可用的输入法</span>"
 
 #: ../src/main.c:56
@@ -175,4 +177,3 @@ msgstr "选择要使用的输入法或者在台式机中禁用输入法用法"
 #: ../src/im-chooser.desktop.in.in.h:2
 msgid "Input Method"
 msgstr "输入法"
-

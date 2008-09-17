@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: im-chooser\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-08-28 09:20+0000\n"
+"POT-Creation-Date: 2008-09-17 23:32+0900\n"
 "PO-Revision-Date: 2008-09-09 22:37+0200\n"
 "Last-Translator: Peter van Egdom <p.van.egdom@gmail.com>\n"
 "Language-Team: Dutch <fedora-trans-list@redhat.com>\n"
@@ -17,40 +17,40 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../src/im-chooser-simple.c:122
+#: ../src/im-chooser-simple.c:125
 msgid "X applications"
 msgstr "X toepassingen"
 
-#: ../src/im-chooser-simple.c:123
+#: ../src/im-chooser-simple.c:126
 msgid "GTK+ applications"
 msgstr "GTK+ toepassingen"
 
-#: ../src/im-chooser-simple.c:124
+#: ../src/im-chooser-simple.c:127
 msgid "Qt applications"
 msgstr "Qt toepassingen"
 
-#: ../src/im-chooser-simple.c:162
+#: ../src/im-chooser-simple.c:179
 msgid "Updating Input Method list"
 msgstr "Bijwerken van invoermethodelijst"
 
-#: ../src/im-chooser-simple.c:265
+#: ../src/im-chooser-simple.c:282
 msgid "Unable to get the information"
 msgstr "Niet in staat om de informatie te verkrijgen"
 
-#: ../src/im-chooser-simple.c:342
+#: ../src/im-chooser-simple.c:359
 msgid "Failed to start Input Method"
 msgstr "Starten van invoermethode is mislukt"
 
-#: ../src/im-chooser-simple.c:369
+#: ../src/im-chooser-simple.c:386
 msgid "Failed to stop Input Method"
 msgstr "Stoppen van invoermethode is mislukt"
 
-#: ../src/im-chooser-simple.c:474
+#: ../src/im-chooser-simple.c:491
 #, c-format
 msgid "Starting Input Method - %s"
 msgstr "Starten van invoermethode - %s"
 
-#: ../src/im-chooser-simple.c:491
+#: ../src/im-chooser-simple.c:508
 #, c-format
 msgid "Stopping Input Method - %s"
 msgstr "Stoppen van invoermethode - %s"
@@ -58,8 +58,8 @@ msgstr "Stoppen van invoermethode - %s"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications and Qt applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications and GTK+ applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications and Qt applications</i></small>"
-#: ../src/im-chooser-simple.c:577 ../src/im-chooser-simple.c:580
-#: ../src/im-chooser-simple.c:583
+#: ../src/im-chooser-simple.c:594 ../src/im-chooser-simple.c:597
+#: ../src/im-chooser-simple.c:600
 #, c-format
 msgid ", except %s and %s"
 msgstr ", met uitzondering van %s en %s"
@@ -67,14 +67,14 @@ msgstr ", met uitzondering van %s en %s"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except Qt applications</i></small>"
-#: ../src/im-chooser-simple.c:586 ../src/im-chooser-simple.c:589
-#: ../src/im-chooser-simple.c:592
+#: ../src/im-chooser-simple.c:603 ../src/im-chooser-simple.c:606
+#: ../src/im-chooser-simple.c:609
 #, c-format
 msgid ", except %s"
 msgstr ", met uitzondering van %s"
 
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications</i></small>"
-#: ../src/im-chooser-simple.c:597
+#: ../src/im-chooser-simple.c:614
 #, c-format
 msgid ""
 "<small><i>Note: this change will not take effect until you next log in%s</"
@@ -83,66 +83,71 @@ msgstr ""
 "<small><i>Let op: deze wijziging zal pas actief worden wanneer u zich "
 "opnieuw aanmeldt%s</i></small>"
 
-#: ../src/im-chooser-simple.c:657
+#: ../src/im-chooser-simple.c:674
 msgid "Parent Window"
 msgstr "Bovenliggend venster"
 
-#: ../src/im-chooser-simple.c:658
+#: ../src/im-chooser-simple.c:675
 msgid "GtkWindow that points to the parent window"
 msgstr "GtkWindow dat naar het bovenliggend venster verwijst"
 
-#: ../src/im-chooser-simple.c:663
+#: ../src/im-chooser-simple.c:680
 msgid "Note type"
 msgstr "Notitietype"
 
-#: ../src/im-chooser-simple.c:664
+#: ../src/im-chooser-simple.c:681
 msgid "A enum value to determine which notes should be displayed"
 msgstr ""
 "Een enumeratiewaarde om te bepalen welke notities moeten worden weergegeven"
 
 #. setup a progress window
-#: ../src/im-chooser-simple.c:707
+#: ../src/im-chooser-simple.c:724
 msgid "Work in progress..."
 msgstr "Werk in uitvoering..."
 
-#: ../src/im-chooser-simple.c:759 ../src/im-chooser-simple.c:775
+#: ../src/im-chooser-simple.c:776 ../src/im-chooser-simple.c:792
+#, c-format
 msgid "Unable to communicate to IMSettings services"
 msgstr "Niet in staat om te communiceren met IMSettings diensten"
 
-#: ../src/im-chooser-simple.c:760 ../src/im-chooser-simple.c:776
+#: ../src/im-chooser-simple.c:777 ../src/im-chooser-simple.c:793
 msgid "Version mismatch"
 msgstr "Versies komen niet overeen"
 
-#: ../src/im-chooser-simple.c:790
+#: ../src/im-chooser-simple.c:807
 msgid "Unable to gather current status"
 msgstr "Niet in staat om de huidige status te verzamelen"
 
-#: ../src/im-chooser-simple.c:796
+#: ../src/im-chooser-simple.c:813
 msgid "Unable to get Input Method information"
 msgstr "Niet in staat om invoermethodeinformatie te verkrijgen"
 
-#: ../src/im-chooser-simple.c:843
+#: ../src/im-chooser-simple.c:860
 #, c-format
 msgid "Use %s"
 msgstr "%s gebruiken"
 
-#: ../src/im-chooser-simple.c:846
+#: ../src/im-chooser-simple.c:863
 msgid " (legacy)"
 msgstr " (verouderd)"
 
-#: ../src/im-chooser-simple.c:848
+#: ../src/im-chooser-simple.c:865
 msgid " (recommended)"
 msgstr " (aanbevolen)"
 
-#: ../src/im-chooser-simple.c:956
+#: ../src/im-chooser-simple.c:976
 msgid "<b>Input Method</b>"
 msgstr "<b>Invoermethode</b>"
 
-#: ../src/im-chooser-simple.c:962
+#: ../src/im-chooser-simple.c:982
+msgid "Show the status icon"
+msgstr ""
+
+#: ../src/im-chooser-simple.c:989
 msgid "_Enable input method feature"
 msgstr "Invoermethodefunctie _aanzetten"
 
-#: ../src/im-chooser-simple.c:1008
+#: ../src/im-chooser-simple.c:1035
 msgid "Input Method _Preferences..."
 msgstr "Invoermethode _voorkeuren..."
 
