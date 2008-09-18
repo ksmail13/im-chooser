@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: pl\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-09-17 23:32+0900\n"
-"PO-Revision-Date: 2008-08-28 10:05+0200\n"
+"PO-Revision-Date: 2008-09-18 21:26+0200\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish <pl@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -136,7 +136,7 @@ msgstr "<b>Metoda wejścia</b>"
 
 #: ../src/im-chooser-simple.c:982
 msgid "Show the status icon"
-msgstr ""
+msgstr "Wyświetlaj ikonę stanu"
 
 #: ../src/im-chooser-simple.c:989
 msgid "_Enable input method feature"
