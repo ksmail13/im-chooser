@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: im-chooser\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-09-17 23:32+0900\n"
-"PO-Revision-Date: 2008-09-09 22:37+0200\n"
+"POT-Creation-Date: 2008-09-17 17:22+0000\n"
+"PO-Revision-Date: 2008-09-19 22:47+0200\n"
 "Last-Translator: Peter van Egdom <p.van.egdom@gmail.com>\n"
 "Language-Team: Dutch <fedora-trans-list@redhat.com>\n"
 "MIME-Version: 1.0\n"
@@ -106,7 +106,6 @@ msgid "Work in progress..."
 msgstr "Werk in uitvoering..."
 
 #: ../src/im-chooser-simple.c:776 ../src/im-chooser-simple.c:792
-#, c-format
 msgid "Unable to communicate to IMSettings services"
 msgstr "Niet in staat om te communiceren met IMSettings diensten"
 
@@ -141,7 +140,7 @@ msgstr "<b>Invoermethode</b>"
 
 #: ../src/im-chooser-simple.c:982
 msgid "Show the status icon"
-msgstr ""
+msgstr "Het statuspictogram tonen"
 
 #: ../src/im-chooser-simple.c:989
 msgid "_Enable input method feature"
