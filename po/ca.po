@@ -19,43 +19,44 @@ msgid ""
 msgstr ""
 "Project-Id-Version: im-chooser 0.3.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-09-17 23:32+0900\n"
-"PO-Revision-Date: 2008-06-28 10:01+0100\n"
+"POT-Creation-Date: 2008-09-17 17:22+0000\n"
+"PO-Revision-Date: 2008-09-20 10:01+0100\n"
 "Last-Translator: Oriol Miro <oriolmiro@gmail.com>\n"
 "Language-Team: Catalan <fedora@softcatala.net>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
+# No s'ha de fer servir majúscula per a "aplicacions"
 #: ../src/im-chooser-simple.c:125
 msgid "X applications"
-msgstr ""
+msgstr "aplicacions d'X"
 
+# No s'ha de fer servir majúscula per a "aplicacions"
 #: ../src/im-chooser-simple.c:126
 msgid "GTK+ applications"
-msgstr ""
+msgstr "aplicacions de GTK+"
 
+# No s'ha de fer servir majúscula per a "aplicacions"
 #: ../src/im-chooser-simple.c:127
 msgid "Qt applications"
-msgstr ""
+msgstr "aplicacions de Qt"
 
 #: ../src/im-chooser-simple.c:179
 msgid "Updating Input Method list"
 msgstr "Actualitzant la llista de mètodes d'entrada"
 
 #: ../src/im-chooser-simple.c:282
-#, fuzzy
 msgid "Unable to get the information"
-msgstr "Localització des d'on obtenir els paràmetres de configuració de ME"
+msgstr "No s'ha pogut obtenir la informació"
 
 #: ../src/im-chooser-simple.c:359
 msgid "Failed to start Input Method"
 msgstr "Impossible d'iniciar els mètodes d'entrada"
 
 #: ../src/im-chooser-simple.c:386
-#, fuzzy
 msgid "Failed to stop Input Method"
-msgstr "Impossible d'iniciar els mètodes d'entrada"
+msgstr "No s'ha pogut aturar els mètodes d'entrada"
 
 #: ../src/im-chooser-simple.c:491
 #, c-format
@@ -74,7 +75,7 @@ msgstr "S'està aturant el mètode d'entrada - %s"
 #: ../src/im-chooser-simple.c:600
 #, c-format
 msgid ", except %s and %s"
-msgstr ""
+msgstr ", excepte per a les %s i les %s"
 
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications</i></small>"
@@ -83,17 +84,16 @@ msgstr ""
 #: ../src/im-chooser-simple.c:609
 #, c-format
 msgid ", except %s"
-msgstr ""
+msgstr ", excepte per a les %s"
 
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications</i></small>"
 #: ../src/im-chooser-simple.c:614
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "<small><i>Note: this change will not take effect until you next log in%s</"
 "i></small>"
 msgstr ""
-"<small><i>Nota: aquest canvi no s'aplicarà fins que entreu de nou, exepte "
-"les aplicacions GTK+.</i></small>"
+"<small><i>Nota: aquest canvi no s'aplicarà fins que entreu de nou a%s</i></small>"
 
 #: ../src/im-chooser-simple.c:674
 msgid "Parent Window"
@@ -105,11 +105,11 @@ msgstr "Finestra GtkWindow que apunta a la finestra pare."
 
 #: ../src/im-chooser-simple.c:680
 msgid "Note type"
-msgstr ""
+msgstr "Tipus de nota"
 
 #: ../src/im-chooser-simple.c:681
 msgid "A enum value to determine which notes should be displayed"
-msgstr ""
+msgstr "Un valor d'enumeració per determinar qunes notes s'haurien de mostrar"
 
 #. setup a progress window
 #: ../src/im-chooser-simple.c:724
@@ -117,22 +117,20 @@ msgid "Work in progress..."
 msgstr "Treball en curs..."
 
 #: ../src/im-chooser-simple.c:776 ../src/im-chooser-simple.c:792
-#, c-format
 msgid "Unable to communicate to IMSettings services"
-msgstr ""
+msgstr "No es pot communicar amb els serveis d'IMSettings"
 
 #: ../src/im-chooser-simple.c:777 ../src/im-chooser-simple.c:793
 msgid "Version mismatch"
-msgstr ""
+msgstr "La versió no coincideix"
 
 #: ../src/im-chooser-simple.c:807
 msgid "Unable to gather current status"
-msgstr ""
+msgstr "No es pot recuperar l'estat actual"
 
 #: ../src/im-chooser-simple.c:813
-#, fuzzy
 msgid "Unable to get Input Method information"
-msgstr "Localització des d'on obtenir els paràmetres de configuració de ME"
+msgstr "No es pot obtenir informació del mètode d'entrada"
 
 #: ../src/im-chooser-simple.c:860
 #, c-format
@@ -153,7 +151,7 @@ msgstr "<b>Mètode d'entrada</b>"
 
 #: ../src/im-chooser-simple.c:982
 msgid "Show the status icon"
-msgstr ""
+msgstr "Mostra la icona d'estat"
 
 #: ../src/im-chooser-simple.c:989
 msgid "_Enable input method feature"
@@ -181,9 +179,8 @@ msgid "IM Chooser - Input Method configuration tool"
 msgstr "IM Chooser - Eina de configuració de Mètodes d'Entrada"
 
 #: ../src/main.c:160
-#, fuzzy
 msgid "Log Out"
-msgstr "_Surt"
+msgstr "Surt"
 
 #: ../src/im-chooser.desktop.in.in.h:1
 msgid ""
@@ -405,7 +402,8 @@ msgstr "Mètode d'entrada"
 #~ msgstr "S'està actualitzant...\n"
 
 #~ msgid "Duplicate entry `%s' from %s. SHORT_DESC has to be unique."
-#~ msgstr "Hi ha una entrada duplicada «%s» de «%s». SHORT_DESC ha de ser únic."
+#~ msgstr ""
+#~ "Hi ha una entrada duplicada «%s» de «%s». SHORT_DESC ha de ser únic."
 
 #~ msgid "Timed out to initialize %s services."
 #~ msgstr ""
