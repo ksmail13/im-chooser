@@ -6,50 +6,49 @@
 # Automatically generated, 2006.
 # Subhransu Behera <sbehera@redhat.com>, 2006.
 # Manoj Kumar Giri <giri.manojkr@gmail.com>, 2008.
+# Manoj Kumar Giri <mgiri@redhat.com>, 2008.
 msgid ""
 msgstr ""
 "Project-Id-Version: im-chooser.trunk.or\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-09-17 23:32+0900\n"
-"PO-Revision-Date: 2008-06-16 20:28+0530\n"
-"Last-Translator: Manoj Kumar Giri <giri.manojkr@gmail.com>\n"
+"POT-Creation-Date: 2008-09-17 17:19+0000\n"
+"PO-Revision-Date: 2008-09-22 14:48+0530\n"
+"Last-Translator: Manoj Kumar Giri <mgiri@redhat.com>\n"
 "Language-Team: Oriya\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.11.4\n"
-"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+"Plural-Forms: nplurals=2;plural=(n!=1)\n"
 "\n"
 
 #: ../src/im-chooser-simple.c:125
 msgid "X applications"
-msgstr ""
+msgstr "X ପ୍ରୟୋଗଗୁଡ଼ିକ"
 
 #: ../src/im-chooser-simple.c:126
 msgid "GTK+ applications"
-msgstr ""
+msgstr "GTK+ ପ୍ରୟୋଗଗୁଡ଼ିକ"
 
 #: ../src/im-chooser-simple.c:127
 msgid "Qt applications"
-msgstr ""
+msgstr "Qt ପ୍ରୟୋଗଗୁଡ଼ିକ"
 
 #: ../src/im-chooser-simple.c:179
 msgid "Updating Input Method list"
 msgstr "ନିବେଶ ପ୍ରଣାଳୀ ତାଲିକାକୁ ଅଦ୍ୟତନ କରାଯାଉଛି"
 
 #: ../src/im-chooser-simple.c:282
-#, fuzzy
 msgid "Unable to get the information"
-msgstr "imsettings ସୂଚନା ପାଇବାକୁ ଲୋକେଲ"
+msgstr "ସୂଚନା ପାଇବାରେ ଅସମର୍ଥ"
 
 #: ../src/im-chooser-simple.c:359
 msgid "Failed to start Input Method"
 msgstr "ନିବେଶ ପ୍ରଣାଳୀ ମାନଙ୍କୁ ଆରମ୍ଭ କରିବାରେ ବିଫଳ"
 
 #: ../src/im-chooser-simple.c:386
-#, fuzzy
 msgid "Failed to stop Input Method"
-msgstr "ନିବେଶ ପ୍ରଣାଳୀ ମାନଙ୍କୁ ଆରମ୍ଭ କରିବାରେ ବିଫଳ"
+msgstr "ନିବେଶ ପ୍ରଣାଳୀମାନଙ୍କୁ ଅଟକାଇବାରେ ବିଫଳ"
 
 #: ../src/im-chooser-simple.c:491
 #, c-format
@@ -68,7 +67,7 @@ msgstr "ନିବେଶ ପ୍ରଣାଳୀ - %s କୁ ଅଟକାଯାଉ�
 #: ../src/im-chooser-simple.c:600
 #, c-format
 msgid ", except %s and %s"
-msgstr ""
+msgstr ", %s ଏବଂ %s ବ୍ୟତିତ"
 
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications</i></small>"
@@ -77,17 +76,15 @@ msgstr ""
 #: ../src/im-chooser-simple.c:609
 #, c-format
 msgid ", except %s"
-msgstr ""
+msgstr ", %s ବ୍ୟତିତ"
 
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications</i></small>"
 #: ../src/im-chooser-simple.c:614
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "<small><i>Note: this change will not take effect until you next log in%s</"
 "i></small>"
-msgstr ""
-"<small><i>ଟିପ୍ପଣୀ: ଆପଣଙ୍କ ପରବର୍ତ୍ତୀ ଲଗଇନ ପର୍ଯ୍ଯନ୍ତ ଏହି ପରିବର୍ତ୍ତନଟି ପ୍ରଭାବିତ ହେବନାହିଁ, GTK+ "
-"ପ୍ରୟୋଗମାନଙ୍କ ବ୍ୟତିତ।</i></small>"
+msgstr "<small><i>ଟିପ୍ପଣୀ: ଆପଣଙ୍କ ପରବର୍ତ୍ତୀ ଲଗଇନ %s ପର୍ଯ୍ଯନ୍ତ ଏହି ପରିବର୍ତ୍ତନଟି ପ୍ରଭାବିତ ହେବନାହିଁ</i></small>"
 
 #: ../src/im-chooser-simple.c:674
 msgid "Parent Window"
@@ -99,11 +96,11 @@ msgstr "Gtk ୱିଣ୍ଡୋ ଯାହାକି ମୂଳ ୱିଣ୍ଡୋ�
 
 #: ../src/im-chooser-simple.c:680
 msgid "Note type"
-msgstr ""
+msgstr "ଟିପ୍ପଣୀ ପ୍ରକାର"
 
 #: ../src/im-chooser-simple.c:681
 msgid "A enum value to determine which notes should be displayed"
-msgstr ""
+msgstr "କେଉଁ ଟିପ୍ପଣୀଗୁଡ଼ିକୁ ଦର୍ଶାଯିବା ଉଚିତ ତାହାର ମୂଲ୍ଯ ନିର୍ଦ୍ଧାରଣ କରିବା ପାଇଁ enum ମୂଲ୍ୟ"
 
 #. setup a progress window
 #: ../src/im-chooser-simple.c:724
@@ -111,22 +108,20 @@ msgid "Work in progress..."
 msgstr "କାମ ପ୍ରଗତି କରୁଛି..."
 
 #: ../src/im-chooser-simple.c:776 ../src/im-chooser-simple.c:792
-#, c-format
 msgid "Unable to communicate to IMSettings services"
-msgstr ""
+msgstr "IMSettings ସେବା ସହିତ ଯୋଗାଯୋଗ କରିବାରେ ଅସମର୍ଥ"
 
 #: ../src/im-chooser-simple.c:777 ../src/im-chooser-simple.c:793
 msgid "Version mismatch"
-msgstr ""
+msgstr "ସଂସ୍କରଣ ମେଳଖାଉନାହିଁ"
 
 #: ../src/im-chooser-simple.c:807
 msgid "Unable to gather current status"
-msgstr ""
+msgstr "ପ୍ରଚଳିତ ସ୍ଥିତିକୁ ଏକଜୁଟ କରିବାରେ ଅସମର୍ଥ"
 
 #: ../src/im-chooser-simple.c:813
-#, fuzzy
 msgid "Unable to get Input Method information"
-msgstr "imsettings ସୂଚନା ପାଇବାକୁ ଲୋକେଲ"
+msgstr "ନିବେଶ ପ୍ରଣାଳୀ ସୂଚନା ପାଇବାରେ ଅସମର୍ଥ"
 
 #: ../src/im-chooser-simple.c:860
 #, c-format
@@ -147,7 +142,7 @@ msgstr "<b>ନିବେଶ ପ୍ରଣାଳୀ</b>"
 
 #: ../src/im-chooser-simple.c:982
 msgid "Show the status icon"
-msgstr ""
+msgstr "ଅବସ୍ଥିତି ଚିତ୍ରସଂକେତ ଦର୍ଶାନ୍ତୁ"
 
 #: ../src/im-chooser-simple.c:989
 msgid "_Enable input method feature"
@@ -158,10 +153,8 @@ msgid "Input Method _Preferences..."
 msgstr "ନିବେଶ ପ୍ରଣାଳୀ ପସନ୍ଦଗୁଡିକ (_P)..."
 
 #: ../src/main.c:53
-msgid ""
-"<span weight=\"bold\" size=\"larger\">No input method is available</span>"
-msgstr ""
-"<span weight=\"bold\" size=\"larger\">କୌଣସି ନିବେଶ ପ୍ରଣାଳୀ ଉପଲବ୍ଧ ନାହିଁ</span>"
+msgid "<span weight=\"bold\" size=\"larger\">No input method is available</span>"
+msgstr "<span weight=\"bold\" size=\"larger\">କୌଣସି ନିବେଶ ପ୍ରଣାଳୀ ଉପଲବ୍ଧ ନାହିଁ</span>"
 
 #: ../src/main.c:56
 msgid "Please install any input methods before running if you like."
@@ -172,9 +165,8 @@ msgid "IM Chooser - Input Method configuration tool"
 msgstr "ନିବେଶ ପ୍ରଣାଳୀ ଚୟକ - ନିବେଶ ପ୍ରଣାଳୀ ବିନ୍ଯାସ ଉପକରଣ"
 
 #: ../src/main.c:160
-#, fuzzy
 msgid "Log Out"
-msgstr "ଲଗଆଉଟ କରନ୍ତୁ (_L)"
+msgstr "ଲଗଆଉଟ କରନ୍ତୁ"
 
 #: ../src/im-chooser.desktop.in.in.h:1
 msgid ""
@@ -188,232 +180,3 @@ msgstr ""
 msgid "Input Method"
 msgstr "ନିବେଶ ପ୍ରଣାଳୀ"
 
-#~ msgid "Replace the running settings daemon with new instance."
-#~ msgstr "ଚଳନ୍ତି ବିନ୍ୟାସ କାର୍ଯ୍ୟ ସହାୟକକୁ ନୂତନ ଉଦାହରଣ ସହିତ ବଦଳାନ୍ତୁ।"
-
-#~ msgid "Unknown error in parsing the command lines."
-#~ msgstr "ପାଠ୍ୟ ନିର୍ଦ୍ଦେଶ ବିଶ୍ଳେଷଣ କରିବା ସମୟରେ ଅଜଣା ତ୍ରୁଟି ।"
-
-#~ msgid "Language"
-#~ msgstr "ଭାଷା"
-
-#~ msgid "A language to pull the information in."
-#~ msgstr "ଭିତରୁ ସୂଚନା କାଢିବା ପାଇଁ ଗୋଟିଏ ଭାଷା।"
-
-#~ msgid "Filename"
-#~ msgstr "ଫାଇଲ ନାମ"
-
-#~ msgid "A filename referring to the IM information."
-#~ msgstr "IM ସୂଚନାକୁ ଅନୁସରଣ କରୁଥିବା ଗୋଟିଏ ଫାଇଲନାମ।"
-
-#~ msgid "GTK+ immodule"
-#~ msgstr "GTK+ im ଏକକାଂଶ"
-
-#~ msgid "A module name used for GTK+"
-#~ msgstr "GTK+ ପାଇଁ ବ୍ୟବହାର ହେଉଥିବା ଗୋଟିଏ ଏକକାଂଶ ନାମ"
-
-#~ msgid "Qt immodule"
-#~ msgstr "Qt im ଏକକାଂଶ"
-
-#~ msgid "A module name used for Qt"
-#~ msgstr "Qt ପାଇଁ ବ୍ୟବହୃତ ଗୋଟିଏ ଏକକାଂଶ ନାମ"
-
-#~ msgid "XIM name"
-#~ msgstr "XIM ନାମ"
-
-#~ msgid "XIM server name"
-#~ msgstr "XIM ସର୍ଭର ନାମ"
-
-#~ msgid "Ignore flag"
-#~ msgstr "ବିଶେଷ ସୂଚକକୁ ଅଗ୍ରାହ୍ଯ କରନ୍ତୁ"
-
-#~ msgid "A flag to not list up."
-#~ msgstr "ତାଲିକାଭୁକ୍ତ ନହେବାପାଇଁ ଗୋଟିଏ ବିଶେଷ ସୂଚକ।"
-
-#~ msgid "XIM server program name"
-#~ msgstr "XIM ସର୍ଭର ପ୍ରୋଗ୍ରାମ ନାମ"
-
-#~ msgid "XIM server program to be run"
-#~ msgstr "ଚାଲିବା ପାଇଁ XIM ସର୍ଭର ପ୍ରୋଗ୍ରାମ"
-
-#~ msgid "XIM server program's options"
-#~ msgstr "XIM ସର୍ଭର ପ୍ରୋଗ୍ରାମ ବିକଳ୍ପ"
-
-#~ msgid "Command line options for XIM server program"
-#~ msgstr "XIM ସର୍ଭର ପ୍ରୋଗ୍ରାମ ପାଇଁ ପାଠ୍ୟ ନିର୍ଦ୍ଦେଶ"
-
-#~ msgid "Preference program name"
-#~ msgstr "ପସନ୍ଦ ପ୍ରୋଗ୍ରାମ ନାମ"
-
-#~ msgid "Preference program to be run"
-#~ msgstr "ଚଲାଇବା ପାଇଁ ପସନ୍ଦ ପ୍ରୋଗ୍ରାମ "
-
-#~ msgid "Preference program's options"
-#~ msgstr "ପସନ୍ଦ ପ୍ରୋଗ୍ରାମର ବିକଳ୍ପ ଗୁଡିକ"
-
-#~ msgid "Command line options for preference program"
-#~ msgstr "ପସନ୍ଦ ପ୍ରୋଗ୍ରାମ ପାଇଁ ପାଠ୍ୟନିର୍ଦ୍ଦେଶ"
-
-#~ msgid "Auxiliary program name"
-#~ msgstr "ସହାୟକ ପ୍ରୋଗ୍ରାମ ନାମ"
-
-#~ msgid "Auxiliary program to be run"
-#~ msgstr "ଚଲାଇବାକୁ ଥିବା ସହାୟକ ପ୍ରୋଗ୍ରାମ"
-
-#~ msgid "Auxiliary program's options"
-#~ msgstr "ସହାୟକ ପ୍ରୋଗ୍ରାମର ବିକଳ୍ପଗୁଡିକ"
-
-#~ msgid "Command line options for auxiliary program"
-#~ msgstr "ସହାୟକ ପ୍ରୋଗ୍ରାମ ପାଇଁ ପାଠ୍ୟ ନିର୍ଦ୍ଦେଶ ବିକଳ୍ପଗୁଡିକ"
-
-#~ msgid "Short Description"
-#~ msgstr "ସଂକ୍ଷିପ୍ତ ବର୍ଣ୍ଣନା"
-
-#~ msgid "Long Description"
-#~ msgstr "ବିସ୍ତୃତ ବର୍ଣ୍ଣନା"
-
-#~ msgid "System Default"
-#~ msgstr "ତନ୍ତ୍ର ପୂର୍ବ ନିର୍ଦ୍ଧାରିତ"
-
-#~ msgid "Whether or not IM is a system default."
-#~ msgstr "IM ଗୋଟିଏ ତନ୍ତ୍ର ପୂର୍ବ ନିର୍ଦ୍ଧାରିତ କି ନୁହଁ।"
-
-#~ msgid "User Default"
-#~ msgstr "ଚାଳକ ପୂର୍ବ ନିର୍ଦ୍ଧାରିତ"
-
-#~ msgid "Whether or not IM is an user default."
-#~ msgstr "IM ଗୋଟିଏ ଚାଳକ ପୂର୍ବ ନିର୍ଦ୍ଧାରିତ କି ନୁହଁ।"
-
-#~ msgid "XIM"
-#~ msgstr "XIM"
-
-#~ msgid "Whether or not IM is a XIM server."
-#~ msgstr "IM ଗୋଟିଏ XIM ସର୍ଭର କି ନୁହଁ।"
-
-#~ msgid "User Specific"
-#~ msgstr "ଚାଳକ ନିର୍ଦ୍ଦିଷ୍ଟ"
-
-#~ msgid "xinputrc was modified by the user"
-#~ msgstr "xinputrc ଚାଳକ ଦ୍ୱାରା ପରିବର୍ତ୍ତିତ ହୋଇଥିଲା"
-
-#~ msgid "Invalid IM module type: %d"
-#~ msgstr "ଅବୈଧ IM ଏକକାଂଶ ପ୍ରକାର: %d"
-
-#~ msgid "IM module name"
-#~ msgstr "IM ଏକକାଂଶ ନାମ"
-
-#~ msgid "A target IM module name that to observe signals"
-#~ msgstr "ଗୋଟିଏ ଲକ୍ଷ୍ୟ IM ଏକକାଂଶ ନାମ ଯାହାକି ସଂକେତ ଅବଲୋକନ କରେ"
-
-#~ msgid "Replace"
-#~ msgstr "ବଦଳାଅ"
-
-#~ msgid "DBus connection"
-#~ msgstr "DBus ସଂଯୋଗ"
-
-#~ msgid "An object to be a DBus connection"
-#~ msgstr "DBus ସଂଯୋଗ ହେବାକୁ ଥିବା ଗୋଟିଏ ବସ୍ତୁ"
-
-#~ msgid "DBus Interface"
-#~ msgstr "DBus ଅନ୍ତରାପୃଷ୍ଠ"
-
-#~ msgid "Interface name to connect to DBus"
-#~ msgstr "DBus କୁ ସଂଯୋଗ କରିବାକୁ ଥିବା ଅନ୍ତରାପୃଷ୍ଠର ନାମ"
-
-#~ msgid "Locale"
-#~ msgstr "ଲୋକେଲ"
-
-#~ msgid ""
-#~ "Failed to invoke a method `%s':\n"
-#~ "  %s"
-#~ msgstr ""
-#~ "ଗୋଟିଏ ପ୍ରଣାଳୀ ଆବାହନ କରିବାରେ ବିଫଳ `%s':\n"
-#~ "  %s"
-
-#~ msgid ""
-#~ "Failed to invoke a method `%s' on %s:\n"
-#~ "  %s"
-#~ msgstr ""
-#~ "ଗୋଟିଏ ପ୍ରଣାଳୀ ଆବାହନ କରିବାରେ ବିଫଳ `%s' on %s:\n"
-#~ "  %s"
-
-#~ msgid "Failed to remove a pidfile: %s"
-#~ msgstr "ଗୋଟିଏ pidfile ହଟାଇବାରେ ବିଫଳ: %s"
-
-#~ msgid "Failed to open a pidfile: %s"
-#~ msgstr "ଗୋଟିଏ pidfile ଖୋଲିବାରେ ବିଫଳ: %s"
-
-#~ msgid "Couldn't determine the pid for %s process."
-#~ msgstr "%s ପ୍ରଣାଳୀ ପାଇଁ pid ନିର୍ଦ୍ଧାରଣ କରିପାରିଲାନାହିଁ।"
-
-#~ msgid "Couldn't send a signal to the %s process successfully."
-#~ msgstr "%s ପ୍ରଣାଳୀକୁ ଗୋଟିଏ ସଂକେତ ସଫଳତାର ସହିତ ପଠାଇପାରିଲା ନାହିଁ।"
-
-#~ msgid "Failed to get a place of home directory."
-#~ msgstr "ମୂଳ ଡିରେକ୍ଟରି ପାଇଁ ଗୋଟିଏ ସ୍ଥାନ ପାଇବାରେ ବିଫଳ।"
-
-#~ msgid "Failed to revert the backup file: %s"
-#~ msgstr "ନକଲ ସଂରକ୍ଷଣ ଫାଇଲକୁ ପ୍ରତ୍ୟାବୃତ କରିବାରେ ବିଫଳ: %s"
-
-#~ msgid "Failed to create a backup file: %s"
-#~ msgstr "ନକଲ ସଂରକ୍ଷଣ ଫାଇଲକୁ ସୃଷ୍ଟି କରିବାରେ ବିଫଳ: %s"
-
-#~ msgid "Failed to remove a .xinputrc file: %s"
-#~ msgstr "xinputrc ଫାଇଲକୁ ହଟାଇବାରେ ବିଫଳ: %s"
-
-#~ msgid "Failed to make a symlink: %s"
-#~ msgstr "ଗୋଟିଏ symlink ତିଆରି କରିବାରେ ବିଫଳ: %s"
-
-#~ msgid "No such input method on your system: %s"
-#~ msgstr "ଆପଣଙ୍କର ତନ୍ତ୍ରରେ ଏପରି କିଛି ନିବେଶ ପଦ୍ଧତି ନାହିଁ: %s"
-
-#~ msgid "No XIM server is available in %s"
-#~ msgstr "%s ରେ କୌଣସି XIM ସର୍ଭର ଉପଲବ୍ଧ ନାହିଁ"
-
-#~ msgid "X display name"
-#~ msgstr "X ପ୍ରଦର୍ଶନ ନାମ"
-
-#~ msgid "X display name to use"
-#~ msgstr "ବ୍ୟବହାର କରାବାକୁ X ପ୍ରଦର୍ଶନ ନାମ"
-
-#~ msgid "X display to use"
-#~ msgstr "ବ୍ୟବହାର କରାବାକୁ X ପ୍ରଦର୍ଶନ"
-
-#~ msgid "DISPLAY"
-#~ msgstr "ପ୍ରଦର୍ଶନ"
-
-#~ msgid "X screen to use"
-#~ msgstr "ବ୍ୟବହାର କରିବାକୁ X ପରଦା"
-
-#~ msgid "SCREEN"
-#~ msgstr "ପରଦା"
-
-#~ msgid "Failed to open a X display."
-#~ msgstr "X ପ୍ରଦର୍ଶନ ଖୋଲିବାରେ ବିଫଳ।"
-
-#~ msgid "Reloading...\n"
-#~ msgstr "ପୁନର୍ଧାରଣ କରୁଅଛି...\n"
-
-#~ msgid "Duplicate entry `%s' from %s. SHORT_DESC has to be unique."
-#~ msgstr "%s ରୁ ନକଲ ଭରଣ '%s'। SHORT_DESC ଟି ଅନନ୍ୟ ହେବା ଉଚିତ।"
-
-#~ msgid "Timed out to initialize %s services."
-#~ msgstr "%s ସେବାଗୁଡିକୁ ପ୍ରାରମ୍ଭ କରିବା ପାଇଁ ସମୟ ସମାପ୍ତ।"
-
-#~ msgid "No input methods available on your system."
-#~ msgstr "ଆପଣଙ୍କ ତନ୍ତ୍ରରେ କୌଣସି ନିବେଶ ପ୍ରଣାଳୀ ଉପଲବ୍ଧ ନାହିଁ।"
-
-#~ msgid "Force reloading the configuration, including restarting the process."
-#~ msgstr "ପ୍ରକ୍ରିୟା ପୁନଃ ଆରମ୍ଭ କରିବାକୁ ଅନ୍ତର୍ଭୁକ୍ତ କରି, ବିନ୍ୟାସକୁ ପୁନର୍ଧାରଣ କରିବାକୁ ବାଧ୍ୟ କରନ୍ତୁ।"
-
-#~ msgid "Force restarting the IM process regradless of any errors."
-#~ msgstr "କୌଣସି ତ୍ରୁଟି ଉପରେ ଦୃଷ୍ଟିପାତ ନକରି IM ପ୍ରକ୍ରିୟାକୁ ପୁନଃ ଆରମ୍ଭ କରିବାକୁ ବାଧ୍ୟ କରନ୍ତୁ।"
-
-#~ msgid "Do not update .xinputrc."
-#~ msgstr ".xinputrc କୁ ଅଦ୍ୟତନ କରନ୍ତୁ ନାହିଁ।"
-
-#~ msgid "Stopped %s\n"
-#~ msgstr "%s ଅଟକିଯାଇଛି \n"
-
-#~ msgid "Failed to stop IM process `%s'\n"
-#~ msgstr "IM ପ୍ରଣାଳୀ`%s'କୁ ଅଟକାଇବାରେ ବିଫଳ \n"
