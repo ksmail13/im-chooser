@@ -4,16 +4,16 @@
 # This file is distributed under the same license as the im-chooser package.
 #
 # Automatically generated, 2006.
-# Runa Bhattacharjee <runab@redhat.com>, 2006.
+# Runa Bhattacharjee <runab@redhat.com>, 2006, 2008.
 # Runa Bhattacharjee <runabh@gmail.com>, 2007.
 # Runa Bhattacharjee <runab@fedoraproject.org>, 2008.
 msgid ""
 msgstr ""
 "Project-Id-Version: im-chooser.trunk\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-09-17 23:32+0900\n"
-"PO-Revision-Date: 2008-04-04 20:17+0530\n"
-"Last-Translator: Runa Bhattacharjee <runab@fedoraproject.org>\n"
+"POT-Creation-Date: 2008-09-17 17:19+0000\n"
+"PO-Revision-Date: 2008-09-23 11:28+0530\n"
+"Last-Translator: Runa Bhattacharjee <runab@redhat.com>\n"
 "Language-Team: Bengali INDIA <fedora-trans-bn_IN@redhat.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -24,33 +24,31 @@ msgstr ""
 
 #: ../src/im-chooser-simple.c:125
 msgid "X applications"
-msgstr ""
+msgstr "X অ্যাপ্লিকেশন"
 
 #: ../src/im-chooser-simple.c:126
 msgid "GTK+ applications"
-msgstr ""
+msgstr "GTK+ অ্যাপ্লিকেশন"
 
 #: ../src/im-chooser-simple.c:127
 msgid "Qt applications"
-msgstr ""
+msgstr "Qt অ্যাপ্লিকেশন"
 
 #: ../src/im-chooser-simple.c:179
 msgid "Updating Input Method list"
 msgstr "ইনপুট পদ্ধতির তালিকা আপডেট করা হচ্ছে"
 
 #: ../src/im-chooser-simple.c:282
-#, fuzzy
 msgid "Unable to get the information"
-msgstr "imsettings সংক্রান্ত তথ্য প্রাপ্ত করার উদ্দেশ্যে চিহ্নিত লোকেইল"
+msgstr "তথ্য প্রাপ্ত করতে ব্যর্থ"
 
 #: ../src/im-chooser-simple.c:359
 msgid "Failed to start Input Method"
 msgstr "ইনপুট পদ্ধতি আরম্ভ করতে ব্যর্থ"
 
 #: ../src/im-chooser-simple.c:386
-#, fuzzy
 msgid "Failed to stop Input Method"
-msgstr "ইনপুট পদ্ধতি আরম্ভ করতে ব্যর্থ"
+msgstr "ইনপুট পদ্ধতি বন্ধ করতে ব্যর্থ"
 
 #: ../src/im-chooser-simple.c:491
 #, c-format
@@ -69,7 +67,7 @@ msgstr "ইনপুট পদ্ধতি বন্ধ করা হচ্ছ�
 #: ../src/im-chooser-simple.c:600
 #, c-format
 msgid ", except %s and %s"
-msgstr ""
+msgstr ", %s ও %s বাদে"
 
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications</i></small>"
@@ -78,17 +76,17 @@ msgstr ""
 #: ../src/im-chooser-simple.c:609
 #, c-format
 msgid ", except %s"
-msgstr ""
+msgstr ", %s বাদে"
 
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications</i></small>"
 #: ../src/im-chooser-simple.c:614
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "<small><i>Note: this change will not take effect until you next log in%s</"
 "i></small>"
 msgstr ""
-"<small><i>উল্লেখ্য: GTK+ অ্যাপ্লিকেশন ভিন্ন অন্য অ্যাপ্লিকেশনের ক্ষেত্রে এই "
-"পরিবর্তনগুলি, পরবর্তী বার লগ-ইন না করা অবধি প্রয়োগ করা হবে না।</i></small>"
+"<small><i>উল্লেখ্য: পরবর্তীবার লগ-ইন না করা অবধি এই পরিবর্তন প্রয়োগ করা হবে না %s</"
+"i></small>"
 
 #: ../src/im-chooser-simple.c:674
 msgid "Parent Window"
@@ -100,11 +98,11 @@ msgstr "ঊর্ধ্বতন উইন্ডো নির্দেশকা�
 
 #: ../src/im-chooser-simple.c:680
 msgid "Note type"
-msgstr ""
+msgstr "নোটের প্রকৃতি"
 
 #: ../src/im-chooser-simple.c:681
 msgid "A enum value to determine which notes should be displayed"
-msgstr ""
+msgstr "প্রদর্শনযোগ্য নোট চিহ্নিত করার জন্য একটি enum মান"
 
 #. setup a progress window
 #: ../src/im-chooser-simple.c:724
@@ -112,22 +110,20 @@ msgid "Work in progress..."
 msgstr "কাজ চলছে..."
 
 #: ../src/im-chooser-simple.c:776 ../src/im-chooser-simple.c:792
-#, c-format
 msgid "Unable to communicate to IMSettings services"
-msgstr ""
+msgstr "IMSettings পরিসেবার সাথে যোগাযোগ করতে ব্যর্থ"
 
 #: ../src/im-chooser-simple.c:777 ../src/im-chooser-simple.c:793
 msgid "Version mismatch"
-msgstr ""
+msgstr "সংস্করণ সংখ্যায় গরমিল"
 
 #: ../src/im-chooser-simple.c:807
 msgid "Unable to gather current status"
-msgstr ""
+msgstr "বর্তমান অবস্থা সংক্রান্ত তথ্য প্রাপ্ত করতে ব্যর্থ"
 
 #: ../src/im-chooser-simple.c:813
-#, fuzzy
 msgid "Unable to get Input Method information"
-msgstr "ইনপুট পদ্ধতির তালিকা আপডেট করা হচ্ছে"
+msgstr "ইনপুট পদ্ধতি সংক্রান্ত তথ্য প্রাপ্ত করতে ব্যর্থ"
 
 #: ../src/im-chooser-simple.c:860
 #, c-format
@@ -148,7 +144,7 @@ msgstr "<b>ইনপুট পদ্ধতি</b>"
 
 #: ../src/im-chooser-simple.c:982
 msgid "Show the status icon"
-msgstr ""
+msgstr "অবস্থাসূচক আইকন প্রাপ্ত করতে ব্যর্থ"
 
 #: ../src/im-chooser-simple.c:989
 msgid "_Enable input method feature"
@@ -159,10 +155,8 @@ msgid "Input Method _Preferences..."
 msgstr "ইনপুট পদ্ধতি সংক্রান্ত পছন্দসই মান...(_P)"
 
 #: ../src/main.c:53
-msgid ""
-"<span weight=\"bold\" size=\"larger\">No input method is available</span>"
-msgstr ""
-"<span weight=\"bold\" size=\"larger\">কোনো ইনপুট পদ্ধতি উপস্থিত নেই</span>"
+msgid "<span weight=\"bold\" size=\"larger\">No input method is available</span>"
+msgstr "<span weight=\"bold\" size=\"larger\">কোনো ইনপুট পদ্ধতি উপস্থিত নেই</span>"
 
 #: ../src/main.c:56
 msgid "Please install any input methods before running if you like."
@@ -173,249 +167,16 @@ msgid "IM Chooser - Input Method configuration tool"
 msgstr "IM Chooser - ইনপুট পদ্ধতি কনফিগার করতে ব্যবহৃত সামগ্রী"
 
 #: ../src/main.c:160
-#, fuzzy
 msgid "Log Out"
-msgstr "লগ আউট করুন (_L)"
+msgstr "লগ আউট করুন"
 
 #: ../src/im-chooser.desktop.in.in.h:1
 msgid ""
 "Choose the input method to be used or disable the input method usage on the "
 "desktop"
-msgstr ""
-"ব্যবহারযোগ্য ইনপুট পদ্ধতি নির্ধারণ করুন অথবা ডেস্কটপের মধ্যে ইনপুট পদ্ধতি নিষ্ক্রিয় করুন"
+msgstr "ব্যবহারযোগ্য ইনপুট পদ্ধতি নির্ধারণ করুন অথবা ডেস্কটপের মধ্যে ইনপুট পদ্ধতি নিষ্ক্রিয় করুন"
 
 #: ../src/im-chooser.desktop.in.in.h:2
 msgid "Input Method"
 msgstr "ইনপুট পদ্ধতি"
 
-#~ msgid "Replace the running settings daemon with new instance."
-#~ msgstr "বৈশিষ্ট্য নির্ধারণকারী বর্তমানে চলমান ডেমনের নতুন ইনস্ট্যান্স নির্ধারণ করুন।"
-
-#~ msgid "Unknown error in parsing the command lines."
-#~ msgstr "কমান্ড লাইন পার্স করতে অজানা সমস্যা।"
-
-#~ msgid "Language"
-#~ msgstr "ভাষা"
-
-#~ msgid "A language to pull the information in."
-#~ msgstr "তথ্যা প্রাপ্ত করতে ব্যবহৃত ভাষা।"
-
-#~ msgid "Filename"
-#~ msgstr "Filename"
-
-#~ msgid "A filename referring to the IM information."
-#~ msgstr "ইনপুট পদ্ধতির তথ্য উল্লেখকারী ফাইলের নাম।"
-
-#~ msgid "GTK+ immodule"
-#~ msgstr "GTK+ immodule"
-
-#~ msgid "A module name used for GTK+"
-#~ msgstr "GTK+-র জন্য ব্যবহৃত মডিউলের নাম"
-
-#~ msgid "Qt immodule"
-#~ msgstr "Qt immodule"
-
-#~ msgid "A module name used for Qt"
-#~ msgstr "Qt দ্বারা ব্যবহৃত মডিউলের নাম"
-
-#~ msgid "XIM name"
-#~ msgstr "XIM-র নাম"
-
-#~ msgid "XIM server name"
-#~ msgstr "XIM সার্ভারের নাম"
-
-#~ msgid "Ignore flag"
-#~ msgstr "ফ্ল্যাগ অগ্রাহ্য করা হবে"
-
-#~ msgid "A flag to not list up."
-#~ msgstr "তালিকা প্রদর্শন না করার জন্য ফ্ল্যাগ।"
-
-#~ msgid "XIM server program name"
-#~ msgstr "XIM সার্ভার প্রোগ্রামের নাম"
-
-#~ msgid "XIM server program to be run"
-#~ msgstr "সঞ্চালনের উদ্দেশ্যে চিহ্নিত XIM সার্ভার প্রোগ্রামের নাম"
-
-#~ msgid "XIM server program's options"
-#~ msgstr "XIM সার্ভার প্রোগ্রাম সংক্রান্ত বিকল্প"
-
-#~ msgid "Command line options for XIM server program"
-#~ msgstr "XIM সার্ভার প্রোগ্রামের জন্য কমান্ড-লাইন থেকে ব্যবহারযোগ্য বিকল্প"
-
-#~ msgid "Preference program name"
-#~ msgstr "পছন্দ সংক্রান্ত প্রোগ্রামের নাম"
-
-#~ msgid "Preference program to be run"
-#~ msgstr "সঞ্চালনের জন্য চিহ্নিত পছন্দ সংক্রান্ত প্রোগ্রাম"
-
-#~ msgid "Preference program's options"
-#~ msgstr "পছন্দ সংক্রান্ত প্রোগ্রামের বিবিধ বিকল্প"
-
-#~ msgid "Command line options for preference program"
-#~ msgstr "পছন্দ সংক্রান্ত প্রোগ্রামের জন্য কমান্ড-লাইন থেকে ব্যবহারযোগ্য বিবিধ বিকল্প"
-
-#~ msgid "Auxiliary program name"
-#~ msgstr "অক্সিলিয়ারি প্রোগ্রামের নাম"
-
-#~ msgid "Auxiliary program to be run"
-#~ msgstr "সঞ্চালনের জন্য চিহ্নিত অক্সিলিয়ারি প্রোগ্রাম"
-
-#~ msgid "Auxiliary program's options"
-#~ msgstr "অক্সিলিয়ারি প্রোগ্রামের বিবিধ বিকল্প"
-
-#~ msgid "Command line options for auxiliary program"
-#~ msgstr "অক্সিলিয়ারি প্রোগ্রামের জন্য কমান্ড-লাইন থেকে ব্যবহারযোগ্য বিবিধ বিকল্প"
-
-#~ msgid "Short Description"
-#~ msgstr "সংক্ষিপ্ত বিবরণ"
-
-#~ msgid "Long Description"
-#~ msgstr "বিস্তারিত বিবরণ"
-
-#~ msgid "System Default"
-#~ msgstr "সিস্টেমের ডিফল্ট"
-
-#~ msgid "Whether or not IM is a system default."
-#~ msgstr "ইনপুট পদ্ধতিটি সিস্টেমের ডিফল্ট রূপে চিহ্নিত কি না।"
-
-#~ msgid "User Default"
-#~ msgstr "ব্যবহারকারীর ডিফল্ট"
-
-#~ msgid "Whether or not IM is an user default."
-#~ msgstr "ইনপুট পদ্ধতিটি ব্যবহারকারীর ডিফল্ট রূপে চিহ্নিত কি না।"
-
-#~ msgid "XIM"
-#~ msgstr "XIM"
-
-#~ msgid "Whether or not IM is a XIM server."
-#~ msgstr "ইনপুট পদ্ধতিটি XIM সার্ভার কি না।"
-
-#~ msgid "User Specific"
-#~ msgstr "ব্যবহারকারী সুনির্দিষ্ট"
-
-#~ msgid "xinputrc was modified by the user"
-#~ msgstr "ব্যবহারকারী দ্বারা xinputrc পরিবর্তিত হয়েছে"
-
-#~ msgid "Invalid IM module type: %d"
-#~ msgstr "ইনপুট পদ্ধতি মডিউলের ধরন বৈধ না: %d"
-
-#~ msgid "IM module name"
-#~ msgstr "ইনপুট পদ্ধতির মডিউলের নাম"
-
-#~ msgid "A target IM module name that to observe signals"
-#~ msgstr "সংকেত নিরীক্ষণের জন্য চিহ্নিত IM মডিউলের নাম"
-
-#~ msgid "Replace"
-#~ msgstr "প্রতিস্থাপন"
-
-#~ msgid "DBus connection"
-#~ msgstr "DBus সংযোগ"
-
-#~ msgid "An object to be a DBus connection"
-#~ msgstr "DBus সংযোগ রূপে ধার্য করার উদ্দেশ্যে কোনো বস্তু"
-
-#~ msgid "DBus Interface"
-#~ msgstr "DBus ইন্টার-ফেস"
-
-#~ msgid "Interface name to connect to DBus"
-#~ msgstr "DBus-র সাথে সংযোগ স্থাপনকারী ইন্টারফেসের নাম"
-
-#~ msgid "Locale"
-#~ msgstr "লোকেইল"
-
-#~ msgid ""
-#~ "Failed to invoke a method `%s':\n"
-#~ "  %s"
-#~ msgstr ""
-#~ "`%s' মেথড আরম্ভ করতে ব্যর্থ:\n"
-#~ "  %s"
-
-#~ msgid ""
-#~ "Failed to invoke a method `%s' on %s:\n"
-#~ "  %s"
-#~ msgstr ""
-#~ "`%s' মেথডটি %s-র উপর আরম্ভ করতে ব্যর্থ:\n"
-#~ "  %s"
-
-#~ msgid "Failed to remove a pidfile: %s"
-#~ msgstr "pidfile মুছে ফেলতে ব্যর্থ: %s"
-
-#~ msgid "Failed to open a pidfile: %s"
-#~ msgstr "pidfile খুলতে ব্যর্থ: %s"
-
-#~ msgid "Couldn't determine the pid for %s process."
-#~ msgstr "%s প্রসেসের pid নির্ধারণ করতে ব্যর্থ।"
-
-#~ msgid "Couldn't send a signal to the %s process successfully."
-#~ msgstr "%s প্রসেসকে সংকেত পাঠানো যায়নি।"
-
-#~ msgid "Failed to get a place of home directory."
-#~ msgstr "ব্যক্তিগত (home) ডিরেক্টরির স্থান নির্ধারণ করতে ব্যর্থ।"
-
-#~ msgid "Failed to revert the backup file: %s"
-#~ msgstr "ব্যাক-আপ ফাইলে প্রত্যাবর্তন করতে ব্যর্থ: %s"
-
-#~ msgid "Failed to create a backup file: %s"
-#~ msgstr "ব্যাক-আপ ফাইল নির্মাণ করতে ব্যর্থ: %s"
-
-#~ msgid "Failed to remove a .xinputrc file: %s"
-#~ msgstr ".xinputrc ফাইল মুছে ফেলতে ব্যর্থ: %s"
-
-#~ msgid "Failed to make a symlink: %s"
-#~ msgstr "symlink নির্মাণ করতে ব্যর্থ: %s"
-
-#~ msgid "No such input method on your system: %s"
-#~ msgstr "সিস্টেমের মধ্যে কোনো ইনপুট পদ্ধতি উপস্থিত নেই: %s"
-
-#~ msgid "No XIM server is available in %s"
-#~ msgstr "%s-র মধ্যে কোনো XIM সার্ভার উপস্থিত নেই"
-
-#~ msgid "X display name"
-#~ msgstr "X ডিসপ্লের নাম"
-
-#~ msgid "X display name to use"
-#~ msgstr "ব্যবহারের জন্য চিহ্নিত X ডিসপ্লের নাম"
-
-#~ msgid "X display to use"
-#~ msgstr "ব্যবহারের জন্য চিহ্নিত X ডিসপ্ল"
-
-#~ msgid "DISPLAY"
-#~ msgstr "DISPLAY"
-
-#~ msgid "X screen to use"
-#~ msgstr "ব্যবহারের জন্য চিহ্নিত X স্ক্রিন"
-
-#~ msgid "SCREEN"
-#~ msgstr "SCREEN"
-
-#~ msgid "Failed to open a X display."
-#~ msgstr "X ডিসপ্লে আরম্ভ করতে ব্যর্থ।"
-
-#~ msgid "Reloading...\n"
-#~ msgstr "পুনরায় লোড করা হচ্ছে...\n"
-
-#~ msgid "Duplicate entry `%s' from %s. SHORT_DESC has to be unique."
-#~ msgstr ""
-#~ "`%s' এন্ট্রিটি %s থেকে প্রাপ্ত এন্ট্রির প্রতিলিপি। SHORT_DESC স্বতন্ত্র মান হওয়া "
-#~ "আবশ্যক।"
-
-#~ msgid "Timed out to initialize %s services."
-#~ msgstr "%s পরিসেবা আরম্ভের পূর্বে সময়সীমা উত্তীর্ণ হয়েছে।"
-
-#~ msgid "No input methods available on your system."
-#~ msgstr "সিস্টেমের মধ্যে কোনো ইনপুট পদ্ধতি উপস্থিত নেই।"
-
-#~ msgid "Force reloading the configuration, including restarting the process."
-#~ msgstr "বলপূর্বক কনফিগারেশনে পুনরায় লোড করে প্রসেস পুনরারম্ভ করা হচ্ছে।"
-
-#~ msgid "Force restarting the IM process regradless of any errors."
-#~ msgstr "ভুল ত্রুটি নির্বিশেষে IM প্রসেসটি বলপূর্বক পুনরায় আরম্ভ করা হচ্ছে।"
-
-#~ msgid "Do not update .xinputrc."
-#~ msgstr ".xinputrc আপডেট করা হবে না।"
-
-#~ msgid "Stopped %s\n"
-#~ msgstr "%s বন্ধ করা আছে\n"
-
-#~ msgid "Failed to stop IM process `%s'\n"
-#~ msgstr "IM প্রসেস `%s' বন্ধ করতে ব্যর্থ\n"
