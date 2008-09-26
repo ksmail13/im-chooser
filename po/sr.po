@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: im-chooser\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-09-17 23:32+0900\n"
-"PO-Revision-Date: 2008-08-31 16:44-0000\n"
+"POT-Creation-Date: 2008-09-17 17:19+0000\n"
+"PO-Revision-Date: 2008-09-27 00:54-0000\n"
 "Last-Translator: Miloš Komarčević <kmilos@gmail.com>\n"
 "Language-Team: Serbian (sr) <fedora-trans-sr@redhat.com>\n"
 "MIME-Version: 1.0\n"
@@ -107,7 +107,6 @@ msgid "Work in progress..."
 msgstr "Рад је у току..."
 
 #: ../src/im-chooser-simple.c:776 ../src/im-chooser-simple.c:792
-#, c-format
 msgid "Unable to communicate to IMSettings services"
 msgstr "Не могу да комуницирам са IMSettings сервисима"
 
@@ -142,7 +141,7 @@ msgstr "<b>Метод уноса</b>"
 
 #: ../src/im-chooser-simple.c:982
 msgid "Show the status icon"
-msgstr ""
+msgstr "Прикажи икону статуса"
 
 #: ../src/im-chooser-simple.c:989
 msgid "_Enable input method feature"
