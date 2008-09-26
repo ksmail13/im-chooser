@@ -9,57 +9,53 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda.master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-09-17 23:32+0900\n"
-"PO-Revision-Date: 2008-04-07 21:57+0200\n"
+"POT-Creation-Date: 2008-09-17 17:19+0000\n"
+"PO-Revision-Date: 2008-09-26 17:38+0200\n"
 "Last-Translator: Miloslav Trmač <mitr@volny.cz>\n"
 "Language-Team: Czech <fedora-cs-list@redhat.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.11.4\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
-"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+
 
 #: ../src/im-chooser-simple.c:125
 msgid "X applications"
-msgstr ""
+msgstr "X-aplikace"
 
 #: ../src/im-chooser-simple.c:126
 msgid "GTK+ applications"
-msgstr ""
+msgstr "GTK+ aplikace"
 
 #: ../src/im-chooser-simple.c:127
-#, fuzzy
 msgid "Qt applications"
-msgstr "Virtualizace"
+msgstr "Qt aplikace"
 
 #: ../src/im-chooser-simple.c:179
 msgid "Updating Input Method list"
-msgstr ""
+msgstr "Aktualizuji seznam vstupních metod"
 
 #: ../src/im-chooser-simple.c:282
-#, fuzzy
 msgid "Unable to get the information"
-msgstr "Nemohu přenést instalační obraz."
+msgstr "Nelze získat informace"
 
 #: ../src/im-chooser-simple.c:359
 msgid "Failed to start Input Method"
-msgstr ""
+msgstr "Start vstupních metod selhal"
 
 #: ../src/im-chooser-simple.c:386
-#, fuzzy
 msgid "Failed to stop Input Method"
-msgstr "Nemohu připojit oddíl."
+msgstr "Ukončení vstupní metody selhalo"
 
 #: ../src/im-chooser-simple.c:491
 #, c-format
 msgid "Starting Input Method - %s"
-msgstr ""
+msgstr "Spouštím vstupní metodu - %s"
 
 #: ../src/im-chooser-simple.c:508
 #, c-format
 msgid "Stopping Input Method - %s"
-msgstr ""
+msgstr "Ukončuji vstupní metodu - %s"
 
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications and Qt applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications and GTK+ applications</i></small>"
@@ -68,7 +64,7 @@ msgstr ""
 #: ../src/im-chooser-simple.c:600
 #, c-format
 msgid ", except %s and %s"
-msgstr ""
+msgstr ",·kromě·%s·a·%s"
 
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications</i></small>"
@@ -77,7 +73,7 @@ msgstr ""
 #: ../src/im-chooser-simple.c:609
 #, c-format
 msgid ", except %s"
-msgstr ""
+msgstr ", kromě·%s"
 
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications</i></small>"
 #: ../src/im-chooser-simple.c:614
@@ -85,106 +81,102 @@ msgstr ""
 msgid ""
 "<small><i>Note: this change will not take effect until you next log in%s</"
 "i></small>"
-msgstr ""
+msgstr "<small><i>Pozn.: tato změna se neprojeví dokud se znovu nepřihlásíte %s</"
+"i></small>"
 
 #: ../src/im-chooser-simple.c:674
-#, fuzzy
 msgid "Parent Window"
-msgstr "Instalační okno"
+msgstr "Rodičovské okno"
 
 #: ../src/im-chooser-simple.c:675
 msgid "GtkWindow that points to the parent window"
-msgstr ""
+msgstr "GtkWindow které odkazuje na rodičovské okno"
 
 #: ../src/im-chooser-simple.c:680
 msgid "Note type"
-msgstr ""
+msgstr "Typ poznámky"
 
 #: ../src/im-chooser-simple.c:681
 msgid "A enum value to determine which notes should be displayed"
-msgstr ""
+msgstr "Výčet který určuje kterí poznámka má být zobrazena"
 
 #. setup a progress window
 #: ../src/im-chooser-simple.c:724
-#, fuzzy
 msgid "Work in progress..."
-msgstr "Probíhá...   "
+msgstr "Probíhá..."
 
 #: ../src/im-chooser-simple.c:776 ../src/im-chooser-simple.c:792
-#, c-format
 msgid "Unable to communicate to IMSettings services"
-msgstr ""
+msgstr "Nelze komunikovat se službou nastavení vstupních metod"
 
 #: ../src/im-chooser-simple.c:777 ../src/im-chooser-simple.c:793
-#, fuzzy
 msgid "Version mismatch"
-msgstr "Hesla nejsou stejná"
+msgstr "Verze nesouhlasí"
 
 #: ../src/im-chooser-simple.c:807
 msgid "Unable to gather current status"
-msgstr ""
+msgstr "Nelze získat aktuální stav"
 
 #: ../src/im-chooser-simple.c:813
-#, fuzzy
 msgid "Unable to get Input Method information"
-msgstr "Nemohu přenést instalační obraz."
+msgstr "Nelze získat informaci o vstupní metodě"
 
 #: ../src/im-chooser-simple.c:860
 #, c-format
 msgid "Use %s"
-msgstr ""
+msgstr "Použít %s"
 
 #: ../src/im-chooser-simple.c:863
 msgid " (legacy)"
-msgstr ""
+msgstr "(zastaralé)"
 
 #: ../src/im-chooser-simple.c:865
 msgid " (recommended)"
-msgstr ""
+msgstr "(doporučeno)"
 
 #: ../src/im-chooser-simple.c:976
 msgid "<b>Input Method</b>"
-msgstr ""
+msgstr "<b>Vstupní metoda</b>"
 
 #: ../src/im-chooser-simple.c:982
 msgid "Show the status icon"
-msgstr ""
+msgstr "Ukázat stavovou ikonu"
 
 #: ../src/im-chooser-simple.c:989
 msgid "_Enable input method feature"
-msgstr ""
+msgstr "_Povolit vstupní metody"
 
 #: ../src/im-chooser-simple.c:1035
 msgid "Input Method _Preferences..."
-msgstr ""
+msgstr "Předvolby _vstupních metod..."
 
 #: ../src/main.c:53
 msgid ""
 "<span weight=\"bold\" size=\"larger\">No input method is available</span>"
-msgstr ""
+msgstr "<span·weight=\"bold\"·size=\"larger\">Není dostupná žádná vstupní metoda</span>"
 
 #: ../src/main.c:56
 msgid "Please install any input methods before running if you like."
-msgstr ""
+msgstr "Před použítm je potřeba vstupní metody nainstalovat."
 
 #: ../src/main.c:144
 msgid "IM Chooser - Input Method configuration tool"
-msgstr ""
+msgstr "IM Chooser - konfigurační nástroj vstupních metod"
 
 #: ../src/main.c:160
 msgid "Log Out"
-msgstr ""
+msgstr "Odhlásit"
 
 #: ../src/im-chooser.desktop.in.in.h:1
 msgid ""
 "Choose the input method to be used or disable the input method usage on the "
 "desktop"
 msgstr ""
+"Vyberte, která vstupní metoda se má používat, nebo vsupní metody pro používání na desktopu vypněte"
 
 #: ../src/im-chooser.desktop.in.in.h:2
-#, fuzzy
 msgid "Input Method"
-msgstr "Metoda instalace"
+msgstr "Vstupní metoda"
 
 #~ msgid "Error processing %%ksappend lines: %s"
 #~ msgstr "Chyba při zpracovávání řádků %%ksappend: %s"
