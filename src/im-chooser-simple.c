@@ -955,10 +955,13 @@ im_chooser_simple_new(void)
 GtkWidget *
 im_chooser_simple_get_widget(IMChooserSimple *im)
 {
-	GtkWidget *vbox, *align, *label, *align2, *checkbox;
-	GtkWidget *align4, *align5, *button;
+	GtkWidget *vbox;
+	GtkWidget *align_im_enabled, *checkbox;
+	GtkWidget *frame, *label, *vbox_frame, *align_im;
+	GtkWidget *list, *scrolled;
+	GtkWidget *align_prefs, *button;
 	GtkWidget *align_applet;
-	GtkWidget *image, *hbox, *list, *scrolled;
+	GtkWidget *image, *hbox;
 	GtkCellRenderer *renderer;
 	GtkTreeViewColumn *column;
 	GtkTreeSelection *selection;
@@ -971,36 +974,21 @@ im_chooser_simple_get_widget(IMChooserSimple *im)
 		/* setup widgets */
 		vbox = gtk_vbox_new(FALSE, 2);
 		hbox = gtk_hbox_new(FALSE, 1);
+		vbox_frame = gtk_vbox_new(FALSE, 3);
 
-		align = gtk_alignment_new(0, 0, 0, 0);
-		label = gtk_label_new(_("<b>Input Method</b>"));
-		gtk_label_set_use_markup(GTK_LABEL (label), TRUE);
-		gtk_container_add(GTK_CONTAINER (align), label);
-		gtk_alignment_set_padding(GTK_ALIGNMENT (align), 9, 6, 6, 6);
-
-		align_applet = gtk_alignment_new(0, 0, 0, 0);
-		im->checkbox_is_applet_shown = checkbox = gtk_check_button_new_with_mnemonic(_("Show the status icon"));
-		gtk_container_add(GTK_CONTAINER(align_applet), checkbox);
-		gtk_alignment_set_padding(GTK_ALIGNMENT (align_applet), 3, 6, 6, 6);
-		g_signal_connect(checkbox, "toggled",
-				 G_CALLBACK (im_chooser_simple_show_status_icon_on_toggled), im);
-
-		align2 = gtk_alignment_new(0, 0, 0, 0);
+		align_im_enabled = gtk_alignment_new(0, 0, 0, 0);
 		im->checkbox_is_im_enabled = checkbox = gtk_check_button_new_with_mnemonic(_("_Enable input method feature"));
-		gtk_container_add(GTK_CONTAINER (align2), checkbox);
-		gtk_alignment_set_padding(GTK_ALIGNMENT (align2), 3, 6, 6, 6);
+		gtk_container_add(GTK_CONTAINER (align_im_enabled), checkbox);
+		gtk_alignment_set_padding(GTK_ALIGNMENT (align_im_enabled), 3, 6, 6, 6);
 		g_signal_connect(checkbox, "toggled",
 				 G_CALLBACK (im_chooser_simple_enable_im_on_toggled), im);
 
-		im->note = gtk_alignment_new(0.1, 0, 1.0, 1.0);
-		im->note_label = gtk_label_new(NULL);
-		gtk_label_set_use_markup(GTK_LABEL (im->note_label), TRUE);
-		gtk_label_set_line_wrap(GTK_LABEL (im->note_label), TRUE);
-		gtk_misc_set_alignment(GTK_MISC (im->note_label), 0, 0);
-		gtk_container_add(GTK_CONTAINER (im->note), im->note_label);
-		gtk_alignment_set_padding(GTK_ALIGNMENT (im->note), 3, 6, 6, 6);
+		frame = gtk_frame_new(NULL);
+		gtk_frame_set_shadow_type(GTK_FRAME (frame), GTK_SHADOW_NONE);
+		label = gtk_label_new(_("<b>Input Method</b>"));
+		gtk_label_set_use_markup(GTK_LABEL (label), TRUE);
+		gtk_frame_set_label_widget(GTK_FRAME (frame), label);
 
-		align4 = gtk_alignment_new(0.1, 0, 1.0, 1.0);
 		im->widget_scrolled = scrolled = gtk_scrolled_window_new(NULL, NULL);
 		gtk_scrolled_window_set_policy(GTK_SCROLLED_WINDOW (scrolled),
 					       GTK_POLICY_NEVER,
@@ -1009,8 +997,6 @@ im_chooser_simple_get_widget(IMChooserSimple *im)
 		gtk_tree_view_set_rules_hint(GTK_TREE_VIEW (list), TRUE);
 		gtk_tree_view_set_headers_visible(GTK_TREE_VIEW (list), FALSE);
 		gtk_container_add(GTK_CONTAINER (scrolled), list);
-		gtk_container_add(GTK_CONTAINER (align4), scrolled);
-		gtk_alignment_set_padding(GTK_ALIGNMENT (align4), 0, 6, 18, 6);
 
 		renderer = gtk_cell_renderer_pixbuf_new();
 		column = gtk_tree_view_column_new_with_attributes("",
@@ -1031,23 +1017,44 @@ im_chooser_simple_get_widget(IMChooserSimple *im)
 		g_signal_connect(selection, "changed",
 				 G_CALLBACK (im_chooser_simple_im_list_on_changed), im);
 
-		align5 = gtk_alignment_new(0.1, 0, 1.0, 1.0);
+		align_prefs = gtk_alignment_new(0.1, 0, 1.0, 1.0);
 		im->button_im_config = button = gtk_button_new_with_mnemonic(_("Input Method _Preferences..."));
 		image = gtk_image_new_from_stock(GTK_STOCK_JUMP_TO, GTK_ICON_SIZE_BUTTON);
 		gtk_button_set_image(GTK_BUTTON (button), image);
-		gtk_container_add(GTK_CONTAINER (align5), button);
-		gtk_alignment_set_padding(GTK_ALIGNMENT (align5), 0, 6, 18, 6);
-		gtk_box_pack_end(GTK_BOX (hbox), align5, FALSE, FALSE, 0);
+		gtk_container_add(GTK_CONTAINER (align_prefs), button);
+		gtk_alignment_set_padding(GTK_ALIGNMENT (align_prefs), 6, 0, 18, 6);
+		gtk_box_pack_end(GTK_BOX (hbox), align_prefs, FALSE, FALSE, 0);
 		g_signal_connect(button, "clicked",
 				 G_CALLBACK (im_chooser_simple_prefs_button_on_clicked), im);
 
+		im->note = gtk_alignment_new(0.1, 0, 1.0, 1.0);
+		im->note_label = gtk_label_new(NULL);
+		gtk_label_set_use_markup(GTK_LABEL (im->note_label), TRUE);
+		gtk_label_set_line_wrap(GTK_LABEL (im->note_label), TRUE);
+		gtk_misc_set_alignment(GTK_MISC (im->note_label), 0, 0);
+		gtk_container_add(GTK_CONTAINER (im->note), im->note_label);
+		gtk_alignment_set_padding(GTK_ALIGNMENT (im->note), 3, 6, 6, 6);
+
+		gtk_box_pack_start(GTK_BOX (vbox_frame), scrolled, TRUE, TRUE, 0);
+		gtk_box_pack_start(GTK_BOX (vbox_frame), hbox, FALSE, TRUE, 0);
+		gtk_box_pack_start(GTK_BOX (vbox_frame), im->note, FALSE, FALSE, 0);
+
+		align_im = gtk_alignment_new(0.1, 0, 1.0, 1.0);
+		gtk_container_add(GTK_CONTAINER (align_im), vbox_frame);
+		gtk_alignment_set_padding(GTK_ALIGNMENT (align_im), 6, 0, 18, 6);
+		gtk_container_add(GTK_CONTAINER (frame), align_im);
+
+		align_applet = gtk_alignment_new(0, 0, 0, 0);
+		im->checkbox_is_applet_shown = checkbox = gtk_check_button_new_with_mnemonic(_("Show the status icon"));
+		gtk_container_add(GTK_CONTAINER(align_applet), checkbox);
+		gtk_alignment_set_padding(GTK_ALIGNMENT (align_applet), 0, 6, 6, 6);
+		g_signal_connect(checkbox, "toggled",
+				 G_CALLBACK (im_chooser_simple_show_status_icon_on_toggled), im);
+
 		gtk_container_set_border_width(GTK_CONTAINER (vbox), 0);
+		gtk_box_pack_start(GTK_BOX (vbox), align_im_enabled, FALSE, TRUE, 0);
+		gtk_box_pack_start(GTK_BOX (vbox), frame, FALSE, TRUE, 0);
 		gtk_box_pack_start(GTK_BOX (vbox), align_applet, FALSE, TRUE, 0);
-		gtk_box_pack_start(GTK_BOX (vbox), align2, FALSE, TRUE, 0);
-		gtk_box_pack_start(GTK_BOX (vbox), align, FALSE, TRUE, 0);
-		gtk_box_pack_start(GTK_BOX (vbox), align4, TRUE, TRUE, 0);
-		gtk_box_pack_start(GTK_BOX (vbox), hbox, FALSE, TRUE, 0);
-		gtk_box_pack_start(GTK_BOX (vbox), im->note, FALSE, FALSE, 0);
 
 		im->widget = vbox;
 	}
