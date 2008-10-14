@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: im-chooser 0.3.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-09-17 23:32+0900\n"
+"POT-Creation-Date: 2008-10-14 11:50+0900\n"
 "PO-Revision-Date: 2006-10-01 03:28+0100\n"
 "Last-Translator: Renato Pavicic <renato@translator-shop.org>\n"
 "Language-Team: CROATIAN <www.translator-shop.org>\n"
@@ -138,22 +138,22 @@ msgstr ""
 msgid " (recommended)"
 msgstr ""
 
-#: ../src/im-chooser-simple.c:976
-msgid "<b>Input Method</b>"
-msgstr "<b>Načina unosa</b>"
-
-#: ../src/im-chooser-simple.c:982
-msgid "Show the status icon"
-msgstr ""
-
-#: ../src/im-chooser-simple.c:989
+#: ../src/im-chooser-simple.c:980
 msgid "_Enable input method feature"
 msgstr ""
 
-#: ../src/im-chooser-simple.c:1035
+#: ../src/im-chooser-simple.c:988
+msgid "<b>Input Method</b>"
+msgstr "<b>Načina unosa</b>"
+
+#: ../src/im-chooser-simple.c:1021
 #, fuzzy
 msgid "Input Method _Preferences..."
 msgstr "Način unosa"
+
+#: ../src/im-chooser-simple.c:1048
+msgid "Show the status icon"
+msgstr ""
 
 #: ../src/main.c:53
 msgid ""

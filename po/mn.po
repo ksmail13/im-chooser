@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mn\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-09-17 23:32+0900\n"
+"POT-Creation-Date: 2008-10-14 11:50+0900\n"
 "PO-Revision-Date: 2008-03-01 18:06+0900\n"
 "Last-Translator: naranhuu <naranhuu@gmail.com>\n"
 "Language-Team: mongolia <openmn-translation@lists.sf.net>\n"
@@ -141,21 +141,21 @@ msgstr "(Legacy)"
 msgid " (recommended)"
 msgstr "(Санал болгож байна)"
 
-#: ../src/im-chooser-simple.c:976
-msgid "<b>Input Method</b>"
-msgstr "<b>Оруулах Зарчим</b>"
-
-#: ../src/im-chooser-simple.c:982
-msgid "Show the status icon"
-msgstr ""
-
-#: ../src/im-chooser-simple.c:989
+#: ../src/im-chooser-simple.c:980
 msgid "_Enable input method feature"
 msgstr "Оруулах зарчмын онцлогийг идэвхжүүлэх(_E)"
 
-#: ../src/im-chooser-simple.c:1035
+#: ../src/im-chooser-simple.c:988
+msgid "<b>Input Method</b>"
+msgstr "<b>Оруулах Зарчим</b>"
+
+#: ../src/im-chooser-simple.c:1021
 msgid "Input Method _Preferences..."
 msgstr "Оруулах Зарчим Тохируулга...(_P)"
+
+#: ../src/im-chooser-simple.c:1048
+msgid "Show the status icon"
+msgstr ""
 
 #: ../src/main.c:53
 msgid ""

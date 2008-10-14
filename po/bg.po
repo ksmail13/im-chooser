@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: im-chooser\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-09-17 23:32+0900\n"
+"POT-Creation-Date: 2008-10-14 11:50+0900\n"
 "PO-Revision-Date: 2007-09-24 14:15+0300\n"
 "Last-Translator: Doncho N. Gunchev <gunchev@gmail.com>\n"
 "Language-Team: Bulgarian <dict@fsa-bg.org>\n"
@@ -142,21 +142,21 @@ msgstr " (Остарял)"
 msgid " (recommended)"
 msgstr " (Препоръчителен)"
 
-#: ../src/im-chooser-simple.c:976
-msgid "<b>Input Method</b>"
-msgstr "<b>Метод за вход</b>"
-
-#: ../src/im-chooser-simple.c:982
-msgid "Show the status icon"
-msgstr ""
-
-#: ../src/im-chooser-simple.c:989
+#: ../src/im-chooser-simple.c:980
 msgid "_Enable input method feature"
 msgstr "_Включване поддръжката на метод за вход"
 
-#: ../src/im-chooser-simple.c:1035
+#: ../src/im-chooser-simple.c:988
+msgid "<b>Input Method</b>"
+msgstr "<b>Метод за вход</b>"
+
+#: ../src/im-chooser-simple.c:1021
 msgid "Input Method _Preferences..."
 msgstr "На_стройки на метода за вход..."
+
+#: ../src/im-chooser-simple.c:1048
+msgid "Show the status icon"
+msgstr ""
 
 #: ../src/main.c:53
 msgid ""

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: im-chooser\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-09-17 17:19+0000\n"
+"POT-Creation-Date: 2008-10-14 11:50+0900\n"
 "PO-Revision-Date: 2008-09-27 00:54-0000\n"
 "Last-Translator: Miloš Komarčević <kmilos@gmail.com>\n"
 "Language-Team: Serbian (sr) <fedora-trans-sr@redhat.com>\n"
@@ -107,6 +107,7 @@ msgid "Work in progress..."
 msgstr "Rad je u toku..."
 
 #: ../src/im-chooser-simple.c:776 ../src/im-chooser-simple.c:792
+#, c-format
 msgid "Unable to communicate to IMSettings services"
 msgstr "Ne mogu da komuniciram sa IMSettings servisima"
 
@@ -135,21 +136,21 @@ msgstr " (prevaziđen)"
 msgid " (recommended)"
 msgstr " (preporučen)"
 
-#: ../src/im-chooser-simple.c:976
-msgid "<b>Input Method</b>"
-msgstr "<b>Metod unosa</b>"
-
-#: ../src/im-chooser-simple.c:982
-msgid "Show the status icon"
-msgstr "Prikaži ikonu statusa"
-
-#: ../src/im-chooser-simple.c:989
+#: ../src/im-chooser-simple.c:980
 msgid "_Enable input method feature"
 msgstr "_Uključi mogućnost metoda unosa"
 
-#: ../src/im-chooser-simple.c:1035
+#: ../src/im-chooser-simple.c:988
+msgid "<b>Input Method</b>"
+msgstr "<b>Metod unosa</b>"
+
+#: ../src/im-chooser-simple.c:1021
 msgid "Input Method _Preferences..."
 msgstr "Postavke metoda _unosa..."
+
+#: ../src/im-chooser-simple.c:1048
+msgid "Show the status icon"
+msgstr "Prikaži ikonu statusa"
 
 #: ../src/main.c:53
 msgid ""

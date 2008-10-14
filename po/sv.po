@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: im-chooser 0.3.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-09-17 23:32+0900\n"
+"POT-Creation-Date: 2008-10-14 11:50+0900\n"
 "PO-Revision-Date: 2008-10-03 21:04+0200\n"
 "Last-Translator: Göran Uddeborg <goeran@uddeborg.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
@@ -81,7 +81,9 @@ msgstr ", utom %s"
 msgid ""
 "<small><i>Note: this change will not take effect until you next log in%s</"
 "i></small>"
-msgstr "<small><i>Observera: denna ändring kommer inte gälla förrän nästa gång du loggar in%s</i></small>"
+msgstr ""
+"<small><i>Observera: denna ändring kommer inte gälla förrän nästa gång du "
+"loggar in%s</i></small>"
 
 #: ../src/im-chooser-simple.c:674
 msgid "Parent Window"
@@ -134,21 +136,21 @@ msgstr " (föråldrad)"
 msgid " (recommended)"
 msgstr " (rekommenderad)"
 
-#: ../src/im-chooser-simple.c:976
-msgid "<b>Input Method</b>"
-msgstr "<b>Inmatningsmetod</b>"
-
-#: ../src/im-chooser-simple.c:982
-msgid "Show the status icon"
-msgstr "Visa statusikonen"
-
-#: ../src/im-chooser-simple.c:989
+#: ../src/im-chooser-simple.c:980
 msgid "_Enable input method feature"
 msgstr "_Aktivera funktionen inmatningsmetod"
 
-#: ../src/im-chooser-simple.c:1035
+#: ../src/im-chooser-simple.c:988
+msgid "<b>Input Method</b>"
+msgstr "<b>Inmatningsmetod</b>"
+
+#: ../src/im-chooser-simple.c:1021
 msgid "Input Method _Preferences..."
 msgstr "_Inställningar för inmatningsmetod"
+
+#: ../src/im-chooser-simple.c:1048
+msgid "Show the status icon"
+msgstr "Visa statusikonen"
 
 #: ../src/main.c:53
 msgid ""

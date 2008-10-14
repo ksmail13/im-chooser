@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: im-chooser.trunk.kn\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-09-17 17:22+0000\n"
+"POT-Creation-Date: 2008-10-14 11:50+0900\n"
 "PO-Revision-Date: 2008-09-29 17:05+0530\n"
 "Last-Translator: Shankar Prasad <svenkate@redhat.com>\n"
 "Language-Team: Kannada <en@li.org>\n"
@@ -85,7 +85,9 @@ msgstr ", %s ಅನ್ನು ಹೊರತು ಪಡಿಸಿ"
 msgid ""
 "<small><i>Note: this change will not take effect until you next log in%s</"
 "i></small>"
-msgstr "<small><i>ಸೂಚನೆ: ನೀವು ಮುಂದಿನ ಬಾರಿ %s ಒಳಗೆ ಪ್ರವೇಶಿಸುವವರೆಗೆ ಈ ಬದಲಾವಣೆಗಳು ಕಾರ್ಯಗತಗೊಳ್ಳುವುದಿಲ್ಲ.</i></small>"
+msgstr ""
+"<small><i>ಸೂಚನೆ: ನೀವು ಮುಂದಿನ ಬಾರಿ %s ಒಳಗೆ ಪ್ರವೇಶಿಸುವವರೆಗೆ ಈ ಬದಲಾವಣೆಗಳು "
+"ಕಾರ್ಯಗತಗೊಳ್ಳುವುದಿಲ್ಲ.</i></small>"
 
 #: ../src/im-chooser-simple.c:674
 msgid "Parent Window"
@@ -109,6 +111,7 @@ msgid "Work in progress..."
 msgstr "ಕಾರ್ಯವು ಪ್ರಗತಿಯಲ್ಲಿದೆ..."
 
 #: ../src/im-chooser-simple.c:776 ../src/im-chooser-simple.c:792
+#, c-format
 msgid "Unable to communicate to IMSettings services"
 msgstr "IMSettings ಸೇವೆಗಳೊಂದಿಗೆ ಸಂಪರ್ಕ ಹೊಂದಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ"
 
@@ -137,24 +140,25 @@ msgstr " (ಪಾರಂಪರಿಕ)"
 msgid " (recommended)"
 msgstr " (ಸೂಚಿಸಲಾದ)"
 
-#: ../src/im-chooser-simple.c:976
-msgid "<b>Input Method</b>"
-msgstr "<b>ಆದಾನ ಕ್ರಮ</b>"
-
-#: ../src/im-chooser-simple.c:982
-msgid "Show the status icon"
-msgstr "ಸ್ಥಿತಿ ಚಿಹ್ನೆಯನ್ನು ತೋರಿಸು"
-
-#: ../src/im-chooser-simple.c:989
+#: ../src/im-chooser-simple.c:980
 msgid "_Enable input method feature"
 msgstr "ಆದಾನ ಕ್ರಮದ ವೈಶಿಷ್ಟ್ಯ ಕ್ರಮವನ್ನು ಶಕ್ತಗೊಳಿಸು(_E)"
 
-#: ../src/im-chooser-simple.c:1035
+#: ../src/im-chooser-simple.c:988
+msgid "<b>Input Method</b>"
+msgstr "<b>ಆದಾನ ಕ್ರಮ</b>"
+
+#: ../src/im-chooser-simple.c:1021
 msgid "Input Method _Preferences..."
 msgstr "ಆದಾನ ಕ್ರಮದ ಆದ್ಯತೆಗಳು(_P)..."
 
+#: ../src/im-chooser-simple.c:1048
+msgid "Show the status icon"
+msgstr "ಸ್ಥಿತಿ ಚಿಹ್ನೆಯನ್ನು ತೋರಿಸು"
+
 #: ../src/main.c:53
-msgid "<span weight=\"bold\" size=\"larger\">No input method is available</span>"
+msgid ""
+"<span weight=\"bold\" size=\"larger\">No input method is available</span>"
 msgstr "<span weight=\"bold\" size=\"larger\">ಯಾವುದೆ ಆದಾನಕ್ರಮವು ಲಭ್ಯವಿಲ್ಲ</span>"
 
 #: ../src/main.c:56
@@ -180,4 +184,3 @@ msgstr ""
 #: ../src/im-chooser.desktop.in.in.h:2
 msgid "Input Method"
 msgstr "ಆದಾನ ಕ್ರಮ"
-

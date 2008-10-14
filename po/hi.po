@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: im-chooser.trunk.hi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-09-17 23:32+0900\n"
+"POT-Creation-Date: 2008-10-14 11:50+0900\n"
 "PO-Revision-Date: 2008-10-13 16:27+0530\n"
 "Last-Translator: Rajesh Ranjan <rranjan@redhat.com>\n"
 "Language-Team: Hindi <hindi.sf.net>\n"
@@ -17,7 +17,9 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.11.4\n"
-"Plural-Forms: nplurals=2; plural=(n!=1);\n\n\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+"\n"
+"\n"
 "\n"
 "\n"
 "\n"
@@ -87,8 +89,8 @@ msgid ""
 "<small><i>Note: this change will not take effect until you next log in%s</"
 "i></small>"
 msgstr ""
-"<small><i>नोट: यह बदलाव तबतक प्रभावी नहीं होगा जबतक आप अगली बार %s में लॉगिन नहीं होते "
-"हैं.</i></small>"
+"<small><i>नोट: यह बदलाव तबतक प्रभावी नहीं होगा जबतक आप अगली बार %s में लॉगिन नहीं "
+"होते हैं.</i></small>"
 
 #: ../src/im-chooser-simple.c:674
 msgid "Parent Window"
@@ -141,24 +143,25 @@ msgstr " (पुरातन)"
 msgid " (recommended)"
 msgstr " (अनुशंसित)"
 
-#: ../src/im-chooser-simple.c:976
-msgid "<b>Input Method</b>"
-msgstr "<b>इनपुट विधि</b>"
-
-#: ../src/im-chooser-simple.c:982
-msgid "Show the status icon"
-msgstr "स्थिति प्रतीक दिखाएँ"
-
-#: ../src/im-chooser-simple.c:989
+#: ../src/im-chooser-simple.c:980
 msgid "_Enable input method feature"
 msgstr "इनपुट विधि गुण सक्रिय करें (_E)"
 
-#: ../src/im-chooser-simple.c:1035
+#: ../src/im-chooser-simple.c:988
+msgid "<b>Input Method</b>"
+msgstr "<b>इनपुट विधि</b>"
+
+#: ../src/im-chooser-simple.c:1021
 msgid "Input Method _Preferences..."
 msgstr "इनपुट विधि वरीयताएं (_P)..."
 
+#: ../src/im-chooser-simple.c:1048
+msgid "Show the status icon"
+msgstr "स्थिति प्रतीक दिखाएँ"
+
 #: ../src/main.c:53
-msgid "<span weight=\"bold\" size=\"larger\">No input method is available</span>"
+msgid ""
+"<span weight=\"bold\" size=\"larger\">No input method is available</span>"
 msgstr "<span weight=\"bold\" size=\"larger\">कोई इनपुट विधि उपलब्ध नहीं है</span>"
 
 #: ../src/main.c:56
@@ -184,4 +187,3 @@ msgstr ""
 #: ../src/im-chooser.desktop.in.in.h:2
 msgid "Input Method"
 msgstr "इनपुट विधि"
-

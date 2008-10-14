@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: im-chooser.trunk\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-09-18 09:18+0000\n"
+"POT-Creation-Date: 2008-10-14 11:50+0900\n"
 "PO-Revision-Date: 2008-09-26 10:11+1000\n"
 "Last-Translator: Terry Chuang <tchuang@redhat.com>\n"
 "Language-Team: Traditional Chinese <zh@li.org>\n"
@@ -106,6 +106,7 @@ msgid "Work in progress..."
 msgstr "正在進行中..."
 
 #: ../src/im-chooser-simple.c:776 ../src/im-chooser-simple.c:792
+#, c-format
 msgid "Unable to communicate to IMSettings services"
 msgstr "無法和 IMSettings 服務進行通訊"
 
@@ -134,24 +135,25 @@ msgstr "（legacy）"
 msgid " (recommended)"
 msgstr "（建議）"
 
-#: ../src/im-chooser-simple.c:976
-msgid "<b>Input Method</b>"
-msgstr "<b>輸入法</b>"
-
-#: ../src/im-chooser-simple.c:982
-msgid "Show the status icon"
-msgstr "顯示狀態圖示"
-
-#: ../src/im-chooser-simple.c:989
+#: ../src/im-chooser-simple.c:980
 msgid "_Enable input method feature"
 msgstr "啟用輸入法功能（_E）"
 
-#: ../src/im-chooser-simple.c:1035
+#: ../src/im-chooser-simple.c:988
+msgid "<b>Input Method</b>"
+msgstr "<b>輸入法</b>"
+
+#: ../src/im-chooser-simple.c:1021
 msgid "Input Method _Preferences..."
 msgstr "輸入法偏好設定...（_P）"
 
+#: ../src/im-chooser-simple.c:1048
+msgid "Show the status icon"
+msgstr "顯示狀態圖示"
+
 #: ../src/main.c:53
-msgid "<span weight=\"bold\" size=\"larger\">No input method is available</span>"
+msgid ""
+"<span weight=\"bold\" size=\"larger\">No input method is available</span>"
 msgstr "<span weight=\"bold\" size=\"larger\">沒有可用的輸入法</span>"
 
 #: ../src/main.c:56
@@ -175,4 +177,3 @@ msgstr "請選擇欲使用的輸入法或是停用桌面環境所使用的輸入
 #: ../src/im-chooser.desktop.in.in.h:2
 msgid "Input Method"
 msgstr "輸入法"
-

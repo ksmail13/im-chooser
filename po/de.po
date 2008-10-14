@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Desktop Input Method configuration tool\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-09-17 23:32+0900\n"
+"POT-Creation-Date: 2008-10-14 11:50+0900\n"
 "PO-Revision-Date: 2008-09-17 09:36+0100\n"
 "Last-Translator: Dominik Sandjaja <dominiksandjaja@fedoraproject.org>\n"
 "Language-Team: German Translation team <fedora-trans-de@redhat.com>\n"
@@ -141,21 +141,21 @@ msgstr " (veraltet)"
 msgid " (recommended)"
 msgstr " (empfohlen)"
 
-#: ../src/im-chooser-simple.c:976
-msgid "<b>Input Method</b>"
-msgstr "<b>Eingabemethode</b>"
-
-#: ../src/im-chooser-simple.c:982
-msgid "Show the status icon"
-msgstr "Zeige das Status-Symbol"
-
-#: ../src/im-chooser-simple.c:989
+#: ../src/im-chooser-simple.c:980
 msgid "_Enable input method feature"
 msgstr "Eingabemethoden-_Funktion aktivieren"
 
-#: ../src/im-chooser-simple.c:1035
+#: ../src/im-chooser-simple.c:988
+msgid "<b>Input Method</b>"
+msgstr "<b>Eingabemethode</b>"
+
+#: ../src/im-chooser-simple.c:1021
 msgid "Input Method _Preferences..."
 msgstr "_Einstellungen zur Eingabemethode …"
+
+#: ../src/im-chooser-simple.c:1048
+msgid "Show the status icon"
+msgstr "Zeige das Status-Symbol"
 
 #: ../src/main.c:53
 msgid ""

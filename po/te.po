@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: te\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-09-17 17:19+0000\n"
+"POT-Creation-Date: 2008-10-14 11:50+0900\n"
 "PO-Revision-Date: 2008-09-29 12:42+0530\n"
 "Last-Translator: Krishna Babu K <kkrothap@redhat.com>\n"
 "Language-Team: Telugu <en@li.org>\n"
@@ -19,7 +19,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.11.4\n"
-"Plural-Forms: nplurals=2; plural=(n!=1);\n\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+"\n"
 "\n"
 "\n"
 
@@ -86,8 +87,7 @@ msgid ""
 "<small><i>Note: this change will not take effect until you next log in%s</"
 "i></small>"
 msgstr ""
-"<small><i>గమనిక: మీరు తరువాత %s లాగిన్ అగునంతవరకు ఈ మార్పు ప్రభావితం కాదు."
-"</i></small>"
+"<small><i>గమనిక: మీరు తరువాత %s లాగిన్ అగునంతవరకు ఈ మార్పు ప్రభావితం కాదు.</i></small>"
 
 #: ../src/im-chooser-simple.c:674
 msgid "Parent Window"
@@ -111,6 +111,7 @@ msgid "Work in progress..."
 msgstr "పని జరుగుతోంది...."
 
 #: ../src/im-chooser-simple.c:776 ../src/im-chooser-simple.c:792
+#, c-format
 msgid "Unable to communicate to IMSettings services"
 msgstr "IMఅమరికల సేవలకు సంప్రదింపు జరుపలేక పోతోంది"
 
@@ -139,24 +140,25 @@ msgstr " (legacy)"
 msgid " (recommended)"
 msgstr " (సిఫార్స్‍‌చేసిన)"
 
-#: ../src/im-chooser-simple.c:976
-msgid "<b>Input Method</b>"
-msgstr "<b>ఇన్పుట్టు విధానం</b>"
-
-#: ../src/im-chooser-simple.c:982
-msgid "Show the status icon"
-msgstr "స్థితి ప్రతిమను చూపుము"
-
-#: ../src/im-chooser-simple.c:989
+#: ../src/im-chooser-simple.c:980
 msgid "_Enable input method feature"
 msgstr "ఇన్‌పుట్ పద్దతి సౌలభ్యాన్ని చేతనం చేయుము(_E)"
 
-#: ../src/im-chooser-simple.c:1035
+#: ../src/im-chooser-simple.c:988
+msgid "<b>Input Method</b>"
+msgstr "<b>ఇన్పుట్టు విధానం</b>"
+
+#: ../src/im-chooser-simple.c:1021
 msgid "Input Method _Preferences..."
 msgstr "ఇన్‌పుట్ పద్దతి అభీష్టాలు(_P)..."
 
+#: ../src/im-chooser-simple.c:1048
+msgid "Show the status icon"
+msgstr "స్థితి ప్రతిమను చూపుము"
+
 #: ../src/main.c:53
-msgid "<span weight=\"bold\" size=\"larger\">No input method is available</span>"
+msgid ""
+"<span weight=\"bold\" size=\"larger\">No input method is available</span>"
 msgstr "<span weight=\"bold\" size=\"larger\">ఏ ఇన్‌పుట్ పద్దతి అందుబాటులో లేదు</span>"
 
 #: ../src/main.c:56
@@ -175,9 +177,9 @@ msgstr "లాగ్ అవుట్"
 msgid ""
 "Choose the input method to be used or disable the input method usage on the "
 "desktop"
-msgstr "ఉపయోగించుటకు ఇన్‌పుట్ పద్దతిని ఎంచుకొనుము లేదా ఇన్‌పుట్ పద్దతి ఉపయోగాన్ని డెస్క్‍‌టాప్ పైన అచేతనం చేయుము"
+msgstr ""
+"ఉపయోగించుటకు ఇన్‌పుట్ పద్దతిని ఎంచుకొనుము లేదా ఇన్‌పుట్ పద్దతి ఉపయోగాన్ని డెస్క్‍‌టాప్ పైన అచేతనం చేయుము"
 
 #: ../src/im-chooser.desktop.in.in.h:2
 msgid "Input Method"
 msgstr "ఇన్పుట్ విధానం"
-

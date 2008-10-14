@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: im-chooser.trunk.ja\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-09-17 17:22+0000\n"
+"POT-Creation-Date: 2008-10-14 11:50+0900\n"
 "PO-Revision-Date: 2008-09-23 14:25+1000\n"
 "Last-Translator: Kiyoto Hashida <khashida@redhat.com>\n"
 "Language-Team: Japanese <jp@li.org>\n"
@@ -110,6 +110,7 @@ msgid "Work in progress..."
 msgstr "作業は進行中です... "
 
 #: ../src/im-chooser-simple.c:776 ../src/im-chooser-simple.c:792
+#, c-format
 msgid "Unable to communicate to IMSettings services"
 msgstr "IMSettings サービスと通信できません"
 
@@ -138,24 +139,25 @@ msgstr " (レガシー)"
 msgid " (recommended)"
 msgstr " (推奨)"
 
-#: ../src/im-chooser-simple.c:976
-msgid "<b>Input Method</b>"
-msgstr "<b>入力メソッド</b>"
-
-#: ../src/im-chooser-simple.c:982
-msgid "Show the status icon"
-msgstr "ステータスアイコンを表示する"
-
-#: ../src/im-chooser-simple.c:989
+#: ../src/im-chooser-simple.c:980
 msgid "_Enable input method feature"
 msgstr "入力メソッドの機能を有効にする(_E)"
 
-#: ../src/im-chooser-simple.c:1035
+#: ../src/im-chooser-simple.c:988
+msgid "<b>Input Method</b>"
+msgstr "<b>入力メソッド</b>"
+
+#: ../src/im-chooser-simple.c:1021
 msgid "Input Method _Preferences..."
 msgstr "入力メソッドの個人設定(_P)..."
 
+#: ../src/im-chooser-simple.c:1048
+msgid "Show the status icon"
+msgstr "ステータスアイコンを表示する"
+
 #: ../src/main.c:53
-msgid "<span weight=\"bold\" size=\"larger\">No input method is available</span>"
+msgid ""
+"<span weight=\"bold\" size=\"larger\">No input method is available</span>"
 msgstr ""
 "<span weight=\"bold\" size=\"larger\">使用できる入力メソッドがありません</"
 "span>"
@@ -183,4 +185,3 @@ msgstr ""
 #: ../src/im-chooser.desktop.in.in.h:2
 msgid "Input Method"
 msgstr "入力メソッド"
-

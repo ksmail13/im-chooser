@@ -14,14 +14,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: im-chooser.trunk\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-09-17 17:22+0000\n"
+"POT-Creation-Date: 2008-10-14 11:50+0900\n"
 "PO-Revision-Date: 2008-09-19 23:30+0200\n"
 "Last-Translator: Robert-André Mauchin <zebob.m@pengzone.org>\n"
 "Language-Team: french <fedora-trans-fr@redhat.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: ../src/im-chooser-simple.c:125
 msgid "X applications"
@@ -112,6 +112,7 @@ msgid "Work in progress..."
 msgstr "Traitement en cours..."
 
 #: ../src/im-chooser-simple.c:776 ../src/im-chooser-simple.c:792
+#, c-format
 msgid "Unable to communicate to IMSettings services"
 msgstr "Impossible de communiquer avec les services IMSettings"
 
@@ -140,21 +141,21 @@ msgstr " (ancienne version)"
 msgid " (recommended)"
 msgstr " (recommandée)"
 
-#: ../src/im-chooser-simple.c:976
-msgid "<b>Input Method</b>"
-msgstr "<b>Méthode de saisie</b>"
-
-#: ../src/im-chooser-simple.c:982
-msgid "Show the status icon"
-msgstr "Afficher l'icône d'état"
-
-#: ../src/im-chooser-simple.c:989
+#: ../src/im-chooser-simple.c:980
 msgid "_Enable input method feature"
 msgstr "_Activer les méthodes de saisie"
 
-#: ../src/im-chooser-simple.c:1035
+#: ../src/im-chooser-simple.c:988
+msgid "<b>Input Method</b>"
+msgstr "<b>Méthode de saisie</b>"
+
+#: ../src/im-chooser-simple.c:1021
 msgid "Input Method _Preferences..."
 msgstr "_Préférences des méthodes de saisie..."
+
+#: ../src/im-chooser-simple.c:1048
+msgid "Show the status icon"
+msgstr "Afficher l'icône d'état"
 
 #: ../src/main.c:53
 msgid ""
@@ -186,4 +187,3 @@ msgstr ""
 #: ../src/im-chooser.desktop.in.in.h:2
 msgid "Input Method"
 msgstr "Méthode de saisie"
-

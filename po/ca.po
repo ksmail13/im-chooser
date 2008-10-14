@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: im-chooser 0.3.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-09-17 17:22+0000\n"
+"POT-Creation-Date: 2008-10-14 11:50+0900\n"
 "PO-Revision-Date: 2008-09-20 10:01+0100\n"
 "Last-Translator: Oriol Miro <oriolmiro@gmail.com>\n"
 "Language-Team: Catalan <fedora@softcatala.net>\n"
@@ -93,7 +93,8 @@ msgid ""
 "<small><i>Note: this change will not take effect until you next log in%s</"
 "i></small>"
 msgstr ""
-"<small><i>Nota: aquest canvi no s'aplicarà fins que entreu de nou a%s</i></small>"
+"<small><i>Nota: aquest canvi no s'aplicarà fins que entreu de nou a%s</i></"
+"small>"
 
 #: ../src/im-chooser-simple.c:674
 msgid "Parent Window"
@@ -117,6 +118,7 @@ msgid "Work in progress..."
 msgstr "Treball en curs..."
 
 #: ../src/im-chooser-simple.c:776 ../src/im-chooser-simple.c:792
+#, c-format
 msgid "Unable to communicate to IMSettings services"
 msgstr "No es pot communicar amb els serveis d'IMSettings"
 
@@ -145,21 +147,21 @@ msgstr " (herencia)"
 msgid " (recommended)"
 msgstr " (recomanat)"
 
-#: ../src/im-chooser-simple.c:976
-msgid "<b>Input Method</b>"
-msgstr "<b>Mètode d'entrada</b>"
-
-#: ../src/im-chooser-simple.c:982
-msgid "Show the status icon"
-msgstr "Mostra la icona d'estat"
-
-#: ../src/im-chooser-simple.c:989
+#: ../src/im-chooser-simple.c:980
 msgid "_Enable input method feature"
 msgstr "_Habilita la funcionalitat del mètode d'entrada"
 
-#: ../src/im-chooser-simple.c:1035
+#: ../src/im-chooser-simple.c:988
+msgid "<b>Input Method</b>"
+msgstr "<b>Mètode d'entrada</b>"
+
+#: ../src/im-chooser-simple.c:1021
 msgid "Input Method _Preferences..."
 msgstr "Preferències de mètode d'entrada..."
+
+#: ../src/im-chooser-simple.c:1048
+msgid "Show the status icon"
+msgstr "Mostra la icona d'estat"
 
 #: ../src/main.c:53
 msgid ""
@@ -402,8 +404,7 @@ msgstr "Mètode d'entrada"
 #~ msgstr "S'està actualitzant...\n"
 
 #~ msgid "Duplicate entry `%s' from %s. SHORT_DESC has to be unique."
-#~ msgstr ""
-#~ "Hi ha una entrada duplicada «%s» de «%s». SHORT_DESC ha de ser únic."
+#~ msgstr "Hi ha una entrada duplicada «%s» de «%s». SHORT_DESC ha de ser únic."
 
 #~ msgid "Timed out to initialize %s services."
 #~ msgstr ""

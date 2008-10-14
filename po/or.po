@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: im-chooser.trunk.or\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-09-17 17:19+0000\n"
+"POT-Creation-Date: 2008-10-14 11:50+0900\n"
 "PO-Revision-Date: 2008-09-22 14:48+0530\n"
 "Last-Translator: Manoj Kumar Giri <mgiri@redhat.com>\n"
 "Language-Team: Oriya\n"
@@ -84,7 +84,9 @@ msgstr ", %s ବ୍ୟତିତ"
 msgid ""
 "<small><i>Note: this change will not take effect until you next log in%s</"
 "i></small>"
-msgstr "<small><i>ଟିପ୍ପଣୀ: ଆପଣଙ୍କ ପରବର୍ତ୍ତୀ ଲଗଇନ %s ପର୍ଯ୍ଯନ୍ତ ଏହି ପରିବର୍ତ୍ତନଟି ପ୍ରଭାବିତ ହେବନାହିଁ</i></small>"
+msgstr ""
+"<small><i>ଟିପ୍ପଣୀ: ଆପଣଙ୍କ ପରବର୍ତ୍ତୀ ଲଗଇନ %s ପର୍ଯ୍ଯନ୍ତ ଏହି ପରିବର୍ତ୍ତନଟି ପ୍ରଭାବିତ ହେବନାହିଁ</i></"
+"small>"
 
 #: ../src/im-chooser-simple.c:674
 msgid "Parent Window"
@@ -108,6 +110,7 @@ msgid "Work in progress..."
 msgstr "କାମ ପ୍ରଗତି କରୁଛି..."
 
 #: ../src/im-chooser-simple.c:776 ../src/im-chooser-simple.c:792
+#, c-format
 msgid "Unable to communicate to IMSettings services"
 msgstr "IMSettings ସେବା ସହିତ ଯୋଗାଯୋଗ କରିବାରେ ଅସମର୍ଥ"
 
@@ -136,25 +139,27 @@ msgstr " (ପୁରୁଣା)"
 msgid " (recommended)"
 msgstr " (ପରାମର୍ଶିତ)"
 
-#: ../src/im-chooser-simple.c:976
-msgid "<b>Input Method</b>"
-msgstr "<b>ନିବେଶ ପ୍ରଣାଳୀ</b>"
-
-#: ../src/im-chooser-simple.c:982
-msgid "Show the status icon"
-msgstr "ଅବସ୍ଥିତି ଚିତ୍ରସଂକେତ ଦର୍ଶାନ୍ତୁ"
-
-#: ../src/im-chooser-simple.c:989
+#: ../src/im-chooser-simple.c:980
 msgid "_Enable input method feature"
 msgstr "ନିବେଶ ପ୍ରଣାଳୀର ବିଶେଷ ଗୁଣକୁ ସକ୍ରିୟ କରନ୍ତୁ (_E)"
 
-#: ../src/im-chooser-simple.c:1035
+#: ../src/im-chooser-simple.c:988
+msgid "<b>Input Method</b>"
+msgstr "<b>ନିବେଶ ପ୍ରଣାଳୀ</b>"
+
+#: ../src/im-chooser-simple.c:1021
 msgid "Input Method _Preferences..."
 msgstr "ନିବେଶ ପ୍ରଣାଳୀ ପସନ୍ଦଗୁଡିକ (_P)..."
 
+#: ../src/im-chooser-simple.c:1048
+msgid "Show the status icon"
+msgstr "ଅବସ୍ଥିତି ଚିତ୍ରସଂକେତ ଦର୍ଶାନ୍ତୁ"
+
 #: ../src/main.c:53
-msgid "<span weight=\"bold\" size=\"larger\">No input method is available</span>"
-msgstr "<span weight=\"bold\" size=\"larger\">କୌଣସି ନିବେଶ ପ୍ରଣାଳୀ ଉପଲବ୍ଧ ନାହିଁ</span>"
+msgid ""
+"<span weight=\"bold\" size=\"larger\">No input method is available</span>"
+msgstr ""
+"<span weight=\"bold\" size=\"larger\">କୌଣସି ନିବେଶ ପ୍ରଣାଳୀ ଉପଲବ୍ଧ ନାହିଁ</span>"
 
 #: ../src/main.c:56
 msgid "Please install any input methods before running if you like."
@@ -179,4 +184,3 @@ msgstr ""
 #: ../src/im-chooser.desktop.in.in.h:2
 msgid "Input Method"
 msgstr "ନିବେଶ ପ୍ରଣାଳୀ"
-

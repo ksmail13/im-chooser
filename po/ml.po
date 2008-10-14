@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: im-chooser.trunk.ml\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-09-17 23:32+0900\n"
+"POT-Creation-Date: 2008-10-14 11:50+0900\n"
 "PO-Revision-Date: 2008-04-16 09:01+0530\n"
 "Last-Translator: \n"
 "Language-Team:  <en@li.org>\n"
@@ -141,21 +141,21 @@ msgstr " (പാരമ്പര്യം)"
 msgid " (recommended)"
 msgstr " (ഉചിതമായ)"
 
-#: ../src/im-chooser-simple.c:976
-msgid "<b>Input Method</b>"
-msgstr "<b>ഇന്‍പുട്ട് രീതി</b>"
-
-#: ../src/im-chooser-simple.c:982
-msgid "Show the status icon"
-msgstr ""
-
-#: ../src/im-chooser-simple.c:989
+#: ../src/im-chooser-simple.c:980
 msgid "_Enable input method feature"
 msgstr "ഇന്‍പുട്ട് രീതി _സജ്ജമാക്കുക"
 
-#: ../src/im-chooser-simple.c:1035
+#: ../src/im-chooser-simple.c:988
+msgid "<b>Input Method</b>"
+msgstr "<b>ഇന്‍പുട്ട് രീതി</b>"
+
+#: ../src/im-chooser-simple.c:1021
 msgid "Input Method _Preferences..."
 msgstr "ഇന്‍പുട്ട് രീതിയ്ക്കുള്ള _മുന്‍ഗണനകള്‍..."
+
+#: ../src/im-chooser-simple.c:1048
+msgid "Show the status icon"
+msgstr ""
 
 #: ../src/main.c:53
 msgid ""

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: it\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-09-17 23:32+0900\n"
+"POT-Creation-Date: 2008-10-14 11:50+0900\n"
 "PO-Revision-Date: 2008-09-03 10:04+1000\n"
 "Last-Translator: \n"
 "Language-Team:  <it@li.org>\n"
@@ -136,21 +136,21 @@ msgstr " (legacy)"
 msgid " (recommended)"
 msgstr " (raccomandato)"
 
-#: ../src/im-chooser-simple.c:976
-msgid "<b>Input Method</b>"
-msgstr "<b>Input Method</b>"
-
-#: ../src/im-chooser-simple.c:982
-msgid "Show the status icon"
-msgstr ""
-
-#: ../src/im-chooser-simple.c:989
+#: ../src/im-chooser-simple.c:980
 msgid "_Enable input method feature"
 msgstr "Abilitar_e caratteristica del metodo di input"
 
-#: ../src/im-chooser-simple.c:1035
+#: ../src/im-chooser-simple.c:988
+msgid "<b>Input Method</b>"
+msgstr "<b>Input Method</b>"
+
+#: ../src/im-chooser-simple.c:1021
 msgid "Input Method _Preferences..."
 msgstr "_Preferenze del metodo di input..."
+
+#: ../src/im-chooser-simple.c:1048
+msgid "Show the status icon"
+msgstr ""
 
 #: ../src/main.c:53
 msgid ""

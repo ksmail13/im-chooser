@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: im-chooser.trunk\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-09-17 17:22+0000\n"
+"POT-Creation-Date: 2008-10-14 11:50+0900\n"
 "PO-Revision-Date: 2008-09-23 12:33+0530\n"
 "Last-Translator: Amitakhya Phukan <aphukan@fedoraproject.org>\n"
 "Language-Team: Assamese\n"
@@ -80,7 +80,9 @@ msgstr ", %s ৰ বাহিৰে"
 msgid ""
 "<small><i>Note: this change will not take effect until you next log in%s</"
 "i></small>"
-msgstr "<small><i>মন কৰিব:এই সলনি আপুনি অহা বাৰলৈ %s ত প্ৰৱেশ নকৰালৈকে প্ৰযোজ্য নহয়</i></small>"
+msgstr ""
+"<small><i>মন কৰিব:এই সলনি আপুনি অহা বাৰলৈ %s ত প্ৰৱেশ নকৰালৈকে প্ৰযোজ্য নহয়</i></"
+"small>"
 
 #: ../src/im-chooser-simple.c:674
 msgid "Parent Window"
@@ -104,6 +106,7 @@ msgid "Work in progress..."
 msgstr "কাম চলি আছে..."
 
 #: ../src/im-chooser-simple.c:776 ../src/im-chooser-simple.c:792
+#, c-format
 msgid "Unable to communicate to IMSettings services"
 msgstr "IMSettings সেৱালৈ সম্পৰ্ক কৰোঁতে বিফল"
 
@@ -132,25 +135,27 @@ msgstr " (লিগেচি)"
 msgid " (recommended)"
 msgstr " (উপদেশিত)"
 
-#: ../src/im-chooser-simple.c:976
-msgid "<b>Input Method</b>"
-msgstr "<b>নিবেশ পদ্ধতি</b>"
-
-#: ../src/im-chooser-simple.c:982
-msgid "Show the status icon"
-msgstr "অৱস্থাৰ আইকণ দেখুৱাওক"
-
-#: ../src/im-chooser-simple.c:989
+#: ../src/im-chooser-simple.c:980
 msgid "_Enable input method feature"
 msgstr "নিবেশ পদ্ধতিৰ গুণ সক্ৰিয় কৰে (_E)"
 
-#: ../src/im-chooser-simple.c:1035
+#: ../src/im-chooser-simple.c:988
+msgid "<b>Input Method</b>"
+msgstr "<b>নিবেশ পদ্ধতি</b>"
+
+#: ../src/im-chooser-simple.c:1021
 msgid "Input Method _Preferences..."
 msgstr "নিবেশ পদ্ধতিৰ পছন্দ (_P)..."
 
+#: ../src/im-chooser-simple.c:1048
+msgid "Show the status icon"
+msgstr "অৱস্থাৰ আইকণ দেখুৱাওক"
+
 #: ../src/main.c:53
-msgid "<span weight=\"bold\" size=\"larger\">No input method is available</span>"
-msgstr "<span weight=\"bold\" size=\"laৰgeৰ\">কোনো নিবেশ পদ্ধতি পোৱা নাযায়</span>"
+msgid ""
+"<span weight=\"bold\" size=\"larger\">No input method is available</span>"
+msgstr ""
+"<span weight=\"bold\" size=\"laৰgeৰ\">কোনো নিবেশ পদ্ধতি পোৱা নাযায়</span>"
 
 #: ../src/main.c:56
 msgid "Please install any input methods before running if you like."
@@ -175,4 +180,3 @@ msgstr ""
 #: ../src/im-chooser.desktop.in.in.h:2
 msgid "Input Method"
 msgstr "নিবেশ পদ্ধতি"
-

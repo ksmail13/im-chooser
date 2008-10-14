@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: im-chooser.trunk.ta\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-09-17 17:19+0000\n"
+"POT-Creation-Date: 2008-10-14 11:50+0900\n"
 "PO-Revision-Date: 2008-10-11 18:46+0530\n"
 "Last-Translator: I. Felix <ifelix@redhat.com>\n"
 "Language-Team: Tamil <fedora-trans-ta@redhat.com>\n"
@@ -94,9 +94,8 @@ msgid ""
 "<small><i>Note: this change will not take effect until you next log in%s</"
 "i></small>"
 msgstr ""
-"<small><i>குறிப்பு:  அடுத்த புகுபதிவு செய்யும் வரை இந்த "
-"மாற்றங்கள் செயல்படுத்தப்படாது %s</"
-"i></small>"
+"<small><i>குறிப்பு:  அடுத்த புகுபதிவு செய்யும் வரை இந்த மாற்றங்கள் செயல்படுத்தப்படாது %"
+"s</i></small>"
 
 #: ../src/im-chooser-simple.c:674
 msgid "Parent Window"
@@ -120,6 +119,7 @@ msgid "Work in progress..."
 msgstr "பணி நடந்து கொண்டிருக்கிறது..."
 
 #: ../src/im-chooser-simple.c:776 ../src/im-chooser-simple.c:792
+#, c-format
 msgid "Unable to communicate to IMSettings services"
 msgstr "IMSettings சேவைகளை தொடர்பு கொள்ள முடியவில்லை"
 
@@ -148,24 +148,25 @@ msgstr " (legacy)"
 msgid " (recommended)"
 msgstr " (பரிந்துரைக்கப்பட்டது)"
 
-#: ../src/im-chooser-simple.c:976
-msgid "<b>Input Method</b>"
-msgstr "<b>உள்ளீடு முறை</b>"
-
-#: ../src/im-chooser-simple.c:982
-msgid "Show the status icon"
-msgstr "நிலை சின்னத்தை காட்டு"
-
-#: ../src/im-chooser-simple.c:989
+#: ../src/im-chooser-simple.c:980
 msgid "_Enable input method feature"
 msgstr "உள்ளீடு முறை வசதியை செயல்படுத்தவும் (_E)"
 
-#: ../src/im-chooser-simple.c:1035
+#: ../src/im-chooser-simple.c:988
+msgid "<b>Input Method</b>"
+msgstr "<b>உள்ளீடு முறை</b>"
+
+#: ../src/im-chooser-simple.c:1021
 msgid "Input Method _Preferences..."
 msgstr "உள்ளீடு முறை விருப்பங்கள் (_P)..."
 
+#: ../src/im-chooser-simple.c:1048
+msgid "Show the status icon"
+msgstr "நிலை சின்னத்தை காட்டு"
+
 #: ../src/main.c:53
-msgid "<span weight=\"bold\" size=\"larger\">No input method is available</span>"
+msgid ""
+"<span weight=\"bold\" size=\"larger\">No input method is available</span>"
 msgstr "<span weight=\"bold\" size=\"larger\">உள்ளீடு முறை எதுவும் இல்லை</span>"
 
 #: ../src/main.c:56
@@ -191,4 +192,3 @@ msgstr ""
 #: ../src/im-chooser.desktop.in.in.h:2
 msgid "Input Method"
 msgstr "உள்ளீடு முறை"
-

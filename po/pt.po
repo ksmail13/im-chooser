@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: im-chooser 0.3.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-09-17 17:19+0000\n"
+"POT-Creation-Date: 2008-10-14 11:50+0900\n"
 "PO-Revision-Date: 2008-09-30 22:52+0100\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -79,7 +79,9 @@ msgstr ", excepto %s"
 msgid ""
 "<small><i>Note: this change will not take effect until you next log in%s</"
 "i></small>"
-msgstr "<small><i>Nota: esta alteração não fará efeito até que inicie uma próxima sessão em %s</i></small>"
+msgstr ""
+"<small><i>Nota: esta alteração não fará efeito até que inicie uma próxima "
+"sessão em %s</i></small>"
 
 #: ../src/im-chooser-simple.c:674
 msgid "Parent Window"
@@ -103,6 +105,7 @@ msgid "Work in progress..."
 msgstr "Está trabalho em curso..."
 
 #: ../src/im-chooser-simple.c:776 ../src/im-chooser-simple.c:792
+#, c-format
 msgid "Unable to communicate to IMSettings services"
 msgstr "Não é possível comunicar com os serviços IMSettings"
 
@@ -116,7 +119,8 @@ msgstr "Não é possível obter o estado actual"
 
 #: ../src/im-chooser-simple.c:813
 msgid "Unable to get Input Method information"
-msgstr "Não foi possível obter informações sobre o Método de Introdução de Dados"
+msgstr ""
+"Não foi possível obter informações sobre o Método de Introdução de Dados"
 
 #: ../src/im-chooser-simple.c:860
 #, c-format
@@ -131,30 +135,33 @@ msgstr " (legado)"
 msgid " (recommended)"
 msgstr " (recomendado)"
 
-#: ../src/im-chooser-simple.c:976
-msgid "<b>Input Method</b>"
-msgstr "<b>Método de Introdução de Dados</b>"
-
-#: ../src/im-chooser-simple.c:982
-msgid "Show the status icon"
-msgstr "Mostrar o ícone de estado"
-
-#: ../src/im-chooser-simple.c:989
+#: ../src/im-chooser-simple.c:980
 msgid "_Enable input method feature"
 msgstr "Activar a funcionalidad_e de introdução de dados"
 
-#: ../src/im-chooser-simple.c:1035
+#: ../src/im-chooser-simple.c:988
+msgid "<b>Input Method</b>"
+msgstr "<b>Método de Introdução de Dados</b>"
+
+#: ../src/im-chooser-simple.c:1021
 msgid "Input Method _Preferences..."
 msgstr "_Preferências do Método de Introdução de Dados..."
+
+#: ../src/im-chooser-simple.c:1048
+msgid "Show the status icon"
+msgstr "Mostrar o ícone de estado"
 
 #: ../src/main.c:53
 msgid ""
 "<span weight=\"bold\" size=\"larger\">No input method is available</span>"
-msgstr "<span weight=\"bold\" size=\"larger\">Não está disponível nenhum método de introdução de dados</span>"
+msgstr ""
+"<span weight=\"bold\" size=\"larger\">Não está disponível nenhum método de "
+"introdução de dados</span>"
 
 #: ../src/main.c:56
 msgid "Please install any input methods before running if you like."
-msgstr "Instale por favor um método de introdução antes de o executar, se quiser."
+msgstr ""
+"Instale por favor um método de introdução antes de o executar, se quiser."
 
 #: ../src/main.c:144
 msgid "IM Chooser - Input Method configuration tool"
@@ -168,9 +175,10 @@ msgstr "Encerrar"
 msgid ""
 "Choose the input method to be used or disable the input method usage on the "
 "desktop"
-msgstr "Escolha o Método de Introdução de Dados a usar ou desactive a utilização de Métodos de Introdução de Dados no ambiente de trabalho"
+msgstr ""
+"Escolha o Método de Introdução de Dados a usar ou desactive a utilização de "
+"Métodos de Introdução de Dados no ambiente de trabalho"
 
 #: ../src/im-chooser.desktop.in.in.h:2
 msgid "Input Method"
 msgstr "Método de Introdução de Dados"
-

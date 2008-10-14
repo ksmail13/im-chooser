@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: im-chooser.trunk.mr\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-09-17 17:19+0000\n"
+"POT-Creation-Date: 2008-10-14 11:50+0900\n"
 "PO-Revision-Date: 2008-09-24 16:09+0530\n"
 "Last-Translator: Sandeep Shedmake <sandeep.shedmake@gmail.com>\n"
 "Language-Team: marathi\n"
@@ -82,7 +82,9 @@ msgstr ", %s ला वगळता"
 msgid ""
 "<small><i>Note: this change will not take effect until you next log in%s</"
 "i></small>"
-msgstr "<small><i>टीप: पुढल्यावेळी %s मध्ये दाखलन करेपर्यंत हा बदल परिणामकारक ठरणार नाही.</i></small>"
+msgstr ""
+"<small><i>टीप: पुढल्यावेळी %s मध्ये दाखलन करेपर्यंत हा बदल परिणामकारक ठरणार नाही.</"
+"i></small>"
 
 #: ../src/im-chooser-simple.c:674
 msgid "Parent Window"
@@ -106,6 +108,7 @@ msgid "Work in progress..."
 msgstr "कार्य चालू आहे..."
 
 #: ../src/im-chooser-simple.c:776 ../src/im-chooser-simple.c:792
+#, c-format
 msgid "Unable to communicate to IMSettings services"
 msgstr "IMSettings सेवाशी संपर्क साधता आले नाही"
 
@@ -134,24 +137,25 @@ msgstr " (सर्वसाधारण)"
 msgid " (recommended)"
 msgstr " (सूचविलेले)"
 
-#: ../src/im-chooser-simple.c:976
-msgid "<b>Input Method</b>"
-msgstr "<b>इनपुट पद्धती</b>"
-
-#: ../src/im-chooser-simple.c:982
-msgid "Show the status icon"
-msgstr "स्थिती चिन्ह दर्शवा"
-
-#: ../src/im-chooser-simple.c:989
+#: ../src/im-chooser-simple.c:980
 msgid "_Enable input method feature"
 msgstr "इंपुट पध्दती गुणधर्म कार्यान्वीत करा (_E)"
 
-#: ../src/im-chooser-simple.c:1035
+#: ../src/im-chooser-simple.c:988
+msgid "<b>Input Method</b>"
+msgstr "<b>इनपुट पद्धती</b>"
+
+#: ../src/im-chooser-simple.c:1021
 msgid "Input Method _Preferences..."
 msgstr "इंपुट पद्धती प्राधान्यता (_P)..."
 
+#: ../src/im-chooser-simple.c:1048
+msgid "Show the status icon"
+msgstr "स्थिती चिन्ह दर्शवा"
+
 #: ../src/main.c:53
-msgid "<span weight=\"bold\" size=\"larger\">No input method is available</span>"
+msgid ""
+"<span weight=\"bold\" size=\"larger\">No input method is available</span>"
 msgstr "<span weight=\"bold\" size=\"larger\">इंपुट पध्दती उपलब्ध नाही</span>"
 
 #: ../src/main.c:56
@@ -170,9 +174,9 @@ msgstr "लॉग आउट"
 msgid ""
 "Choose the input method to be used or disable the input method usage on the "
 "desktop"
-msgstr "वापरावयाची इनपुट पद्धती निवडण्याचे किंवा डेस्कटॉपवरील इनपुट पद्धतीचा वापर अकार्यक्षम करा"
+msgstr ""
+"वापरावयाची इनपुट पद्धती निवडण्याचे किंवा डेस्कटॉपवरील इनपुट पद्धतीचा वापर अकार्यक्षम करा"
 
 #: ../src/im-chooser.desktop.in.in.h:2
 msgid "Input Method"
 msgstr "इनपुट पद्धती"
-

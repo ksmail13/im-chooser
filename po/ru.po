@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: im-chooser.trunk.ru\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-09-17 17:22+0000\n"
+"POT-Creation-Date: 2008-10-14 11:50+0900\n"
 "PO-Revision-Date: 2008-09-30 14:16+1000\n"
 "Last-Translator: Yulia Poyarkova <yulia.poyarkova@redhat.com>\n"
 "Language-Team: \n"
@@ -110,6 +110,7 @@ msgid "Work in progress..."
 msgstr "В процессе..."
 
 #: ../src/im-chooser-simple.c:776 ../src/im-chooser-simple.c:792
+#, c-format
 msgid "Unable to communicate to IMSettings services"
 msgstr "Не удается связаться со службами IMSettings"
 
@@ -138,25 +139,27 @@ msgstr " (устаревший)"
 msgid " (recommended)"
 msgstr " (рекомендуется)"
 
-#: ../src/im-chooser-simple.c:976
-msgid "<b>Input Method</b>"
-msgstr "<b>Метод ввода</b>"
-
-#: ../src/im-chooser-simple.c:982
-msgid "Show the status icon"
-msgstr "Показать значок статуса"
-
-#: ../src/im-chooser-simple.c:989
+#: ../src/im-chooser-simple.c:980
 msgid "_Enable input method feature"
 msgstr "_Включить возможность метода ввода"
 
-#: ../src/im-chooser-simple.c:1035
+#: ../src/im-chooser-simple.c:988
+msgid "<b>Input Method</b>"
+msgstr "<b>Метод ввода</b>"
+
+#: ../src/im-chooser-simple.c:1021
 msgid "Input Method _Preferences..."
 msgstr "_Параметры метода ввода"
 
+#: ../src/im-chooser-simple.c:1048
+msgid "Show the status icon"
+msgstr "Показать значок статуса"
+
 #: ../src/main.c:53
-msgid "<span weight=\"bold\" size=\"larger\">No input method is available</span>"
-msgstr "<span weight=\"bold\" size=\"larger\">Нет доступных методов ввода</span>"
+msgid ""
+"<span weight=\"bold\" size=\"larger\">No input method is available</span>"
+msgstr ""
+"<span weight=\"bold\" size=\"larger\">Нет доступных методов ввода</span>"
 
 #: ../src/main.c:56
 msgid "Please install any input methods before running if you like."
@@ -179,4 +182,3 @@ msgstr "Выберите метод ввода или отключите исп�
 #: ../src/im-chooser.desktop.in.in.h:2
 msgid "Input Method"
 msgstr "Метод ввода"
-
