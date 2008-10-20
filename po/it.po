@@ -1,3 +1,4 @@
+# translation of im-chooser.trunk.po to
 # translation of it.po to
 # Copyright (C) 2006 Red Hat, Inc. All rights reserved.
 # This file is distributed under the same license as the im-chooser package.
@@ -7,10 +8,10 @@
 # Silvio Pierro <perplesso82@gmail.com>, 2008.
 msgid ""
 msgstr ""
-"Project-Id-Version: it\n"
+"Project-Id-Version: im-chooser.trunk\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-10-14 11:50+0900\n"
-"PO-Revision-Date: 2008-09-03 10:04+1000\n"
+"POT-Creation-Date: 2008-10-17 01:49+0000\n"
+"PO-Revision-Date: 2008-10-20 11:10+1000\n"
 "Last-Translator: \n"
 "Language-Team:  <it@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -107,7 +108,6 @@ msgid "Work in progress..."
 msgstr "Lavoro in corso..."
 
 #: ../src/im-chooser-simple.c:776 ../src/im-chooser-simple.c:792
-#, c-format
 msgid "Unable to communicate to IMSettings services"
 msgstr "Impossibile comunicare con i servizi IMSettings"
 
@@ -150,19 +150,17 @@ msgstr "_Preferenze del metodo di input..."
 
 #: ../src/im-chooser-simple.c:1048
 msgid "Show the status icon"
-msgstr ""
+msgstr "Mostra icona dello stato"
 
 #: ../src/main.c:53
-msgid ""
-"<span weight=\"bold\" size=\"larger\">No input method is available</span>"
+msgid "<span weight=\"bold\" size=\"larger\">No input method is available</span>"
 msgstr ""
 "<span weight=\"bold\" size=\"larger\">Nessun metodo di input disponibile</"
 "span>"
 
 #: ../src/main.c:56
 msgid "Please install any input methods before running if you like."
-msgstr ""
-"Si prega di installare un qualsiasi metodo di input prima dell'esecuzione."
+msgstr "Si prega di installare un qualsiasi metodo di input prima dell'esecuzione."
 
 #: ../src/main.c:144
 msgid "IM Chooser - Input Method configuration tool"
@@ -183,3 +181,4 @@ msgstr ""
 #: ../src/im-chooser.desktop.in.in.h:2
 msgid "Input Method"
 msgstr "Metodo di input"
+
