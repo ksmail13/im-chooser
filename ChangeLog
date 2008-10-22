@@ -1,3 +1,11 @@
+2008-10-22  Akira TAGOH  <tagoh@redhat.com>
+
+	* src/im-chooser-simple.c (im_chooser_simple_set_property): Fix not
+	displaying the translation.
+
+	* src/main.c (main): Show the log out button if restart is required
+	for something.
+
 2008-10-10  Akira TAGOH  <tagoh@redhat.com>
 
 	* src/im-chooser-simple.c (im_chooser_simple_get_widget): code cleanup

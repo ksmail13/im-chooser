@@ -152,7 +152,20 @@ main(int    argc,
 	xmodifiers = g_getenv("XMODIFIERS");
 	gtk_immodule = g_getenv("GTK_IM_MODULE");
 	qt_immodule = g_getenv("QT_IM_MODULE");
-	if (xmodifiers == NULL || strcmp(xmodifiers, "@im=imsettings") != 0) {
+	if (xmodifiers != NULL && strcmp(xmodifiers, "@im=imsettings") == 0) {
+		note_type |= NOTE_TYPE_X;
+	}
+	if (gtk_immodule == NULL ||
+	    gtk_immodule[0] == 0 ||
+	    (strcmp(gtk_immodule, "xim") == 0 && (note_type & NOTE_TYPE_X))) {
+		note_type |= NOTE_TYPE_GTK;
+	}
+	if (qt_immodule == NULL ||
+	    qt_immodule[0] == 0 ||
+	    (strcmp(qt_immodule, "xim") == 0 && (note_type & NOTE_TYPE_X))) {
+		note_type |= NOTE_TYPE_QT;
+	}
+	if (note_type < (NOTE_TYPE_ALL - 1)) {
 		/* restarting is required to apply the changes for XIM at least.
 		 * so we show up the logout button.
 		 */
@@ -167,15 +180,6 @@ main(int    argc,
 				 G_CALLBACK (_im_changed_cb), logout_button);
 	} else {
 		close_button = gtk_button_new_from_stock(GTK_STOCK_OK);
-		note_type |= NOTE_TYPE_X;
-	}
-	if (gtk_immodule == NULL ||
-	    (strcmp(gtk_immodule, "xim") == 0 && (note_type & NOTE_TYPE_X))) {
-		note_type |= NOTE_TYPE_GTK;
-	}
-	if (qt_immodule == NULL ||
-	    (strcmp(qt_immodule, "xim") == 0 && (note_type & NOTE_TYPE_X))) {
-		note_type |= NOTE_TYPE_QT;
 	}
 	g_object_set(im, "note_type", note_type, NULL);
 	gtk_dialog_add_action_widget(GTK_DIALOG (window), close_button, GTK_RESPONSE_OK);

@@ -591,27 +591,27 @@ im_chooser_simple_set_property(GObject      *object,
 		    } else {
 			    if (im->note_type == (NOTE_TYPE_X | NOTE_TYPE_QT)) {
 				    /* This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications and Qt applications</i></small>" */
-				    exception = g_strdup_printf(N_(", except %s and %s"), note_exception[0], note_exception[2]);
+				    exception = g_strdup_printf(_(", except %s and %s"), _(note_exception[0]), _(note_exception[2]));
 			    } else if (im->note_type == (NOTE_TYPE_X | NOTE_TYPE_GTK)) {
 				    /* This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications and GTK+ applications</i></small>" */
-				    exception = g_strdup_printf(N_(", except %s and %s"), note_exception[0], note_exception[1]);
+				    exception = g_strdup_printf(_(", except %s and %s"), _(note_exception[0]), _(note_exception[1]));
 			    } else if (im->note_type == (NOTE_TYPE_GTK | NOTE_TYPE_QT)) {
 				    /* This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications and Qt applications</i></small>" */
-				    exception = g_strdup_printf(N_(", except %s and %s"), note_exception[1], note_exception[2]);
+				    exception = g_strdup_printf(_(", except %s and %s"), _(note_exception[1]), _(note_exception[2]));
 			    } else if (im->note_type == NOTE_TYPE_X) {
 				    /* This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications</i></small>" */
-				    exception = g_strdup_printf(N_(", except %s"), note_exception[0]);
+				    exception = g_strdup_printf(_(", except %s"), _(note_exception[0]));
 			    } else if (im->note_type == NOTE_TYPE_GTK) {
 				    /* This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications</i></small>" */
-				    exception = g_strdup_printf(N_(", except %s"), note_exception[1]);
+				    exception = g_strdup_printf(_(", except %s"), _(note_exception[1]));
 			    } else if (im->note_type == NOTE_TYPE_QT) {
 				    /* This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except Qt applications</i></small>" */
-				    exception = g_strdup_printf(N_(", except %s"), note_exception[2]);
+				    exception = g_strdup_printf(_(", except %s"), _(note_exception[2]));
 			    } else {
 				    exception = g_strdup("");
 			    }
 			    /* This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications</i></small>" */
-			    s = g_strdup_printf(N_("<small><i>Note: this change will not take effect until you next log in%s</i></small>"), exception);
+			    s = g_strdup_printf(_("<small><i>Note: this change will not take effect until you next log in%s</i></small>"), exception);
 			    gtk_label_set_markup(GTK_LABEL (im->note_label), s);
 			    gtk_widget_show(im->note);
 			    g_free(exception);

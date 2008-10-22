@@ -1,3 +1,16 @@
+1.2.4 -> 1.2.5
+=================
+* Bug Fixes:
+  * Fix no translation displayed in some places.
+  * Show the log out button if something required.
+
+* Translations updated
+  * Hungarian
+  * Italian
+  * Japanese
+  * Malayalam
+  * Slovak
+
 1.2.3 -> 1.2.4
 =================
 * Improvement

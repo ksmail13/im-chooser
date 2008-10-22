@@ -43,6 +43,7 @@ typedef enum {
 	NOTE_TYPE_X = 1 << 0,
 	NOTE_TYPE_GTK = 1 << 1,
 	NOTE_TYPE_QT = 1 << 2,
+	NOTE_TYPE_ALL = 1 << 3,
 } NoteType;
 
 
