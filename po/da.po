@@ -1,63 +1,61 @@
 # Danish translations for im-chooser package.
-# Copyright (C) 2006 Red Hat, Inc. All rights reserved.
+# Copyright (C) 2006, 2009 Red Hat, Inc. All rights reserved.
 # This file is distributed under the same license as the im-chooser package.
 # Magnus Larsson <fedoratrans@gmail.com>, 2006.
 # Keld Simonsen <keld@dkuug.dk>, 2006.
+# Kris Thomsen <lakristho@gmail.com>, 2009.
 #
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: im-chooser 0.3.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-10-14 11:50+0900\n"
-"PO-Revision-Date: 2006-09-29 04:28-0400\n"
-"Last-Translator: Keld Simonsen <keld@dkuug.dk>\n"
-"Language-Team: Danish <dansk@klid.dk>\n"
+"POT-Creation-Date: 2009-02-17 07:54+0000\n"
+"PO-Revision-Date: 2009-02-17 19:56+0100\n"
+"Last-Translator: Kris Thomsen <lakristho@gmail.com>\n"
+"Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: ../src/im-chooser-simple.c:125
 msgid "X applications"
-msgstr ""
+msgstr "X-programmer"
 
 #: ../src/im-chooser-simple.c:126
 msgid "GTK+ applications"
-msgstr ""
+msgstr "GTK+-programmer"
 
 #: ../src/im-chooser-simple.c:127
 msgid "Qt applications"
-msgstr ""
+msgstr "Qt-programmer"
 
 #: ../src/im-chooser-simple.c:179
-#, fuzzy
 msgid "Updating Input Method list"
-msgstr "Indtastningsmetode"
+msgstr "Opdaterer liste over indtastningsmetoder"
 
 #: ../src/im-chooser-simple.c:282
 msgid "Unable to get the information"
-msgstr ""
+msgstr "Ikke i stand til at modtage informationerne"
 
 #: ../src/im-chooser-simple.c:359
-#, fuzzy
 msgid "Failed to start Input Method"
-msgstr "_Brug aldrig indtastningsmetoder"
+msgstr "Kunne ikke starte indtastningsmetode"
 
 #: ../src/im-chooser-simple.c:386
-#, fuzzy
 msgid "Failed to stop Input Method"
-msgstr "_Brug aldrig indtastningsmetoder"
+msgstr "Kunne ikke stoppe indtastningsmetode"
 
 #: ../src/im-chooser-simple.c:491
-#, fuzzy, c-format
+#, c-format
 msgid "Starting Input Method - %s"
-msgstr "Indtastningsmetode"
+msgstr "Starter indtastningsmetode - %s"
 
 #: ../src/im-chooser-simple.c:508
-#, fuzzy, c-format
+#, c-format
 msgid "Stopping Input Method - %s"
-msgstr "Indtastningsmetode"
+msgstr "Stopper indtastningsmetode - %s"
 
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications and Qt applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications and GTK+ applications</i></small>"
@@ -66,7 +64,7 @@ msgstr "Indtastningsmetode"
 #: ../src/im-chooser-simple.c:600
 #, c-format
 msgid ", except %s and %s"
-msgstr ""
+msgstr ", undtagen for %s og %s"
 
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications</i></small>"
@@ -75,114 +73,108 @@ msgstr ""
 #: ../src/im-chooser-simple.c:609
 #, c-format
 msgid ", except %s"
-msgstr ""
+msgstr ", undtagen for %s"
 
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications</i></small>"
 #: ../src/im-chooser-simple.c:614
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "<small><i>Note: this change will not take effect until you next log in%s</"
 "i></small>"
 msgstr ""
-"<small><i>Bemærk: denne ændring vil ikke gælde før næste gang du logger ind."
-"</i></small>"
+"<small><i>Bemærk: Denne ændring vil ikke træde i kraft før næste gang du logger ind%s</"
+"i></small>"
 
 #: ../src/im-chooser-simple.c:674
 msgid "Parent Window"
-msgstr ""
+msgstr "Forældervindue"
 
 #: ../src/im-chooser-simple.c:675
 msgid "GtkWindow that points to the parent window"
-msgstr ""
+msgstr "GtkWindow der peger på forældervinduet"
 
 #: ../src/im-chooser-simple.c:680
 msgid "Note type"
-msgstr ""
+msgstr "Notér type"
 
 #: ../src/im-chooser-simple.c:681
 msgid "A enum value to determine which notes should be displayed"
-msgstr ""
+msgstr "En optællingsværdi til at bestemme hvilke notater der skal vises"
 
 #. setup a progress window
 #: ../src/im-chooser-simple.c:724
 msgid "Work in progress..."
-msgstr ""
+msgstr "Arbejde igangsat..."
 
 #: ../src/im-chooser-simple.c:776 ../src/im-chooser-simple.c:792
-#, c-format
 msgid "Unable to communicate to IMSettings services"
-msgstr ""
+msgstr "Ikke i stand til at kommunikere med IMSettings-tjenester"
 
 #: ../src/im-chooser-simple.c:777 ../src/im-chooser-simple.c:793
 msgid "Version mismatch"
-msgstr ""
+msgstr "Versioner passer ikke sammen"
 
 #: ../src/im-chooser-simple.c:807
 msgid "Unable to gather current status"
-msgstr ""
+msgstr "Ikke i stand til at modtage nuværende status"
 
 #: ../src/im-chooser-simple.c:813
-#, fuzzy
 msgid "Unable to get Input Method information"
-msgstr "Indtastningsmetode"
+msgstr "Ikke i stand til at modtage information om indtastningsmetode"
 
 #: ../src/im-chooser-simple.c:860
 #, c-format
 msgid "Use %s"
-msgstr ""
+msgstr "Brug %s"
 
 #: ../src/im-chooser-simple.c:863
 msgid " (legacy)"
-msgstr ""
+msgstr " (forældet)"
 
 #: ../src/im-chooser-simple.c:865
 msgid " (recommended)"
-msgstr ""
+msgstr " (anbefalet)"
 
 #: ../src/im-chooser-simple.c:980
 msgid "_Enable input method feature"
-msgstr ""
+msgstr "_Aktivér funktion for indtastningsmetode"
 
 #: ../src/im-chooser-simple.c:988
 msgid "<b>Input Method</b>"
 msgstr "<b>Indtastningsmetode</b>"
 
 #: ../src/im-chooser-simple.c:1021
-#, fuzzy
 msgid "Input Method _Preferences..."
-msgstr "Indtastningsmetode"
+msgstr "_Indstillinger for indtastningsmetode..."
 
 #: ../src/im-chooser-simple.c:1048
 msgid "Show the status icon"
-msgstr ""
+msgstr "Vis statusikonet"
 
 #: ../src/main.c:53
 msgid ""
 "<span weight=\"bold\" size=\"larger\">No input method is available</span>"
-msgstr ""
+msgstr "<span weight=\"bold\" size=\"larger\">Der er ingen tilgængelig indtastningsmetode</span>"
 
 #: ../src/main.c:56
 msgid "Please install any input methods before running if you like."
-msgstr ""
+msgstr "Installér venligt alle indtastningsmetoder før kørsel hvis du synes."
 
 #: ../src/main.c:144
 msgid "IM Chooser - Input Method configuration tool"
-msgstr "IM Vælger - Værktøj for konfiguration af indtastningsmetode"
+msgstr "IM-vælger - Værktøj til konfiguration af indtastningsmetode"
 
-#: ../src/main.c:160
-#, fuzzy
+#: ../src/main.c:173
 msgid "Log Out"
-msgstr "_Log ud"
+msgstr "Log ud"
 
 #: ../src/im-chooser.desktop.in.in.h:1
-#, fuzzy
 msgid ""
 "Choose the input method to be used or disable the input method usage on the "
 "desktop"
 msgstr ""
-"Værktøj for konfiguration af indtastningsmetode til at vælge hvilken "
-"indtastningsmetode som skal bruges, eller deaktivér brug af "
-"indtastningsmetode på skrivebordet"
+"Vælg den indtastningsmetode som skal være i brug eller deaktivér brugen af indtastningsmetoden på "
+"skrivebordet"
 
 #: ../src/im-chooser.desktop.in.in.h:2
 msgid "Input Method"
@@ -191,11 +183,9 @@ msgstr "Indtastningsmetode"
 #~ msgid "No valid IM installed"
 #~ msgstr "Ingen gyldige IM installeret"
 
-#, fuzzy
 #~ msgid "Choose _specific Input Method"
 #~ msgstr "Brug _egendefineret indtastningsmetode"
 
-#, fuzzy
 #~ msgid ""
 #~ "Use the specific Input Method that you prefer regardless what Input "
 #~ "Method the system recommends."
@@ -203,14 +193,11 @@ msgstr "Indtastningsmetode"
 #~ "Brug indtastningsmetode som du foretrækker uanset hvilken "
 #~ "indtastningsmetode som systemet anbefaler."
 
-#, fuzzy
 #~ msgid ""
 #~ "Do not use Input Method no matter what language the desktop is running on."
 #~ msgstr ""
-#~ "Deaktivér indtastningsmetoder helt uanset hvilket lokale skrivebordet "
-#~ "kører med."
+#~ "Brug ikke indtastningsmetoder, uanset hvilket lokale skrivebordet benytter."
 
-#, fuzzy
 #~ msgid "Use legacy _Input Method"
 #~ msgstr "_Brug forældede indtastningsmetoder"
 
@@ -218,8 +205,8 @@ msgstr "Indtastningsmetode"
 #~ "Use X Input Method anyway. In fact, which input method will be chosen for "
 #~ "the desktop session, depends on the desktop language."
 #~ msgstr ""
-#~ "Brug alligevel indtastningsmetoden for X. Faktisk vil hvilken "
-#~ "indtastningsmetode som vælges for skrivebordssessionen afhænge af sproget "
+#~ "Brug alligevel indtastningsmetoden for X. Faktisk vil "
+#~ "indtastningsmetoden som vælges for skrivebordssessionen afhænge af sproget "
 #~ "for skrivebordet."
 
 #~ msgid "_Follow the system-wide configuration"
