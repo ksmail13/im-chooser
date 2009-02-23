@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: im-chooser.trunk.kn\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-10-14 11:50+0900\n"
+"POT-Creation-Date: 2009-02-23 23:38+0900\n"
 "PO-Revision-Date: 2008-09-29 17:05+0530\n"
 "Last-Translator: Shankar Prasad <svenkate@redhat.com>\n"
 "Language-Team: Kannada <en@li.org>\n"
@@ -23,40 +23,40 @@ msgstr ""
 "Plural-Forms:  nplurals=2; plural=(n != 1);\n"
 "\n"
 
-#: ../src/im-chooser-simple.c:125
+#: ../src/im-chooser-simple.c:124
 msgid "X applications"
 msgstr "X ಅನ್ವಯಗಳು"
 
-#: ../src/im-chooser-simple.c:126
+#: ../src/im-chooser-simple.c:125
 msgid "GTK+ applications"
 msgstr "GTK+ ಅನ್ವಯಗಳು"
 
-#: ../src/im-chooser-simple.c:127
+#: ../src/im-chooser-simple.c:126
 msgid "Qt applications"
 msgstr "Qt ಅನ್ವಯಗಳು"
 
-#: ../src/im-chooser-simple.c:179
+#: ../src/im-chooser-simple.c:178
 msgid "Updating Input Method list"
 msgstr "ಆದಾನ ಕ್ರಮದ ಪಟ್ಟಿಯನ್ನು ಅಪ್‍ಡೇಟ್ ಮಾಡಲಾಗುತ್ತಿದೆ"
 
-#: ../src/im-chooser-simple.c:282
+#: ../src/im-chooser-simple.c:281
 msgid "Unable to get the information"
 msgstr "ಮಾಹಿತಿಯನ್ನು ಪಡೆಯಲಾಗಲಿಲ್ಲ"
 
-#: ../src/im-chooser-simple.c:359
+#: ../src/im-chooser-simple.c:358
 msgid "Failed to start Input Method"
 msgstr "ಆದಾನ ಕ್ರಮವನ್ನು ಆರಂಭಿಸುವಲ್ಲಿ ವಿಫಲತೆ"
 
-#: ../src/im-chooser-simple.c:386
+#: ../src/im-chooser-simple.c:385
 msgid "Failed to stop Input Method"
 msgstr "ಆದಾನ ಕ್ರಮವನ್ನು ನಿಲ್ಲಿಸುವಲ್ಲಿ ವಿಫಲತೆ"
 
-#: ../src/im-chooser-simple.c:491
+#: ../src/im-chooser-simple.c:490
 #, c-format
 msgid "Starting Input Method - %s"
 msgstr "ಆದಾನ ಕ್ರಮವನ್ನು ಆರಂಭಿಸಲಾಗುತ್ತಿದೆ - %s"
 
-#: ../src/im-chooser-simple.c:508
+#: ../src/im-chooser-simple.c:507
 #, c-format
 msgid "Stopping Input Method - %s"
 msgstr "ಆದಾನ ಕ್ರಮವನ್ನು ನಿಲ್ಲಿಸಲಾಗುತ್ತಿದೆ - %s"
@@ -64,8 +64,8 @@ msgstr "ಆದಾನ ಕ್ರಮವನ್ನು ನಿಲ್ಲಿಸಲಾಗ�
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications and Qt applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications and GTK+ applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications and Qt applications</i></small>"
-#: ../src/im-chooser-simple.c:594 ../src/im-chooser-simple.c:597
-#: ../src/im-chooser-simple.c:600
+#: ../src/im-chooser-simple.c:593 ../src/im-chooser-simple.c:596
+#: ../src/im-chooser-simple.c:599
 #, c-format
 msgid ", except %s and %s"
 msgstr ", %s ಹಾಗು %s ಅನ್ನು ಹೊರತು ಪಡಿಸಿ"
@@ -73,14 +73,14 @@ msgstr ", %s ಹಾಗು %s ಅನ್ನು ಹೊರತು ಪಡಿಸಿ"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except Qt applications</i></small>"
-#: ../src/im-chooser-simple.c:603 ../src/im-chooser-simple.c:606
-#: ../src/im-chooser-simple.c:609
+#: ../src/im-chooser-simple.c:602 ../src/im-chooser-simple.c:605
+#: ../src/im-chooser-simple.c:608
 #, c-format
 msgid ", except %s"
 msgstr ", %s ಅನ್ನು ಹೊರತು ಪಡಿಸಿ"
 
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications</i></small>"
-#: ../src/im-chooser-simple.c:614
+#: ../src/im-chooser-simple.c:613
 #, c-format
 msgid ""
 "<small><i>Note: this change will not take effect until you next log in%s</"
@@ -89,70 +89,70 @@ msgstr ""
 "<small><i>ಸೂಚನೆ: ನೀವು ಮುಂದಿನ ಬಾರಿ %s ಒಳಗೆ ಪ್ರವೇಶಿಸುವವರೆಗೆ ಈ ಬದಲಾವಣೆಗಳು "
 "ಕಾರ್ಯಗತಗೊಳ್ಳುವುದಿಲ್ಲ.</i></small>"
 
-#: ../src/im-chooser-simple.c:674
+#: ../src/im-chooser-simple.c:672
 msgid "Parent Window"
 msgstr "ಮೂಲ ವಿಂಡೋ"
 
-#: ../src/im-chooser-simple.c:675
+#: ../src/im-chooser-simple.c:673
 msgid "GtkWindow that points to the parent window"
 msgstr "ಮೂಲ ವಿಂಡೋ ಅನ್ನು ಸೂಚಿಸುವ GtkWindow"
 
-#: ../src/im-chooser-simple.c:680
+#: ../src/im-chooser-simple.c:678
 msgid "Note type"
 msgstr "ಸೂಚನೆಯ ಬಗೆ"
 
-#: ../src/im-chooser-simple.c:681
+#: ../src/im-chooser-simple.c:679
 msgid "A enum value to determine which notes should be displayed"
 msgstr "ಯಾವ ಸೂಚನೆಗಳನ್ನು ತೋರಿಸಬೇಕು ಎಂದು ನಿರ್ಧರಿಸುವ enum ಮೌಲ್ಯ"
 
 #. setup a progress window
-#: ../src/im-chooser-simple.c:724
+#: ../src/im-chooser-simple.c:722
 msgid "Work in progress..."
 msgstr "ಕಾರ್ಯವು ಪ್ರಗತಿಯಲ್ಲಿದೆ..."
 
-#: ../src/im-chooser-simple.c:776 ../src/im-chooser-simple.c:792
+#: ../src/im-chooser-simple.c:772
 #, c-format
 msgid "Unable to communicate to IMSettings services"
 msgstr "IMSettings ಸೇವೆಗಳೊಂದಿಗೆ ಸಂಪರ್ಕ ಹೊಂದಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ"
 
-#: ../src/im-chooser-simple.c:777 ../src/im-chooser-simple.c:793
+#: ../src/im-chooser-simple.c:773
 msgid "Version mismatch"
 msgstr "ಆವೃತ್ತಿ ತಾಳೆಯಾಗುತ್ತಿಲ್ಲ"
 
-#: ../src/im-chooser-simple.c:807
+#: ../src/im-chooser-simple.c:787
 msgid "Unable to gather current status"
 msgstr "ಪ್ರಸಕ್ತ ಸ್ಥಿತಿಯನ್ನು ಪಡೆದುಕೊಳ್ಳಲು ಸಾಧ್ಯವಾಗಿಲ್ಲ"
 
-#: ../src/im-chooser-simple.c:813
+#: ../src/im-chooser-simple.c:793
 msgid "Unable to get Input Method information"
 msgstr "ಆದಾನ ಕ್ರಮದ ಮಾಹಿತಿಯನ್ನು ಅಪ್‍ಡೇಟ್ ಮಾಡಲಾಗುತ್ತಿದೆ"
 
-#: ../src/im-chooser-simple.c:860
+#: ../src/im-chooser-simple.c:840
 #, c-format
 msgid "Use %s"
 msgstr "%s ಅನ್ನು ಬಳಸು"
 
-#: ../src/im-chooser-simple.c:863
+#: ../src/im-chooser-simple.c:843
 msgid " (legacy)"
 msgstr " (ಪಾರಂಪರಿಕ)"
 
-#: ../src/im-chooser-simple.c:865
+#: ../src/im-chooser-simple.c:845
 msgid " (recommended)"
 msgstr " (ಸೂಚಿಸಲಾದ)"
 
-#: ../src/im-chooser-simple.c:980
+#: ../src/im-chooser-simple.c:960
 msgid "_Enable input method feature"
 msgstr "ಆದಾನ ಕ್ರಮದ ವೈಶಿಷ್ಟ್ಯ ಕ್ರಮವನ್ನು ಶಕ್ತಗೊಳಿಸು(_E)"
 
-#: ../src/im-chooser-simple.c:988
+#: ../src/im-chooser-simple.c:968
 msgid "<b>Input Method</b>"
 msgstr "<b>ಆದಾನ ಕ್ರಮ</b>"
 
-#: ../src/im-chooser-simple.c:1021
+#: ../src/im-chooser-simple.c:1001
 msgid "Input Method _Preferences..."
 msgstr "ಆದಾನ ಕ್ರಮದ ಆದ್ಯತೆಗಳು(_P)..."
 
-#: ../src/im-chooser-simple.c:1048
+#: ../src/im-chooser-simple.c:1028
 msgid "Show the status icon"
 msgstr "ಸ್ಥಿತಿ ಚಿಹ್ನೆಯನ್ನು ತೋರಿಸು"
 
@@ -169,11 +169,11 @@ msgstr "ನಿಮ್ಮ ಇಚ್ಛೆಯ ಯಾವುದೆ ಆದಾನ ಕ�
 msgid "IM Chooser - Input Method configuration tool"
 msgstr "IM Chooser - ಆದಾನ ಕ್ರಮ ಸ್ವರೂಪಿಸುವ ಉಪಕರಣ"
 
-#: ../src/main.c:160
+#: ../src/main.c:173
 msgid "Log Out"
 msgstr "ಹೊರಗೆ ನಡೆ"
 
-#: ../src/im-chooser.desktop.in.in.h:1
+#: ../src/im-chooser.desktop.in.in.h:1 ../src/xfce4-im-chooser.desktop.in.h:1
 msgid ""
 "Choose the input method to be used or disable the input method usage on the "
 "desktop"
@@ -181,6 +181,6 @@ msgstr ""
 "ಗಣಕ ಪರದೆಯ ಬಳಕೆಗೆ, ಆದಾನಕ್ರಮವನ್ನು ಉಪಯೋಗಿಸಬೇಕೆ ಅಥವಾ ನಿಷ್ಕ್ರಿಯಗೊಳಿಸ ಬೇಕೆ ಎಂಬುದನ್ನು "
 "ಆಯ್ಕೆಮಾಡಿ"
 
-#: ../src/im-chooser.desktop.in.in.h:2
+#: ../src/im-chooser.desktop.in.in.h:2 ../src/xfce4-im-chooser.desktop.in.h:2
 msgid "Input Method"
 msgstr "ಆದಾನ ಕ್ರಮ"

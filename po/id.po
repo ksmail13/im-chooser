@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: im-chooser 0.3.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-10-14 11:50+0900\n"
+"POT-Creation-Date: 2009-02-23 23:38+0900\n"
 "PO-Revision-Date: 2008-10-09 02:55+0700\n"
 "Last-Translator: Teguh DC <dheche@songolimo.net>\n"
 "Language-Team: Fedora Trans ID <fedora-trans-id@redhat.com>\n"
@@ -16,40 +16,40 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../src/im-chooser-simple.c:125
+#: ../src/im-chooser-simple.c:124
 msgid "X applications"
 msgstr "aplikasi X"
 
-#: ../src/im-chooser-simple.c:126
+#: ../src/im-chooser-simple.c:125
 msgid "GTK+ applications"
 msgstr "aplikasi GTK+"
 
-#: ../src/im-chooser-simple.c:127
+#: ../src/im-chooser-simple.c:126
 msgid "Qt applications"
 msgstr "aplikasi Qt"
 
-#: ../src/im-chooser-simple.c:179
+#: ../src/im-chooser-simple.c:178
 msgid "Updating Input Method list"
 msgstr "Memperbarui daftar Metode Masukan"
 
-#: ../src/im-chooser-simple.c:282
+#: ../src/im-chooser-simple.c:281
 msgid "Unable to get the information"
 msgstr "Tidak dapat memperoleh informasi"
 
-#: ../src/im-chooser-simple.c:359
+#: ../src/im-chooser-simple.c:358
 msgid "Failed to start Input Method"
 msgstr "Gagal menjalankan Metode Masukan"
 
-#: ../src/im-chooser-simple.c:386
+#: ../src/im-chooser-simple.c:385
 msgid "Failed to stop Input Method"
 msgstr "Gagal menghentikan Metode Masukan"
 
-#: ../src/im-chooser-simple.c:491
+#: ../src/im-chooser-simple.c:490
 #, c-format
 msgid "Starting Input Method - %s"
 msgstr "Menjalankan Metode Masukan - %s"
 
-#: ../src/im-chooser-simple.c:508
+#: ../src/im-chooser-simple.c:507
 #, c-format
 msgid "Stopping Input Method - %s"
 msgstr "Menghentikan Metode Masukan - %s"
@@ -57,8 +57,8 @@ msgstr "Menghentikan Metode Masukan - %s"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications and Qt applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications and GTK+ applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications and Qt applications</i></small>"
-#: ../src/im-chooser-simple.c:594 ../src/im-chooser-simple.c:597
-#: ../src/im-chooser-simple.c:600
+#: ../src/im-chooser-simple.c:593 ../src/im-chooser-simple.c:596
+#: ../src/im-chooser-simple.c:599
 #, c-format
 msgid ", except %s and %s"
 msgstr ", kecuali %s dan %s"
@@ -66,14 +66,14 @@ msgstr ", kecuali %s dan %s"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except Qt applications</i></small>"
-#: ../src/im-chooser-simple.c:603 ../src/im-chooser-simple.c:606
-#: ../src/im-chooser-simple.c:609
+#: ../src/im-chooser-simple.c:602 ../src/im-chooser-simple.c:605
+#: ../src/im-chooser-simple.c:608
 #, c-format
 msgid ", except %s"
 msgstr ", kecuali %s"
 
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications</i></small>"
-#: ../src/im-chooser-simple.c:614
+#: ../src/im-chooser-simple.c:613
 #, c-format
 msgid ""
 "<small><i>Note: this change will not take effect until you next log in%s</"
@@ -82,70 +82,70 @@ msgstr ""
 "<small><i>Catatan: perubahan ini tidak akan berefek sampai anda log in "
 "kembali%s</i></small>"
 
-#: ../src/im-chooser-simple.c:674
+#: ../src/im-chooser-simple.c:672
 msgid "Parent Window"
 msgstr "Jendela Induk"
 
-#: ../src/im-chooser-simple.c:675
+#: ../src/im-chooser-simple.c:673
 msgid "GtkWindow that points to the parent window"
 msgstr "GtkWindow yang mengarah ke jendela induk"
 
-#: ../src/im-chooser-simple.c:680
+#: ../src/im-chooser-simple.c:678
 msgid "Note type"
 msgstr "Jenis catatan"
 
-#: ../src/im-chooser-simple.c:681
+#: ../src/im-chooser-simple.c:679
 msgid "A enum value to determine which notes should be displayed"
 msgstr "Nilai enum untuk menentukan catatan mana yang harus ditampilkan"
 
 #. setup a progress window
-#: ../src/im-chooser-simple.c:724
+#: ../src/im-chooser-simple.c:722
 msgid "Work in progress..."
 msgstr "Masih dikerjakan..."
 
-#: ../src/im-chooser-simple.c:776 ../src/im-chooser-simple.c:792
+#: ../src/im-chooser-simple.c:772
 #, c-format
 msgid "Unable to communicate to IMSettings services"
 msgstr "Tidak dapat berkomunikasi dengan layanan IMSettings"
 
-#: ../src/im-chooser-simple.c:777 ../src/im-chooser-simple.c:793
+#: ../src/im-chooser-simple.c:773
 msgid "Version mismatch"
 msgstr "Versi tidak cocok"
 
-#: ../src/im-chooser-simple.c:807
+#: ../src/im-chooser-simple.c:787
 msgid "Unable to gather current status"
 msgstr "Tidak dapat memperoleh status saat ini"
 
-#: ../src/im-chooser-simple.c:813
+#: ../src/im-chooser-simple.c:793
 msgid "Unable to get Input Method information"
 msgstr "Tidak dapat memperoleh informasi Metode Masukan"
 
-#: ../src/im-chooser-simple.c:860
+#: ../src/im-chooser-simple.c:840
 #, c-format
 msgid "Use %s"
 msgstr "Gunakan %s"
 
-#: ../src/im-chooser-simple.c:863
+#: ../src/im-chooser-simple.c:843
 msgid " (legacy)"
 msgstr "(warisan)"
 
-#: ../src/im-chooser-simple.c:865
+#: ../src/im-chooser-simple.c:845
 msgid " (recommended)"
 msgstr "(direkomendasikan)"
 
-#: ../src/im-chooser-simple.c:980
+#: ../src/im-chooser-simple.c:960
 msgid "_Enable input method feature"
 msgstr "Aktifkan fitur m_etode masukan"
 
-#: ../src/im-chooser-simple.c:988
+#: ../src/im-chooser-simple.c:968
 msgid "<b>Input Method</b>"
 msgstr "<b>Metode Masukan</b>"
 
-#: ../src/im-chooser-simple.c:1021
+#: ../src/im-chooser-simple.c:1001
 msgid "Input Method _Preferences..."
 msgstr "_Preferensi Metode Masukan..."
 
-#: ../src/im-chooser-simple.c:1048
+#: ../src/im-chooser-simple.c:1028
 msgid "Show the status icon"
 msgstr "Tampilkan ikon status"
 
@@ -165,11 +165,11 @@ msgstr ""
 msgid "IM Chooser - Input Method configuration tool"
 msgstr "Pemilih IM - Alat bantu pengkonfigur metode masukan"
 
-#: ../src/main.c:160
+#: ../src/main.c:173
 msgid "Log Out"
 msgstr "Log Out"
 
-#: ../src/im-chooser.desktop.in.in.h:1
+#: ../src/im-chooser.desktop.in.in.h:1 ../src/xfce4-im-chooser.desktop.in.h:1
 msgid ""
 "Choose the input method to be used or disable the input method usage on the "
 "desktop"
@@ -177,7 +177,7 @@ msgstr ""
 "Pilih metode masukan yang akan dipakai atau non-aktifkan metode masukan di "
 "desktop"
 
-#: ../src/im-chooser.desktop.in.in.h:2
+#: ../src/im-chooser.desktop.in.in.h:2 ../src/xfce4-im-chooser.desktop.in.h:2
 msgid "Input Method"
 msgstr "Metode Masukan"
 

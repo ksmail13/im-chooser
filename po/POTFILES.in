@@ -1,3 +1,4 @@
 src/im-chooser-simple.c
 src/main.c
 src/im-chooser.desktop.in.in
+src/xfce4-im-chooser.desktop.in
