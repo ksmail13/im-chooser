@@ -91,7 +91,6 @@ struct _IMChooserSimple {
 	GtkWidget          *note;
 	GtkWidget          *note_label;
 	IMSettingsRequest  *imsettings;
-	IMSettingsRequest  *imsettings_info;
 	gchar              *initial_im;
 	gchar              *current_im;
 	gchar              *default_im;
@@ -275,7 +274,7 @@ im_chooser_simple_prefs_button_on_clicked(GtkButton *button,
 	gchar *cmdline = NULL;
 	GError *error = NULL;
 
-	info = imsettings_request_get_info_object(im->imsettings_info,
+	info = imsettings_request_get_info_object(im->imsettings,
 						  im->current_im,
 						  &error);
 	if (error) {
@@ -530,7 +529,7 @@ im_chooser_simple_action_loop(gpointer data)
 			    break;
 		    case ACTION_IM_UPDATE_PREFS:
 			    if (im->current_im)
-				    info = imsettings_request_get_info_object(im->imsettings_info,
+				    info = imsettings_request_get_info_object(im->imsettings,
 									      im->current_im,
 									      NULL);
 			    if (info)
@@ -649,7 +648,6 @@ im_chooser_simple_finalize(GObject *object)
 	IMChooserSimple *simple = IM_CHOOSER_SIMPLE (object);
 
 	g_object_unref(simple->imsettings);
-	g_object_unref(simple->imsettings_info);
 	g_free(simple->initial_im);
 	g_free(simple->current_im);
 	g_free(simple->default_im);
@@ -744,10 +742,8 @@ im_chooser_simple_instance_init(IMChooserSimple *im)
 
 	im->conn = dbus_bus_get(DBUS_BUS_SESSION, NULL);
 	im->imsettings = imsettings_request_new(im->conn, IMSETTINGS_INTERFACE_DBUS);
-	im->imsettings_info = imsettings_request_new(im->conn, IMSETTINGS_INFO_INTERFACE_DBUS);
 
 	imsettings_request_set_locale(im->imsettings, locale);
-	imsettings_request_set_locale(im->imsettings_info, locale);
 
 	/* get current im */
 	im->current_im = NULL;
@@ -767,10 +763,10 @@ _im_chooser_simple_update_im_list(IMChooserSimple *im)
 	gchar *running_im;
 	GError *error = NULL;
 	GPtrArray *array;
-	guint n_retry = 0, n_info_retry = 0;
+	guint n_retry = 0;
 
   retry:
-	if (imsettings_request_get_version(im->imsettings, NULL) != IMSETTINGS_SETTINGS_DAEMON_VERSION) {
+	if (imsettings_request_get_version(im->imsettings, NULL) != IMSETTINGS_SETTINGS_API_VERSION) {
 		if (n_retry > 0) {
 			g_set_error(&error, IMCHOOSER_GERROR, 0,
 				    _("Unable to communicate to IMSettings services"));
@@ -785,30 +781,14 @@ _im_chooser_simple_update_im_list(IMChooserSimple *im)
 		n_retry++;
 		goto retry;
 	}
-  info_retry:
-	if (imsettings_request_get_version(im->imsettings_info, NULL) != IMSETTINGS_IMINFO_DAEMON_VERSION) {
-		if (n_info_retry > 0) {
-			g_set_error(&error, IMCHOOSER_GERROR, 0,
-				    _("Unable to communicate to IMSettings services"));
-			im_chooser_simple_show_error(im, error, _("Version mismatch"));
-			g_clear_error(&error);
-			exit(1);
-		}
-		/* version is inconsistent. try to reload the process */
-		imsettings_request_reload(im->imsettings_info, TRUE);
-		/* XXX */
-		sleep(1);
-		n_info_retry++;
-		goto info_retry;
-	}
 
-	running_im = imsettings_request_what_im_is_running(im->imsettings, &error);
+	running_im = imsettings_request_whats_input_method_running(im->imsettings, &error);
 	if (error) {
 		im_chooser_simple_show_error(im, error, _("Unable to gather current status"));
 		g_error_free(error);
 		exit(1);
 	}
-	array = imsettings_request_get_info_objects(im->imsettings_info, &error);
+	array = imsettings_request_get_info_objects(im->imsettings, &error);
 	if (error) {
 		im_chooser_simple_show_error(im, error, _("Unable to get Input Method information"));
 		g_error_free(error);
