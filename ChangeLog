@@ -1,5 +1,7 @@
 2009-02-23  Akira TAGOH  <tagoh@redhat.com>
 
+	* configure.ac: bump to 1.2.6.
+
 	* src/xfce4-im-chooser.desktop.in: New.
 
 	* src/im-chooser-simple.c: Update for imsettings-0.106.0.
