@@ -23,7 +23,11 @@ im_chooser_SOURCES =						\
 	$(NULL)
 
 desktopdir = $(datadir)/applications
-desktop_in_files = im-chooser.desktop.in
+desktop_in_files =						\
+	im-chooser.desktop.in					\
+	xfce4-im-chooser.desktop.in				\
+	$(NULL)
+
 desktop_DATA = $(desktop_in_files:.desktop.in=.desktop)
 @INTLTOOL_DESKTOP_RULE@
 

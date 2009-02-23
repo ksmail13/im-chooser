@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Version=1.0
+Type=Application
+_Name=Input Method
+_Comment=Choose the input method to be used or disable the input method usage on the desktop
+Exec=im-chooser
+Icon=im-chooser
+Terminal=false
+StartupNotify=true
+Categories=X-XFCE;Settings;DesktopSettings;X-XfceSettingsDialog;
+OnlyShowIn: XFCE;
