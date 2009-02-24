@@ -1,0 +1,179 @@
+# translation of im-chooser.trunk.po to Maithili
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Sangeeta Kumari <sangeeta09@gmail.com>, 2009.
+msgid ""
+msgstr ""
+"Project-Id-Version: im-chooser.trunk\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2009-02-23 01:36+0000\n"
+"PO-Revision-Date: 2009-02-24 21:49+0530\n"
+"Last-Translator: Sangeeta Kumari <sangeeta09@gmail.com>\n"
+"Language-Team: Maithili <maithili.sf.net>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n\n"
+
+#: ../src/im-chooser-simple.c:125
+msgid "X applications"
+msgstr "X अनुप्रयोग"
+
+#: ../src/im-chooser-simple.c:126
+msgid "GTK+ applications"
+msgstr "GTK+ अनुप्रयोग"
+
+#: ../src/im-chooser-simple.c:127
+msgid "Qt applications"
+msgstr "Qt अनुप्रयोग"
+
+#: ../src/im-chooser-simple.c:179
+msgid "Updating Input Method list"
+msgstr "इनपुट विधि सूची अद्यतन कए रहल अछि"
+
+#: ../src/im-chooser-simple.c:282
+msgid "Unable to get the information"
+msgstr "सूचना पाबै मे असमर्थ"
+
+#: ../src/im-chooser-simple.c:359
+msgid "Failed to start Input Method"
+msgstr "इनपुट विधि आरंभ करबा मे विफल"
+
+#: ../src/im-chooser-simple.c:386
+msgid "Failed to stop Input Method"
+msgstr "इनपुट विधि रोकबा मे विफल"
+
+#: ../src/im-chooser-simple.c:491
+#, c-format
+msgid "Starting Input Method - %s"
+msgstr "इनपुट विधि आरंभ कए रहल अछि - %s"
+
+#: ../src/im-chooser-simple.c:508
+#, c-format
+msgid "Stopping Input Method - %s"
+msgstr "इनपुट विधि रोक रहल अछि - %s"
+
+#. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications and Qt applications</i></small>"
+#. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications and GTK+ applications</i></small>"
+#. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications and Qt applications</i></small>"
+#: ../src/im-chooser-simple.c:594 ../src/im-chooser-simple.c:597
+#: ../src/im-chooser-simple.c:600
+#, c-format
+msgid ", except %s and %s"
+msgstr ", खाली %s आओर %s"
+
+#. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications</i></small>"
+#. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications</i></small>"
+#. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except Qt applications</i></small>"
+#: ../src/im-chooser-simple.c:603 ../src/im-chooser-simple.c:606
+#: ../src/im-chooser-simple.c:609
+#, c-format
+msgid ", except %s"
+msgstr ", खाली %s"
+
+#. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications</i></small>"
+#: ../src/im-chooser-simple.c:614
+#, c-format
+msgid ""
+"<small><i>Note: this change will not take effect until you next log in%s</"
+"i></small>"
+msgstr ""
+"<small><i>नोट: ई बदलाव तखन तक प्रभावी नहि हाएत जखन तक अहाँ अगिला बेर %s मे लागिन नहि "
+"होइछ.</i></small>"
+
+#: ../src/im-chooser-simple.c:674
+msgid "Parent Window"
+msgstr "जनक विंडो"
+
+#: ../src/im-chooser-simple.c:675
+msgid "GtkWindow that points to the parent window"
+msgstr "GtkWindow जे जनक विंडो सँ इंगित करैत अछि"
+
+#: ../src/im-chooser-simple.c:680
+msgid "Note type"
+msgstr "नोट प्रकार"
+
+#: ../src/im-chooser-simple.c:681
+msgid "A enum value to determine which notes should be displayed"
+msgstr "ई निर्धारित करब क' लेल enum मान जे कओन सा नोट्स देखाओल जएनाइ चाही"
+
+#. setup a progress window
+#: ../src/im-chooser-simple.c:724
+msgid "Work in progress..."
+msgstr "कार्य प्रगति पर अछि..."
+
+#: ../src/im-chooser-simple.c:776 ../src/im-chooser-simple.c:792
+msgid "Unable to communicate to IMSettings services"
+msgstr "IMSettings सेवा मे संचार मे असमर्थ"
+
+#: ../src/im-chooser-simple.c:777 ../src/im-chooser-simple.c:793
+msgid "Version mismatch"
+msgstr "संस्करण बेमेल"
+
+#: ../src/im-chooser-simple.c:807
+msgid "Unable to gather current status"
+msgstr "मोजुदा स्थिति पाबै मे असमर्थ"
+
+#: ../src/im-chooser-simple.c:813
+msgid "Unable to get Input Method information"
+msgstr "इनपुट विधि सूचना पाबै मे असमर्थ"
+
+#: ../src/im-chooser-simple.c:860
+#, c-format
+msgid "Use %s"
+msgstr "%s प्रयोग करू"
+
+#: ../src/im-chooser-simple.c:863
+msgid " (legacy)"
+msgstr " (पुरातन)"
+
+#: ../src/im-chooser-simple.c:865
+msgid " (recommended)"
+msgstr " (अनुशंसित)"
+
+#: ../src/im-chooser-simple.c:980
+msgid "_Enable input method feature"
+msgstr "इनपुट विधि गुण सक्रिय करू (_E)"
+
+#: ../src/im-chooser-simple.c:988
+msgid "<b>Input Method</b>"
+msgstr "<b>इनपुट विधि</b>"
+
+#: ../src/im-chooser-simple.c:1021
+msgid "Input Method _Preferences..."
+msgstr "इनपुट विधि वरीयता (_P)..."
+
+#: ../src/im-chooser-simple.c:1048
+msgid "Show the status icon"
+msgstr "स्थिति प्रतीक देखाउ"
+
+#: ../src/main.c:53
+msgid "<span weight=\"bold\" size=\"larger\">No input method is available</span>"
+msgstr "<span weight=\"bold\" size=\"larger\">कोनो इनपुट विधि उपलब्ध नहि अछि</span>"
+
+#: ../src/main.c:56
+msgid "Please install any input methods before running if you like."
+msgstr "कृपया कोनो इनपुट विधि केँ जँ अहाँ चाहू तँ चलाबै क' पहिने संस्थापित करू "
+
+#: ../src/main.c:144
+msgid "IM Chooser - Input Method configuration tool"
+msgstr "IM चयनक - इनपुट विधि विन्यास अओजार"
+
+#: ../src/main.c:173
+msgid "Log Out"
+msgstr "लाग आउट"
+
+#: ../src/im-chooser.desktop.in.in.h:1
+msgid ""
+"Choose the input method to be used or disable the input method usage on the "
+"desktop"
+msgstr ""
+"इनपुट विधि केँ प्रयोग कएल जाएबाक लेल चुनू अथवा डेस्कटाप पर इनपुट विधि प्रयोग केँ निष्क्रिय "
+" करू"
+
+#: ../src/im-chooser.desktop.in.in.h:2
+msgid "Input Method"
+msgstr "इनपुट विधि"
+
