@@ -9,4 +9,4 @@ Icon=im-chooser
 Terminal=false
 StartupNotify=true
 Categories=X-XFCE;Settings;DesktopSettings;X-XfceSettingsDialog;
-OnlyShowIn: XFCE;
+OnlyShowIn=XFCE;

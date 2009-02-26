@@ -1,3 +1,7 @@
+2009-02-26  Akira TAGOH  <tagoh@redhat.com>
+
+	* src/xfce4-im-chooser.desktop.in: Fix a typo. (rhbz#487275)
+
 2009-02-23  Akira TAGOH  <tagoh@redhat.com>
 
 	* configure.ac: bump to 1.2.6.
