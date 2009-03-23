@@ -2,13 +2,13 @@
 # Copyright (C) 2006 Red Hat, Inc. All rights reserved.
 # This file is distributed under the same license as the im-chooser package.
 #
-# Ville-Pekka Vainio <vpivaini@cs.helsinki.fi>, 2006-2008.
+# Ville-Pekka Vainio <vpivaini@cs.helsinki.fi>, 2006-2009.
 msgid ""
 msgstr ""
 "Project-Id-Version: im-chooser 0.3.2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-02-23 23:38+0900\n"
-"PO-Revision-Date: 2008-08-31 01:17+0300\n"
+"PO-Revision-Date: 2009-03-23 13:02+0200\n"
 "Last-Translator: Ville-Pekka Vainio <vpivaini@cs.helsinki.fi>\n"
 "Language-Team: Finnish <laatu@lokalisointi.org>\n"
 "MIME-Version: 1.0\n"
@@ -84,24 +84,24 @@ msgstr ""
 
 #: ../src/im-chooser-simple.c:672
 msgid "Parent Window"
-msgstr ""
+msgstr "Pääikkuna"
 
 #: ../src/im-chooser-simple.c:673
 msgid "GtkWindow that points to the parent window"
-msgstr ""
+msgstr "GtkWindow, joka osoittaa pääikkunaan"
 
 #: ../src/im-chooser-simple.c:678
 msgid "Note type"
-msgstr ""
+msgstr "Huomautuksien tyyppi"
 
 #: ../src/im-chooser-simple.c:679
 msgid "A enum value to determine which notes should be displayed"
-msgstr ""
+msgstr "Enum-arvo, jonka perusteella päätellään mitä huomautuksia näytetään"
 
 #. setup a progress window
 #: ../src/im-chooser-simple.c:722
 msgid "Work in progress..."
-msgstr ""
+msgstr "Edistyminen..."
 
 #: ../src/im-chooser-simple.c:772
 #, c-format
@@ -147,7 +147,7 @@ msgstr "Syöttömenetelmien _asetukset..."
 
 #: ../src/im-chooser-simple.c:1028
 msgid "Show the status icon"
-msgstr ""
+msgstr "Näytä tilakuvake"
 
 #: ../src/main.c:53
 msgid ""
