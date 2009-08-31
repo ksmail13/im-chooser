@@ -8,9 +8,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: im-chooser 1.2.6\n"
-"Report-Msgid-Bugs-To:\n"
+"Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-02-23 23:38+0900\n"
-"PO-Revision-Date: 2009-08-08 13:06+0200\n"
+"PO-Revision-Date: 2009-08-31 12:53+0200\n"
 "Last-Translator: Kjartan Maraas <kmaraas@broadpark.no>\n"
 "Language-Team: Norwegian/Bokmaal <i18n-nb@lister.ping.uio.no>\n"
 "MIME-Version: 1.0\n"
@@ -98,7 +98,7 @@ msgstr "Type merknad"
 
 #: ../src/im-chooser-simple.c:679
 msgid "A enum value to determine which notes should be displayed"
-msgstr ""
+msgstr "En enumerert verdi som bestemmer hvilke notater som skal vises"
 
 #. setup a progress window
 #: ../src/im-chooser-simple.c:722
@@ -160,7 +160,7 @@ msgstr ""
 
 #: ../src/main.c:56
 msgid "Please install any input methods before running if you like."
-msgstr ""
+msgstr "Installer alle inndatametoder før kjøring hvis du vil."
 
 #: ../src/main.c:144
 msgid "IM Chooser - Input Method configuration tool"
