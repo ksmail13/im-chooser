@@ -1,17 +1,17 @@
-# translation of pa.po to Punjabi
+# translation of im-chooser.trunk.pa.po to Punjabi
 # Punjabi translations for im-chooser package.
 # Copyright (C) 2006 Red Hat, Inc. All rights reserved.
 # This file is distributed under the same license as the im-chooser package.
 #
 # Automatically generated, 2006.
-# Jaswinder Singh <jsingh@redhat.com>, 2006, 2008.
+# Jaswinder Singh <jsingh@redhat.com>, 2006, 2008, 2009.
 # A S Alam <aalam@users.sf.net>, 2007.
 msgid ""
 msgstr ""
-"Project-Id-Version: pa\n"
+"Project-Id-Version: im-chooser.trunk.pa\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-03-03 01:49+0000\n"
-"PO-Revision-Date: 2008-09-22 12:25+0530\n"
+"POT-Creation-Date: 2009-02-23 23:38+0900\n"
+"PO-Revision-Date: 2009-09-07 15:36+0530\n"
 "Last-Translator: Jaswinder Singh <jsingh@redhat.com>\n"
 "Language-Team: Punjabi <Punjabi-users@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -35,7 +35,7 @@ msgstr "Qt ਐਪਲੀਕੇਸ਼ਨਾਂ"
 
 #: ../src/im-chooser-simple.c:178
 msgid "Updating Input Method list"
-msgstr "ਇੰਪੁੱਟ ਢੰਗ ਸੂਚੀ ਅੱਪਡੇਟ ਕਰ ਰਿਹਾ ਹੈ"
+msgstr "ਇੰਪੁੱਟ ਢੰਗ ਸੂਚੀ ਅੱਪਡੇਟ ਹੋ ਰਹੀ ਹੈ"
 
 #: ../src/im-chooser-simple.c:281
 msgid "Unable to get the information"
@@ -83,8 +83,7 @@ msgstr ", %s ਤੋਂ ਬਿਨਾਂ"
 msgid ""
 "<small><i>Note: this change will not take effect until you next log in%s</"
 "i></small>"
-msgstr ""
-"<small><i>ਸੂਚਨਾ: ਇਹ ਤਬਦੀਲੀ ਤੁਹਾਡੇ ਮੁੜ ਲਾਗਇਨ ਹੋਣ ਤੱਕ ਲਾਗੂ ਨਹੀਂ ਹੋਵੇਗੀ%s</i></small>"
+msgstr "<small><i>ਸੂਚਨਾ: ਇਹ ਤਬਦੀਲੀ ਤੁਹਾਡੇ ਮੁੜ ਲਾਗਇਨ ਹੋਣ ਤੱਕ ਲਾਗੂ ਨਹੀਂ ਹੋਵੇਗੀ%s</i></small>"
 
 #: ../src/im-chooser-simple.c:672
 msgid "Parent Window"
@@ -100,7 +99,7 @@ msgstr "ਸੂਚਨਾ ਕਿਸਮ"
 
 #: ../src/im-chooser-simple.c:679
 msgid "A enum value to determine which notes should be displayed"
-msgstr "ਇੱਕ enum ਮੁੱਲ ਜਿਸ ਤੋਂ ਪਤਾ ਚੱਲਦਾ ਹੈ ਕਿ ਕਿਹੜੀ ਸੂਚਨਾ ਵਿਖਾਉਣੀ ਚਾਹੀਦੀ ਹੈ"
+msgstr "ਇੱਕ enum ਮੁੱਲ ਜਿਸ ਤੋਂ ਪਤਾ ਚੱਲਦਾ ਹੈ ਕਿ ਕਿਹੜੀ ਸੂਚਨਾ ਵੇਖਾਉਣੀ ਚਾਹੀਦੀ ਹੈ"
 
 #. setup a progress window
 #: ../src/im-chooser-simple.c:722
@@ -108,6 +107,7 @@ msgid "Work in progress..."
 msgstr "ਕੰਮ ਚੱਲ ਰਿਹਾ ਹੈ..."
 
 #: ../src/im-chooser-simple.c:772
+#, c-format
 msgid "Unable to communicate to IMSettings services"
 msgstr "IMSettings ਸਰਵਿਸਾਂ ਨਾਲ ਸੰਪਰਕ ਕਰਨ ਵਿੱਚ ਅਸਮਰਥ"
 
@@ -138,7 +138,7 @@ msgstr " (ਸਿਫਰਾਸ਼-ਕੀਤਾ)"
 
 #: ../src/im-chooser-simple.c:960
 msgid "_Enable input method feature"
-msgstr "ਇੰਪੁੱਟ ਢੰਗ ਵਿਸ਼ੇਸ਼ਤਾ ਯੋਗ ਕਰੋ(_E)"
+msgstr "ਇੰਪੁੱਟ ਢੰਗ ਵਿਸ਼ੇਸ਼ਤਾ ਯੋਗ(_E)"
 
 #: ../src/im-chooser-simple.c:968
 msgid "<b>Input Method</b>"
@@ -146,28 +146,27 @@ msgstr "<b>ਇੰਪੁੱਟ ਢੰਗ</b>"
 
 #: ../src/im-chooser-simple.c:1001
 msgid "Input Method _Preferences..."
-msgstr "ਇੰਪੁੱਟ ਢੰਗ ਪਸੰਦ(_P)..."
+msgstr "ਇੰਪੁੱਟ ਢੰਗ ਪਟੂਲ(_P)..."
 
 #: ../src/im-chooser-simple.c:1028
 msgid "Show the status icon"
 msgstr "ਹਾਲਤ ਆਈਕਾਨ ਵੇਖਾਓ"
 
 #: ../src/main.c:53
-msgid ""
-"<span weight=\"bold\" size=\"larger\">No input method is available</span>"
+msgid "<span weight=\"bold\" size=\"larger\">No input method is available</span>"
 msgstr "<span weight=\"bold\" size=\"larger\">ਕੋਈ ਇੱਪੁੱਟ ਢੰਗ ਉਪਲੱਬਧ ਨਹੀਂ ਹੈ</span>"
 
 #: ../src/main.c:56
 msgid "Please install any input methods before running if you like."
-msgstr "ਜੋ ਤੁਸੀਂ ਚਾਹੁੰਦੇ ਹੋ ਤਾਂ ਚਲਾਉਣ ਤੋਂ ਪਹਿਲਾਂ ਕੋਈ ਵੀ ਇੱਪੁੱਟ ਢੰਗ ਇੰਸਟਾਲ ਕਰੋ।"
+msgstr "ਜੇ ਤੁਸੀਂ ਚਾਹੁੰਦੇ ਹੋ ਤਾਂ ਚਲਾਉਣ ਤੋਂ ਪਹਿਲਾਂ ਕੋਈ ਵੀ ਇੱਪੁੱਟ ਢੰਗ ਇੰਸਟਾਲ ਕਰੋ।"
 
 #: ../src/main.c:144
 msgid "IM Chooser - Input Method configuration tool"
-msgstr "IM ਚੋਣਕਾਰ - ਇੰਪੁੱਟ ਢੰਗ ਸੰਰਚਨਾ ਸੰਦ"
+msgstr "IM ਚੋਣਕਾਰ - ਇੰਪੁੱਟ ਢੰਗ ਸੰਰਚਨਾ ਟੂਲ"
 
 #: ../src/main.c:173
 msgid "Log Out"
-msgstr "ਲਾਗ ਆਉਟ"
+msgstr "ਲਾਗ ਆਊਟ"
 
 #: ../src/im-chooser.desktop.in.in.h:1 ../src/xfce4-im-chooser.desktop.in.h:1
 msgid ""
@@ -178,3 +177,4 @@ msgstr "ਵਰਤਣ ਲਈ ਇੰਪੁੱਟ ਢੰਗ ਚੁਣੋ ਜਾਂ 
 #: ../src/im-chooser.desktop.in.in.h:2 ../src/xfce4-im-chooser.desktop.in.h:2
 msgid "Input Method"
 msgstr "ਇੰਪੁੱਟ ਢੰਗ1"
+
