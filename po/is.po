@@ -157,7 +157,8 @@ msgid "Show the status icon"
 msgstr "Sýna stöðutákn"
 
 #: ../src/main.c:53
-msgid "<span weight=\"bold\" size=\"larger\">No input method is available</span>"
+msgid ""
+"<span weight=\"bold\" size=\"larger\">No input method is available</span>"
 msgstr ""
 
 #: ../src/main.c:56
@@ -181,4 +182,3 @@ msgstr ""
 #: ../src/im-chooser.desktop.in.in.h:2 ../src/xfce4-im-chooser.desktop.in.h:2
 msgid "Input Method"
 msgstr "Innsetningaraðferð"
-

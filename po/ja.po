@@ -84,7 +84,8 @@ msgstr "%s を除いて、"
 msgid ""
 "<small><i>Note: this change will not take effect until you next log in%s</"
 "i></small>"
-msgstr "<small><i>注記: %sこの変更は次回ログインするまで反映されません。</i></small>"
+msgstr ""
+"<small><i>注記: %sこの変更は次回ログインするまで反映されません。</i></small>"
 
 #: ../src/im-chooser-simple.c:672
 msgid "Parent Window"
@@ -154,7 +155,8 @@ msgid "Show the status icon"
 msgstr "ステータスアイコンを表示する"
 
 #: ../src/main.c:53
-msgid "<span weight=\"bold\" size=\"larger\">No input method is available</span>"
+msgid ""
+"<span weight=\"bold\" size=\"larger\">No input method is available</span>"
 msgstr ""
 "<span weight=\"bold\" size=\"larger\">使用できる入力メソッドがありません</"
 "span>"
@@ -182,4 +184,3 @@ msgstr ""
 #: ../src/im-chooser.desktop.in.in.h:2 ../src/xfce4-im-chooser.desktop.in.h:2
 msgid "Input Method"
 msgstr "入力メソッド"
-
