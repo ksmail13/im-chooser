@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: Desktop Input Method configuration tool\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-02-23 23:38+0900\n"
-"PO-Revision-Date: 2009-09-18 13:47+0200\n"
+"PO-Revision-Date: 2009-09-18 13:50+0200\n"
 "Last-Translator: Marcus Nitzschke <kenda@fedoraproject.org>\n"
 "Language-Team: German Translation team <fedora-trans-de@redhat.com>\n"
 "MIME-Version: 1.0\n"
@@ -69,7 +69,7 @@ msgstr "Stoppe Eingabemethode - %s"
 #: ../src/im-chooser-simple.c:599
 #, c-format
 msgid ", except %s and %s"
-msgstr ", außer %s und %s"
+msgstr ", ausgenommen %s und %s"
 
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications</i></small>"
@@ -79,7 +79,7 @@ msgstr ", außer %s und %s"
 #: ../src/im-chooser-simple.c:608
 #, c-format
 msgid ", except %s"
-msgstr ", außer %s"
+msgstr ", ausgenommen %s"
 
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications</i></small>"
 #: ../src/im-chooser-simple.c:613
