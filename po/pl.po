@@ -6,9 +6,9 @@ msgstr ""
 "Project-Id-Version: pl\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-02-23 23:38+0900\n"
-"PO-Revision-Date: 2008-09-18 21:26+0200\n"
+"PO-Revision-Date: 2008-09-22 18:10+0200\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
-"Language-Team: Polish <pl@li.org>\n"
+"Language-Team: Polish <fedora-trans-pl@redhat.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -27,7 +27,7 @@ msgstr "aplikacji Qt"
 
 #: ../src/im-chooser-simple.c:178
 msgid "Updating Input Method list"
-msgstr "Aktualizowanie listy metod wejścia"
+msgstr "Aktualizowanie listy metod wprowadzania"
 
 #: ../src/im-chooser-simple.c:281
 msgid "Unable to get the information"
@@ -35,21 +35,21 @@ msgstr "Nie można uzyskać informacji"
 
 #: ../src/im-chooser-simple.c:358
 msgid "Failed to start Input Method"
-msgstr "Uruchomienie metody wejścia nie powiodło się"
+msgstr "Uruchomienie metody wprowadzania nie powiodło się"
 
 #: ../src/im-chooser-simple.c:385
 msgid "Failed to stop Input Method"
-msgstr "Zatrzymanie metody wejścia nie powiodło się"
+msgstr "Zatrzymanie metody wprowadzania nie powiodło się"
 
 #: ../src/im-chooser-simple.c:490
 #, c-format
 msgid "Starting Input Method - %s"
-msgstr "Uruchomienie metody wejścia - %s"
+msgstr "Uruchomienie metody wprowadzania - %s"
 
 #: ../src/im-chooser-simple.c:507
 #, c-format
 msgid "Stopping Input Method - %s"
-msgstr "Zatrzymywanie metody wejścia - %s"
+msgstr "Zatrzymywanie metody wprowadzania - %s"
 
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications and Qt applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications and GTK+ applications</i></small>"
@@ -98,7 +98,7 @@ msgstr "Wartość enum określająca, które uwagi powinny być wyświetlane"
 #. setup a progress window
 #: ../src/im-chooser-simple.c:722
 msgid "Work in progress..."
-msgstr "Trwa praca..."
+msgstr "Praca w toku..."
 
 #: ../src/im-chooser-simple.c:772
 #, c-format
@@ -115,7 +115,7 @@ msgstr "Nie można uzyskać obecnego stanu"
 
 #: ../src/im-chooser-simple.c:793
 msgid "Unable to get Input Method information"
-msgstr "Nie można uzyskać informacji o metodzie wejścia"
+msgstr "Nie można uzyskać informacji o metodzie wprowadzania"
 
 #: ../src/im-chooser-simple.c:840
 #, c-format
@@ -132,15 +132,15 @@ msgstr " (zalecana)"
 
 #: ../src/im-chooser-simple.c:960
 msgid "_Enable input method feature"
-msgstr "Włącz m_etodę wejścia"
+msgstr "Włącz m_etodę wprowadzania"
 
 #: ../src/im-chooser-simple.c:968
 msgid "<b>Input Method</b>"
-msgstr "<b>Metoda wejścia</b>"
+msgstr "<b>Metoda wprowadzania</b>"
 
 #: ../src/im-chooser-simple.c:1001
 msgid "Input Method _Preferences..."
-msgstr "_Preferencje metody wejścia..."
+msgstr "_Preferencje metody wprowadzania..."
 
 #: ../src/im-chooser-simple.c:1028
 msgid "Show the status icon"
@@ -150,15 +150,16 @@ msgstr "Wyświetlaj ikonę stanu"
 msgid ""
 "<span weight=\"bold\" size=\"larger\">No input method is available</span>"
 msgstr ""
-"<span weight=\"bold\" size=\"larger\">Brak dostępnych metod wejścia</span>"
+"<span weight=\"bold\" size=\"larger\">Brak dostępnych metod wprowadzania</"
+"span>"
 
 #: ../src/main.c:56
 msgid "Please install any input methods before running if you like."
-msgstr "Zainstaluj metodę wejścia przed uruchomieniem."
+msgstr "Proszę zainstalować metodę wprowadzania przed uruchomieniem."
 
 #: ../src/main.c:144
 msgid "IM Chooser - Input Method configuration tool"
-msgstr "Wybór metody wejścia - narzędzie konfiguracji metody wejścia"
+msgstr "Wybór metody wprowadzania - narzędzie konfiguracji metody wprowadzania"
 
 #: ../src/main.c:173
 msgid "Log Out"
@@ -168,8 +169,8 @@ msgstr "Wyloguj"
 msgid ""
 "Choose the input method to be used or disable the input method usage on the "
 "desktop"
-msgstr "Wybieranie metody wejścia lub wyłączanie jej w środowisku graficznym"
+msgstr "Wybór metody wprowadzania lub wyłączanie jej w środowisku graficznym"
 
 #: ../src/im-chooser.desktop.in.in.h:2 ../src/xfce4-im-chooser.desktop.in.h:2
 msgid "Input Method"
-msgstr "Metoda wejścia"
+msgstr "Metoda wprowadzania"
