@@ -1,3 +1,4 @@
+# translation of ru.po to Russian
 # translation of im-chooser.trunk.ru.po to
 # translation of ru.po to
 # translation of ru.po to
@@ -8,15 +9,15 @@
 #
 # Automatically generated, 2006.
 # Yulia Poyarkova <ypoyarko@redhat.com>, 2006.
-# Yulia Poyarkova <yulia.poyarkova@redhat.com>, 2008.
+# Yulia Poyarkova <yulia.poyarkova@redhat.com>, 2008, 2009.
 msgid ""
 msgstr ""
-"Project-Id-Version: im-chooser.trunk.ru\n"
+"Project-Id-Version: ru\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-02-23 23:38+0900\n"
-"PO-Revision-Date: 2008-09-30 14:16+1000\n"
+"PO-Revision-Date: 2009-09-22 11:39+1000\n"
 "Last-Translator: Yulia Poyarkova <yulia.poyarkova@redhat.com>\n"
-"Language-Team: \n"
+"Language-Team: Russian <fedora-trans-ru@redhat.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -24,15 +25,15 @@ msgstr ""
 
 #: ../src/im-chooser-simple.c:124
 msgid "X applications"
-msgstr "Приложения X"
+msgstr "приложений X"
 
 #: ../src/im-chooser-simple.c:125
 msgid "GTK+ applications"
-msgstr "Приложения GTK+ "
+msgstr "приложений GTK+ "
 
 #: ../src/im-chooser-simple.c:126
 msgid "Qt applications"
-msgstr "Приложения Qt"
+msgstr "приложений Qt"
 
 #: ../src/im-chooser-simple.c:178
 msgid "Updating Input Method list"
@@ -84,9 +85,7 @@ msgstr " за исключением %s"
 msgid ""
 "<small><i>Note: this change will not take effect until you next log in%s</"
 "i></small>"
-msgstr ""
-"<small><i>Замечание: Это изменение не вступит в силу до следующего входа в %"
-"s.</i></small>"
+msgstr "<small><i>Замечание: Это изменение не вступит в силу до следующего входа %s</i></small>"
 
 #: ../src/im-chooser-simple.c:672
 msgid "Parent Window"
@@ -141,7 +140,7 @@ msgstr " (рекомендуется)"
 
 #: ../src/im-chooser-simple.c:960
 msgid "_Enable input method feature"
-msgstr "_Включить возможность метода ввода"
+msgstr "_Включить выбор метода ввода"
 
 #: ../src/im-chooser-simple.c:968
 msgid "<b>Input Method</b>"
@@ -156,10 +155,8 @@ msgid "Show the status icon"
 msgstr "Показать значок статуса"
 
 #: ../src/main.c:53
-msgid ""
-"<span weight=\"bold\" size=\"larger\">No input method is available</span>"
-msgstr ""
-"<span weight=\"bold\" size=\"larger\">Нет доступных методов ввода</span>"
+msgid "<span weight=\"bold\" size=\"larger\">No input method is available</span>"
+msgstr "<span weight=\"bold\" size=\"larger\">Нет доступных методов ввода</span>"
 
 #: ../src/main.c:56
 msgid "Please install any input methods before running if you like."
@@ -182,3 +179,4 @@ msgstr "Выберите метод ввода или отключите исп�
 #: ../src/im-chooser.desktop.in.in.h:2 ../src/xfce4-im-chooser.desktop.in.h:2
 msgid "Input Method"
 msgstr "Метод ввода"
+
