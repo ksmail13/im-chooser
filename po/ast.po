@@ -1,0 +1,188 @@
+# translation of im-chooser.trunk.ast.po to Asturian
+# Asturian translations for im-chooser package.
+# Copyright (C) 2006 Red Hat, Inc. All rights reserved.
+# This file is distributed under the same license as the im-chooser package.
+#
+# Automatically generated, 2006.
+# Astur <malditoastur@gmail.com>, 2009.
+msgid ""
+msgstr ""
+"Project-Id-Version: im-chooser.trunk.ast\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2009-02-23 23:38+0900\n"
+"PO-Revision-Date: 2009-06-19 13:28-0400\n"
+"Last-Translator: astur <malditoastur@gmail.com>\n"
+"Language-Team: Asturian <alministradores@softastur.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: KBabel 1.11.4\n"
+"X-Poedit-Language: Asturian\n"
+
+#: ../src/im-chooser-simple.c:124
+msgid "X applications"
+msgstr "Aplicaciones X"
+
+#: ../src/im-chooser-simple.c:125
+msgid "GTK+ applications"
+msgstr "Aplicaciones GTK+"
+
+#: ../src/im-chooser-simple.c:126
+msgid "Qt applications"
+msgstr "Aplicaciones Qt"
+
+#: ../src/im-chooser-simple.c:178
+msgid "Updating Input Method list"
+msgstr "Anovando la llista de Métodos d'Entrada"
+
+#: ../src/im-chooser-simple.c:281
+msgid "Unable to get the information"
+msgstr "Imposible obtener la información"
+
+#: ../src/im-chooser-simple.c:358
+msgid "Failed to start Input Method"
+msgstr "Falló al aniciar el Métodu d'Entrada"
+
+#: ../src/im-chooser-simple.c:385
+msgid "Failed to stop Input Method"
+msgstr "Falló al detener el Métodu d'Entrada"
+
+#: ../src/im-chooser-simple.c:490
+#, c-format
+msgid "Starting Input Method - %s"
+msgstr "Aniciando Métodu d'Entrada - %s"
+
+#: ../src/im-chooser-simple.c:507
+#, c-format
+msgid "Stopping Input Method - %s"
+msgstr "Deteniendo'l Métodu d'Entrada - %s"
+
+#. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications and Qt applications</i></small>"
+#. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications and GTK+ applications</i></small>"
+#. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications and Qt applications</i></small>"
+#: ../src/im-chooser-simple.c:593 ../src/im-chooser-simple.c:596
+#: ../src/im-chooser-simple.c:599
+#, c-format
+msgid ", except %s and %s"
+msgstr ", esceutu %s y %s"
+
+#. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications</i></small>"
+#. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications</i></small>"
+#. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except Qt applications</i></small>"
+#: ../src/im-chooser-simple.c:602 ../src/im-chooser-simple.c:605
+#: ../src/im-chooser-simple.c:608
+#, c-format
+msgid ", except %s"
+msgstr ", esceutu %s"
+
+#. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications</i></small>"
+#: ../src/im-chooser-simple.c:613
+#, c-format
+msgid ""
+"<small><i>Note: this change will not take effect until you next log in%s</"
+"i></small>"
+msgstr ""
+"<small><i>Nota: esti cambéu nun fadrá efeutu fasta la siguiente vegada "
+"qu'entres a la sesión en %s</i></small>"
+
+#: ../src/im-chooser-simple.c:672
+msgid "Parent Window"
+msgstr "Ventana Padre"
+
+#: ../src/im-chooser-simple.c:673
+msgid "GtkWindow that points to the parent window"
+msgstr "Ventana GtkWindow qu'apunta a la ventana padre"
+
+#: ../src/im-chooser-simple.c:678
+msgid "Note type"
+msgstr "Triba de Nota"
+
+#: ../src/im-chooser-simple.c:679
+msgid "A enum value to determine which notes should be displayed"
+msgstr "Un valor enum pa determinar qué notes tienen d'amosase"
+
+#. setup a progress window
+#: ../src/im-chooser-simple.c:722
+msgid "Work in progress..."
+msgstr "Trabayu en cursu..."
+
+#: ../src/im-chooser-simple.c:772
+#, c-format
+msgid "Unable to communicate to IMSettings services"
+msgstr "Imposible comunicase colos servicios IMSettings"
+
+#: ../src/im-chooser-simple.c:773
+msgid "Version mismatch"
+msgstr "Fallu de versión"
+
+#: ../src/im-chooser-simple.c:787
+msgid "Unable to gather current status"
+msgstr "Imposible obtener estáu actual"
+
+#: ../src/im-chooser-simple.c:793
+msgid "Unable to get Input Method information"
+msgstr "Imposible obtener información del Métodu d'Entrada"
+
+#: ../src/im-chooser-simple.c:840
+#, c-format
+msgid "Use %s"
+msgstr "Usa %s"
+
+#: ../src/im-chooser-simple.c:843
+msgid " (legacy)"
+msgstr " (llegáu)"
+
+#: ../src/im-chooser-simple.c:845
+msgid " (recommended)"
+msgstr " (encamentáu)"
+
+#: ../src/im-chooser-simple.c:960
+msgid "_Enable input method feature"
+msgstr "_Habilitar la carauterística de métodu d'entrada"
+
+#: ../src/im-chooser-simple.c:968
+msgid "<b>Input Method</b>"
+msgstr "<b>Métodu d'Entrada</b>"
+
+#: ../src/im-chooser-simple.c:1001
+msgid "Input Method _Preferences..."
+msgstr "_Preferencies del Métodu d'Entrada..."
+
+#: ../src/im-chooser-simple.c:1028
+msgid "Show the status icon"
+msgstr "Amosar l'iconu d'estáu"
+
+#: ../src/main.c:53
+msgid ""
+"<span weight=\"bold\" size=\"larger\">No input method is available</span>"
+msgstr ""
+"<span weight=\"bold\" size=\"larger\">Nun hai disponible dengún métodu "
+"d'entrada</span>"
+
+#: ../src/main.c:56
+msgid "Please install any input methods before running if you like."
+msgstr ""
+"Por favor, instale cualesquier métodu d'entrada enantes d'executalu, si lo "
+"deseya."
+
+#: ../src/main.c:144
+msgid "IM Chooser - Input Method configuration tool"
+msgstr "Seleutor del ME - Ferramienta pa configuración del Métodu d'Entrada"
+
+#: ../src/main.c:173
+msgid "Log Out"
+msgstr "Colar"
+
+#: ../src/im-chooser.desktop.in.in.h:1 ../src/xfce4-im-chooser.desktop.in.h:1
+msgid ""
+"Choose the input method to be used or disable the input method usage on the "
+"desktop"
+msgstr ""
+"Esbilla'l métodu d'entrada a usar o desactiva los métodos d'entrada "
+"nel escritoriu."
+
+#: ../src/im-chooser.desktop.in.in.h:2 ../src/xfce4-im-chooser.desktop.in.h:2
+msgid "Input Method"
+msgstr "Métodu d'Entrada"
+
