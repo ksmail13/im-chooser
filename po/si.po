@@ -43,26 +43,8 @@ msgstr ""
 msgid "Unable to communicate to IMSettings services"
 msgstr ""
 
-#: ../src/im-chooser-simple.c:787
-msgid "Unable to gather current status"
-msgstr ""
-
-#: ../src/im-chooser-simple.c:793
-#, fuzzy
-msgid "Unable to get Input Method information"
-msgstr "අක්‍ෂර ඇතුලත් කිරීමේ ක්‍රමය"
-
-#: ../src/im-chooser-simple.c:840
-#, c-format
-msgid "Use %s"
-msgstr ""
-
 #: ../src/im-chooser-simple.c:843
 msgid " (legacy)"
-msgstr ""
-
-#: ../src/im-chooser-simple.c:845
-msgid " (recommended)"
 msgstr ""
 
 #: ../src/im-chooser-simple.c:960
@@ -73,36 +55,13 @@ msgstr ""
 msgid "<b>Input Method</b>"
 msgstr "<b>අක්‍ෂර ඇතුල්කරන ආකාරය</b>"
 
-#: ../src/im-chooser-simple.c:1001
-#, fuzzy
-msgid "Input Method _Preferences..."
-msgstr "අක්‍ෂර ඇතුලත් කිරීමේ ක්‍රමය"
-
-#: ../src/im-chooser-simple.c:1028
-msgid "Show the status icon"
-msgstr ""
-
 #: ../src/main.c:53
 msgid "<span weight=\"bold\" size=\"larger\">No input method is available</span>"
-msgstr ""
-
-#: ../src/main.c:56
-msgid "Please install any input methods before running if you like."
 msgstr ""
 
 #: ../src/main.c:144
 msgid "IM Chooser - Input Method configuration tool"
 msgstr "අක්‍ෂර ඇතුලත් කිරීමේ තේරීම් කාරක (IM Chooser) - අක්‍ෂර ඇතුලත් කරනය මානකරන උපකරණය"
-
-#: ../src/main.c:173
-#, fuzzy
-msgid "Log Out"
-msgstr "පිටව යනු(_L)"
-
-#: ../src/im-chooser.desktop.in.in.h:1 ../src/xfce4-im-chooser.desktop.in.h:1
-#, fuzzy
-msgid "Choose the input method to be used or disable the input method usage on the desktop"
-msgstr "පද්ධතිය තුල හෝ ඩෙස්ක්ටොප් එක මත භාවිත කල යුතු අක්‍ෂර ඇතුලත් කිරීමේ ක්‍රමය තෝරාගැනීම සඳහා වන මානකරන උපකරණය.ා"
 
 #: ../src/im-chooser.desktop.in.in.h:2 ../src/xfce4-im-chooser.desktop.in.h:2
 msgid "Input Method"
@@ -184,6 +143,43 @@ msgstr "සටහන් වර්ගය"
 #: ../src/im-chooser-simple.c:722
 msgid "Work in progress..."
 msgstr "ක්‍රියාත්මක වෙමින්..."
+
+#: ../src/im-chooser-simple.c:787
+msgid "Unable to gather current status"
+msgstr "දැනට තත්ත්වය ලබාගත නොහැක"
+
+#: ../src/im-chooser-simple.c:840
+#, c-format
+msgid "Use %s"
+msgstr "%s භාවිත කරන්න"
+
+#: ../src/im-chooser-simple.c:793
+msgid "Unable to get Input Method information"
+msgstr "අක්‍ෂර ඇතුලත් කිරීමේ තොරතුරු ලබාගත නොහැක"
+
+#: ../src/im-chooser-simple.c:845
+msgid " (recommended)"
+msgstr "(අනුමත කළ)"
+
+#: ../src/im-chooser.desktop.in.in.h:1 ../src/xfce4-im-chooser.desktop.in.h:1
+msgid "Choose the input method to be used or disable the input method usage on the desktop"
+msgstr "වැඩතලය මත භාවිත කල යුතු අක්‍ෂර ඇතුලත් කිරීමේ ක්‍රමය තෝරාගැනීම හෝ අක්‍රීය කිරීම"
+
+#: ../src/im-chooser-simple.c:1028
+msgid "Show the status icon"
+msgstr "තත්ත්ව අයිකනය පෙන්වන්න"
+
+#: ../src/im-chooser-simple.c:1001
+msgid "Input Method _Preferences..."
+msgstr "අක්‍ෂර ඇතුලත් කිරීමේ ක්‍රම (_P)"
+
+#: ../src/main.c:56
+msgid "Please install any input methods before running if you like."
+msgstr ""
+
+#: ../src/main.c:173
+msgid "Log Out"
+msgstr "ඉවත් වන්න"
 
 #~ msgid "No valid IM installed"
 #~ msgstr "වලංගු නැති අක්‍ෂර ඇතුල්කරන ආකාරයක් ස්ථාපනය කර ඇත"
