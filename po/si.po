@@ -2,7 +2,7 @@
 # Sinhalese translations for im-chooser package.
 # Copyright (C) 2006 Red Hat, Inc. All rights reserved.
 # This file is distributed under the same license as the im-chooser package.
-#
+# 
 # Automatically generated, 2006.
 # Tyronne Wickramarathne <tywickra@redhat.com>, 2006.
 msgid ""
@@ -18,102 +18,29 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.11.4\n"
 
-#: ../src/im-chooser-simple.c:124
-msgid "X applications"
-msgstr ""
-
-#: ../src/im-chooser-simple.c:125
-msgid "GTK+ applications"
-msgstr ""
-
-#: ../src/im-chooser-simple.c:126
-msgid "Qt applications"
-msgstr ""
-
-#: ../src/im-chooser-simple.c:178
-#, fuzzy
-msgid "Updating Input Method list"
-msgstr "අක්‍ෂර ඇතුලත් කිරීමේ ක්‍රමය"
-
-#: ../src/im-chooser-simple.c:281
-msgid "Unable to get the information"
-msgstr ""
-
-#: ../src/im-chooser-simple.c:358
-#, fuzzy
-msgid "Failed to start Input Method"
-msgstr "අක්‍ෂර ඇතුලත් කිරීමෙ ක්‍රමයන් භාවිත නොකරන්න(_N)"
-
-#: ../src/im-chooser-simple.c:385
-#, fuzzy
-msgid "Failed to stop Input Method"
-msgstr "අක්‍ෂර ඇතුලත් කිරීමෙ ක්‍රමයන් භාවිත නොකරන්න(_N)"
-
-#: ../src/im-chooser-simple.c:490
-#, fuzzy, c-format
-msgid "Starting Input Method - %s"
-msgstr "අක්‍ෂර ඇතුලත් කිරීමේ ක්‍රමය"
-
-#: ../src/im-chooser-simple.c:507
-#, fuzzy, c-format
-msgid "Stopping Input Method - %s"
-msgstr "අක්‍ෂර ඇතුලත් කිරීමේ ක්‍රමය"
-
-#. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications and Qt applications</i></small>"
-#. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications and GTK+ applications</i></small>"
-#. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications and Qt applications</i></small>"
-#: ../src/im-chooser-simple.c:593 ../src/im-chooser-simple.c:596
-#: ../src/im-chooser-simple.c:599
-#, c-format
-msgid ", except %s and %s"
-msgstr ""
-
-#. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications</i></small>"
-#. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications</i></small>"
-#. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except Qt applications</i></small>"
+#. This will be displayed like "<small><i>Note: this change will not take
+#. effect until you next log in, except X applications</i></small>"
+#. This will be displayed like "<small><i>Note: this change will not take
+#. effect until you next log in, except GTK+ applications</i></small>"
+#. This will be displayed like "<small><i>Note: this change will not take
+#. effect until you next log in, except Qt applications</i></small>"
 #: ../src/im-chooser-simple.c:602 ../src/im-chooser-simple.c:605
 #: ../src/im-chooser-simple.c:608
 #, c-format
 msgid ", except %s"
 msgstr ""
 
-#. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications</i></small>"
-#: ../src/im-chooser-simple.c:613
-#, fuzzy, c-format
-msgid ""
-"<small><i>Note: this change will not take effect until you next log in%s</"
-"i></small>"
-msgstr ""
-"<small><i>ඔබ පද්ධතියට නැවත පිවිසෙන තුරු සිදුකරන ලද වෙනස්කම් බලපවත් වන්නේ නැත</i></small>"
-
-#: ../src/im-chooser-simple.c:672
-msgid "Parent Window"
-msgstr ""
-
 #: ../src/im-chooser-simple.c:673
 msgid "GtkWindow that points to the parent window"
-msgstr ""
-
-#: ../src/im-chooser-simple.c:678
-msgid "Note type"
 msgstr ""
 
 #: ../src/im-chooser-simple.c:679
 msgid "A enum value to determine which notes should be displayed"
 msgstr ""
 
-#. setup a progress window
-#: ../src/im-chooser-simple.c:722
-msgid "Work in progress..."
-msgstr ""
-
 #: ../src/im-chooser-simple.c:772
 #, c-format
 msgid "Unable to communicate to IMSettings services"
-msgstr ""
-
-#: ../src/im-chooser-simple.c:773
-msgid "Version mismatch"
 msgstr ""
 
 #: ../src/im-chooser-simple.c:787
@@ -156,8 +83,7 @@ msgid "Show the status icon"
 msgstr ""
 
 #: ../src/main.c:53
-msgid ""
-"<span weight=\"bold\" size=\"larger\">No input method is available</span>"
+msgid "<span weight=\"bold\" size=\"larger\">No input method is available</span>"
 msgstr ""
 
 #: ../src/main.c:56
@@ -175,55 +101,110 @@ msgstr "පිටව යනු(_L)"
 
 #: ../src/im-chooser.desktop.in.in.h:1 ../src/xfce4-im-chooser.desktop.in.h:1
 #, fuzzy
-msgid ""
-"Choose the input method to be used or disable the input method usage on the "
-"desktop"
-msgstr ""
-"පද්ධතිය තුල හෝ ඩෙස්ක්ටොප් එක මත භාවිත කල යුතු අක්‍ෂර ඇතුලත් කිරීමේ ක්‍රමය තෝරාගැනීම සඳහා වන "
-"මානකරන උපකරණය.ා"
+msgid "Choose the input method to be used or disable the input method usage on the desktop"
+msgstr "පද්ධතිය තුල හෝ ඩෙස්ක්ටොප් එක මත භාවිත කල යුතු අක්‍ෂර ඇතුලත් කිරීමේ ක්‍රමය තෝරාගැනීම සඳහා වන මානකරන උපකරණය.ා"
 
 #: ../src/im-chooser.desktop.in.in.h:2 ../src/xfce4-im-chooser.desktop.in.h:2
 msgid "Input Method"
 msgstr "අක්‍ෂර ඇතුලත් කිරීමේ ක්‍රමය"
 
+#: ../src/im-chooser-simple.c:124
+msgid "X applications"
+msgstr "X යෙදුම්"
+
+#: ../src/im-chooser-simple.c:126
+msgid "Qt applications"
+msgstr "Qt යෙදුම්"
+
+#: ../src/im-chooser-simple.c:125
+msgid "GTK+ applications"
+msgstr "GTK+ යෙදුම්"
+
+#: ../src/im-chooser-simple.c:281
+msgid "Unable to get the information"
+msgstr "තොරතුරු ලබාගත නොහැක"
+
+#: ../src/im-chooser-simple.c:178
+msgid "Updating Input Method list"
+msgstr "අක්‍ෂර ඇතුලත් කිරීමේ ලැයිස්තුව යාවත් කරමින්"
+
+#: ../src/im-chooser-simple.c:385
+msgid "Failed to stop Input Method"
+msgstr "අක්‍ෂර ඇතුලත් කිරීමෙ ක්‍රමය අවසන් කිරීම අසමත් විය"
+
+#: ../src/im-chooser-simple.c:358
+msgid "Failed to start Input Method"
+msgstr "අක්‍ෂර ඇතුලත් කිරීමෙ ක්‍රමය ඇරඹීම අසමත් විය"
+
+#: ../src/im-chooser-simple.c:507
+#, c-format
+msgid "Stopping Input Method - %s"
+msgstr "අක්‍ෂර ඇතුලත් කිරීමෙ ක්‍රමය අවසන් කරමින් - %s"
+
+#: ../src/im-chooser-simple.c:490
+#, c-format
+msgid "Starting Input Method - %s"
+msgstr "අක්‍ෂර ඇතුලත් කිරීමෙ ක්‍රමය අරඹමින් - %s"
+
+#: ../src/im-chooser-simple.c:773
+msgid "Version mismatch"
+msgstr "වෙළුම් නොගැලපීම"
+
+#. This will be displayed like "<small><i>Note: this change will not take
+#. effect until you next log in, except X applications and Qt
+#. applications</i></small>"
+#. This will be displayed like "<small><i>Note: this change will not take
+#. effect until you next log in, except X applications and GTK+
+#. applications</i></small>"
+#. This will be displayed like "<small><i>Note: this change will not take
+#. effect until you next log in, except GTK+ applications and Qt
+#. applications</i></small>"
+#: ../src/im-chooser-simple.c:593 ../src/im-chooser-simple.c:596
+#: ../src/im-chooser-simple.c:599
+#, c-format
+msgid ", except %s and %s"
+msgstr ""
+
+#: ../src/im-chooser-simple.c:672
+msgid "Parent Window"
+msgstr "මව් කවුළුව"
+
+#. This will be displayed like "<small><i>Note: this change will not take
+#. effect until you next log in, except GTK+ applications</i></small>"
+#: ../src/im-chooser-simple.c:613
+#, c-format
+msgid "<small><i>Note: this change will not take effect until you next log in%s</i></small>"
+msgstr "<small><i>සටහන: ඔබ පද්ධතියට යළි පිවිසෙන තුරු සිදුකරන ලද වෙනස්කම් බලපවත් වන්නේ නැත%s</i></small>"
+
+#: ../src/im-chooser-simple.c:678
+msgid "Note type"
+msgstr "සටහන් වර්ගය"
+
+#. setup a progress window
+#: ../src/im-chooser-simple.c:722
+msgid "Work in progress..."
+msgstr "ක්‍රියාත්මක වෙමින්..."
+
 #~ msgid "No valid IM installed"
 #~ msgstr "වලංගු නැති අක්‍ෂර ඇතුල්කරන ආකාරයක් ස්ථාපනය කර ඇත"
 
-#, fuzzy
 #~ msgid "Choose _specific Input Method"
 #~ msgstr "රිසි ලෙස සකස්කර තිබෙන අක්‍ෂර ඇතුලත් කිරීමේ ක්‍රමය භාවිත කරන්න(_c)"
 
-#, fuzzy
-#~ msgid ""
-#~ "Use the specific Input Method that you prefer regardless what Input "
-#~ "Method the system recommends."
-#~ msgstr ""
-#~ "පද්ධතිය විසින් රෙකමදාරු කරනු ලබන අක්‍ෂර ඇතුලත් කිරීමේ ක්‍රමය සැලකිල්ලට නොගෙන ඔබට කැමති "
-#~ "ක්‍රමයක් භාවිත කරන්න."
+#~ msgid "Use the specific Input Method that you prefer regardless what Input Method the system recommends."
+#~ msgstr "පද්ධතිය විසින් රෙකමදාරු කරනු ලබන අක්‍ෂර ඇතුලත් කිරීමේ ක්‍රමය සැලකිල්ලට නොගෙන ඔබට කැමති ක්‍රමයක් භාවිත කරන්න."
 
-#, fuzzy
-#~ msgid ""
-#~ "Do not use Input Method no matter what language the desktop is running on."
-#~ msgstr ""
-#~ "ඩෙස්ක්ටොප් එක මත ක්‍රියා කරන භාෂාව නොසලකා හැර අක්‍ෂර ඇතුලත් කිරීමේ ක්‍රමයන් අක්‍රීය කරන්න."
+#~ msgid "Do not use Input Method no matter what language the desktop is running on."
+#~ msgstr "ඩෙස්ක්ටොප් එක මත ක්‍රියා කරන භාෂාව නොසලකා හැර අක්‍ෂර ඇතුලත් කිරීමේ ක්‍රමයන් අක්‍රීය කරන්න."
 
-#, fuzzy
 #~ msgid "Use legacy _Input Method"
 #~ msgstr "පද්ධතියේ පෙර නිමැවුම තුල තිබෙන අක්‍ෂර ඇතුලත් කිරීමේ ක්‍රම භාවිත කරන්න(_U)"
 
-#~ msgid ""
-#~ "Use X Input Method anyway. In fact, which input method will be chosen for "
-#~ "the desktop session, depends on the desktop language."
-#~ msgstr ""
-#~ "කෙසේ හෝ X අක්‍ෂර ඇතුලත් කිරීමේ ක්‍රමය භාවිත කරන්න. ඩෙස්ක්ටොප් සැසිය සඳහා භාවිතා කරන අක්‍ෂර "
-#~ "ඇතුලත් කිරීමේ ක්‍රමය ඩෙස්ක්ටොප් එක භාවිත කරනු භාෂාව ලබන පදනම්ව තෝරාගනු ලැබේ."
+#~ msgid "Use X Input Method anyway. In fact, which input method will be chosen for the desktop session, depends on the desktop language."
+#~ msgstr "කෙසේ හෝ X අක්‍ෂර ඇතුලත් කිරීමේ ක්‍රමය භාවිත කරන්න. ඩෙස්ක්ටොප් සැසිය සඳහා භාවිතා කරන අක්‍ෂර ඇතුලත් කිරීමේ ක්‍රමය ඩෙස්ක්ටොප් එක භාවිත කරනු භාෂාව ලබන පදනම්ව තෝරාගනු ලැබේ."
 
 #~ msgid "_Follow the system-wide configuration"
 #~ msgstr "පද්ධතිය පුරා බල පැවැත්වෙන ලෙස මානකරනය අනුගමනය කරන්න(_F)"
 
-#~ msgid ""
-#~ "Follow the system-wide input method configuration to determine which "
-#~ "input method should be used."
-#~ msgstr ""
-#~ "පද්ධතිය පුරා බලපැවැත් වෙන ලෙස කුමන අක්‍ෂර ඇතුලත් කිරීමේ ක්‍රමය භාවිතය කල යුතුද යන වග තීරණය "
-#~ "කරන්න."
+#~ msgid "Follow the system-wide input method configuration to determine which input method should be used."
+#~ msgstr "පද්ධතිය පුරා බලපැවැත් වෙන ලෙස කුමන අක්‍ෂර ඇතුලත් කිරීමේ ක්‍රමය භාවිතය කල යුතුද යන වග තීරණය කරන්න."
