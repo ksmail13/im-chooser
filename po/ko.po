@@ -1,17 +1,18 @@
-# translation of im-chooser.trunk.po to Korean
+# translation of im-chooser.trunk.ko.po to Korean
 # Korean translations for im-chooser package.
 # Copyright (C) 2006 Red Hat, Inc. All rights reserved.
 # This file is distributed under the same license as the im-chooser package.
 #
 # Automatically generated, 2006.
 # Eunju Kim <eukim@redhat.com>, 2006, 2007, 2008.
+# Hyunsok Oh <hoh@redhat.com>, 2010.
 msgid ""
 msgstr ""
-"Project-Id-Version: im-chooser.trunk\n"
+"Project-Id-Version: im-chooser.trunk.ko\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-02-23 23:38+0900\n"
-"PO-Revision-Date: 2008-10-13 15:50+1000\n"
-"Last-Translator: Eunju Kim <eukim@redhat.com>\n"
+"PO-Revision-Date: 2010-03-31 14:24+1000\n"
+"Last-Translator: Hyunsok Oh <hoh@redhat.com>\n"
 "Language-Team: Korean <ko@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -67,7 +68,7 @@ msgstr "입력 방식 중지 - %s"
 #: ../src/im-chooser-simple.c:599
 #, c-format
 msgid ", except %s and %s"
-msgstr ", %s 및 %s 제외  "
+msgstr ", %s 및 %s 제외"
 
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications</i></small>"
@@ -85,7 +86,7 @@ msgid ""
 "<small><i>Note: this change will not take effect until you next log in%s</"
 "i></small>"
 msgstr ""
-"<small><i>알림: 변경사항은 다음번 %s 로그인 하실때 까지 적용되지 않습니다.</"
+"<small><i>알림: 변경사항은 다음번 %s 로그인 할 때 까지 적용되지 않습니다.</"
 "i></small>"
 
 #: ../src/im-chooser-simple.c:672
@@ -102,7 +103,7 @@ msgstr "알림 유형 "
 
 #: ../src/im-chooser-simple.c:679
 msgid "A enum value to determine which notes should be displayed"
-msgstr "어떤 알림이 나타나게 할 지를 결정하는 enum 값      "
+msgstr "어떤 알림이 나타나게 할 지를 결정하는 열거형 값      "
 
 #. setup a progress window
 #: ../src/im-chooser-simple.c:722
@@ -112,7 +113,7 @@ msgstr "실행 중..."
 #: ../src/im-chooser-simple.c:772
 #, c-format
 msgid "Unable to communicate to IMSettings services"
-msgstr "IMSettings 서비스와 통신할 수 없음     "
+msgstr "IMSettings 서비스와 통신할 수 없음"
 
 #: ../src/im-chooser-simple.c:773
 msgid "Version mismatch"
@@ -156,14 +157,12 @@ msgid "Show the status icon"
 msgstr "상태 아이콘 표시 "
 
 #: ../src/main.c:53
-msgid ""
-"<span weight=\"bold\" size=\"larger\">No input method is available</span>"
-msgstr ""
-"<span weight=\"bold\" size=\"larger\">사용 가능한 입력 방식이 없음</span> "
+msgid "<span weight=\"bold\" size=\"larger\">No input method is available</span>"
+msgstr "<span weight=\"bold\" size=\"larger\">사용 가능한 입력 방식이 없음</span> "
 
 #: ../src/main.c:56
 msgid "Please install any input methods before running if you like."
-msgstr "실행하시기 전 입력 방식을 설치하시기 바랍니다."
+msgstr "실행하기 전 입력 방식을 설치하기 바랍니다."
 
 #: ../src/main.c:144
 msgid "IM Chooser - Input Method configuration tool"
@@ -177,9 +176,9 @@ msgstr "로그 아웃 "
 msgid ""
 "Choose the input method to be used or disable the input method usage on the "
 "desktop"
-msgstr ""
-"데스크탑에서 입력 방식 사용을 비활성화하거나 또는 사용할 입력 방식 선택 "
+msgstr "데스크탑에서 입력 방식 사용을 비활성화, 또는 사용할 입력 방식 선택 "
 
 #: ../src/im-chooser.desktop.in.in.h:2 ../src/xfce4-im-chooser.desktop.in.h:2
 msgid "Input Method"
 msgstr "입력 방식"
+
