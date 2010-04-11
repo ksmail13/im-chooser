@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: im-chooser\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-02-23 23:38+0900\n"
-"PO-Revision-Date: 2007-11-06 14:48+0900\n"
+"PO-Revision-Date: 2010-04-11 14:48+0900\n"
 "Last-Translator: Maxim Dziumanenko <dziumanenko@gmail.com>\n"
 "Language-Team: Ukrainian <uk@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -17,44 +17,41 @@ msgstr ""
 
 #: ../src/im-chooser-simple.c:124
 msgid "X applications"
-msgstr ""
+msgstr "програм X"
 
 #: ../src/im-chooser-simple.c:125
 msgid "GTK+ applications"
-msgstr ""
+msgstr "програм GTK+ "
 
 #: ../src/im-chooser-simple.c:126
 msgid "Qt applications"
-msgstr ""
+msgstr "програм Qt"
 
 #: ../src/im-chooser-simple.c:178
-#, fuzzy
 msgid "Updating Input Method list"
-msgstr "Метод вводу"
+msgstr "Оновлення списку методів вводу"
 
 #: ../src/im-chooser-simple.c:281
 msgid "Unable to get the information"
-msgstr ""
+msgstr "Не вдається отримати інформацію"
 
 #: ../src/im-chooser-simple.c:358
-#, fuzzy
 msgid "Failed to start Input Method"
-msgstr "_Не використовувати методи вводу"
+msgstr "Не вдається ініціалізувати метод вводу"
 
 #: ../src/im-chooser-simple.c:385
-#, fuzzy
 msgid "Failed to stop Input Method"
-msgstr "_Не використовувати методи вводу"
+msgstr "Не вдалось зупинити метод вводу"
 
 #: ../src/im-chooser-simple.c:490
-#, fuzzy, c-format
+#, c-format
 msgid "Starting Input Method - %s"
-msgstr "Метод вводу"
+msgstr "Ініціалізація методу вводу - %s"
 
 #: ../src/im-chooser-simple.c:507
-#, fuzzy, c-format
+#, c-format
 msgid "Stopping Input Method - %s"
-msgstr "Метод вводу"
+msgstr "Зупинка методу вводу - %s"
 
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications and Qt applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications and GTK+ applications</i></small>"
@@ -63,7 +60,7 @@ msgstr "Метод вводу"
 #: ../src/im-chooser-simple.c:599
 #, c-format
 msgid ", except %s and %s"
-msgstr ""
+msgstr " за винятком %s и %s"
 
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications</i></small>"
@@ -72,56 +69,55 @@ msgstr ""
 #: ../src/im-chooser-simple.c:608
 #, c-format
 msgid ", except %s"
-msgstr ""
+msgstr " за винятком %s"
 
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications</i></small>"
 #: ../src/im-chooser-simple.c:613
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "<small><i>Note: this change will not take effect until you next log in%s</"
 "i></small>"
 msgstr ""
-"<small><i>Зауваження: ця зміна не набере сили до наступного входу.</i></"
+"<small><i>Зауваження: ця зміна не набере сили до наступного входу %s</i></"
 "small>"
 
 #: ../src/im-chooser-simple.c:672
 msgid "Parent Window"
-msgstr ""
+msgstr "Батьківське вікно"
 
 #: ../src/im-chooser-simple.c:673
 msgid "GtkWindow that points to the parent window"
-msgstr ""
+msgstr "GtkWindow вказує на батьківське вікно"
 
 #: ../src/im-chooser-simple.c:678
 msgid "Note type"
-msgstr ""
+msgstr "Тип приміток"
 
 #: ../src/im-chooser-simple.c:679
 msgid "A enum value to determine which notes should be displayed"
-msgstr ""
+msgstr "Значення типу enum, що визначає показані значення"
 
 #. setup a progress window
 #: ../src/im-chooser-simple.c:722
 msgid "Work in progress..."
-msgstr ""
+msgstr "У процесі..."
 
 #: ../src/im-chooser-simple.c:772
 #, c-format
 msgid "Unable to communicate to IMSettings services"
-msgstr ""
+msgstr "Не вдається зв'язатися зі службами IMSettings"
 
 #: ../src/im-chooser-simple.c:773
 msgid "Version mismatch"
-msgstr ""
+msgstr "Невідповідність версій"
 
 #: ../src/im-chooser-simple.c:787
 msgid "Unable to gather current status"
-msgstr ""
+msgstr "Не вдається отримати поточний статус"
 
 #: ../src/im-chooser-simple.c:793
-#, fuzzy
 msgid "Unable to get Input Method information"
-msgstr "Метод вводу"
+msgstr "Не вдається отримати інформацію про метод вводу"
 
 #: ../src/im-chooser-simple.c:840
 #, c-format
@@ -129,14 +125,12 @@ msgid "Use %s"
 msgstr "Використовувати %s"
 
 #: ../src/im-chooser-simple.c:843
-#, fuzzy
 msgid " (legacy)"
-msgstr " (Застаріло)"
+msgstr " (застаріло)"
 
 #: ../src/im-chooser-simple.c:845
-#, fuzzy
 msgid " (recommended)"
-msgstr " (Рекомендується)"
+msgstr " (рекомендується)"
 
 #: ../src/im-chooser-simple.c:960
 msgid "_Enable input method feature"
@@ -152,7 +146,7 @@ msgstr "_Параметри методів вводу..."
 
 #: ../src/im-chooser-simple.c:1028
 msgid "Show the status icon"
-msgstr ""
+msgstr "Показати значок статусу"
 
 #: ../src/main.c:53
 msgid ""
@@ -169,62 +163,17 @@ msgid "IM Chooser - Input Method configuration tool"
 msgstr "Програма налаштовування методу вводу - IM Chooser"
 
 #: ../src/main.c:173
-#, fuzzy
 msgid "Log Out"
-msgstr "Ви_йти"
+msgstr "Вийти"
 
 #: ../src/im-chooser.desktop.in.in.h:1 ../src/xfce4-im-chooser.desktop.in.h:1
-#, fuzzy
 msgid ""
 "Choose the input method to be used or disable the input method usage on the "
 "desktop"
-msgstr ""
-"Програма налаштовування методу вводу дозволяє обрати метод вводу або взагалі "
-"вимкнути використання методу вводу."
+msgstr "Виберіть метод вводу чи вимкніть використання методу вводу"
 
 #: ../src/im-chooser.desktop.in.in.h:2 ../src/xfce4-im-chooser.desktop.in.h:2
 msgid "Input Method"
 msgstr "Метод вводу"
 
-#~ msgid "User Specific"
-#~ msgstr "Специфічно для користувача"
 
-#~ msgid "xinputrc was modified by the user"
-#~ msgstr "xinputrc змінено користувачем"
-
-#~ msgid "No valid IM installed"
-#~ msgstr "Не встановлено метод вводу"
-
-#~ msgid "_Use default Input Method for your language"
-#~ msgstr "_Типовий метод вводу для вашої мови"
-
-#~ msgid ""
-#~ "Your system chooses the appropriate Input Method for your language "
-#~ "automatically from among Input Methods installed on your system."
-#~ msgstr ""
-#~ "Система автоматично обирає відповідний метод вводу для вашої мови серед "
-#~ "встановлених у системі."
-
-#~ msgid "Choose _specific Input Method"
-#~ msgstr "Метод вводу _визначається користувачем"
-
-#~ msgid ""
-#~ "Use the specific Input Method that you prefer regardless what Input "
-#~ "Method the system recommends."
-#~ msgstr ""
-#~ "Використовувати вказаний метод вводу незалежно від методу, що "
-#~ "рекомендується системою."
-
-#~ msgid ""
-#~ "Do not use Input Method no matter what language the desktop is running on."
-#~ msgstr "Вимкнути методи вводу незалежно від мови робочого середовища."
-
-#~ msgid "Use legacy _Input Method"
-#~ msgstr "Використовувати с_тарі методи вводу"
-
-#~ msgid ""
-#~ "Use X Input Method anyway. In fact, which input method will be chosen for "
-#~ "the desktop session, depends on the desktop language."
-#~ msgstr ""
-#~ "Використовувати метод вводу X. Іншими словами, метод вводу буде залежний "
-#~ "від мови системи."
