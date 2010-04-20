@@ -801,12 +801,15 @@ _im_chooser_simple_update_im_list(IMChooserSimple *im)
 		const gchar *name, *iconfile;
 		IMSettingsInfo *info;
 		GdkPixbuf *pixbuf = NULL;
+		GtkIconTheme *icon_theme = gtk_icon_theme_get_default();
 
 		info = IMSETTINGS_INFO (g_ptr_array_index(array, i));
 		name = imsettings_info_get_short_desc(info);
 		iconfile = imsettings_info_get_icon_file(info);
 
-		if (iconfile) {
+		if (gtk_icon_theme_has_icon(icon_theme, iconfile)) {
+			pixbuf = gtk_icon_theme_load_icon(icon_theme, iconfile, 18, 0, NULL);
+		} else if (iconfile && g_file_test(iconfile, G_FILE_TEST_EXISTS)) {
 			pixbuf = gdk_pixbuf_new_from_file_at_scale(iconfile,
 								   18, 18,
 								   TRUE, NULL);
