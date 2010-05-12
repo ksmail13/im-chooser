@@ -1,8 +1,2 @@
+SUBDIRS = 16x16 22x22 24x24 32x32 48x48 256x256
 NULL =
-
-icondir = $(datadir)/pixmaps
-icon_DATA = im-chooser.png
-
-EXTRA_DIST =			\
-	$(icon_DATA)		\
-	$(NULL)

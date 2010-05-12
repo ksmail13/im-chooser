@@ -1,3 +1,17 @@
+1.2.7 ->
+=================
+* Enhancements:
+  * rhbz#528850: Stock icon support in the config file.
+  * New icons by Lapo Calamandrei and Jakub Steiner
+* Translations updated:
+  * Asturian
+  * Brazilian Portuguese
+  * Geek
+  * German
+  * Polish
+  * Punjabi
+  * Russian
+
 1.2.6 -> 1.2.7
 =================
 * Bug Fix:

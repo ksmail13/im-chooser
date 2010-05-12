@@ -1,3 +1,7 @@
+2010-05-12  Akira TAGOH  <tagoh@redhat.com>
+
+	* data/*: Add new icons by Lapo Calamandrei and Jakub Steiner.
+
 2010-04-20  Akira TAGOH  <tagoh@redhat.com>
 
 	* src/im-chooser-simple.c (_im_chooser_simple_update_im_list):

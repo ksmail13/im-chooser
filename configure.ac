@@ -69,6 +69,12 @@ dnl ======================================================================
 AC_CONFIG_FILES([
 Makefile
 data/Makefile
+data/16x16/Makefile
+data/22x22/Makefile
+data/24x24/Makefile
+data/256x256/Makefile
+data/32x32/Makefile
+data/48x48/Makefile
 po/Makefile.in
 src/Makefile
 src/im-chooser.desktop.in
