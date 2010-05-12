@@ -1,4 +1,4 @@
-1.2.7 ->
+1.2.7 -> 1.3.0
 =================
 * Enhancements:
   * rhbz#528850: Stock icon support in the config file.
@@ -6,11 +6,17 @@
 * Translations updated:
   * Asturian
   * Brazilian Portuguese
+  * English (United Kingdom)
   * Geek
   * German
+  * Hungarian
+  * Korean
   * Polish
   * Punjabi
   * Russian
+  * Sinhala
+  * Spanish
+  * Ukrainian
 
 1.2.6 -> 1.2.7
 =================

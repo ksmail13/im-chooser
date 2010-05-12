@@ -1,5 +1,7 @@
 2010-05-12  Akira TAGOH  <tagoh@redhat.com>
 
+	* configure.ac: bump to 1.3.0.
+
 	* data/*: Add new icons by Lapo Calamandrei and Jakub Steiner.
 
 2010-04-20  Akira TAGOH  <tagoh@redhat.com>
