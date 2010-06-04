@@ -2,62 +2,58 @@
 # Arabic translations for im-chooser package.
 # Copyright (C) 2006 Red Hat, Inc. All rights reserved.
 # This file is distributed under the same license as the im-chooser package.
-#
-# Automatically generated, 2006.
-# Ali Ghareb <ali.gareb@gmail.com>, 2007.
+## Abdalrahim G. Fakhouri <abdailra7eem@yahoo.com>, 2010.
+
 msgid ""
 msgstr ""
 "Project-Id-Version: ar\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: http://bugzilla.redhat.com/bugzilla/\n"
 "POT-Creation-Date: 2009-02-23 23:38+0900\n"
-"PO-Revision-Date: 2007-01-12 08:23+0200\n"
-"Last-Translator: Ali Ghareb <ali.gareb@gmail.com>\n"
-"Language-Team: Arabic <en@li.org>\n"
+"PO-Revision-Date: 2010-06-03 20:16+0300\n"
+"Last-Translator: Abdalrahim G. Fakhouri <abdailra7eem@yahoo.com>\n"
+"Language-Team: Arabic <fedora-trans-ar@redhat.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.11.4\n"
+"X-Generator: GTranslator\n"
 
 #: ../src/im-chooser-simple.c:124
 msgid "X applications"
-msgstr ""
+msgstr "برامج X"
 
 #: ../src/im-chooser-simple.c:125
 msgid "GTK+ applications"
-msgstr ""
+msgstr "برامج جتك+"
 
 #: ../src/im-chooser-simple.c:126
 msgid "Qt applications"
-msgstr ""
+msgstr "برامج كيوتي"
 
 #: ../src/im-chooser-simple.c:178
-#, fuzzy
 msgid "Updating Input Method list"
-msgstr "طريقة ادخال"
+msgstr "جاري تحديث قائمة طرق الإدخال"
 
 #: ../src/im-chooser-simple.c:281
 msgid "Unable to get the information"
-msgstr ""
+msgstr "تعذّر الحصول على المعلومات"
 
 #: ../src/im-chooser-simple.c:358
-#, fuzzy
 msgid "Failed to start Input Method"
-msgstr "لا تستخدم طرق ادخال مطلقا"
+msgstr "فشل بدء طريقة الإدخال"
 
 #: ../src/im-chooser-simple.c:385
-#, fuzzy
 msgid "Failed to stop Input Method"
-msgstr "لا تستخدم طرق ادخال مطلقا"
+msgstr "فشل إيقاف طريقة الإدخال"
 
 #: ../src/im-chooser-simple.c:490
-#, fuzzy, c-format
+#, c-format
 msgid "Starting Input Method - %s"
-msgstr "طريقة ادخال"
+msgstr "جاري بدء طريقة الإدخال - %s"
 
 #: ../src/im-chooser-simple.c:507
-#, fuzzy, c-format
+#, c-format
 msgid "Stopping Input Method - %s"
-msgstr "طريقة ادخال"
+msgstr "جاري إيقاف طريقة الإدخال - %s"
 
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications and Qt applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications and GTK+ applications</i></small>"
@@ -66,7 +62,7 @@ msgstr "طريقة ادخال"
 #: ../src/im-chooser-simple.c:599
 #, c-format
 msgid ", except %s and %s"
-msgstr ""
+msgstr "، عدا %s و %s"
 
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications</i></small>"
@@ -75,59 +71,60 @@ msgstr ""
 #: ../src/im-chooser-simple.c:608
 #, c-format
 msgid ", except %s"
-msgstr ""
+msgstr "، عدا %s"
 
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications</i></small>"
 #: ../src/im-chooser-simple.c:613
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "<small><i>Note: this change will not take effect until you next log in%s</"
 "i></small>"
-msgstr "<small><i>ملاحظة: هذا التغيير لن يتم حتى دخولك مرة أخرى</i></small>"
+msgstr ""
+"<small><i>ملاحظة: هذا التغيير لن يأخذ مفعوله حتى تسجيل دخولك القادم %s</i></"
+"small>"
 
 #: ../src/im-chooser-simple.c:672
 msgid "Parent Window"
-msgstr ""
+msgstr "النافذة الأمّ"
 
 #: ../src/im-chooser-simple.c:673
 msgid "GtkWindow that points to the parent window"
-msgstr ""
+msgstr "نافذة جتك تشير للنافذة الأمّ"
 
 #: ../src/im-chooser-simple.c:678
 msgid "Note type"
-msgstr ""
+msgstr "نوع الملاحظة"
 
 #: ../src/im-chooser-simple.c:679
 msgid "A enum value to determine which notes should be displayed"
-msgstr ""
+msgstr "قيمة enum لتحديد أيّ الملاحظات يجب عرضها"
 
 #. setup a progress window
 #: ../src/im-chooser-simple.c:722
 msgid "Work in progress..."
-msgstr ""
+msgstr "قيد العمل ..."
 
 #: ../src/im-chooser-simple.c:772
 #, c-format
 msgid "Unable to communicate to IMSettings services"
-msgstr ""
+msgstr "تعذّر الاتصال بخدمات IMSettings"
 
 #: ../src/im-chooser-simple.c:773
 msgid "Version mismatch"
-msgstr ""
+msgstr "عدم تطابق الإصدارة"
 
 #: ../src/im-chooser-simple.c:787
 msgid "Unable to gather current status"
-msgstr ""
+msgstr "تعذّر معرفة الوضع الحاليّ"
 
 #: ../src/im-chooser-simple.c:793
-#, fuzzy
 msgid "Unable to get Input Method information"
-msgstr "طريقة ادخال"
+msgstr "تعذّر الحصول على معلومات طريقة الإدخال"
 
 #: ../src/im-chooser-simple.c:840
 #, c-format
 msgid "Use %s"
-msgstr ""
+msgstr "استخدم %s"
 
 #: ../src/im-chooser-simple.c:843
 msgid " (legacy)"
@@ -135,90 +132,48 @@ msgstr ""
 
 #: ../src/im-chooser-simple.c:845
 msgid " (recommended)"
-msgstr ""
+msgstr "(مُستحسَـن)"
 
 #: ../src/im-chooser-simple.c:960
 msgid "_Enable input method feature"
-msgstr ""
+msgstr "تفعيل ميزة طرق الإدخال"
 
 #: ../src/im-chooser-simple.c:968
 msgid "<b>Input Method</b>"
-msgstr "<b>طريقة الادخال</b>"
+msgstr "<b>طريقة الإدخال<b>"
 
 #: ../src/im-chooser-simple.c:1001
-#, fuzzy
 msgid "Input Method _Preferences..."
-msgstr "طريقة ادخال"
+msgstr "تفضيلات طريقة الإدخال ..."
 
 #: ../src/im-chooser-simple.c:1028
 msgid "Show the status icon"
-msgstr ""
+msgstr "اعرض أيقونة الحالة"
 
 #: ../src/main.c:53
 msgid ""
 "<span weight=\"bold\" size=\"larger\">No input method is available</span>"
-msgstr ""
+msgstr "<span weight=\"bold\" size=\"larger\">لا يتوفر طريقة إدخال</span>"
 
 #: ../src/main.c:56
 msgid "Please install any input methods before running if you like."
-msgstr ""
+msgstr "ثبت أي طرق إدخال تريد قبل التشغيل إذا أردت"
 
 #: ../src/main.c:144
 msgid "IM Chooser - Input Method configuration tool"
-msgstr "اختيار التراسل الآلى - آداة تشكيل طريقة الادخال"
+msgstr "مختار IM - أداة ضبط طرق الإدخال"
 
 #: ../src/main.c:173
-#, fuzzy
 msgid "Log Out"
 msgstr "خروج"
 
 #: ../src/im-chooser.desktop.in.in.h:1 ../src/xfce4-im-chooser.desktop.in.h:1
-#, fuzzy
 msgid ""
 "Choose the input method to be used or disable the input method usage on the "
 "desktop"
-msgstr ""
-"آداة تشكيل طريقة الادخال لاختيار طريقة ادخال أو تعطيل استخدام طريقة الادخال "
-"على سطح المكتب"
+msgstr "اختر طريقة إدخال لاستخدامها، أو عطّل استخدام طرق الإدخال على سطح المكتب"
 
 #: ../src/im-chooser.desktop.in.in.h:2 ../src/xfce4-im-chooser.desktop.in.h:2
 msgid "Input Method"
-msgstr "طريقة ادخال"
+msgstr "طريقة إدخال"
 
-#~ msgid "No valid IM installed"
-#~ msgstr "لا يوجد برنامج تراسل آلى مثبت"
-
-#, fuzzy
-#~ msgid "Choose _specific Input Method"
-#~ msgstr "استخدم طريقة ادخال معتادة"
-
-#, fuzzy
-#~ msgid ""
-#~ "Use the specific Input Method that you prefer regardless what Input "
-#~ "Method the system recommends."
-#~ msgstr ""
-#~ "استخدم طريقة ادخالك المفضلة بدون اعتبار للطريقة التى يوصى بها النظام."
-
-#, fuzzy
-#~ msgid ""
-#~ "Do not use Input Method no matter what language the desktop is running on."
-#~ msgstr "تعطيل كل طرق الادخال بدون الاهتمام بماهية سطح المكتب القائم"
-
-#, fuzzy
-#~ msgid "Use legacy _Input Method"
-#~ msgstr "استخدام طرق الادخال المتروكة"
-
-#~ msgid ""
-#~ "Use X Input Method anyway. In fact, which input method will be chosen for "
-#~ "the desktop session, depends on the desktop language."
-#~ msgstr ""
-#~ "استخدم طريقة الادخال X:فى الواقع تعتمد طريقة الادخال المختارة فى جلسة سطح "
-#~ "المكتب على لغة سطح المكتب"
-
-#~ msgid "_Follow the system-wide configuration"
-#~ msgstr "اتبع تشكيلات النظام "
-
-#~ msgid ""
-#~ "Follow the system-wide input method configuration to determine which "
-#~ "input method should be used."
-#~ msgstr "اتبع تشكيلات النظام لتعرف طريقة الادخال المناسبة"
