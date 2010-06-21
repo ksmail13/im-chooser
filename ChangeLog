@@ -1,5 +1,7 @@
 2010-06-21  Akira TAGOH  <tagoh@redhat.com>
 
+	* configure.ac: bump to 1.3.1.
+
 	* src/main.c (main): fallback to themed icon if no icons are
 	installed. (rhbz#604482)
 

@@ -1,5 +1,5 @@
 dnl Process this file with autoconf to produce a configure script.
-AC_INIT([im-chooser], 1.3.0, [https://bugzilla.redhat.com/enter_bug.cgi?product=Fedora&component=im-chooser])
+AC_INIT([im-chooser], 1.3.1, [https://bugzilla.redhat.com/enter_bug.cgi?product=Fedora&component=im-chooser])
 
 . ./requires
 
