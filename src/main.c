@@ -144,7 +144,14 @@ main(int    argc,
 	gtk_window_set_title(GTK_WINDOW (window), _("IM Chooser - Input Method configuration tool"));
 	gtk_window_set_resizable(GTK_WINDOW (window), FALSE);
 	iconfile = g_build_filename(ICONDIR, "im-chooser.png", NULL);
-	gtk_window_set_icon_from_file(GTK_WINDOW (window), iconfile, NULL);
+	if (!g_file_test(iconfile, G_FILE_TEST_EXISTS)) {
+		g_free(iconfile);
+		iconfile = NULL;
+		gtk_window_set_icon_name(GTK_WINDOW (window), "im-chooser");
+	} else {
+		gtk_window_set_icon_from_file(GTK_WINDOW (window), iconfile, NULL);
+		g_free(iconfile);
+	}
 	gtk_container_set_border_width(GTK_CONTAINER (window), 4);
 	gtk_container_set_border_width(GTK_CONTAINER (GTK_DIALOG (window)->vbox), 0);
 
