@@ -2,8 +2,8 @@
 # Bulgarian translations for im-chooser package.
 # Copyright (C) 2006 Red Hat, Inc. All rights reserved.
 # This file is distributed under the same license as the im-chooser package.
-#
-#
+# 
+# 
 # Automatically generated, 2006.
 # Doncho N. Gunchev <gunchev@gmail.com>, 2007.
 msgid ""
@@ -18,18 +18,6 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.11.4\n"
-
-#: ../src/im-chooser-simple.c:124
-msgid "X applications"
-msgstr ""
-
-#: ../src/im-chooser-simple.c:125
-msgid "GTK+ applications"
-msgstr ""
-
-#: ../src/im-chooser-simple.c:126
-msgid "Qt applications"
-msgstr ""
 
 #: ../src/im-chooser-simple.c:178
 #, fuzzy
@@ -60,33 +48,12 @@ msgstr "Метод за вход"
 msgid "Stopping Input Method - %s"
 msgstr "Метод за вход"
 
-#. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications and Qt applications</i></small>"
-#. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications and GTK+ applications</i></small>"
-#. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications and Qt applications</i></small>"
-#: ../src/im-chooser-simple.c:593 ../src/im-chooser-simple.c:596
-#: ../src/im-chooser-simple.c:599
-#, c-format
-msgid ", except %s and %s"
-msgstr ""
-
-#. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications</i></small>"
-#. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications</i></small>"
-#. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except Qt applications</i></small>"
-#: ../src/im-chooser-simple.c:602 ../src/im-chooser-simple.c:605
-#: ../src/im-chooser-simple.c:608
-#, c-format
-msgid ", except %s"
-msgstr ""
-
-#. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications</i></small>"
+#. This will be displayed like "<small><i>Note: this change will not take
+#. effect until you next log in, except GTK+ applications</i></small>"
 #: ../src/im-chooser-simple.c:613
 #, fuzzy, c-format
-msgid ""
-"<small><i>Note: this change will not take effect until you next log in%s</"
-"i></small>"
-msgstr ""
-"<small><i>Забележка: тази промяна няма да влезе в сила до следващото Ви "
-"влизане в системата.</i></small>"
+msgid "<small><i>Note: this change will not take effect until you next log in%s</i></small>"
+msgstr "<small><i>Забележка: тази промяна няма да влезе в сила до следващото Ви влизане в системата.</i></small>"
 
 #: ../src/im-chooser-simple.c:672
 msgid "Parent Window"
@@ -132,16 +99,6 @@ msgstr "Метод за вход"
 msgid "Use %s"
 msgstr "Ползване на %s"
 
-#: ../src/im-chooser-simple.c:843
-#, fuzzy
-msgid " (legacy)"
-msgstr " (Остарял)"
-
-#: ../src/im-chooser-simple.c:845
-#, fuzzy
-msgid " (recommended)"
-msgstr " (Препоръчителен)"
-
 #: ../src/im-chooser-simple.c:960
 msgid "_Enable input method feature"
 msgstr "_Включване поддръжката на метод за вход"
@@ -159,10 +116,8 @@ msgid "Show the status icon"
 msgstr ""
 
 #: ../src/main.c:53
-msgid ""
-"<span weight=\"bold\" size=\"larger\">No input method is available</span>"
-msgstr ""
-"<span weight=\"bold\" size=\"larger\">Няма налични методи за вход</span>"
+msgid "<span weight=\"bold\" size=\"larger\">No input method is available</span>"
+msgstr "<span weight=\"bold\" size=\"larger\">Няма налични методи за вход</span>"
 
 #: ../src/main.c:56
 msgid "Please install any input methods before running if you like."
@@ -172,23 +127,65 @@ msgstr "Моля инсталирайте някакви методи за вх�
 msgid "IM Chooser - Input Method configuration tool"
 msgstr "IM Chooser - инструмент за настройка на метода за вход"
 
-#: ../src/main.c:173
-#, fuzzy
-msgid "Log Out"
-msgstr "_Изход"
-
 #: ../src/im-chooser.desktop.in.in.h:1 ../src/xfce4-im-chooser.desktop.in.h:1
 #, fuzzy
-msgid ""
-"Choose the input method to be used or disable the input method usage on the "
-"desktop"
-msgstr ""
-"Инструмента за настройка ползвания метода за вход или забрана на методите за "
-"вход в работната среда"
+msgid "Choose the input method to be used or disable the input method usage on the desktop"
+msgstr "Инструмента за настройка ползвания метода за вход или забрана на методите за вход в работната среда"
 
 #: ../src/im-chooser.desktop.in.in.h:2 ../src/xfce4-im-chooser.desktop.in.h:2
 msgid "Input Method"
 msgstr "Метод за вход"
+
+#: ../src/im-chooser-simple.c:124
+msgid "X applications"
+msgstr "X приложения"
+
+#: ../src/im-chooser-simple.c:126
+msgid "Qt applications"
+msgstr "Qt приложения"
+
+#: ../src/im-chooser-simple.c:125
+msgid "GTK+ applications"
+msgstr "GTK+ приложения"
+
+#. This will be displayed like "<small><i>Note: this change will not take
+#. effect until you next log in, except X applications</i></small>"
+#. This will be displayed like "<small><i>Note: this change will not take
+#. effect until you next log in, except GTK+ applications</i></small>"
+#. This will be displayed like "<small><i>Note: this change will not take
+#. effect until you next log in, except Qt applications</i></small>"
+#: ../src/im-chooser-simple.c:602 ../src/im-chooser-simple.c:605
+#: ../src/im-chooser-simple.c:608
+#, c-format
+msgid ", except %s"
+msgstr ", освен %s"
+
+#. This will be displayed like "<small><i>Note: this change will not take
+#. effect until you next log in, except X applications and Qt
+#. applications</i></small>"
+#. This will be displayed like "<small><i>Note: this change will not take
+#. effect until you next log in, except X applications and GTK+
+#. applications</i></small>"
+#. This will be displayed like "<small><i>Note: this change will not take
+#. effect until you next log in, except GTK+ applications and Qt
+#. applications</i></small>"
+#: ../src/im-chooser-simple.c:593 ../src/im-chooser-simple.c:596
+#: ../src/im-chooser-simple.c:599
+#, c-format
+msgid ", except %s and %s"
+msgstr ", освен %s и %s"
+
+#: ../src/im-chooser-simple.c:845
+msgid " (recommended)"
+msgstr "(препоръчителен)"
+
+#: ../src/im-chooser-simple.c:843
+msgid " (legacy)"
+msgstr "(остарял)"
+
+#: ../src/main.c:173
+msgid "Log Out"
+msgstr "_Изход"
 
 #~ msgid "User Specific"
 #~ msgstr "Персонални"
@@ -202,34 +199,20 @@ msgstr "Метод за вход"
 #~ msgid "_Use default Input Method for your language"
 #~ msgstr "_Ползване на стандартния метод за вход за вашия език"
 
-#~ msgid ""
-#~ "Your system chooses the appropriate Input Method for your language "
-#~ "automatically from among Input Methods installed on your system."
-#~ msgstr ""
-#~ "Вашата система избира подходящ метод за вход за вашия език автоматично от "
-#~ "инсталираните в системата входни методи."
+#~ msgid "Your system chooses the appropriate Input Method for your language automatically from among Input Methods installed on your system."
+#~ msgstr "Вашата система избира подходящ метод за вход за вашия език автоматично от инсталираните в системата входни методи."
 
 #~ msgid "Choose _specific Input Method"
 #~ msgstr "_Персонален метод за вход"
 
-#~ msgid ""
-#~ "Use the specific Input Method that you prefer regardless what Input "
-#~ "Method the system recommends."
-#~ msgstr ""
-#~ "Ползване на предпочитания от вас метод за вход, независимо от това какъв "
-#~ "метод препоръчва системата."
+#~ msgid "Use the specific Input Method that you prefer regardless what Input Method the system recommends."
+#~ msgstr "Ползване на предпочитания от вас метод за вход, независимо от това какъв метод препоръчва системата."
 
-#~ msgid ""
-#~ "Do not use Input Method no matter what language the desktop is running on."
-#~ msgstr ""
-#~ "Да не се ползва метод за вход без значение какъв език ползва средата."
+#~ msgid "Do not use Input Method no matter what language the desktop is running on."
+#~ msgstr "Да не се ползва метод за вход без значение какъв език ползва средата."
 
 #~ msgid "Use legacy _Input Method"
 #~ msgstr "Ползване на _остарял метод за вход"
 
-#~ msgid ""
-#~ "Use X Input Method anyway. In fact, which input method will be chosen for "
-#~ "the desktop session, depends on the desktop language."
-#~ msgstr ""
-#~ "Ползване на метода за вход на X. В действителност, кой метод за вход ще "
-#~ "се ползва в сесията на средата зависи изцяло от езика на средата."
+#~ msgid "Use X Input Method anyway. In fact, which input method will be chosen for the desktop session, depends on the desktop language."
+#~ msgstr "Ползване на метода за вход на X. В действителност, кой метод за вход ще се ползва в сесията на средата зависи изцяло от езика на средата."
