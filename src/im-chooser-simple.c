@@ -976,6 +976,8 @@ im_chooser_simple_get_widget(IMChooserSimple *im)
 		gtk_scrolled_window_set_policy(GTK_SCROLLED_WINDOW (scrolled),
 					       GTK_POLICY_NEVER,
 					       GTK_POLICY_AUTOMATIC);
+		gtk_scrolled_window_set_shadow_type(GTK_SCROLLED_WINDOW (scrolled),
+						    GTK_SHADOW_IN);
 		im->widget_im_list = list = gtk_tree_view_new();
 		gtk_tree_view_set_rules_hint(GTK_TREE_VIEW (list), TRUE);
 		gtk_tree_view_set_headers_visible(GTK_TREE_VIEW (list), FALSE);

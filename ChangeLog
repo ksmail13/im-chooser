@@ -1,5 +1,8 @@
 2010-08-17  Akira TAGOH  <tagoh@redhat.com>
 
+	* src/im-chooser-simple.c (im_chooser_simple_get_widget): set a border
+	around the list. (rhbz#607513)
+
 	* src/main.c (main): make a dialog resizable.
 
 2010-06-21  Akira TAGOH  <tagoh@redhat.com>
