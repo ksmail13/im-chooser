@@ -1,3 +1,7 @@
+2010-08-17  Akira TAGOH  <tagoh@redhat.com>
+
+	* src/main.c (main): make a dialog resizable.
+
 2010-06-21  Akira TAGOH  <tagoh@redhat.com>
 
 	* configure.ac: bump to 1.3.1.
