@@ -142,7 +142,6 @@ main(int    argc,
 
 	window = gtk_dialog_new();
 	gtk_window_set_title(GTK_WINDOW (window), _("IM Chooser - Input Method configuration tool"));
-//	gtk_window_set_resizable(GTK_WINDOW (window), FALSE);
 	iconfile = g_build_filename(ICONDIR, "im-chooser.png", NULL);
 	if (!g_file_test(iconfile, G_FILE_TEST_EXISTS)) {
 		g_free(iconfile);
