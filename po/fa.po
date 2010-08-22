@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: im-chooser 0.3.2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-02-23 23:38+0900\n"
-"PO-Revision-Date: 2010-08-22 16:19+0330\n"
+"PO-Revision-Date: 2010-08-22 16:22+0330\n"
 "Last-Translator: Mostafa <info@mostafadaneshvar.com>\n"
 "Language-Team: none\n"
 "MIME-Version: 1.0\n"
@@ -41,7 +41,7 @@ msgstr "آغاز کردن شیوه ی ورودی شکست خورد"
 
 #: ../src/im-chooser-simple.c:385
 msgid "Failed to stop Input Method"
-msgstr ""
+msgstr "خطا در توقف شیوه ی ورودی"
 
 #: ../src/im-chooser-simple.c:490
 #, c-format
@@ -71,7 +71,7 @@ msgstr ", بجز %s و %s"
 #: ../src/im-chooser-simple.c:608
 #, c-format
 msgid ", except %s"
-msgstr ""
+msgstr "، بجز %s"
 
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications</i></small>"
 #: ../src/im-chooser-simple.c:613
@@ -85,7 +85,7 @@ msgstr "پنجره‌ اصلی"
 
 #: ../src/im-chooser-simple.c:673
 msgid "GtkWindow that points to the parent window"
-msgstr ""
+msgstr "GtkWindow که نقاطی که پنجره ی اصلی باشند"
 
 #: ../src/im-chooser-simple.c:678
 msgid "Note type"
