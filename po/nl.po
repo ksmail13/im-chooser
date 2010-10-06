@@ -3,13 +3,14 @@
 # This file is distributed under the same license as the im-chooser package.
 # Peter van Egdom <p.van.egdom@gmail.com>, 2006, 2008.
 # Geert Warrink <geert.warrink@onsnet.nu>, 2010.
+# Reinout van Schouwen <reinouts@gnome.org>, 2010
 msgid ""
 msgstr ""
 "Project-Id-Version: im-chooser\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-02-23 23:38+0900\n"
-"PO-Revision-Date: 2010-06-22 19:15+0200\n"
-"Last-Translator: Geert Warrink <geert.warrink@onsnet.nu>\n"
+"PO-Revision-Date: 2010-10-06 11:54+0200\n"
+"Last-Translator: Reinout van Schouwen <reinouts@gnome.org>\n"
 "Language-Team: Fedora\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
@@ -20,19 +21,19 @@ msgstr ""
 
 #: ../src/im-chooser-simple.c:124
 msgid "X applications"
-msgstr "X toepassingen"
+msgstr "X-toepassingen"
 
 #: ../src/im-chooser-simple.c:125
 msgid "GTK+ applications"
-msgstr "GTK+ toepassingen"
+msgstr "GTK+-toepassingen"
 
 #: ../src/im-chooser-simple.c:126
 msgid "Qt applications"
-msgstr "Qt toepassingen"
+msgstr "Qt-toepassingen"
 
 #: ../src/im-chooser-simple.c:178
 msgid "Updating Input Method list"
-msgstr "Vernieuwen van invoer methode lijst"
+msgstr "Vernieuwen van invoermethodelijst"
 
 #: ../src/im-chooser-simple.c:281
 msgid "Unable to get the information"
@@ -40,21 +41,21 @@ msgstr "Niet in staat om de informatie te verkrijgen"
 
 #: ../src/im-chooser-simple.c:358
 msgid "Failed to start Input Method"
-msgstr "Starten van invoer methode is mislukt"
+msgstr "Starten van invoermethode is mislukt"
 
 #: ../src/im-chooser-simple.c:385
 msgid "Failed to stop Input Method"
-msgstr "Stoppen van invoer methode is mislukt"
+msgstr "Stoppen van invoermethode is mislukt"
 
 #: ../src/im-chooser-simple.c:490
 #, c-format
 msgid "Starting Input Method - %s"
-msgstr "Starten van invoer methode - %s"
+msgstr "Starten van invoermethode - %s"
 
 #: ../src/im-chooser-simple.c:507
 #, c-format
 msgid "Stopping Input Method - %s"
-msgstr "Stoppen van invoer methode - %s"
+msgstr "Stoppen van invoermethode - %s"
 
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications and Qt applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications and GTK+ applications</i></small>"
@@ -81,8 +82,8 @@ msgid ""
 "<small><i>Note: this change will not take effect until you next log in%s</"
 "i></small>"
 msgstr ""
-"<small><i>Opmerking: deze verandering zal pas actief worden als je opnieuw "
-"inlogt%s</i></small>"
+"<small><i>Opmerking: deze verandering zal pas actief worden als u zich opnieuw "
+"aanmeldt%s</i></small>"
 
 #: ../src/im-chooser-simple.c:672
 msgid "Parent Window"
@@ -94,7 +95,7 @@ msgstr "GtkWindow dat naar het bovenliggende venster verwijst"
 
 #: ../src/im-chooser-simple.c:678
 msgid "Note type"
-msgstr "Notitie type"
+msgstr "Notitietype"
 
 #: ../src/im-chooser-simple.c:679
 msgid "A enum value to determine which notes should be displayed"
@@ -104,7 +105,7 @@ msgstr ""
 #. setup a progress window
 #: ../src/im-chooser-simple.c:722
 msgid "Work in progress..."
-msgstr "Werk in uitvoering..."
+msgstr "Werk in uitvoering…"
 
 #: ../src/im-chooser-simple.c:772
 #, c-format
@@ -121,7 +122,7 @@ msgstr "Niet in staat om de huidige status te verkrijgen"
 
 #: ../src/im-chooser-simple.c:793
 msgid "Unable to get Input Method information"
-msgstr "Niet in staat om invoer methode informatie te verkrijgen"
+msgstr "Niet in staat om invoermethode-informatie te verkrijgen"
 
 #: ../src/im-chooser-simple.c:840
 #, c-format
@@ -138,50 +139,50 @@ msgstr " (aanbevolen)"
 
 #: ../src/im-chooser-simple.c:960
 msgid "_Enable input method feature"
-msgstr "Invoer methode functie _aanzetten"
+msgstr "Invoermethoden _aanzetten"
 
 #: ../src/im-chooser-simple.c:968
 msgid "<b>Input Method</b>"
-msgstr "<b>Invoer methode</b>"
+msgstr "<b>Invoermethode</b>"
 
 #: ../src/im-chooser-simple.c:1001
 msgid "Input Method _Preferences..."
-msgstr "Invoer methode _voorkeuren..."
+msgstr "_Voorkeuren invoermethoden…"
 
 #: ../src/im-chooser-simple.c:1028
 msgid "Show the status icon"
-msgstr "Het status icoon tonen"
+msgstr "Het statuspictogram tonen"
 
 #: ../src/main.c:53
 msgid ""
 "<span weight=\"bold\" size=\"larger\">No input method is available</span>"
 msgstr ""
-"<span weight=\"bold\" size=\"larger\">Er is geen invoer methode "
+"<span weight=\"bold\" size=\"larger\">Er is geen invoermethode "
 "beschikbaar</span>"
 
 #: ../src/main.c:56
 msgid "Please install any input methods before running if you like."
-msgstr "Installeer een invoer methode voordat je dit programma opstart."
+msgstr "Installeer een invoermethode voordat u dit programma opstart."
 
 #: ../src/main.c:144
 msgid "IM Chooser - Input Method configuration tool"
-msgstr "IM Chooser - Configuratie gereedschap voor invoer methode"
+msgstr "IM Chooser - Configuratieprogramma voor invoermethoden"
 
 #: ../src/main.c:173
 msgid "Log Out"
-msgstr "Uitloggen"
+msgstr "Afmelden"
 
 #: ../src/im-chooser.desktop.in.in.h:1 ../src/xfce4-im-chooser.desktop.in.h:1
 msgid ""
 "Choose the input method to be used or disable the input method usage on the "
 "desktop"
 msgstr ""
-"Kies de te gebruiken invoer methode of schakel het gebruik van invoer "
+"Kies de te gebruiken invoermethode of schakel het gebruik van invoer "
 "methoden voor het bureaublad uit"
 
 #: ../src/im-chooser.desktop.in.in.h:2 ../src/xfce4-im-chooser.desktop.in.h:2
 msgid "Input Method"
-msgstr "Invoer methode"
+msgstr "Invoermethode"
 
 #~ msgid "Show note"
 #~ msgstr "Opmerking tonen"
