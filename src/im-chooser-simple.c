@@ -82,7 +82,6 @@ struct _IMChooserSimple {
 	GObject             parent_instance;
 	GtkWidget          *widget;
 	GtkWidget          *checkbox_is_applet_shown;
-	GtkWidget          *checkbox_is_im_enabled;
 	GtkWidget          *widget_scrolled;
 	GtkWidget          *widget_im_list;
 	GtkWidget          *button_im_config;
@@ -152,78 +151,6 @@ im_chooser_simple_show_status_icon_on_toggled(GtkToggleButton *button,
 }
 
 static void
-im_chooser_simple_enable_im_on_toggled(GtkToggleButton *button,
-				       gpointer         user_data)
-{
-	gboolean flag;
-	IMChooserSimple *im;
-	IMChooserSimpleActionData *a;
-
-	g_return_if_fail (GTK_IS_TOGGLE_BUTTON (button));
-	g_return_if_fail (IM_IS_CHOOSER_SIMPLE (user_data));
-
-	im = IM_CHOOSER_SIMPLE (user_data);
-
-	flag = gtk_toggle_button_get_active(button);
-
-	gtk_widget_set_sensitive(im->widget_scrolled, flag);
-	if (flag) {
-		GtkTreeSelection *selection;
-		GtkTreeModel *model;
-		GtkTreeIter iter;
-		gchar *name;
-
-		if (im->initialized) {
-#if 0
-			im_chooser_simple_show_progress(im, _("Updating Input Method list"));
-#endif
-			model = gtk_tree_view_get_model(GTK_TREE_VIEW (im->widget_im_list));
-			gtk_list_store_clear(GTK_LIST_STORE (model));
-			_im_chooser_simple_update_im_list(im);
-		}
-		selection = gtk_tree_view_get_selection(GTK_TREE_VIEW (im->widget_im_list));
-		if (gtk_tree_selection_get_selected(selection, &model, &iter)) {
-			gtk_tree_model_get(model, &iter, POS_IMNAME, &name, -1);
-			if (im->current_im) {
-				if (im->initialized) {
-					a = _action_new(ACTION_IM_STOP,
-							g_strdup(im->current_im),
-							g_free);
-					g_queue_push_tail(im->actionq, a);
-				}
-			}
-			if (im->initialized) {
-				a = _action_new(ACTION_IM_START,
-						g_strdup(name),
-						g_free);
-				g_queue_push_tail(im->actionq, a);
-			}
-		}
-	} else {
-		if (im->current_im) {
-			if (im->initialized) {
-				a = _action_new(ACTION_IM_STOP,
-						g_strdup(im->current_im),
-						g_free);
-				g_queue_push_tail(im->actionq, a);
-			}
-			g_free(im->current_im);
-		}
-		im->current_im = NULL;
-	}
-	a = _action_new(ACTION_IM_UPDATE_PREFS, GINT_TO_POINTER (flag), NULL);
-	g_queue_push_tail(im->actionq, a);
-	a = _action_new(ACTION_COMPLETE, NULL, NULL);
-	g_queue_push_tail(im->actionq, a);
-
-	if (im->idle_source == 0)
-		im->idle_source = g_idle_add_full(G_PRIORITY_DEFAULT_IDLE,
-						  im_chooser_simple_action_loop,
-						  im,
-						  im_chooser_simple_destroy_idle_cb);
-}
-
-static void
 im_chooser_simple_im_list_on_changed(GtkTreeSelection *selection,
 				     gpointer          user_data)
 {
@@ -233,21 +160,35 @@ im_chooser_simple_im_list_on_changed(GtkTreeSelection *selection,
 	gchar *name;
 	IMChooserSimpleActionData *a;
 
-	if (im->initialized == FALSE)
-		return;
-
 	if (gtk_tree_selection_get_selected(selection, &model, &iter)) {
 		gtk_tree_model_get(model, &iter, POS_IMNAME, &name, -1);
 		if (im->current_im &&
 		    strcmp(im->current_im, name) != 0) {
-			a = _action_new(ACTION_IM_STOP,
-					g_strdup(im->current_im),
-					g_free);
-			g_queue_push_tail(im->actionq, a);
-			a = _action_new(ACTION_IM_START,
-					g_strdup(name),
-					g_free);
-			g_queue_push_tail(im->actionq, a);
+			if (im->initialized) {
+				if (strcmp(im->current_im, "none")) {
+					a = _action_new(ACTION_IM_STOP,
+							g_strdup(im->current_im),
+							g_free);
+					g_queue_push_tail(im->actionq, a);
+				}
+				a = _action_new(ACTION_IM_START,
+						g_strdup(name),
+						g_free);
+				g_queue_push_tail(im->actionq, a);
+				a = _action_new(ACTION_IM_UPDATE_PREFS,
+						GINT_TO_POINTER (TRUE),
+						NULL);
+				g_queue_push_tail(im->actionq, a);
+				a = _action_new(ACTION_COMPLETE, NULL, NULL);
+				g_queue_push_tail(im->actionq, a);
+
+				if (im->idle_source == 0)
+					im->idle_source = g_idle_add_full(G_PRIORITY_DEFAULT_IDLE,
+									  im_chooser_simple_action_loop,
+									  im,
+									  im_chooser_simple_destroy_idle_cb);
+			}
+		} else {
 			a = _action_new(ACTION_IM_UPDATE_PREFS,
 					GINT_TO_POINTER (TRUE),
 					NULL);
@@ -752,6 +693,88 @@ im_chooser_simple_instance_init(IMChooserSimple *im)
 }
 
 static void
+_im_chooser_simple_add_row(IMChooserSimple  *im,
+			   GtkListStore     *list,
+			   GtkTreeIter      *iter,
+			   GtkTreeIter     **def_iter,
+			   GtkTreeIter     **cur_iter,
+			   IMSettingsInfo   *info,
+			   const gchar      *running_im,
+			   const gchar      *name,
+			   const gchar      *iconfile,
+			   gboolean          is_xim,
+			   gboolean          is_default)
+{
+	GString *string = g_string_new(NULL);
+	GdkPixbuf *pixbuf = NULL;
+	GtkIconTheme *icon_theme = gtk_icon_theme_get_default();
+
+	if (gtk_icon_theme_has_icon(icon_theme, iconfile)) {
+		pixbuf = gtk_icon_theme_load_icon(icon_theme, iconfile, 18, 0, NULL);
+	} else if (iconfile && g_file_test(iconfile, G_FILE_TEST_EXISTS)) {
+		pixbuf = gdk_pixbuf_new_from_file_at_scale(iconfile,
+							   18, 18,
+							   TRUE, NULL);
+	} else {
+		static const char *foo_xpm[] = {
+			"18 18 1 1",
+			" 	c None",
+			"                  ",
+			"                  ",
+			"                  ",
+			"                  ",
+			"                  ",
+			"                  ",
+			"                  ",
+			"                  ",
+			"                  ",
+			"                  ",
+			"                  ",
+			"                  ",
+			"                  ",
+			"                  ",
+			"                  ",
+			"                  ",
+			"                  ",
+			"                  "};
+
+		pixbuf = gdk_pixbuf_new_from_xpm_data(foo_xpm);
+	}
+	gtk_list_store_append(list, iter);
+	g_string_append(string, "<i>");
+	if (strcmp(name, "none") == 0) {
+		g_string_append(string, _("No Input Method"));
+	} else {
+		g_string_append_printf(string, _("Use %s"), name);
+	}
+
+	if (is_xim)
+		g_string_append(string, _(" (legacy)"));
+	if (is_default) {
+		g_string_append(string, _(" (recommended)"));
+		if (!im->default_im)
+			im->default_im = g_strdup(name);
+		*def_iter = gtk_tree_iter_copy(iter);
+	}
+	if (im->current_im == NULL &&
+	    (strcmp(running_im, name) == 0 ||
+	     ((running_im == NULL || running_im[0] == 0) && strcmp(name, "none") == 0))) {
+		im->current_im = g_strdup(name);
+		if (im->initial_im == NULL)
+			im->initial_im = g_strdup(im->current_im);
+		*cur_iter = gtk_tree_iter_copy(iter);
+	}
+	g_string_append(string, "</i>");
+	gtk_list_store_set(list, iter,
+			   POS_ICON, pixbuf,
+			   POS_LABEL, string->str,
+			   POS_IMNAME, name,
+			   POS_IMINFO, info,
+			   -1);
+	g_string_free(string, TRUE);
+}
+
+static void
 _im_chooser_simple_update_im_list(IMChooserSimple *im)
 {
 	GtkListStore *list;
@@ -764,6 +787,7 @@ _im_chooser_simple_update_im_list(IMChooserSimple *im)
 	GError *error = NULL;
 	GPtrArray *array;
 	guint n_retry = 0;
+	IMSettingsInfo *info, *none_info;
 
   retry:
 	if (imsettings_request_get_version(im->imsettings, NULL) != IMSETTINGS_SETTINGS_API_VERSION) {
@@ -795,77 +819,29 @@ _im_chooser_simple_update_im_list(IMChooserSimple *im)
 		exit(1);
 	}
 
+	none_info = imsettings_request_get_info_object(im->imsettings, "none", &error);
+	if (array->len == 0)
+		g_ptr_array_add(array, none_info);
 	list = gtk_list_store_new(4, GDK_TYPE_PIXBUF, G_TYPE_STRING, G_TYPE_STRING, G_TYPE_OBJECT);
 	for (i = 0; i < array->len; i++) {
-		GString *string = g_string_new(NULL);
-		const gchar *name, *iconfile;
-		IMSettingsInfo *info;
-		GdkPixbuf *pixbuf = NULL;
-		GtkIconTheme *icon_theme = gtk_icon_theme_get_default();
-
 		info = IMSETTINGS_INFO (g_ptr_array_index(array, i));
-		name = imsettings_info_get_short_desc(info);
-		iconfile = imsettings_info_get_icon_file(info);
 
-		if (gtk_icon_theme_has_icon(icon_theme, iconfile)) {
-			pixbuf = gtk_icon_theme_load_icon(icon_theme, iconfile, 18, 0, NULL);
-		} else if (iconfile && g_file_test(iconfile, G_FILE_TEST_EXISTS)) {
-			pixbuf = gdk_pixbuf_new_from_file_at_scale(iconfile,
-								   18, 18,
-								   TRUE, NULL);
-		} else {
-			static const char *foo_xpm[] = {
-				"18 18 1 1",
-				" 	c None",
-				"                  ",
-				"                  ",
-				"                  ",
-				"                  ",
-				"                  ",
-				"                  ",
-				"                  ",
-				"                  ",
-				"                  ",
-				"                  ",
-				"                  ",
-				"                  ",
-				"                  ",
-				"                  ",
-				"                  ",
-				"                  ",
-				"                  ",
-				"                  "};
-
-			pixbuf = gdk_pixbuf_new_from_xpm_data(foo_xpm);
+		if (i == 1) {
+			_im_chooser_simple_add_row(im, list, &iter, &def_iter, &cur_iter, none_info,
+						   running_im,
+						   imsettings_info_get_short_desc(none_info),
+						   imsettings_info_get_icon_file(none_info),
+						   imsettings_info_is_xim(none_info),
+						   imsettings_info_is_system_default(none_info));
 		}
-		gtk_list_store_append(list, &iter);
-		g_string_append(string, "<i>");
-		g_string_append_printf(string, _("Use %s"), name);
-
-		if (imsettings_info_is_xim(info))
-			g_string_append(string, _(" (legacy)"));
-		if (imsettings_info_is_system_default(info)) {
-			g_string_append(string, _(" (recommended)"));
-			if (!im->default_im)
-				im->default_im = g_strdup(name);
-			def_iter = gtk_tree_iter_copy(&iter);
-		}
-		if (im->current_im == NULL &&
-		    strcmp(running_im, name) == 0) {
-			im->current_im = g_strdup(name);
-			if (im->initial_im == NULL)
-				im->initial_im = g_strdup(im->current_im);
-			cur_iter = gtk_tree_iter_copy(&iter);
-		}
-		g_string_append(string, "</i>");
-		gtk_list_store_set(list, &iter,
-				   POS_ICON, pixbuf,
-				   POS_LABEL, string->str,
-				   POS_IMNAME, name,
-				   POS_IMINFO, info,
-				   -1);
-		g_string_free(string, TRUE);
+		_im_chooser_simple_add_row(im, list, &iter, &def_iter, &cur_iter, info,
+					   running_im,
+					   imsettings_info_get_short_desc(info),
+					   imsettings_info_get_icon_file(info),
+					   imsettings_info_is_xim(info),
+					   imsettings_info_is_system_default(info));
 	}
+
 	if (cur_iter == NULL) {
 		cur_iter = def_iter;
 		def_iter = NULL;
@@ -883,13 +859,6 @@ _im_chooser_simple_update_im_list(IMChooserSimple *im)
 		gtk_tree_iter_free(def_iter);
 	g_object_unref(list);
 
-	if (array->len == 0) {
-		gtk_widget_set_sensitive(im->checkbox_is_im_enabled, FALSE);
-		gtk_widget_hide(im->widget_scrolled);
-	} else {
-		gtk_widget_show(im->widget_scrolled);
-		gtk_widget_set_sensitive(im->checkbox_is_im_enabled, TRUE);
-	}
 	gtk_widget_size_request(im->widget_im_list, &requisition);
 	if (requisition.height > 120)
 		requisition.height = 120;
@@ -939,7 +908,7 @@ GtkWidget *
 im_chooser_simple_get_widget(IMChooserSimple *im)
 {
 	GtkWidget *vbox;
-	GtkWidget *align_im_enabled, *checkbox;
+	GtkWidget *checkbox;
 	GtkWidget *frame, *label, *vbox_frame, *align_im;
 	GtkWidget *list, *scrolled;
 	GtkWidget *align_prefs, *button;
@@ -958,13 +927,6 @@ im_chooser_simple_get_widget(IMChooserSimple *im)
 		vbox = gtk_vbox_new(FALSE, 2);
 		hbox = gtk_hbox_new(FALSE, 1);
 		vbox_frame = gtk_vbox_new(FALSE, 3);
-
-		align_im_enabled = gtk_alignment_new(0, 0, 0, 0);
-		im->checkbox_is_im_enabled = checkbox = gtk_check_button_new_with_mnemonic(_("_Enable input method feature"));
-		gtk_container_add(GTK_CONTAINER (align_im_enabled), checkbox);
-		gtk_alignment_set_padding(GTK_ALIGNMENT (align_im_enabled), 3, 6, 6, 6);
-		g_signal_connect(checkbox, "toggled",
-				 G_CALLBACK (im_chooser_simple_enable_im_on_toggled), im);
 
 		frame = gtk_frame_new(NULL);
 		gtk_frame_set_shadow_type(GTK_FRAME (frame), GTK_SHADOW_NONE);
@@ -1037,7 +999,6 @@ im_chooser_simple_get_widget(IMChooserSimple *im)
 				 G_CALLBACK (im_chooser_simple_show_status_icon_on_toggled), im);
 
 		gtk_container_set_border_width(GTK_CONTAINER (vbox), 0);
-		gtk_box_pack_start(GTK_BOX (vbox), align_im_enabled, FALSE, TRUE, 0);
 		gtk_box_pack_start(GTK_BOX (vbox), frame, FALSE, TRUE, 0);
 		gtk_box_pack_start(GTK_BOX (vbox), align_applet, FALSE, TRUE, 0);
 
@@ -1046,7 +1007,6 @@ im_chooser_simple_get_widget(IMChooserSimple *im)
 	gtk_widget_show_all(im->widget);
 	_im_chooser_simple_update_im_list(im);
 
-	gtk_widget_set_sensitive(im->widget_scrolled, FALSE);
 	gtk_widget_set_sensitive(im->button_im_config, FALSE);
 
 	client = gconf_client_get_default();
@@ -1058,11 +1018,10 @@ im_chooser_simple_get_widget(IMChooserSimple *im)
 		gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON (im->checkbox_is_applet_shown),
 					     FALSE);
 
-	gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON (im->checkbox_is_im_enabled),
-				     FALSE);
-	gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON (im->checkbox_is_im_enabled),
-				     (im->current_im != NULL));
 	g_object_set(im, "note_type", im->note_type, NULL);
+
+	selection = gtk_tree_view_get_selection(GTK_TREE_VIEW (im->widget_im_list));
+	g_signal_emit_by_name(selection, "changed", 0, NULL);
 
 	im->initialized = TRUE;
 
