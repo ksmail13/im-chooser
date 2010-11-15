@@ -6,9 +6,9 @@ msgstr ""
 "Project-Id-Version: pl\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2010-11-15 16:11+0900\n"
-"PO-Revision-Date: 2008-09-22 18:10+0200\n"
+"PO-Revision-Date: 2010-11-15 11:22+0100\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
-"Language-Team: Polish <fedora-trans-pl@redhat.com>\n"
+"Language-Team: Polish <trans-pl@lists.fedoraproject.org>\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -98,14 +98,13 @@ msgid "Work in progress..."
 msgstr "Praca w toku..."
 
 #: ../src/im-chooser-simple.c:725
-#, fuzzy
 msgid "No Input Method"
-msgstr "Metoda wprowadzania"
+msgstr "Brak metod wprowadzania"
 
 #: ../src/im-chooser-simple.c:727
 #, c-format
 msgid "Use %s"
-msgstr "Użyj %s"
+msgstr "Użycie %s"
 
 #: ../src/im-chooser-simple.c:731
 msgid " (legacy)"
@@ -153,22 +152,21 @@ msgstr "Proszę zainstalować metodę wprowadzania przed uruchomieniem."
 
 #: ../src/main.c:87
 msgid "Could not connect to the session manager"
-msgstr ""
+msgstr "Nie można połączyć się z menedżerem sesji"
 
 #: ../src/main.c:106
 msgid "[options...]"
-msgstr ""
+msgstr "[opcje...]"
 
 #: ../src/main.c:130
 #, c-format
 msgid "Could not parse arguments: %s\n"
-msgstr ""
+msgstr "Nie można przetworzyć parametrów: %s\n"
 
 #: ../src/main.c:143 ../src/im-chooser.desktop.in.in.h:2
 #: ../src/xfce4-im-chooser.desktop.in.h:2
-#, fuzzy
 msgid "Input Method selector"
-msgstr "Metoda wprowadzania"
+msgstr "Wybór metody wprowadzania"
 
 #: ../src/main.c:170
 msgid "Log Out"
@@ -179,16 +177,3 @@ msgid ""
 "Choose the input method to be used or disable the input method usage on the "
 "desktop"
 msgstr "Wybór metody wprowadzania lub wyłączanie jej w środowisku graficznym"
-
-#~ msgid "Updating Input Method list"
-#~ msgstr "Aktualizowanie listy metod wprowadzania"
-
-#~ msgid "_Enable input method feature"
-#~ msgstr "Włącz m_etodę wprowadzania"
-
-#~ msgid "Show the status icon"
-#~ msgstr "Wyświetlaj ikonę stanu"
-
-#~ msgid "IM Chooser - Input Method configuration tool"
-#~ msgstr ""
-#~ "Wybór metody wprowadzania - narzędzie konfiguracji metody wprowadzania"
