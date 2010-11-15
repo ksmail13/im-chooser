@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: im-chooser.trunk\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-11-15 16:11+0900\n"
+"POT-Creation-Date: 2010-11-15 22:38+0900\n"
 "PO-Revision-Date: 2008-09-23 11:28+0530\n"
 "Last-Translator: Runa Bhattacharjee <runab@redhat.com>\n"
 "Language-Team: Bengali INDIA <fedora-trans-bn_IN@redhat.com>\n"
@@ -175,7 +175,7 @@ msgstr ""
 #: ../src/main.c:143 ../src/im-chooser.desktop.in.in.h:2
 #: ../src/xfce4-im-chooser.desktop.in.h:2
 #, fuzzy
-msgid "Input Method selector"
+msgid "Input Method Selector"
 msgstr "ইনপুট পদ্ধতি"
 
 #: ../src/main.c:170

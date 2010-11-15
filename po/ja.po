@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ja\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-11-15 16:11+0900\n"
+"POT-Creation-Date: 2010-11-15 22:38+0900\n"
 "PO-Revision-Date: 2009-03-31 12:56+1000\n"
 "Last-Translator: Noriko Mizumoto <noriko@redhat.com>\n"
 "Language-Team: Japanese <fedora-trans-ja@redhat.com>\n"
@@ -175,7 +175,7 @@ msgstr ""
 #: ../src/main.c:143 ../src/im-chooser.desktop.in.in.h:2
 #: ../src/xfce4-im-chooser.desktop.in.h:2
 #, fuzzy
-msgid "Input Method selector"
+msgid "Input Method Selector"
 msgstr "入力メソッド"
 
 #: ../src/main.c:170

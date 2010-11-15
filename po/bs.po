@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: bs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-11-15 16:11+0900\n"
+"POT-Creation-Date: 2010-11-15 22:38+0900\n"
 "PO-Revision-Date: 2007-01-23 16:07+0100\n"
 "Last-Translator: Adnan Hodzic <AbsintheSyringe@gmail.com>\n"
 "Language-Team: Bosnian <lokal@linux.org.ba>\n"
@@ -176,7 +176,7 @@ msgstr ""
 #: ../src/main.c:143 ../src/im-chooser.desktop.in.in.h:2
 #: ../src/xfce4-im-chooser.desktop.in.h:2
 #, fuzzy
-msgid "Input Method selector"
+msgid "Input Method Selector"
 msgstr "Način unosa"
 
 #: ../src/main.c:170

@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: im-chooser 0.3.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-11-15 16:11+0900\n"
+"POT-Creation-Date: 2010-11-15 22:38+0900\n"
 "PO-Revision-Date: 2008-09-20 10:01+0100\n"
 "Last-Translator: Oriol Miro <oriolmiro@gmail.com>\n"
 "Language-Team: Catalan <fedora@softcatala.net>\n"
@@ -186,7 +186,7 @@ msgstr ""
 #: ../src/main.c:143 ../src/im-chooser.desktop.in.in.h:2
 #: ../src/xfce4-im-chooser.desktop.in.h:2
 #, fuzzy
-msgid "Input Method selector"
+msgid "Input Method Selector"
 msgstr "Mètode d'entrada"
 
 #: ../src/main.c:170

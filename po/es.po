@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: im-chooser.trunk.es\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-11-15 16:11+0900\n"
+"POT-Creation-Date: 2010-11-15 22:38+0900\n"
 "PO-Revision-Date: 2009-06-19 13:28-0400\n"
 "Last-Translator: Dennis Tobar <dennis.tobar@gmail.com>\n"
 "Language-Team: Spanish <fedora-trans-es@redhat.com>\n"
@@ -177,7 +177,7 @@ msgstr ""
 #: ../src/main.c:143 ../src/im-chooser.desktop.in.in.h:2
 #: ../src/xfce4-im-chooser.desktop.in.h:2
 #, fuzzy
-msgid "Input Method selector"
+msgid "Input Method Selector"
 msgstr "Método de Entrada"
 
 #: ../src/main.c:170
