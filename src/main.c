@@ -140,7 +140,7 @@ main(int    argc,
 	}
 
 	window = gtk_dialog_new();
-	gtk_window_set_title(GTK_WINDOW (window), _("Input Method selector"));
+	gtk_window_set_title(GTK_WINDOW (window), _("Input Method Selector"));
 
 	egg_set_desktop_file(DESKTOPFILE);
 	gtk_container_set_border_width(GTK_CONTAINER (window), 4);

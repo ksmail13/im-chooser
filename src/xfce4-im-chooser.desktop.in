@@ -2,7 +2,7 @@
 Encoding=UTF-8
 Version=1.0
 Type=Application
-_Name=Input Method selector
+_Name=Input Method Selector
 _Comment=Choose the input method to be used or disable the input method usage on the desktop
 Exec=im-chooser
 Icon=im-chooser
