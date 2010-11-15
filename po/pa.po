@@ -10,10 +10,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: im-chooser.trunk.pa\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-02-23 23:38+0900\n"
+"POT-Creation-Date: 2010-11-15 16:11+0900\n"
 "PO-Revision-Date: 2009-09-22 15:19+0530\n"
 "Last-Translator: Jaswinder Singh <jsingh@redhat.com>\n"
 "Language-Team: Punjabi <Punjabi-users@lists.sourceforge.net>\n"
+"Language: pa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -21,40 +22,36 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "\n"
 
-#: ../src/im-chooser-simple.c:124
+#: ../src/im-chooser-simple.c:120
 msgid "X applications"
 msgstr "X ਐਪਲੀਕੇਸ਼ਨਾਂ"
 
-#: ../src/im-chooser-simple.c:125
+#: ../src/im-chooser-simple.c:121
 msgid "GTK+ applications"
 msgstr "GTK+ ਐਪਲੀਕੇਸ਼ਨਾਂ"
 
-#: ../src/im-chooser-simple.c:126
+#: ../src/im-chooser-simple.c:122
 msgid "Qt applications"
 msgstr "Qt ਐਪਲੀਕੇਸ਼ਨਾਂ"
 
-#: ../src/im-chooser-simple.c:178
-msgid "Updating Input Method list"
-msgstr "ਇੰਪੁੱਟ ਢੰਗ ਸੂਚੀ ਅੱਪਡੇਟ ਹੋ ਰਹੀ ਹੈ"
-
-#: ../src/im-chooser-simple.c:281
+#: ../src/im-chooser-simple.c:205
 msgid "Unable to get the information"
 msgstr "ਜਾਣਕਾਰੀ ਲੈਣ ਲਈ ਅਸਮਰਥ"
 
-#: ../src/im-chooser-simple.c:358
+#: ../src/im-chooser-simple.c:282
 msgid "Failed to start Input Method"
 msgstr "ਇੰਪੁੱਟ ਢੰਗ ਚਾਲੂ ਕਰਨ ਵਿੱਚ ਫੇਲ"
 
-#: ../src/im-chooser-simple.c:385
+#: ../src/im-chooser-simple.c:309
 msgid "Failed to stop Input Method"
 msgstr "ਇੰਪੁੱਟ ਢੰਗ ਬੰਦ ਕਰਨ ਵਿੱਚ ਫੇਲ"
 
-#: ../src/im-chooser-simple.c:490
+#: ../src/im-chooser-simple.c:410
 #, c-format
 msgid "Starting Input Method - %s"
 msgstr "ਇੰਪੁੱਟ ਢੰਗ ਚਾਲੂ ਹੋ ਰਿਹਾ ਹੈ - %s"
 
-#: ../src/im-chooser-simple.c:507
+#: ../src/im-chooser-simple.c:427
 #, c-format
 msgid "Stopping Input Method - %s"
 msgstr "ਇੰਪੁੱਟ ਢੰਗ ਰੋਕ ਰਿਹਾ ਹੈ - %s"
@@ -62,8 +59,8 @@ msgstr "ਇੰਪੁੱਟ ਢੰਗ ਰੋਕ ਰਿਹਾ ਹੈ - %s"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications and Qt applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications and GTK+ applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications and Qt applications</i></small>"
-#: ../src/im-chooser-simple.c:593 ../src/im-chooser-simple.c:596
-#: ../src/im-chooser-simple.c:599
+#: ../src/im-chooser-simple.c:513 ../src/im-chooser-simple.c:516
+#: ../src/im-chooser-simple.c:519
 #, c-format
 msgid ", except %s and %s"
 msgstr ", %s ਅਤੇ %s ਤੋਂ ਬਿਨਾਂ"
@@ -71,100 +68,114 @@ msgstr ", %s ਅਤੇ %s ਤੋਂ ਬਿਨਾਂ"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except Qt applications</i></small>"
-#: ../src/im-chooser-simple.c:602 ../src/im-chooser-simple.c:605
-#: ../src/im-chooser-simple.c:608
+#: ../src/im-chooser-simple.c:522 ../src/im-chooser-simple.c:525
+#: ../src/im-chooser-simple.c:528
 #, c-format
 msgid ", except %s"
 msgstr ", %s ਤੋਂ ਬਿਨਾਂ"
 
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications</i></small>"
-#: ../src/im-chooser-simple.c:613
+#: ../src/im-chooser-simple.c:533
 #, c-format
 msgid ""
 "<small><i>Note: this change will not take effect until you next log in%s</"
 "i></small>"
-msgstr "<small><i>ਸੂਚਨਾ: ਇਹ ਤਬਦੀਲੀ ਤੁਹਾਡੇ ਮੁੜ ਲਾਗਇਨ ਹੋਣ ਤੱਕ ਲਾਗੂ ਨਹੀਂ ਹੋਵੇਗੀ%s</i></small>"
+msgstr ""
+"<small><i>ਸੂਚਨਾ: ਇਹ ਤਬਦੀਲੀ ਤੁਹਾਡੇ ਮੁੜ ਲਾਗਇਨ ਹੋਣ ਤੱਕ ਲਾਗੂ ਨਹੀਂ ਹੋਵੇਗੀ%s</i></small>"
 
-#: ../src/im-chooser-simple.c:672
+#: ../src/im-chooser-simple.c:592
 msgid "Parent Window"
 msgstr "ਅਧਾਰ ਵਿੰਡੋ"
 
-#: ../src/im-chooser-simple.c:673
+#: ../src/im-chooser-simple.c:593
 msgid "GtkWindow that points to the parent window"
 msgstr "GtkWindow ਜੋ ਅਧਾਰ ਵਿੰਡੋ ਵੱਲ ਉਦੇਸ਼ ਕਰਦਾ ਹੈ"
 
-#: ../src/im-chooser-simple.c:678
+#: ../src/im-chooser-simple.c:598
 msgid "Note type"
 msgstr "ਸੂਚਨਾ ਕਿਸਮ"
 
-#: ../src/im-chooser-simple.c:679
+#: ../src/im-chooser-simple.c:599
 msgid "A enum value to determine which notes should be displayed"
 msgstr "ਇੱਕ enum ਮੁੱਲ ਜਿਸ ਤੋਂ ਪਤਾ ਚੱਲਦਾ ਹੈ ਕਿ ਕਿਹੜੀ ਸੂਚਨਾ ਵੇਖਾਉਣੀ ਚਾਹੀਦੀ ਹੈ"
 
 #. setup a progress window
-#: ../src/im-chooser-simple.c:722
+#: ../src/im-chooser-simple.c:642
 msgid "Work in progress..."
 msgstr "ਕੰਮ ਚੱਲ ਰਿਹਾ ਹੈ..."
 
-#: ../src/im-chooser-simple.c:772
-#, c-format
-msgid "Unable to communicate to IMSettings services"
-msgstr "IMSettings ਸਰਵਿਸਾਂ ਨਾਲ ਸੰਪਰਕ ਕਰਨ ਵਿੱਚ ਅਸਮਰਥ"
+#: ../src/im-chooser-simple.c:725
+#, fuzzy
+msgid "No Input Method"
+msgstr "ਇੰਪੁੱਟ ਢੰਗ"
 
-#: ../src/im-chooser-simple.c:773
-msgid "Version mismatch"
-msgstr "ਵਰਜਨ ਵਖਰੇਵਾਂ"
-
-#: ../src/im-chooser-simple.c:787
-msgid "Unable to gather current status"
-msgstr "ਮੌਜੂਦਾ ਹਾਲਤ ਪਤਾ ਕਰਨ ਵਿੱਚ ਅਸਮਰਥ"
-
-#: ../src/im-chooser-simple.c:793
-msgid "Unable to get Input Method information"
-msgstr "ਇੰਪੁੱਟ ਢੰਗ ਜਾਣਕਾਰੀ ਲੈਣ ਵਿੱਚ ਅਸਮਰਥ"
-
-#: ../src/im-chooser-simple.c:840
+#: ../src/im-chooser-simple.c:727
 #, c-format
 msgid "Use %s"
 msgstr "%s ਵਰਤੋ"
 
-#: ../src/im-chooser-simple.c:843
+#: ../src/im-chooser-simple.c:731
 msgid " (legacy)"
 msgstr " (ਪੁਰਾਤਨ)"
 
-#: ../src/im-chooser-simple.c:845
+#: ../src/im-chooser-simple.c:733
 msgid " (recommended)"
 msgstr " (ਸਿਫਾਰਸ਼-ਕੀਤਾ)"
 
-#: ../src/im-chooser-simple.c:960
-msgid "_Enable input method feature"
-msgstr "ਇੰਪੁੱਟ ਢੰਗ ਵਿਸ਼ੇਸ਼ਤਾ ਯੋਗ(_E)"
+#: ../src/im-chooser-simple.c:775
+#, c-format
+msgid "Unable to communicate to IMSettings services"
+msgstr "IMSettings ਸਰਵਿਸਾਂ ਨਾਲ ਸੰਪਰਕ ਕਰਨ ਵਿੱਚ ਅਸਮਰਥ"
 
-#: ../src/im-chooser-simple.c:968
+#: ../src/im-chooser-simple.c:776
+msgid "Version mismatch"
+msgstr "ਵਰਜਨ ਵਖਰੇਵਾਂ"
+
+#: ../src/im-chooser-simple.c:790
+msgid "Unable to gather current status"
+msgstr "ਮੌਜੂਦਾ ਹਾਲਤ ਪਤਾ ਕਰਨ ਵਿੱਚ ਅਸਮਰਥ"
+
+#: ../src/im-chooser-simple.c:796
+msgid "Unable to get Input Method information"
+msgstr "ਇੰਪੁੱਟ ਢੰਗ ਜਾਣਕਾਰੀ ਲੈਣ ਵਿੱਚ ਅਸਮਰਥ"
+
+#: ../src/im-chooser-simple.c:906
 msgid "<b>Input Method</b>"
 msgstr "<b>ਇੰਪੁੱਟ ਢੰਗ</b>"
 
-#: ../src/im-chooser-simple.c:1001
+#: ../src/im-chooser-simple.c:941
 msgid "Input Method _Preferences..."
 msgstr "ਇੰਪੁੱਟ ਢੰਗ ਪਸੰਦਾਂ(_P)..."
 
-#: ../src/im-chooser-simple.c:1028
-msgid "Show the status icon"
-msgstr "ਹਾਲਤ ਆਈਕਾਨ ਵੇਖਾਓ"
-
-#: ../src/main.c:53
-msgid "<span weight=\"bold\" size=\"larger\">No input method is available</span>"
+#: ../src/main.c:54
+msgid ""
+"<span weight=\"bold\" size=\"larger\">No input method is available</span>"
 msgstr "<span weight=\"bold\" size=\"larger\">ਕੋਈ ਇੱਪੁੱਟ ਢੰਗ ਉਪਲੱਬਧ ਨਹੀਂ ਹੈ</span>"
 
-#: ../src/main.c:56
+#: ../src/main.c:57
 msgid "Please install any input methods before running if you like."
 msgstr "ਜੇ ਤੁਸੀਂ ਚਾਹੁੰਦੇ ਹੋ ਤਾਂ ਚਲਾਉਣ ਤੋਂ ਪਹਿਲਾਂ ਕੋਈ ਵੀ ਇੱਪੁੱਟ ਢੰਗ ਇੰਸਟਾਲ ਕਰੋ।"
 
-#: ../src/main.c:144
-msgid "IM Chooser - Input Method configuration tool"
-msgstr "IM ਚੋਣਕਾਰ - ਇੰਪੁੱਟ ਢੰਗ ਸੰਰਚਨਾ ਟੂਲ"
+#: ../src/main.c:87
+msgid "Could not connect to the session manager"
+msgstr ""
 
-#: ../src/main.c:173
+#: ../src/main.c:106
+msgid "[options...]"
+msgstr ""
+
+#: ../src/main.c:130
+#, c-format
+msgid "Could not parse arguments: %s\n"
+msgstr ""
+
+#: ../src/main.c:143 ../src/im-chooser.desktop.in.in.h:2
+#: ../src/xfce4-im-chooser.desktop.in.h:2
+#, fuzzy
+msgid "Input Method selector"
+msgstr "ਇੰਪੁੱਟ ਢੰਗ"
+
+#: ../src/main.c:170
 msgid "Log Out"
 msgstr "ਲਾਗ ਆਊਟ"
 
@@ -174,7 +185,14 @@ msgid ""
 "desktop"
 msgstr "ਵਰਤਣ ਲਈ ਇੰਪੁੱਟ ਢੰਗ ਚੁਣੋ ਜਾਂ ਡੈਸਕਟਾਪ ਵਾਸਤੇ ਇੰਪੁੱਟ ਢੰਗ ਦੀ ਵਰਤੋਂ ਨੂੰ ਅਯੋਗ ਕਰੋ।"
 
-#: ../src/im-chooser.desktop.in.in.h:2 ../src/xfce4-im-chooser.desktop.in.h:2
-msgid "Input Method"
-msgstr "ਇੰਪੁੱਟ ਢੰਗ"
+#~ msgid "Updating Input Method list"
+#~ msgstr "ਇੰਪੁੱਟ ਢੰਗ ਸੂਚੀ ਅੱਪਡੇਟ ਹੋ ਰਹੀ ਹੈ"
 
+#~ msgid "_Enable input method feature"
+#~ msgstr "ਇੰਪੁੱਟ ਢੰਗ ਵਿਸ਼ੇਸ਼ਤਾ ਯੋਗ(_E)"
+
+#~ msgid "Show the status icon"
+#~ msgstr "ਹਾਲਤ ਆਈਕਾਨ ਵੇਖਾਓ"
+
+#~ msgid "IM Chooser - Input Method configuration tool"
+#~ msgstr "IM ਚੋਣਕਾਰ - ਇੰਪੁੱਟ ਢੰਗ ਸੰਰਚਨਾ ਟੂਲ"

@@ -7,48 +7,45 @@ msgid ""
 msgstr ""
 "Project-Id-Version: im-chooser 0.3.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-02-23 23:38+0900\n"
+"POT-Creation-Date: 2010-11-15 16:11+0900\n"
 "PO-Revision-Date: 2010-08-22 16:22+0330\n"
 "Last-Translator: Mostafa <info@mostafadaneshvar.com>\n"
 "Language-Team: none\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../src/im-chooser-simple.c:124
+#: ../src/im-chooser-simple.c:120
 msgid "X applications"
 msgstr "نرم‌افزارها x"
 
-#: ../src/im-chooser-simple.c:125
+#: ../src/im-chooser-simple.c:121
 msgid "GTK+ applications"
 msgstr "نرم‌افزارهای GTK+"
 
-#: ../src/im-chooser-simple.c:126
+#: ../src/im-chooser-simple.c:122
 msgid "Qt applications"
 msgstr "نرم‌افزارهای Qt"
 
-#: ../src/im-chooser-simple.c:178
-msgid "Updating Input Method list"
-msgstr "به روزرسانی لیست شیوه ورودی"
-
-#: ../src/im-chooser-simple.c:281
+#: ../src/im-chooser-simple.c:205
 msgid "Unable to get the information"
 msgstr "ناتوان در دریافت اطلاعات"
 
-#: ../src/im-chooser-simple.c:358
+#: ../src/im-chooser-simple.c:282
 msgid "Failed to start Input Method"
 msgstr "آغاز کردن شیوه ی ورودی شکست خورد"
 
-#: ../src/im-chooser-simple.c:385
+#: ../src/im-chooser-simple.c:309
 msgid "Failed to stop Input Method"
 msgstr "خطا در توقف شیوه ی ورودی"
 
-#: ../src/im-chooser-simple.c:490
+#: ../src/im-chooser-simple.c:410
 #, c-format
 msgid "Starting Input Method - %s"
 msgstr "شروع شیوه ورودی - %s"
 
-#: ../src/im-chooser-simple.c:507
+#: ../src/im-chooser-simple.c:427
 #, c-format
 msgid "Stopping Input Method - %s"
 msgstr "توقف شیوه ورودی - %s"
@@ -56,9 +53,8 @@ msgstr "توقف شیوه ورودی - %s"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications and Qt applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications and GTK+ applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications and Qt applications</i></small>"
-#: ../src/im-chooser-simple.c:593
-#: ../src/im-chooser-simple.c:596
-#: ../src/im-chooser-simple.c:599
+#: ../src/im-chooser-simple.c:513 ../src/im-chooser-simple.c:516
+#: ../src/im-chooser-simple.c:519
 #, c-format
 msgid ", except %s and %s"
 msgstr ", بجز %s و %s"
@@ -66,109 +62,131 @@ msgstr ", بجز %s و %s"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except Qt applications</i></small>"
-#: ../src/im-chooser-simple.c:602
-#: ../src/im-chooser-simple.c:605
-#: ../src/im-chooser-simple.c:608
+#: ../src/im-chooser-simple.c:522 ../src/im-chooser-simple.c:525
+#: ../src/im-chooser-simple.c:528
 #, c-format
 msgid ", except %s"
 msgstr "، بجز %s"
 
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications</i></small>"
-#: ../src/im-chooser-simple.c:613
+#: ../src/im-chooser-simple.c:533
 #, c-format
-msgid "<small><i>Note: this change will not take effect until you next log in%s</i></small>"
-msgstr "<small><i>نکته: این تغییرات تا ورود بعدی شما اعمال می شوند%s</i></small>"
+msgid ""
+"<small><i>Note: this change will not take effect until you next log in%s</"
+"i></small>"
+msgstr ""
+"<small><i>نکته: این تغییرات تا ورود بعدی شما اعمال می شوند%s</i></small>"
 
-#: ../src/im-chooser-simple.c:672
+#: ../src/im-chooser-simple.c:592
 msgid "Parent Window"
 msgstr "پنجره‌ اصلی"
 
-#: ../src/im-chooser-simple.c:673
+#: ../src/im-chooser-simple.c:593
 msgid "GtkWindow that points to the parent window"
 msgstr "GtkWindow که نقاطی که پنجره ی اصلی باشند"
 
-#: ../src/im-chooser-simple.c:678
+#: ../src/im-chooser-simple.c:598
 msgid "Note type"
 msgstr "نوع فایل"
 
-#: ../src/im-chooser-simple.c:679
+#: ../src/im-chooser-simple.c:599
 msgid "A enum value to determine which notes should be displayed"
 msgstr "یک مقدار شمارشی برای پیداکردن اینکه کدام یادداشت ها نمایش داده شوند"
 
 #. setup a progress window
-#: ../src/im-chooser-simple.c:722
+#: ../src/im-chooser-simple.c:642
 msgid "Work in progress..."
 msgstr "عملیات در حال پیش‌روی..."
 
-#: ../src/im-chooser-simple.c:772
-#, c-format
-msgid "Unable to communicate to IMSettings services"
-msgstr "قادر به ارتباط به خدمات IMSettings نیست"
+#: ../src/im-chooser-simple.c:725
+#, fuzzy
+msgid "No Input Method"
+msgstr "شیوه‌ی ورودی"
 
-#: ../src/im-chooser-simple.c:773
-msgid "Version mismatch"
-msgstr "نسخه مطابقت نمی‌کند"
-
-#: ../src/im-chooser-simple.c:787
-msgid "Unable to gather current status"
-msgstr "قادر به جمعاوری وضعیت کنونی نیست"
-
-#: ../src/im-chooser-simple.c:793
-msgid "Unable to get Input Method information"
-msgstr "قادر به دریافت اطلاعات شیوه خروجی نیست"
-
-#: ../src/im-chooser-simple.c:840
+#: ../src/im-chooser-simple.c:727
 #, c-format
 msgid "Use %s"
 msgstr "استفاده  %s"
 
-#: ../src/im-chooser-simple.c:843
+#: ../src/im-chooser-simple.c:731
 msgid " (legacy)"
 msgstr "(میراث)"
 
-#: ../src/im-chooser-simple.c:845
+#: ../src/im-chooser-simple.c:733
 msgid " (recommended)"
 msgstr "(توصیه شوده)"
 
-#: ../src/im-chooser-simple.c:960
-msgid "_Enable input method feature"
-msgstr "فعالسازی ویژگی شیوه‌ی ورودی"
+#: ../src/im-chooser-simple.c:775
+#, c-format
+msgid "Unable to communicate to IMSettings services"
+msgstr "قادر به ارتباط به خدمات IMSettings نیست"
 
-#: ../src/im-chooser-simple.c:968
+#: ../src/im-chooser-simple.c:776
+msgid "Version mismatch"
+msgstr "نسخه مطابقت نمی‌کند"
+
+#: ../src/im-chooser-simple.c:790
+msgid "Unable to gather current status"
+msgstr "قادر به جمعاوری وضعیت کنونی نیست"
+
+#: ../src/im-chooser-simple.c:796
+msgid "Unable to get Input Method information"
+msgstr "قادر به دریافت اطلاعات شیوه خروجی نیست"
+
+#: ../src/im-chooser-simple.c:906
 msgid "<b>Input Method</b>"
 msgstr "<b>شیوه‌ی ورودی</b>"
 
-#: ../src/im-chooser-simple.c:1001
+#: ../src/im-chooser-simple.c:941
 msgid "Input Method _Preferences..."
 msgstr "ترجیحات دستگاه ورودی..."
 
-#: ../src/im-chooser-simple.c:1028
-msgid "Show the status icon"
-msgstr "نشان‌دادن نماد وضعیت"
-
-#: ../src/main.c:53
-msgid "<span weight=\"bold\" size=\"larger\">No input method is available</span>"
+#: ../src/main.c:54
+msgid ""
+"<span weight=\"bold\" size=\"larger\">No input method is available</span>"
 msgstr "<span weight=\"bold\" size=\"larger\">هیچ شیوه ورودی موجود نیست</span>"
 
-#: ../src/main.c:56
+#: ../src/main.c:57
 msgid "Please install any input methods before running if you like."
 msgstr "لطفا هر روش ورودی را قبل از اجرا اگر می خواهید را نصب کنید"
 
-#: ../src/main.c:144
-msgid "IM Chooser - Input Method configuration tool"
-msgstr "انتخابگر شیوه ورودی- ابزار پیکره بندی روش ورودی"
+#: ../src/main.c:87
+msgid "Could not connect to the session manager"
+msgstr ""
 
-#: ../src/main.c:173
+#: ../src/main.c:106
+msgid "[options...]"
+msgstr ""
+
+#: ../src/main.c:130
+#, c-format
+msgid "Could not parse arguments: %s\n"
+msgstr ""
+
+#: ../src/main.c:143 ../src/im-chooser.desktop.in.in.h:2
+#: ../src/xfce4-im-chooser.desktop.in.h:2
+#, fuzzy
+msgid "Input Method selector"
+msgstr "شیوه‌ی ورودی"
+
+#: ../src/main.c:170
 msgid "Log Out"
 msgstr "خروج از سیستم"
 
-#: ../src/im-chooser.desktop.in.in.h:1
-#: ../src/xfce4-im-chooser.desktop.in.h:1
-msgid "Choose the input method to be used or disable the input method usage on the desktop"
+#: ../src/im-chooser.desktop.in.in.h:1 ../src/xfce4-im-chooser.desktop.in.h:1
+msgid ""
+"Choose the input method to be used or disable the input method usage on the "
+"desktop"
 msgstr "انتخاب شیوه ورودی برای استفاده یا غیر فعال سازی شیوه ورودی در رومیزی"
 
-#: ../src/im-chooser.desktop.in.in.h:2
-#: ../src/xfce4-im-chooser.desktop.in.h:2
-msgid "Input Method"
-msgstr "شیوه‌ی ورودی"
+#~ msgid "Updating Input Method list"
+#~ msgstr "به روزرسانی لیست شیوه ورودی"
 
+#~ msgid "_Enable input method feature"
+#~ msgstr "فعالسازی ویژگی شیوه‌ی ورودی"
+
+#~ msgid "Show the status icon"
+#~ msgstr "نشان‌دادن نماد وضعیت"
+
+#~ msgid "IM Chooser - Input Method configuration tool"
+#~ msgstr "انتخابگر شیوه ورودی- ابزار پیکره بندی روش ورودی"

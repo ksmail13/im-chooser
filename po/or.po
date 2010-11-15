@@ -11,10 +11,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: im-chooser.trunk.or\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-02-23 23:38+0900\n"
+"POT-Creation-Date: 2010-11-15 16:11+0900\n"
 "PO-Revision-Date: 2008-09-22 14:48+0530\n"
 "Last-Translator: Manoj Kumar Giri <mgiri@redhat.com>\n"
 "Language-Team: Oriya\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -22,40 +23,36 @@ msgstr ""
 "Plural-Forms: nplurals=2;plural=(n!=1)\n"
 "\n"
 
-#: ../src/im-chooser-simple.c:124
+#: ../src/im-chooser-simple.c:120
 msgid "X applications"
 msgstr "X ପ୍ରୟୋଗଗୁଡ଼ିକ"
 
-#: ../src/im-chooser-simple.c:125
+#: ../src/im-chooser-simple.c:121
 msgid "GTK+ applications"
 msgstr "GTK+ ପ୍ରୟୋଗଗୁଡ଼ିକ"
 
-#: ../src/im-chooser-simple.c:126
+#: ../src/im-chooser-simple.c:122
 msgid "Qt applications"
 msgstr "Qt ପ୍ରୟୋଗଗୁଡ଼ିକ"
 
-#: ../src/im-chooser-simple.c:178
-msgid "Updating Input Method list"
-msgstr "ନିବେଶ ପ୍ରଣାଳୀ ତାଲିକାକୁ ଅଦ୍ୟତନ କରାଯାଉଛି"
-
-#: ../src/im-chooser-simple.c:281
+#: ../src/im-chooser-simple.c:205
 msgid "Unable to get the information"
 msgstr "ସୂଚନା ପାଇବାରେ ଅସମର୍ଥ"
 
-#: ../src/im-chooser-simple.c:358
+#: ../src/im-chooser-simple.c:282
 msgid "Failed to start Input Method"
 msgstr "ନିବେଶ ପ୍ରଣାଳୀ ମାନଙ୍କୁ ଆରମ୍ଭ କରିବାରେ ବିଫଳ"
 
-#: ../src/im-chooser-simple.c:385
+#: ../src/im-chooser-simple.c:309
 msgid "Failed to stop Input Method"
 msgstr "ନିବେଶ ପ୍ରଣାଳୀମାନଙ୍କୁ ଅଟକାଇବାରେ ବିଫଳ"
 
-#: ../src/im-chooser-simple.c:490
+#: ../src/im-chooser-simple.c:410
 #, c-format
 msgid "Starting Input Method - %s"
 msgstr "ନିବେଶ ପ୍ରଣାଳୀ - %s କୁ ଆରମ୍ଭ କରାଯାଉଛି"
 
-#: ../src/im-chooser-simple.c:507
+#: ../src/im-chooser-simple.c:427
 #, c-format
 msgid "Stopping Input Method - %s"
 msgstr "ନିବେଶ ପ୍ରଣାଳୀ - %s କୁ ଅଟକାଯାଉଛି"
@@ -63,8 +60,8 @@ msgstr "ନିବେଶ ପ୍ରଣାଳୀ - %s କୁ ଅଟକାଯାଉ�
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications and Qt applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications and GTK+ applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications and Qt applications</i></small>"
-#: ../src/im-chooser-simple.c:593 ../src/im-chooser-simple.c:596
-#: ../src/im-chooser-simple.c:599
+#: ../src/im-chooser-simple.c:513 ../src/im-chooser-simple.c:516
+#: ../src/im-chooser-simple.c:519
 #, c-format
 msgid ", except %s and %s"
 msgstr ", %s ଏବଂ %s ବ୍ୟତିତ"
@@ -72,14 +69,14 @@ msgstr ", %s ଏବଂ %s ବ୍ୟତିତ"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except Qt applications</i></small>"
-#: ../src/im-chooser-simple.c:602 ../src/im-chooser-simple.c:605
-#: ../src/im-chooser-simple.c:608
+#: ../src/im-chooser-simple.c:522 ../src/im-chooser-simple.c:525
+#: ../src/im-chooser-simple.c:528
 #, c-format
 msgid ", except %s"
 msgstr ", %s ବ୍ୟତିତ"
 
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications</i></small>"
-#: ../src/im-chooser-simple.c:613
+#: ../src/im-chooser-simple.c:533
 #, c-format
 msgid ""
 "<small><i>Note: this change will not take effect until you next log in%s</"
@@ -88,88 +85,100 @@ msgstr ""
 "<small><i>ଟିପ୍ପଣୀ: ଆପଣଙ୍କ ପରବର୍ତ୍ତୀ ଲଗଇନ %s ପର୍ଯ୍ଯନ୍ତ ଏହି ପରିବର୍ତ୍ତନଟି ପ୍ରଭାବିତ ହେବନାହିଁ</i></"
 "small>"
 
-#: ../src/im-chooser-simple.c:672
+#: ../src/im-chooser-simple.c:592
 msgid "Parent Window"
 msgstr "ମୂଳ ୱିଣ୍ଡୋ"
 
-#: ../src/im-chooser-simple.c:673
+#: ../src/im-chooser-simple.c:593
 msgid "GtkWindow that points to the parent window"
 msgstr "Gtk ୱିଣ୍ଡୋ ଯାହାକି ମୂଳ ୱିଣ୍ଡୋକୁ ସୂଚାଉଅଛି"
 
-#: ../src/im-chooser-simple.c:678
+#: ../src/im-chooser-simple.c:598
 msgid "Note type"
 msgstr "ଟିପ୍ପଣୀ ପ୍ରକାର"
 
-#: ../src/im-chooser-simple.c:679
+#: ../src/im-chooser-simple.c:599
 msgid "A enum value to determine which notes should be displayed"
 msgstr "କେଉଁ ଟିପ୍ପଣୀଗୁଡ଼ିକୁ ଦର୍ଶାଯିବା ଉଚିତ ତାହାର ମୂଲ୍ଯ ନିର୍ଦ୍ଧାରଣ କରିବା ପାଇଁ enum ମୂଲ୍ୟ"
 
 #. setup a progress window
-#: ../src/im-chooser-simple.c:722
+#: ../src/im-chooser-simple.c:642
 msgid "Work in progress..."
 msgstr "କାମ ପ୍ରଗତି କରୁଛି..."
 
-#: ../src/im-chooser-simple.c:772
-#, c-format
-msgid "Unable to communicate to IMSettings services"
-msgstr "IMSettings ସେବା ସହିତ ଯୋଗାଯୋଗ କରିବାରେ ଅସମର୍ଥ"
+#: ../src/im-chooser-simple.c:725
+#, fuzzy
+msgid "No Input Method"
+msgstr "ନିବେଶ ପ୍ରଣାଳୀ"
 
-#: ../src/im-chooser-simple.c:773
-msgid "Version mismatch"
-msgstr "ସଂସ୍କରଣ ମେଳଖାଉନାହିଁ"
-
-#: ../src/im-chooser-simple.c:787
-msgid "Unable to gather current status"
-msgstr "ପ୍ରଚଳିତ ସ୍ଥିତିକୁ ଏକଜୁଟ କରିବାରେ ଅସମର୍ଥ"
-
-#: ../src/im-chooser-simple.c:793
-msgid "Unable to get Input Method information"
-msgstr "ନିବେଶ ପ୍ରଣାଳୀ ସୂଚନା ପାଇବାରେ ଅସମର୍ଥ"
-
-#: ../src/im-chooser-simple.c:840
+#: ../src/im-chooser-simple.c:727
 #, c-format
 msgid "Use %s"
 msgstr "%s କୁ ବ୍ୟବହାର କରନ୍ତୁ"
 
-#: ../src/im-chooser-simple.c:843
+#: ../src/im-chooser-simple.c:731
 msgid " (legacy)"
 msgstr " (ପୁରୁଣା)"
 
-#: ../src/im-chooser-simple.c:845
+#: ../src/im-chooser-simple.c:733
 msgid " (recommended)"
 msgstr " (ପରାମର୍ଶିତ)"
 
-#: ../src/im-chooser-simple.c:960
-msgid "_Enable input method feature"
-msgstr "ନିବେଶ ପ୍ରଣାଳୀର ବିଶେଷ ଗୁଣକୁ ସକ୍ରିୟ କରନ୍ତୁ (_E)"
+#: ../src/im-chooser-simple.c:775
+#, c-format
+msgid "Unable to communicate to IMSettings services"
+msgstr "IMSettings ସେବା ସହିତ ଯୋଗାଯୋଗ କରିବାରେ ଅସମର୍ଥ"
 
-#: ../src/im-chooser-simple.c:968
+#: ../src/im-chooser-simple.c:776
+msgid "Version mismatch"
+msgstr "ସଂସ୍କରଣ ମେଳଖାଉନାହିଁ"
+
+#: ../src/im-chooser-simple.c:790
+msgid "Unable to gather current status"
+msgstr "ପ୍ରଚଳିତ ସ୍ଥିତିକୁ ଏକଜୁଟ କରିବାରେ ଅସମର୍ଥ"
+
+#: ../src/im-chooser-simple.c:796
+msgid "Unable to get Input Method information"
+msgstr "ନିବେଶ ପ୍ରଣାଳୀ ସୂଚନା ପାଇବାରେ ଅସମର୍ଥ"
+
+#: ../src/im-chooser-simple.c:906
 msgid "<b>Input Method</b>"
 msgstr "<b>ନିବେଶ ପ୍ରଣାଳୀ</b>"
 
-#: ../src/im-chooser-simple.c:1001
+#: ../src/im-chooser-simple.c:941
 msgid "Input Method _Preferences..."
 msgstr "ନିବେଶ ପ୍ରଣାଳୀ ପସନ୍ଦଗୁଡିକ (_P)..."
 
-#: ../src/im-chooser-simple.c:1028
-msgid "Show the status icon"
-msgstr "ଅବସ୍ଥିତି ଚିତ୍ରସଂକେତ ଦର୍ଶାନ୍ତୁ"
-
-#: ../src/main.c:53
+#: ../src/main.c:54
 msgid ""
 "<span weight=\"bold\" size=\"larger\">No input method is available</span>"
 msgstr ""
 "<span weight=\"bold\" size=\"larger\">କୌଣସି ନିବେଶ ପ୍ରଣାଳୀ ଉପଲବ୍ଧ ନାହିଁ</span>"
 
-#: ../src/main.c:56
+#: ../src/main.c:57
 msgid "Please install any input methods before running if you like."
 msgstr "ଯଦି ଆପଣ ଚାହାନ୍ତି ଚଲାଇବା ପୂର୍ବରୁ ଦୟାକରି କୌଣସି ନିବେଶ ପ୍ରଣାଳୀକୁ ସ୍ଥାପନ କରନ୍ତୁ।"
 
-#: ../src/main.c:144
-msgid "IM Chooser - Input Method configuration tool"
-msgstr "ନିବେଶ ପ୍ରଣାଳୀ ଚୟକ - ନିବେଶ ପ୍ରଣାଳୀ ବିନ୍ଯାସ ଉପକରଣ"
+#: ../src/main.c:87
+msgid "Could not connect to the session manager"
+msgstr ""
 
-#: ../src/main.c:173
+#: ../src/main.c:106
+msgid "[options...]"
+msgstr ""
+
+#: ../src/main.c:130
+#, c-format
+msgid "Could not parse arguments: %s\n"
+msgstr ""
+
+#: ../src/main.c:143 ../src/im-chooser.desktop.in.in.h:2
+#: ../src/xfce4-im-chooser.desktop.in.h:2
+#, fuzzy
+msgid "Input Method selector"
+msgstr "ନିବେଶ ପ୍ରଣାଳୀ"
+
+#: ../src/main.c:170
 msgid "Log Out"
 msgstr "ଲଗଆଉଟ କରନ୍ତୁ"
 
@@ -181,6 +190,14 @@ msgstr ""
 "ବ୍ଯବହାର କରିବାକୁ ଥିବା ନିବେଶ ପ୍ରଣାଳୀକୁ ଚୟନ କରନ୍ତୁ କିମ୍ବା ଡେସ୍କଟପରେ ନିବେଶ ପ୍ରଣାଳୀର ବ୍ଯବହାର ବିଧିକୁ "
 "ନିଷ୍କ୍ରିୟ କରନ୍ତୁ"
 
-#: ../src/im-chooser.desktop.in.in.h:2 ../src/xfce4-im-chooser.desktop.in.h:2
-msgid "Input Method"
-msgstr "ନିବେଶ ପ୍ରଣାଳୀ"
+#~ msgid "Updating Input Method list"
+#~ msgstr "ନିବେଶ ପ୍ରଣାଳୀ ତାଲିକାକୁ ଅଦ୍ୟତନ କରାଯାଉଛି"
+
+#~ msgid "_Enable input method feature"
+#~ msgstr "ନିବେଶ ପ୍ରଣାଳୀର ବିଶେଷ ଗୁଣକୁ ସକ୍ରିୟ କରନ୍ତୁ (_E)"
+
+#~ msgid "Show the status icon"
+#~ msgstr "ଅବସ୍ଥିତି ଚିତ୍ରସଂକେତ ଦର୍ଶାନ୍ତୁ"
+
+#~ msgid "IM Chooser - Input Method configuration tool"
+#~ msgstr "ନିବେଶ ପ୍ରଣାଳୀ ଚୟକ - ନିବେଶ ପ୍ରଣାଳୀ ବିନ୍ଯାସ ଉପକରଣ"

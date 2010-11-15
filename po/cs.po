@@ -9,49 +9,46 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda.master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-02-23 23:38+0900\n"
+"POT-Creation-Date: 2010-11-15 16:11+0900\n"
 "PO-Revision-Date: 2008-09-26 17:38+0200\n"
 "Last-Translator: Miloslav Trmač <mitr@volny.cz>\n"
 "Language-Team: Czech <fedora-cs-list@redhat.com>\n"
+"Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
-#: ../src/im-chooser-simple.c:124
+#: ../src/im-chooser-simple.c:120
 msgid "X applications"
 msgstr "X-aplikace"
 
-#: ../src/im-chooser-simple.c:125
+#: ../src/im-chooser-simple.c:121
 msgid "GTK+ applications"
 msgstr "GTK+ aplikace"
 
-#: ../src/im-chooser-simple.c:126
+#: ../src/im-chooser-simple.c:122
 msgid "Qt applications"
 msgstr "Qt aplikace"
 
-#: ../src/im-chooser-simple.c:178
-msgid "Updating Input Method list"
-msgstr "Aktualizuji seznam vstupních metod"
-
-#: ../src/im-chooser-simple.c:281
+#: ../src/im-chooser-simple.c:205
 msgid "Unable to get the information"
 msgstr "Nelze získat informace"
 
-#: ../src/im-chooser-simple.c:358
+#: ../src/im-chooser-simple.c:282
 msgid "Failed to start Input Method"
 msgstr "Start vstupních metod selhal"
 
-#: ../src/im-chooser-simple.c:385
+#: ../src/im-chooser-simple.c:309
 msgid "Failed to stop Input Method"
 msgstr "Ukončení vstupní metody selhalo"
 
-#: ../src/im-chooser-simple.c:490
+#: ../src/im-chooser-simple.c:410
 #, c-format
 msgid "Starting Input Method - %s"
 msgstr "Spouštím vstupní metodu - %s"
 
-#: ../src/im-chooser-simple.c:507
+#: ../src/im-chooser-simple.c:427
 #, c-format
 msgid "Stopping Input Method - %s"
 msgstr "Ukončuji vstupní metodu - %s"
@@ -59,8 +56,8 @@ msgstr "Ukončuji vstupní metodu - %s"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications and Qt applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications and GTK+ applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications and Qt applications</i></small>"
-#: ../src/im-chooser-simple.c:593 ../src/im-chooser-simple.c:596
-#: ../src/im-chooser-simple.c:599
+#: ../src/im-chooser-simple.c:513 ../src/im-chooser-simple.c:516
+#: ../src/im-chooser-simple.c:519
 #, c-format
 msgid ", except %s and %s"
 msgstr ",·kromě·%s·a·%s"
@@ -68,14 +65,14 @@ msgstr ",·kromě·%s·a·%s"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except Qt applications</i></small>"
-#: ../src/im-chooser-simple.c:602 ../src/im-chooser-simple.c:605
-#: ../src/im-chooser-simple.c:608
+#: ../src/im-chooser-simple.c:522 ../src/im-chooser-simple.c:525
+#: ../src/im-chooser-simple.c:528
 #, c-format
 msgid ", except %s"
 msgstr ", kromě·%s"
 
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications</i></small>"
-#: ../src/im-chooser-simple.c:613
+#: ../src/im-chooser-simple.c:533
 #, c-format
 msgid ""
 "<small><i>Note: this change will not take effect until you next log in%s</"
@@ -84,89 +81,101 @@ msgstr ""
 "<small><i>Pozn.: tato změna se neprojeví dokud se znovu nepřihlásíte %s</i></"
 "small>"
 
-#: ../src/im-chooser-simple.c:672
+#: ../src/im-chooser-simple.c:592
 msgid "Parent Window"
 msgstr "Rodičovské okno"
 
-#: ../src/im-chooser-simple.c:673
+#: ../src/im-chooser-simple.c:593
 msgid "GtkWindow that points to the parent window"
 msgstr "GtkWindow které odkazuje na rodičovské okno"
 
-#: ../src/im-chooser-simple.c:678
+#: ../src/im-chooser-simple.c:598
 msgid "Note type"
 msgstr "Typ poznámky"
 
-#: ../src/im-chooser-simple.c:679
+#: ../src/im-chooser-simple.c:599
 msgid "A enum value to determine which notes should be displayed"
 msgstr "Výčet který určuje kterí poznámka má být zobrazena"
 
 #. setup a progress window
-#: ../src/im-chooser-simple.c:722
+#: ../src/im-chooser-simple.c:642
 msgid "Work in progress..."
 msgstr "Probíhá..."
 
-#: ../src/im-chooser-simple.c:772
-#, c-format
-msgid "Unable to communicate to IMSettings services"
-msgstr "Nelze komunikovat se službou nastavení vstupních metod"
+#: ../src/im-chooser-simple.c:725
+#, fuzzy
+msgid "No Input Method"
+msgstr "Vstupní metoda"
 
-#: ../src/im-chooser-simple.c:773
-msgid "Version mismatch"
-msgstr "Verze nesouhlasí"
-
-#: ../src/im-chooser-simple.c:787
-msgid "Unable to gather current status"
-msgstr "Nelze získat aktuální stav"
-
-#: ../src/im-chooser-simple.c:793
-msgid "Unable to get Input Method information"
-msgstr "Nelze získat informaci o vstupní metodě"
-
-#: ../src/im-chooser-simple.c:840
+#: ../src/im-chooser-simple.c:727
 #, c-format
 msgid "Use %s"
 msgstr "Použít %s"
 
-#: ../src/im-chooser-simple.c:843
+#: ../src/im-chooser-simple.c:731
 msgid " (legacy)"
 msgstr "(zastaralé)"
 
-#: ../src/im-chooser-simple.c:845
+#: ../src/im-chooser-simple.c:733
 msgid " (recommended)"
 msgstr "(doporučeno)"
 
-#: ../src/im-chooser-simple.c:960
-msgid "_Enable input method feature"
-msgstr "_Povolit vstupní metody"
+#: ../src/im-chooser-simple.c:775
+#, c-format
+msgid "Unable to communicate to IMSettings services"
+msgstr "Nelze komunikovat se službou nastavení vstupních metod"
 
-#: ../src/im-chooser-simple.c:968
+#: ../src/im-chooser-simple.c:776
+msgid "Version mismatch"
+msgstr "Verze nesouhlasí"
+
+#: ../src/im-chooser-simple.c:790
+msgid "Unable to gather current status"
+msgstr "Nelze získat aktuální stav"
+
+#: ../src/im-chooser-simple.c:796
+msgid "Unable to get Input Method information"
+msgstr "Nelze získat informaci o vstupní metodě"
+
+#: ../src/im-chooser-simple.c:906
 msgid "<b>Input Method</b>"
 msgstr "<b>Vstupní metoda</b>"
 
-#: ../src/im-chooser-simple.c:1001
+#: ../src/im-chooser-simple.c:941
 msgid "Input Method _Preferences..."
 msgstr "Předvolby _vstupních metod..."
 
-#: ../src/im-chooser-simple.c:1028
-msgid "Show the status icon"
-msgstr "Ukázat stavovou ikonu"
-
-#: ../src/main.c:53
+#: ../src/main.c:54
 msgid ""
 "<span weight=\"bold\" size=\"larger\">No input method is available</span>"
 msgstr ""
 "<span·weight=\"bold\"·size=\"larger\">Není dostupná žádná vstupní metoda</"
 "span>"
 
-#: ../src/main.c:56
+#: ../src/main.c:57
 msgid "Please install any input methods before running if you like."
 msgstr "Před použítm je potřeba vstupní metody nainstalovat."
 
-#: ../src/main.c:144
-msgid "IM Chooser - Input Method configuration tool"
-msgstr "IM Chooser - konfigurační nástroj vstupních metod"
+#: ../src/main.c:87
+msgid "Could not connect to the session manager"
+msgstr ""
 
-#: ../src/main.c:173
+#: ../src/main.c:106
+msgid "[options...]"
+msgstr ""
+
+#: ../src/main.c:130
+#, fuzzy, c-format
+msgid "Could not parse arguments: %s\n"
+msgstr "Nemohu alokovat požadované oddíly: %s."
+
+#: ../src/main.c:143 ../src/im-chooser.desktop.in.in.h:2
+#: ../src/xfce4-im-chooser.desktop.in.h:2
+#, fuzzy
+msgid "Input Method selector"
+msgstr "Vstupní metoda"
+
+#: ../src/main.c:170
 msgid "Log Out"
 msgstr "Odhlásit"
 
@@ -178,9 +187,17 @@ msgstr ""
 "Vyberte, která vstupní metoda se má používat, nebo vsupní metody pro "
 "používání na desktopu vypněte"
 
-#: ../src/im-chooser.desktop.in.in.h:2 ../src/xfce4-im-chooser.desktop.in.h:2
-msgid "Input Method"
-msgstr "Vstupní metoda"
+#~ msgid "Updating Input Method list"
+#~ msgstr "Aktualizuji seznam vstupních metod"
+
+#~ msgid "_Enable input method feature"
+#~ msgstr "_Povolit vstupní metody"
+
+#~ msgid "Show the status icon"
+#~ msgstr "Ukázat stavovou ikonu"
+
+#~ msgid "IM Chooser - Input Method configuration tool"
+#~ msgstr "IM Chooser - konfigurační nástroj vstupních metod"
 
 #~ msgid "Error processing %%ksappend lines: %s"
 #~ msgstr "Chyba při zpracovávání řádků %%ksappend: %s"
@@ -1721,8 +1738,8 @@ msgstr "Vstupní metoda"
 #~ msgstr "Místo připojení \"%s\" je již používáno. Zadejte jiné."
 
 #~ msgid ""
-#~ "The size of the %s partition (%10.2f MB) exceeds the maximum size of %"
-#~ "10.2f MB."
+#~ "The size of the %s partition (%10.2f MB) exceeds the maximum size of "
+#~ "%10.2f MB."
 #~ msgstr ""
 #~ "Velikost oddílu %s (%10.2f MB) překračuje maximální velikost %10.2f MB."
 
@@ -2304,8 +2321,8 @@ msgstr "Vstupní metoda"
 #~ "%s\n"
 
 #~ msgid ""
-#~ "There was an error running your transaction for the following reason(s): %"
-#~ "s.\n"
+#~ "There was an error running your transaction for the following reason(s): "
+#~ "%s.\n"
 #~ msgstr "Při provádění transakce došlo k chybě z následujících důvodů: %s.\n"
 
 #~ msgid "Error Running Transaction"
@@ -2643,21 +2660,21 @@ msgstr "Vstupní metoda"
 #~ msgstr "_Pokračovat"
 
 #~ msgid ""
-#~ "The physical extent size cannot be changed because the value selected (%"
-#~ "10.2f MB) is larger than the smallest physical volume (%10.2f MB) in the "
-#~ "volume group."
+#~ "The physical extent size cannot be changed because the value selected "
+#~ "(%10.2f MB) is larger than the smallest physical volume (%10.2f MB) in "
+#~ "the volume group."
 #~ msgstr ""
 #~ "Velikost fyzického oddílu nelze změnit, protože zvolená hodnota (%10.2f "
 #~ "MB) je větší, než nejmenší fyzický svazek (%10.2f MB) ve skupině svazků."
 
 #~ msgid ""
-#~ "The physical extent size cannot be changed because the value selected (%"
-#~ "10.2f MB) is too large compared to the size of the smallest physical "
+#~ "The physical extent size cannot be changed because the value selected "
+#~ "(%10.2f MB) is too large compared to the size of the smallest physical "
 #~ "volume (%10.2f MB) in the volume group."
 #~ msgstr ""
 #~ "Velikost fyzického svazku nelze změnit, protože zvolená hodnota (%10.2f "
-#~ "MB) je příliš velká vzhledem k velikosti nejmenšího fyzického svazku (%"
-#~ "10.2f MB) ve skupině svazků."
+#~ "MB) je příliš velká vzhledem k velikosti nejmenšího fyzického svazku "
+#~ "(%10.2f MB) ve skupině svazků."
 
 #~ msgid "Too small"
 #~ msgstr "Příliš malý"
@@ -3209,9 +3226,6 @@ msgstr "Vstupní metoda"
 #~ msgid "Free"
 #~ msgstr "Volné"
 
-#~ msgid "Could not allocate requested partitions: %s."
-#~ msgstr "Nemohu alokovat požadované oddíly: %s."
-
 #~ msgid "Warning: %s."
 #~ msgstr "Varování: %s."
 
@@ -3395,8 +3409,8 @@ msgstr "Vstupní metoda"
 #~ "You must remove these partitions or restrict them to this drive before "
 #~ "this drive can be cloned. "
 #~ msgstr ""
-#~ "Zvolený zdrojový disk obsahuje oddíly, které nejsou omezeny na disk /dev/%"
-#~ "s.\n"
+#~ "Zvolený zdrojový disk obsahuje oddíly, které nejsou omezeny na disk /dev/"
+#~ "%s.\n"
 #~ "\n"
 #~ "Aby bylo možné klonovat disk, musíte je odstranit nebo omezit pouze na "
 #~ "zdrojový disk."
@@ -4544,8 +4558,8 @@ msgstr "Vstupní metoda"
 #~ "médium % s a opakujte stisknutím %s."
 
 #~ msgid ""
-#~ "The %s disc was not found in any of your CDROM drives. Please insert the %"
-#~ "s disc and press %s to retry."
+#~ "The %s disc was not found in any of your CDROM drives. Please insert the "
+#~ "%s disc and press %s to retry."
 #~ msgstr ""
 #~ "Nemohu nalézt médium %s v žádné jednotce. Vložte médium s distribucí %s a "
 #~ "stiskněte tlačítko %s pro opakování."
