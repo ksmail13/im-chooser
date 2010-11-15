@@ -28,8 +28,6 @@
 #include <string.h>
 #include <unistd.h>
 #include <glib/gi18n.h>
-#include <gconf/gconf.h>
-#include <gconf/gconf-client.h>
 #include "imsettings/imsettings.h"
 #include "imsettings/imsettings-request.h"
 #include "im-chooser-simple.h"
@@ -81,7 +79,6 @@ struct _IMChooserSimpleClass {
 struct _IMChooserSimple {
 	GObject             parent_instance;
 	GtkWidget          *widget;
-	GtkWidget          *checkbox_is_applet_shown;
 	GtkWidget          *widget_scrolled;
 	GtkWidget          *widget_im_list;
 	GtkWidget          *button_im_config;
@@ -134,20 +131,6 @@ im_chooser_simple_destroy_idle_cb(gpointer data)
 	IMChooserSimple *im = IM_CHOOSER_SIMPLE (data);
 
 	im->idle_source = 0;
-}
-
-static void
-im_chooser_simple_show_status_icon_on_toggled(GtkToggleButton *button,
-					      gpointer         user_data)
-{
-	GConfClient *client = gconf_client_get_default();
-	GConfValue *val = gconf_value_new(GCONF_VALUE_BOOL);
-
-	gconf_value_set_bool(val, gtk_toggle_button_get_active(button));
-	gconf_client_set(client, "/apps/imsettings-applet/show_icon",
-			 val, NULL);
-	gconf_value_free(val);
-	g_object_unref(client);
 }
 
 static void
@@ -390,7 +373,6 @@ im_chooser_simple_show_error(IMChooserSimple *im,
 {
 	GtkWidget *dlg;
 	gchar *p;
-	GtkBox *vbox, *hbox;
 
 	if (im->progress_id != 0)
 		g_source_remove(im->progress_id);
@@ -403,11 +385,8 @@ im_chooser_simple_show_error(IMChooserSimple *im,
 	gtk_message_dialog_format_secondary_text(GTK_MESSAGE_DIALOG (dlg), error->message);
 
 	/* for GNOME HIG compliance */
-	vbox = GTK_BOX (GTK_DIALOG (dlg)->vbox);
-	hbox = GTK_BOX (((GtkBoxChild *)vbox->children->data)->widget);
-	gtk_box_set_spacing(vbox, 12);
-	gtk_box_set_spacing(hbox, 12);
-	gtk_container_set_border_width(GTK_CONTAINER (hbox), 6);
+	g_object_set(G_OBJECT (dlg), "content-area-spacing", 12, NULL);
+	g_object_set(G_OBJECT (dlg), "content-area-border", 0, NULL);
 
 	gtk_dialog_run(GTK_DIALOG (dlg));
 	gtk_widget_destroy(dlg);
@@ -907,24 +886,18 @@ im_chooser_simple_new(void)
 GtkWidget *
 im_chooser_simple_get_widget(IMChooserSimple *im)
 {
-	GtkWidget *vbox;
-	GtkWidget *checkbox;
 	GtkWidget *frame, *label, *vbox_frame, *align_im;
 	GtkWidget *list, *scrolled;
 	GtkWidget *align_prefs, *button;
-	GtkWidget *align_applet;
 	GtkWidget *image, *hbox;
 	GtkCellRenderer *renderer;
 	GtkTreeViewColumn *column;
 	GtkTreeSelection *selection;
-	GConfClient *client;
-	GConfValue *val;
 
 	g_return_val_if_fail (IM_IS_CHOOSER_SIMPLE (im), NULL);
 
 	if (im->widget == NULL) {
 		/* setup widgets */
-		vbox = gtk_vbox_new(FALSE, 2);
 		hbox = gtk_hbox_new(FALSE, 1);
 		vbox_frame = gtk_vbox_new(FALSE, 3);
 
@@ -991,32 +964,12 @@ im_chooser_simple_get_widget(IMChooserSimple *im)
 		gtk_alignment_set_padding(GTK_ALIGNMENT (align_im), 6, 0, 18, 6);
 		gtk_container_add(GTK_CONTAINER (frame), align_im);
 
-		align_applet = gtk_alignment_new(0, 0, 0, 0);
-		im->checkbox_is_applet_shown = checkbox = gtk_check_button_new_with_mnemonic(_("Show the status icon"));
-		gtk_container_add(GTK_CONTAINER(align_applet), checkbox);
-		gtk_alignment_set_padding(GTK_ALIGNMENT (align_applet), 0, 6, 6, 6);
-		g_signal_connect(checkbox, "toggled",
-				 G_CALLBACK (im_chooser_simple_show_status_icon_on_toggled), im);
-
-		gtk_container_set_border_width(GTK_CONTAINER (vbox), 0);
-		gtk_box_pack_start(GTK_BOX (vbox), frame, FALSE, TRUE, 0);
-		gtk_box_pack_start(GTK_BOX (vbox), align_applet, FALSE, TRUE, 0);
-
-		im->widget = vbox;
+		im->widget = frame;
 	}
 	gtk_widget_show_all(im->widget);
 	_im_chooser_simple_update_im_list(im);
 
 	gtk_widget_set_sensitive(im->button_im_config, FALSE);
-
-	client = gconf_client_get_default();
-	val = gconf_client_get(client, "/apps/imsettings-applet/show_icon", NULL);
-	if (val && gconf_value_get_bool(val))
-		gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON (im->checkbox_is_applet_shown),
-					     TRUE);
-	else
-		gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON (im->checkbox_is_applet_shown),
-					     FALSE);
 
 	g_object_set(im, "note_type", im->note_type, NULL);
 

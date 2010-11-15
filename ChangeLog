@@ -1,3 +1,18 @@
+2010-11-15  Akira TAGOH  <tagoh@redhat.com>
+
+	* src/im-chooser-simple.c: get rid of the applet support.
+
+	* src/im-chooser.desktop.in.in (_Name): update for more convenience.
+
+	* src/xfce4-im-chooser.desktop.in (_Name): likewise.
+
+	* src/main.c: cleanup.
+	(_dialog_response_cb): Use EggSMClient instead of GnomeClient.
+	(main): get rid of libgnomeui code.
+
+	* configure.ac: Use gtk3 if available.
+	add --with-desktopfile option.
+
 2010-10-26  Akira TAGOH  <tagoh@redhat.com>
 
 	* src/im-chooser-simple.c: show none in the list as well

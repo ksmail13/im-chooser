@@ -42,13 +42,33 @@ AM_GLIB_GNU_GETTEXT
 dnl ======================================================================
 dnl check pkg-config stuff
 dnl ======================================================================
-PKG_CHECK_MODULES(IMCHOOSE, gtk+-2.0
-			    libgnomeui-2.0)
+PKG_PROG_PKG_CONFIG
+PKG_CHECK_MODULES(GTK3, gtk+-3.0, [
+	IMCHOOSE_GTK_VERSION=3],[
+	PKG_CHECK_MODULES(GTK2, gtk+-2.0)
+	IMCHOOSE_GTK_VERSION=2])
 PKG_CHECK_MODULES(IMSETTINGS, imsettings >= $IMSETTINGS_REQUIRED)
-AC_SUBST(IMCHOOSE_CFLAGS)
-AC_SUBST(IMCHOOSE_LIBS)
+AC_SUBST(GTK3_CFLAGS)
+AC_SUBST(GTK3_LIBS)
+AC_SUBST(GTK2_CFLAGS)
+AC_SUBST(GTK2_LIBS)
 AC_SUBST(IMSETTINGS_CFLAGS)
 AC_SUBST(IMSETTINGS_LIBS)
+
+AC_SUBST(IMCHOOSE_GTK_VERSION)
+
+AC_DEFINE(IMCHOOSE_GTK_VERSION, $IMCHOOSE_GTK_VERSION, [GTK+ version detected by pkg-config])
+
+if test $IMCHOOSE_GTK_VERSION == 3; then
+   	TOOLKIT_CFLAGS="$GTK3_CFLAGS"
+	TOOLKIT_LIBS="$GTK3_LIBS"
+else
+	TOOLKIT_CFLAGS="$GTK2_CFLAGS"
+	TOOLKIT_LIBS="$GTK2_LIBS"
+fi
+
+AC_SUBST(TOOLKIT_CFLAGS)
+AC_SUBST(TOOLKIT_LIBS)
 
 dnl ======================================================================
 dnl check another libraries
@@ -62,7 +82,11 @@ AM_PATH_GLIB_2_0($GLIB_REQUIRED, :,
 dnl ======================================================================
 dnl options
 dnl ======================================================================
+AC_ARG_WITH(desktopfile,
+	[AC_HELP_STRING([--with-desktopfile=FILE], [full path to the desktop file])],,
+	[with_desktopfile="$datadir/applications/im-chooser.desktop"])
 
+AC_SUBST(DESKTOPFILE, "$with_desktopfile")
 dnl ======================================================================
 dnl output
 dnl ======================================================================
@@ -86,6 +110,7 @@ dnl result
 dnl ======================================================================
 echo ""
 echo "========== Build Information =========="
-echo " CFLAGS:                     $CFLAGS $IMCHOOSE_CFLAGS $IMSETTINGS_CFLAGS"
-echo " LIBS:                       $LDFLAGS $IMCHOOSE_LIBS $IMSETTINGS_LIBS"
+echo " CFLAGS:                     $CFLAGS $TOOLKIT_CFLAGS $IMSETTINGS_CFLAGS"
+echo " LIBS:                       $LDFLAGS $TOOLKIT_LIBS $IMSETTINGS_LIBS"
+echo " GTK version:                $IMCHOOSE_GTK_VERSION"
 echo ""

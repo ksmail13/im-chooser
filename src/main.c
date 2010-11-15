@@ -26,7 +26,8 @@
 #endif
 #include <stdlib.h>
 #include <glib/gi18n.h>
-#include <gnome.h>
+#include "eggsmclient.h"
+#include "eggdesktopfile.h"
 #include "im-chooser-simple.h"
 
 static void
@@ -68,20 +69,6 @@ _im_notify_n_im_cb(IMChooserSimple *im,
 }
 
 static void
-_real_style_set(GtkWidget *widget,
-		GtkStyle  *prev_style)
-{
-	GtkDialog *dialog = GTK_DIALOG (widget);
-
-	gtk_container_set_border_width (GTK_CONTAINER (dialog->vbox),
-					5);
-	gtk_box_set_spacing (GTK_BOX (dialog->action_area),
-			     10);
-	gtk_container_set_border_width (GTK_CONTAINER (dialog->action_area),
-					5);
-}
-
-static void
 _dialog_response_cb(GtkDialog *dialog,
 		    gint       response_id,
 		    gpointer   data)
@@ -92,18 +79,15 @@ _dialog_response_cb(GtkDialog *dialog,
 		    break;
 	    case GTK_RESPONSE_APPLY:
 		    G_STMT_START {
-			    GnomeClient *client;
+			    GtkWidget *d;
 
-			    if ((client = gnome_master_client()) == NULL) {
-				    g_warning("Failed to get the master client instance.");
-				    return;
+			    if (!egg_sm_client_end_session(EGG_SM_CLIENT_LOGOUT, TRUE)) {
+				    d = gtk_message_dialog_new(NULL, 0, GTK_MESSAGE_ERROR,
+							       GTK_BUTTONS_OK,
+							       _("Could not connect to the session manager"));
+				    gtk_dialog_run(GTK_DIALOG (d));
+				    gtk_widget_destroy(d);
 			    }
-			    gnome_client_request_save(client,
-						      GNOME_SAVE_GLOBAL,
-						      TRUE,
-						      GNOME_INTERACT_ANY,
-						      FALSE,
-						      TRUE);
 			    return;
 		    } G_STMT_END;
 		    break;
@@ -119,13 +103,13 @@ int
 main(int    argc,
      char **argv)
 {
-	GnomeProgram *program;
+	GOptionContext *ctx = g_option_context_new(_("[options...]"));
 	GtkWidget *logout_button, *logout_image;
-	GtkWidget *window, *widget, *close_button;
+	GtkWidget *window, *widget, *close_button, *content_widget;
 	IMChooserSimple *im;
-	gchar *iconfile;
 	const gchar *xmodifiers, *gtk_immodule, *qt_immodule;
 	guint note_type = 0;
+	GError *err = NULL;
 
 #ifdef ENABLE_NLS
 	bindtextdomain (GETTEXT_PACKAGE, IMCHOOSE_LOCALEDIR);
@@ -135,24 +119,31 @@ main(int    argc,
 	textdomain (GETTEXT_PACKAGE);
 #endif /* ENABLE_NLS */
 
-	program = gnome_program_init("im-chooser", VERSION,
-				     LIBGNOMEUI_MODULE,
-				     argc, argv,
-				     NULL);
+	setlocale(LC_ALL, "");
+
+	g_type_init();
+
+	g_option_context_add_group(ctx, gtk_get_option_group(FALSE));
+	g_option_context_add_group(ctx, egg_sm_client_get_option_group());
+
+	if (!g_option_context_parse(ctx, &argc, &argv, &err)) {
+		g_printerr(_("Could not parse arguments: %s\n"), err->message);
+		g_error_free(err);
+		return 1;
+	}
+	if (!gtk_init_check(&argc, &argv)) {
+		const char *display_name_arg = gdk_get_display_arg_name();
+		if (display_name_arg == NULL)
+			display_name_arg = getenv("DISPLAY");
+		g_warning("cannot open display: %s", display_name_arg ? display_name_arg : "");
+		return 1;
+	}
 
 	window = gtk_dialog_new();
-	gtk_window_set_title(GTK_WINDOW (window), _("IM Chooser - Input Method configuration tool"));
-	iconfile = g_build_filename(ICONDIR, "im-chooser.png", NULL);
-	if (!g_file_test(iconfile, G_FILE_TEST_EXISTS)) {
-		g_free(iconfile);
-		iconfile = NULL;
-		gtk_window_set_icon_name(GTK_WINDOW (window), "im-chooser");
-	} else {
-		gtk_window_set_icon_from_file(GTK_WINDOW (window), iconfile, NULL);
-		g_free(iconfile);
-	}
+	gtk_window_set_title(GTK_WINDOW (window), _("Input Method selector"));
+
+	egg_set_desktop_file(DESKTOPFILE);
 	gtk_container_set_border_width(GTK_CONTAINER (window), 4);
-	gtk_container_set_border_width(GTK_CONTAINER (GTK_DIALOG (window)->vbox), 0);
 
 	im = im_chooser_simple_new();
 	xmodifiers = g_getenv("XMODIFIERS");
@@ -198,9 +189,9 @@ main(int    argc,
 	widget = im_chooser_simple_get_widget(im);
 
 	gtk_widget_show_all(window);
-	gtk_box_pack_start(GTK_BOX (GTK_DIALOG (window)->vbox), widget, TRUE, TRUE, 0);
 
-	GTK_WIDGET_GET_CLASS (GTK_DIALOG (window))->style_set = _real_style_set;
+	content_widget = gtk_dialog_get_content_area(GTK_DIALOG (window));
+	gtk_box_pack_start(GTK_BOX (content_widget), widget, TRUE, TRUE, 0);
 
 	g_signal_connect(window, "response",
 			 G_CALLBACK (_dialog_response_cb), im);
@@ -208,7 +199,7 @@ main(int    argc,
 	gtk_main();
 
 	g_object_unref(im);
-	g_object_unref(program);
+	g_option_context_free(ctx);
 
 	return 0;
 }
