@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ru\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-11-22 11:47+0900\n"
+"POT-Creation-Date: 2010-11-22 16:11+0900\n"
 "PO-Revision-Date: 2009-09-22 11:39+1000\n"
 "Last-Translator: Yulia Poyarkova <yulia.poyarkova@redhat.com>\n"
 "Language-Team: Russian <fedora-trans-ru@redhat.com>\n"
@@ -24,36 +24,36 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.11.4\n"
 
-#: ../src/im-chooser-simple.c:120
+#: ../src/ui/im-chooser-simple.c:120
 msgid "X applications"
 msgstr "приложений X"
 
-#: ../src/im-chooser-simple.c:121
+#: ../src/ui/im-chooser-simple.c:121
 msgid "GTK+ applications"
 msgstr "приложений GTK+ "
 
-#: ../src/im-chooser-simple.c:122
+#: ../src/ui/im-chooser-simple.c:122
 msgid "Qt applications"
 msgstr "приложений Qt"
 
-#: ../src/im-chooser-simple.c:205
+#: ../src/ui/im-chooser-simple.c:205
 msgid "Unable to get the information"
 msgstr "Не удается получить информацию"
 
-#: ../src/im-chooser-simple.c:282
+#: ../src/ui/im-chooser-simple.c:282
 msgid "Failed to start Input Method"
 msgstr "Не удалось инициализировать метод ввода"
 
-#: ../src/im-chooser-simple.c:309
+#: ../src/ui/im-chooser-simple.c:309
 msgid "Failed to stop Input Method"
 msgstr "Не удалось остановить метод ввода"
 
-#: ../src/im-chooser-simple.c:410
+#: ../src/ui/im-chooser-simple.c:410
 #, c-format
 msgid "Starting Input Method - %s"
 msgstr "Инициализация метода ввода - %s"
 
-#: ../src/im-chooser-simple.c:427
+#: ../src/ui/im-chooser-simple.c:427
 #, c-format
 msgid "Stopping Input Method - %s"
 msgstr "Остановка метода ввода - %s"
@@ -61,8 +61,8 @@ msgstr "Остановка метода ввода - %s"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications and Qt applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications and GTK+ applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications and Qt applications</i></small>"
-#: ../src/im-chooser-simple.c:513 ../src/im-chooser-simple.c:516
-#: ../src/im-chooser-simple.c:519
+#: ../src/ui/im-chooser-simple.c:513 ../src/ui/im-chooser-simple.c:516
+#: ../src/ui/im-chooser-simple.c:519
 #, c-format
 msgid ", except %s and %s"
 msgstr " за исключением %s и %s"
@@ -70,14 +70,14 @@ msgstr " за исключением %s и %s"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except Qt applications</i></small>"
-#: ../src/im-chooser-simple.c:522 ../src/im-chooser-simple.c:525
-#: ../src/im-chooser-simple.c:528
+#: ../src/ui/im-chooser-simple.c:522 ../src/ui/im-chooser-simple.c:525
+#: ../src/ui/im-chooser-simple.c:528
 #, c-format
 msgid ", except %s"
 msgstr " за исключением %s"
 
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications</i></small>"
-#: ../src/im-chooser-simple.c:533
+#: ../src/ui/im-chooser-simple.c:533
 #, c-format
 msgid ""
 "<small><i>Note: this change will not take effect until you next log in%s</"
@@ -86,108 +86,100 @@ msgstr ""
 "<small><i>Замечание: Это изменение не вступит в силу до следующего входа %s</"
 "i></small>"
 
-#: ../src/im-chooser-simple.c:592
+#: ../src/ui/im-chooser-simple.c:592
 msgid "Parent Window"
 msgstr "Родительское окно"
 
-#: ../src/im-chooser-simple.c:593
+#: ../src/ui/im-chooser-simple.c:593
 msgid "GtkWindow that points to the parent window"
 msgstr "GtkWindow указывает на родительское окно"
 
-#: ../src/im-chooser-simple.c:598
+#: ../src/ui/im-chooser-simple.c:598
 msgid "Note type"
 msgstr "Тип замечаний"
 
-#: ../src/im-chooser-simple.c:599
+#: ../src/ui/im-chooser-simple.c:599
 msgid "A enum value to determine which notes should be displayed"
 msgstr "Значение типа enum, определяющее отображаемые замечания"
 
 #. setup a progress window
-#: ../src/im-chooser-simple.c:642
+#: ../src/ui/im-chooser-simple.c:642
 msgid "Work in progress..."
 msgstr "В процессе..."
 
-#: ../src/im-chooser-simple.c:725
+#: ../src/ui/im-chooser-simple.c:725
 #, fuzzy
 msgid "No Input Method"
 msgstr "Метод ввода"
 
-#: ../src/im-chooser-simple.c:727
+#: ../src/ui/im-chooser-simple.c:727
 #, c-format
 msgid "Use %s"
 msgstr "Использовать %s"
 
-#: ../src/im-chooser-simple.c:731
+#: ../src/ui/im-chooser-simple.c:731
 msgid " (legacy)"
 msgstr " (устаревший)"
 
-#: ../src/im-chooser-simple.c:733
+#: ../src/ui/im-chooser-simple.c:733
 msgid " (recommended)"
 msgstr " (рекомендуется)"
 
-#: ../src/im-chooser-simple.c:775
+#: ../src/ui/im-chooser-simple.c:775
 #, c-format
 msgid "Unable to communicate to IMSettings services"
 msgstr "Не удается связаться со службами IMSettings"
 
-#: ../src/im-chooser-simple.c:776
+#: ../src/ui/im-chooser-simple.c:776
 msgid "Version mismatch"
 msgstr "Несоответствие версий"
 
-#: ../src/im-chooser-simple.c:790
+#: ../src/ui/im-chooser-simple.c:790
 msgid "Unable to gather current status"
 msgstr "Не удается получить текущий статус"
 
-#: ../src/im-chooser-simple.c:796
+#: ../src/ui/im-chooser-simple.c:796
 msgid "Unable to get Input Method information"
 msgstr "Не удается получить информацию о методе ввода"
 
-#: ../src/im-chooser-simple.c:906
+#: ../src/ui/im-chooser-simple.c:906
 msgid "<b>Input Method</b>"
 msgstr "<b>Метод ввода</b>"
 
-#: ../src/im-chooser-simple.c:941
+#: ../src/ui/im-chooser-simple.c:941
 msgid "Input Method _Preferences..."
 msgstr "_Параметры метода ввода"
 
-#: ../src/main.c:54
-msgid ""
-"<span weight=\"bold\" size=\"larger\">No input method is available</span>"
-msgstr ""
-"<span weight=\"bold\" size=\"larger\">Нет доступных методов ввода</span>"
-
-#: ../src/main.c:57
-msgid "Please install any input methods before running if you like."
-msgstr "Сначала установите методы ввода."
-
-#: ../src/main.c:87
-msgid "Could not connect to the session manager"
-msgstr ""
-
-#: ../src/main.c:106
+#: ../src/main.c:36
 msgid "[options...]"
 msgstr ""
 
-#: ../src/main.c:130
+#: ../src/main.c:56
 #, c-format
 msgid "Could not parse arguments: %s\n"
 msgstr ""
-
-#: ../src/main.c:143 ../src/im-chooser.desktop.in.in.h:2
-#: ../src/xfce4-im-chooser.desktop.in.h:2
-#, fuzzy
-msgid "Input Method Selector"
-msgstr "Метод ввода"
-
-#: ../src/main.c:170
-msgid "Log Out"
-msgstr "Выход"
 
 #: ../src/im-chooser.desktop.in.in.h:1 ../src/xfce4-im-chooser.desktop.in.h:1
 msgid ""
 "Choose the input method to be used or disable the input method usage on the "
 "desktop"
 msgstr "Выберите метод ввода или отключите использование метода ввода"
+
+#: ../src/im-chooser.desktop.in.in.h:2 ../src/xfce4-im-chooser.desktop.in.h:2
+#, fuzzy
+msgid "Input Method Selector"
+msgstr "Метод ввода"
+
+#~ msgid ""
+#~ "<span weight=\"bold\" size=\"larger\">No input method is available</span>"
+#~ msgstr ""
+#~ "<span weight=\"bold\" size=\"larger\">Нет доступных методов ввода</span>"
+
+#~ msgid "Please install any input methods before running if you like."
+#~ msgstr "Сначала установите методы ввода."
+
+#~ msgid "Log Out"
+#~ msgstr "Выход"
 
 #~ msgid "Updating Input Method list"
 #~ msgstr "Обновление списка методов ввода"

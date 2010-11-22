@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: im-chooser.trunk.hi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-11-22 11:47+0900\n"
+"POT-Creation-Date: 2010-11-22 16:11+0900\n"
 "PO-Revision-Date: 2008-10-13 16:27+0530\n"
 "Last-Translator: Rajesh Ranjan <rranjan@redhat.com>\n"
 "Language-Team: Hindi <hindi.sf.net>\n"
@@ -27,36 +27,36 @@ msgstr ""
 "\n"
 "\n"
 
-#: ../src/im-chooser-simple.c:120
+#: ../src/ui/im-chooser-simple.c:120
 msgid "X applications"
 msgstr "X अनुप्रयोग"
 
-#: ../src/im-chooser-simple.c:121
+#: ../src/ui/im-chooser-simple.c:121
 msgid "GTK+ applications"
 msgstr "GTK+ अनुप्रयोग"
 
-#: ../src/im-chooser-simple.c:122
+#: ../src/ui/im-chooser-simple.c:122
 msgid "Qt applications"
 msgstr "Qt अनुप्रयोग"
 
-#: ../src/im-chooser-simple.c:205
+#: ../src/ui/im-chooser-simple.c:205
 msgid "Unable to get the information"
 msgstr "सूचना पाने में असमर्थ"
 
-#: ../src/im-chooser-simple.c:282
+#: ../src/ui/im-chooser-simple.c:282
 msgid "Failed to start Input Method"
 msgstr "इनपुट विधि आरंभ करने में विफल"
 
-#: ../src/im-chooser-simple.c:309
+#: ../src/ui/im-chooser-simple.c:309
 msgid "Failed to stop Input Method"
 msgstr "इनपुट विधि रोकने में विफल"
 
-#: ../src/im-chooser-simple.c:410
+#: ../src/ui/im-chooser-simple.c:410
 #, c-format
 msgid "Starting Input Method - %s"
 msgstr "इनपुट विधि आरंभ कर रहा है - %s"
 
-#: ../src/im-chooser-simple.c:427
+#: ../src/ui/im-chooser-simple.c:427
 #, c-format
 msgid "Stopping Input Method - %s"
 msgstr "इनपुट विधि रोक रहा है - %s"
@@ -64,8 +64,8 @@ msgstr "इनपुट विधि रोक रहा है - %s"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications and Qt applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications and GTK+ applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications and Qt applications</i></small>"
-#: ../src/im-chooser-simple.c:513 ../src/im-chooser-simple.c:516
-#: ../src/im-chooser-simple.c:519
+#: ../src/ui/im-chooser-simple.c:513 ../src/ui/im-chooser-simple.c:516
+#: ../src/ui/im-chooser-simple.c:519
 #, c-format
 msgid ", except %s and %s"
 msgstr ", सिवाय %s और %s"
@@ -73,14 +73,14 @@ msgstr ", सिवाय %s और %s"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except Qt applications</i></small>"
-#: ../src/im-chooser-simple.c:522 ../src/im-chooser-simple.c:525
-#: ../src/im-chooser-simple.c:528
+#: ../src/ui/im-chooser-simple.c:522 ../src/ui/im-chooser-simple.c:525
+#: ../src/ui/im-chooser-simple.c:528
 #, c-format
 msgid ", except %s"
 msgstr ", सिवाय %s"
 
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications</i></small>"
-#: ../src/im-chooser-simple.c:533
+#: ../src/ui/im-chooser-simple.c:533
 #, c-format
 msgid ""
 "<small><i>Note: this change will not take effect until you next log in%s</"
@@ -89,101 +89,78 @@ msgstr ""
 "<small><i>नोट: यह बदलाव तबतक प्रभावी नहीं होगा जबतक आप अगली बार %s में लॉगिन नहीं "
 "होते हैं.</i></small>"
 
-#: ../src/im-chooser-simple.c:592
+#: ../src/ui/im-chooser-simple.c:592
 msgid "Parent Window"
 msgstr "जनक विंडो"
 
-#: ../src/im-chooser-simple.c:593
+#: ../src/ui/im-chooser-simple.c:593
 msgid "GtkWindow that points to the parent window"
 msgstr "GtkWindow जो कि जनक विंडो से इंगित करता है"
 
-#: ../src/im-chooser-simple.c:598
+#: ../src/ui/im-chooser-simple.c:598
 msgid "Note type"
 msgstr "नोट प्रकार"
 
-#: ../src/im-chooser-simple.c:599
+#: ../src/ui/im-chooser-simple.c:599
 msgid "A enum value to determine which notes should be displayed"
 msgstr "यह निर्धारित करने के लिए enum मान कि कौन सा नोट्स दिखाया जाना चाहिए"
 
 #. setup a progress window
-#: ../src/im-chooser-simple.c:642
+#: ../src/ui/im-chooser-simple.c:642
 msgid "Work in progress..."
 msgstr "कार्य प्रगति पर है..."
 
-#: ../src/im-chooser-simple.c:725
+#: ../src/ui/im-chooser-simple.c:725
 #, fuzzy
 msgid "No Input Method"
 msgstr "इनपुट विधि"
 
-#: ../src/im-chooser-simple.c:727
+#: ../src/ui/im-chooser-simple.c:727
 #, c-format
 msgid "Use %s"
 msgstr "%s प्रयोग करें"
 
-#: ../src/im-chooser-simple.c:731
+#: ../src/ui/im-chooser-simple.c:731
 msgid " (legacy)"
 msgstr " (पुरातन)"
 
-#: ../src/im-chooser-simple.c:733
+#: ../src/ui/im-chooser-simple.c:733
 msgid " (recommended)"
 msgstr " (अनुशंसित)"
 
-#: ../src/im-chooser-simple.c:775
+#: ../src/ui/im-chooser-simple.c:775
 #, c-format
 msgid "Unable to communicate to IMSettings services"
 msgstr "IMSettings सेवा में संचार में असमर्थ"
 
-#: ../src/im-chooser-simple.c:776
+#: ../src/ui/im-chooser-simple.c:776
 msgid "Version mismatch"
 msgstr "संस्करण बेमेल"
 
-#: ../src/im-chooser-simple.c:790
+#: ../src/ui/im-chooser-simple.c:790
 msgid "Unable to gather current status"
 msgstr "मौजूदा स्थिति पाने में असमर्थ"
 
-#: ../src/im-chooser-simple.c:796
+#: ../src/ui/im-chooser-simple.c:796
 msgid "Unable to get Input Method information"
 msgstr "इनपुट विधि सूचना पाने में असमर्थ"
 
-#: ../src/im-chooser-simple.c:906
+#: ../src/ui/im-chooser-simple.c:906
 msgid "<b>Input Method</b>"
 msgstr "<b>इनपुट विधि</b>"
 
-#: ../src/im-chooser-simple.c:941
+#: ../src/ui/im-chooser-simple.c:941
 msgid "Input Method _Preferences..."
 msgstr "इनपुट विधि वरीयताएं (_P)..."
 
-#: ../src/main.c:54
-msgid ""
-"<span weight=\"bold\" size=\"larger\">No input method is available</span>"
-msgstr "<span weight=\"bold\" size=\"larger\">कोई इनपुट विधि उपलब्ध नहीं है</span>"
-
-#: ../src/main.c:57
-msgid "Please install any input methods before running if you like."
-msgstr "कृपया किसी इनपुट विधि को यदि आप चाहें तो चलाने के पहले संस्थापित करें"
-
-#: ../src/main.c:87
-msgid "Could not connect to the session manager"
-msgstr ""
-
-#: ../src/main.c:106
+#: ../src/main.c:36
 msgid "[options...]"
 msgstr ""
 
-#: ../src/main.c:130
+#: ../src/main.c:56
 #, c-format
 msgid "Could not parse arguments: %s\n"
 msgstr ""
-
-#: ../src/main.c:143 ../src/im-chooser.desktop.in.in.h:2
-#: ../src/xfce4-im-chooser.desktop.in.h:2
-#, fuzzy
-msgid "Input Method Selector"
-msgstr "इनपुट विधि"
-
-#: ../src/main.c:170
-msgid "Log Out"
-msgstr "लॉग आउट"
 
 #: ../src/im-chooser.desktop.in.in.h:1 ../src/xfce4-im-chooser.desktop.in.h:1
 msgid ""
@@ -192,6 +169,22 @@ msgid ""
 msgstr ""
 "इनपुट विधि को प्रयोग किये जाने के लिये चुनें या डेस्कटॉप पर इनपुट विधि प्रयोग को निष्क्रिय "
 "करें"
+
+#: ../src/im-chooser.desktop.in.in.h:2 ../src/xfce4-im-chooser.desktop.in.h:2
+#, fuzzy
+msgid "Input Method Selector"
+msgstr "इनपुट विधि"
+
+#~ msgid ""
+#~ "<span weight=\"bold\" size=\"larger\">No input method is available</span>"
+#~ msgstr ""
+#~ "<span weight=\"bold\" size=\"larger\">कोई इनपुट विधि उपलब्ध नहीं है</span>"
+
+#~ msgid "Please install any input methods before running if you like."
+#~ msgstr "कृपया किसी इनपुट विधि को यदि आप चाहें तो चलाने के पहले संस्थापित करें"
+
+#~ msgid "Log Out"
+#~ msgstr "लॉग आउट"
 
 #~ msgid "Updating Input Method list"
 #~ msgstr "इनपुट विधि सूची अद्यतन कर रहा है"

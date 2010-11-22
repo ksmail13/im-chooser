@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ar\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-11-22 11:47+0900\n"
+"POT-Creation-Date: 2010-11-22 16:11+0900\n"
 "PO-Revision-Date: 2010-06-04 19:58+0300\n"
 "Last-Translator: Abdalrahim Fakhouri <abdilra7eem@yahoo.com>\n"
 "Language-Team: Arabic <fedora-trans-ar@redhat.com>\n"
@@ -17,36 +17,36 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: GTranslator\n"
 
-#: ../src/im-chooser-simple.c:120
+#: ../src/ui/im-chooser-simple.c:120
 msgid "X applications"
 msgstr "برامج X"
 
-#: ../src/im-chooser-simple.c:121
+#: ../src/ui/im-chooser-simple.c:121
 msgid "GTK+ applications"
 msgstr "برامج جتك+"
 
-#: ../src/im-chooser-simple.c:122
+#: ../src/ui/im-chooser-simple.c:122
 msgid "Qt applications"
 msgstr "برامج كيوتي"
 
-#: ../src/im-chooser-simple.c:205
+#: ../src/ui/im-chooser-simple.c:205
 msgid "Unable to get the information"
 msgstr "تعذّر الحصول على المعلومات"
 
-#: ../src/im-chooser-simple.c:282
+#: ../src/ui/im-chooser-simple.c:282
 msgid "Failed to start Input Method"
 msgstr "فشل بدء طريقة الإدخال"
 
-#: ../src/im-chooser-simple.c:309
+#: ../src/ui/im-chooser-simple.c:309
 msgid "Failed to stop Input Method"
 msgstr "فشل إيقاف طريقة الإدخال"
 
-#: ../src/im-chooser-simple.c:410
+#: ../src/ui/im-chooser-simple.c:410
 #, c-format
 msgid "Starting Input Method - %s"
 msgstr "جاري بدء طريقة الإدخال - %s"
 
-#: ../src/im-chooser-simple.c:427
+#: ../src/ui/im-chooser-simple.c:427
 #, c-format
 msgid "Stopping Input Method - %s"
 msgstr "جاري إيقاف طريقة الإدخال - %s"
@@ -54,8 +54,8 @@ msgstr "جاري إيقاف طريقة الإدخال - %s"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications and Qt applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications and GTK+ applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications and Qt applications</i></small>"
-#: ../src/im-chooser-simple.c:513 ../src/im-chooser-simple.c:516
-#: ../src/im-chooser-simple.c:519
+#: ../src/ui/im-chooser-simple.c:513 ../src/ui/im-chooser-simple.c:516
+#: ../src/ui/im-chooser-simple.c:519
 #, c-format
 msgid ", except %s and %s"
 msgstr "، عدا %s و %s"
@@ -63,14 +63,14 @@ msgstr "، عدا %s و %s"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except Qt applications</i></small>"
-#: ../src/im-chooser-simple.c:522 ../src/im-chooser-simple.c:525
-#: ../src/im-chooser-simple.c:528
+#: ../src/ui/im-chooser-simple.c:522 ../src/ui/im-chooser-simple.c:525
+#: ../src/ui/im-chooser-simple.c:528
 #, c-format
 msgid ", except %s"
 msgstr "، عدا %s"
 
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications</i></small>"
-#: ../src/im-chooser-simple.c:533
+#: ../src/ui/im-chooser-simple.c:533
 #, c-format
 msgid ""
 "<small><i>Note: this change will not take effect until you next log in%s</"
@@ -79,107 +79,99 @@ msgstr ""
 "<small><i>ملاحظة: هذا التغيير لن يأخذ مفعوله حتى تسجيل دخولك القادم %s</i></"
 "small>"
 
-#: ../src/im-chooser-simple.c:592
+#: ../src/ui/im-chooser-simple.c:592
 msgid "Parent Window"
 msgstr "النافذة الأمّ"
 
-#: ../src/im-chooser-simple.c:593
+#: ../src/ui/im-chooser-simple.c:593
 msgid "GtkWindow that points to the parent window"
 msgstr "نافذة جتك تشير للنافذة الأمّ"
 
-#: ../src/im-chooser-simple.c:598
+#: ../src/ui/im-chooser-simple.c:598
 msgid "Note type"
 msgstr "نوع الملاحظة"
 
-#: ../src/im-chooser-simple.c:599
+#: ../src/ui/im-chooser-simple.c:599
 msgid "A enum value to determine which notes should be displayed"
 msgstr "قيمة enum لتحديد أيّ الملاحظات يجب عرضها"
 
 #. setup a progress window
-#: ../src/im-chooser-simple.c:642
+#: ../src/ui/im-chooser-simple.c:642
 msgid "Work in progress..."
 msgstr "قيد العمل ..."
 
-#: ../src/im-chooser-simple.c:725
+#: ../src/ui/im-chooser-simple.c:725
 #, fuzzy
 msgid "No Input Method"
 msgstr "طريقة إدخال"
 
-#: ../src/im-chooser-simple.c:727
+#: ../src/ui/im-chooser-simple.c:727
 #, c-format
 msgid "Use %s"
 msgstr "استخدم %s"
 
-#: ../src/im-chooser-simple.c:731
+#: ../src/ui/im-chooser-simple.c:731
 msgid " (legacy)"
 msgstr "(وراثة)"
 
-#: ../src/im-chooser-simple.c:733
+#: ../src/ui/im-chooser-simple.c:733
 msgid " (recommended)"
 msgstr "(مُستحسَـن)"
 
-#: ../src/im-chooser-simple.c:775
+#: ../src/ui/im-chooser-simple.c:775
 #, c-format
 msgid "Unable to communicate to IMSettings services"
 msgstr "تعذّر الاتصال بخدمات IMSettings"
 
-#: ../src/im-chooser-simple.c:776
+#: ../src/ui/im-chooser-simple.c:776
 msgid "Version mismatch"
 msgstr "عدم تطابق الإصدارة"
 
-#: ../src/im-chooser-simple.c:790
+#: ../src/ui/im-chooser-simple.c:790
 msgid "Unable to gather current status"
 msgstr "تعذّر معرفة الوضع الحاليّ"
 
-#: ../src/im-chooser-simple.c:796
+#: ../src/ui/im-chooser-simple.c:796
 msgid "Unable to get Input Method information"
 msgstr "تعذّر الحصول على معلومات طريقة الإدخال"
 
-#: ../src/im-chooser-simple.c:906
+#: ../src/ui/im-chooser-simple.c:906
 msgid "<b>Input Method</b>"
 msgstr "<b>طريقة الإدخال<b>"
 
-#: ../src/im-chooser-simple.c:941
+#: ../src/ui/im-chooser-simple.c:941
 msgid "Input Method _Preferences..."
 msgstr "تفضيلات طريقة الإدخال ..."
 
-#: ../src/main.c:54
-msgid ""
-"<span weight=\"bold\" size=\"larger\">No input method is available</span>"
-msgstr "<span weight=\"bold\" size=\"larger\">لا يتوفر طريقة إدخال</span>"
-
-#: ../src/main.c:57
-msgid "Please install any input methods before running if you like."
-msgstr "ثبت أي طرق إدخال تريد قبل التشغيل إذا أردت"
-
-#: ../src/main.c:87
-msgid "Could not connect to the session manager"
-msgstr ""
-
-#: ../src/main.c:106
+#: ../src/main.c:36
 msgid "[options...]"
 msgstr ""
 
-#: ../src/main.c:130
+#: ../src/main.c:56
 #, c-format
 msgid "Could not parse arguments: %s\n"
 msgstr ""
-
-#: ../src/main.c:143 ../src/im-chooser.desktop.in.in.h:2
-#: ../src/xfce4-im-chooser.desktop.in.h:2
-#, fuzzy
-msgid "Input Method Selector"
-msgstr "طريقة إدخال"
-
-#: ../src/main.c:170
-msgid "Log Out"
-msgstr "خروج"
 
 #: ../src/im-chooser.desktop.in.in.h:1 ../src/xfce4-im-chooser.desktop.in.h:1
 msgid ""
 "Choose the input method to be used or disable the input method usage on the "
 "desktop"
 msgstr "اختر طريقة إدخال لاستخدامها، أو عطّل استخدام طرق الإدخال على سطح المكتب"
+
+#: ../src/im-chooser.desktop.in.in.h:2 ../src/xfce4-im-chooser.desktop.in.h:2
+#, fuzzy
+msgid "Input Method Selector"
+msgstr "طريقة إدخال"
+
+#~ msgid ""
+#~ "<span weight=\"bold\" size=\"larger\">No input method is available</span>"
+#~ msgstr "<span weight=\"bold\" size=\"larger\">لا يتوفر طريقة إدخال</span>"
+
+#~ msgid "Please install any input methods before running if you like."
+#~ msgstr "ثبت أي طرق إدخال تريد قبل التشغيل إذا أردت"
+
+#~ msgid "Log Out"
+#~ msgstr "خروج"
 
 #~ msgid "Updating Input Method list"
 #~ msgstr "جاري تحديث قائمة طرق الإدخال"

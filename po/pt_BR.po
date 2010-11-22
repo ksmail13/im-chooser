@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: im-chooser\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-11-22 11:47+0900\n"
+"POT-Creation-Date: 2010-11-22 16:11+0900\n"
 "PO-Revision-Date: 2010-11-15 14:20-0300\n"
 "Last-Translator: Cleiton Lima <cleitonlima@espacoliberdade.blog.br>\n"
 "Language-Team: Brazilian Portuguese <fedora-trans-pt_br@redhat.com>\n"
@@ -28,36 +28,36 @@ msgstr ""
 "X-Poedit-Country: BRAZIL\n"
 "X-Generator: KBabel 1.11.4\n"
 
-#: ../src/im-chooser-simple.c:120
+#: ../src/ui/im-chooser-simple.c:120
 msgid "X applications"
 msgstr "Aplicativos X"
 
-#: ../src/im-chooser-simple.c:121
+#: ../src/ui/im-chooser-simple.c:121
 msgid "GTK+ applications"
 msgstr "Aplicativos GTK+"
 
-#: ../src/im-chooser-simple.c:122
+#: ../src/ui/im-chooser-simple.c:122
 msgid "Qt applications"
 msgstr "Aplicativos Qt"
 
-#: ../src/im-chooser-simple.c:205
+#: ../src/ui/im-chooser-simple.c:205
 msgid "Unable to get the information"
 msgstr "Não foi possível obter as informações"
 
-#: ../src/im-chooser-simple.c:282
+#: ../src/ui/im-chooser-simple.c:282
 msgid "Failed to start Input Method"
 msgstr "Falha ao iniciar o método de entrada"
 
-#: ../src/im-chooser-simple.c:309
+#: ../src/ui/im-chooser-simple.c:309
 msgid "Failed to stop Input Method"
 msgstr "Falha ao parar o método de entrada"
 
-#: ../src/im-chooser-simple.c:410
+#: ../src/ui/im-chooser-simple.c:410
 #, c-format
 msgid "Starting Input Method - %s"
 msgstr "Iniciando método de entrada - %s"
 
-#: ../src/im-chooser-simple.c:427
+#: ../src/ui/im-chooser-simple.c:427
 #, c-format
 msgid "Stopping Input Method - %s"
 msgstr "Parando método de entrada - %s"
@@ -65,8 +65,8 @@ msgstr "Parando método de entrada - %s"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications and Qt applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications and GTK+ applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications and Qt applications</i></small>"
-#: ../src/im-chooser-simple.c:513 ../src/im-chooser-simple.c:516
-#: ../src/im-chooser-simple.c:519
+#: ../src/ui/im-chooser-simple.c:513 ../src/ui/im-chooser-simple.c:516
+#: ../src/ui/im-chooser-simple.c:519
 #, c-format
 msgid ", except %s and %s"
 msgstr ", exceto %s e %s"
@@ -74,14 +74,14 @@ msgstr ", exceto %s e %s"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except Qt applications</i></small>"
-#: ../src/im-chooser-simple.c:522 ../src/im-chooser-simple.c:525
-#: ../src/im-chooser-simple.c:528
+#: ../src/ui/im-chooser-simple.c:522 ../src/ui/im-chooser-simple.c:525
+#: ../src/ui/im-chooser-simple.c:528
 #, c-format
 msgid ", except %s"
 msgstr ", exceto %s"
 
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications</i></small>"
-#: ../src/im-chooser-simple.c:533
+#: ../src/ui/im-chooser-simple.c:533
 #, c-format
 msgid ""
 "<small><i>Note: this change will not take effect until you next log in%s</"
@@ -90,104 +90,77 @@ msgstr ""
 "<small><i>Nota: esta alteração não terá efeito até o seu próximo login%s.</"
 "i></small>"
 
-#: ../src/im-chooser-simple.c:592
+#: ../src/ui/im-chooser-simple.c:592
 msgid "Parent Window"
 msgstr "Janela mãe"
 
-#: ../src/im-chooser-simple.c:593
+#: ../src/ui/im-chooser-simple.c:593
 msgid "GtkWindow that points to the parent window"
 msgstr "GtkWindow que aponta para a janela mãe"
 
-#: ../src/im-chooser-simple.c:598
+#: ../src/ui/im-chooser-simple.c:598
 msgid "Note type"
 msgstr "Tipo de nota"
 
-#: ../src/im-chooser-simple.c:599
+#: ../src/ui/im-chooser-simple.c:599
 msgid "A enum value to determine which notes should be displayed"
 msgstr "Um valor enum para determinar quais notas devem ser exibidas"
 
 #. setup a progress window
-#: ../src/im-chooser-simple.c:642
+#: ../src/ui/im-chooser-simple.c:642
 msgid "Work in progress..."
 msgstr "Trabalho em andamento..."
 
-#: ../src/im-chooser-simple.c:725
+#: ../src/ui/im-chooser-simple.c:725
 msgid "No Input Method"
 msgstr "Sem Método de entrada"
 
-#: ../src/im-chooser-simple.c:727
+#: ../src/ui/im-chooser-simple.c:727
 #, c-format
 msgid "Use %s"
 msgstr "Usar %s"
 
-#: ../src/im-chooser-simple.c:731
+#: ../src/ui/im-chooser-simple.c:731
 msgid " (legacy)"
 msgstr " (legado)"
 
-#: ../src/im-chooser-simple.c:733
+#: ../src/ui/im-chooser-simple.c:733
 msgid " (recommended)"
 msgstr " (recomendado)"
 
-#: ../src/im-chooser-simple.c:775
+#: ../src/ui/im-chooser-simple.c:775
 #, c-format
 msgid "Unable to communicate to IMSettings services"
 msgstr "Não foi possível comunicar com os serviços IMSettings"
 
-#: ../src/im-chooser-simple.c:776
+#: ../src/ui/im-chooser-simple.c:776
 msgid "Version mismatch"
 msgstr "A versão não confere"
 
-#: ../src/im-chooser-simple.c:790
+#: ../src/ui/im-chooser-simple.c:790
 msgid "Unable to gather current status"
 msgstr "Não foi possível obter o status atual"
 
-#: ../src/im-chooser-simple.c:796
+#: ../src/ui/im-chooser-simple.c:796
 msgid "Unable to get Input Method information"
 msgstr "Não foi possível obter as informações do método de entrada"
 
-#: ../src/im-chooser-simple.c:906
+#: ../src/ui/im-chooser-simple.c:906
 msgid "<b>Input Method</b>"
 msgstr "<b>Método de entrada</b>"
 
-#: ../src/im-chooser-simple.c:941
+#: ../src/ui/im-chooser-simple.c:941
 msgid "Input Method _Preferences..."
 msgstr "_Preferências do método de entrada..."
 
-#: ../src/main.c:54
-msgid ""
-"<span weight=\"bold\" size=\"larger\">No input method is available</span>"
-msgstr ""
-"<span weight=\"bold\" size=\"larger\">Nenhum método de entrada disponível</"
-"span>"
-
-#: ../src/main.c:57
-msgid "Please install any input methods before running if you like."
-msgstr ""
-"Por favor, instale quaisquer métodos de entradas antes de executar, se você "
-"quiser."
-
-#: ../src/main.c:87
-msgid "Could not connect to the session manager"
-msgstr "Não foi possível se conectar ao gerenciador de sessão"
-
-#: ../src/main.c:106
+#: ../src/main.c:36
 msgid "[options...]"
 msgstr "[opções..]"
 
-#: ../src/main.c:130
+#: ../src/main.c:56
 #, c-format
 msgid "Could not parse arguments: %s\n"
 msgstr "Não foi possível analisar os argumentos: %s\n"
-
-#: ../src/main.c:143 ../src/im-chooser.desktop.in.in.h:2
-#: ../src/xfce4-im-chooser.desktop.in.h:2
-#, fuzzy
-msgid "Input Method Selector"
-msgstr "Seletor de Método de entrada"
-
-#: ../src/main.c:170
-msgid "Log Out"
-msgstr "Encerrar sessão"
 
 #: ../src/im-chooser.desktop.in.in.h:1 ../src/xfce4-im-chooser.desktop.in.h:1
 msgid ""
@@ -195,6 +168,28 @@ msgid ""
 "desktop"
 msgstr ""
 "Escolha ou desabilite o método de entrada a ser usado no ambiente de trabalho"
+
+#: ../src/im-chooser.desktop.in.in.h:2 ../src/xfce4-im-chooser.desktop.in.h:2
+#, fuzzy
+msgid "Input Method Selector"
+msgstr "Seletor de Método de entrada"
+
+#~ msgid ""
+#~ "<span weight=\"bold\" size=\"larger\">No input method is available</span>"
+#~ msgstr ""
+#~ "<span weight=\"bold\" size=\"larger\">Nenhum método de entrada "
+#~ "disponível</span>"
+
+#~ msgid "Please install any input methods before running if you like."
+#~ msgstr ""
+#~ "Por favor, instale quaisquer métodos de entradas antes de executar, se "
+#~ "você quiser."
+
+#~ msgid "Could not connect to the session manager"
+#~ msgstr "Não foi possível se conectar ao gerenciador de sessão"
+
+#~ msgid "Log Out"
+#~ msgstr "Encerrar sessão"
 
 #~ msgid "Updating Input Method list"
 #~ msgstr "Atualizando a lista de métodos de entrada"

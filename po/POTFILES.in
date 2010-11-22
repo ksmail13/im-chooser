@@ -1,4 +1,8 @@
-src/im-chooser-simple.c
+src/ccpanel/im-chooser-panel.desktop.in.in
+src/ui/eggdesktopfile.c
+src/ui/eggsmclient.c
+src/ui/im-chooser-simple.c
+src/ui/im-chooser-ui.c
 src/main.c
 src/im-chooser.desktop.in.in
 src/xfce4-im-chooser.desktop.in
