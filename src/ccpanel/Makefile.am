@@ -19,14 +19,14 @@ DEPS =								\
 	$(NULL)
 
 ccpanel_LTLIBRARIES =						\
-	libimchoose-module.la					\
+	libim-chooser.la					\
 	$(NULL)
 ccpaneldir = $(PANEL_DIR)
 
-libimchoose_module_la_SOURCES =					\
-	imchoose-module.c					\
+libim_chooser_la_SOURCES =					\
+	main.c							\
 	$(NULL)
-libimchoose_module_la_LDFLAGS =					\
+libim_chooser_la_LDFLAGS =					\
 	-export_dynamic						\
 	-avoid-version						\
 	-module							\
