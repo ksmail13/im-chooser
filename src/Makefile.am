@@ -8,6 +8,7 @@ INCLUDES =							\
 	-DG_LOG_DOMAIN="\"IM-Chooser\""				\
 	-DIMCHOOSE_LOCALEDIR="\"$(datadir)/locale\""		\
 	-DDESKTOPFILE="\"$(DESKTOPFILE)\""			\
+	-I$(srcdir)/ui						\
 	$(TOOLKIT_CFLAGS)					\
 	$(NULL)
 

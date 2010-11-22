@@ -48,6 +48,8 @@ lib_LTLIBRARIES =						\
 libimchooseui_la_SOURCES =					\
 	im-chooser-simple.c					\
 	im-chooser-simple.h					\
+	im-chooser-ui.c						\
+	im-chooser-ui.h						\
 	$(NULL)
 libimchooseui_la_LIBADD =					\
 	libeggsmclient.la					\

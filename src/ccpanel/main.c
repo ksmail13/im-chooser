@@ -41,7 +41,6 @@ typedef struct _CcIMChoosePanelClass		CcIMChoosePanelClass;
 
 struct _CcIMChoosePanel {
 	CcPanel          parent;
-	IMChooserSimple *im;
 	GtkWidget       *imchooseui;
 };
 struct _CcIMChoosePanelClass {
@@ -82,10 +81,8 @@ cc_imchoose_panel_class_finalize(CcIMChoosePanelClass *klass)
 static void
 cc_imchoose_panel_init(CcIMChoosePanel *self)
 {
-	g_object_set(G_OBJECT (im), "parent_window", GTK_WIDGET (self), NULL);
-	self->im = im_chooser_simple_new();
-	self->imchooseui = im_chooser_simple_get_widget(self->im);
-	gtk_container_add(GTK_CONTAINER (self), self->imchooseui);
+	self->imchooseui = im_chooser_ui_get();
+	gtk_widget_reparent(self->imchooseui, GTK_WIDGET (self));
 }
 
 /*< public >*/
@@ -102,7 +99,7 @@ g_io_module_load(GIOModule *module)
 	cc_imchoose_panel_register_type (G_TYPE_MODULE (module));
 	g_io_extension_point_implement(CC_SHELL_PANEL_EXTENSION_POINT,
 				       CC_TYPE_IMCHOOSE_PANEL,
-				       "im-chooser-panel", 0);
+				       "im-chooser", 0);
 }
 
 void
