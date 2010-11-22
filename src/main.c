@@ -180,7 +180,6 @@ main(int    argc,
 	}
 	g_object_set(im, "note_type", note_type, NULL);
 	gtk_dialog_add_action_widget(GTK_DIALOG (window), close_button, GTK_RESPONSE_OK);
-	gtk_dialog_set_has_separator(GTK_DIALOG (window), FALSE);
 
 	g_signal_connect(im, "notify_n_im",
 			 G_CALLBACK (_im_notify_n_im_cb), window);
