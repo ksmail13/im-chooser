@@ -82,10 +82,14 @@ static void
 cc_imchoose_panel_init(CcIMChoosePanel *self)
 {
 	GtkWidget *content;
+	GtkWidget *action;
 
 	self->imchooseui = im_chooser_ui_get();
 	content = gtk_dialog_get_content_area(GTK_DIALOG (self->imchooseui));
+	action = gtk_dialog_get_action_area(GTK_DIALOG (self->imchooseui));
+
 	gtk_widget_reparent(content, GTK_WIDGET (self));
+	gtk_widget_show_all(action);
 }
 
 /*< public >*/
