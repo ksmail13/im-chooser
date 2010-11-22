@@ -28,7 +28,6 @@
 #include "im-chooser-ui.h"
 #include <glib/gi18n.h>
 #include "eggsmclient.h"
-#include "eggdesktopfile.h"
 
 int
 main(int    argc,
@@ -67,8 +66,6 @@ main(int    argc,
 	}
 
 	window = im_chooser_ui_get();
-
-	egg_set_desktop_file(DESKTOPFILE);
 
 	gtk_widget_show_all(window);
 

@@ -26,6 +26,7 @@
 #endif
 #include <stdlib.h>
 #include <glib/gi18n.h>
+#include "eggdesktopfile.h"
 #include "eggsmclient.h"
 #include "im-chooser-simple.h"
 #include "im-chooser-ui.h"
@@ -109,6 +110,8 @@ im_chooser_ui_get(void)
 	const gchar *xmodifiers, *gtk_immodule, *qt_immodule;
 	guint note_type = 0;
 	GQuark qui = g_quark_from_static_string("im-chooser-ui-simple-object");
+
+	egg_set_desktop_file(DESKTOPFILE);
 
 	window = gtk_dialog_new();
 	gtk_window_set_title(GTK_WINDOW (window), _("Input Method Selector"));
