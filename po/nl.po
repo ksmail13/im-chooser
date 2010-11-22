@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: im-chooser\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-11-15 16:11+0900\n"
+"POT-Creation-Date: 2010-11-22 11:47+0900\n"
 "PO-Revision-Date: 2010-11-15 16:47+0200\n"
 "Last-Translator: Geert Warrink <geert.warrink@onsnet.nu>\n"
 "Language-Team: Fedora\n"
@@ -171,7 +171,8 @@ msgstr "Kon argumenten niet ontleden: %s\n"
 
 #: ../src/main.c:143 ../src/im-chooser.desktop.in.in.h:2
 #: ../src/xfce4-im-chooser.desktop.in.h:2
-msgid "Input Method selector"
+#, fuzzy
+msgid "Input Method Selector"
 msgstr "Invoermethode selectie"
 
 #: ../src/main.c:170
