@@ -26,9 +26,9 @@
 #endif
 #include <stdlib.h>
 #include <glib/gi18n.h>
-#include "eggsmclient.h"
-#include "eggdesktopfile.h"
-#include "im-chooser-simple.h"
+#include "ui/eggsmclient.h"
+#include "ui/eggdesktopfile.h"
+#include "ui/im-chooser-simple.h"
 
 static void
 _im_changed_cb(IMChooserSimple *im,
