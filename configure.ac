@@ -47,6 +47,7 @@ PKG_CHECK_MODULES(GTK3, gtk+-3.0, [
 	IMCHOOSE_GTK_VERSION=3],[
 	PKG_CHECK_MODULES(GTK2, gtk+-2.0)
 	IMCHOOSE_GTK_VERSION=2])
+PKG_CHECK_MODULES(SM, sm)
 PKG_CHECK_MODULES(IMSETTINGS, imsettings >= $IMSETTINGS_REQUIRED)
 AC_SUBST(GTK3_CFLAGS)
 AC_SUBST(GTK3_LIBS)
@@ -54,6 +55,8 @@ AC_SUBST(GTK2_CFLAGS)
 AC_SUBST(GTK2_LIBS)
 AC_SUBST(IMSETTINGS_CFLAGS)
 AC_SUBST(IMSETTINGS_LIBS)
+AC_SUBST(SM_CFLAGS)
+AC_SUBST(SM_LIBS)
 
 AC_SUBST(IMCHOOSE_GTK_VERSION)
 
@@ -110,7 +113,7 @@ dnl result
 dnl ======================================================================
 echo ""
 echo "========== Build Information =========="
-echo " CFLAGS:                     $CFLAGS $TOOLKIT_CFLAGS $IMSETTINGS_CFLAGS"
-echo " LIBS:                       $LDFLAGS $TOOLKIT_LIBS $IMSETTINGS_LIBS"
+echo " CFLAGS:                     $CFLAGS $TOOLKIT_CFLAGS $IMSETTINGS_CFLAGS $SM_CFLAGS"
+echo " LIBS:                       $LDFLAGS $TOOLKIT_LIBS $IMSETTINGS_LIBS $SM_LIBS"
 echo " GTK version:                $IMCHOOSE_GTK_VERSION"
 echo ""

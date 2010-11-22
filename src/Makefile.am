@@ -6,12 +6,14 @@ INCLUDES =							\
 	-DDESKTOPFILE="\"$(DESKTOPFILE)\""			\
 	$(TOOLKIT_CFLAGS)					\
 	$(IMSETTINGS_CFLAGS)					\
+	$(SM_CFLAGS)						\
 	$(NULL)
 
 LIBS =								\
 	@LDFLAGS@						\
 	$(TOOLKIT_LIBS)						\
 	$(IMSETTINGS_LIBS)					\
+	$(SM_LIBS)						\
 	$(NULL)
 
 noinst_LTLIBRARIES =						\
