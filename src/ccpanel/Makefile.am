@@ -12,6 +12,7 @@ LIBS =								\
 	@LDFLAGS@						\
 	$(TOOLKIT_LIBS)						\
 	$(PANEL_LIBS)						\
+	$(builddir)/../ui/libimchooseui.la			\
 	$(NULL)
 
 DEPS =								\
