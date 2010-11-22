@@ -40,8 +40,9 @@ typedef struct _CcIMChoosePanel			CcIMChoosePanel;
 typedef struct _CcIMChoosePanelClass		CcIMChoosePanelClass;
 
 struct _CcIMChoosePanel {
-	CcPanel parent;
-	GtkWidget *imchooseui;
+	CcPanel          parent;
+	IMChooserSimple *im;
+	GtkWidget       *imchooseui;
 };
 struct _CcIMChoosePanelClass {
 	CcPanelClass parent_class;
@@ -81,11 +82,9 @@ cc_imchoose_panel_class_finalize(CcIMChoosePanelClass *klass)
 static void
 cc_imchoose_panel_init(CcIMChoosePanel *self)
 {
-	IMChooserSimple *im;
-	GtkWidget *widget;
-
 	g_object_set(G_OBJECT (im), "parent_window", GTK_WIDGET (self), NULL);
-	self->imchooseui = im_chooser_simple_get_widget(im);
+	self->im = im_chooser_simple_new();
+	self->imchooseui = im_chooser_simple_get_widget(self->im);
 	gtk_container_add(GTK_CONTAINER (self), self->imchooseui);
 }
 
