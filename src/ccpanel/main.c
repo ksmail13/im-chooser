@@ -86,6 +86,7 @@ cc_imchoose_panel_init(CcIMChoosePanel *self)
 
 	g_object_set(G_OBJECT (im), "parent_window", GTK_WIDGET (self), NULL);
 	widget = im_chooser_simple_get_widget(im);
+	gtk_widget_reparent(widget, GTK_WIDGET (self));
 
 	gtk_widget_show_all(GTK_WIDGET (self));
 }
