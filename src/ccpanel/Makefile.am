@@ -21,7 +21,7 @@ DEPS =								\
 ccpanel_LTLIBRARIES =						\
 	libimchoose-module.la					\
 	$(NULL)
-ccpaneldir = $(PANELS_DIR)
+ccpaneldir = $(PANEL_DIR)
 
 libimchoose_module_la_SOURCES =					\
 	imchoose-module.c					\

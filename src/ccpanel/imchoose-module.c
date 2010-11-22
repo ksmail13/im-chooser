@@ -74,6 +74,11 @@ cc_imchoose_panel_class_init(CcIMChoosePanelClass *klass)
 }
 
 static void
+cc_imchoose_panel_class_finalize(CcIMChoosePanelClass *klass)
+{
+}
+
+static void
 cc_imchoose_panel_init(CcIMChoosePanel *self)
 {
 	IMChooserSimple *im;
