@@ -48,6 +48,9 @@ PKG_CHECK_MODULES(GTK3, gtk+-3.0, [
 	PKG_CHECK_MODULES(GTK2, gtk+-2.0)
 	IMCHOOSE_GTK_VERSION=2])
 PKG_CHECK_MODULES(SM, sm)
+PKG_CHECK_MODULES(PANEL, libgnome-control-center >= $CCPANEL_REQUIRED,
+	enable_ccpanel=yes,
+	enable_ccpanel=no)
 PKG_CHECK_MODULES(IMSETTINGS, imsettings >= $IMSETTINGS_REQUIRED)
 AC_SUBST(GTK3_CFLAGS)
 AC_SUBST(GTK3_LIBS)
@@ -61,6 +64,8 @@ AC_SUBST(SM_LIBS)
 AC_SUBST(IMCHOOSE_GTK_VERSION)
 
 AC_DEFINE(IMCHOOSE_GTK_VERSION, $IMCHOOSE_GTK_VERSION, [GTK+ version detected by pkg-config])
+
+AM_CONDITIONAL(ENABLE_CCPANEL, test "x$enable_ccpanel" = "xyes")
 
 if test $IMCHOOSE_GTK_VERSION == 3; then
    	TOOLKIT_CFLAGS="$GTK3_CFLAGS"
@@ -104,6 +109,8 @@ data/32x32/Makefile
 data/48x48/Makefile
 po/Makefile.in
 src/Makefile
+src/ccpanel/Makefile
+src/ui/Makefile
 src/im-chooser.desktop.in
 ])
 AC_OUTPUT
