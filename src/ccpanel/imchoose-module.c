@@ -27,6 +27,7 @@
 
 #include <libgnome-control-center/cc-panel.h>
 #include <glib/gi18n.h>
+#include "im-chooser-simple.h"
 
 #define CC_TYPE_IMCHOOSE_PANEL			cc_imchoose_panel_get_type()
 #define CC_IMCHOOSE_PANEL(obj)			(G_TYPE_CHECK_INSTANCE_CAST ((obj)), CC_TYPE_IMCHOOSE_PANEL, CcIMChoosePanel)

@@ -3,6 +3,7 @@ NULL =
 INCLUDES =						\
 	-DG_LOG_DOMAIN="\"IM-Chooser-Panel\""		\
 	-DIMCHOOSE_LOCALEDIR="\"$(datadir)/locale\""	\
+	-I$(srcdir)/../ui				\
 	$(TOOLKIT_CFLAGS)				\
 	$(PANEL_CFLAGS)					\
 	$(NULL)
