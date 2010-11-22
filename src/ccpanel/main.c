@@ -27,7 +27,7 @@
 
 #include <libgnome-control-center/cc-panel.h>
 #include <glib/gi18n.h>
-#include "im-chooser-simple.h"
+#include "im-chooser-ui.h"
 
 #define CC_TYPE_IMCHOOSE_PANEL			cc_imchoose_panel_get_type()
 #define CC_IMCHOOSE_PANEL(obj)			(G_TYPE_CHECK_INSTANCE_CAST ((obj)), CC_TYPE_IMCHOOSE_PANEL, CcIMChoosePanel)
@@ -81,8 +81,11 @@ cc_imchoose_panel_class_finalize(CcIMChoosePanelClass *klass)
 static void
 cc_imchoose_panel_init(CcIMChoosePanel *self)
 {
+	GtkWidget *content;
+
 	self->imchooseui = im_chooser_ui_get();
-	gtk_widget_reparent(self->imchooseui, GTK_WIDGET (self));
+	content = gtk_dialog_get_content_area(GTK_DIALOG (self->imchooseui));
+	gtk_widget_reparent(content, GTK_WIDGET (self));
 }
 
 /*< public >*/

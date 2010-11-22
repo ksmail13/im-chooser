@@ -158,8 +158,6 @@ im_chooser_ui_get(void)
 
 	widget = im_chooser_simple_get_widget(im);
 
-	gtk_widget_show_all(window);
-
 	content_widget = gtk_dialog_get_content_area(GTK_DIALOG (window));
 	gtk_box_pack_start(GTK_BOX (content_widget), widget, TRUE, TRUE, 0);
 
