@@ -114,6 +114,7 @@ data/48x48/Makefile
 po/Makefile.in
 src/Makefile
 src/ccpanel/Makefile
+src/ccpanel/im-chooser-panel.desktop.in
 src/ui/Makefile
 src/im-chooser.desktop.in
 ])
