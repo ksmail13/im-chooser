@@ -1,30 +1,37 @@
 NULL =
 
-INCLUDES =						\
-	-DG_LOG_DOMAIN="\"IM-Chooser-Panel\""		\
-	-DIMCHOOSE_LOCALEDIR="\"$(datadir)/locale\""	\
-	-I$(srcdir)/../ui				\
-	$(TOOLKIT_CFLAGS)				\
-	$(PANEL_CFLAGS)					\
+INCLUDES =							\
+	-DG_LOG_DOMAIN="\"IM-Chooser-Panel\""			\
+	-DIMCHOOSE_LOCALEDIR="\"$(datadir)/locale\""		\
+	-I$(srcdir)/../ui					\
+	$(TOOLKIT_CFLAGS)					\
+	$(PANEL_CFLAGS)						\
 	$(NULL)
 
-LIBS =							\
-	@LDFLAGS@					\
-	$(TOOLKIT_LIBS)					\
-	$(PANEL_LIBS)					\
+LIBS =								\
+	@LDFLAGS@						\
+	$(TOOLKIT_LIBS)						\
+	$(PANEL_LIBS)						\
 	$(NULL)
 
-DEPS =							\
-	$(builddir)/../ui/libimchooseui.la		\
+DEPS =								\
+	$(builddir)/../ui/libimchooseui.la			\
 	$(NULL)
 
-ccpanel_LTLIBRARIES =					\
-	libimchoose-module.la				\
+ccpanel_LTLIBRARIES =						\
+	libimchoose-module.la					\
 	$(NULL)
 ccpaneldir = $(PANELS_DIR)
 
-libimchoose_module_la_SOURCES =				\
-	imchoose-module.c				\
+libimchoose_module_la_SOURCES =					\
+	imchoose-module.c					\
+	$(NULL)
+libimchoose_module_la_LDFLAGS =					\
+	-export_dynamic						\
+	-avoid-version						\
+	-module							\
+	-no-undefined						\
+	-export-symbols-regex '^g_io_module_(load|unload)'	\
 	$(NULL)
 
 @INTLTOOL_DESKTOP_RULE@
@@ -33,7 +40,7 @@ desktopdir = $(datadir)/applications
 desktop_in_files = im-chooser-panel.desktop.in
 desktop_DATA = $(desktop_in_files:.desktop.in=.desktop)
 
-CLEANFILES =						\
-	$(desktop_in_files)				\
-	$(desktop_DATA)					\
+CLEANFILES =							\
+	$(desktop_in_files)					\
+	$(desktop_DATA)						\
 	$(NULL)
