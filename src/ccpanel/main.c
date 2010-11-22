@@ -27,6 +27,7 @@
 
 #include <libgnome-control-center/cc-panel.h>
 #include <glib/gi18n.h>
+#include "eggsmclient.h"
 #include "im-chooser-ui.h"
 
 #define CC_TYPE_IMCHOOSE_PANEL			cc_imchoose_panel_get_type()
@@ -83,6 +84,7 @@ cc_imchoose_panel_init(CcIMChoosePanel *self)
 {
 	GtkWidget *content;
 	GtkWidget *action;
+	EggSMClient *sm = egg_sm_client_get();
 
 	self->imchooseui = im_chooser_ui_get();
 	content = gtk_dialog_get_content_area(GTK_DIALOG (self->imchooseui));
@@ -90,6 +92,9 @@ cc_imchoose_panel_init(CcIMChoosePanel *self)
 
 	gtk_widget_reparent(content, GTK_WIDGET (self));
 	gtk_widget_show_all(action);
+
+	if (EGG_SM_CLIENT_GET_CLASS (sm)->startup)
+		EGG_SM_CLIENT_GET_CLASS (sm)->startup(sm, NULL);
 }
 
 /*< public >*/
