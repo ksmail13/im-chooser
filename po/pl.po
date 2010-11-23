@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: pl\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2010-11-22 16:11+0900\n"
-"PO-Revision-Date: 2010-11-15 11:22+0100\n"
+"PO-Revision-Date: 2010-11-23 08:46+0100\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish <trans-pl@lists.fedoraproject.org>\n"
 "Language: pl\n"
@@ -157,18 +157,3 @@ msgstr "Wybór metody wprowadzania lub wyłączanie jej w środowisku graficznym
 #: ../src/im-chooser.desktop.in.in.h:2 ../src/xfce4-im-chooser.desktop.in.h:2
 msgid "Input Method Selector"
 msgstr "Wybór metody wprowadzania"
-
-#~ msgid ""
-#~ "<span weight=\"bold\" size=\"larger\">No input method is available</span>"
-#~ msgstr ""
-#~ "<span weight=\"bold\" size=\"larger\">Brak dostępnych metod wprowadzania</"
-#~ "span>"
-
-#~ msgid "Please install any input methods before running if you like."
-#~ msgstr "Proszę zainstalować metodę wprowadzania przed uruchomieniem."
-
-#~ msgid "Could not connect to the session manager"
-#~ msgstr "Nie można połączyć się z menedżerem sesji"
-
-#~ msgid "Log Out"
-#~ msgstr "Wyloguj"
