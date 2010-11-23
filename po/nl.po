@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: im-chooser\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2010-11-22 16:11+0900\n"
-"PO-Revision-Date: 2010-11-15 16:47+0200\n"
+"PO-Revision-Date: 2010-11-23 10:44+0200\n"
 "Last-Translator: Geert Warrink <geert.warrink@onsnet.nu>\n"
 "Language-Team: Fedora\n"
 "Language: nl\n"
@@ -21,19 +21,19 @@ msgstr ""
 
 #: ../src/ui/im-chooser-simple.c:120
 msgid "X applications"
-msgstr "X-toepassingen"
+msgstr "X toepassingen"
 
 #: ../src/ui/im-chooser-simple.c:121
 msgid "GTK+ applications"
-msgstr "GTK+-toepassingen"
+msgstr "GTK+ toepassingen"
 
 #: ../src/ui/im-chooser-simple.c:122
 msgid "Qt applications"
-msgstr "Qt-toepassingen"
+msgstr "Qt toepassingen"
 
 #: ../src/ui/im-chooser-simple.c:205
 msgid "Unable to get the information"
-msgstr "Niet in staat om de informatie te verkrijgen"
+msgstr "Kan geen informatie verkrijgen"
 
 #: ../src/ui/im-chooser-simple.c:282
 msgid "Failed to start Input Method"
@@ -78,8 +78,8 @@ msgid ""
 "<small><i>Note: this change will not take effect until you next log in%s</"
 "i></small>"
 msgstr ""
-"<small><i>Opmerking: deze verandering zal pas actief worden als u zich "
-"opnieuw aanmeldt%s</i></small>"
+"<small><i>Opmerking: deze verandering zal pas actief worden als je opnieuw "
+"inlogt %s</i></small>"
 
 #: ../src/ui/im-chooser-simple.c:592
 msgid "Parent Window"
@@ -91,7 +91,7 @@ msgstr "GtkWindow dat naar het bovenliggende venster verwijst"
 
 #: ../src/ui/im-chooser-simple.c:598
 msgid "Note type"
-msgstr "Notitietype"
+msgstr "Notitie type"
 
 #: ../src/ui/im-chooser-simple.c:599
 msgid "A enum value to determine which notes should be displayed"
@@ -101,7 +101,7 @@ msgstr ""
 #. setup a progress window
 #: ../src/ui/im-chooser-simple.c:642
 msgid "Work in progress..."
-msgstr "Werk in uitvoering…"
+msgstr "Werk in uitvoering..."
 
 #: ../src/ui/im-chooser-simple.c:725
 msgid "No Input Method"
@@ -123,7 +123,7 @@ msgstr " (aanbevolen)"
 #: ../src/ui/im-chooser-simple.c:775
 #, c-format
 msgid "Unable to communicate to IMSettings services"
-msgstr "Niet in staat om te communiceren met IMSettings services"
+msgstr "Kan niet communiceren met IMSettings services"
 
 #: ../src/ui/im-chooser-simple.c:776
 msgid "Version mismatch"
@@ -131,11 +131,11 @@ msgstr "Versies komen niet overeen"
 
 #: ../src/ui/im-chooser-simple.c:790
 msgid "Unable to gather current status"
-msgstr "Niet in staat om de huidige status te verkrijgen"
+msgstr "Kan huidige status niet verkrijgen"
 
 #: ../src/ui/im-chooser-simple.c:796
 msgid "Unable to get Input Method information"
-msgstr "Niet in staat om invoermethode-informatie te verkrijgen"
+msgstr "Kan invoermethode informatie niet verkrijgen"
 
 #: ../src/ui/im-chooser-simple.c:906
 msgid "<b>Input Method</b>"
@@ -143,7 +143,7 @@ msgstr "<b>Invoermethode</b>"
 
 #: ../src/ui/im-chooser-simple.c:941
 msgid "Input Method _Preferences..."
-msgstr "_Voorkeuren invoermethoden…"
+msgstr "_Voorkeuren invoermethoden..."
 
 #: ../src/main.c:36
 msgid "[options...]"
@@ -159,11 +159,10 @@ msgid ""
 "Choose the input method to be used or disable the input method usage on the "
 "desktop"
 msgstr ""
-"Kies de te gebruiken invoermethode of schakel het gebruik van invoer "
-"methoden voor het bureaublad uit"
+"Kies de te gebruiken invoermethode of schakel het gebruik van invoermethoden "
+"voor het bureaublad uit"
 
 #: ../src/im-chooser.desktop.in.in.h:2 ../src/xfce4-im-chooser.desktop.in.h:2
-#, fuzzy
 msgid "Input Method Selector"
 msgstr "Invoermethode selectie"
 
