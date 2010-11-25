@@ -1,4 +1,7 @@
-2010-11-25  Akira TAGOH  <akira@tagoh.org>
+2010-11-25  Akira TAGOH  <tagoh@redhat.com>
+
+	* src/im-chooser.desktop.in.in (NotShowIn): added to not display this
+	for GNOME and XFCE.
 
 	* src/ui/im-chooser-ui.c (im_chooser_ui_get): unref the IMChooserSimple
 	object when the widget is being destroyed.
