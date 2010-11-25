@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sl\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-11-22 16:11+0900\n"
+"POT-Creation-Date: 2010-11-25 17:58+0900\n"
 "PO-Revision-Date: 2006-10-09 21:16+0200\n"
 "Last-Translator: Rok Papez <rok.papez@lugos.si>\n"
 "Language-Team: Slovenian <sl@li.org>\n"
@@ -20,6 +20,86 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n"
 "%100==4 ? 2 : 3);\n"
 "X-Generator: KBabel 1.11.4\n"
+
+#: ../src/ccpanel/im-chooser-panel.desktop.in.in.h:1
+#: ../src/im-chooser.desktop.in.in.h:1 ../src/xfce4-im-chooser.desktop.in.h:1
+#, fuzzy
+msgid ""
+"Choose the input method to be used or disable the input method usage on the "
+"desktop"
+msgstr ""
+"Izbirnik vnosnih metod s katerim lahko ali nastavite želene vnosne metode "
+"ali pa jih izklopite."
+
+#: ../src/ccpanel/im-chooser-panel.desktop.in.in.h:2
+#: ../src/ui/im-chooser-ui.c:117 ../src/im-chooser.desktop.in.in.h:2
+#: ../src/xfce4-im-chooser.desktop.in.h:2
+#, fuzzy
+msgid "Input Method Selector"
+msgstr "Vnosne metode"
+
+#: ../src/ui/eggdesktopfile.c:165
+#, c-format
+msgid "File is not a valid .desktop file"
+msgstr ""
+
+#: ../src/ui/eggdesktopfile.c:188
+#, c-format
+msgid "Unrecognized desktop file Version '%s'"
+msgstr ""
+
+#: ../src/ui/eggdesktopfile.c:968
+#, c-format
+msgid "Starting %s"
+msgstr ""
+
+#: ../src/ui/eggdesktopfile.c:1110
+#, c-format
+msgid "Application does not accept documents on command line"
+msgstr ""
+
+#: ../src/ui/eggdesktopfile.c:1178
+#, c-format
+msgid "Unrecognized launch option: %d"
+msgstr ""
+
+#: ../src/ui/eggdesktopfile.c:1383
+#, c-format
+msgid "Can't pass document URIs to a 'Type=Link' desktop entry"
+msgstr ""
+
+#: ../src/ui/eggdesktopfile.c:1404
+#, c-format
+msgid "Not a launchable item"
+msgstr ""
+
+#: ../src/ui/eggsmclient.c:226
+msgid "Disable connection to session manager"
+msgstr ""
+
+#: ../src/ui/eggsmclient.c:229
+msgid "Specify file containing saved configuration"
+msgstr ""
+
+#: ../src/ui/eggsmclient.c:229
+msgid "FILE"
+msgstr ""
+
+#: ../src/ui/eggsmclient.c:232
+msgid "Specify session management ID"
+msgstr ""
+
+#: ../src/ui/eggsmclient.c:232
+msgid "ID"
+msgstr ""
+
+#: ../src/ui/eggsmclient.c:253
+msgid "Session management options:"
+msgstr ""
+
+#: ../src/ui/eggsmclient.c:254
+msgid "Show session management options"
+msgstr ""
 
 #: ../src/ui/im-chooser-simple.c:120
 msgid "X applications"
@@ -142,14 +222,32 @@ msgstr ""
 msgid "Unable to get Input Method information"
 msgstr "Vnosne metode"
 
-#: ../src/ui/im-chooser-simple.c:906
+#: ../src/ui/im-chooser-simple.c:905
 msgid "<b>Input Method</b>"
 msgstr "<b></b>"
 
-#: ../src/ui/im-chooser-simple.c:941
+#: ../src/ui/im-chooser-simple.c:940
 #, fuzzy
 msgid "Input Method _Preferences..."
 msgstr "Vnosne metode"
+
+#: ../src/ui/im-chooser-ui.c:55
+msgid ""
+"<span weight=\"bold\" size=\"larger\">No input method is available</span>"
+msgstr ""
+
+#: ../src/ui/im-chooser-ui.c:58
+msgid "Please install any input methods before running if you like."
+msgstr ""
+
+#: ../src/ui/im-chooser-ui.c:88
+msgid "Could not connect to the session manager"
+msgstr ""
+
+#: ../src/ui/im-chooser-ui.c:144
+#, fuzzy
+msgid "Log Out"
+msgstr "_Odjava"
 
 #: ../src/main.c:36
 msgid "[options...]"
@@ -159,24 +257,6 @@ msgstr ""
 #, c-format
 msgid "Could not parse arguments: %s\n"
 msgstr ""
-
-#: ../src/im-chooser.desktop.in.in.h:1 ../src/xfce4-im-chooser.desktop.in.h:1
-#, fuzzy
-msgid ""
-"Choose the input method to be used or disable the input method usage on the "
-"desktop"
-msgstr ""
-"Izbirnik vnosnih metod s katerim lahko ali nastavite želene vnosne metode "
-"ali pa jih izklopite."
-
-#: ../src/im-chooser.desktop.in.in.h:2 ../src/xfce4-im-chooser.desktop.in.h:2
-#, fuzzy
-msgid "Input Method Selector"
-msgstr "Vnosne metode"
-
-#, fuzzy
-#~ msgid "Log Out"
-#~ msgstr "_Odjava"
 
 #, fuzzy
 #~ msgid "Updating Input Method list"

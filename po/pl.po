@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pl\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-11-22 16:11+0900\n"
+"POT-Creation-Date: 2010-11-25 17:58+0900\n"
 "PO-Revision-Date: 2010-11-23 08:46+0100\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish <trans-pl@lists.fedoraproject.org>\n"
@@ -13,6 +13,82 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+
+#: ../src/ccpanel/im-chooser-panel.desktop.in.in.h:1
+#: ../src/im-chooser.desktop.in.in.h:1 ../src/xfce4-im-chooser.desktop.in.h:1
+msgid ""
+"Choose the input method to be used or disable the input method usage on the "
+"desktop"
+msgstr "Wybór metody wprowadzania lub wyłączanie jej w środowisku graficznym"
+
+#: ../src/ccpanel/im-chooser-panel.desktop.in.in.h:2
+#: ../src/ui/im-chooser-ui.c:117 ../src/im-chooser.desktop.in.in.h:2
+#: ../src/xfce4-im-chooser.desktop.in.h:2
+msgid "Input Method Selector"
+msgstr "Wybór metody wprowadzania"
+
+#: ../src/ui/eggdesktopfile.c:165
+#, c-format
+msgid "File is not a valid .desktop file"
+msgstr ""
+
+#: ../src/ui/eggdesktopfile.c:188
+#, c-format
+msgid "Unrecognized desktop file Version '%s'"
+msgstr ""
+
+#: ../src/ui/eggdesktopfile.c:968
+#, c-format
+msgid "Starting %s"
+msgstr ""
+
+#: ../src/ui/eggdesktopfile.c:1110
+#, c-format
+msgid "Application does not accept documents on command line"
+msgstr ""
+
+#: ../src/ui/eggdesktopfile.c:1178
+#, c-format
+msgid "Unrecognized launch option: %d"
+msgstr ""
+
+#: ../src/ui/eggdesktopfile.c:1383
+#, c-format
+msgid "Can't pass document URIs to a 'Type=Link' desktop entry"
+msgstr ""
+
+#: ../src/ui/eggdesktopfile.c:1404
+#, c-format
+msgid "Not a launchable item"
+msgstr ""
+
+#: ../src/ui/eggsmclient.c:226
+msgid "Disable connection to session manager"
+msgstr ""
+
+#: ../src/ui/eggsmclient.c:229
+msgid "Specify file containing saved configuration"
+msgstr ""
+
+#: ../src/ui/eggsmclient.c:229
+msgid "FILE"
+msgstr ""
+
+#: ../src/ui/eggsmclient.c:232
+msgid "Specify session management ID"
+msgstr ""
+
+#: ../src/ui/eggsmclient.c:232
+msgid "ID"
+msgstr ""
+
+#: ../src/ui/eggsmclient.c:253
+msgid "Session management options:"
+msgstr ""
+
+#: ../src/ui/eggsmclient.c:254
+msgid "Show session management options"
+msgstr ""
 
 #: ../src/ui/im-chooser-simple.c:120
 msgid "X applications"
@@ -131,13 +207,30 @@ msgstr "Nie można uzyskać obecnego stanu"
 msgid "Unable to get Input Method information"
 msgstr "Nie można uzyskać informacji o metodzie wprowadzania"
 
-#: ../src/ui/im-chooser-simple.c:906
+#: ../src/ui/im-chooser-simple.c:905
 msgid "<b>Input Method</b>"
 msgstr "<b>Metoda wprowadzania</b>"
 
-#: ../src/ui/im-chooser-simple.c:941
+#: ../src/ui/im-chooser-simple.c:940
 msgid "Input Method _Preferences..."
 msgstr "_Preferencje metody wprowadzania..."
+
+#: ../src/ui/im-chooser-ui.c:55
+msgid ""
+"<span weight=\"bold\" size=\"larger\">No input method is available</span>"
+msgstr ""
+
+#: ../src/ui/im-chooser-ui.c:58
+msgid "Please install any input methods before running if you like."
+msgstr ""
+
+#: ../src/ui/im-chooser-ui.c:88
+msgid "Could not connect to the session manager"
+msgstr ""
+
+#: ../src/ui/im-chooser-ui.c:144
+msgid "Log Out"
+msgstr ""
 
 #: ../src/main.c:36
 msgid "[options...]"
@@ -147,13 +240,3 @@ msgstr "[opcje...]"
 #, c-format
 msgid "Could not parse arguments: %s\n"
 msgstr "Nie można przetworzyć parametrów: %s\n"
-
-#: ../src/im-chooser.desktop.in.in.h:1 ../src/xfce4-im-chooser.desktop.in.h:1
-msgid ""
-"Choose the input method to be used or disable the input method usage on the "
-"desktop"
-msgstr "Wybór metody wprowadzania lub wyłączanie jej w środowisku graficznym"
-
-#: ../src/im-chooser.desktop.in.in.h:2 ../src/xfce4-im-chooser.desktop.in.h:2
-msgid "Input Method Selector"
-msgstr "Wybór metody wprowadzania"

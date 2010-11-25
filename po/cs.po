@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda.master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-11-22 16:11+0900\n"
+"POT-Creation-Date: 2010-11-25 17:58+0900\n"
 "PO-Revision-Date: 2008-09-26 17:38+0200\n"
 "Last-Translator: Miloslav Trmač <mitr@volny.cz>\n"
 "Language-Team: Czech <fedora-cs-list@redhat.com>\n"
@@ -18,6 +18,87 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+
+#: ../src/ccpanel/im-chooser-panel.desktop.in.in.h:1
+#: ../src/im-chooser.desktop.in.in.h:1 ../src/xfce4-im-chooser.desktop.in.h:1
+msgid ""
+"Choose the input method to be used or disable the input method usage on the "
+"desktop"
+msgstr ""
+"Vyberte, která vstupní metoda se má používat, nebo vsupní metody pro "
+"používání na desktopu vypněte"
+
+#: ../src/ccpanel/im-chooser-panel.desktop.in.in.h:2
+#: ../src/ui/im-chooser-ui.c:117 ../src/im-chooser.desktop.in.in.h:2
+#: ../src/xfce4-im-chooser.desktop.in.h:2
+#, fuzzy
+msgid "Input Method Selector"
+msgstr "Vstupní metoda"
+
+#: ../src/ui/eggdesktopfile.c:165
+#, fuzzy, c-format
+msgid "File is not a valid .desktop file"
+msgstr "%s není platné jméno počítače."
+
+#: ../src/ui/eggdesktopfile.c:188
+#, c-format
+msgid "Unrecognized desktop file Version '%s'"
+msgstr ""
+
+#: ../src/ui/eggdesktopfile.c:968
+#, fuzzy, c-format
+msgid "Starting %s"
+msgstr "Startuji VNC..."
+
+#: ../src/ui/eggdesktopfile.c:1110
+#, c-format
+msgid "Application does not accept documents on command line"
+msgstr ""
+
+#: ../src/ui/eggdesktopfile.c:1178
+#, c-format
+msgid "Unrecognized launch option: %d"
+msgstr ""
+
+#: ../src/ui/eggdesktopfile.c:1383
+#, c-format
+msgid "Can't pass document URIs to a 'Type=Link' desktop entry"
+msgstr ""
+
+#: ../src/ui/eggdesktopfile.c:1404
+#, c-format
+msgid "Not a launchable item"
+msgstr ""
+
+#: ../src/ui/eggsmclient.c:226
+msgid "Disable connection to session manager"
+msgstr ""
+
+#: ../src/ui/eggsmclient.c:229
+msgid "Specify file containing saved configuration"
+msgstr ""
+
+#: ../src/ui/eggsmclient.c:229
+msgid "FILE"
+msgstr ""
+
+#: ../src/ui/eggsmclient.c:232
+#, fuzzy
+msgid "Specify session management ID"
+msgstr "Zadejte volitelné parametry modulu"
+
+#: ../src/ui/eggsmclient.c:232
+#, fuzzy
+msgid "ID"
+msgstr "RAID"
+
+#: ../src/ui/eggsmclient.c:253
+msgid "Session management options:"
+msgstr ""
+
+#: ../src/ui/eggsmclient.c:254
+msgid "Show session management options"
+msgstr ""
 
 #: ../src/ui/im-chooser-simple.c:120
 msgid "X applications"
@@ -137,13 +218,32 @@ msgstr "Nelze získat aktuální stav"
 msgid "Unable to get Input Method information"
 msgstr "Nelze získat informaci o vstupní metodě"
 
-#: ../src/ui/im-chooser-simple.c:906
+#: ../src/ui/im-chooser-simple.c:905
 msgid "<b>Input Method</b>"
 msgstr "<b>Vstupní metoda</b>"
 
-#: ../src/ui/im-chooser-simple.c:941
+#: ../src/ui/im-chooser-simple.c:940
 msgid "Input Method _Preferences..."
 msgstr "Předvolby _vstupních metod..."
+
+#: ../src/ui/im-chooser-ui.c:55
+msgid ""
+"<span weight=\"bold\" size=\"larger\">No input method is available</span>"
+msgstr ""
+"<span·weight=\"bold\"·size=\"larger\">Není dostupná žádná vstupní metoda</"
+"span>"
+
+#: ../src/ui/im-chooser-ui.c:58
+msgid "Please install any input methods before running if you like."
+msgstr "Před použítm je potřeba vstupní metody nainstalovat."
+
+#: ../src/ui/im-chooser-ui.c:88
+msgid "Could not connect to the session manager"
+msgstr ""
+
+#: ../src/ui/im-chooser-ui.c:144
+msgid "Log Out"
+msgstr "Odhlásit"
 
 #: ../src/main.c:36
 msgid "[options...]"
@@ -153,31 +253,6 @@ msgstr ""
 #, fuzzy, c-format
 msgid "Could not parse arguments: %s\n"
 msgstr "Nemohu alokovat požadované oddíly: %s."
-
-#: ../src/im-chooser.desktop.in.in.h:1 ../src/xfce4-im-chooser.desktop.in.h:1
-msgid ""
-"Choose the input method to be used or disable the input method usage on the "
-"desktop"
-msgstr ""
-"Vyberte, která vstupní metoda se má používat, nebo vsupní metody pro "
-"používání na desktopu vypněte"
-
-#: ../src/im-chooser.desktop.in.in.h:2 ../src/xfce4-im-chooser.desktop.in.h:2
-#, fuzzy
-msgid "Input Method Selector"
-msgstr "Vstupní metoda"
-
-#~ msgid ""
-#~ "<span weight=\"bold\" size=\"larger\">No input method is available</span>"
-#~ msgstr ""
-#~ "<span·weight=\"bold\"·size=\"larger\">Není dostupná žádná vstupní metoda</"
-#~ "span>"
-
-#~ msgid "Please install any input methods before running if you like."
-#~ msgstr "Před použítm je potřeba vstupní metody nainstalovat."
-
-#~ msgid "Log Out"
-#~ msgstr "Odhlásit"
 
 #~ msgid "Updating Input Method list"
 #~ msgstr "Aktualizuji seznam vstupních metod"
@@ -2069,9 +2144,6 @@ msgstr "Vstupní metoda"
 
 #~ msgid "Please manually connect your vnc client to begin the install."
 #~ msgstr "Pro spuštění instalace se připojte pomocí VNC klienta."
-
-#~ msgid "Starting VNC..."
-#~ msgstr "Startuji VNC..."
 
 #~ msgid "The VNC server is now running."
 #~ msgstr "VNC server byl spuštěn."
@@ -4240,9 +4312,6 @@ msgstr "Vstupní metoda"
 #~ msgid "Delete"
 #~ msgstr "Odstranit"
 
-#~ msgid "RAID"
-#~ msgstr "RAID"
-
 #~ msgid ""
 #~ "    F1-Help     F2-New      F3-Edit   F4-Delete    F5-Reset    F12-"
 #~ "OK        "
@@ -4680,9 +4749,6 @@ msgstr "Vstupní metoda"
 #~ msgstr ""
 #~ "Vyberte ovladač, který si přejete načíst. Pokud není uveden a máte disk s "
 #~ "ovladači, stiskněte F2."
-
-#~ msgid "Specify optional module arguments"
-#~ msgstr "Zadejte volitelné parametry modulu"
 
 #~ msgid "Select Device Driver to Load"
 #~ msgstr "Vyberte ovladač zařízení, který načíst"
@@ -5138,9 +5204,6 @@ msgstr "Vstupní metoda"
 
 #~ msgid "Unknown Host"
 #~ msgstr "Neznámý počítač"
-
-#~ msgid "%s is not a valid hostname."
-#~ msgstr "%s není platné jméno počítače."
 
 #~ msgid ""
 #~ "If you are using a HTTP proxy server enter the name of the HTTP proxy "

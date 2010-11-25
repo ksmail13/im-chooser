@@ -11,15 +11,91 @@ msgid ""
 msgstr ""
 "Project-Id-Version: im-chooser.trunk\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-11-22 16:11+0900\n"
+"POT-Creation-Date: 2010-11-25 17:58+0900\n"
 "PO-Revision-Date: 2010-11-23 14:27+0800\n"
 "Last-Translator: Cheng-Chia Tseng <pswo10680@gmail.com>\n"
 "Language-Team: Traditional Chinese <zh@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: \n"
 "X-Generator: KBabel 1.11.4\n"
+
+#: ../src/ccpanel/im-chooser-panel.desktop.in.in.h:1
+#: ../src/im-chooser.desktop.in.in.h:1 ../src/xfce4-im-chooser.desktop.in.h:1
+msgid ""
+"Choose the input method to be used or disable the input method usage on the "
+"desktop"
+msgstr "請選擇欲使用的輸入法或是停用桌面環境所使用的輸入法"
+
+#: ../src/ccpanel/im-chooser-panel.desktop.in.in.h:2
+#: ../src/ui/im-chooser-ui.c:117 ../src/im-chooser.desktop.in.in.h:2
+#: ../src/xfce4-im-chooser.desktop.in.h:2
+msgid "Input Method Selector"
+msgstr "輸入法選擇器"
+
+#: ../src/ui/eggdesktopfile.c:165
+#, c-format
+msgid "File is not a valid .desktop file"
+msgstr ""
+
+#: ../src/ui/eggdesktopfile.c:188
+#, c-format
+msgid "Unrecognized desktop file Version '%s'"
+msgstr ""
+
+#: ../src/ui/eggdesktopfile.c:968
+#, c-format
+msgid "Starting %s"
+msgstr ""
+
+#: ../src/ui/eggdesktopfile.c:1110
+#, c-format
+msgid "Application does not accept documents on command line"
+msgstr ""
+
+#: ../src/ui/eggdesktopfile.c:1178
+#, c-format
+msgid "Unrecognized launch option: %d"
+msgstr ""
+
+#: ../src/ui/eggdesktopfile.c:1383
+#, c-format
+msgid "Can't pass document URIs to a 'Type=Link' desktop entry"
+msgstr ""
+
+#: ../src/ui/eggdesktopfile.c:1404
+#, c-format
+msgid "Not a launchable item"
+msgstr ""
+
+#: ../src/ui/eggsmclient.c:226
+msgid "Disable connection to session manager"
+msgstr ""
+
+#: ../src/ui/eggsmclient.c:229
+msgid "Specify file containing saved configuration"
+msgstr ""
+
+#: ../src/ui/eggsmclient.c:229
+msgid "FILE"
+msgstr ""
+
+#: ../src/ui/eggsmclient.c:232
+msgid "Specify session management ID"
+msgstr ""
+
+#: ../src/ui/eggsmclient.c:232
+msgid "ID"
+msgstr ""
+
+#: ../src/ui/eggsmclient.c:253
+msgid "Session management options:"
+msgstr ""
+
+#: ../src/ui/eggsmclient.c:254
+msgid "Show session management options"
+msgstr ""
 
 #: ../src/ui/im-chooser-simple.c:120
 msgid "X applications"
@@ -58,8 +134,7 @@ msgstr "停用輸入法 - %s"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications and Qt applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications and GTK+ applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications and Qt applications</i></small>"
-#: ../src/ui/im-chooser-simple.c:513
-#: ../src/ui/im-chooser-simple.c:516
+#: ../src/ui/im-chooser-simple.c:513 ../src/ui/im-chooser-simple.c:516
 #: ../src/ui/im-chooser-simple.c:519
 #, c-format
 msgid ", except %s and %s"
@@ -68,8 +143,7 @@ msgstr "，除了 %s 和 %s"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except Qt applications</i></small>"
-#: ../src/ui/im-chooser-simple.c:522
-#: ../src/ui/im-chooser-simple.c:525
+#: ../src/ui/im-chooser-simple.c:522 ../src/ui/im-chooser-simple.c:525
 #: ../src/ui/im-chooser-simple.c:528
 #, c-format
 msgid ", except %s"
@@ -78,7 +152,9 @@ msgstr "，除了 %s"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications</i></small>"
 #: ../src/ui/im-chooser-simple.c:533
 #, c-format
-msgid "<small><i>Note: this change will not take effect until you next log in%s</i></small>"
+msgid ""
+"<small><i>Note: this change will not take effect until you next log in%s</"
+"i></small>"
 msgstr "<small><i>注意：這項變更要等到您下次登入 %s 後才會生效。</i></small>"
 
 #: ../src/ui/im-chooser-simple.c:592
@@ -136,13 +212,30 @@ msgstr "無法取得目前的狀態"
 msgid "Unable to get Input Method information"
 msgstr "無法取得輸入法資訊"
 
-#: ../src/ui/im-chooser-simple.c:906
+#: ../src/ui/im-chooser-simple.c:905
 msgid "<b>Input Method</b>"
 msgstr "<b>輸入法</b>"
 
-#: ../src/ui/im-chooser-simple.c:941
+#: ../src/ui/im-chooser-simple.c:940
 msgid "Input Method _Preferences..."
 msgstr "輸入法偏好設定(_P)..."
+
+#: ../src/ui/im-chooser-ui.c:55
+msgid ""
+"<span weight=\"bold\" size=\"larger\">No input method is available</span>"
+msgstr "<span weight=\"bold\" size=\"larger\">沒有可用的輸入法</span>"
+
+#: ../src/ui/im-chooser-ui.c:58
+msgid "Please install any input methods before running if you like."
+msgstr "請在執行前安裝任何您想要的輸入法。"
+
+#: ../src/ui/im-chooser-ui.c:88
+msgid "Could not connect to the session manager"
+msgstr ""
+
+#: ../src/ui/im-chooser-ui.c:144
+msgid "Log Out"
+msgstr "登出"
 
 #: ../src/main.c:36
 msgid "[options...]"
@@ -153,29 +246,14 @@ msgstr "[選項...]"
 msgid "Could not parse arguments: %s\n"
 msgstr "無法解析引數：%s\n"
 
-#: ../src/im-chooser.desktop.in.in.h:1
-#: ../src/xfce4-im-chooser.desktop.in.h:1
-msgid "Choose the input method to be used or disable the input method usage on the desktop"
-msgstr "請選擇欲使用的輸入法或是停用桌面環境所使用的輸入法"
-
-#: ../src/im-chooser.desktop.in.in.h:2
-#: ../src/xfce4-im-chooser.desktop.in.h:2
-msgid "Input Method Selector"
-msgstr "輸入法選擇器"
-
-#~ msgid ""
-#~ "<span weight=\"bold\" size=\"larger\">No input method is available</span>"
-#~ msgstr "<span weight=\"bold\" size=\"larger\">沒有可用的輸入法</span>"
-#~ msgid "Please install any input methods before running if you like."
-#~ msgstr "請在執行前安裝任何您想要的輸入法。"
-#~ msgid "Log Out"
-#~ msgstr "登出"
 #~ msgid "Updating Input Method list"
 #~ msgstr "更新輸入法清單"
+
 #~ msgid "_Enable input method feature"
 #~ msgstr "啟用輸入法功能(_E)"
+
 #~ msgid "Show the status icon"
 #~ msgstr "顯示狀態圖示"
+
 #~ msgid "IM Chooser - Input Method configuration tool"
 #~ msgstr "IM Chooser - 輸入法設定工具"
-
