@@ -1,14 +1,18 @@
-1.3.2 ->
+1.3.2 -> 1.4.0
 =================
 * Enhancement:
   * rhbz#628420: move none state from checkbox to selector
   * rhbz#607502: Window title
   * GTK3 support
+  * GNOME3 support (ccpanel)
   * Get rid of libgnomeui dependency
 * Translations updated:
+  * Brazilian Portuguese
   * Dutch
   * Norwegian Bokmål
+  * Polish
   * Turkish
+  * Ukrainian
 
 1.3.1 -> 1.3.2
 =================

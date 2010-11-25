@@ -1,5 +1,7 @@
 2010-11-25  Akira TAGOH  <tagoh@redhat.com>
 
+	* configure.ac: bump to 1.4.0.
+
 	* src/im-chooser.desktop.in.in (NotShowIn): added to not display this
 	for GNOME and XFCE.
 
