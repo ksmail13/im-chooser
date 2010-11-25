@@ -169,6 +169,7 @@ im_chooser_ui_get(void)
 
 	g_object_set_qdata_full(G_OBJECT (window), qui, im,
 				g_object_unref);
+	g_object_weak_ref(G_OBJECT (content_widget), g_object_unref, im);
 
 	return GTK_WIDGET (window);
 }

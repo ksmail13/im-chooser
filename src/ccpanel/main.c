@@ -51,6 +51,7 @@ struct _CcIMChoosePanelClass {
 GType cc_imchoose_panel_get_type(void) G_GNUC_CONST;
 
 G_DEFINE_DYNAMIC_TYPE (CcIMChoosePanel, cc_imchoose_panel, CC_TYPE_PANEL)
+static gboolean is_session_initialized = FALSE;
 
 /*< private >*/
 static void
@@ -93,8 +94,12 @@ cc_imchoose_panel_init(CcIMChoosePanel *self)
 	gtk_widget_reparent(content, GTK_WIDGET (self));
 	gtk_widget_show_all(action);
 
-	if (EGG_SM_CLIENT_GET_CLASS (sm)->startup)
-		EGG_SM_CLIENT_GET_CLASS (sm)->startup(sm, NULL);
+	if (!is_session_initialized) {
+		/* to avoid getting stuck on processing the ICE message */
+		is_session_initialized = TRUE;
+		if (EGG_SM_CLIENT_GET_CLASS (sm)->startup)
+			EGG_SM_CLIENT_GET_CLASS (sm)->startup(sm, NULL);
+	}
 }
 
 /*< public >*/

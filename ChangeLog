@@ -1,3 +1,12 @@
+2010-11-25  Akira TAGOH  <akira@tagoh.org>
+
+	* src/ui/im-chooser-ui.c (im_chooser_ui_get): unref the IMChooserSimple
+	object when the widget is being destroyed.
+
+	* src/ccpanel/main.c (cc_imchoose_panel_init): initialize the session
+	management only once to avoid getting stuck on processing
+	the ICE message.
+
 2010-11-25  Akira TAGOH  <tagoh@redhat.com>
 
 	* src/ui/im-chooser-simple.c (_im_chooser_simple_update_im_list):
