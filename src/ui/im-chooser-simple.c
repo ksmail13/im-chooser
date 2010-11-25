@@ -27,7 +27,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
-#include <glib/gi18n.h>
+#include <glib/gi18n-lib.h>
 #include "imsettings/imsettings.h"
 #include "imsettings/imsettings-request.h"
 #include "im-chooser-simple.h"

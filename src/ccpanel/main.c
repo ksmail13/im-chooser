@@ -26,7 +26,7 @@
 #endif
 
 #include <libgnome-control-center/cc-panel.h>
-#include <glib/gi18n.h>
+#include <glib/gi18n-lib.h>
 #include "eggsmclient.h"
 #include "im-chooser-ui.h"
 

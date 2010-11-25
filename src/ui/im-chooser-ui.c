@@ -25,7 +25,7 @@
 #include "config.h"
 #endif
 #include <stdlib.h>
-#include <glib/gi18n.h>
+#include <glib/gi18n-lib.h>
 #include "eggdesktopfile.h"
 #include "eggsmclient.h"
 #include "im-chooser-simple.h"
@@ -167,9 +167,8 @@ im_chooser_ui_get(void)
 	g_signal_connect(window, "response",
 			 G_CALLBACK (_dialog_response_cb), im);
 
-	g_object_set_qdata_full(G_OBJECT (window), qui, im,
+	g_object_set_qdata_full(G_OBJECT (content_widget), qui, im,
 				g_object_unref);
-	g_object_weak_ref(G_OBJECT (content_widget), g_object_unref, im);
 
 	return GTK_WIDGET (window);
 }
