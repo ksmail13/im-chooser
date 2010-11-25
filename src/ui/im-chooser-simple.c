@@ -799,20 +799,19 @@ _im_chooser_simple_update_im_list(IMChooserSimple *im)
 	}
 
 	none_info = imsettings_request_get_info_object(im->imsettings, "none", &error);
-	if (array->len == 0)
-		g_ptr_array_add(array, none_info);
 	list = gtk_list_store_new(4, GDK_TYPE_PIXBUF, G_TYPE_STRING, G_TYPE_STRING, G_TYPE_OBJECT);
+
+	/* add none at the beginning */
+	_im_chooser_simple_add_row(im, list, &iter, &def_iter, &cur_iter, none_info,
+				   running_im,
+				   imsettings_info_get_short_desc(none_info),
+				   imsettings_info_get_icon_file(none_info),
+				   imsettings_info_is_xim(none_info),
+				   imsettings_info_is_system_default(none_info));
+
 	for (i = 0; i < array->len; i++) {
 		info = IMSETTINGS_INFO (g_ptr_array_index(array, i));
 
-		if (i == 1) {
-			_im_chooser_simple_add_row(im, list, &iter, &def_iter, &cur_iter, none_info,
-						   running_im,
-						   imsettings_info_get_short_desc(none_info),
-						   imsettings_info_get_icon_file(none_info),
-						   imsettings_info_is_xim(none_info),
-						   imsettings_info_is_system_default(none_info));
-		}
 		_im_chooser_simple_add_row(im, list, &iter, &def_iter, &cur_iter, info,
 					   running_im,
 					   imsettings_info_get_short_desc(info),
