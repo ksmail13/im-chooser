@@ -120,8 +120,6 @@ im_chooser_ui_get(void)
 
 	if (!im) {
 		im = im_chooser_simple_new();
-	} else {
-		g_object_ref(G_OBJECT (im));
 	}
 
 	xmodifiers = g_getenv("XMODIFIERS");
@@ -173,6 +171,7 @@ im_chooser_ui_get(void)
 
 	g_object_set_qdata_full(G_OBJECT (content_widget), qui, im,
 				g_object_unref);
+	g_object_add_weak_pointer(G_OBJECT (content_widget), &im);
 
 	return GTK_WIDGET (window);
 }
