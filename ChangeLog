@@ -1,5 +1,7 @@
 2010-11-26  Akira TAGOH  <tagoh@redhat.com>
 
+	* configure.ac: bump to 1.4.0.
+
 	Fix a crash on g-c-c when im-chooser is active and invoking again.
 
 	* src/ui/im-chooser-simple.c (im_chooser_simple_get_widget): unparent
@@ -12,8 +14,6 @@
 	on ccpanel.
 
 2010-11-25  Akira TAGOH  <tagoh@redhat.com>
-
-	* configure.ac: bump to 1.4.0.
 
 	* src/im-chooser.desktop.in.in (NotShowIn): added to not display this
 	for GNOME and XFCE.
