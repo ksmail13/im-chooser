@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: pl\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2010-11-25 17:58+0900\n"
-"PO-Revision-Date: 2010-11-23 08:46+0100\n"
+"PO-Revision-Date: 2010-11-26 21:01+0100\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish <trans-pl@lists.fedoraproject.org>\n"
 "Language: pl\n"
@@ -30,65 +30,66 @@ msgstr "Wybór metody wprowadzania"
 #: ../src/ui/eggdesktopfile.c:165
 #, c-format
 msgid "File is not a valid .desktop file"
-msgstr ""
+msgstr "Plik nie jest prawidłowym plikiem .desktop"
 
 #: ../src/ui/eggdesktopfile.c:188
 #, c-format
 msgid "Unrecognized desktop file Version '%s'"
-msgstr ""
+msgstr "Nierozpoznana wersja pliku .desktop \"%s\""
 
 #: ../src/ui/eggdesktopfile.c:968
 #, c-format
 msgid "Starting %s"
-msgstr ""
+msgstr "Uruchamianie %s"
 
 #: ../src/ui/eggdesktopfile.c:1110
 #, c-format
 msgid "Application does not accept documents on command line"
-msgstr ""
+msgstr "Aplikacja nie przyjmuje dokumentów w wierszu poleceń"
 
 #: ../src/ui/eggdesktopfile.c:1178
 #, c-format
 msgid "Unrecognized launch option: %d"
-msgstr ""
+msgstr "Nierozpoznana opcja uruchamiania: %d"
 
 #: ../src/ui/eggdesktopfile.c:1383
 #, c-format
 msgid "Can't pass document URIs to a 'Type=Link' desktop entry"
 msgstr ""
+"Nie można przekazać adresów URI dokumentów do wpisu pliku .desktop typu \"Type=Link\""
 
 #: ../src/ui/eggdesktopfile.c:1404
 #, c-format
 msgid "Not a launchable item"
-msgstr ""
+msgstr "Nie można uruchamiać elementu"
 
 #: ../src/ui/eggsmclient.c:226
 msgid "Disable connection to session manager"
-msgstr ""
+msgstr "Wyłącza połączenie z menedżerem sesji"
 
 #: ../src/ui/eggsmclient.c:229
 msgid "Specify file containing saved configuration"
-msgstr ""
+msgstr "Określa plik zawierający zapisaną konfigurację"
 
 #: ../src/ui/eggsmclient.c:229
 msgid "FILE"
-msgstr ""
+msgstr "PLIK"
 
 #: ../src/ui/eggsmclient.c:232
 msgid "Specify session management ID"
-msgstr ""
+msgstr "Określa identyfikator zarządzania sesją"
 
 #: ../src/ui/eggsmclient.c:232
 msgid "ID"
-msgstr ""
+msgstr "IDENTYFIKATOR"
 
 #: ../src/ui/eggsmclient.c:253
 msgid "Session management options:"
-msgstr ""
+msgstr "Opcje zarządzania sesją:"
 
 #: ../src/ui/eggsmclient.c:254
 msgid "Show session management options"
-msgstr ""
+msgstr "Wyświetla opcje zarządzania sesją"
 
 #: ../src/ui/im-chooser-simple.c:120
 msgid "X applications"
@@ -219,18 +220,20 @@ msgstr "_Preferencje metody wprowadzania..."
 msgid ""
 "<span weight=\"bold\" size=\"larger\">No input method is available</span>"
 msgstr ""
+"<span weight=\"bold\" size=\"larger\">Brak dostępnych metod "
+"wprowadzania</span>"
 
 #: ../src/ui/im-chooser-ui.c:58
 msgid "Please install any input methods before running if you like."
-msgstr ""
+msgstr "Proszę zainstalować dowolną metodę wprowadzania przed uruchomieniem."
 
 #: ../src/ui/im-chooser-ui.c:88
 msgid "Could not connect to the session manager"
-msgstr ""
+msgstr "Nie można połączyć się z menedżerem sesji"
 
 #: ../src/ui/im-chooser-ui.c:144
 msgid "Log Out"
-msgstr ""
+msgstr "Wyloguj"
 
 #: ../src/main.c:36
 msgid "[options...]"
