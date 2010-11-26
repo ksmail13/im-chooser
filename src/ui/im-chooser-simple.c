@@ -965,20 +965,25 @@ im_chooser_simple_get_widget(IMChooserSimple *im)
 		gtk_container_add(GTK_CONTAINER (frame), align_im);
 
 		im->widget = frame;
+	} else {
+		gtk_widget_unparent(im->widget);
 	}
 	gtk_widget_show_all(im->widget);
-	_im_chooser_simple_update_im_list(im);
 
-	gtk_widget_set_sensitive(im->button_im_config, FALSE);
+	if (!im->initialized) {
+		_im_chooser_simple_update_im_list(im);
 
-	g_object_set(im, "note_type", im->note_type, NULL);
+		gtk_widget_set_sensitive(im->button_im_config, FALSE);
 
-	selection = gtk_tree_view_get_selection(GTK_TREE_VIEW (im->widget_im_list));
-	g_signal_emit_by_name(selection, "changed", 0, NULL);
+		g_object_set(im, "note_type", im->note_type, NULL);
 
-	im->initialized = TRUE;
+		selection = gtk_tree_view_get_selection(GTK_TREE_VIEW (im->widget_im_list));
+		g_signal_emit_by_name(selection, "changed", 0, NULL);
 
-	return im->widget;
+		im->initialized = TRUE;
+	}
+
+	return GTK_WIDGET (g_object_ref(G_OBJECT (im->widget)));
 }
 
 gboolean

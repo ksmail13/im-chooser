@@ -1,5 +1,13 @@
 2010-11-26  Akira TAGOH  <tagoh@redhat.com>
 
+	Fix a crash on g-c-c when im-chooser is active and invoking again.
+
+	* src/ui/im-chooser-simple.c (im_chooser_simple_get_widget): unparent
+	if the widget is already created.
+
+	* src/ui/im-chooser-ui.c (im_chooser_ui_get): make IMChooserSimple
+	object reusable.
+
 	* src/ui/im-chooser-simple.c (im_chooser_simple_finalize): fix a crash
 	on ccpanel.
 

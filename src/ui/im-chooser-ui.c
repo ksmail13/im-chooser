@@ -106,7 +106,7 @@ im_chooser_ui_get(void)
 {
 	GtkWidget *logout_button, *logout_image;
 	GtkWidget *window, *widget, *close_button, *content_widget;
-	IMChooserSimple *im;
+	static IMChooserSimple *im = NULL;
 	const gchar *xmodifiers, *gtk_immodule, *qt_immodule;
 	guint note_type = 0;
 	GQuark qui = g_quark_from_static_string("im-chooser-ui-simple-object");
@@ -118,7 +118,11 @@ im_chooser_ui_get(void)
 
 	gtk_container_set_border_width(GTK_CONTAINER (window), 4);
 
-	im = im_chooser_simple_new();
+	if (!im) {
+		im = im_chooser_simple_new();
+	} else {
+		g_object_ref(G_OBJECT (im));
+	}
 
 	xmodifiers = g_getenv("XMODIFIERS");
 	gtk_immodule = g_getenv("GTK_IM_MODULE");
