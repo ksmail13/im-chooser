@@ -1,3 +1,8 @@
+2010-11-26  Akira TAGOH  <tagoh@redhat.com>
+
+	* src/ui/im-chooser-simple.c (im_chooser_simple_finalize): fix a crash
+	on ccpanel.
+
 2010-11-25  Akira TAGOH  <tagoh@redhat.com>
 
 	* configure.ac: bump to 1.4.0.

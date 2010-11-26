@@ -567,6 +567,7 @@ im_chooser_simple_finalize(GObject *object)
 {
 	IMChooserSimple *simple = IM_CHOOSER_SIMPLE (object);
 
+	g_source_remove(simple->idle_source);
 	g_object_unref(simple->imsettings);
 	g_free(simple->initial_im);
 	g_free(simple->current_im);
