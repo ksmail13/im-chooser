@@ -2,7 +2,7 @@
 # Korean translations for im-chooser package.
 # Copyright (C) 2006 Red Hat, Inc. All rights reserved.
 # This file is distributed under the same license as the im-chooser package.
-#
+# 
 # Automatically generated, 2006.
 # Eunju Kim <eukim@redhat.com>, 2006, 2007, 2008.
 # Hyunsok Oh <hoh@redhat.com>, 2010.
@@ -14,11 +14,11 @@ msgstr ""
 "PO-Revision-Date: 2010-03-31 14:24+1000\n"
 "Last-Translator: Hyunsok Oh <hoh@redhat.com>\n"
 "Language-Team: Korean <ko@li.org>\n"
-"Language: ko\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms:  nplurals=2; plural=(n!=1);\n"
+"Language: ko\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
 "\n"
 "\n"
 "\n"
@@ -26,42 +26,8 @@ msgstr ""
 
 #: ../src/ccpanel/im-chooser-panel.desktop.in.in.h:1
 #: ../src/im-chooser.desktop.in.in.h:1 ../src/xfce4-im-chooser.desktop.in.h:1
-msgid ""
-"Choose the input method to be used or disable the input method usage on the "
-"desktop"
+msgid "Choose the input method to be used or disable the input method usage on the desktop"
 msgstr "데스크탑에서 입력 방식 사용을 비활성화, 또는 사용할 입력 방식 선택 "
-
-#: ../src/ccpanel/im-chooser-panel.desktop.in.in.h:2
-#: ../src/ui/im-chooser-ui.c:117 ../src/im-chooser.desktop.in.in.h:2
-#: ../src/xfce4-im-chooser.desktop.in.h:2
-#, fuzzy
-msgid "Input Method Selector"
-msgstr "입력 방식"
-
-#: ../src/ui/eggdesktopfile.c:165
-#, c-format
-msgid "File is not a valid .desktop file"
-msgstr ""
-
-#: ../src/ui/eggdesktopfile.c:188
-#, c-format
-msgid "Unrecognized desktop file Version '%s'"
-msgstr ""
-
-#: ../src/ui/eggdesktopfile.c:968
-#, c-format
-msgid "Starting %s"
-msgstr ""
-
-#: ../src/ui/eggdesktopfile.c:1110
-#, c-format
-msgid "Application does not accept documents on command line"
-msgstr ""
-
-#: ../src/ui/eggdesktopfile.c:1178
-#, c-format
-msgid "Unrecognized launch option: %d"
-msgstr ""
 
 #: ../src/ui/eggdesktopfile.c:1383
 #, c-format
@@ -135,33 +101,39 @@ msgstr "입력 방식 시작 - %s"
 msgid "Stopping Input Method - %s"
 msgstr "입력 방식 중지 - %s"
 
-#. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications and Qt applications</i></small>"
-#. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications and GTK+ applications</i></small>"
-#. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications and Qt applications</i></small>"
+#. This will be displayed like "<small><i>Note: this change will not take
+#. effect until you next log in, except X applications and Qt
+#. applications</i></small>"
+#. This will be displayed like "<small><i>Note: this change will not take
+#. effect until you next log in, except X applications and GTK+
+#. applications</i></small>"
+#. This will be displayed like "<small><i>Note: this change will not take
+#. effect until you next log in, except GTK+ applications and Qt
+#. applications</i></small>"
 #: ../src/ui/im-chooser-simple.c:513 ../src/ui/im-chooser-simple.c:516
 #: ../src/ui/im-chooser-simple.c:519
 #, c-format
 msgid ", except %s and %s"
 msgstr ", %s 및 %s 제외"
 
-#. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications</i></small>"
-#. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications</i></small>"
-#. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except Qt applications</i></small>"
+#. This will be displayed like "<small><i>Note: this change will not take
+#. effect until you next log in, except X applications</i></small>"
+#. This will be displayed like "<small><i>Note: this change will not take
+#. effect until you next log in, except GTK+ applications</i></small>"
+#. This will be displayed like "<small><i>Note: this change will not take
+#. effect until you next log in, except Qt applications</i></small>"
 #: ../src/ui/im-chooser-simple.c:522 ../src/ui/im-chooser-simple.c:525
 #: ../src/ui/im-chooser-simple.c:528
 #, c-format
 msgid ", except %s"
 msgstr ", %s 제외 "
 
-#. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications</i></small>"
+#. This will be displayed like "<small><i>Note: this change will not take
+#. effect until you next log in, except GTK+ applications</i></small>"
 #: ../src/ui/im-chooser-simple.c:533
 #, c-format
-msgid ""
-"<small><i>Note: this change will not take effect until you next log in%s</"
-"i></small>"
-msgstr ""
-"<small><i>알림: 변경사항은 다음번 %s 로그인 할 때 까지 적용되지 않습니다.</"
-"i></small>"
+msgid "<small><i>Note: this change will not take effect until you next log in%s</i></small>"
+msgstr "<small><i>알림: 변경사항은 다음번 %s 로그인 할 때 까지 적용되지 않습니다.</i></small>"
 
 #: ../src/ui/im-chooser-simple.c:592
 msgid "Parent Window"
@@ -228,10 +200,8 @@ msgid "Input Method _Preferences..."
 msgstr "입력 방식 설정 (_P) "
 
 #: ../src/ui/im-chooser-ui.c:55
-msgid ""
-"<span weight=\"bold\" size=\"larger\">No input method is available</span>"
-msgstr ""
-"<span weight=\"bold\" size=\"larger\">사용 가능한 입력 방식이 없음</span> "
+msgid "<span weight=\"bold\" size=\"larger\">No input method is available</span>"
+msgstr "<span weight=\"bold\" size=\"larger\">사용 가능한 입력 방식이 없음</span> "
 
 #: ../src/ui/im-chooser-ui.c:58
 msgid "Please install any input methods before running if you like."
@@ -253,6 +223,37 @@ msgstr ""
 #, c-format
 msgid "Could not parse arguments: %s\n"
 msgstr ""
+
+#: ../src/ui/eggdesktopfile.c:165
+#, c-format
+msgid "File is not a valid .desktop file"
+msgstr "올바르지 않은 .desktop 파일입니다"
+
+#: ../src/ccpanel/im-chooser-panel.desktop.in.in.h:2
+#: ../src/ui/im-chooser-ui.c:117 ../src/im-chooser.desktop.in.in.h:2
+#: ../src/xfce4-im-chooser.desktop.in.h:2
+msgid "Input Method Selector"
+msgstr "입력 방식"
+
+#: ../src/ui/eggdesktopfile.c:968
+#, c-format, fuzzy
+msgid "Starting %s"
+msgstr "%s 시작중"
+
+#: ../src/ui/eggdesktopfile.c:188
+#, c-format, fuzzy
+msgid "Unrecognized desktop file Version '%s'"
+msgstr "인식되지 않은 데스크탑 파일 버전 '%s'"
+
+#: ../src/ui/eggdesktopfile.c:1178
+#, c-format, fuzzy
+msgid "Unrecognized launch option: %d"
+msgstr "올바르지 않은 실행 옵션 %d"
+
+#: ../src/ui/eggdesktopfile.c:1110
+#, c-format, fuzzy
+msgid "Application does not accept documents on command line"
+msgstr "어플리케이션이 명령줄에서 문서를 받지 않습니다"
 
 #~ msgid "Updating Input Method list"
 #~ msgstr "입력 방식 목록 업데이트 "
