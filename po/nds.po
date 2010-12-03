@@ -1,4 +1,4 @@
-# translation of de.po to
+# translation of nds.po to
 # Low German translations for im-chooser package.
 # Copyright (C) 2006 Red Hat, Inc. All rights reserved.
 # This file is distributed under the same license as the im-chooser package.
@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: Desktop Input Method configuration tool\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2010-11-25 17:58+0900\n"
-"PO-Revision-Date: 2010-12-02 15:48+0100\n"
+"PO-Revision-Date: 2010-12-03 12:25+0100\n"
 "Last-Translator: Nils-Christoph Fiedler <ncfiedler@gnome.org>\n"
 "Language-Team: Low German Translation team <nds-lowgerman@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -58,12 +58,12 @@ msgstr "Programm lett keene Dokumente in de Orderreeg to"
 #: ../src/ui/eggdesktopfile.c:1178
 #, c-format
 msgid "Unrecognized launch option: %d"
-msgstr ""
+msgstr "Unbekannte Startoptschoon: %d"
 
 #: ../src/ui/eggdesktopfile.c:1383
 #, c-format
 msgid "Can't pass document URIs to a 'Type=Link' desktop entry"
-msgstr ""
+msgstr "Künn Dokument URI nich to e'em 'Type=Link' Schrievdiskindrag överdregen"
 
 #: ../src/ui/eggdesktopfile.c:1404
 #, c-format
@@ -72,11 +72,11 @@ msgstr "Nich startbares Element"
 
 #: ../src/ui/eggsmclient.c:226
 msgid "Disable connection to session manager"
-msgstr ""
+msgstr "Verbinnen to 'm Törnopppasser deaktiveren"
 
 #: ../src/ui/eggsmclient.c:229
 msgid "Specify file containing saved configuration"
-msgstr ""
+msgstr "Sök de Datei rut, in de Konfiguratschoon spiekert is"
 
 #: ../src/ui/eggsmclient.c:229
 msgid "FILE"
