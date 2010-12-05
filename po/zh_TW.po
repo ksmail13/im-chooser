@@ -238,23 +238,22 @@ msgstr "關閉通往段落管理員的連線"
 msgid "Specify session management ID"
 msgstr "指定段落管理 ID"
 
-#: ../src/ui/eggsmclient.c:229
-msgid "FILE"
-msgstr ""
+#: ../src/ui/eggsmclient.c:254
+#, fuzzy
+msgid "Show session management options"
+msgstr "顯示段落管埋選項"
 
 #: ../src/ui/eggsmclient.c:253
-#, fuzzy
 msgid "Session management options:"
 msgstr "段落管理選項:"
 
 #: ../src/ui/eggsmclient.c:232
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
-#: ../src/ui/eggsmclient.c:254
-#, fuzzy
-msgid "Show session management options"
-msgstr "顯示段落管埋選項"
+#: ../src/ui/eggsmclient.c:229
+msgid "FILE"
+msgstr "FILE"
 
 #~ msgid "Updating Input Method list"
 #~ msgstr "更新輸入法清單"
