@@ -1,8 +1,8 @@
 # Brazilian Portuguese translation of im-chooser.
 # Copyright (C) 2006,2007,2008 Red Hat, Inc. All rights reserved.
 # This file is distributed under the same license as the im-chooser package.
-#
-#
+# 
+# 
 # Automatically generated, 2006.
 # Valnir Ferreira Jr. <vferreir@redhat.com>, 2006.
 # Diego Búrigo Zacarão <diegobz@gmail.com>, 2007.
@@ -19,10 +19,10 @@ msgstr ""
 "PO-Revision-Date: 2010-11-15 14:20-0300\n"
 "Last-Translator: Cleiton Lima <cleitonlima@espacoliberdade.blog.br>\n"
 "Language-Team: Brazilian Portuguese <fedora-trans-pt_br@redhat.com>\n"
-"Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: pt_BR\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Poedit-Language: Portuguese\n"
 "X-Poedit-Country: BRAZIL\n"
@@ -30,23 +30,8 @@ msgstr ""
 
 #: ../src/ccpanel/im-chooser-panel.desktop.in.in.h:1
 #: ../src/im-chooser.desktop.in.in.h:1 ../src/xfce4-im-chooser.desktop.in.h:1
-msgid ""
-"Choose the input method to be used or disable the input method usage on the "
-"desktop"
-msgstr ""
-"Escolha ou desabilite o método de entrada a ser usado no ambiente de trabalho"
-
-#: ../src/ccpanel/im-chooser-panel.desktop.in.in.h:2
-#: ../src/ui/im-chooser-ui.c:117 ../src/im-chooser.desktop.in.in.h:2
-#: ../src/xfce4-im-chooser.desktop.in.h:2
-#, fuzzy
-msgid "Input Method Selector"
-msgstr "Seletor de Método de entrada"
-
-#: ../src/ui/eggdesktopfile.c:165
-#, c-format
-msgid "File is not a valid .desktop file"
-msgstr ""
+msgid "Choose the input method to be used or disable the input method usage on the desktop"
+msgstr "Escolha ou desabilite o método de entrada a ser usado no ambiente de trabalho"
 
 #: ../src/ui/eggdesktopfile.c:188
 #, c-format
@@ -141,33 +126,39 @@ msgstr "Iniciando método de entrada - %s"
 msgid "Stopping Input Method - %s"
 msgstr "Parando método de entrada - %s"
 
-#. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications and Qt applications</i></small>"
-#. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications and GTK+ applications</i></small>"
-#. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications and Qt applications</i></small>"
+#. This will be displayed like "<small><i>Note: this change will not take
+#. effect until you next log in, except X applications and Qt
+#. applications</i></small>"
+#. This will be displayed like "<small><i>Note: this change will not take
+#. effect until you next log in, except X applications and GTK+
+#. applications</i></small>"
+#. This will be displayed like "<small><i>Note: this change will not take
+#. effect until you next log in, except GTK+ applications and Qt
+#. applications</i></small>"
 #: ../src/ui/im-chooser-simple.c:513 ../src/ui/im-chooser-simple.c:516
 #: ../src/ui/im-chooser-simple.c:519
 #, c-format
 msgid ", except %s and %s"
 msgstr ", exceto %s e %s"
 
-#. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications</i></small>"
-#. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications</i></small>"
-#. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except Qt applications</i></small>"
+#. This will be displayed like "<small><i>Note: this change will not take
+#. effect until you next log in, except X applications</i></small>"
+#. This will be displayed like "<small><i>Note: this change will not take
+#. effect until you next log in, except GTK+ applications</i></small>"
+#. This will be displayed like "<small><i>Note: this change will not take
+#. effect until you next log in, except Qt applications</i></small>"
 #: ../src/ui/im-chooser-simple.c:522 ../src/ui/im-chooser-simple.c:525
 #: ../src/ui/im-chooser-simple.c:528
 #, c-format
 msgid ", except %s"
 msgstr ", exceto %s"
 
-#. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications</i></small>"
+#. This will be displayed like "<small><i>Note: this change will not take
+#. effect until you next log in, except GTK+ applications</i></small>"
 #: ../src/ui/im-chooser-simple.c:533
 #, c-format
-msgid ""
-"<small><i>Note: this change will not take effect until you next log in%s</"
-"i></small>"
-msgstr ""
-"<small><i>Nota: esta alteração não terá efeito até o seu próximo login%s.</"
-"i></small>"
+msgid "<small><i>Note: this change will not take effect until you next log in%s</i></small>"
+msgstr "<small><i>Nota: esta alteração não terá efeito até o seu próximo login%s.</i></small>"
 
 #: ../src/ui/im-chooser-simple.c:592
 msgid "Parent Window"
@@ -233,17 +224,12 @@ msgid "Input Method _Preferences..."
 msgstr "_Preferências do método de entrada..."
 
 #: ../src/ui/im-chooser-ui.c:55
-msgid ""
-"<span weight=\"bold\" size=\"larger\">No input method is available</span>"
-msgstr ""
-"<span weight=\"bold\" size=\"larger\">Nenhum método de entrada disponível</"
-"span>"
+msgid "<span weight=\"bold\" size=\"larger\">No input method is available</span>"
+msgstr "<span weight=\"bold\" size=\"larger\">Nenhum método de entrada disponível</span>"
 
 #: ../src/ui/im-chooser-ui.c:58
 msgid "Please install any input methods before running if you like."
-msgstr ""
-"Por favor, instale quaisquer métodos de entradas antes de executar, se você "
-"quiser."
+msgstr "Por favor, instale quaisquer métodos de entradas antes de executar, se você quiser."
 
 #: ../src/ui/im-chooser-ui.c:88
 msgid "Could not connect to the session manager"
@@ -261,6 +247,17 @@ msgstr "[opções..]"
 #, c-format
 msgid "Could not parse arguments: %s\n"
 msgstr "Não foi possível analisar os argumentos: %s\n"
+
+#: ../src/ui/eggdesktopfile.c:165
+#, c-format
+msgid "File is not a valid .desktop file"
+msgstr "O arquivo não é um arquivo .desktop válido"
+
+#: ../src/ccpanel/im-chooser-panel.desktop.in.in.h:2
+#: ../src/ui/im-chooser-ui.c:117 ../src/im-chooser.desktop.in.in.h:2
+#: ../src/xfce4-im-chooser.desktop.in.h:2
+msgid "Input Method Selector"
+msgstr "Seletor de Método de entrada"
 
 #~ msgid "Updating Input Method list"
 #~ msgstr "Atualizando a lista de métodos de entrada"
@@ -281,9 +278,7 @@ msgstr "Não foi possível analisar os argumentos: %s\n"
 #~ msgstr "Um logoff é realizado para aplicar a alteração de exibição de nota"
 
 #~ msgid "Replace the running settings daemon with new instance."
-#~ msgstr ""
-#~ "Substitua as configurações do daemon que estão rodando, por uma nova "
-#~ "instância"
+#~ msgstr "Substitua as configurações do daemon que estão rodando, por uma nova instância"
 
 #~ msgid "Unknown error in parsing the command lines."
 #~ msgstr "Erro desconhecido ao analisar as linhas de comando."
