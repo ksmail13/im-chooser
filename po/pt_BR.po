@@ -1,8 +1,8 @@
 # Brazilian Portuguese translation of im-chooser.
 # Copyright (C) 2006,2007,2008 Red Hat, Inc. All rights reserved.
 # This file is distributed under the same license as the im-chooser package.
-# 
-# 
+#
+#
 # Automatically generated, 2006.
 # Valnir Ferreira Jr. <vferreir@redhat.com>, 2006.
 # Diego Búrigo Zacarão <diegobz@gmail.com>, 2007.
@@ -11,13 +11,16 @@
 # Glaucia Cintra <gcintra@redhat.com>, 2008.
 # Diego Búrigo Zacarão <diegobz@projetofedora.org>, 2008.
 # Wilson Campos <wcampos5@gmail.com>, 2008.
+# Cleiton Lima <cleitonlima@espacoliberdade.blog.br>, 2010.
+# ufa <ufa@technotroll.org>, 2010.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: im-chooser\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2010-11-25 17:58+0900\n"
-"PO-Revision-Date: 2010-11-15 14:20-0300\n"
-"Last-Translator: Cleiton Lima <cleitonlima@espacoliberdade.blog.br>\n"
+"PO-Revision-Date: 2010-12-09 10:48-0300\n"
+"Last-Translator: ufa <ufa@technotroll.org>\n"
 "Language-Team: Brazilian Portuguese <fedora-trans-pt_br@redhat.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -29,68 +32,68 @@ msgstr ""
 "X-Generator: KBabel 1.11.4\n"
 
 #: ../src/ccpanel/im-chooser-panel.desktop.in.in.h:1
-#: ../src/im-chooser.desktop.in.in.h:1 ../src/xfce4-im-chooser.desktop.in.h:1
+#: ../src/im-chooser.desktop.in.in.h:1
+#: ../src/xfce4-im-chooser.desktop.in.h:1
 msgid "Choose the input method to be used or disable the input method usage on the desktop"
 msgstr "Escolha ou desabilite o método de entrada a ser usado no ambiente de trabalho"
 
 #: ../src/ui/eggdesktopfile.c:188
 #, c-format
 msgid "Unrecognized desktop file Version '%s'"
-msgstr ""
+msgstr "Versão não reconhecida do arquivo desktop  '%s'"
 
 #: ../src/ui/eggdesktopfile.c:968
 #, c-format
 msgid "Starting %s"
-msgstr ""
+msgstr "Iniciando %s"
 
 #: ../src/ui/eggdesktopfile.c:1110
 #, c-format
 msgid "Application does not accept documents on command line"
-msgstr ""
+msgstr "Aplicação não aceita documentos em linha de comando"
 
 #: ../src/ui/eggdesktopfile.c:1178
 #, c-format
 msgid "Unrecognized launch option: %d"
-msgstr ""
+msgstr "Opção de execução não reconhecida: %d"
 
 #: ../src/ui/eggdesktopfile.c:1383
 #, c-format
 msgid "Can't pass document URIs to a 'Type=Link' desktop entry"
-msgstr ""
+msgstr "Não é possível passar a URI do documento para uma entrada desktop 'Type=Link'"
 
 #: ../src/ui/eggdesktopfile.c:1404
 #, c-format
 msgid "Not a launchable item"
-msgstr ""
+msgstr "item não executável"
 
 #: ../src/ui/eggsmclient.c:226
-#, fuzzy
 msgid "Disable connection to session manager"
-msgstr "Não foi possível se conectar ao gerenciador de sessão"
+msgstr "Desabilita a conexão ao gerenciador de sessão"
 
 #: ../src/ui/eggsmclient.c:229
 msgid "Specify file containing saved configuration"
-msgstr ""
+msgstr "Especifique um arquivo contendo a configuração gravada."
 
 #: ../src/ui/eggsmclient.c:229
 msgid "FILE"
-msgstr ""
+msgstr "ARQUIVO"
 
 #: ../src/ui/eggsmclient.c:232
 msgid "Specify session management ID"
-msgstr ""
+msgstr "Especifique o ID da gerência de sessão"
 
 #: ../src/ui/eggsmclient.c:232
 msgid "ID"
-msgstr ""
+msgstr "IS"
 
 #: ../src/ui/eggsmclient.c:253
 msgid "Session management options:"
-msgstr ""
+msgstr "Opções de gerenciamento de sessão:"
 
 #: ../src/ui/eggsmclient.c:254
 msgid "Show session management options"
-msgstr ""
+msgstr "Mostra as opções de gerenciamento de sessão"
 
 #: ../src/ui/im-chooser-simple.c:120
 msgid "X applications"
@@ -135,7 +138,8 @@ msgstr "Parando método de entrada - %s"
 #. This will be displayed like "<small><i>Note: this change will not take
 #. effect until you next log in, except GTK+ applications and Qt
 #. applications</i></small>"
-#: ../src/ui/im-chooser-simple.c:513 ../src/ui/im-chooser-simple.c:516
+#: ../src/ui/im-chooser-simple.c:513
+#: ../src/ui/im-chooser-simple.c:516
 #: ../src/ui/im-chooser-simple.c:519
 #, c-format
 msgid ", except %s and %s"
@@ -147,7 +151,8 @@ msgstr ", exceto %s e %s"
 #. effect until you next log in, except GTK+ applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take
 #. effect until you next log in, except Qt applications</i></small>"
-#: ../src/ui/im-chooser-simple.c:522 ../src/ui/im-chooser-simple.c:525
+#: ../src/ui/im-chooser-simple.c:522
+#: ../src/ui/im-chooser-simple.c:525
 #: ../src/ui/im-chooser-simple.c:528
 #, c-format
 msgid ", except %s"
@@ -254,7 +259,8 @@ msgid "File is not a valid .desktop file"
 msgstr "O arquivo não é um arquivo .desktop válido"
 
 #: ../src/ccpanel/im-chooser-panel.desktop.in.in.h:2
-#: ../src/ui/im-chooser-ui.c:117 ../src/im-chooser.desktop.in.in.h:2
+#: ../src/ui/im-chooser-ui.c:117
+#: ../src/im-chooser.desktop.in.in.h:2
 #: ../src/xfce4-im-chooser.desktop.in.h:2
 msgid "Input Method Selector"
 msgstr "Seletor de Método de entrada"
