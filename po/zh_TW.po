@@ -2,7 +2,7 @@
 # Chinese translations for im-chooser package.
 # Copyright (C) 2006 Red Hat, Inc. All rights reserved.
 # This file is distributed under the same license as the im-chooser package.
-# 
+#
 # Automatically generated, 2006.
 # Chester Cheng <ccheng@redhat.com>, 2006.
 # Walter Cheuk <wwycheuk@gmail.com>, 2007.
@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: im-chooser.trunk\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2010-11-25 17:58+0900\n"
-"PO-Revision-Date: 2010-11-23 14:27+0800\n"
+"PO-Revision-Date: 2010-12-11 22:53+0800\n"
 "Last-Translator: Cheng-Chia Tseng <pswo10680@gmail.com>\n"
 "Language-Team: Traditional Chinese <zh@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -22,12 +22,14 @@ msgstr ""
 "X-Generator: KBabel 1.11.4\n"
 
 #: ../src/ccpanel/im-chooser-panel.desktop.in.in.h:1
-#: ../src/im-chooser.desktop.in.in.h:1 ../src/xfce4-im-chooser.desktop.in.h:1
+#: ../src/im-chooser.desktop.in.in.h:1
+#: ../src/xfce4-im-chooser.desktop.in.h:1
 msgid "Choose the input method to be used or disable the input method usage on the desktop"
 msgstr "請選擇欲使用的輸入法或是停用桌面環境所使用的輸入法"
 
 #: ../src/ccpanel/im-chooser-panel.desktop.in.in.h:2
-#: ../src/ui/im-chooser-ui.c:117 ../src/im-chooser.desktop.in.in.h:2
+#: ../src/ui/im-chooser-ui.c:117
+#: ../src/im-chooser.desktop.in.in.h:2
 #: ../src/xfce4-im-chooser.desktop.in.h:2
 msgid "Input Method Selector"
 msgstr "輸入法選擇器"
@@ -75,7 +77,8 @@ msgstr "停用輸入法 - %s"
 #. This will be displayed like "<small><i>Note: this change will not take
 #. effect until you next log in, except GTK+ applications and Qt
 #. applications</i></small>"
-#: ../src/ui/im-chooser-simple.c:513 ../src/ui/im-chooser-simple.c:516
+#: ../src/ui/im-chooser-simple.c:513
+#: ../src/ui/im-chooser-simple.c:516
 #: ../src/ui/im-chooser-simple.c:519
 #, c-format
 msgid ", except %s and %s"
@@ -87,7 +90,8 @@ msgstr "，除了 %s 和 %s"
 #. effect until you next log in, except GTK+ applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take
 #. effect until you next log in, except Qt applications</i></small>"
-#: ../src/ui/im-chooser-simple.c:522 ../src/ui/im-chooser-simple.c:525
+#: ../src/ui/im-chooser-simple.c:522
+#: ../src/ui/im-chooser-simple.c:525
 #: ../src/ui/im-chooser-simple.c:528
 #, c-format
 msgid ", except %s"
@@ -185,9 +189,8 @@ msgid "Could not parse arguments: %s\n"
 msgstr "無法解析引數：%s\n"
 
 #: ../src/ui/im-chooser-ui.c:88
-#, fuzzy
 msgid "Could not connect to the session manager"
-msgstr "不能連上段落管理員"
+msgstr "無法連接至作業階段管理員"
 
 #: ../src/ui/eggdesktopfile.c:165
 #, c-format
@@ -229,23 +232,20 @@ msgid "Specify file containing saved configuration"
 msgstr "指定包含設置紀錄的檔案"
 
 #: ../src/ui/eggsmclient.c:226
-#, fuzzy
 msgid "Disable connection to session manager"
-msgstr "關閉通往段落管理員的連線"
+msgstr "關閉連接至作業階段管理員的連線"
 
 #: ../src/ui/eggsmclient.c:232
-#, fuzzy
 msgid "Specify session management ID"
-msgstr "指定段落管理 ID"
+msgstr "指定作業階段管理 ID"
 
 #: ../src/ui/eggsmclient.c:254
-#, fuzzy
 msgid "Show session management options"
-msgstr "顯示段落管埋選項"
+msgstr "顯示作業階段管埋選項"
 
 #: ../src/ui/eggsmclient.c:253
 msgid "Session management options:"
-msgstr "段落管理選項:"
+msgstr "作業階段管理選項："
 
 #: ../src/ui/eggsmclient.c:232
 msgid "ID"
@@ -257,12 +257,10 @@ msgstr "FILE"
 
 #~ msgid "Updating Input Method list"
 #~ msgstr "更新輸入法清單"
-
 #~ msgid "_Enable input method feature"
 #~ msgstr "啟用輸入法功能(_E)"
-
 #~ msgid "Show the status icon"
 #~ msgstr "顯示狀態圖示"
-
 #~ msgid "IM Chooser - Input Method configuration tool"
 #~ msgstr "IM Chooser - 輸入法設定工具"
+
