@@ -3,20 +3,20 @@
 # This file is distributed under the same license as the im-chooser package.
 # Magnus Larsson <fedoratrans@gmail.com>, 2006.
 # Keld Simonsen <keld@dkuug.dk>, 2006.
-# Kris Thomsen <lakristho@gmail.com>, 2009.
+# Kris Thomsen <lakristho@gmail.com>, 2009, 2010.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: im-chooser 0.3.2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2010-11-25 17:58+0900\n"
-"PO-Revision-Date: 2009-04-05 17:46+0200\n"
+"PO-Revision-Date: 2010-12-10 18:57+0200\n"
 "Last-Translator: Kris Thomsen <lakristho@gmail.com>\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
-"Language: da\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: da\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: ../src/ccpanel/im-chooser-panel.desktop.in.in.h:1
@@ -25,78 +25,77 @@ msgid ""
 "Choose the input method to be used or disable the input method usage on the "
 "desktop"
 msgstr ""
-"Vælg den inddatametode som skal være i brug eller deaktivér brugen af "
-"inddatametoden på skrivebordet"
+"Vælg den inputmetode som skal være i brug eller deaktivér brugen af "
+"inputmetoden på skrivebordet"
 
 #: ../src/ccpanel/im-chooser-panel.desktop.in.in.h:2
 #: ../src/ui/im-chooser-ui.c:117 ../src/im-chooser.desktop.in.in.h:2
 #: ../src/xfce4-im-chooser.desktop.in.h:2
-#, fuzzy
 msgid "Input Method Selector"
-msgstr "Inddatametode"
+msgstr "Inputmetodevælger"
 
 #: ../src/ui/eggdesktopfile.c:165
 #, c-format
 msgid "File is not a valid .desktop file"
-msgstr ""
+msgstr "Filen er ikke en gyldig .desktop-fil"
 
 #: ../src/ui/eggdesktopfile.c:188
 #, c-format
 msgid "Unrecognized desktop file Version '%s'"
-msgstr ""
+msgstr "Uopdaget version af skrivebordsfil \"%s\""
 
 #: ../src/ui/eggdesktopfile.c:968
 #, c-format
 msgid "Starting %s"
-msgstr ""
+msgstr "Starter %s"
 
 #: ../src/ui/eggdesktopfile.c:1110
 #, c-format
 msgid "Application does not accept documents on command line"
-msgstr ""
+msgstr "Programmet accepterer ikke dokumenter i kommandolinje"
 
 #: ../src/ui/eggdesktopfile.c:1178
 #, c-format
 msgid "Unrecognized launch option: %d"
-msgstr ""
+msgstr "Uopdaget kørselsindstilling: %d"
 
 #: ../src/ui/eggdesktopfile.c:1383
 #, c-format
 msgid "Can't pass document URIs to a 'Type=Link' desktop entry"
-msgstr ""
+msgstr "Kan ikke indstille dokument-uri'er til et \"Type=Link\"-skrivebordselement"
 
 #: ../src/ui/eggdesktopfile.c:1404
 #, c-format
 msgid "Not a launchable item"
-msgstr ""
+msgstr "Ikke et kørbart element"
 
 #: ../src/ui/eggsmclient.c:226
 msgid "Disable connection to session manager"
-msgstr ""
+msgstr "Deaktivér forbindelse til sessionhåndtering"
 
 #: ../src/ui/eggsmclient.c:229
 msgid "Specify file containing saved configuration"
-msgstr ""
+msgstr "Angiv fil, som indeholder den gemte konfiguration"
 
 #: ../src/ui/eggsmclient.c:229
 msgid "FILE"
-msgstr ""
+msgstr "FIL"
 
 #: ../src/ui/eggsmclient.c:232
 msgid "Specify session management ID"
-msgstr ""
+msgstr "Angiv id for sessionhåndtering"
 
 #: ../src/ui/eggsmclient.c:232
 msgid "ID"
-msgstr ""
+msgstr "Id"
 
 #: ../src/ui/eggsmclient.c:253
 msgid "Session management options:"
-msgstr ""
+msgstr "Indstillinger for sessionhåndtering:"
 
 #: ../src/ui/eggsmclient.c:254
 msgid "Show session management options"
-msgstr ""
+msgstr "Vis indstillinger for sessionhåndtering"
 
 #: ../src/ui/im-chooser-simple.c:120
 msgid "X applications"
@@ -125,12 +124,12 @@ msgstr "Kunne ikke stoppe indtastningsmetode"
 #: ../src/ui/im-chooser-simple.c:410
 #, c-format
 msgid "Starting Input Method - %s"
-msgstr "Starter inddatametode - %s"
+msgstr "Starter inputmetode - %s"
 
 #: ../src/ui/im-chooser-simple.c:427
 #, c-format
 msgid "Stopping Input Method - %s"
-msgstr "Stopper inddatametode - %s"
+msgstr "Stopper inputmetode - %s"
 
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications and Qt applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications and GTK+ applications</i></small>"
@@ -182,9 +181,8 @@ msgid "Work in progress..."
 msgstr "Arbejde igangsat..."
 
 #: ../src/ui/im-chooser-simple.c:725
-#, fuzzy
 msgid "No Input Method"
-msgstr "Inddatametode"
+msgstr "Ingen inputmetode"
 
 #: ../src/ui/im-chooser-simple.c:727
 #, c-format
@@ -214,30 +212,30 @@ msgstr "Ikke i stand til at modtage nuværende status"
 
 #: ../src/ui/im-chooser-simple.c:796
 msgid "Unable to get Input Method information"
-msgstr "Ikke i stand til at hente information om inddatametode"
+msgstr "Ikke i stand til at hente information om inputmetode"
 
 #: ../src/ui/im-chooser-simple.c:905
 msgid "<b>Input Method</b>"
-msgstr "<b>Inddatametode</b>"
+msgstr "<b>Inputmetode</b>"
 
 #: ../src/ui/im-chooser-simple.c:940
 msgid "Input Method _Preferences..."
-msgstr "_Indstillinger for inddatametode..."
+msgstr "_Indstillinger for inputmetode..."
 
 #: ../src/ui/im-chooser-ui.c:55
 msgid ""
 "<span weight=\"bold\" size=\"larger\">No input method is available</span>"
 msgstr ""
 "<span weight=\"bold\" size=\"larger\">Der er ingen tilgængelig "
-"inddatametode</span>"
+"inputmetode</span>"
 
 #: ../src/ui/im-chooser-ui.c:58
 msgid "Please install any input methods before running if you like."
-msgstr "Installér gerne alle inddatametoder før kørsel hvis du synes."
+msgstr "Installér gerne alle inputmetoder før kørsel hvis du synes."
 
 #: ../src/ui/im-chooser-ui.c:88
 msgid "Could not connect to the session manager"
-msgstr ""
+msgstr "Kunne ikke forbinde til sessionhåndteringen"
 
 #: ../src/ui/im-chooser-ui.c:144
 msgid "Log Out"
@@ -245,12 +243,12 @@ msgstr "Log ud"
 
 #: ../src/main.c:36
 msgid "[options...]"
-msgstr ""
+msgstr "[tilvalg...]"
 
 #: ../src/main.c:56
 #, c-format
 msgid "Could not parse arguments: %s\n"
-msgstr ""
+msgstr "Kunne ikke oversætte argumenter: %s\n"
 
 #~ msgid "Updating Input Method list"
 #~ msgstr "Opdaterer liste over inddatametoder"
