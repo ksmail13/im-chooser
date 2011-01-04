@@ -1,7 +1,7 @@
 /* -*- Mode: C; tab-width: 8; indent-tabs-mode: t; c-basic-offset: 8 -*- */
 /* 
  * im-chooser-simple.c
- * Copyright (C) 2007-2008 Red Hat, Inc. All rights reserved.
+ * Copyright (C) 2007-2011 Red Hat, Inc. All rights reserved.
  * 
  * Authors:
  *   Akira TAGOH  <tagoh@redhat.com>
@@ -28,8 +28,8 @@
 #include <string.h>
 #include <unistd.h>
 #include <glib/gi18n-lib.h>
-#include "imsettings/imsettings.h"
-#include "imsettings/imsettings-request.h"
+#include <imsettings/imsettings.h>
+#include <imsettings/imsettings-client.h>
 #include "im-chooser-simple.h"
 
 #define IMCHOOSER_GERROR	(im_chooser_simple_g_error_quark())
@@ -53,10 +53,8 @@ enum {
 };
 
 typedef enum {
-	ACTION_IM_START,
-	ACTION_IM_STARTING,
-	ACTION_IM_STOP,
-	ACTION_IM_STOPPING,
+	ACTION_SWITCH_IM,
+	ACTION_IM_SWITCHING,
 	ACTION_IM_UPDATE_PREFS,
 	ACTION_COMPLETE,
 	ACTION_END
@@ -86,12 +84,11 @@ struct _IMChooserSimple {
 	GtkWidget          *label;
 	GtkWidget          *note;
 	GtkWidget          *note_label;
-	IMSettingsRequest  *imsettings;
+	IMSettingsClient   *imsettings;
 	gchar              *initial_im;
 	gchar              *current_im;
 	gchar              *default_im;
 	gboolean            initialized;
-	DBusConnection     *conn;
 	GQueue             *actionq;
 	gboolean            ignore_actions;
 	guint               idle_source;
@@ -148,13 +145,7 @@ im_chooser_simple_im_list_on_changed(GtkTreeSelection *selection,
 		if (im->current_im &&
 		    strcmp(im->current_im, name) != 0) {
 			if (im->initialized) {
-				if (strcmp(im->current_im, "none")) {
-					a = _action_new(ACTION_IM_STOP,
-							g_strdup(im->current_im),
-							g_free);
-					g_queue_push_tail(im->actionq, a);
-				}
-				a = _action_new(ACTION_IM_START,
+				a = _action_new(ACTION_SWITCH_IM,
 						g_strdup(name),
 						g_free);
 				g_queue_push_tail(im->actionq, a);
@@ -198,9 +189,10 @@ im_chooser_simple_prefs_button_on_clicked(GtkButton *button,
 	gchar *cmdline = NULL;
 	GError *error = NULL;
 
-	info = imsettings_request_get_info_object(im->imsettings,
-						  im->current_im,
-						  &error);
+	info = imsettings_client_get_info_object(im->imsettings,
+						 im->current_im,
+						 NULL,
+						 &error);
 	if (error) {
 		im_chooser_simple_show_error(im, error, _("Unable to get the information"));
 		g_error_free(error);
@@ -265,54 +257,24 @@ _action_compare(gconstpointer a,
 }
 
 static void
-im_chooser_simple_im_start_cb(DBusGProxy *proxy,
-			      gboolean    ret,
-			      GError     *error,
-			      gpointer    data)
+im_chooser_simple_im_switch_cb(GObject      *source_object,
+			       GAsyncResult *res,
+			       gpointer      user_data)
 {
-	IMChooserSimple *im = data;
+	IMChooserSimple *im = user_data;
 	GList *l;
+	GError *err = NULL;
 
-	if (ret) {
-	} else {
-		g_free(im->current_im);
-		im->current_im = NULL;
-
-		if (error) {
-			im_chooser_simple_show_error(im, error, _("Failed to start Input Method"));
-			g_error_free(error);
+	if (!imsettings_client_switch_im_finish(im->imsettings,
+						res, &err)) {
+		if (err) {
+			im_chooser_simple_show_error(im, err, _("Failed to switch Input Method"));
+			g_error_free(err);
 			im->ignore_actions = TRUE;
 		}
 	}
-
 	l = g_queue_find_custom(im->actionq,
-				GINT_TO_POINTER (ACTION_IM_STARTING),
-				_action_compare);
-	if (l)
-		g_queue_delete_link(im->actionq, l);
-}
-
-static void
-im_chooser_simple_im_stop_cb(DBusGProxy *proxy,
-			     gboolean    ret,
-			     GError     *error,
-			     gpointer    data)
-{
-	IMChooserSimple *im = data;
-	GList *l;
-
-	if (ret) {
-		g_free(im->current_im);
-		im->current_im = NULL;
-	} else {
-		if (error) {
-			im_chooser_simple_show_error(im, error, _("Failed to stop Input Method"));
-			im->ignore_actions = TRUE;
-		}
-	}
-
-	l = g_queue_find_custom(im->actionq,
-				GINT_TO_POINTER (ACTION_IM_STOPPING),
+				GINT_TO_POINTER (ACTION_IM_SWITCHING),
 				_action_compare);
 	if (l)
 		g_queue_delete_link(im->actionq, l);
@@ -405,41 +367,25 @@ im_chooser_simple_action_loop(gpointer data)
 	if (!g_queue_is_empty(im->actionq)) {
 		a = g_queue_pop_head(im->actionq);
 		switch (a->action) {
-		    case ACTION_IM_START:
+		    case ACTION_SWITCH_IM:
 			    if (im->initialized && !im->ignore_actions) {
-				    im_chooser_simple_show_progress(im, _("Starting Input Method - %s"), a->data);
-				    a->action = ACTION_IM_STARTING;
+				    im_chooser_simple_show_progress(im, _("Switching Input Method - %s"), a->data);
+				    a->action = ACTION_IM_SWITCHING;
 				    g_queue_push_head(im->actionq, a);
 				    g_free(im->current_im);
 				    im->current_im = g_strdup(a->data);
-				    imsettings_request_start_im_async(im->imsettings,
+				    imsettings_client_switch_im_start(im->imsettings,
 								      a->data,
 								      TRUE,
-								      im_chooser_simple_im_start_cb,
+								      NULL,
+								      im_chooser_simple_im_switch_cb,
 								      im);
 			    } else {
 				    /* just ignore an action */
 				    _action_free(a);
 			    }
 			    break;
-		    case ACTION_IM_STOP:
-			    if (im->initialized && !im->ignore_actions) {
-				    im_chooser_simple_show_progress(im, _("Stopping Input Method - %s"), a->data);
-				    a->action = ACTION_IM_STOPPING;
-				    g_queue_push_head(im->actionq, a);
-				    imsettings_request_stop_im_async(im->imsettings,
-								     a->data,
-								     TRUE,
-								     TRUE,
-								     im_chooser_simple_im_stop_cb,
-								     im);
-			    } else {
-				    /* just ignore an action */
-				    _action_free(a);
-			    }
-			    break;
-		    case ACTION_IM_STARTING:
-		    case ACTION_IM_STOPPING:
+		    case ACTION_IM_SWITCHING:
 			    if (!im->ignore_actions) {
 				    /* requeue to wait for finishing an action */
 				    g_queue_push_head(im->actionq, a);
@@ -449,8 +395,9 @@ im_chooser_simple_action_loop(gpointer data)
 			    break;
 		    case ACTION_IM_UPDATE_PREFS:
 			    if (im->current_im)
-				    info = imsettings_request_get_info_object(im->imsettings,
-									      im->current_im,
+				    info = imsettings_client_get_info_object(im->imsettings,
+									     im->current_im,
+									     NULL,
 									      NULL);
 			    if (info)
 				    prog = imsettings_info_get_prefs_program(info);
@@ -572,7 +519,6 @@ im_chooser_simple_finalize(GObject *object)
 	g_free(simple->initial_im);
 	g_free(simple->current_im);
 	g_free(simple->default_im);
-	dbus_connection_unref(simple->conn);
 	g_queue_free(simple->actionq);
 }
 
@@ -661,10 +607,7 @@ im_chooser_simple_instance_init(IMChooserSimple *im)
 	gtk_container_add(GTK_CONTAINER (im->progress), hbox);
 	gtk_widget_show_all(hbox);
 
-	im->conn = dbus_bus_get(DBUS_BUS_SESSION, NULL);
-	im->imsettings = imsettings_request_new(im->conn, IMSETTINGS_INTERFACE_DBUS);
-
-	imsettings_request_set_locale(im->imsettings, locale);
+	im->imsettings = imsettings_client_new(locale);
 
 	/* get current im */
 	im->current_im = NULL;
@@ -679,20 +622,22 @@ _im_chooser_simple_add_row(IMChooserSimple  *im,
 			   GtkTreeIter     **def_iter,
 			   GtkTreeIter     **cur_iter,
 			   IMSettingsInfo   *info,
-			   const gchar      *running_im,
-			   const gchar      *name,
-			   const gchar      *iconfile,
-			   gboolean          is_xim,
-			   gboolean          is_default)
+			   const gchar      *running_im)
 {
 	GString *string = g_string_new(NULL);
 	GdkPixbuf *pixbuf = NULL;
 	GtkIconTheme *icon_theme = gtk_icon_theme_get_default();
+	const gchar *icon_file = imsettings_info_get_icon_file(info);
+	const gchar *name = imsettings_info_get_short_desc(info);
+	const gchar *imname = imsettings_info_get_im_name(info);
+	const gchar *subimname = imsettings_info_get_sub_im_name(info);
 
-	if (gtk_icon_theme_has_icon(icon_theme, iconfile)) {
-		pixbuf = gtk_icon_theme_load_icon(icon_theme, iconfile, 18, 0, NULL);
-	} else if (iconfile && g_file_test(iconfile, G_FILE_TEST_EXISTS)) {
-		pixbuf = gdk_pixbuf_new_from_file_at_scale(iconfile,
+	if (icon_file && icon_file[0] == 0)
+		icon_file = NULL;
+	if (gtk_icon_theme_has_icon(icon_theme, icon_file)) {
+		pixbuf = gtk_icon_theme_load_icon(icon_theme, icon_file, 18, 0, NULL);
+	} else if (icon_file && g_file_test(icon_file, G_FILE_TEST_EXISTS)) {
+		pixbuf = gdk_pixbuf_new_from_file_at_scale(icon_file,
 							   18, 18,
 							   TRUE, NULL);
 	} else {
@@ -722,15 +667,18 @@ _im_chooser_simple_add_row(IMChooserSimple  *im,
 	}
 	gtk_list_store_append(list, iter);
 	g_string_append(string, "<i>");
-	if (strcmp(name, "none") == 0) {
+	if (strcmp(name, IMSETTINGS_NONE_CONF) == 0) {
 		g_string_append(string, _("No Input Method"));
 	} else {
-		g_string_append_printf(string, _("Use %s"), name);
+		g_string_append_printf(string, _("Use %s"), imname);
+	}
+	if (subimname) {
+		g_string_append_printf(string, "[%s]", subimname);
 	}
 
-	if (is_xim)
+	if (imsettings_info_is_xim(info))
 		g_string_append(string, _(" (legacy)"));
-	if (is_default) {
+	if (imsettings_info_is_system_default(info)) {
 		g_string_append(string, _(" (recommended)"));
 		if (!im->default_im)
 			im->default_im = g_strdup(name);
@@ -738,7 +686,7 @@ _im_chooser_simple_add_row(IMChooserSimple  *im,
 	}
 	if (im->current_im == NULL &&
 	    (strcmp(running_im, name) == 0 ||
-	     ((running_im == NULL || running_im[0] == 0) && strcmp(name, "none") == 0))) {
+	     ((running_im == NULL || running_im[0] == 0) && strcmp(name, IMSETTINGS_NONE_CONF) == 0))) {
 		im->current_im = g_strdup(name);
 		if (im->initial_im == NULL)
 			im->initial_im = g_strdup(im->current_im);
@@ -763,14 +711,16 @@ _im_chooser_simple_update_im_list(IMChooserSimple *im)
 	GtkTreeViewColumn *column;
 	GtkRequisition requisition;
 	gint i;
-	gchar *running_im;
 	GError *error = NULL;
-	GPtrArray *array;
 	guint n_retry = 0;
-	IMSettingsInfo *info, *none_info;
+	IMSettingsInfo *info, *none_info, *active_info;
+	GVariant *v, *vv;
+	GVariantIter *viter;
+	const gchar *key;
+	gsize len, slen = strlen(".conf"); /* XXX */
 
   retry:
-	if (imsettings_request_get_version(im->imsettings, NULL) != IMSETTINGS_SETTINGS_API_VERSION) {
+	if (imsettings_client_get_version(im->imsettings, NULL, NULL) != IMSETTINGS_SETTINGS_API_VERSION) {
 		if (n_retry > 0) {
 			g_set_error(&error, IMCHOOSER_GERROR, 0,
 				    _("Unable to communicate to IMSettings services"));
@@ -779,47 +729,49 @@ _im_chooser_simple_update_im_list(IMChooserSimple *im)
 			exit(1);
 		}
 		/* version is inconsistent. try to reload the process */
-		imsettings_request_reload(im->imsettings, TRUE);
+		imsettings_client_reload(im->imsettings, TRUE, NULL, NULL);
 		/* XXX */
 		sleep(1);
 		n_retry++;
 		goto retry;
 	}
 
-	running_im = imsettings_request_whats_input_method_running(im->imsettings, &error);
+	active_info = imsettings_client_get_active_im_info(im->imsettings, NULL, &error);
 	if (error) {
 		im_chooser_simple_show_error(im, error, _("Unable to gather current status"));
 		g_error_free(error);
 		exit(1);
 	}
-	array = imsettings_request_get_info_objects(im->imsettings, &error);
+	v = imsettings_client_get_info_variants(im->imsettings, NULL, &error);
 	if (error) {
 		im_chooser_simple_show_error(im, error, _("Unable to get Input Method information"));
 		g_error_free(error);
 		exit(1);
 	}
 
-	none_info = imsettings_request_get_info_object(im->imsettings, "none", &error);
+	none_info = imsettings_client_get_info_object(im->imsettings, "none", NULL, &error);
 	list = gtk_list_store_new(4, GDK_TYPE_PIXBUF, G_TYPE_STRING, G_TYPE_STRING, G_TYPE_OBJECT);
 
 	/* add none at the beginning */
 	_im_chooser_simple_add_row(im, list, &iter, &def_iter, &cur_iter, none_info,
-				   running_im,
-				   imsettings_info_get_short_desc(none_info),
-				   imsettings_info_get_icon_file(none_info),
-				   imsettings_info_is_xim(none_info),
-				   imsettings_info_is_system_default(none_info));
+				   imsettings_info_get_short_desc(active_info));
 
-	for (i = 0; i < array->len; i++) {
-		info = IMSETTINGS_INFO (g_ptr_array_index(array, i));
-
+	g_variant_get(v, "a{sv}", &viter);
+	i = 0;
+	while (g_variant_iter_next(viter, "{&sv}", &key, &vv)) {
+		len = strlen(key);
+		if (len > slen &&
+		    strcmp(&key[len - slen], ".conf") == 0)
+			continue;
+		info = imsettings_info_new(vv);
 		_im_chooser_simple_add_row(im, list, &iter, &def_iter, &cur_iter, info,
-					   running_im,
-					   imsettings_info_get_short_desc(info),
-					   imsettings_info_get_icon_file(info),
-					   imsettings_info_is_xim(info),
-					   imsettings_info_is_system_default(info));
+					   imsettings_info_get_short_desc(active_info));
+
+		g_object_unref(info);
+		i++;
 	}
+	g_variant_iter_free(viter);
+	g_variant_unref(v);
 
 	if (cur_iter == NULL) {
 		cur_iter = def_iter;
@@ -843,9 +795,7 @@ _im_chooser_simple_update_im_list(IMChooserSimple *im)
 		requisition.height = 120;
 	gtk_widget_set_size_request(im->widget_im_list, -1, requisition.height);
 
-	g_signal_emit(im, signals[NOTIFY_N_IM], 0, array->len);
-
-	g_ptr_array_free(array, TRUE);
+	g_signal_emit(im, signals[NOTIFY_N_IM], 0, i);
 }
 
 /*
