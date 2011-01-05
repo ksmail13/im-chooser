@@ -6,22 +6,22 @@
 # Automatically generated, 2006.
 # Runa Bhattacharjee <runab@redhat.com>, 2006, 2008.
 # Runa Bhattacharjee <runabh@gmail.com>, 2007.
-# Runa Bhattacharjee <runab@fedoraproject.org>, 2008.
+# Runa Bhattacharjee <runab@fedoraproject.org>, 2008, 2011.
 msgid ""
 msgstr ""
 "Project-Id-Version: im-chooser.trunk\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2010-11-25 17:58+0900\n"
-"PO-Revision-Date: 2008-09-23 11:28+0530\n"
-"Last-Translator: Runa Bhattacharjee <runab@redhat.com>\n"
-"Language-Team: Bengali INDIA <fedora-trans-bn_IN@redhat.com>\n"
-"Language: \n"
+"PO-Revision-Date: 2011-01-04 19:28+0530\n"
+"Last-Translator: \n"
+"Language-Team: American English <kde-i18n-doc@kde.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: \n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "\n"
-"X-Generator: KBabel 1.11.4\n"
+"X-Generator: Lokalize 1.1\n"
 
 #: ../src/ccpanel/im-chooser-panel.desktop.in.in.h:1
 #: ../src/im-chooser.desktop.in.in.h:1 ../src/xfce4-im-chooser.desktop.in.h:1
@@ -34,72 +34,71 @@ msgstr ""
 #: ../src/ccpanel/im-chooser-panel.desktop.in.in.h:2
 #: ../src/ui/im-chooser-ui.c:117 ../src/im-chooser.desktop.in.in.h:2
 #: ../src/xfce4-im-chooser.desktop.in.h:2
-#, fuzzy
 msgid "Input Method Selector"
-msgstr "ইনপুট পদ্ধতি"
+msgstr "ইনপুট পদ্ধতি নির্বাচন ব্যবস্থা"
 
 #: ../src/ui/eggdesktopfile.c:165
 #, c-format
 msgid "File is not a valid .desktop file"
-msgstr ""
+msgstr "এটি বৈধ .desktop ফাইল নয়"
 
 #: ../src/ui/eggdesktopfile.c:188
 #, c-format
 msgid "Unrecognized desktop file Version '%s'"
-msgstr ""
+msgstr "ডেস্কটপ ফাইলের অজ্ঞাত সংস্করণ '%s'"
 
 #: ../src/ui/eggdesktopfile.c:968
 #, c-format
 msgid "Starting %s"
-msgstr ""
+msgstr "%s আরম্ভ করা হচ্ছে"
 
 #: ../src/ui/eggdesktopfile.c:1110
 #, c-format
 msgid "Application does not accept documents on command line"
-msgstr ""
+msgstr "অ্যাপ্লিকেশন দ্বারা কমান্ড-লাইনের মাধ্যমে নথিপত্র গ্রহণ করা হয় না"
 
 #: ../src/ui/eggdesktopfile.c:1178
 #, c-format
 msgid "Unrecognized launch option: %d"
-msgstr ""
+msgstr "প্রারম্ভিক বিকল্প অজানা: %d"
 
 #: ../src/ui/eggdesktopfile.c:1383
 #, c-format
 msgid "Can't pass document URIs to a 'Type=Link' desktop entry"
-msgstr ""
+msgstr "'Type=Link' ডেস্কটপ এনট্রির ক্ষেত্রে নথিপত্রের URI উল্লেখ করা সম্ভব নয়"
 
 #: ../src/ui/eggdesktopfile.c:1404
 #, c-format
 msgid "Not a launchable item"
-msgstr ""
+msgstr "প্রারম্ভ করার যোগ্য বস্তু নয়"
 
 #: ../src/ui/eggsmclient.c:226
 msgid "Disable connection to session manager"
-msgstr ""
+msgstr "সেশান পরিচালনব্যবস্থার সাথে সংযোগ বিচ্ছিন্ন করা হবে"
 
 #: ../src/ui/eggsmclient.c:229
 msgid "Specify file containing saved configuration"
-msgstr ""
+msgstr "সংরক্ষিত কনফিগারেশন ধারণকারী ফাইল উল্লেখ করুন"
 
 #: ../src/ui/eggsmclient.c:229
 msgid "FILE"
-msgstr ""
+msgstr "FILE"
 
 #: ../src/ui/eggsmclient.c:232
 msgid "Specify session management ID"
-msgstr ""
+msgstr "সেশান পরিচালনার ID উল্লেখ করু"
 
 #: ../src/ui/eggsmclient.c:232
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 #: ../src/ui/eggsmclient.c:253
 msgid "Session management options:"
-msgstr ""
+msgstr "সেশান পরিচালনা সংক্রান্ত বিকল্প:"
 
 #: ../src/ui/eggsmclient.c:254
 msgid "Show session management options"
-msgstr ""
+msgstr "সেশান পরিচালনা সংক্রান্ত বিকল্প প্রদর্শন করা হবে"
 
 #: ../src/ui/im-chooser-simple.c:120
 msgid "X applications"
@@ -160,8 +159,8 @@ msgid ""
 "<small><i>Note: this change will not take effect until you next log in%s</"
 "i></small>"
 msgstr ""
-"<small><i>উল্লেখ্য: পরবর্তীবার লগ-ইন না করা অবধি এই পরিবর্তন প্রয়োগ করা হবে না "
-"%s</i></small>"
+"<small><i>উল্লেখ্য: পরবর্তীবার লগ-ইন না করা অবধি এই পরিবর্তন প্রয়োগ করা হবে না %"
+"s</i></small>"
 
 #: ../src/ui/im-chooser-simple.c:592
 msgid "Parent Window"
@@ -185,9 +184,8 @@ msgid "Work in progress..."
 msgstr "কাজ চলছে..."
 
 #: ../src/ui/im-chooser-simple.c:725
-#, fuzzy
 msgid "No Input Method"
-msgstr "ইনপুট পদ্ধতি"
+msgstr "ইনপুট পদ্ধতি অনুপস্থিত"
 
 #: ../src/ui/im-chooser-simple.c:727
 #, c-format
@@ -228,10 +226,8 @@ msgid "Input Method _Preferences..."
 msgstr "ইনপুট পদ্ধতি সংক্রান্ত পছন্দসই মান...(_P)"
 
 #: ../src/ui/im-chooser-ui.c:55
-msgid ""
-"<span weight=\"bold\" size=\"larger\">No input method is available</span>"
-msgstr ""
-"<span weight=\"bold\" size=\"larger\">কোনো ইনপুট পদ্ধতি উপস্থিত নেই</span>"
+msgid "<span weight=\"bold\" size=\"larger\">No input method is available</span>"
+msgstr "<span weight=\"bold\" size=\"larger\">কোনো ইনপুট পদ্ধতি উপস্থিত নেই</span>"
 
 #: ../src/ui/im-chooser-ui.c:58
 msgid "Please install any input methods before running if you like."
@@ -239,7 +235,7 @@ msgstr "ইনপুট পদ্ধতি প্রয়োগ করার প�
 
 #: ../src/ui/im-chooser-ui.c:88
 msgid "Could not connect to the session manager"
-msgstr ""
+msgstr "সেশান পরিচালনব্যবস্থার সাথে সংযোগ স্থাপন করতে ব্যর্থ"
 
 #: ../src/ui/im-chooser-ui.c:144
 msgid "Log Out"
@@ -247,12 +243,12 @@ msgstr "লগ আউট করুন"
 
 #: ../src/main.c:36
 msgid "[options...]"
-msgstr ""
+msgstr "[options...]"
 
 #: ../src/main.c:56
 #, c-format
 msgid "Could not parse arguments: %s\n"
-msgstr ""
+msgstr "আর্গুমেন্ট পার্স করতে ব্যর্থ: %s\n"
 
 #~ msgid "Updating Input Method list"
 #~ msgstr "ইনপুট পদ্ধতির তালিকা আপডেট করা হচ্ছে"
