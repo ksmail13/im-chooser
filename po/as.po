@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: im-chooser.trunk\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-11-25 17:58+0900\n"
+"POT-Creation-Date: 2011-01-06 15:38+0900\n"
 "PO-Revision-Date: 2008-09-23 12:33+0530\n"
 "Last-Translator: Amitakhya Phukan <aphukan@fedoraproject.org>\n"
 "Language-Team: Assamese\n"
@@ -98,45 +98,37 @@ msgstr ""
 msgid "Show session management options"
 msgstr ""
 
-#: ../src/ui/im-chooser-simple.c:120
+#: ../src/ui/im-chooser-simple.c:117
 msgid "X applications"
 msgstr "X অনুপ্ৰয়োগ"
 
-#: ../src/ui/im-chooser-simple.c:121
+#: ../src/ui/im-chooser-simple.c:118
 msgid "GTK+ applications"
 msgstr "GTK+ অনুপ্ৰয়োগ"
 
-#: ../src/ui/im-chooser-simple.c:122
+#: ../src/ui/im-chooser-simple.c:119
 msgid "Qt applications"
 msgstr "Qt অনুপ্ৰয়োগ"
 
-#: ../src/ui/im-chooser-simple.c:205
+#: ../src/ui/im-chooser-simple.c:197
 msgid "Unable to get the information"
 msgstr "তথ্য পাওঁতে বিফল"
 
-#: ../src/ui/im-chooser-simple.c:282
-msgid "Failed to start Input Method"
-msgstr "নিবেশ পদ্ধতি আৰম্ভ কৰাত বিফল"
-
-#: ../src/ui/im-chooser-simple.c:309
-msgid "Failed to stop Input Method"
+#: ../src/ui/im-chooser-simple.c:271
+#, fuzzy
+msgid "Failed to switch Input Method"
 msgstr "নিবেশ পদ্ধতি বন্ধ কৰোঁতে বিফল"
 
-#: ../src/ui/im-chooser-simple.c:410
-#, c-format
-msgid "Starting Input Method - %s"
+#: ../src/ui/im-chooser-simple.c:372
+#, fuzzy, c-format
+msgid "Switching Input Method - %s"
 msgstr "নিবেশ পদ্ধতি আৰম্ভ কৰা হৈছে - %s"
-
-#: ../src/ui/im-chooser-simple.c:427
-#, c-format
-msgid "Stopping Input Method - %s"
-msgstr "নিবেশ পদ্ধতি বন্ধ কৰা হৈছে - %s"
 
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications and Qt applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications and GTK+ applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications and Qt applications</i></small>"
-#: ../src/ui/im-chooser-simple.c:513 ../src/ui/im-chooser-simple.c:516
-#: ../src/ui/im-chooser-simple.c:519
+#: ../src/ui/im-chooser-simple.c:460 ../src/ui/im-chooser-simple.c:463
+#: ../src/ui/im-chooser-simple.c:466
 #, c-format
 msgid ", except %s and %s"
 msgstr ", %s আৰু %s ৰ বাহিৰে"
@@ -144,14 +136,14 @@ msgstr ", %s আৰু %s ৰ বাহিৰে"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except Qt applications</i></small>"
-#: ../src/ui/im-chooser-simple.c:522 ../src/ui/im-chooser-simple.c:525
-#: ../src/ui/im-chooser-simple.c:528
+#: ../src/ui/im-chooser-simple.c:469 ../src/ui/im-chooser-simple.c:472
+#: ../src/ui/im-chooser-simple.c:475
 #, c-format
 msgid ", except %s"
 msgstr ", %s ৰ বাহিৰে"
 
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications</i></small>"
-#: ../src/ui/im-chooser-simple.c:533
+#: ../src/ui/im-chooser-simple.c:480
 #, c-format
 msgid ""
 "<small><i>Note: this change will not take effect until you next log in%s</"
@@ -160,67 +152,67 @@ msgstr ""
 "<small><i>মন কৰিব:এই সলনি আপুনি অহা বাৰলৈ %s ত প্ৰৱেশ নকৰালৈকে প্ৰযোজ্য নহয়</i></"
 "small>"
 
-#: ../src/ui/im-chooser-simple.c:592
+#: ../src/ui/im-chooser-simple.c:539
 msgid "Parent Window"
 msgstr "পেৰেন্ট সংযোগক্ষেত্ৰ"
 
-#: ../src/ui/im-chooser-simple.c:593
+#: ../src/ui/im-chooser-simple.c:540
 msgid "GtkWindow that points to the parent window"
 msgstr "পেৰেন্ট সংযোগক্ষেত্ৰলৈ আঙুলিয়াই দিয়া GtkWindow"
 
-#: ../src/ui/im-chooser-simple.c:598
+#: ../src/ui/im-chooser-simple.c:545
 msgid "Note type"
 msgstr "টোকাৰ ধৰণ"
 
-#: ../src/ui/im-chooser-simple.c:599
+#: ../src/ui/im-chooser-simple.c:546
 msgid "A enum value to determine which notes should be displayed"
 msgstr "কোনবোৰ টোকা প্ৰদৰ্শন কৰিব লাগে সেইটো নিৰ্ধাৰিত কৰা এটা enum মান"
 
 #. setup a progress window
-#: ../src/ui/im-chooser-simple.c:642
+#: ../src/ui/im-chooser-simple.c:589
 msgid "Work in progress..."
 msgstr "কাম চলি আছে..."
 
-#: ../src/ui/im-chooser-simple.c:725
+#: ../src/ui/im-chooser-simple.c:671
 #, fuzzy
 msgid "No Input Method"
 msgstr "নিবেশ পদ্ধতি"
 
-#: ../src/ui/im-chooser-simple.c:727
+#: ../src/ui/im-chooser-simple.c:673
 #, c-format
 msgid "Use %s"
 msgstr "%s ব্যৱহাৰ কৰক"
 
-#: ../src/ui/im-chooser-simple.c:731
+#: ../src/ui/im-chooser-simple.c:680
 msgid " (legacy)"
 msgstr " (লিগেচি)"
 
-#: ../src/ui/im-chooser-simple.c:733
+#: ../src/ui/im-chooser-simple.c:682
 msgid " (recommended)"
 msgstr " (উপদেশিত)"
 
-#: ../src/ui/im-chooser-simple.c:775
+#: ../src/ui/im-chooser-simple.c:726
 #, c-format
 msgid "Unable to communicate to IMSettings services"
 msgstr "IMSettings সেৱালৈ সম্পৰ্ক কৰোঁতে বিফল"
 
-#: ../src/ui/im-chooser-simple.c:776
+#: ../src/ui/im-chooser-simple.c:727
 msgid "Version mismatch"
 msgstr "সংস্কৰনৰ অমিল"
 
-#: ../src/ui/im-chooser-simple.c:790
+#: ../src/ui/im-chooser-simple.c:741
 msgid "Unable to gather current status"
 msgstr "বৰ্ত্তমানৰ অৱস্থা পাব পৰা নাই"
 
-#: ../src/ui/im-chooser-simple.c:796
+#: ../src/ui/im-chooser-simple.c:747
 msgid "Unable to get Input Method information"
 msgstr "নিবেশ পদ্ধতিৰ তথ্য পাব পৰা নাই"
 
-#: ../src/ui/im-chooser-simple.c:905
+#: ../src/ui/im-chooser-simple.c:856
 msgid "<b>Input Method</b>"
 msgstr "<b>নিবেশ পদ্ধতি</b>"
 
-#: ../src/ui/im-chooser-simple.c:940
+#: ../src/ui/im-chooser-simple.c:891
 msgid "Input Method _Preferences..."
 msgstr "নিবেশ পদ্ধতিৰ পছন্দ (_P)..."
 
@@ -238,7 +230,7 @@ msgstr "চলোৱাৰ আগতে পছন্দৰ মতে যি ক�
 msgid "Could not connect to the session manager"
 msgstr ""
 
-#: ../src/ui/im-chooser-ui.c:144
+#: ../src/ui/im-chooser-ui.c:146
 msgid "Log Out"
 msgstr "প্ৰস্থান"
 
@@ -250,6 +242,12 @@ msgstr ""
 #, c-format
 msgid "Could not parse arguments: %s\n"
 msgstr ""
+
+#~ msgid "Failed to start Input Method"
+#~ msgstr "নিবেশ পদ্ধতি আৰম্ভ কৰাত বিফল"
+
+#~ msgid "Stopping Input Method - %s"
+#~ msgstr "নিবেশ পদ্ধতি বন্ধ কৰা হৈছে - %s"
 
 #~ msgid "Updating Input Method list"
 #~ msgstr "নিবেশ পদ্ধতিৰ তালিকা উন্নত কৰা হৈছে"

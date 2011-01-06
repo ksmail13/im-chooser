@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: im-chooser.trunk.ml\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-11-25 17:58+0900\n"
+"POT-Creation-Date: 2011-01-06 15:38+0900\n"
 "PO-Revision-Date: 2008-10-17 08:17+0530\n"
 "Last-Translator: \n"
 "Language-Team:  <en@li.org>\n"
@@ -100,45 +100,37 @@ msgstr ""
 msgid "Show session management options"
 msgstr ""
 
-#: ../src/ui/im-chooser-simple.c:120
+#: ../src/ui/im-chooser-simple.c:117
 msgid "X applications"
 msgstr "എക്സ് പ്രയോഗങ്ങള്‍"
 
-#: ../src/ui/im-chooser-simple.c:121
+#: ../src/ui/im-chooser-simple.c:118
 msgid "GTK+ applications"
 msgstr "GTK+ പ്രയോഗങ്ങള്‍"
 
-#: ../src/ui/im-chooser-simple.c:122
+#: ../src/ui/im-chooser-simple.c:119
 msgid "Qt applications"
 msgstr "Qt പ്രയോഗങ്ങള്‍"
 
-#: ../src/ui/im-chooser-simple.c:205
+#: ../src/ui/im-chooser-simple.c:197
 msgid "Unable to get the information"
 msgstr "വിവരങ്ങള്‍ ലഭ്യമാക്കുവാന്‍ സാധ്യമായില്ല"
 
-#: ../src/ui/im-chooser-simple.c:282
-msgid "Failed to start Input Method"
-msgstr "ഇന്‍പുട്ട് രീതി ആരംഭിക്കുവാന്‍ സാധിച്ചില്ല"
-
-#: ../src/ui/im-chooser-simple.c:309
-msgid "Failed to stop Input Method"
+#: ../src/ui/im-chooser-simple.c:271
+#, fuzzy
+msgid "Failed to switch Input Method"
 msgstr "ഇന്‍പുട്ട് രീതി നിര്‍ത്തുന്നതില്‍ പരാജയപ്പെട്ടു"
 
-#: ../src/ui/im-chooser-simple.c:410
-#, c-format
-msgid "Starting Input Method - %s"
+#: ../src/ui/im-chooser-simple.c:372
+#, fuzzy, c-format
+msgid "Switching Input Method - %s"
 msgstr "ഇന്‍പുട്ട് രീതി ആരംഭിക്കുന്നു - %s"
-
-#: ../src/ui/im-chooser-simple.c:427
-#, c-format
-msgid "Stopping Input Method - %s"
-msgstr "ഇന്‍പുട്ട് രീതി നിര്‍ത്തുന്നു - %s"
 
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications and Qt applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications and GTK+ applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications and Qt applications</i></small>"
-#: ../src/ui/im-chooser-simple.c:513 ../src/ui/im-chooser-simple.c:516
-#: ../src/ui/im-chooser-simple.c:519
+#: ../src/ui/im-chooser-simple.c:460 ../src/ui/im-chooser-simple.c:463
+#: ../src/ui/im-chooser-simple.c:466
 #, c-format
 msgid ", except %s and %s"
 msgstr ", %s and %s"
@@ -146,14 +138,14 @@ msgstr ", %s and %s"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except Qt applications</i></small>"
-#: ../src/ui/im-chooser-simple.c:522 ../src/ui/im-chooser-simple.c:525
-#: ../src/ui/im-chooser-simple.c:528
+#: ../src/ui/im-chooser-simple.c:469 ../src/ui/im-chooser-simple.c:472
+#: ../src/ui/im-chooser-simple.c:475
 #, c-format
 msgid ", except %s"
 msgstr ", %s ഒഴികെ"
 
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications</i></small>"
-#: ../src/ui/im-chooser-simple.c:533
+#: ../src/ui/im-chooser-simple.c:480
 #, c-format
 msgid ""
 "<small><i>Note: this change will not take effect until you next log in%s</"
@@ -162,67 +154,67 @@ msgstr ""
 "<small><i>കുറിപ്പ്: നിങ്ങള്‍ അടുത്ത തവണ ലോഗിന്‍%s ചെയ്യുമ്പോള്‍ മാത്രമേ ഈ മാറ്റം കംപ്യൂട്ടര്‍ "
 "അംഗീകരിക്കൂ.</i></small>"
 
-#: ../src/ui/im-chooser-simple.c:592
+#: ../src/ui/im-chooser-simple.c:539
 msgid "Parent Window"
 msgstr "പേരന്റ് ജാലകം"
 
-#: ../src/ui/im-chooser-simple.c:593
+#: ../src/ui/im-chooser-simple.c:540
 msgid "GtkWindow that points to the parent window"
 msgstr "പേരന്റ് ജാലകത്തിലേക്ക് സൂചിപ്പിക്കുന്ന GtkWindow"
 
-#: ../src/ui/im-chooser-simple.c:598
+#: ../src/ui/im-chooser-simple.c:545
 msgid "Note type"
 msgstr "ഏതു് തരത്തിലുള്ള കുറിപ്പു്"
 
-#: ../src/ui/im-chooser-simple.c:599
+#: ../src/ui/im-chooser-simple.c:546
 msgid "A enum value to determine which notes should be displayed"
 msgstr "ഏതു് കുറിപ്പുകളാണു് ലഭ്യമാക്കേണ്ടതു് എന്നു് നിശ്ചയിക്കുന്നതിനുള്ള ഒരു എനം മൂല്ല്യം"
 
 #. setup a progress window
-#: ../src/ui/im-chooser-simple.c:642
+#: ../src/ui/im-chooser-simple.c:589
 msgid "Work in progress..."
 msgstr "ജോലി പുരോഗതിയില്‍..."
 
-#: ../src/ui/im-chooser-simple.c:725
+#: ../src/ui/im-chooser-simple.c:671
 #, fuzzy
 msgid "No Input Method"
 msgstr "ഇന്‍പുട്ട് രീതി"
 
-#: ../src/ui/im-chooser-simple.c:727
+#: ../src/ui/im-chooser-simple.c:673
 #, c-format
 msgid "Use %s"
 msgstr "%s ഉപയോഗിക്കുക"
 
-#: ../src/ui/im-chooser-simple.c:731
+#: ../src/ui/im-chooser-simple.c:680
 msgid " (legacy)"
 msgstr " (പാരമ്പര്യം)"
 
-#: ../src/ui/im-chooser-simple.c:733
+#: ../src/ui/im-chooser-simple.c:682
 msgid " (recommended)"
 msgstr " (ഉചിതമായ)"
 
-#: ../src/ui/im-chooser-simple.c:775
+#: ../src/ui/im-chooser-simple.c:726
 #, c-format
 msgid "Unable to communicate to IMSettings services"
 msgstr "IMSettings സേവനങ്ങളുമായി ബന്ധപ്പെടുവാന്‍ സാധ്യമായില്ല"
 
-#: ../src/ui/im-chooser-simple.c:776
+#: ../src/ui/im-chooser-simple.c:727
 msgid "Version mismatch"
 msgstr "പതിപ്പുകള്‍ തമ്മില്‍ പൊരുത്തക്കേടു്"
 
-#: ../src/ui/im-chooser-simple.c:790
+#: ../src/ui/im-chooser-simple.c:741
 msgid "Unable to gather current status"
 msgstr "നിലവിലുള്ള അവസ്ഥ ലഭ്യമല്ല"
 
-#: ../src/ui/im-chooser-simple.c:796
+#: ../src/ui/im-chooser-simple.c:747
 msgid "Unable to get Input Method information"
 msgstr "ഇന്‍പുട്ട് രീതിയുടെ വിവരങ്ങള്‍ ലഭ്യമാക്കുവാന്‍ സാധ്യമായില്ല"
 
-#: ../src/ui/im-chooser-simple.c:905
+#: ../src/ui/im-chooser-simple.c:856
 msgid "<b>Input Method</b>"
 msgstr "<b>ഇന്‍പുട്ട് രീതി</b>"
 
-#: ../src/ui/im-chooser-simple.c:940
+#: ../src/ui/im-chooser-simple.c:891
 msgid "Input Method _Preferences..."
 msgstr "ഇന്‍പുട്ട് രീതിയ്ക്കുള്ള _മുന്‍ഗണനകള്‍..."
 
@@ -240,7 +232,7 @@ msgstr ""
 msgid "Could not connect to the session manager"
 msgstr ""
 
-#: ../src/ui/im-chooser-ui.c:144
+#: ../src/ui/im-chooser-ui.c:146
 msgid "Log Out"
 msgstr "പുറത്ത് കടക്കുക "
 
@@ -252,6 +244,12 @@ msgstr ""
 #, c-format
 msgid "Could not parse arguments: %s\n"
 msgstr ""
+
+#~ msgid "Failed to start Input Method"
+#~ msgstr "ഇന്‍പുട്ട് രീതി ആരംഭിക്കുവാന്‍ സാധിച്ചില്ല"
+
+#~ msgid "Stopping Input Method - %s"
+#~ msgstr "ഇന്‍പുട്ട് രീതി നിര്‍ത്തുന്നു - %s"
 
 #~ msgid "Updating Input Method list"
 #~ msgstr "ഇന്‍പുട്ട് രീതിയുടെ പട്ടിക പരിഷ്കരിക്കുന്നു"

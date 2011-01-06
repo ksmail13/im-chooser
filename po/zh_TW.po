@@ -11,171 +11,221 @@ msgid ""
 msgstr ""
 "Project-Id-Version: im-chooser.trunk\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-11-25 17:58+0900\n"
+"POT-Creation-Date: 2011-01-06 15:38+0900\n"
 "PO-Revision-Date: 2010-12-11 22:53+0800\n"
 "Last-Translator: Cheng-Chia Tseng <pswo10680@gmail.com>\n"
 "Language-Team: Traditional Chinese <zh@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: \n"
 "X-Generator: KBabel 1.11.4\n"
 
 #: ../src/ccpanel/im-chooser-panel.desktop.in.in.h:1
-#: ../src/im-chooser.desktop.in.in.h:1
-#: ../src/xfce4-im-chooser.desktop.in.h:1
-msgid "Choose the input method to be used or disable the input method usage on the desktop"
+#: ../src/im-chooser.desktop.in.in.h:1 ../src/xfce4-im-chooser.desktop.in.h:1
+msgid ""
+"Choose the input method to be used or disable the input method usage on the "
+"desktop"
 msgstr "請選擇欲使用的輸入法或是停用桌面環境所使用的輸入法"
 
 #: ../src/ccpanel/im-chooser-panel.desktop.in.in.h:2
-#: ../src/ui/im-chooser-ui.c:117
-#: ../src/im-chooser.desktop.in.in.h:2
+#: ../src/ui/im-chooser-ui.c:117 ../src/im-chooser.desktop.in.in.h:2
 #: ../src/xfce4-im-chooser.desktop.in.h:2
 msgid "Input Method Selector"
 msgstr "輸入法選擇器"
 
-#: ../src/ui/im-chooser-simple.c:120
+#: ../src/ui/eggdesktopfile.c:165
+#, c-format
+msgid "File is not a valid .desktop file"
+msgstr "檔案不是正確的 .desktop 檔案格式"
+
+#: ../src/ui/eggdesktopfile.c:188
+#, c-format
+msgid "Unrecognized desktop file Version '%s'"
+msgstr "不能識別的 desktop 檔案版本 '%s'"
+
+#: ../src/ui/eggdesktopfile.c:968
+#, c-format
+msgid "Starting %s"
+msgstr "正在開始 %s"
+
+#: ../src/ui/eggdesktopfile.c:1110
+#, c-format
+msgid "Application does not accept documents on command line"
+msgstr "應用程式不接受命令行上的文件"
+
+#: ../src/ui/eggdesktopfile.c:1178
+#, c-format
+msgid "Unrecognized launch option: %d"
+msgstr "不能識別的啟動選項: %d"
+
+#: ../src/ui/eggdesktopfile.c:1383
+#, c-format
+msgid "Can't pass document URIs to a 'Type=Link' desktop entry"
+msgstr "不能轉送文件 URI 到一個 'Type=Link' desktop 條目"
+
+#: ../src/ui/eggdesktopfile.c:1404
+#, c-format
+msgid "Not a launchable item"
+msgstr "不是一個可啟動物品"
+
+#: ../src/ui/eggsmclient.c:226
+msgid "Disable connection to session manager"
+msgstr "關閉連接至作業階段管理員的連線"
+
+#: ../src/ui/eggsmclient.c:229
+msgid "Specify file containing saved configuration"
+msgstr "指定包含設置紀錄的檔案"
+
+#: ../src/ui/eggsmclient.c:229
+msgid "FILE"
+msgstr "FILE"
+
+#: ../src/ui/eggsmclient.c:232
+msgid "Specify session management ID"
+msgstr "指定作業階段管理 ID"
+
+#: ../src/ui/eggsmclient.c:232
+msgid "ID"
+msgstr "ID"
+
+#: ../src/ui/eggsmclient.c:253
+msgid "Session management options:"
+msgstr "作業階段管理選項："
+
+#: ../src/ui/eggsmclient.c:254
+msgid "Show session management options"
+msgstr "顯示作業階段管埋選項"
+
+#: ../src/ui/im-chooser-simple.c:117
 msgid "X applications"
 msgstr "X 應用程式"
 
-#: ../src/ui/im-chooser-simple.c:121
+#: ../src/ui/im-chooser-simple.c:118
 msgid "GTK+ applications"
 msgstr "GTK+ 應用程式"
 
-#: ../src/ui/im-chooser-simple.c:122
+#: ../src/ui/im-chooser-simple.c:119
 msgid "Qt applications"
 msgstr "Qt 應用程式"
 
-#: ../src/ui/im-chooser-simple.c:205
+#: ../src/ui/im-chooser-simple.c:197
 msgid "Unable to get the information"
 msgstr "無法取得資訊"
 
-#: ../src/ui/im-chooser-simple.c:282
-msgid "Failed to start Input Method"
-msgstr "啟用輸入法失敗"
-
-#: ../src/ui/im-chooser-simple.c:309
-msgid "Failed to stop Input Method"
+#: ../src/ui/im-chooser-simple.c:271
+#, fuzzy
+msgid "Failed to switch Input Method"
 msgstr "停用輸入法失敗"
 
-#: ../src/ui/im-chooser-simple.c:410
-#, c-format
-msgid "Starting Input Method - %s"
+#: ../src/ui/im-chooser-simple.c:372
+#, fuzzy, c-format
+msgid "Switching Input Method - %s"
 msgstr "啟用輸入法 - %s"
 
-#: ../src/ui/im-chooser-simple.c:427
-#, c-format
-msgid "Stopping Input Method - %s"
-msgstr "停用輸入法 - %s"
-
-#. This will be displayed like "<small><i>Note: this change will not take
-#. effect until you next log in, except X applications and Qt
-#. applications</i></small>"
-#. This will be displayed like "<small><i>Note: this change will not take
-#. effect until you next log in, except X applications and GTK+
-#. applications</i></small>"
-#. This will be displayed like "<small><i>Note: this change will not take
-#. effect until you next log in, except GTK+ applications and Qt
-#. applications</i></small>"
-#: ../src/ui/im-chooser-simple.c:513
-#: ../src/ui/im-chooser-simple.c:516
-#: ../src/ui/im-chooser-simple.c:519
+#. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications and Qt applications</i></small>"
+#. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications and GTK+ applications</i></small>"
+#. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications and Qt applications</i></small>"
+#: ../src/ui/im-chooser-simple.c:460 ../src/ui/im-chooser-simple.c:463
+#: ../src/ui/im-chooser-simple.c:466
 #, c-format
 msgid ", except %s and %s"
 msgstr "，除了 %s 和 %s"
 
-#. This will be displayed like "<small><i>Note: this change will not take
-#. effect until you next log in, except X applications</i></small>"
-#. This will be displayed like "<small><i>Note: this change will not take
-#. effect until you next log in, except GTK+ applications</i></small>"
-#. This will be displayed like "<small><i>Note: this change will not take
-#. effect until you next log in, except Qt applications</i></small>"
-#: ../src/ui/im-chooser-simple.c:522
-#: ../src/ui/im-chooser-simple.c:525
-#: ../src/ui/im-chooser-simple.c:528
+#. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications</i></small>"
+#. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications</i></small>"
+#. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except Qt applications</i></small>"
+#: ../src/ui/im-chooser-simple.c:469 ../src/ui/im-chooser-simple.c:472
+#: ../src/ui/im-chooser-simple.c:475
 #, c-format
 msgid ", except %s"
 msgstr "，除了 %s"
 
-#. This will be displayed like "<small><i>Note: this change will not take
-#. effect until you next log in, except GTK+ applications</i></small>"
-#: ../src/ui/im-chooser-simple.c:533
+#. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications</i></small>"
+#: ../src/ui/im-chooser-simple.c:480
 #, c-format
-msgid "<small><i>Note: this change will not take effect until you next log in%s</i></small>"
+msgid ""
+"<small><i>Note: this change will not take effect until you next log in%s</"
+"i></small>"
 msgstr "<small><i>注意：這項變更要等到您下次登入 %s 後才會生效。</i></small>"
 
-#: ../src/ui/im-chooser-simple.c:592
+#: ../src/ui/im-chooser-simple.c:539
 msgid "Parent Window"
 msgstr "親代視窗"
 
-#: ../src/ui/im-chooser-simple.c:593
+#: ../src/ui/im-chooser-simple.c:540
 msgid "GtkWindow that points to the parent window"
 msgstr "指向親代視窗的 GtkWindow"
 
-#: ../src/ui/im-chooser-simple.c:598
+#: ../src/ui/im-chooser-simple.c:545
 msgid "Note type"
 msgstr "Note 類型"
 
-#: ../src/ui/im-chooser-simple.c:599
+#: ../src/ui/im-chooser-simple.c:546
 msgid "A enum value to determine which notes should be displayed"
 msgstr "一個判斷應顯示哪個 note 的 enum 值"
 
 #. setup a progress window
-#: ../src/ui/im-chooser-simple.c:642
+#: ../src/ui/im-chooser-simple.c:589
 msgid "Work in progress..."
 msgstr "正在處理中..."
 
-#: ../src/ui/im-chooser-simple.c:725
+#: ../src/ui/im-chooser-simple.c:671
 msgid "No Input Method"
 msgstr "無輸入法"
 
-#: ../src/ui/im-chooser-simple.c:727
+#: ../src/ui/im-chooser-simple.c:673
 #, c-format
 msgid "Use %s"
 msgstr "使用 %s"
 
-#: ../src/ui/im-chooser-simple.c:731
+#: ../src/ui/im-chooser-simple.c:680
 msgid " (legacy)"
 msgstr " (不再維護)"
 
-#: ../src/ui/im-chooser-simple.c:733
+#: ../src/ui/im-chooser-simple.c:682
 msgid " (recommended)"
 msgstr " (建議)"
 
-#: ../src/ui/im-chooser-simple.c:775
+#: ../src/ui/im-chooser-simple.c:726
 #, c-format
 msgid "Unable to communicate to IMSettings services"
 msgstr "無法和 IMSettings 服務進行通訊"
 
-#: ../src/ui/im-chooser-simple.c:776
+#: ../src/ui/im-chooser-simple.c:727
 msgid "Version mismatch"
 msgstr "版本不符"
 
-#: ../src/ui/im-chooser-simple.c:790
+#: ../src/ui/im-chooser-simple.c:741
 msgid "Unable to gather current status"
 msgstr "無法取得目前的狀態"
 
-#: ../src/ui/im-chooser-simple.c:796
+#: ../src/ui/im-chooser-simple.c:747
 msgid "Unable to get Input Method information"
 msgstr "無法取得輸入法資訊"
 
-#: ../src/ui/im-chooser-simple.c:905
+#: ../src/ui/im-chooser-simple.c:856
 msgid "<b>Input Method</b>"
 msgstr "<b>輸入法</b>"
 
-#: ../src/ui/im-chooser-simple.c:940
+#: ../src/ui/im-chooser-simple.c:891
 msgid "Input Method _Preferences..."
 msgstr "輸入法偏好設定(_P)..."
 
 #: ../src/ui/im-chooser-ui.c:55
-msgid "<span weight=\"bold\" size=\"larger\">No input method is available</span>"
+msgid ""
+"<span weight=\"bold\" size=\"larger\">No input method is available</span>"
 msgstr "<span weight=\"bold\" size=\"larger\">沒有可用的輸入法</span>"
 
 #: ../src/ui/im-chooser-ui.c:58
 msgid "Please install any input methods before running if you like."
 msgstr "請在執行前安裝任何您想要的輸入法。"
 
-#: ../src/ui/im-chooser-ui.c:144
+#: ../src/ui/im-chooser-ui.c:88
+msgid "Could not connect to the session manager"
+msgstr "無法連接至作業階段管理員"
+
+#: ../src/ui/im-chooser-ui.c:146
 msgid "Log Out"
 msgstr "登出"
 
@@ -188,79 +238,20 @@ msgstr "[選項...]"
 msgid "Could not parse arguments: %s\n"
 msgstr "無法解析引數：%s\n"
 
-#: ../src/ui/im-chooser-ui.c:88
-msgid "Could not connect to the session manager"
-msgstr "無法連接至作業階段管理員"
+#~ msgid "Failed to start Input Method"
+#~ msgstr "啟用輸入法失敗"
 
-#: ../src/ui/eggdesktopfile.c:165
-#, c-format
-msgid "File is not a valid .desktop file"
-msgstr "檔案不是正確的 .desktop 檔案格式"
-
-#: ../src/ui/eggdesktopfile.c:968
-#, c-format
-msgid "Starting %s"
-msgstr "正在開始 %s"
-
-#: ../src/ui/eggdesktopfile.c:188
-#, c-format
-msgid "Unrecognized desktop file Version '%s'"
-msgstr "不能識別的 desktop 檔案版本 '%s'"
-
-#: ../src/ui/eggdesktopfile.c:1178
-#, c-format
-msgid "Unrecognized launch option: %d"
-msgstr "不能識別的啟動選項: %d"
-
-#: ../src/ui/eggdesktopfile.c:1110
-#, c-format
-msgid "Application does not accept documents on command line"
-msgstr "應用程式不接受命令行上的文件"
-
-#: ../src/ui/eggdesktopfile.c:1404
-#, c-format
-msgid "Not a launchable item"
-msgstr "不是一個可啟動物品"
-
-#: ../src/ui/eggdesktopfile.c:1383
-#, c-format
-msgid "Can't pass document URIs to a 'Type=Link' desktop entry"
-msgstr "不能轉送文件 URI 到一個 'Type=Link' desktop 條目"
-
-#: ../src/ui/eggsmclient.c:229
-msgid "Specify file containing saved configuration"
-msgstr "指定包含設置紀錄的檔案"
-
-#: ../src/ui/eggsmclient.c:226
-msgid "Disable connection to session manager"
-msgstr "關閉連接至作業階段管理員的連線"
-
-#: ../src/ui/eggsmclient.c:232
-msgid "Specify session management ID"
-msgstr "指定作業階段管理 ID"
-
-#: ../src/ui/eggsmclient.c:254
-msgid "Show session management options"
-msgstr "顯示作業階段管埋選項"
-
-#: ../src/ui/eggsmclient.c:253
-msgid "Session management options:"
-msgstr "作業階段管理選項："
-
-#: ../src/ui/eggsmclient.c:232
-msgid "ID"
-msgstr "ID"
-
-#: ../src/ui/eggsmclient.c:229
-msgid "FILE"
-msgstr "FILE"
+#~ msgid "Stopping Input Method - %s"
+#~ msgstr "停用輸入法 - %s"
 
 #~ msgid "Updating Input Method list"
 #~ msgstr "更新輸入法清單"
+
 #~ msgid "_Enable input method feature"
 #~ msgstr "啟用輸入法功能(_E)"
+
 #~ msgid "Show the status icon"
 #~ msgstr "顯示狀態圖示"
+
 #~ msgid "IM Chooser - Input Method configuration tool"
 #~ msgstr "IM Chooser - 輸入法設定工具"
-

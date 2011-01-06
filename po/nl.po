@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: im-chooser\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-11-25 17:58+0900\n"
+"POT-Creation-Date: 2011-01-06 15:38+0900\n"
 "PO-Revision-Date: 2010-11-27 12:55+0200\n"
 "Last-Translator: Geert Warrink <geert.warrink@onsnet.nu>\n"
 "Language-Team: Fedora\n"
@@ -99,45 +99,37 @@ msgstr "Sessie beheeropties:"
 msgid "Show session management options"
 msgstr "Laat sessiebeheer opties zien"
 
-#: ../src/ui/im-chooser-simple.c:120
+#: ../src/ui/im-chooser-simple.c:117
 msgid "X applications"
 msgstr "X toepassingen"
 
-#: ../src/ui/im-chooser-simple.c:121
+#: ../src/ui/im-chooser-simple.c:118
 msgid "GTK+ applications"
 msgstr "GTK+ toepassingen"
 
-#: ../src/ui/im-chooser-simple.c:122
+#: ../src/ui/im-chooser-simple.c:119
 msgid "Qt applications"
 msgstr "Qt toepassingen"
 
-#: ../src/ui/im-chooser-simple.c:205
+#: ../src/ui/im-chooser-simple.c:197
 msgid "Unable to get the information"
 msgstr "Kan geen informatie verkrijgen"
 
-#: ../src/ui/im-chooser-simple.c:282
-msgid "Failed to start Input Method"
-msgstr "Starten van invoermethode is mislukt"
-
-#: ../src/ui/im-chooser-simple.c:309
-msgid "Failed to stop Input Method"
+#: ../src/ui/im-chooser-simple.c:271
+#, fuzzy
+msgid "Failed to switch Input Method"
 msgstr "Stoppen van invoermethode is mislukt"
 
-#: ../src/ui/im-chooser-simple.c:410
-#, c-format
-msgid "Starting Input Method - %s"
+#: ../src/ui/im-chooser-simple.c:372
+#, fuzzy, c-format
+msgid "Switching Input Method - %s"
 msgstr "Starten van invoermethode - %s"
-
-#: ../src/ui/im-chooser-simple.c:427
-#, c-format
-msgid "Stopping Input Method - %s"
-msgstr "Stoppen van invoermethode - %s"
 
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications and Qt applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications and GTK+ applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications and Qt applications</i></small>"
-#: ../src/ui/im-chooser-simple.c:513 ../src/ui/im-chooser-simple.c:516
-#: ../src/ui/im-chooser-simple.c:519
+#: ../src/ui/im-chooser-simple.c:460 ../src/ui/im-chooser-simple.c:463
+#: ../src/ui/im-chooser-simple.c:466
 #, c-format
 msgid ", except %s and %s"
 msgstr ", met uitzondering van %s en %s"
@@ -145,14 +137,14 @@ msgstr ", met uitzondering van %s en %s"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except Qt applications</i></small>"
-#: ../src/ui/im-chooser-simple.c:522 ../src/ui/im-chooser-simple.c:525
-#: ../src/ui/im-chooser-simple.c:528
+#: ../src/ui/im-chooser-simple.c:469 ../src/ui/im-chooser-simple.c:472
+#: ../src/ui/im-chooser-simple.c:475
 #, c-format
 msgid ", except %s"
 msgstr ", met uitzondering van %s"
 
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications</i></small>"
-#: ../src/ui/im-chooser-simple.c:533
+#: ../src/ui/im-chooser-simple.c:480
 #, c-format
 msgid ""
 "<small><i>Note: this change will not take effect until you next log in%s</"
@@ -161,67 +153,67 @@ msgstr ""
 "<small><i>Opmerking: deze verandering zal pas actief worden als je opnieuw "
 "inlogt %s</i></small>"
 
-#: ../src/ui/im-chooser-simple.c:592
+#: ../src/ui/im-chooser-simple.c:539
 msgid "Parent Window"
 msgstr "Bovenliggende venster"
 
-#: ../src/ui/im-chooser-simple.c:593
+#: ../src/ui/im-chooser-simple.c:540
 msgid "GtkWindow that points to the parent window"
 msgstr "GtkWindow dat naar het bovenliggende venster verwijst"
 
-#: ../src/ui/im-chooser-simple.c:598
+#: ../src/ui/im-chooser-simple.c:545
 msgid "Note type"
 msgstr "Notitie type"
 
-#: ../src/ui/im-chooser-simple.c:599
+#: ../src/ui/im-chooser-simple.c:546
 msgid "A enum value to determine which notes should be displayed"
 msgstr ""
 "Een enumeratie waarde om te bepalen welke notities moeten worden weergegeven"
 
 #. setup a progress window
-#: ../src/ui/im-chooser-simple.c:642
+#: ../src/ui/im-chooser-simple.c:589
 msgid "Work in progress..."
 msgstr "Werk in uitvoering..."
 
-#: ../src/ui/im-chooser-simple.c:725
+#: ../src/ui/im-chooser-simple.c:671
 msgid "No Input Method"
 msgstr "Geen invoermethode"
 
-#: ../src/ui/im-chooser-simple.c:727
+#: ../src/ui/im-chooser-simple.c:673
 #, c-format
 msgid "Use %s"
 msgstr "%s gebruiken"
 
-#: ../src/ui/im-chooser-simple.c:731
+#: ../src/ui/im-chooser-simple.c:680
 msgid " (legacy)"
 msgstr " (verouderd)"
 
-#: ../src/ui/im-chooser-simple.c:733
+#: ../src/ui/im-chooser-simple.c:682
 msgid " (recommended)"
 msgstr " (aanbevolen)"
 
-#: ../src/ui/im-chooser-simple.c:775
+#: ../src/ui/im-chooser-simple.c:726
 #, c-format
 msgid "Unable to communicate to IMSettings services"
 msgstr "Kan niet communiceren met IMSettings services"
 
-#: ../src/ui/im-chooser-simple.c:776
+#: ../src/ui/im-chooser-simple.c:727
 msgid "Version mismatch"
 msgstr "Versies komen niet overeen"
 
-#: ../src/ui/im-chooser-simple.c:790
+#: ../src/ui/im-chooser-simple.c:741
 msgid "Unable to gather current status"
 msgstr "Kan huidige status niet verkrijgen"
 
-#: ../src/ui/im-chooser-simple.c:796
+#: ../src/ui/im-chooser-simple.c:747
 msgid "Unable to get Input Method information"
 msgstr "Kan invoermethode informatie niet verkrijgen"
 
-#: ../src/ui/im-chooser-simple.c:905
+#: ../src/ui/im-chooser-simple.c:856
 msgid "<b>Input Method</b>"
 msgstr "<b>Invoermethode</b>"
 
-#: ../src/ui/im-chooser-simple.c:940
+#: ../src/ui/im-chooser-simple.c:891
 msgid "Input Method _Preferences..."
 msgstr "_Voorkeuren invoermethoden..."
 
@@ -240,7 +232,7 @@ msgstr "Installeer een invoermethode voordat u dit programma opstart."
 msgid "Could not connect to the session manager"
 msgstr "Kon niet verbinden met de sessie beheerder"
 
-#: ../src/ui/im-chooser-ui.c:144
+#: ../src/ui/im-chooser-ui.c:146
 msgid "Log Out"
 msgstr "Afmelden"
 
@@ -252,6 +244,12 @@ msgstr "[opties...]"
 #, c-format
 msgid "Could not parse arguments: %s\n"
 msgstr "Kon argumenten niet ontleden: %s\n"
+
+#~ msgid "Failed to start Input Method"
+#~ msgstr "Starten van invoermethode is mislukt"
+
+#~ msgid "Stopping Input Method - %s"
+#~ msgstr "Stoppen van invoermethode - %s"
 
 #~ msgid "Updating Input Method list"
 #~ msgstr "Vernieuwen van invoermethodelijst"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: bs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-11-25 17:58+0900\n"
+"POT-Creation-Date: 2011-01-06 15:38+0900\n"
 "PO-Revision-Date: 2007-01-23 16:07+0100\n"
 "Last-Translator: Adnan Hodzic <AbsintheSyringe@gmail.com>\n"
 "Language-Team: Bosnian <lokal@linux.org.ba>\n"
@@ -101,47 +101,37 @@ msgstr ""
 msgid "Show session management options"
 msgstr ""
 
-#: ../src/ui/im-chooser-simple.c:120
+#: ../src/ui/im-chooser-simple.c:117
 msgid "X applications"
 msgstr ""
 
-#: ../src/ui/im-chooser-simple.c:121
+#: ../src/ui/im-chooser-simple.c:118
 msgid "GTK+ applications"
 msgstr ""
 
-#: ../src/ui/im-chooser-simple.c:122
+#: ../src/ui/im-chooser-simple.c:119
 msgid "Qt applications"
 msgstr ""
 
-#: ../src/ui/im-chooser-simple.c:205
+#: ../src/ui/im-chooser-simple.c:197
 msgid "Unable to get the information"
 msgstr ""
 
-#: ../src/ui/im-chooser-simple.c:282
+#: ../src/ui/im-chooser-simple.c:271
 #, fuzzy
-msgid "Failed to start Input Method"
+msgid "Failed to switch Input Method"
 msgstr "_Nikad ne upotrebljavaj načine unosa"
 
-#: ../src/ui/im-chooser-simple.c:309
-#, fuzzy
-msgid "Failed to stop Input Method"
-msgstr "_Nikad ne upotrebljavaj načine unosa"
-
-#: ../src/ui/im-chooser-simple.c:410
+#: ../src/ui/im-chooser-simple.c:372
 #, fuzzy, c-format
-msgid "Starting Input Method - %s"
-msgstr "Način unosa"
-
-#: ../src/ui/im-chooser-simple.c:427
-#, fuzzy, c-format
-msgid "Stopping Input Method - %s"
+msgid "Switching Input Method - %s"
 msgstr "Način unosa"
 
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications and Qt applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications and GTK+ applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications and Qt applications</i></small>"
-#: ../src/ui/im-chooser-simple.c:513 ../src/ui/im-chooser-simple.c:516
-#: ../src/ui/im-chooser-simple.c:519
+#: ../src/ui/im-chooser-simple.c:460 ../src/ui/im-chooser-simple.c:463
+#: ../src/ui/im-chooser-simple.c:466
 #, c-format
 msgid ", except %s and %s"
 msgstr ""
@@ -149,14 +139,14 @@ msgstr ""
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except Qt applications</i></small>"
-#: ../src/ui/im-chooser-simple.c:522 ../src/ui/im-chooser-simple.c:525
-#: ../src/ui/im-chooser-simple.c:528
+#: ../src/ui/im-chooser-simple.c:469 ../src/ui/im-chooser-simple.c:472
+#: ../src/ui/im-chooser-simple.c:475
 #, c-format
 msgid ", except %s"
 msgstr ""
 
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications</i></small>"
-#: ../src/ui/im-chooser-simple.c:533
+#: ../src/ui/im-chooser-simple.c:480
 #, fuzzy, c-format
 msgid ""
 "<small><i>Note: this change will not take effect until you next log in%s</"
@@ -165,68 +155,68 @@ msgstr ""
 "<small><i>Napomena: Ova izmjena neće imati učinka do ponovnog prijavljivanja."
 "</i></small>"
 
-#: ../src/ui/im-chooser-simple.c:592
+#: ../src/ui/im-chooser-simple.c:539
 msgid "Parent Window"
 msgstr ""
 
-#: ../src/ui/im-chooser-simple.c:593
+#: ../src/ui/im-chooser-simple.c:540
 msgid "GtkWindow that points to the parent window"
 msgstr ""
 
-#: ../src/ui/im-chooser-simple.c:598
+#: ../src/ui/im-chooser-simple.c:545
 msgid "Note type"
 msgstr ""
 
-#: ../src/ui/im-chooser-simple.c:599
+#: ../src/ui/im-chooser-simple.c:546
 msgid "A enum value to determine which notes should be displayed"
 msgstr ""
 
 #. setup a progress window
-#: ../src/ui/im-chooser-simple.c:642
+#: ../src/ui/im-chooser-simple.c:589
 msgid "Work in progress..."
 msgstr ""
 
-#: ../src/ui/im-chooser-simple.c:725
+#: ../src/ui/im-chooser-simple.c:671
 #, fuzzy
 msgid "No Input Method"
 msgstr "Način unosa"
 
-#: ../src/ui/im-chooser-simple.c:727
+#: ../src/ui/im-chooser-simple.c:673
 #, c-format
 msgid "Use %s"
 msgstr ""
 
-#: ../src/ui/im-chooser-simple.c:731
+#: ../src/ui/im-chooser-simple.c:680
 msgid " (legacy)"
 msgstr ""
 
-#: ../src/ui/im-chooser-simple.c:733
+#: ../src/ui/im-chooser-simple.c:682
 msgid " (recommended)"
 msgstr ""
 
-#: ../src/ui/im-chooser-simple.c:775
+#: ../src/ui/im-chooser-simple.c:726
 #, c-format
 msgid "Unable to communicate to IMSettings services"
 msgstr ""
 
-#: ../src/ui/im-chooser-simple.c:776
+#: ../src/ui/im-chooser-simple.c:727
 msgid "Version mismatch"
 msgstr ""
 
-#: ../src/ui/im-chooser-simple.c:790
+#: ../src/ui/im-chooser-simple.c:741
 msgid "Unable to gather current status"
 msgstr ""
 
-#: ../src/ui/im-chooser-simple.c:796
+#: ../src/ui/im-chooser-simple.c:747
 #, fuzzy
 msgid "Unable to get Input Method information"
 msgstr "Način unosa"
 
-#: ../src/ui/im-chooser-simple.c:905
+#: ../src/ui/im-chooser-simple.c:856
 msgid "<b>Input Method</b>"
 msgstr "<b>Načina unosa</b>"
 
-#: ../src/ui/im-chooser-simple.c:940
+#: ../src/ui/im-chooser-simple.c:891
 #, fuzzy
 msgid "Input Method _Preferences..."
 msgstr "Način unosa"
@@ -244,7 +234,7 @@ msgstr ""
 msgid "Could not connect to the session manager"
 msgstr ""
 
-#: ../src/ui/im-chooser-ui.c:144
+#: ../src/ui/im-chooser-ui.c:146
 #, fuzzy
 msgid "Log Out"
 msgstr "_Odjava"
@@ -257,6 +247,14 @@ msgstr ""
 #, c-format
 msgid "Could not parse arguments: %s\n"
 msgstr ""
+
+#, fuzzy
+#~ msgid "Failed to start Input Method"
+#~ msgstr "_Nikad ne upotrebljavaj načine unosa"
+
+#, fuzzy
+#~ msgid "Stopping Input Method - %s"
+#~ msgstr "Način unosa"
 
 #, fuzzy
 #~ msgid "Updating Input Method list"
