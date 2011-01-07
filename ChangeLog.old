@@ -1,0 +1,666 @@
+2010-11-26  Akira TAGOH  <tagoh@redhat.com>
+
+	* configure.ac: bump to 1.4.0.
+
+	Fix a crash on g-c-c when im-chooser is active and invoking again.
+
+	* src/ui/im-chooser-simple.c (im_chooser_simple_get_widget): unparent
+	if the widget is already created.
+
+	* src/ui/im-chooser-ui.c (im_chooser_ui_get): make IMChooserSimple
+	object reusable.
+
+	* src/ui/im-chooser-simple.c (im_chooser_simple_finalize): fix a crash
+	on ccpanel.
+
+2010-11-25  Akira TAGOH  <tagoh@redhat.com>
+
+	* src/im-chooser.desktop.in.in (NotShowIn): added to not display this
+	for GNOME and XFCE.
+
+	* src/ui/im-chooser-ui.c (im_chooser_ui_get): unref the IMChooserSimple
+	object when the widget is being destroyed.
+
+	* src/ccpanel/main.c (cc_imchoose_panel_init): initialize the session
+	management only once to avoid getting stuck on processing
+	the ICE message.
+
+2010-11-25  Akira TAGOH  <tagoh@redhat.com>
+
+	* src/ui/im-chooser-simple.c (_im_chooser_simple_update_im_list):
+	Move none at the beginning of the list.
+
+2010-11-15  Akira TAGOH  <tagoh@redhat.com>
+
+	* src/im-chooser-simple.c: get rid of the applet support.
+
+	* src/im-chooser.desktop.in.in (_Name): update for more convenience.
+
+	* src/xfce4-im-chooser.desktop.in (_Name): likewise.
+
+	* src/main.c: cleanup.
+	(_dialog_response_cb): Use EggSMClient instead of GnomeClient.
+	(main): get rid of libgnomeui code.
+
+	* configure.ac: Use gtk3 if available.
+	add --with-desktopfile option.
+
+2010-10-26  Akira TAGOH  <tagoh@redhat.com>
+
+	* src/im-chooser-simple.c: show none in the list as well
+	and get rid of the check button. (rhbz#628420)
+
+2010-09-08  Akira TAGOH  <tagoh@redhat.com>
+
+	* configure.ac: bump to 1.3.2
+
+	* NEWS: update
+
+2010-08-17  Akira TAGOH  <tagoh@redhat.com>
+
+	* src/im-chooser-simple.c (im_chooser_simple_get_widget): set a border
+	around the list. (rhbz#607513)
+
+	* src/main.c (main): make a dialog resizable.
+
+2010-06-21  Akira TAGOH  <tagoh@redhat.com>
+
+	* configure.ac: bump to 1.3.1.
+
+	* src/main.c (main): fallback to themed icon if no icons are
+	installed. (rhbz#604482)
+
+2010-05-12  Akira TAGOH  <tagoh@redhat.com>
+
+	* configure.ac: bump to 1.3.0.
+
+	* data/*: Add new icons by Lapo Calamandrei and Jakub Steiner.
+
+2010-04-20  Akira TAGOH  <tagoh@redhat.com>
+
+	* src/im-chooser-simple.c (_im_chooser_simple_update_im_list):
+	stock icon support.
+
+2010-03-04  Akira TAGOH  <tagoh@redhat.com>
+
+	* configure.ac: move ALL_LINGUAS into po/LINGUAS file.
+
+2009-09-14  Akira TAGOH  <tagoh@redhat.com>
+
+	* configure.ac: bump to 1.2.7.
+
+2009-02-26  Akira TAGOH  <tagoh@redhat.com>
+
+	* src/xfce4-im-chooser.desktop.in: Fix a typo. (rhbz#487275)
+
+2009-02-23  Akira TAGOH  <tagoh@redhat.com>
+
+	* configure.ac: bump to 1.2.6.
+
+	* src/xfce4-im-chooser.desktop.in: New.
+
+	* src/im-chooser-simple.c: Update for imsettings-0.106.0.
+	* requires: require imsettings 0.106.0.
+
+2008-10-22  Akira TAGOH  <tagoh@redhat.com>
+
+	* src/im-chooser-simple.c (im_chooser_simple_set_property): Fix not
+	displaying the translation.
+
+	* src/main.c (main): Show the log out button if restart is required
+	for something.
+
+2008-10-10  Akira TAGOH  <tagoh@redhat.com>
+
+	* src/im-chooser-simple.c (im_chooser_simple_get_widget): code cleanup
+	and change the option order.
+
+2008-09-15  Akira TAGOH  <tagoh@redhat.com>
+
+	* src/im-chooser-simple.c (im_chooser_simple_show_status_icon_on_toggled): 
+	new.
+	(im_chooser_simple_get_widget): Add an option whether or not
+	the applet icon is displayed at the systray. (rhbz#460703)
+
+2008-09-01  Akira TAGOH  <tagoh@redhat.com>
+
+	* src/im-chooser.desktop.in.in (Icon): Get rid of the extension.
+
+2008-08-27  Akira TAGOH  <tagoh@redhat.com>
+
+	* src/im-chooser-simple.c (im_chooser_simple_set_property): set proper
+	label according to the request.
+
+	* src/main.c (main): set proper notice type according to the current
+	envvars.
+
+2008-08-18  Akira TAGOH  <tagoh@redhat.com>
+
+	* src/im-chooser-simple.c (im_chooser_simple_show_error): remove
+	the timout source before opening a dialog to prevent unable to take
+	any action on the dialog.
+	(im_chooser_simple_show_error): destroy the dialog.
+
+2008-07-15  Akira TAGOH  <tagoh@redhat.com>
+
+	* src/im-chooser-simple.c (_im_chooser_simple_update_im_list):
+	show up the icon if available in IMInfo. (rhbz#454371)
+
+2008-07-08  Akira TAGOH  <tagoh@redhat.com>
+
+	* src/im-chooser-simple.c (im_chooser_simple_set_property):
+	toggle showing up the note.
+	(im_chooser_simple_get_widget): show up the note as needed.
+
+	* src/main.c (_im_changed_cb): new.
+	(_dialog_response_cb): Add GTK_RESPONSE_APPLY handler.
+	(main): run as GNOME apps to deal with the log out button.
+
+	* configure.ac: requires libgnomeui-2.0 again.
+
+2008-06-27  Akira TAGOH  <tagoh@redhat.com>
+
+	* src/im-chooser-simple.c (_im_chooser_simple_update_im_list): Invoke
+	exit(2) instead of gtk_main_quit().
+
+2008-06-12  Akira TAGOH  <tagoh@redhat.com>
+
+	* src/im-chooser-simple.c (im_chooser_simple_prefs_button_on_clicked):
+	code clean up for new imsettings API.
+	(im_chooser_simple_g_error_quark): new.
+	(im_chooser_simple_activate_progress): delay display for the progress
+	window.
+	(im_chooser_simple_action_loop): do not try to get information for preference apps if IM is being turned off.
+	(_im_chooser_simple_update_im_list): check the version before doing
+	something. and reload the services as needed.
+
+2008-06-04  Akira TAGOH  <tagoh@redhat.com>
+
+	* src/im-chooser-simple.c (im_chooser_simple_enable_im_on_toggled):
+	more error handling.
+	(im_chooser_simple_prefs_button_on_clicked): likewise.
+	(im_chooser_simple_im_start_cb): likewise.
+	(im_chooser_simple_im_stop_cb): likewise.
+	(im_chooser_simple_instance_init): likewise.
+	(im_chooser_simple_show_error): new function.
+	(im_chooser_simple_get_widget): get rid of the note.
+
+	* src/main.c: clean up and trivial changes for imsettings-0.100.
+
+	* README: Update since imsettings is now separate project.
+
+2008-05-14  Akira TAGOH  <tagoh@redhat.com>
+
+	* src/im-chooser-simple.c (im_chooser_simple_instance_init):
+	makes the progress window not resizable and not deletable window.
+
+	* src/im-chooser-simple.c (_im_chooser_simple_update_im_list): clean up.
+
+	* src/im-chooser-simple.c (im_chooser_simple_instance_init):
+	Make the window border to the progress window. (RH#444818)
+
+2008-04-25  Akira TAGOH  <tagoh@redhat.com>
+
+	* src/im-chooser-simple.c (_im_chooser_simple_update_im_list):
+	Do not turn on the "Enable input method feature" check box if IM isn't running. (RH#443765)
+
+	* configure.ac:
+	* requires: Require dbus-glib >= 0.74 for
+	dbus_connection_get_g_connection.
+
+2008-04-18  Akira TAGOH  <tagoh@redhat.com>
+
+	* configure.ac: change the default suffix to .conf.
+
+2008-04-14  Akira TAGOH  <tagoh@redhat.com>
+
+	* data/xinput.sh.in.in: run imsettings-xim after imsettings-start.
+	ensure dbus session is established before doing something with imsettings.
+
+2008-04-10  Akira TAGOH  <tagoh@redhat.com>
+
+	* README: Add xinputrc stuff.
+
+	* data/xinput.sh.in.in: Add settings for XIM support.
+
+2008-04-07  Akira TAGOH  <tagoh@redhat.com>
+
+	* src/im-chooser-simple.c: clean up.
+
+	* src/im-chooser-simple.c (_im_chooser_simple_update_im_list):
+	don't update the IM list if no IM is available. (RH#440519)
+
+2008-03-26  Akira TAGOH  <tagoh@redhat.com>
+
+	* data/xinput.sh.in.in: real fix to not update .xinputrc.
+
+2008-03-19  Akira TAGOH  <tagoh@redhat.com>
+
+	* configure.ac: Add XIM support.
+
+2008-03-17  Akira TAGOH  <tagoh@redhat.com>
+
+	* data/xinput.sh.in.in: Do not update .xinputrc here. just follow
+	the default behavior on current locale and settings.
+
+2008-03-11  Akira TAGOH  <tagoh@redhat.com>
+
+	* data/none.in.in (IMSETTINGS_IGNORE_ME): Use new one instead of
+	IM_CHOOSER_IGNORE_ME which is obsolete.
+
+	* src/im-chooser-simple.c (im_chooser_simple_destroy_idle_cb): new.
+	(im_chooser_simple_enable_im_on_toggled): serialize actions to work on
+	imsettings asynchronously.
+	(im_chooser_simple_im_list_on_changed): likewise.
+	(_action_new): new.
+	(_action_free): new.
+	(_action_compare): new.
+	(im_chooser_simple_im_start_cb): new.
+	(im_chooser_simple_im_stop_cb): new.
+	(im_chooser_simple_show_progress): new.
+	(im_chooser_simple_action_loop): new.
+	(im_chooser_simple_set_property): new.
+	(im_chooser_simple_get_property): new.
+	(_im_chooser_simple_update_im_list): Use i_r_get_current_user/system_im
+	instead of _is_user/system_im to improve the performance.
+
+	* src/main.c (main): set a parent window.
+
+	* configure.ac: Apply the cflags for warnings.
+
+2008-03-06  Akira TAGOH  <tagoh@redhat.com>
+
+	* configure.ac: Use gnome-common's macro.
+
+2008-02-20  Akira TAGOH  <tagoh@redhat.com>
+
+	* data/xinputinfo.sh.in: Fix to output quoted strings properly.
+
+2008-02-19  Akira TAGOH  <tagoh@redhat.com>
+
+	* data/xinput.sh.in.in: Add a hack to ensure starting the user specific
+	xinput script.
+
+	* configure.ac: Make sure gamin is installed.
+
+	* src/im-chooser-simple.c (im_chooser_simple_enable_im_on_toggled):
+	Update the list on toggling IM feature activation.
+	(im_chooser_simple_im_list_on_changed): Validate the value to not segfault.
+	(im_chooser_simple_instance_init): Reflect current locale to the requester.
+	(im_chooser_simple_sort_compare): Removed. no longer need to sort in house.
+
+2008-02-08  Akira TAGOH  <tagoh@redhat.com>
+
+	* configure.ac: bump to 0.99.1.
+
+	* data/xinput.sh.in.in: get rid of a workaround.
+
+	* configure.ac: add --enable-debug option.
+
+	* src/im-chooser-simple.c (im_chooser_simple_finalize): unref objects.
+
+2008-02-01  Akira TAGOH  <tagoh@redhat.com>
+
+	* src/im-chooser-simple.c (_im_chooser_simple_update_im_list):
+	Choose the recommended IM if no current IM is running. otherwise
+	the first entry will.
+
+2008-01-30  Akira TAGOH  <tagoh@redhat.com>
+
+	* data/xinput.sh.in.in: Add a wait for a workaround that something
+	is stalled at gnome-session.
+
+	* src/im-chooser-simple.c (im_chooser_simple_enable_im_on_toggled):
+	don't send any requests if it's still at the initialization.
+	(im_chooser_simple_enable_im_on_toggled): Update the preference button
+	state after the current position is set.
+	(im_chooser_simple_sort_compare): new.
+	(_im_chooser_simple_update_im_list): sort out according to whether
+	it's the system default and the legacy IM.
+
+2008-01-29  Akira TAGOH  <tagoh@redhat.com>
+
+	* configure.ac: turn off -Wall and -Werror if it's not with
+	--enable-maintainer-mode.
+
+2008-01-28  Akira TAGOH  <tagoh@redhat.com>
+
+	* src/im-chooser-simple.c (im_chooser_simple_im_list_on_changed):
+	send a changed signal.
+	(_im_chooser_simple_update_im_list): set initial IM if not yet.
+	(im_chooser_simple_get_widget): Update a note a bit.
+	(im_chooser_simple_is_modified): Follow the new way to detect
+	the modification.
+
+2008-01-25  Akira TAGOH  <tagoh@redhat.com>
+
+	* src/im-chooser-simple.c: Update a lot to work with imsettings.
+	* src/xinput.[ch]: Remove.
+
+	* src/im-chooser.[ch]: Remove.
+
+	* src/im-chooser-private.h: Remove.
+
+	* src/main.c: clean up the obsolete code.
+
+2008-01-25  Akira TAGOH  <tagoh@redhat.com>
+
+	* data/xinput.sh.in.in: Update to bring up IM through imsettings.
+
+	* data/xinputinfo.sh.in: new.
+
+2008-01-24  Akira TAGOH  <tagoh@redhat.com>
+
+	* configure.ac: Check glib path.
+
+2008-01-23  Akira TAGOH  <tagoh@redhat.com>
+
+	* configure.ac: check pkgconfig for x11.
+
+	* README: Add a description for XIM_PROGRAM.
+
+2007-12-27  Akira TAGOH  <tagoh@redhat.com>
+
+	* configure.ac: bump to 0.5.5.
+
+2007-12-25  Akira TAGOH  <tagoh@redhat.com>
+
+	* configure.ac: rename sr@Latn to sr@latin. (RH#426540)
+
+2007-11-16  Akira TAGOH  <tagoh@redhat.com>
+
+	* configure.ac: bump to 0.5.4.
+
+	* src/im-chooser-simple.c: Improve English label. (RH#302491)
+
+	* src/im-chooser.desktop.in.in: Update a bit for GNOME HIG compliant.
+	(RH#330431)
+
+2007-10-15  Akira TAGOH  <tagoh@redhat.com>
+
+	* configure.ac: remove the obsolete Norwegian translation.
+
+2007-10-11  Akira TAGOH  <tagoh@redhat.com>
+
+	* configure.ac: bump to 0.5.3.
+
+	* src/im-chooser-simple.c (im_chooser_simple_instance_init): register
+	the config file even if it has an IM_CHOOSER_IGNORE_ME flag.
+	(_im_chooser_simple_get_xinput): check a XINPUT_VALUE_IGNORE_ME flag
+	instead of looking at the hard-coded name.
+	(_im_chooser_simple_get_system_default_im): likewise.
+	(_im_chooser_simple_get_current_im): likewise.
+	(_im_chooser_simple_set_im_to_list): likewise.
+
+2007-09-18  Akira TAGOH  <tagoh@redhat.com>
+
+	* configure.ac: bump to 0.5.2.
+
+	* src/im-chooser-simple.c (_im_chooser_simple_update_im_list): Check
+	iter to not be warned.
+	(im_chooser_simple_get_widget): unset a toggle button for default, but
+	not insensitive.
+
+2007-09-10  Akira TAGOH  <tagoh@redhat.com>
+
+	* configure.ac: bump to 0.5.1.
+
+	* src/im-chooser-simple.c (im_chooser_simple_enable_im_on_toggled):
+	check if PREFERENCE_PROGRAM really exists and is executable.
+	(im_chooser_simple_im_list_on_changed): likewise.
+	(im_chooser_simple_get_widget): makes the config button as an
+	insensitive by default.
+
+2007-09-06  Akira TAGOH  <tagoh@redhat.com>
+
+	* configure.ac: bump to 0.5.0
+
+2007-09-05  Akira TAGOH  <tagoh@redhat.com>
+
+	* README: Add the description of SHORT_DESC and LONG_DESC
+
+	* src/im-chooser-simple.c (im_chooser_simple_class_init): create
+	a notify_n_im signal.
+	(_im_chooser_simple_update_im_list): emit a notify_n_im signal here.
+
+	* src/main.c (_im_notify_n_im_cb): new function to deal with the case
+	of no IM.
+
+2007-09-04  Akira TAGOH  <tagoh@redhat.com>
+
+	* data/xinput.sh.in.in: Do not run even $AUXILIARY_PROGRAM when
+	$IM_CHOOSER_ONLY_EVALUATE_VARIABLES is set.
+
+	* README: Describe PREFERENCE_PROGRAM AND PREFERENCE_ARGS.
+
+	* data/none.in.in: Add IM_CHOOSER_IGNORE_ME to not display in the IM list.
+
+	* src/xinput.c (xinput_data_new): Modified to have some state for new UI.
+	(xinput_data_get_value): likewise.
+	(xinput_data_get_short_description): new function.
+
+	* src/main.c (main): Updated a bit for new UI.
+
+	* src/im-chooser-simple.[ch]: Add a new class to build a new UI.
+
+	* src/im-chooser-private.h: new file.
+
+2007-07-25  Akira TAGOH  <tagoh@redhat.com>
+
+	* configure.ac: dump a version to 0.4.1.
+
+	* data/Makefile.am: small bug fix.
+
+	* configure.ac: dump a version to 0.4.0.
+
+2007-07-18  Akira TAGOH  <tagoh@redhat.com>
+
+	* data/xinput.sh.in.in: Sync to Fedora's.
+
+	* data/Makefile.am: Install xinput.sh script.
+
+	* src/xinput.c (xinput_data_new): Update to not bringing IM up actually.
+
+	* src/im-chooser.c (_im_chooser_detect_current_mode): Update
+	an installation path for the system xinputrc.
+	(im_chooser_get_widget): Evaluate the variables from xinput.sh script
+	to see the real result.
+	(im_chooser_get_widget): Use better words.
+
+	* configure.ac: Add options, --with-xinputrcdir and --with-xinputsh.
+
+	* data/xinput.sh.in: Support the auxiliary program.
+
+	* data/xinput.sh.in: Update to not bringing IM up actually.
+
+	* configure.ac: Generate xinput.sh.
+
+2007-01-30  Akira TAGOH  <tagoh@redhat.com>
+
+	Translation updates release.
+
+	* configure.ac: bumped to 0.3.4.
+
+2006-10-07  Akira TAGOH  <at@gclab.org>
+
+	* configure.ac: remove AM_GLIB_DEFINE_LOCALEDIR.
+
+	* src/Makefile.am (INCLUDES): added IMCHOOSE_LOCALEDIR.
+
+	* data/xinput.sh: fallback to read /etc/default/locale if there are no
+	/etc/profile.d/lang.sh.
+
+2006-10-02  Akira TAGOH  <at@gclab.org>
+
+	Translation updates release.
+
+	* configure.ac: bumped to 0.3.3.
+
+2006-09-08  Akira TAGOH  <at@gclab.org>
+
+	* configure.ac: bumped to 0.3.2.
+
+	* data/im-chooser.png: added an icon from Andrew Fitzsimon
+
+	* src/main.c (main): show the window icon.
+
+	* src/im-chooser.desktop.in.in (Icon): added icon.
+
+2006-08-29  Akira TAGOH  <at@gclab.org>
+
+	* src/im-chooser.c (_im_chooser_set_menu_from_im_table): check
+	the suffix thing too.
+
+2006-08-25  Akira TAGOH  <at@gclab.org>
+
+	* src/im-chooser.desktop.in.in: removed MimeType.
+
+2006-08-15  Akira TAGOH  <at@gclab.org>
+
+	* configure.ac: bumped to 0.3.1.
+
+	* src/main.c (_real_style_set): override spacings.
+
+2006-08-07  Akira TAGOH  <at@gclab.org>
+
+	* src/main.c (main): add an icon to the log out button.
+	make a window to not resizable.
+	adjusted the border inside the window.
+
+	* src/im-chooser.c (im_chooser_get_widget): adjust a padding for
+	header.
+
+	* src/main.c (main): hide a separator.
+
+	* data/xim.in.in: fixed to reflect --xinputdir option.
+
+	* data/none.in.in: likewise.
+
+	* data/Makefile.am: install with the suffix.
+
+2006-07-25  Akira TAGOH  <at@gclab.org>
+
+	* src/im-chooser.c (im_chooser_get_widget): fixed a typo.
+
+2006-07-24  Akira TAGOH  <at@gclab.org>
+
+	* src/xinput.c (xinput_get_im_list): exactly lookup with the suffix.
+
+	* src/im-chooser.c (im_chooser_instance_init): put the xinput name
+	without the suffix.
+	(im_chooser_update_xinputrc): make a symlink with the suffix.
+
+	* src/xinput.c (xinput_get_im_list): lookup the xiput file with
+	the suffix.
+
+	* src/im-chooser.c (im_chooser_get_widget): fixed to make
+	a non-sensitive when no options available on custom.
+
+	* configure.ac: bumped to 0.3.0.
+	added --with-xinput-suffix option.
+
+	* src/im-chooser.c (im_chooser_get_widget): fixed a typo.
+
+2006-07-22  Akira TAGOH  <at@gclab.org>
+
+	* README: described more.
+
+	* data/Makefile.am (xinputdir): use $XINPUT_PATH instead.
+
+	* src/im-chooser.desktop.in (_Name): simplify the name.
+
+	* src/xinput.c (xinput_data_new): initialize the structure.
+	(xinput_data_get_value): renamed from xinput_data_get_name.
+
+	* src/im-chooser.c (im_chooser_instance_init): ignore the xinput script
+	that has IM_CHOOSER_IGNORE_ME.
+	(im_chooser_get_widget): some improvements.
+
+	* src/main.c (main): swaped the buttons.
+
+2006-07-21  Akira TAGOH  <at@gclab.org>
+
+	* src/im-chooser.c (im_chooser_get_widget): show the note.
+
+	* src/main.c (_im_changed_cb): new function.
+	(_dialog_response_cb): support the logout button.
+	(_dialog_response_cb): removed the message dialog to be notified.
+
+	* configure.ac: check libgnomeui.
+
+	* src/im-chooser.[ch]: gobject'ized.
+
+	* src/im-chooser.c (im_chooser_get_widget): stop to use GtkFrame.
+
+2006-07-12  Akira TAGOH  <at@gclab.org>
+
+	* configure.ac: bumped to 0.2.2.
+
+	* src/im-chooser.c (_im_chooser_option_changed_cb): ignore flapping
+	the option.
+	(_im_chooser_detect_real_current_mode): check tan existance of
+	the linked file.
+
+	* src/xinput.c (xinput_data_new): don't evaluate xinput script if it
+	doesn't exist.
+
+	* src/im-chooser.c (_im_chooser_button_clicked_cb): check if menuitem
+	is valid to avoid GObject warning.
+
+	* src/main.c (_dialog_response_cb): inform a need of restarting
+	the desktop if any changes happened.
+
+	* src/im-chooser.c (im_chooser_update_xinputrc): don't make a symlink
+	if IM_MODE_SYSTEM is chosen.
+	(im_chooser_get_widget): better status to indicate what xinputrc didn't
+	found.
+	(_im_chooser_detect_current_mode): assume IM_MODE_SYSTEM if no .xinputrc.
+	(im_chooser_get_widget): disable chices if no XIM or no valid IM is
+	installed.
+	(im_chooser_update_xinputrc): create a backup file.
+
+2006-07-10  Akira TAGOH  <at@gclab.org>
+
+	* configure.ac: bumped to 0.2.1.
+
+	* src/Makefile.am: added im-chooser.desktop.
+	(EXTRA_DIST): added im-chooser.desktop.in.
+
+	* configure.ac (AC_CONFIG_FILES): added src/im-chooser.desktop.in
+
+2006-07-07  Akira TAGOH  <at@gclab.org>
+
+	* configure.ac: bumped to 0.2.0.
+
+2006-07-06  Akira TAGOH  <at@gclab.org>
+
+	* data/Makefile.am (EXTRA_DIST): added xinput.sh.
+
+	* data/xinput.sh: added.
+
+	* src/im-chooser.c (_im_chooser_detect_real_current_mode): return
+	IM_MODE_SYSTEM if the target is the global conf to check.
+	(im_chooser_get_widget): read the global conf.
+
+	* src/xinput.c (xinput_data_get_name): new function.
+
+	* src/im-chooser.c (_im_chooser_detect_real_current_mode):
+	new function.
+	(_im_chooser_set_menu_from_im_table): warns if g_get_home_dir() failed.
+	(im_chooser_get_widget): shows the system-wide configuration.
+	(im_chooser_update_xinputrc): warns if g_get_home_dir() failed.
+
+	* src/Makefile.am (INCLUDES): added XINIT_PATH definition.
+
+	* configure.ac: added --with-xinitdir option.
+
+2006-06-07  Akira TAGOH  <at@gclab.org>
+
+	* configure.ac: bump to 0.1.1.
+
+	* src/im-chooser.c (im_chooser_update_xinputrc): don't try unlink when
+	.xinputrc not found.
+
+2006-06-07  Akira TAGOH  <tagoh@redhat.com>
+
+	* configure.ac: initial release of im-chooser.
