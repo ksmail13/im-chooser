@@ -9,19 +9,21 @@
 # Noriko Mizumoto <noriko@redhat.com>, 2007, 2008, 2009.
 # Kiyoto Hashida <khashida@redhat.com>, 2008.
 # Makoto Mizukami <mmk9060@aol.com>, 2008.
+# Daniel E. Moctezuma <dmoctezuma@fedoraproject.org>, 2011.
 msgid ""
 msgstr ""
 "Project-Id-Version: ja\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-01-06 15:38+0900\n"
-"PO-Revision-Date: 2009-03-31 12:56+1000\n"
-"Last-Translator: Noriko Mizumoto <noriko@redhat.com>\n"
+"PO-Revision-Date: 2011-01-08 13:59-0800\n"
+"Last-Translator: Daniel E. Moctezuma <dmoctezuma@fedoraproject.org>\n"
 "Language-Team: Japanese <fedora-trans-ja@redhat.com>\n"
-"Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.11.4\n"
+"Language: ja\n"
+"X-Generator: Lokalize 1.1\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../src/ccpanel/im-chooser-panel.desktop.in.in.h:1
 #: ../src/im-chooser.desktop.in.in.h:1 ../src/xfce4-im-chooser.desktop.in.h:1
@@ -35,14 +37,13 @@ msgstr ""
 #: ../src/ccpanel/im-chooser-panel.desktop.in.in.h:2
 #: ../src/ui/im-chooser-ui.c:117 ../src/im-chooser.desktop.in.in.h:2
 #: ../src/xfce4-im-chooser.desktop.in.h:2
-#, fuzzy
 msgid "Input Method Selector"
-msgstr "入力メソッド"
+msgstr "入力メソッドのセレクタ"
 
 #: ../src/ui/eggdesktopfile.c:165
 #, c-format
 msgid "File is not a valid .desktop file"
-msgstr ""
+msgstr "ファイルが有効な .desktop ファイルではありません"
 
 #: ../src/ui/eggdesktopfile.c:188
 #, c-format
@@ -72,35 +73,35 @@ msgstr ""
 #: ../src/ui/eggdesktopfile.c:1404
 #, c-format
 msgid "Not a launchable item"
-msgstr ""
+msgstr "実行できないアイテム"
 
 #: ../src/ui/eggsmclient.c:226
 msgid "Disable connection to session manager"
-msgstr ""
+msgstr "セッション管理の接続を無効"
 
 #: ../src/ui/eggsmclient.c:229
 msgid "Specify file containing saved configuration"
-msgstr ""
+msgstr "保存された設定を含むファイルを指定"
 
 #: ../src/ui/eggsmclient.c:229
 msgid "FILE"
-msgstr ""
+msgstr "FILE"
 
 #: ../src/ui/eggsmclient.c:232
 msgid "Specify session management ID"
-msgstr ""
+msgstr "セッション管理のIDを指定"
 
 #: ../src/ui/eggsmclient.c:232
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 #: ../src/ui/eggsmclient.c:253
 msgid "Session management options:"
-msgstr ""
+msgstr "セッション管理のオプション:"
 
 #: ../src/ui/eggsmclient.c:254
 msgid "Show session management options"
-msgstr ""
+msgstr "セッション管理のオプションを表示"
 
 #: ../src/ui/im-chooser-simple.c:117
 msgid "X applications"
@@ -119,14 +120,13 @@ msgid "Unable to get the information"
 msgstr "情報の取得ができません"
 
 #: ../src/ui/im-chooser-simple.c:271
-#, fuzzy
 msgid "Failed to switch Input Method"
-msgstr "入力メソッドの停止に失敗しました"
+msgstr "入力メソッドの切り替えに失敗しました"
 
 #: ../src/ui/im-chooser-simple.c:372
-#, fuzzy, c-format
+#, c-format
 msgid "Switching Input Method - %s"
-msgstr "入力メソッド - %s を開始しています"
+msgstr "入力メソッドの切り替え - %s"
 
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications and Qt applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications and GTK+ applications</i></small>"
@@ -152,8 +152,7 @@ msgstr "%s を除いて、"
 msgid ""
 "<small><i>Note: this change will not take effect until you next log in%s</"
 "i></small>"
-msgstr ""
-"<small><i>注記: %sこの変更は次回ログインするまで反映されません。</i></small>"
+msgstr "<small><i>注記: %sこの変更は次回ログインするまで反映されません。</i></small>"
 
 #: ../src/ui/im-chooser-simple.c:539
 msgid "Parent Window"
@@ -177,9 +176,8 @@ msgid "Work in progress..."
 msgstr "作業は進行中です... "
 
 #: ../src/ui/im-chooser-simple.c:671
-#, fuzzy
 msgid "No Input Method"
-msgstr "入力メソッド"
+msgstr "入力メソッドなし"
 
 #: ../src/ui/im-chooser-simple.c:673
 #, c-format
@@ -232,7 +230,7 @@ msgstr "必要であれば、 実行する前に入力メソッドをインス�
 
 #: ../src/ui/im-chooser-ui.c:88
 msgid "Could not connect to the session manager"
-msgstr ""
+msgstr "セッションマネージャへ接続できません"
 
 #: ../src/ui/im-chooser-ui.c:146
 msgid "Log Out"
@@ -240,12 +238,12 @@ msgstr "ログアウト"
 
 #: ../src/main.c:36
 msgid "[options...]"
-msgstr ""
+msgstr "[オプション...]"
 
 #: ../src/main.c:56
 #, c-format
 msgid "Could not parse arguments: %s\n"
-msgstr ""
+msgstr "引数を解析できません: %s\n"
 
 #~ msgid "Failed to start Input Method"
 #~ msgstr "入力メソッドの開始に失敗しました"
