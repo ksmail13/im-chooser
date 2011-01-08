@@ -33,26 +33,6 @@ msgstr "Scegliere il metodo di input da utilizzare o disabilitare l'uso del meto
 msgid "Input Method Selector"
 msgstr "Metodo di input"
 
-#: ../src/ui/eggsmclient.c:229
-msgid "FILE"
-msgstr ""
-
-#: ../src/ui/eggsmclient.c:232
-msgid "Specify session management ID"
-msgstr ""
-
-#: ../src/ui/eggsmclient.c:232
-msgid "ID"
-msgstr ""
-
-#: ../src/ui/eggsmclient.c:253
-msgid "Session management options:"
-msgstr ""
-
-#: ../src/ui/eggsmclient.c:254
-msgid "Show session management options"
-msgstr ""
-
 #: ../src/ui/im-chooser-simple.c:117
 msgid "X applications"
 msgstr "Applicazioni X"
@@ -68,16 +48,6 @@ msgstr "Applicazioni Qt"
 #: ../src/ui/im-chooser-simple.c:197
 msgid "Unable to get the information"
 msgstr "Impossibile ottenere informazioni"
-
-#: ../src/ui/im-chooser-simple.c:271
-#, fuzzy
-msgid "Failed to switch Input Method"
-msgstr "Arresto metodo di input fallito"
-
-#: ../src/ui/im-chooser-simple.c:372
-#, fuzzy, c-format
-msgid "Switching Input Method - %s"
-msgstr "Avvio metodo di input - %s"
 
 #. This will be displayed like "<small><i>Note: this change will not take
 #. effect until you next log in, except X applications and Qt
@@ -134,11 +104,6 @@ msgstr "Un valore enum per determinare le note da visualizzare"
 msgid "Work in progress..."
 msgstr "Lavoro in corso..."
 
-#: ../src/ui/im-chooser-simple.c:671
-#, fuzzy
-msgid "No Input Method"
-msgstr "Metodo di input"
-
 #: ../src/ui/im-chooser-simple.c:673
 #, c-format
 msgid "Use %s"
@@ -185,22 +150,9 @@ msgstr "<span weight=\"bold\" size=\"larger\">Nessun metodo di input disponibile
 msgid "Please install any input methods before running if you like."
 msgstr "Si prega di installare un qualsiasi metodo di input prima dell'esecuzione."
 
-#: ../src/ui/im-chooser-ui.c:88
-msgid "Could not connect to the session manager"
-msgstr ""
-
 #: ../src/ui/im-chooser-ui.c:146
 msgid "Log Out"
 msgstr "Log Out"
-
-#: ../src/main.c:36
-msgid "[options...]"
-msgstr ""
-
-#: ../src/main.c:56
-#, c-format
-msgid "Could not parse arguments: %s\n"
-msgstr ""
 
 #: ../src/ui/eggdesktopfile.c:165
 #, c-format
@@ -246,6 +198,59 @@ msgstr "Specifica il files contenente la configurazione salvata"
 #, fuzzy
 msgid "Disable connection to session manager"
 msgstr "Disabilita la connessione al manager di sessione"
+
+#: ../src/ui/eggsmclient.c:229
+#, fuzzy
+msgid "FILE"
+msgstr "FILE"
+
+#: ../src/ui/eggsmclient.c:232
+#, fuzzy
+msgid "ID"
+msgstr "ID"
+
+#: ../src/ui/eggsmclient.c:232
+#, fuzzy
+msgid "Specify session management ID"
+msgstr "Specificare ID di gestione della sessione"
+
+#: ../src/ui/eggsmclient.c:254
+#, fuzzy
+msgid "Show session management options"
+msgstr "Mostra le opzioni di gestione della sessione"
+
+#: ../src/ui/eggsmclient.c:253
+#, fuzzy
+msgid "Session management options:"
+msgstr "Opzioni di gestione della sessione:"
+
+#: ../src/ui/im-chooser-simple.c:372
+#, c-format
+msgid "Switching Input Method - %s"
+msgstr "Cambio del metodo di input - %s"
+
+#: ../src/ui/im-chooser-simple.c:271
+msgid "Failed to switch Input Method"
+msgstr "Impossibile cambiare metodo di input"
+
+#: ../src/ui/im-chooser-simple.c:671
+msgid "No Input Method"
+msgstr "Nessun metodo di input"
+
+#: ../src/main.c:56
+#, c-format, fuzzy
+msgid "Could not parse arguments: %s\n"
+msgstr "Impossibile analizzare gli argomenti: %s\n"
+
+#: ../src/main.c:36
+#, fuzzy
+msgid "[options...]"
+msgstr "[opzioni...]"
+
+#: ../src/ui/im-chooser-ui.c:88
+#, fuzzy
+msgid "Could not connect to the session manager"
+msgstr "Impossibile connettersi al gestore della sessione"
 
 #~ msgid "Failed to start Input Method"
 #~ msgstr "Impossibile avviare metodo di input"
