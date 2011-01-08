@@ -2,14 +2,14 @@
 # Copyright (C) 2006 Free Software Foundation, Inc.
 # This file is distributed under the same license as the im-chooser package.
 # Peter van Egdom <p.van.egdom@gmail.com>, 2006, 2008.
-# Geert Warrink <geert.warrink@onsnet.nu>, 2010.
+# Geert Warrink <geert.warrink@onsnet.nu>, 2010, 2011.
 # Reinout van Schouwen <reinouts@gnome.org>, 2010
 msgid ""
 msgstr ""
 "Project-Id-Version: im-chooser\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-01-06 15:38+0900\n"
-"PO-Revision-Date: 2010-11-27 12:55+0200\n"
+"PO-Revision-Date: 2011-01-07 13:12+0200\n"
 "Last-Translator: Geert Warrink <geert.warrink@onsnet.nu>\n"
 "Language-Team: Fedora\n"
 "Language: nl\n"
@@ -116,14 +116,13 @@ msgid "Unable to get the information"
 msgstr "Kan geen informatie verkrijgen"
 
 #: ../src/ui/im-chooser-simple.c:271
-#, fuzzy
 msgid "Failed to switch Input Method"
-msgstr "Stoppen van invoermethode is mislukt"
+msgstr "Omschakelen van invoermethode is mislukt"
 
 #: ../src/ui/im-chooser-simple.c:372
-#, fuzzy, c-format
+#, c-format
 msgid "Switching Input Method - %s"
-msgstr "Starten van invoermethode - %s"
+msgstr "Omschakelen van invoermethode - %s"
 
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications and Qt applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications and GTK+ applications</i></small>"
