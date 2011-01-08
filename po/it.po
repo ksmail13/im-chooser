@@ -33,39 +33,6 @@ msgstr "Scegliere il metodo di input da utilizzare o disabilitare l'uso del meto
 msgid "Input Method Selector"
 msgstr "Metodo di input"
 
-#: ../src/ui/eggdesktopfile.c:968
-#, c-format
-msgid "Starting %s"
-msgstr ""
-
-#: ../src/ui/eggdesktopfile.c:1110
-#, c-format
-msgid "Application does not accept documents on command line"
-msgstr ""
-
-#: ../src/ui/eggdesktopfile.c:1178
-#, c-format
-msgid "Unrecognized launch option: %d"
-msgstr ""
-
-#: ../src/ui/eggdesktopfile.c:1383
-#, c-format
-msgid "Can't pass document URIs to a 'Type=Link' desktop entry"
-msgstr ""
-
-#: ../src/ui/eggdesktopfile.c:1404
-#, c-format
-msgid "Not a launchable item"
-msgstr ""
-
-#: ../src/ui/eggsmclient.c:226
-msgid "Disable connection to session manager"
-msgstr ""
-
-#: ../src/ui/eggsmclient.c:229
-msgid "Specify file containing saved configuration"
-msgstr ""
-
 #: ../src/ui/eggsmclient.c:229
 msgid "FILE"
 msgstr ""
@@ -244,6 +211,41 @@ msgstr "Il file .desktop non è valido"
 #, c-format
 msgid "Unrecognized desktop file Version '%s'"
 msgstr "Versione del file desktop '%s' non riconosciuta"
+
+#: ../src/ui/eggdesktopfile.c:968
+#, c-format, fuzzy
+msgid "Starting %s"
+msgstr "Avvio %s"
+
+#: ../src/ui/eggdesktopfile.c:1178
+#, c-format, fuzzy
+msgid "Unrecognized launch option: %d"
+msgstr "Opzione di lancio non riconosciuta: %d"
+
+#: ../src/ui/eggdesktopfile.c:1110
+#, c-format, fuzzy
+msgid "Application does not accept documents on command line"
+msgstr "L'applicazione non accetta documenti sulla linea di comando"
+
+#: ../src/ui/eggdesktopfile.c:1404
+#, c-format, fuzzy
+msgid "Not a launchable item"
+msgstr "Oggetto non eseguibile"
+
+#: ../src/ui/eggdesktopfile.c:1383
+#, c-format, fuzzy
+msgid "Can't pass document URIs to a 'Type=Link' desktop entry"
+msgstr "Impossibile passare URI di documenti ad una voce del desktop 'Tipo=Link' "
+
+#: ../src/ui/eggsmclient.c:229
+#, fuzzy
+msgid "Specify file containing saved configuration"
+msgstr "Specifica il files contenente la configurazione salvata"
+
+#: ../src/ui/eggsmclient.c:226
+#, fuzzy
+msgid "Disable connection to session manager"
+msgstr "Disabilita la connessione al manager di sessione"
 
 #~ msgid "Failed to start Input Method"
 #~ msgstr "Impossibile avviare metodo di input"
