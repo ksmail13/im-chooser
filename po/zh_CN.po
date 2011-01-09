@@ -3,7 +3,7 @@
 # Chinese translations for im-chooser package.
 # Copyright (C) 2006 Red Hat, Inc. All rights reserved.
 # This file is distributed under the same license as the im-chooser package.
-#
+# 
 # Automatically generated, 2006.
 # Tony Fu <tfu@redhat.com>, 2006.
 # Leah Liu <lliu@redhat.com>, 2008, 2009.
@@ -23,17 +23,8 @@ msgstr ""
 
 #: ../src/ccpanel/im-chooser-panel.desktop.in.in.h:1
 #: ../src/im-chooser.desktop.in.in.h:1 ../src/xfce4-im-chooser.desktop.in.h:1
-msgid ""
-"Choose the input method to be used or disable the input method usage on the "
-"desktop"
+msgid "Choose the input method to be used or disable the input method usage on the desktop"
 msgstr "选择要使用的输入法或者在台式机中禁用输入法用法"
-
-#: ../src/ccpanel/im-chooser-panel.desktop.in.in.h:2
-#: ../src/ui/im-chooser-ui.c:117 ../src/im-chooser.desktop.in.in.h:2
-#: ../src/xfce4-im-chooser.desktop.in.h:2
-#, fuzzy
-msgid "Input Method Selector"
-msgstr "输入法"
 
 #: ../src/ui/eggdesktopfile.c:165
 #, c-format
@@ -114,40 +105,38 @@ msgstr "Qt 应用程序"
 msgid "Unable to get the information"
 msgstr "无法获得信息"
 
-#: ../src/ui/im-chooser-simple.c:271
-#, fuzzy
-msgid "Failed to switch Input Method"
-msgstr "无法停止输入法"
-
-#: ../src/ui/im-chooser-simple.c:372
-#, fuzzy, c-format
-msgid "Switching Input Method - %s"
-msgstr "启动输入法 - %s"
-
-#. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications and Qt applications</i></small>"
-#. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications and GTK+ applications</i></small>"
-#. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications and Qt applications</i></small>"
+#. This will be displayed like "<small><i>Note: this change will not take
+#. effect until you next log in, except X applications and Qt
+#. applications</i></small>"
+#. This will be displayed like "<small><i>Note: this change will not take
+#. effect until you next log in, except X applications and GTK+
+#. applications</i></small>"
+#. This will be displayed like "<small><i>Note: this change will not take
+#. effect until you next log in, except GTK+ applications and Qt
+#. applications</i></small>"
 #: ../src/ui/im-chooser-simple.c:460 ../src/ui/im-chooser-simple.c:463
 #: ../src/ui/im-chooser-simple.c:466
 #, c-format
 msgid ", except %s and %s"
 msgstr "，除 %s 和 %s 之外"
 
-#. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications</i></small>"
-#. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications</i></small>"
-#. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except Qt applications</i></small>"
+#. This will be displayed like "<small><i>Note: this change will not take
+#. effect until you next log in, except X applications</i></small>"
+#. This will be displayed like "<small><i>Note: this change will not take
+#. effect until you next log in, except GTK+ applications</i></small>"
+#. This will be displayed like "<small><i>Note: this change will not take
+#. effect until you next log in, except Qt applications</i></small>"
 #: ../src/ui/im-chooser-simple.c:469 ../src/ui/im-chooser-simple.c:472
 #: ../src/ui/im-chooser-simple.c:475
 #, c-format
 msgid ", except %s"
 msgstr "，除 %s 之外"
 
-#. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications</i></small>"
+#. This will be displayed like "<small><i>Note: this change will not take
+#. effect until you next log in, except GTK+ applications</i></small>"
 #: ../src/ui/im-chooser-simple.c:480
 #, c-format
-msgid ""
-"<small><i>Note: this change will not take effect until you next log in%s</"
-"i></small>"
+msgid "<small><i>Note: this change will not take effect until you next log in%s</i></small>"
 msgstr "<small><i>注：这个修改在您下一次登录%s时才会生效</i></small>"
 
 #: ../src/ui/im-chooser-simple.c:539
@@ -170,11 +159,6 @@ msgstr "用来决定应该显示哪些注释的 enum 值"
 #: ../src/ui/im-chooser-simple.c:589
 msgid "Work in progress..."
 msgstr "处理中... "
-
-#: ../src/ui/im-chooser-simple.c:671
-#, fuzzy
-msgid "No Input Method"
-msgstr "输入法"
 
 #: ../src/ui/im-chooser-simple.c:673
 #, c-format
@@ -215,8 +199,7 @@ msgid "Input Method _Preferences..."
 msgstr "首选输入法（_P）"
 
 #: ../src/ui/im-chooser-ui.c:55
-msgid ""
-"<span weight=\"bold\" size=\"larger\">No input method is available</span>"
+msgid "<span weight=\"bold\" size=\"larger\">No input method is available</span>"
 msgstr "<span weight=\"bold\" size=\"larger\">没有可用的输入法</span>"
 
 #: ../src/ui/im-chooser-ui.c:58
@@ -239,6 +222,25 @@ msgstr "[选项...]"
 #, c-format
 msgid "Could not parse arguments: %s\n"
 msgstr "不能解析参数：%s\n"
+
+#: ../src/ccpanel/im-chooser-panel.desktop.in.in.h:2
+#: ../src/ui/im-chooser-ui.c:117 ../src/im-chooser.desktop.in.in.h:2
+#: ../src/xfce4-im-chooser.desktop.in.h:2
+msgid "Input Method Selector"
+msgstr "输入法选择器"
+
+#: ../src/ui/im-chooser-simple.c:271
+msgid "Failed to switch Input Method"
+msgstr "切换输入法失败"
+
+#: ../src/ui/im-chooser-simple.c:372
+#, c-format
+msgid "Switching Input Method - %s"
+msgstr "切换输入法 - %s"
+
+#: ../src/ui/im-chooser-simple.c:671
+msgid "No Input Method"
+msgstr "没有输入法"
 
 #~ msgid "Failed to start Input Method"
 #~ msgstr "启动输入法失败"
