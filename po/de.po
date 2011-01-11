@@ -5,7 +5,7 @@
 # Automatically generated, 2006.
 # Fabian Affolter <fab@fedoraproject.org>, 2007,2008.
 # Dominik Sandjaja <dominiksandjaja@fedoraproject.org>, 2008.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: Desktop Input Method configuration tool\n"
@@ -14,10 +14,10 @@ msgstr ""
 "PO-Revision-Date: 2009-09-18 13:50+0200\n"
 "Last-Translator: Marcus Nitzschke <kenda@fedoraproject.org>\n"
 "Language-Team: German Translation team <fedora-trans-de@redhat.com>\n"
-"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: \n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-Language: German\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -25,12 +25,8 @@ msgstr ""
 
 #: ../src/ccpanel/im-chooser-panel.desktop.in.in.h:1
 #: ../src/im-chooser.desktop.in.in.h:1 ../src/xfce4-im-chooser.desktop.in.h:1
-msgid ""
-"Choose the input method to be used or disable the input method usage on the "
-"desktop"
-msgstr ""
-"Wählen Sie die Eingabemethode, welche verwendet werden soll oder "
-"deaktivieren Sie die Verwendung von Eingabemethoden auf dem Desktop."
+msgid "Choose the input method to be used or disable the input method usage on the desktop"
+msgstr "Wählen Sie die Eingabemethode, welche verwendet werden soll oder deaktivieren Sie die Verwendung von Eingabemethoden auf dem Desktop."
 
 #: ../src/ccpanel/im-chooser-panel.desktop.in.in.h:2
 #: ../src/ui/im-chooser-ui.c:117 ../src/im-chooser.desktop.in.in.h:2
@@ -81,16 +77,8 @@ msgstr ""
 msgid "Specify file containing saved configuration"
 msgstr ""
 
-#: ../src/ui/eggsmclient.c:229
-msgid "FILE"
-msgstr ""
-
 #: ../src/ui/eggsmclient.c:232
 msgid "Specify session management ID"
-msgstr ""
-
-#: ../src/ui/eggsmclient.c:232
-msgid "ID"
 msgstr ""
 
 #: ../src/ui/eggsmclient.c:253
@@ -127,33 +115,39 @@ msgstr "Stoppen der Eingabemethode fehlgeschlagen"
 msgid "Switching Input Method - %s"
 msgstr "Starte Eingabemethode - %s"
 
-#. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications and Qt applications</i></small>"
-#. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications and GTK+ applications</i></small>"
-#. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications and Qt applications</i></small>"
+#. This will be displayed like "<small><i>Note: this change will not take
+#. effect until you next log in, except X applications and Qt
+#. applications</i></small>"
+#. This will be displayed like "<small><i>Note: this change will not take
+#. effect until you next log in, except X applications and GTK+
+#. applications</i></small>"
+#. This will be displayed like "<small><i>Note: this change will not take
+#. effect until you next log in, except GTK+ applications and Qt
+#. applications</i></small>"
 #: ../src/ui/im-chooser-simple.c:460 ../src/ui/im-chooser-simple.c:463
 #: ../src/ui/im-chooser-simple.c:466
 #, c-format
 msgid ", except %s and %s"
 msgstr ", ausgenommen %s und %s"
 
-#. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications</i></small>"
-#. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications</i></small>"
-#. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except Qt applications</i></small>"
+#. This will be displayed like "<small><i>Note: this change will not take
+#. effect until you next log in, except X applications</i></small>"
+#. This will be displayed like "<small><i>Note: this change will not take
+#. effect until you next log in, except GTK+ applications</i></small>"
+#. This will be displayed like "<small><i>Note: this change will not take
+#. effect until you next log in, except Qt applications</i></small>"
 #: ../src/ui/im-chooser-simple.c:469 ../src/ui/im-chooser-simple.c:472
 #: ../src/ui/im-chooser-simple.c:475
 #, c-format
 msgid ", except %s"
 msgstr ", ausgenommen %s"
 
-#. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications</i></small>"
+#. This will be displayed like "<small><i>Note: this change will not take
+#. effect until you next log in, except GTK+ applications</i></small>"
 #: ../src/ui/im-chooser-simple.c:480
 #, c-format
-msgid ""
-"<small><i>Note: this change will not take effect until you next log in%s</"
-"i></small>"
-msgstr ""
-"<small><i>Hinweis: Diese Änderung wird erst aktiv, wenn Sie sich das nächste "
-"Mal anmelden%s.</i></small>"
+msgid "<small><i>Note: this change will not take effect until you next log in%s</i></small>"
+msgstr "<small><i>Hinweis: Diese Änderung wird erst aktiv, wenn Sie sich das nächste Mal anmelden%s.</i></small>"
 
 #: ../src/ui/im-chooser-simple.c:539
 msgid "Parent Window"
@@ -169,8 +163,7 @@ msgstr "Hinweis-Typ"
 
 #: ../src/ui/im-chooser-simple.c:546
 msgid "A enum value to determine which notes should be displayed"
-msgstr ""
-"Ein Aufzählungswert zum Bestimmen, welcher Hinweis angezeigt werden soll"
+msgstr "Ein Aufzählungswert zum Bestimmen, welcher Hinweis angezeigt werden soll"
 
 #. setup a progress window
 #: ../src/ui/im-chooser-simple.c:589
@@ -220,16 +213,12 @@ msgid "Input Method _Preferences..."
 msgstr "_Einstellungen zur Eingabemethode …"
 
 #: ../src/ui/im-chooser-ui.c:55
-msgid ""
-"<span weight=\"bold\" size=\"larger\">No input method is available</span>"
-msgstr ""
-"<span weight=\"bold\" size=\"larger\">Keine Eingabemethoden verfügbar</span>"
+msgid "<span weight=\"bold\" size=\"larger\">No input method is available</span>"
+msgstr "<span weight=\"bold\" size=\"larger\">Keine Eingabemethoden verfügbar</span>"
 
 #: ../src/ui/im-chooser-ui.c:58
 msgid "Please install any input methods before running if you like."
-msgstr ""
-"Bitte installieren Sie eine Eingabemethode, bevor Sie sie laufen lassen, "
-"wenn Sie wollen."
+msgstr "Bitte installieren Sie eine Eingabemethode, bevor Sie sie laufen lassen, wenn Sie wollen."
 
 #: ../src/ui/im-chooser-ui.c:88
 msgid "Could not connect to the session manager"
@@ -247,6 +236,14 @@ msgstr "[Optionen...]"
 #, c-format
 msgid "Could not parse arguments: %s\n"
 msgstr "Konnte diese Argumente nicht parsen: %s\n"
+
+#: ../src/ui/eggsmclient.c:229
+msgid "FILE"
+msgstr "DATEI"
+
+#: ../src/ui/eggsmclient.c:232
+msgid "ID"
+msgstr "ID"
 
 #~ msgid "Failed to start Input Method"
 #~ msgstr "Starten der Eingabemethode fehlgeschlagen"
@@ -482,8 +479,7 @@ msgstr "Konnte diese Argumente nicht parsen: %s\n"
 #~ msgstr "Keine Eingabemethoden verfügbar auf Ihrem System."
 
 #~ msgid "Force reloading the configuration, including restarting the process."
-#~ msgstr ""
-#~ "Neuladen der Konfiguration forcieren, inklusive neustarten des Prozesses."
+#~ msgstr "Neuladen der Konfiguration forcieren, inklusive neustarten des Prozesses."
 
 #~ msgid "Force restarting the IM process regradless of any errors."
 #~ msgstr "Erzwinge Neustart des IM-Prozesses, auch bei Fehlern."
@@ -503,35 +499,20 @@ msgstr "Konnte diese Argumente nicht parsen: %s\n"
 #~ msgid "_Use default Input Method for your language"
 #~ msgstr "_Standardmäßige Eingabemethode für Ihre Sprache verwenden"
 
-#~ msgid ""
-#~ "Your system chooses the appropriate Input Method for your language "
-#~ "automatically from among Input Methods installed on your system."
-#~ msgstr ""
-#~ "Ihr System wählt automatisch die passende Eingabemethode für Ihre Sprache "
-#~ "aus den auf Ihrem System installierten Eingabemethoden."
+#~ msgid "Your system chooses the appropriate Input Method for your language automatically from among Input Methods installed on your system."
+#~ msgstr "Ihr System wählt automatisch die passende Eingabemethode für Ihre Sprache aus den auf Ihrem System installierten Eingabemethoden."
 
 #~ msgid "Choose _specific Input Method"
 #~ msgstr "_Bestimmte Eingabemethode auswählen"
 
-#~ msgid ""
-#~ "Use the specific Input Method that you prefer regardless what Input "
-#~ "Method the system recommends."
-#~ msgstr ""
-#~ "Verwenden Sie Ihre bevorzugte Eingabemethode, unabhängig davon, welche "
-#~ "Eingabemethode das System empfiehlt."
+#~ msgid "Use the specific Input Method that you prefer regardless what Input Method the system recommends."
+#~ msgstr "Verwenden Sie Ihre bevorzugte Eingabemethode, unabhängig davon, welche Eingabemethode das System empfiehlt."
 
-#~ msgid ""
-#~ "Do not use Input Method no matter what language the desktop is running on."
-#~ msgstr ""
-#~ "Eingabemethoden komplett deaktivieren, unabhängig davon, mit welcher "
-#~ "Sprache der Desktop läuft."
+#~ msgid "Do not use Input Method no matter what language the desktop is running on."
+#~ msgstr "Eingabemethoden komplett deaktivieren, unabhängig davon, mit welcher Sprache der Desktop läuft."
 
 #~ msgid "Use legacy _Input Method"
 #~ msgstr "_Alte Eingabemethode verwenden"
 
-#~ msgid ""
-#~ "Use X Input Method anyway. In fact, which input method will be chosen for "
-#~ "the desktop session, depends on the desktop language."
-#~ msgstr ""
-#~ "X-Eingabemethode trotzdem verwenden. Eigentlich hängt die Wahl der "
-#~ "Eingabemethode für die Desktop-Session von der Desktop-Sprache ab."
+#~ msgid "Use X Input Method anyway. In fact, which input method will be chosen for the desktop session, depends on the desktop language."
+#~ msgstr "X-Eingabemethode trotzdem verwenden. Eigentlich hängt die Wahl der Eingabemethode für die Desktop-Session von der Desktop-Sprache ab."
