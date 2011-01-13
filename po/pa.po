@@ -2,102 +2,101 @@
 # Punjabi translations for im-chooser package.
 # Copyright (C) 2006 Red Hat, Inc. All rights reserved.
 # This file is distributed under the same license as the im-chooser package.
-#
 # Automatically generated, 2006.
 # Jaswinder Singh <jsingh@redhat.com>, 2006, 2008, 2009.
 # A S Alam <aalam@users.sf.net>, 2007.
+# Jaswinder Singh <j.phulewala@gmail.com>, 2011.
 msgid ""
 msgstr ""
 "Project-Id-Version: im-chooser.trunk.pa\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-01-06 15:38+0900\n"
-"PO-Revision-Date: 2009-09-22 15:19+0530\n"
-"Last-Translator: Jaswinder Singh <jsingh@redhat.com>\n"
-"Language-Team: Punjabi <Punjabi-users@lists.sourceforge.net>\n"
+"PO-Revision-Date: 2011-01-13 14:25+0530\n"
+"Last-Translator: Jaswinder Singh <j.phulewala@gmail.com>\n"
+"Language-Team: PLTG\n"
 "Language: pa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.11.4\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"\n"
+"X-Generator: Virtaal 0.6.1\n"
 
 #: ../src/ccpanel/im-chooser-panel.desktop.in.in.h:1
 #: ../src/im-chooser.desktop.in.in.h:1 ../src/xfce4-im-chooser.desktop.in.h:1
 msgid ""
 "Choose the input method to be used or disable the input method usage on the "
 "desktop"
-msgstr "ਵਰਤਣ ਲਈ ਇੰਪੁੱਟ ਢੰਗ ਚੁਣੋ ਜਾਂ ਡੈਸਕਟਾਪ ਵਾਸਤੇ ਇੰਪੁੱਟ ਢੰਗ ਦੀ ਵਰਤੋਂ ਨੂੰ ਅਯੋਗ ਕਰੋ।"
+msgstr ""
+"ਵਰਤਣ ਲਈ ਇੰਪੁੱਟ ਢੰਗ ਚੁਣੋ ਜਾਂ ਡੈਸਕਟਾਪ ਵਾਸਤੇ ਇੰਪੁੱਟ ਢੰਗ ਦੀ ਵਰਤੋਂ ਨੂੰ ਅਯੋਗ ਕਰੋ।"
 
 #: ../src/ccpanel/im-chooser-panel.desktop.in.in.h:2
 #: ../src/ui/im-chooser-ui.c:117 ../src/im-chooser.desktop.in.in.h:2
 #: ../src/xfce4-im-chooser.desktop.in.h:2
-#, fuzzy
 msgid "Input Method Selector"
-msgstr "ਇੰਪੁੱਟ ਢੰਗ"
+msgstr "ਇੰਪੁੱਟ ਢੰਗ ਚੋਣਕਾਰ"
 
 #: ../src/ui/eggdesktopfile.c:165
 #, c-format
 msgid "File is not a valid .desktop file"
-msgstr ""
+msgstr "ਫਾਇਲ ਇੱਕ ਯੋਗ .desktop ਫਾਇਲ ਨਹੀਂ ਹੈ"
 
 #: ../src/ui/eggdesktopfile.c:188
 #, c-format
 msgid "Unrecognized desktop file Version '%s'"
-msgstr ""
+msgstr "ਨਾ-ਪਛਾਣਯੋਗ ਡੈਸਕਟਾਪ ਫਾਇਲ ਵਰਜਨ '%s'"
 
 #: ../src/ui/eggdesktopfile.c:968
 #, c-format
 msgid "Starting %s"
-msgstr ""
+msgstr "%s ਨੂੰ ਚਾਲੂ ਕਰ ਰਿਹਾ ਹੈ"
 
 #: ../src/ui/eggdesktopfile.c:1110
 #, c-format
 msgid "Application does not accept documents on command line"
-msgstr ""
+msgstr "ਐਪਲੀਕੇਸ਼ਨ ਕਮਾਂਡ ਲਾਈਨ ਉੱਪਰ ਡੌਕੂਮੈਂਟ ਸਵੀਕਾਰ ਨਹੀਂ ਕਰਦੀ"
 
 #: ../src/ui/eggdesktopfile.c:1178
 #, c-format
 msgid "Unrecognized launch option: %d"
-msgstr ""
+msgstr "ਨਾ-ਪਛਾਣਯੋਗ ਲਾਂਚ ਚੋਣ: %d"
 
 #: ../src/ui/eggdesktopfile.c:1383
 #, c-format
 msgid "Can't pass document URIs to a 'Type=Link' desktop entry"
-msgstr ""
+msgstr "ਡੌਕੂਮੈਂਟ URIs ਨੂੰ ਇੱਕ 'Type=Link' ਡੈਸਕਟਾਪ ਐਂਟਰੀ ਵੱਲ ਪਾਸ ਨਹੀਂ ਕਰ ਸਕਦਾ"
 
 #: ../src/ui/eggdesktopfile.c:1404
 #, c-format
 msgid "Not a launchable item"
-msgstr ""
+msgstr "ਲਾਂਚ ਹੋਣ ਵਾਲੀ ਆਈਟਮ ਨਹੀਂ ਹੈ"
 
 #: ../src/ui/eggsmclient.c:226
 msgid "Disable connection to session manager"
-msgstr ""
+msgstr "ਸ਼ੈਸ਼ਨ ਮੈਨੇਜਰ ਵਾਲਾ ਕੁਨੈਕਸ਼ਨ ਅਯੋਗ ਕਰੋ"
 
 #: ../src/ui/eggsmclient.c:229
 msgid "Specify file containing saved configuration"
-msgstr ""
+msgstr "ਸੰਭਾਲੀ ਸੰਰਚਨਾ ਵਾਲੀ ਫਾਇਲ ਨਿਰਧਾਰਤ ਕਰਨਾ"
 
 #: ../src/ui/eggsmclient.c:229
 msgid "FILE"
-msgstr ""
+msgstr "FILE"
 
 #: ../src/ui/eggsmclient.c:232
 msgid "Specify session management ID"
-msgstr ""
+msgstr "ਸ਼ੈਸ਼ਨ ਮੈਨੇਜਮੈਂਟ ID ਨਿਰਧਾਰਤ ਕਰੋ"
 
 #: ../src/ui/eggsmclient.c:232
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 #: ../src/ui/eggsmclient.c:253
 msgid "Session management options:"
-msgstr ""
+msgstr "ਸ਼ੈਸ਼ਨ ਮੈਨੇਜਮੈਂਟ ਚੋਣਾਂ:"
 
 #: ../src/ui/eggsmclient.c:254
 msgid "Show session management options"
-msgstr ""
+msgstr "ਸ਼ੈਸ਼ਨ ਆਰਗੂਮੈਂਟ ਚੋਣਾਂ ਵੇਖਾਓ"
 
 #: ../src/ui/im-chooser-simple.c:117
 msgid "X applications"
@@ -116,14 +115,13 @@ msgid "Unable to get the information"
 msgstr "ਜਾਣਕਾਰੀ ਲੈਣ ਲਈ ਅਸਮਰਥ"
 
 #: ../src/ui/im-chooser-simple.c:271
-#, fuzzy
 msgid "Failed to switch Input Method"
 msgstr "ਇੰਪੁੱਟ ਢੰਗ ਬੰਦ ਕਰਨ ਵਿੱਚ ਫੇਲ"
 
 #: ../src/ui/im-chooser-simple.c:372
-#, fuzzy, c-format
+#, c-format
 msgid "Switching Input Method - %s"
-msgstr "ਇੰਪੁੱਟ ਢੰਗ ਚਾਲੂ ਹੋ ਰਿਹਾ ਹੈ - %s"
+msgstr "ਇੰਪੁੱਟ ਢੰਗ ਤਬਦੀਲ ਕਰ ਰਿਹਾ ਹੈ - %s"
 
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications and Qt applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications and GTK+ applications</i></small>"
@@ -174,9 +172,8 @@ msgid "Work in progress..."
 msgstr "ਕੰਮ ਚੱਲ ਰਿਹਾ ਹੈ..."
 
 #: ../src/ui/im-chooser-simple.c:671
-#, fuzzy
 msgid "No Input Method"
-msgstr "ਇੰਪੁੱਟ ਢੰਗ"
+msgstr "ਕੋਈ ਇੰਪੁੱਟ ਢੰਗ ਨਹੀਂ"
 
 #: ../src/ui/im-chooser-simple.c:673
 #, c-format
@@ -227,7 +224,7 @@ msgstr "ਜੇ ਤੁਸੀਂ ਚਾਹੁੰਦੇ ਹੋ ਤਾਂ ਚਲਾ�
 
 #: ../src/ui/im-chooser-ui.c:88
 msgid "Could not connect to the session manager"
-msgstr ""
+msgstr "ਸ਼ੈਸ਼ਨ ਮੈਨੇਜਰ ਨਾਲ ਜੁੜ ਨਹੀਂ ਸਕਿਆ"
 
 #: ../src/ui/im-chooser-ui.c:146
 msgid "Log Out"
@@ -235,12 +232,12 @@ msgstr "ਲਾਗ ਆਊਟ"
 
 #: ../src/main.c:36
 msgid "[options...]"
-msgstr ""
+msgstr "[ਚੋਣਾਂ...]"
 
 #: ../src/main.c:56
 #, c-format
 msgid "Could not parse arguments: %s\n"
-msgstr ""
+msgstr "ਆਰਗੂਮੈਂਟ ਪਾਰਸ ਨਹੀਂ ਕਰ ਸਕਿਆ: %s\n"
 
 #~ msgid "Failed to start Input Method"
 #~ msgstr "ਇੰਪੁੱਟ ਢੰਗ ਚਾਲੂ ਕਰਨ ਵਿੱਚ ਫੇਲ"
