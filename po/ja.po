@@ -15,8 +15,8 @@ msgstr ""
 "Project-Id-Version: ja\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-01-06 15:38+0900\n"
-"PO-Revision-Date: 2011-01-08 13:59-0800\n"
-"Last-Translator: Daniel E. Moctezuma <dmoctezuma@fedoraproject.org>\n"
+"PO-Revision-Date: 2011-01-18 20:40+0900\n"
+"Last-Translator: Hajime Taira <htaira@redhat.com>\n"
 "Language-Team: Japanese <fedora-trans-ja@redhat.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -26,49 +26,47 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../src/ccpanel/im-chooser-panel.desktop.in.in.h:1
-#: ../src/im-chooser.desktop.in.in.h:1 ../src/xfce4-im-chooser.desktop.in.h:1
-msgid ""
-"Choose the input method to be used or disable the input method usage on the "
-"desktop"
-msgstr ""
-"デスクトップで使用する入力メソッドを選択、 または入力メソッドの使用を無効にし"
-"ます。"
+#: ../src/im-chooser.desktop.in.in.h:1
+#: ../src/xfce4-im-chooser.desktop.in.h:1
+msgid "Choose the input method to be used or disable the input method usage on the desktop"
+msgstr "デスクトップで使用する入力メソッドを選択したり、もしくは入力メソッドの使用を無効化します。"
 
 #: ../src/ccpanel/im-chooser-panel.desktop.in.in.h:2
-#: ../src/ui/im-chooser-ui.c:117 ../src/im-chooser.desktop.in.in.h:2
+#: ../src/ui/im-chooser-ui.c:117
+#: ../src/im-chooser.desktop.in.in.h:2
 #: ../src/xfce4-im-chooser.desktop.in.h:2
 msgid "Input Method Selector"
-msgstr "入力メソッドのセレクタ"
+msgstr "入力メソッドのセレクター"
 
 #: ../src/ui/eggdesktopfile.c:165
 #, c-format
 msgid "File is not a valid .desktop file"
-msgstr "ファイルが有効な .desktop ファイルではありません"
+msgstr "ファイルが有効な .desktop ファイルではありません。"
 
 #: ../src/ui/eggdesktopfile.c:188
 #, c-format
 msgid "Unrecognized desktop file Version '%s'"
-msgstr ""
+msgstr "認められていない .desktop ファイル（Version %s）"
 
 #: ../src/ui/eggdesktopfile.c:968
 #, c-format
 msgid "Starting %s"
-msgstr ""
+msgstr "%s を開始中です。"
 
 #: ../src/ui/eggdesktopfile.c:1110
 #, c-format
 msgid "Application does not accept documents on command line"
-msgstr ""
+msgstr "アプリケーションはコマンドラインでドキュメントを指定することができません。"
 
 #: ../src/ui/eggdesktopfile.c:1178
 #, c-format
 msgid "Unrecognized launch option: %d"
-msgstr ""
+msgstr "認められていない起動オプション: %d"
 
 #: ../src/ui/eggdesktopfile.c:1383
 #, c-format
 msgid "Can't pass document URIs to a 'Type=Link' desktop entry"
-msgstr ""
+msgstr "デスクトップエントリーの \"Type=Link\" にドキュメントの URI をパスできません。"
 
 #: ../src/ui/eggdesktopfile.c:1404
 #, c-format
@@ -121,7 +119,7 @@ msgstr "情報の取得ができません"
 
 #: ../src/ui/im-chooser-simple.c:271
 msgid "Failed to switch Input Method"
-msgstr "入力メソッドの切り替えに失敗しました"
+msgstr "入力メソッドの切り替えに失敗しました。"
 
 #: ../src/ui/im-chooser-simple.c:372
 #, c-format
@@ -131,7 +129,8 @@ msgstr "入力メソッドの切り替え - %s"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications and Qt applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications and GTK+ applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications and Qt applications</i></small>"
-#: ../src/ui/im-chooser-simple.c:460 ../src/ui/im-chooser-simple.c:463
+#: ../src/ui/im-chooser-simple.c:460
+#: ../src/ui/im-chooser-simple.c:463
 #: ../src/ui/im-chooser-simple.c:466
 #, c-format
 msgid ", except %s and %s"
@@ -140,7 +139,8 @@ msgstr "%s および %s を除いて、"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except Qt applications</i></small>"
-#: ../src/ui/im-chooser-simple.c:469 ../src/ui/im-chooser-simple.c:472
+#: ../src/ui/im-chooser-simple.c:469
+#: ../src/ui/im-chooser-simple.c:472
 #: ../src/ui/im-chooser-simple.c:475
 #, c-format
 msgid ", except %s"
@@ -149,9 +149,7 @@ msgstr "%s を除いて、"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications</i></small>"
 #: ../src/ui/im-chooser-simple.c:480
 #, c-format
-msgid ""
-"<small><i>Note: this change will not take effect until you next log in%s</"
-"i></small>"
+msgid "<small><i>Note: this change will not take effect until you next log in%s</i></small>"
 msgstr "<small><i>注記: %sこの変更は次回ログインするまで反映されません。</i></small>"
 
 #: ../src/ui/im-chooser-simple.c:539
@@ -160,7 +158,7 @@ msgstr "親ウインドウ"
 
 #: ../src/ui/im-chooser-simple.c:540
 msgid "GtkWindow that points to the parent window"
-msgstr "親ウインドウを指す GtkWindow "
+msgstr "GtkWindow は親ウインドウを指します。"
 
 #: ../src/ui/im-chooser-simple.c:545
 msgid "Note type"
@@ -168,12 +166,12 @@ msgstr "ノートタイプ"
 
 #: ../src/ui/im-chooser-simple.c:546
 msgid "A enum value to determine which notes should be displayed"
-msgstr "表示されるべきノートを確定する enum 値です"
+msgstr "表示されるべきノートを確定する enum 値です。"
 
 #. setup a progress window
 #: ../src/ui/im-chooser-simple.c:589
 msgid "Work in progress..."
-msgstr "作業は進行中です... "
+msgstr "処理中です... "
 
 #: ../src/ui/im-chooser-simple.c:671
 msgid "No Input Method"
@@ -182,7 +180,7 @@ msgstr "入力メソッドなし"
 #: ../src/ui/im-chooser-simple.c:673
 #, c-format
 msgid "Use %s"
-msgstr "%s を使用する"
+msgstr "%s を使用する。"
 
 #: ../src/ui/im-chooser-simple.c:680
 msgid " (legacy)"
@@ -195,19 +193,19 @@ msgstr " (推奨)"
 #: ../src/ui/im-chooser-simple.c:726
 #, c-format
 msgid "Unable to communicate to IMSettings services"
-msgstr "IMSettings サービスと通信できません"
+msgstr "IMSettings サービスと通信できません。"
 
 #: ../src/ui/im-chooser-simple.c:727
 msgid "Version mismatch"
-msgstr "バージョンが一致しません"
+msgstr "バージョンが一致しません。"
 
 #: ../src/ui/im-chooser-simple.c:741
 msgid "Unable to gather current status"
-msgstr "現在のステータスを収集できません"
+msgstr "現在のステータスを収集できません。"
 
 #: ../src/ui/im-chooser-simple.c:747
 msgid "Unable to get Input Method information"
-msgstr "入力メソッド情報を取得できません"
+msgstr "入力メソッド情報を取得できません。"
 
 #: ../src/ui/im-chooser-simple.c:856
 msgid "<b>Input Method</b>"
@@ -218,11 +216,8 @@ msgid "Input Method _Preferences..."
 msgstr "入力メソッドの個人設定(_P)..."
 
 #: ../src/ui/im-chooser-ui.c:55
-msgid ""
-"<span weight=\"bold\" size=\"larger\">No input method is available</span>"
-msgstr ""
-"<span weight=\"bold\" size=\"larger\">使用できる入力メソッドがありません</"
-"span>"
+msgid "<span weight=\"bold\" size=\"larger\">No input method is available</span>"
+msgstr "<span weight=\"bold\" size=\"larger\">使用できる入力メソッドがありません。</span>"
 
 #: ../src/ui/im-chooser-ui.c:58
 msgid "Please install any input methods before running if you like."
@@ -230,7 +225,7 @@ msgstr "必要であれば、 実行する前に入力メソッドをインス�
 
 #: ../src/ui/im-chooser-ui.c:88
 msgid "Could not connect to the session manager"
-msgstr "セッションマネージャへ接続できません"
+msgstr "セッションマネージャへ接続できません。"
 
 #: ../src/ui/im-chooser-ui.c:146
 msgid "Log Out"
@@ -243,7 +238,7 @@ msgstr "[オプション...]"
 #: ../src/main.c:56
 #, c-format
 msgid "Could not parse arguments: %s\n"
-msgstr "引数を解析できません: %s\n"
+msgstr "引数を解析できません。: %s\n"
 
 #~ msgid "Failed to start Input Method"
 #~ msgstr "入力メソッドの開始に失敗しました"
