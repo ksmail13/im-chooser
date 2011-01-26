@@ -6,6 +6,8 @@ Icon=im-chooser
 Terminal=false
 Type=Application
 StartupNotify=true
-Categories=GNOME;GTK;Settings;DesktopSettings;X-GNOME-Settings-Panel;
+Categories=GNOME;GTK;Settings;DesktopSettings;X-GNOME-Settings-Panel;X-GNOME-PersonalSettings;
 OnlyShowIn=GNOME;
 X-GNOME-Settings-Panel=im-chooser
+# Translators: those are keywords for im-chooser control-center panel
+X-GNOME-Keywords=InputMethod;IM;
