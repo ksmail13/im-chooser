@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-01-06 15:38+0900\n"
+"POT-Creation-Date: 2011-01-26 12:58+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -28,6 +28,11 @@ msgstr ""
 #: ../src/ui/im-chooser-ui.c:117 ../src/im-chooser.desktop.in.in.h:2
 #: ../src/xfce4-im-chooser.desktop.in.h:2
 msgid "Input Method Selector"
+msgstr ""
+
+#. Translators: those are keywords for im-chooser control-center panel
+#: ../src/ccpanel/im-chooser-panel.desktop.in.in.h:4
+msgid "InputMethod;IM;"
 msgstr ""
 
 #: ../src/ui/eggdesktopfile.c:165
