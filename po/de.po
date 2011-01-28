@@ -34,31 +34,6 @@ msgstr "Wählen Sie die Eingabemethode, welche verwendet werden soll oder deakti
 msgid "Input Method Selector"
 msgstr "Wahl der Eingabemethode"
 
-#: ../src/ui/eggdesktopfile.c:165
-#, c-format
-msgid "File is not a valid .desktop file"
-msgstr ""
-
-#: ../src/ui/eggdesktopfile.c:188
-#, c-format
-msgid "Unrecognized desktop file Version '%s'"
-msgstr ""
-
-#: ../src/ui/eggdesktopfile.c:968
-#, c-format
-msgid "Starting %s"
-msgstr ""
-
-#: ../src/ui/eggdesktopfile.c:1110
-#, c-format
-msgid "Application does not accept documents on command line"
-msgstr ""
-
-#: ../src/ui/eggdesktopfile.c:1178
-#, c-format
-msgid "Unrecognized launch option: %d"
-msgstr ""
-
 #: ../src/ui/eggdesktopfile.c:1383
 #, c-format
 msgid "Can't pass document URIs to a 'Type=Link' desktop entry"
@@ -244,6 +219,31 @@ msgstr "DATEI"
 #: ../src/ui/eggsmclient.c:232
 msgid "ID"
 msgstr "ID"
+
+#: ../src/ui/eggdesktopfile.c:165
+#, c-format
+msgid "File is not a valid .desktop file"
+msgstr "Datei ist keine gültige .desktop-Datei"
+
+#: ../src/ui/eggdesktopfile.c:968
+#, c-format
+msgid "Starting %s"
+msgstr "%s wird gestartet"
+
+#: ../src/ui/eggdesktopfile.c:188
+#, c-format
+msgid "Unrecognized desktop file Version '%s'"
+msgstr "Unbekannte Version der Desktop-Datei '%s'"
+
+#: ../src/ui/eggdesktopfile.c:1178
+#, c-format
+msgid "Unrecognized launch option: %d"
+msgstr "Unbekannte Startoption: %d"
+
+#: ../src/ui/eggdesktopfile.c:1110
+#, c-format
+msgid "Application does not accept documents on command line"
+msgstr ""
 
 #~ msgid "Failed to start Input Method"
 #~ msgstr "Starten der Eingabemethode fehlgeschlagen"
