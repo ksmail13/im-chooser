@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: im-chooser\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-01-06 15:38+0900\n"
-"PO-Revision-Date: 2011-02-04 17:44+0200\n"
+"PO-Revision-Date: 2011-02-04 17:54+0200\n"
 "Last-Translator: Hasan Alp İNAN\n"
 "Language-Team: Turkish <none>\n"
 "MIME-Version: 1.0\n"
@@ -36,6 +36,11 @@ msgstr ""
 #: ../src/xfce4-im-chooser.desktop.in.h:2
 msgid "Input Method Selector"
 msgstr "Giriş Yöntemi Seçici"
+
+#. Translators: those are keywords for im-chooser control-center panel
+#: ../src/ccpanel/im-chooser-panel.desktop.in.in.h:4
+msgid "InputMethod;IM;"
+msgstr "GirişYöntemi;GY;"
 
 #: ../src/ui/eggdesktopfile.c:165
 #, c-format
