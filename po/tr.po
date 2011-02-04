@@ -6,20 +6,21 @@
 #
 # Ismail ASCI <ismail.asci@gmail.com>, 2006.
 # Egemen Metin Turan <mturan@aegee-ankara.org>, 2007.
+# Hasan Alp İNAN, 2011.
 msgid ""
 msgstr ""
 "Project-Id-Version: im-chooser\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-01-06 15:38+0900\n"
-"PO-Revision-Date: 2010-10-26 23:43+0200\n"
-"Last-Translator: Hasan Alp İNAN <hasanalpinan@gmail.com>\n"
+"PO-Revision-Date: 2011-02-04 17:44+0200\n"
+"Last-Translator: Hasan Alp İNAN\n"
 "Language-Team: Turkish <none>\n"
-"Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: tr\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: KBabel 1.11.4\n"
+"X-Generator: Lokalize 1.1\n"
 
 #: ../src/ccpanel/im-chooser-panel.desktop.in.in.h:1
 #: ../src/im-chooser.desktop.in.in.h:1 ../src/xfce4-im-chooser.desktop.in.h:1
@@ -33,72 +34,71 @@ msgstr ""
 #: ../src/ccpanel/im-chooser-panel.desktop.in.in.h:2
 #: ../src/ui/im-chooser-ui.c:117 ../src/im-chooser.desktop.in.in.h:2
 #: ../src/xfce4-im-chooser.desktop.in.h:2
-#, fuzzy
 msgid "Input Method Selector"
-msgstr "Giriş Yöntemi"
+msgstr "Giriş Yöntemi Seçici"
 
 #: ../src/ui/eggdesktopfile.c:165
 #, c-format
 msgid "File is not a valid .desktop file"
-msgstr ""
+msgstr "Dosya geçerli bir .desktop dosyası değil"
 
 #: ../src/ui/eggdesktopfile.c:188
 #, c-format
 msgid "Unrecognized desktop file Version '%s'"
-msgstr ""
+msgstr "Tanınmayan masaüstü dosyası Sürüm '%s'"
 
 #: ../src/ui/eggdesktopfile.c:968
 #, c-format
 msgid "Starting %s"
-msgstr ""
+msgstr "%s Başlatılıyor"
 
 #: ../src/ui/eggdesktopfile.c:1110
 #, c-format
 msgid "Application does not accept documents on command line"
-msgstr ""
+msgstr "Uygulama komut satırında belge kabul etmez"
 
 #: ../src/ui/eggdesktopfile.c:1178
 #, c-format
 msgid "Unrecognized launch option: %d"
-msgstr ""
+msgstr "Tanınmayan başlatma seçeneği: %d"
 
 #: ../src/ui/eggdesktopfile.c:1383
 #, c-format
 msgid "Can't pass document URIs to a 'Type=Link' desktop entry"
-msgstr ""
+msgstr "Belge URI'sine bir 'Tür=Bağlantı' masaüstü girişinde izin verilmedi"
 
 #: ../src/ui/eggdesktopfile.c:1404
 #, c-format
 msgid "Not a launchable item"
-msgstr ""
+msgstr "Başlatılabilir bir öge değil"
 
 #: ../src/ui/eggsmclient.c:226
 msgid "Disable connection to session manager"
-msgstr ""
+msgstr "Oturum yöneticisi bağlantısı devre dışı"
 
 #: ../src/ui/eggsmclient.c:229
 msgid "Specify file containing saved configuration"
-msgstr ""
+msgstr "Kaydedilmiş yapılandırmayı içeren dosya belirleyin"
 
 #: ../src/ui/eggsmclient.c:229
 msgid "FILE"
-msgstr ""
+msgstr "DOSYA"
 
 #: ../src/ui/eggsmclient.c:232
 msgid "Specify session management ID"
-msgstr ""
+msgstr "Oturum yönetim kimliğini (ID) belirleyin"
 
 #: ../src/ui/eggsmclient.c:232
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 #: ../src/ui/eggsmclient.c:253
 msgid "Session management options:"
-msgstr ""
+msgstr "Oturum yönetimi seçenekleri:"
 
 #: ../src/ui/eggsmclient.c:254
 msgid "Show session management options"
-msgstr ""
+msgstr "Oturum yönetimi seçeneklerini göster"
 
 #: ../src/ui/im-chooser-simple.c:117
 msgid "X applications"
@@ -117,14 +117,13 @@ msgid "Unable to get the information"
 msgstr "Bilgi alınamıyor"
 
 #: ../src/ui/im-chooser-simple.c:271
-#, fuzzy
 msgid "Failed to switch Input Method"
-msgstr "Giriş Yöntemi durdurulamadı"
+msgstr "Giriş Yöntemine geçiş başarısız"
 
 #: ../src/ui/im-chooser-simple.c:372
-#, fuzzy, c-format
+#, c-format
 msgid "Switching Input Method - %s"
-msgstr "Başlangıç Giriş Yöntemi - %s"
+msgstr "Giriş Yöntemine Geçiliyor - %s"
 
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications and Qt applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications and GTK+ applications</i></small>"
@@ -176,9 +175,8 @@ msgid "Work in progress..."
 msgstr "Devam eden iş..."
 
 #: ../src/ui/im-chooser-simple.c:671
-#, fuzzy
 msgid "No Input Method"
-msgstr "Giriş Yöntemi"
+msgstr "Giriş Yöntemi Yok"
 
 #: ../src/ui/im-chooser-simple.c:673
 #, c-format
@@ -232,7 +230,7 @@ msgstr ""
 
 #: ../src/ui/im-chooser-ui.c:88
 msgid "Could not connect to the session manager"
-msgstr ""
+msgstr "Oturum yöneticisine bağlanılamadı"
 
 #: ../src/ui/im-chooser-ui.c:146
 msgid "Log Out"
@@ -240,12 +238,12 @@ msgstr "Çıkış"
 
 #: ../src/main.c:36
 msgid "[options...]"
-msgstr ""
+msgstr "[seçenekler...]"
 
 #: ../src/main.c:56
 #, c-format
 msgid "Could not parse arguments: %s\n"
-msgstr ""
+msgstr "Argümanlar çözümlenemedi: %s\n"
 
 #~ msgid "Failed to start Input Method"
 #~ msgstr "Giriş Yöntemi başlatılamadı"
