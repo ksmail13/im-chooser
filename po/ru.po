@@ -77,10 +77,6 @@ msgstr "Файл"
 msgid "Specify session management ID"
 msgstr ""
 
-#: ../src/ui/eggsmclient.c:232
-msgid "ID"
-msgstr ""
-
 #: ../src/ui/eggsmclient.c:253
 msgid "Session management options:"
 msgstr ""
@@ -229,10 +225,6 @@ msgstr ""
 msgid "Log Out"
 msgstr "Выход"
 
-#: ../src/main.c:36
-msgid "[options...]"
-msgstr ""
-
 #: ../src/main.c:56
 #, c-format
 msgid "Could not parse arguments: %s\n"
@@ -247,6 +239,15 @@ msgstr "Запуск %s"
 #, c-format, fuzzy
 msgid "Unrecognized launch option: %d"
 msgstr "Неопознанная опция запуска: %d"
+
+#: ../src/main.c:36
+msgid "[options...]"
+msgstr "[опции...]"
+
+#: ../src/ui/eggsmclient.c:232
+#, fuzzy
+msgid "ID"
+msgstr "Идентификатор"
 
 #~ msgid "Failed to start Input Method"
 #~ msgstr "Не удалось инициализировать метод ввода"
