@@ -11,105 +11,91 @@ msgstr ""
 "Project-Id-Version: im-chooser.trunk.ta\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-01-06 15:38+0900\n"
-"PO-Revision-Date: 2008-10-11 18:46+0530\n"
-"Last-Translator: I. Felix <ifelix@redhat.com>\n"
+"PO-Revision-Date: 2011-02-09 00:10+0530\n"
+"Last-Translator: i felix\n"
 "Language-Team: Tamil <fedora-trans-ta@redhat.com>\n"
-"Language: ta\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: ta\n"
 "X-Generator: KBabel 1.11.4\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\\n\n"
-"\n"
-"\n"
-"\n"
-"\n"
-"\n"
-"\n"
-"\n"
-"\n"
-"\n"
-"\n"
-"\n"
 
 #: ../src/ccpanel/im-chooser-panel.desktop.in.in.h:1
-#: ../src/im-chooser.desktop.in.in.h:1 ../src/xfce4-im-chooser.desktop.in.h:1
-msgid ""
-"Choose the input method to be used or disable the input method usage on the "
-"desktop"
-msgstr ""
-"பயன்படுத்த அல்லது உள்ளீடு முறை பயன்பாட்டை பணிமேடையில் செயல்நீக்க உள்ளீடு முறையை "
-"தேர்ந்தெடுக்கவும்"
+#: ../src/im-chooser.desktop.in.in.h:1
+#: ../src/xfce4-im-chooser.desktop.in.h:1
+msgid "Choose the input method to be used or disable the input method usage on the desktop"
+msgstr "பயன்படுத்த அல்லது உள்ளீடு முறை பயன்பாட்டை பணிமேடையில் செயல்நீக்க உள்ளீடு முறையை தேர்ந்தெடுக்கவும்"
 
 #: ../src/ccpanel/im-chooser-panel.desktop.in.in.h:2
-#: ../src/ui/im-chooser-ui.c:117 ../src/im-chooser.desktop.in.in.h:2
+#: ../src/ui/im-chooser-ui.c:117
+#: ../src/im-chooser.desktop.in.in.h:2
 #: ../src/xfce4-im-chooser.desktop.in.h:2
-#, fuzzy
 msgid "Input Method Selector"
-msgstr "உள்ளீடு முறை"
+msgstr "உள்ளீடு முறை தேர்ந்தெடுப்பாளர்"
 
 #: ../src/ui/eggdesktopfile.c:165
 #, c-format
 msgid "File is not a valid .desktop file"
-msgstr ""
+msgstr "கோப்பு ஒரு சரியான .பணிமேடை கோப்பில் இல்லை"
 
 #: ../src/ui/eggdesktopfile.c:188
 #, c-format
 msgid "Unrecognized desktop file Version '%s'"
-msgstr ""
+msgstr "கண்டறியாத பணிமேடை கோப்பு பதிப்பு '%s'"
 
 #: ../src/ui/eggdesktopfile.c:968
 #, c-format
 msgid "Starting %s"
-msgstr ""
+msgstr "%sஐ துவக்குகிறது"
 
 #: ../src/ui/eggdesktopfile.c:1110
 #, c-format
 msgid "Application does not accept documents on command line"
-msgstr ""
+msgstr "கட்டளை வரியில் பயன்பாடானது ஆவணங்களை ஏற்கவில்லை"
 
 #: ../src/ui/eggdesktopfile.c:1178
 #, c-format
 msgid "Unrecognized launch option: %d"
-msgstr ""
+msgstr "கண்டறியப்படாத துவக்க விருப்பம்: %d"
 
 #: ../src/ui/eggdesktopfile.c:1383
 #, c-format
 msgid "Can't pass document URIs to a 'Type=Link' desktop entry"
-msgstr ""
+msgstr "ஒரு 'Type=Link' பணிமேடை உள்ளீட்டுக்கு  ஆவண URIகளை கடத்த முடியவில்லை"
 
 #: ../src/ui/eggdesktopfile.c:1404
 #, c-format
 msgid "Not a launchable item"
-msgstr ""
+msgstr "ஒரு துவக்கக்கூடிய உருப்படியும் இல்லை"
 
 #: ../src/ui/eggsmclient.c:226
 msgid "Disable connection to session manager"
-msgstr ""
+msgstr "அம்ரவு மேலாளருக்கு இணைப்பை செயல்நீக்கு"
 
 #: ../src/ui/eggsmclient.c:229
 msgid "Specify file containing saved configuration"
-msgstr ""
+msgstr "சேமிக்கப்பட்ட கட்டமைப்பானது கொண்டுள்ள கோப்பை குறிப்பிடவும்"
 
 #: ../src/ui/eggsmclient.c:229
 msgid "FILE"
-msgstr ""
+msgstr "கோப்பு"
 
 #: ../src/ui/eggsmclient.c:232
 msgid "Specify session management ID"
-msgstr ""
+msgstr "அமர்வு மேலாண்மை ஐடியை குறிப்பிடவும்"
 
 #: ../src/ui/eggsmclient.c:232
 msgid "ID"
-msgstr ""
+msgstr "ஐடி"
 
 #: ../src/ui/eggsmclient.c:253
 msgid "Session management options:"
-msgstr ""
+msgstr "அமர்வு மேலாண்மை விருப்பங்கள்:"
 
 #: ../src/ui/eggsmclient.c:254
 msgid "Show session management options"
-msgstr ""
+msgstr "அமர்வு மேலாண்மை விருப்பங்களை காட்டு"
 
 #: ../src/ui/im-chooser-simple.c:117
 msgid "X applications"
@@ -128,19 +114,19 @@ msgid "Unable to get the information"
 msgstr "தகவலை பெறும் முடியவில்லை"
 
 #: ../src/ui/im-chooser-simple.c:271
-#, fuzzy
 msgid "Failed to switch Input Method"
-msgstr "உள்ளீடு முறையை நிறுத்த முடியவில்லை"
+msgstr "உள்ளீடு முறையை மாற்ற முடியவில்லை"
 
 #: ../src/ui/im-chooser-simple.c:372
-#, fuzzy, c-format
+#, c-format
 msgid "Switching Input Method - %s"
-msgstr "உள்ளீடு முறையை துவக்குகிறது - %s"
+msgstr "உள்ளீடு முறையை மாற்றுகிறது - %s"
 
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications and Qt applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications and GTK+ applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications and Qt applications</i></small>"
-#: ../src/ui/im-chooser-simple.c:460 ../src/ui/im-chooser-simple.c:463
+#: ../src/ui/im-chooser-simple.c:460
+#: ../src/ui/im-chooser-simple.c:463
 #: ../src/ui/im-chooser-simple.c:466
 #, c-format
 msgid ", except %s and %s"
@@ -149,7 +135,8 @@ msgstr ", %s மற்றும் %s தவிர"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except Qt applications</i></small>"
-#: ../src/ui/im-chooser-simple.c:469 ../src/ui/im-chooser-simple.c:472
+#: ../src/ui/im-chooser-simple.c:469
+#: ../src/ui/im-chooser-simple.c:472
 #: ../src/ui/im-chooser-simple.c:475
 #, c-format
 msgid ", except %s"
@@ -158,12 +145,8 @@ msgstr ", %s தவிர"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications</i></small>"
 #: ../src/ui/im-chooser-simple.c:480
 #, c-format
-msgid ""
-"<small><i>Note: this change will not take effect until you next log in%s</"
-"i></small>"
-msgstr ""
-"<small><i>குறிப்பு:  அடுத்த புகுபதிவு செய்யும் வரை இந்த மாற்றங்கள் செயல்படுத்தப்படாது "
-"%s</i></small>"
+msgid "<small><i>Note: this change will not take effect until you next log in%s</i></small>"
+msgstr "<small><i>குறிப்பு:  அடுத்த புகுபதிவு செய்யும் வரை இந்த மாற்றங்கள் செயல்படுத்தப்படாது %s</i></small>"
 
 #: ../src/ui/im-chooser-simple.c:539
 msgid "Parent Window"
@@ -187,9 +170,8 @@ msgid "Work in progress..."
 msgstr "பணி நடந்து கொண்டிருக்கிறது..."
 
 #: ../src/ui/im-chooser-simple.c:671
-#, fuzzy
 msgid "No Input Method"
-msgstr "உள்ளீடு முறை"
+msgstr "உள்ளீடு முறை இல்லை"
 
 #: ../src/ui/im-chooser-simple.c:673
 #, c-format
@@ -230,8 +212,7 @@ msgid "Input Method _Preferences..."
 msgstr "உள்ளீடு முறை விருப்பங்கள் (_P)..."
 
 #: ../src/ui/im-chooser-ui.c:55
-msgid ""
-"<span weight=\"bold\" size=\"larger\">No input method is available</span>"
+msgid "<span weight=\"bold\" size=\"larger\">No input method is available</span>"
 msgstr "<span weight=\"bold\" size=\"larger\">உள்ளீடு முறை எதுவும் இல்லை</span>"
 
 #: ../src/ui/im-chooser-ui.c:58
@@ -240,7 +221,7 @@ msgstr "விரும்பினால் இயக்கும் முன�
 
 #: ../src/ui/im-chooser-ui.c:88
 msgid "Could not connect to the session manager"
-msgstr ""
+msgstr "அமர்வு மேலாளருக்கு இணைக்க முடியவில்லை"
 
 #: ../src/ui/im-chooser-ui.c:146
 msgid "Log Out"
@@ -248,27 +229,23 @@ msgstr "வெளியேறுதல்"
 
 #: ../src/main.c:36
 msgid "[options...]"
-msgstr ""
+msgstr "[விருப்பங்கள்...]"
 
 #: ../src/main.c:56
 #, c-format
 msgid "Could not parse arguments: %s\n"
-msgstr ""
+msgstr "விவாரங்களை இடைநிறுத்த முடியவில்லை: %s\n"
 
 #~ msgid "Failed to start Input Method"
 #~ msgstr "உள்ளீடு முறையை துவக்க முடியவில்லை"
-
 #~ msgid "Stopping Input Method - %s"
 #~ msgstr "உள்ளீடு முறையை நிறுத்துகிறது - %s"
-
 #~ msgid "Updating Input Method list"
 #~ msgstr "உள்ளீடு முறை பட்டியலை மேம்படுத்துதல்"
-
 #~ msgid "_Enable input method feature"
 #~ msgstr "உள்ளீடு முறை வசதியை செயல்படுத்தவும் (_E)"
-
 #~ msgid "Show the status icon"
 #~ msgstr "நிலை சின்னத்தை காட்டு"
-
 #~ msgid "IM Chooser - Input Method configuration tool"
 #~ msgstr "IM தேர்ந்தெடுத்தல் - உள்ளீடு முறை கட்டமைப்பு கருவி"
+
