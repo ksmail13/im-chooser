@@ -2,7 +2,6 @@
 # Copyright (C) 2006,2007,2008 Red Hat, Inc. All rights reserved.
 # This file is distributed under the same license as the im-chooser package.
 #
-#
 # Automatically generated, 2006.
 # Valnir Ferreira Jr. <vferreir@redhat.com>, 2006.
 # Diego Búrigo Zacarão <diegobz@gmail.com>, 2007.
@@ -13,19 +12,19 @@
 # Wilson Campos <wcampos5@gmail.com>, 2008.
 # Cleiton Lima <cleitonlima@espacoliberdade.blog.br>, 2010.
 # ufa <ufa@technotroll.org>, 2010.
-#
+# Taylon Silmer <taylon@taylon.eti.br>, 2011.
 msgid ""
 msgstr ""
 "Project-Id-Version: im-chooser\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-01-06 15:38+0900\n"
-"PO-Revision-Date: 2010-12-09 10:48-0300\n"
-"Last-Translator: ufa <ufa@technotroll.org>\n"
-"Language-Team: Brazilian Portuguese <fedora-trans-pt_br@redhat.com>\n"
-"Language: pt_BR\n"
+"PO-Revision-Date: 2011-02-15 13:39-0200\n"
+"Last-Translator: Taylon Silmer <taylon@taylon.eti.br>\n"
+"Language-Team: Brazilian Portuguese <trans-pt_br@lists.fedoraproject.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: pt_BR\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Poedit-Language: Portuguese\n"
 "X-Poedit-Country: BRAZIL\n"
@@ -126,14 +125,13 @@ msgid "Unable to get the information"
 msgstr "Não foi possível obter as informações"
 
 #: ../src/ui/im-chooser-simple.c:271
-#, fuzzy
 msgid "Failed to switch Input Method"
-msgstr "Falha ao parar o método de entrada"
+msgstr "Falha ao alterar o método de entrada"
 
 #: ../src/ui/im-chooser-simple.c:372
-#, fuzzy, c-format
+#, c-format
 msgid "Switching Input Method - %s"
-msgstr "Iniciando método de entrada - %s"
+msgstr "Alterando método de entrada - %s"
 
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications and Qt applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications and GTK+ applications</i></small>"
