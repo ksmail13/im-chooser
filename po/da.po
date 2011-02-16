@@ -4,7 +4,7 @@
 # Magnus Larsson <fedoratrans@gmail.com>, 2006.
 # Keld Simonsen <keld@dkuug.dk>, 2006.
 # Kris Thomsen <lakristho@gmail.com>, 2009, 2010.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: im-chooser 0.3.2\n"
@@ -13,20 +13,16 @@ msgstr ""
 "PO-Revision-Date: 2010-12-10 18:57+0200\n"
 "Last-Translator: Kris Thomsen <lakristho@gmail.com>\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
-"Language: da\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: da\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: ../src/ccpanel/im-chooser-panel.desktop.in.in.h:1
 #: ../src/im-chooser.desktop.in.in.h:1 ../src/xfce4-im-chooser.desktop.in.h:1
-msgid ""
-"Choose the input method to be used or disable the input method usage on the "
-"desktop"
-msgstr ""
-"Vælg den inputmetode som skal være i brug eller deaktivér brugen af "
-"inputmetoden på skrivebordet"
+msgid "Choose the input method to be used or disable the input method usage on the desktop"
+msgstr "Vælg den inputmetode som skal være i brug eller deaktivér brugen af inputmetoden på skrivebordet"
 
 #: ../src/ccpanel/im-chooser-panel.desktop.in.in.h:2
 #: ../src/ui/im-chooser-ui.c:117 ../src/im-chooser.desktop.in.in.h:2
@@ -62,8 +58,7 @@ msgstr "Uopdaget kørselsindstilling: %d"
 #: ../src/ui/eggdesktopfile.c:1383
 #, c-format
 msgid "Can't pass document URIs to a 'Type=Link' desktop entry"
-msgstr ""
-"Kan ikke indstille dokument-uri'er til et \"Type=Link\"-skrivebordselement"
+msgstr "Kan ikke indstille dokument-uri'er til et \"Type=Link\"-skrivebordselement"
 
 #: ../src/ui/eggdesktopfile.c:1404
 #, c-format
@@ -114,43 +109,39 @@ msgstr "Qt-programmer"
 msgid "Unable to get the information"
 msgstr "Ikke i stand til at hente informationerne"
 
-#: ../src/ui/im-chooser-simple.c:271
-#, fuzzy
-msgid "Failed to switch Input Method"
-msgstr "Kunne ikke stoppe indtastningsmetode"
-
-#: ../src/ui/im-chooser-simple.c:372
-#, fuzzy, c-format
-msgid "Switching Input Method - %s"
-msgstr "Starter inputmetode - %s"
-
-#. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications and Qt applications</i></small>"
-#. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications and GTK+ applications</i></small>"
-#. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications and Qt applications</i></small>"
+#. This will be displayed like "<small><i>Note: this change will not take
+#. effect until you next log in, except X applications and Qt
+#. applications</i></small>"
+#. This will be displayed like "<small><i>Note: this change will not take
+#. effect until you next log in, except X applications and GTK+
+#. applications</i></small>"
+#. This will be displayed like "<small><i>Note: this change will not take
+#. effect until you next log in, except GTK+ applications and Qt
+#. applications</i></small>"
 #: ../src/ui/im-chooser-simple.c:460 ../src/ui/im-chooser-simple.c:463
 #: ../src/ui/im-chooser-simple.c:466
 #, c-format
 msgid ", except %s and %s"
 msgstr ", undtagen %s og %s"
 
-#. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications</i></small>"
-#. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications</i></small>"
-#. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except Qt applications</i></small>"
+#. This will be displayed like "<small><i>Note: this change will not take
+#. effect until you next log in, except X applications</i></small>"
+#. This will be displayed like "<small><i>Note: this change will not take
+#. effect until you next log in, except GTK+ applications</i></small>"
+#. This will be displayed like "<small><i>Note: this change will not take
+#. effect until you next log in, except Qt applications</i></small>"
 #: ../src/ui/im-chooser-simple.c:469 ../src/ui/im-chooser-simple.c:472
 #: ../src/ui/im-chooser-simple.c:475
 #, c-format
 msgid ", except %s"
 msgstr ", undtagen %s"
 
-#. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications</i></small>"
+#. This will be displayed like "<small><i>Note: this change will not take
+#. effect until you next log in, except GTK+ applications</i></small>"
 #: ../src/ui/im-chooser-simple.c:480
 #, c-format
-msgid ""
-"<small><i>Note: this change will not take effect until you next log in%s</"
-"i></small>"
-msgstr ""
-"<small><i>Bemærk: Denne ændring vil ikke træde i kraft, før næste gang du "
-"logger ind%s</i></small>"
+msgid "<small><i>Note: this change will not take effect until you next log in%s</i></small>"
+msgstr "<small><i>Bemærk: Denne ændring vil ikke træde i kraft, før næste gang du logger ind%s</i></small>"
 
 #: ../src/ui/im-chooser-simple.c:539
 msgid "Parent Window"
@@ -216,11 +207,8 @@ msgid "Input Method _Preferences..."
 msgstr "_Indstillinger for inputmetode..."
 
 #: ../src/ui/im-chooser-ui.c:55
-msgid ""
-"<span weight=\"bold\" size=\"larger\">No input method is available</span>"
-msgstr ""
-"<span weight=\"bold\" size=\"larger\">Der er ingen tilgængelig inputmetode</"
-"span>"
+msgid "<span weight=\"bold\" size=\"larger\">No input method is available</span>"
+msgstr "<span weight=\"bold\" size=\"larger\">Der er ingen tilgængelig inputmetode</span>"
 
 #: ../src/ui/im-chooser-ui.c:58
 msgid "Please install any input methods before running if you like."
@@ -242,6 +230,15 @@ msgstr "[tilvalg...]"
 #, c-format
 msgid "Could not parse arguments: %s\n"
 msgstr "Kunne ikke oversætte argumenter: %s\n"
+
+#: ../src/ui/im-chooser-simple.c:271
+msgid "Failed to switch Input Method"
+msgstr "Kunne ikke skifte inputmetode"
+
+#: ../src/ui/im-chooser-simple.c:372
+#, c-format
+msgid "Switching Input Method - %s"
+msgstr "Skifter inputmetode - %s"
 
 #~ msgid "Failed to start Input Method"
 #~ msgstr "Kunne ikke starte indtastningsmetode"
@@ -267,34 +264,20 @@ msgstr "Kunne ikke oversætte argumenter: %s\n"
 #~ msgid "Choose _specific Input Method"
 #~ msgstr "Brug _specifik inddatametode"
 
-#~ msgid ""
-#~ "Use the specific Input Method that you prefer regardless what Input "
-#~ "Method the system recommends."
-#~ msgstr ""
-#~ "Brug inddatametode som du foretrækker uanset hvilken inddatametode som "
-#~ "systemet anbefaler."
+#~ msgid "Use the specific Input Method that you prefer regardless what Input Method the system recommends."
+#~ msgstr "Brug inddatametode som du foretrækker uanset hvilken inddatametode som systemet anbefaler."
 
-#~ msgid ""
-#~ "Do not use Input Method no matter what language the desktop is running on."
-#~ msgstr ""
-#~ "Brug ikke inddatametoder, uanset hvilket sprog skrivebordet benytter."
+#~ msgid "Do not use Input Method no matter what language the desktop is running on."
+#~ msgstr "Brug ikke inddatametoder, uanset hvilket sprog skrivebordet benytter."
 
 #~ msgid "Use legacy _Input Method"
 #~ msgstr "Brug forældet inddatametode"
 
-#~ msgid ""
-#~ "Use X Input Method anyway. In fact, which input method will be chosen for "
-#~ "the desktop session, depends on the desktop language."
-#~ msgstr ""
-#~ "Brug alligevel inddatametoden for X. Faktisk vil inddatametoden som "
-#~ "vælges for skrivebordssessionen afhænge af sproget for skrivebordet."
+#~ msgid "Use X Input Method anyway. In fact, which input method will be chosen for the desktop session, depends on the desktop language."
+#~ msgstr "Brug alligevel inddatametoden for X. Faktisk vil inddatametoden som vælges for skrivebordssessionen afhænge af sproget for skrivebordet."
 
 #~ msgid "_Follow the system-wide configuration"
 #~ msgstr "_Følg systemets konfiguration"
 
-#~ msgid ""
-#~ "Follow the system-wide input method configuration to determine which "
-#~ "input method should be used."
-#~ msgstr ""
-#~ "Følg systemets konfiguration af inddatametode for at bestemme hvilken "
-#~ "inddatametode som skal bruges."
+#~ msgid "Follow the system-wide input method configuration to determine which input method should be used."
+#~ msgstr "Følg systemets konfiguration af inddatametode for at bestemme hvilken inddatametode som skal bruges."
