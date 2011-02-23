@@ -713,7 +713,7 @@ _im_chooser_simple_update_im_list(IMChooserSimple *im)
 	GtkTreePath *path;
 	GtkTreeViewColumn *column;
 	GtkRequisition requisition;
-	gint i;
+	gint i, api_version;
 	GError *error = NULL;
 	guint n_retry = 0;
 	IMSettingsInfo *info, *none_info, *active_info;
@@ -723,7 +723,7 @@ _im_chooser_simple_update_im_list(IMChooserSimple *im)
 	gsize len, slen = strlen(".conf"); /* XXX */
 
   retry:
-	if (imsettings_client_get_version(im->imsettings, NULL, NULL) != IMSETTINGS_SETTINGS_API_VERSION) {
+	if ((api_version = imsettings_client_get_version(im->imsettings, NULL, NULL)) != IMSETTINGS_SETTINGS_API_VERSION) {
 		if (n_retry > 0) {
 			g_set_error(&error, IMCHOOSER_GERROR, 0,
 				    _("Unable to communicate to IMSettings services"));
@@ -732,7 +732,10 @@ _im_chooser_simple_update_im_list(IMChooserSimple *im)
 			exit(1);
 		}
 		/* version is inconsistent. try to reload the process */
-		imsettings_client_reload(im->imsettings, TRUE, NULL, NULL);
+		imsettings_client_reload(im->imsettings, (api_version < 4), NULL, NULL);
+		/* this instance isn't valid anymore */
+		g_object_unref(im->imsettings);
+		im->imsettings = imsettings_client_new(setlocale(LC_CTYPE, NULL));
 		/* XXX */
 		sleep(1);
 		n_retry++;
