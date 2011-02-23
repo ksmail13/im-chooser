@@ -347,8 +347,11 @@ im_chooser_simple_show_error(IMChooserSimple *im,
 	gtk_message_dialog_format_secondary_text(GTK_MESSAGE_DIALOG (dlg), error->message);
 
 	/* for GNOME HIG compliance */
-	g_object_set(G_OBJECT (dlg), "content-area-spacing", 12, NULL);
-	g_object_set(G_OBJECT (dlg), "content-area-border", 0, NULL);
+	gtk_rc_parse_string("style \"im-chooser-message-dialog\" {\n"	\
+			    "  GtkDialog::content-area-spacing = 14\n"		\
+			    "  GtkDialog::content-area-border = 0\n"		\
+			    "}\n"					\
+			    "widget \"GtkMessageDialog\" style \"im-chooser-message-dialog\"");
 
 	gtk_dialog_run(GTK_DIALOG (dlg));
 	gtk_widget_destroy(dlg);
