@@ -8,7 +8,7 @@ EXTRA_DIST =		\
 icondir = $(datadir)/icons/hicolor/$(size)/apps
 icon_DATA = im-chooser.png
 
-gtk_update_icon_cache = gtk-update-icon-cche -f -t $(datadir)/icons/hicolor
+gtk_update_icon_cache = gtk-update-icon-cache -f -t $(datadir)/icons/hicolor
 
 install-data-hook:
 	@-if test -z "$(DESTDIR)"; then			\
