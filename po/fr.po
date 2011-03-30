@@ -1,28 +1,21 @@
-# French translation of im-chooser
-# Copyright (C) 2006-2008 Red Hat, Inc. All rights reserved.
-# This file is distributed under the same license as the im-chooser package.
-#
-# Automatically generated, 2006.
-# JAILLET Patrick <ap3demak@gmail.com>, 2006.
-# Thomas Canniot <mrtom@fedoraproject.org>, 2006, 2007, 2008.
-# Decroux Fabien <fdecroux@redhat.com>, 2006.
-# Mathieu Schopfer <mat.schopfer@bluewin.ch>, 2008.
-# Robert-André Mauchin <zebob.m@pengzone.org>, 2008.
-# Gauthier Ancelin <gauthier.ancelin@laposte.net>, 2008.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: im-chooser.trunk\n"
+"Project-Id-Version: im-chooser\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-01-06 15:38+0900\n"
-"PO-Revision-Date: 2008-09-19 23:30+0200\n"
-"Last-Translator: Robert-André Mauchin <zebob.m@pengzone.org>\n"
-"Language-Team: french <fedora-trans-fr@redhat.com>\n"
-"Language: \n"
+"POT-Creation-Date: 2011-03-04 20:12+0900\n"
+"PO-Revision-Date: 2011-03-24 05:14+0000\n"
+"Last-Translator: dominique <chepioq@gmail.com>\n"
+"Language-Team: French <None>\n"
+"Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=2; plural=(n > 1)\n"
 
 #: ../src/ccpanel/im-chooser-panel.desktop.in.in.h:1
 #: ../src/im-chooser.desktop.in.in.h:1 ../src/xfce4-im-chooser.desktop.in.h:1
@@ -36,72 +29,78 @@ msgstr ""
 #: ../src/ccpanel/im-chooser-panel.desktop.in.in.h:2
 #: ../src/ui/im-chooser-ui.c:117 ../src/im-chooser.desktop.in.in.h:2
 #: ../src/xfce4-im-chooser.desktop.in.h:2
-#, fuzzy
 msgid "Input Method Selector"
-msgstr "Méthode de saisie"
+msgstr "Sélecteur de méthode de saisie"
+
+#. Translators: those are keywords for im-chooser control-center panel
+#: ../src/ccpanel/im-chooser-panel.desktop.in.in.h:4
+msgid "InputMethod;IM;"
+msgstr "Méthode de saisie;IM;"
 
 #: ../src/ui/eggdesktopfile.c:165
 #, c-format
 msgid "File is not a valid .desktop file"
-msgstr ""
+msgstr "Le fichier n'est pas un fichier .desktop valide"
 
 #: ../src/ui/eggdesktopfile.c:188
 #, c-format
 msgid "Unrecognized desktop file Version '%s'"
-msgstr ""
+msgstr "Version du fichier .desktop inconnu '%s'"
 
 #: ../src/ui/eggdesktopfile.c:968
 #, c-format
 msgid "Starting %s"
-msgstr ""
+msgstr "Démarrage %s"
 
 #: ../src/ui/eggdesktopfile.c:1110
 #, c-format
 msgid "Application does not accept documents on command line"
-msgstr ""
+msgstr "L'application n'accepte pas les documents sur la ligne de commande"
 
 #: ../src/ui/eggdesktopfile.c:1178
 #, c-format
 msgid "Unrecognized launch option: %d"
-msgstr ""
+msgstr "Option de lancement inconnu : %d"
 
 #: ../src/ui/eggdesktopfile.c:1383
 #, c-format
 msgid "Can't pass document URIs to a 'Type=Link' desktop entry"
 msgstr ""
+"Impossible de transformer les documents URI vers un « Type=Link » d'entrée "
+"de l'environnement"
 
 #: ../src/ui/eggdesktopfile.c:1404
 #, c-format
 msgid "Not a launchable item"
-msgstr ""
+msgstr "Ce n'est pas un élément qui peut être démarré"
 
 #: ../src/ui/eggsmclient.c:226
 msgid "Disable connection to session manager"
-msgstr ""
+msgstr "Désactiver la connexion au gestionnaire de session"
 
 #: ../src/ui/eggsmclient.c:229
 msgid "Specify file containing saved configuration"
-msgstr ""
+msgstr "Spécifier un fichier contenant une configuration sauvegardée"
 
 #: ../src/ui/eggsmclient.c:229
 msgid "FILE"
-msgstr ""
+msgstr "FICHIER"
 
 #: ../src/ui/eggsmclient.c:232
 msgid "Specify session management ID"
-msgstr ""
+msgstr "Précisez l'ID du gestionnaire de session"
 
 #: ../src/ui/eggsmclient.c:232
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 #: ../src/ui/eggsmclient.c:253
 msgid "Session management options:"
-msgstr ""
+msgstr "Options de gestion de la session :"
 
 #: ../src/ui/eggsmclient.c:254
 msgid "Show session management options"
-msgstr ""
+msgstr "Afficher les options de gestion de session"
 
 #: ../src/ui/im-chooser-simple.c:117
 msgid "X applications"
@@ -120,20 +119,19 @@ msgid "Unable to get the information"
 msgstr "Impossible d'obtenir l'information"
 
 #: ../src/ui/im-chooser-simple.c:271
-#, fuzzy
 msgid "Failed to switch Input Method"
-msgstr "Échec lors de l'arrêt de la méthode de saisie"
+msgstr "Échec du changement de méthode de saisie"
 
-#: ../src/ui/im-chooser-simple.c:372
-#, fuzzy, c-format
+#: ../src/ui/im-chooser-simple.c:375
+#, c-format
 msgid "Switching Input Method - %s"
-msgstr "Démarrage de la méthode de saisie - %s"
+msgstr "Changement de méthode de saisie - %s"
 
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications and Qt applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications and GTK+ applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications and Qt applications</i></small>"
-#: ../src/ui/im-chooser-simple.c:460 ../src/ui/im-chooser-simple.c:463
-#: ../src/ui/im-chooser-simple.c:466
+#: ../src/ui/im-chooser-simple.c:463 ../src/ui/im-chooser-simple.c:466
+#: ../src/ui/im-chooser-simple.c:469
 #, c-format
 msgid ", except %s and %s"
 msgstr ", sauf %s et %s"
@@ -141,14 +139,14 @@ msgstr ", sauf %s et %s"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except Qt applications</i></small>"
-#: ../src/ui/im-chooser-simple.c:469 ../src/ui/im-chooser-simple.c:472
-#: ../src/ui/im-chooser-simple.c:475
+#: ../src/ui/im-chooser-simple.c:472 ../src/ui/im-chooser-simple.c:475
+#: ../src/ui/im-chooser-simple.c:478
 #, c-format
 msgid ", except %s"
 msgstr ", sauf %s"
 
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications</i></small>"
-#: ../src/ui/im-chooser-simple.c:480
+#: ../src/ui/im-chooser-simple.c:483
 #, c-format
 msgid ""
 "<small><i>Note: this change will not take effect until you next log in%s</"
@@ -157,68 +155,66 @@ msgstr ""
 "<small><i>Note : cette modification ne prendra effet qu'à votre prochaine "
 "connexion%s</i></small>"
 
-#: ../src/ui/im-chooser-simple.c:539
+#: ../src/ui/im-chooser-simple.c:542
 msgid "Parent Window"
 msgstr "Fenêtre parente"
 
-#: ../src/ui/im-chooser-simple.c:540
+#: ../src/ui/im-chooser-simple.c:543
 msgid "GtkWindow that points to the parent window"
 msgstr "Fenêtre GtkWindow qui indique la fenêtre parente"
 
-#: ../src/ui/im-chooser-simple.c:545
+#: ../src/ui/im-chooser-simple.c:548
 msgid "Note type"
 msgstr "Type de note"
 
-# enum ? enumerated = ordonnée
-#: ../src/ui/im-chooser-simple.c:546
+#: ../src/ui/im-chooser-simple.c:549
 msgid "A enum value to determine which notes should be displayed"
 msgstr "Une valeur enum pour déterminer quelles notes doivent être affichées"
 
 #. setup a progress window
-#: ../src/ui/im-chooser-simple.c:589
+#: ../src/ui/im-chooser-simple.c:592
 msgid "Work in progress..."
 msgstr "Traitement en cours..."
 
-#: ../src/ui/im-chooser-simple.c:671
-#, fuzzy
+#: ../src/ui/im-chooser-simple.c:674
 msgid "No Input Method"
-msgstr "Méthode de saisie"
+msgstr "Pas de méthode de saise"
 
-#: ../src/ui/im-chooser-simple.c:673
+#: ../src/ui/im-chooser-simple.c:676
 #, c-format
 msgid "Use %s"
 msgstr "Utiliser %s"
 
-#: ../src/ui/im-chooser-simple.c:680
+#: ../src/ui/im-chooser-simple.c:683
 msgid " (legacy)"
 msgstr " (ancienne version)"
 
-#: ../src/ui/im-chooser-simple.c:682
+#: ../src/ui/im-chooser-simple.c:685
 msgid " (recommended)"
 msgstr " (recommandée)"
 
-#: ../src/ui/im-chooser-simple.c:726
+#: ../src/ui/im-chooser-simple.c:729
 #, c-format
 msgid "Unable to communicate to IMSettings services"
 msgstr "Impossible de communiquer avec les services IMSettings"
 
-#: ../src/ui/im-chooser-simple.c:727
+#: ../src/ui/im-chooser-simple.c:730
 msgid "Version mismatch"
 msgstr "Les versions ne correspondent pas"
 
-#: ../src/ui/im-chooser-simple.c:741
+#: ../src/ui/im-chooser-simple.c:747
 msgid "Unable to gather current status"
 msgstr "Impossible d'obtenir l'état actuel"
 
-#: ../src/ui/im-chooser-simple.c:747
+#: ../src/ui/im-chooser-simple.c:753
 msgid "Unable to get Input Method information"
 msgstr "Impossible d'obtenir les informations sur les méthodes de saisie"
 
-#: ../src/ui/im-chooser-simple.c:856
+#: ../src/ui/im-chooser-simple.c:862
 msgid "<b>Input Method</b>"
 msgstr "<b>Méthode de saisie</b>"
 
-#: ../src/ui/im-chooser-simple.c:891
+#: ../src/ui/im-chooser-simple.c:897
 msgid "Input Method _Preferences..."
 msgstr "_Préférences des méthodes de saisie..."
 
@@ -235,7 +231,7 @@ msgstr "Veuillez installer une méthode de saisie avant de lancer le logiciel."
 
 #: ../src/ui/im-chooser-ui.c:88
 msgid "Could not connect to the session manager"
-msgstr ""
+msgstr "Impossible de se connecter au gestionnaire de session"
 
 #: ../src/ui/im-chooser-ui.c:146
 msgid "Log Out"
@@ -243,27 +239,9 @@ msgstr "Se déconnecter"
 
 #: ../src/main.c:36
 msgid "[options...]"
-msgstr ""
+msgstr "[options...]"
 
 #: ../src/main.c:56
 #, c-format
 msgid "Could not parse arguments: %s\n"
-msgstr ""
-
-#~ msgid "Failed to start Input Method"
-#~ msgstr "Échec lors du démarrage de la méthode de saisie"
-
-#~ msgid "Stopping Input Method - %s"
-#~ msgstr "Arrêt de la méthode de saisie - %s"
-
-#~ msgid "Updating Input Method list"
-#~ msgstr "Mise à jour de la liste des méthodes de saisie"
-
-#~ msgid "_Enable input method feature"
-#~ msgstr "_Activer les méthodes de saisie"
-
-#~ msgid "Show the status icon"
-#~ msgstr "Afficher l'icône d'état"
-
-#~ msgid "IM Chooser - Input Method configuration tool"
-#~ msgstr "IM Chooser - Outil de configuration des méthodes de saisie"
+msgstr "Impossible d'analyser les arguments : %s\n"

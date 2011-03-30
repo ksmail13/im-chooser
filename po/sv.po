@@ -1,24 +1,21 @@
-# Swedish translations for im-chooser package.
-# Copyright © 2006, 2008 Red Hat, Inc. All rights reserved.
-# This file is distributed under the same license as the im-chooser package.
-# Magnus Larsson <fedoratrans@gmail.com>, 2006.
-# Göran Uddeborg <goeran@uddeborg.se>, 2008.
-#
-# $Revision: 1.5 $
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: im-chooser 0.3.2\n"
+"Project-Id-Version: im-chooser\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-01-06 15:38+0900\n"
-"PO-Revision-Date: 2008-10-03 21:04+0200\n"
-"Last-Translator: Göran Uddeborg <goeran@uddeborg.se>\n"
-"Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
+"POT-Creation-Date: 2011-03-04 20:12+0900\n"
+"PO-Revision-Date: 2011-03-22 15:34+0000\n"
+"Last-Translator: goeran <goeran@uddeborg.se>\n"
+"Language-Team: Swedish <None>\n"
 "Language: sv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
 
 #: ../src/ccpanel/im-chooser-panel.desktop.in.in.h:1
 #: ../src/im-chooser.desktop.in.in.h:1 ../src/xfce4-im-chooser.desktop.in.h:1
@@ -32,72 +29,78 @@ msgstr ""
 #: ../src/ccpanel/im-chooser-panel.desktop.in.in.h:2
 #: ../src/ui/im-chooser-ui.c:117 ../src/im-chooser.desktop.in.in.h:2
 #: ../src/xfce4-im-chooser.desktop.in.h:2
-#, fuzzy
 msgid "Input Method Selector"
-msgstr "Inmatningsmetod"
+msgstr "Väljare av inmatningsmetod"
+
+#. Translators: those are keywords for im-chooser control-center panel
+#: ../src/ccpanel/im-chooser-panel.desktop.in.in.h:4
+msgid "InputMethod;IM;"
+msgstr "Inmatningsmetod;IM;"
 
 #: ../src/ui/eggdesktopfile.c:165
 #, c-format
 msgid "File is not a valid .desktop file"
-msgstr ""
+msgstr "Filen är inte en giltig .desktop-fil"
 
 #: ../src/ui/eggdesktopfile.c:188
 #, c-format
 msgid "Unrecognized desktop file Version '%s'"
-msgstr ""
+msgstr "Okända desktop-fil version ”%s”"
 
 #: ../src/ui/eggdesktopfile.c:968
 #, c-format
 msgid "Starting %s"
-msgstr ""
+msgstr "Startar %s"
 
 #: ../src/ui/eggdesktopfile.c:1110
 #, c-format
 msgid "Application does not accept documents on command line"
-msgstr ""
+msgstr "Programmet tar inte dokument på kommandoraden"
 
 #: ../src/ui/eggdesktopfile.c:1178
 #, c-format
 msgid "Unrecognized launch option: %d"
-msgstr ""
+msgstr "Okänd startflagga: %d"
 
 #: ../src/ui/eggdesktopfile.c:1383
 #, c-format
 msgid "Can't pass document URIs to a 'Type=Link' desktop entry"
 msgstr ""
+"Det går inte att skicka dokument-URI:er till en skrivbordspost med ”Type=Link"
+"\""
 
 #: ../src/ui/eggdesktopfile.c:1404
 #, c-format
 msgid "Not a launchable item"
-msgstr ""
+msgstr "Inte något som kan startas"
 
 #: ../src/ui/eggsmclient.c:226
 msgid "Disable connection to session manager"
-msgstr ""
+msgstr "Inaktivera anslutning till sessionshanteraren"
 
 #: ../src/ui/eggsmclient.c:229
 msgid "Specify file containing saved configuration"
-msgstr ""
+msgstr "Ange fil som innehåller sparad konfiguration"
 
 #: ../src/ui/eggsmclient.c:229
 msgid "FILE"
-msgstr ""
+msgstr "FIL"
 
 #: ../src/ui/eggsmclient.c:232
 msgid "Specify session management ID"
-msgstr ""
+msgstr "Ange sessionshanterings-ID"
 
 #: ../src/ui/eggsmclient.c:232
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 #: ../src/ui/eggsmclient.c:253
 msgid "Session management options:"
-msgstr ""
+msgstr "Sessionshanteringsalternativ:"
 
 #: ../src/ui/eggsmclient.c:254
 msgid "Show session management options"
-msgstr ""
+msgstr "Visa sessionshanteringsalternativ"
 
 #: ../src/ui/im-chooser-simple.c:117
 msgid "X applications"
@@ -116,20 +119,19 @@ msgid "Unable to get the information"
 msgstr "Kan inte att hämta informationen"
 
 #: ../src/ui/im-chooser-simple.c:271
-#, fuzzy
 msgid "Failed to switch Input Method"
-msgstr "Misslyckades att stoppa inmatningsmetod"
+msgstr "Misslyckades med att byta inmatningsmetod"
 
-#: ../src/ui/im-chooser-simple.c:372
-#, fuzzy, c-format
+#: ../src/ui/im-chooser-simple.c:375
+#, c-format
 msgid "Switching Input Method - %s"
-msgstr "Startar inmatningsmetod - %s"
+msgstr "Byter inmatningsmetod - %s"
 
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications and Qt applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications and GTK+ applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications and Qt applications</i></small>"
-#: ../src/ui/im-chooser-simple.c:460 ../src/ui/im-chooser-simple.c:463
-#: ../src/ui/im-chooser-simple.c:466
+#: ../src/ui/im-chooser-simple.c:463 ../src/ui/im-chooser-simple.c:466
+#: ../src/ui/im-chooser-simple.c:469
 #, c-format
 msgid ", except %s and %s"
 msgstr ", utom %s och %s"
@@ -137,14 +139,14 @@ msgstr ", utom %s och %s"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except Qt applications</i></small>"
-#: ../src/ui/im-chooser-simple.c:469 ../src/ui/im-chooser-simple.c:472
-#: ../src/ui/im-chooser-simple.c:475
+#: ../src/ui/im-chooser-simple.c:472 ../src/ui/im-chooser-simple.c:475
+#: ../src/ui/im-chooser-simple.c:478
 #, c-format
 msgid ", except %s"
 msgstr ", utom %s"
 
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications</i></small>"
-#: ../src/ui/im-chooser-simple.c:480
+#: ../src/ui/im-chooser-simple.c:483
 #, c-format
 msgid ""
 "<small><i>Note: this change will not take effect until you next log in%s</"
@@ -153,67 +155,66 @@ msgstr ""
 "<small><i>Observera: denna ändring kommer inte gälla förrän nästa gång du "
 "loggar in%s</i></small>"
 
-#: ../src/ui/im-chooser-simple.c:539
+#: ../src/ui/im-chooser-simple.c:542
 msgid "Parent Window"
 msgstr "Föräldrafönster"
 
-#: ../src/ui/im-chooser-simple.c:540
+#: ../src/ui/im-chooser-simple.c:543
 msgid "GtkWindow that points to the parent window"
 msgstr "GtkWindow som pekar på föräldrafönstret"
 
-#: ../src/ui/im-chooser-simple.c:545
+#: ../src/ui/im-chooser-simple.c:548
 msgid "Note type"
 msgstr "Meddelandetyp"
 
-#: ../src/ui/im-chooser-simple.c:546
+#: ../src/ui/im-chooser-simple.c:549
 msgid "A enum value to determine which notes should be displayed"
 msgstr "Ett uppräkningsvärde som avgör vilka meddelanden som skall visas"
 
 #. setup a progress window
-#: ../src/ui/im-chooser-simple.c:589
+#: ../src/ui/im-chooser-simple.c:592
 msgid "Work in progress..."
 msgstr "Arbete pågår ..."
 
-#: ../src/ui/im-chooser-simple.c:671
-#, fuzzy
+#: ../src/ui/im-chooser-simple.c:674
 msgid "No Input Method"
-msgstr "Inmatningsmetod"
+msgstr "Ingen inmatningsmetod"
 
-#: ../src/ui/im-chooser-simple.c:673
+#: ../src/ui/im-chooser-simple.c:676
 #, c-format
 msgid "Use %s"
 msgstr "Använd %s"
 
-#: ../src/ui/im-chooser-simple.c:680
+#: ../src/ui/im-chooser-simple.c:683
 msgid " (legacy)"
 msgstr " (föråldrad)"
 
-#: ../src/ui/im-chooser-simple.c:682
+#: ../src/ui/im-chooser-simple.c:685
 msgid " (recommended)"
 msgstr " (rekommenderad)"
 
-#: ../src/ui/im-chooser-simple.c:726
+#: ../src/ui/im-chooser-simple.c:729
 #, c-format
 msgid "Unable to communicate to IMSettings services"
 msgstr "Kan inte kommunicera med IMSettings-tjänster"
 
-#: ../src/ui/im-chooser-simple.c:727
+#: ../src/ui/im-chooser-simple.c:730
 msgid "Version mismatch"
 msgstr "Versioner stämmer inte överens"
 
-#: ../src/ui/im-chooser-simple.c:741
+#: ../src/ui/im-chooser-simple.c:747
 msgid "Unable to gather current status"
 msgstr "Kan inte samla in aktuell status"
 
-#: ../src/ui/im-chooser-simple.c:747
+#: ../src/ui/im-chooser-simple.c:753
 msgid "Unable to get Input Method information"
 msgstr "Kan inte hämta information om inmatningsmetod"
 
-#: ../src/ui/im-chooser-simple.c:856
+#: ../src/ui/im-chooser-simple.c:862
 msgid "<b>Input Method</b>"
 msgstr "<b>Inmatningsmetod</b>"
 
-#: ../src/ui/im-chooser-simple.c:891
+#: ../src/ui/im-chooser-simple.c:897
 msgid "Input Method _Preferences..."
 msgstr "_Inställningar för inmatningsmetod"
 
@@ -230,7 +231,7 @@ msgstr "Om du så önskar, installera eventuella inmatningsmetoder före du kör
 
 #: ../src/ui/im-chooser-ui.c:88
 msgid "Could not connect to the session manager"
-msgstr ""
+msgstr "Kunde inte ansluta till sessionshanteraren"
 
 #: ../src/ui/im-chooser-ui.c:146
 msgid "Log Out"
@@ -238,27 +239,9 @@ msgstr "Logga ut"
 
 #: ../src/main.c:36
 msgid "[options...]"
-msgstr ""
+msgstr "[flaggor …]"
 
 #: ../src/main.c:56
 #, c-format
 msgid "Could not parse arguments: %s\n"
-msgstr ""
-
-#~ msgid "Failed to start Input Method"
-#~ msgstr "Misslyckades att starta inmatningsmetod"
-
-#~ msgid "Stopping Input Method - %s"
-#~ msgstr "Stoppar inmatningsmetod - %s"
-
-#~ msgid "Updating Input Method list"
-#~ msgstr "Uppdaterar lista över inmatningsmetoder"
-
-#~ msgid "_Enable input method feature"
-#~ msgstr "_Aktivera funktionen inmatningsmetod"
-
-#~ msgid "Show the status icon"
-#~ msgstr "Visa statusikonen"
-
-#~ msgid "IM Chooser - Input Method configuration tool"
-#~ msgstr "IM Väljare - Verktyg för konfiguration av inmatningsmetod"
+msgstr "Kunde inte tolka argumentet: %s\n"

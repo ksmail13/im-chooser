@@ -1,27 +1,21 @@
-# translation of im-chooser.trunk.po to Bengali INDIA
-# Bengali India translations for im-chooser package
-# Copyright (C) 2006 Red Hat, Inc. All rights reserved.
-# This file is distributed under the same license as the im-chooser package.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-# Automatically generated, 2006.
-# Runa Bhattacharjee <runab@redhat.com>, 2006, 2008.
-# Runa Bhattacharjee <runabh@gmail.com>, 2007.
-# Runa Bhattacharjee <runab@fedoraproject.org>, 2008, 2011.
 msgid ""
 msgstr ""
-"Project-Id-Version: im-chooser.trunk\n"
+"Project-Id-Version: im-chooser\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-11-25 17:58+0900\n"
-"PO-Revision-Date: 2011-01-04 19:28+0530\n"
-"Last-Translator: \n"
-"Language-Team: American English <kde-i18n-doc@kde.org>\n"
+"POT-Creation-Date: 2011-03-04 20:12+0900\n"
+"PO-Revision-Date: 2011-03-22 15:34+0000\n"
+"Last-Translator: tagoh <akira+transifex@tagoh.org>\n"
+"Language-Team: Bengali (India) <None>\n"
+"Language: bn_IN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: \n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"\n"
-"X-Generator: Lokalize 1.1\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
 
 #: ../src/ccpanel/im-chooser-panel.desktop.in.in.h:1
 #: ../src/im-chooser.desktop.in.in.h:1 ../src/xfce4-im-chooser.desktop.in.h:1
@@ -36,6 +30,11 @@ msgstr ""
 #: ../src/xfce4-im-chooser.desktop.in.h:2
 msgid "Input Method Selector"
 msgstr "ইনপুট পদ্ধতি নির্বাচন ব্যবস্থা"
+
+#. Translators: those are keywords for im-chooser control-center panel
+#: ../src/ccpanel/im-chooser-panel.desktop.in.in.h:4
+msgid "InputMethod;IM;"
+msgstr ""
 
 #: ../src/ui/eggdesktopfile.c:165
 #, c-format
@@ -100,45 +99,36 @@ msgstr "সেশান পরিচালনা সংক্রান্ত ব
 msgid "Show session management options"
 msgstr "সেশান পরিচালনা সংক্রান্ত বিকল্প প্রদর্শন করা হবে"
 
-#: ../src/ui/im-chooser-simple.c:120
+#: ../src/ui/im-chooser-simple.c:117
 msgid "X applications"
 msgstr "X অ্যাপ্লিকেশন"
 
-#: ../src/ui/im-chooser-simple.c:121
+#: ../src/ui/im-chooser-simple.c:118
 msgid "GTK+ applications"
 msgstr "GTK+ অ্যাপ্লিকেশন"
 
-#: ../src/ui/im-chooser-simple.c:122
+#: ../src/ui/im-chooser-simple.c:119
 msgid "Qt applications"
 msgstr "Qt অ্যাপ্লিকেশন"
 
-#: ../src/ui/im-chooser-simple.c:205
+#: ../src/ui/im-chooser-simple.c:197
 msgid "Unable to get the information"
 msgstr "তথ্য প্রাপ্ত করতে ব্যর্থ"
 
-#: ../src/ui/im-chooser-simple.c:282
-msgid "Failed to start Input Method"
-msgstr "ইনপুট পদ্ধতি আরম্ভ করতে ব্যর্থ"
+#: ../src/ui/im-chooser-simple.c:271
+msgid "Failed to switch Input Method"
+msgstr ""
 
-#: ../src/ui/im-chooser-simple.c:309
-msgid "Failed to stop Input Method"
-msgstr "ইনপুট পদ্ধতি বন্ধ করতে ব্যর্থ"
-
-#: ../src/ui/im-chooser-simple.c:410
+#: ../src/ui/im-chooser-simple.c:375
 #, c-format
-msgid "Starting Input Method - %s"
-msgstr "ইনপুট পদ্ধতি আরম্ভ করা হচ্ছে - %s"
-
-#: ../src/ui/im-chooser-simple.c:427
-#, c-format
-msgid "Stopping Input Method - %s"
-msgstr "ইনপুট পদ্ধতি বন্ধ করা হচ্ছে - %s"
+msgid "Switching Input Method - %s"
+msgstr ""
 
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications and Qt applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications and GTK+ applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications and Qt applications</i></small>"
-#: ../src/ui/im-chooser-simple.c:513 ../src/ui/im-chooser-simple.c:516
-#: ../src/ui/im-chooser-simple.c:519
+#: ../src/ui/im-chooser-simple.c:463 ../src/ui/im-chooser-simple.c:466
+#: ../src/ui/im-chooser-simple.c:469
 #, c-format
 msgid ", except %s and %s"
 msgstr ", %s ও %s বাদে"
@@ -146,88 +136,90 @@ msgstr ", %s ও %s বাদে"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except Qt applications</i></small>"
-#: ../src/ui/im-chooser-simple.c:522 ../src/ui/im-chooser-simple.c:525
-#: ../src/ui/im-chooser-simple.c:528
+#: ../src/ui/im-chooser-simple.c:472 ../src/ui/im-chooser-simple.c:475
+#: ../src/ui/im-chooser-simple.c:478
 #, c-format
 msgid ", except %s"
 msgstr ", %s বাদে"
 
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications</i></small>"
-#: ../src/ui/im-chooser-simple.c:533
+#: ../src/ui/im-chooser-simple.c:483
 #, c-format
 msgid ""
 "<small><i>Note: this change will not take effect until you next log in%s</"
 "i></small>"
 msgstr ""
-"<small><i>উল্লেখ্য: পরবর্তীবার লগ-ইন না করা অবধি এই পরিবর্তন প্রয়োগ করা হবে না %"
-"s</i></small>"
+"<small><i>উল্লেখ্য: পরবর্তীবার লগ-ইন না করা অবধি এই পরিবর্তন প্রয়োগ করা হবে না "
+"%s</i></small>"
 
-#: ../src/ui/im-chooser-simple.c:592
+#: ../src/ui/im-chooser-simple.c:542
 msgid "Parent Window"
 msgstr "ঊর্ধ্বতন উইন্ডো"
 
-#: ../src/ui/im-chooser-simple.c:593
+#: ../src/ui/im-chooser-simple.c:543
 msgid "GtkWindow that points to the parent window"
 msgstr "ঊর্ধ্বতন উইন্ডো নির্দেশকারী GtkWindow"
 
-#: ../src/ui/im-chooser-simple.c:598
+#: ../src/ui/im-chooser-simple.c:548
 msgid "Note type"
 msgstr "নোটের প্রকৃতি"
 
-#: ../src/ui/im-chooser-simple.c:599
+#: ../src/ui/im-chooser-simple.c:549
 msgid "A enum value to determine which notes should be displayed"
 msgstr "প্রদর্শনযোগ্য নোট চিহ্নিত করার জন্য একটি enum মান"
 
 #. setup a progress window
-#: ../src/ui/im-chooser-simple.c:642
+#: ../src/ui/im-chooser-simple.c:592
 msgid "Work in progress..."
 msgstr "কাজ চলছে..."
 
-#: ../src/ui/im-chooser-simple.c:725
+#: ../src/ui/im-chooser-simple.c:674
 msgid "No Input Method"
 msgstr "ইনপুট পদ্ধতি অনুপস্থিত"
 
-#: ../src/ui/im-chooser-simple.c:727
+#: ../src/ui/im-chooser-simple.c:676
 #, c-format
 msgid "Use %s"
 msgstr "%s ব্যবহার করা হবে"
 
-#: ../src/ui/im-chooser-simple.c:731
+#: ../src/ui/im-chooser-simple.c:683
 msgid " (legacy)"
 msgstr " (লিগ্যাসি)"
 
-#: ../src/ui/im-chooser-simple.c:733
+#: ../src/ui/im-chooser-simple.c:685
 msgid " (recommended)"
 msgstr " (প্রস্তাবিত)"
 
-#: ../src/ui/im-chooser-simple.c:775
+#: ../src/ui/im-chooser-simple.c:729
 #, c-format
 msgid "Unable to communicate to IMSettings services"
 msgstr "IMSettings পরিসেবার সাথে যোগাযোগ করতে ব্যর্থ"
 
-#: ../src/ui/im-chooser-simple.c:776
+#: ../src/ui/im-chooser-simple.c:730
 msgid "Version mismatch"
 msgstr "সংস্করণ সংখ্যায় গরমিল"
 
-#: ../src/ui/im-chooser-simple.c:790
+#: ../src/ui/im-chooser-simple.c:747
 msgid "Unable to gather current status"
 msgstr "বর্তমান অবস্থা সংক্রান্ত তথ্য প্রাপ্ত করতে ব্যর্থ"
 
-#: ../src/ui/im-chooser-simple.c:796
+#: ../src/ui/im-chooser-simple.c:753
 msgid "Unable to get Input Method information"
 msgstr "ইনপুট পদ্ধতি সংক্রান্ত তথ্য প্রাপ্ত করতে ব্যর্থ"
 
-#: ../src/ui/im-chooser-simple.c:905
+#: ../src/ui/im-chooser-simple.c:862
 msgid "<b>Input Method</b>"
 msgstr "<b>ইনপুট পদ্ধতি</b>"
 
-#: ../src/ui/im-chooser-simple.c:940
+#: ../src/ui/im-chooser-simple.c:897
 msgid "Input Method _Preferences..."
 msgstr "ইনপুট পদ্ধতি সংক্রান্ত পছন্দসই মান...(_P)"
 
 #: ../src/ui/im-chooser-ui.c:55
-msgid "<span weight=\"bold\" size=\"larger\">No input method is available</span>"
-msgstr "<span weight=\"bold\" size=\"larger\">কোনো ইনপুট পদ্ধতি উপস্থিত নেই</span>"
+msgid ""
+"<span weight=\"bold\" size=\"larger\">No input method is available</span>"
+msgstr ""
+"<span weight=\"bold\" size=\"larger\">কোনো ইনপুট পদ্ধতি উপস্থিত নেই</span>"
 
 #: ../src/ui/im-chooser-ui.c:58
 msgid "Please install any input methods before running if you like."
@@ -237,7 +229,7 @@ msgstr "ইনপুট পদ্ধতি প্রয়োগ করার প�
 msgid "Could not connect to the session manager"
 msgstr "সেশান পরিচালনব্যবস্থার সাথে সংযোগ স্থাপন করতে ব্যর্থ"
 
-#: ../src/ui/im-chooser-ui.c:144
+#: ../src/ui/im-chooser-ui.c:146
 msgid "Log Out"
 msgstr "লগ আউট করুন"
 
@@ -249,15 +241,3 @@ msgstr "[options...]"
 #, c-format
 msgid "Could not parse arguments: %s\n"
 msgstr "আর্গুমেন্ট পার্স করতে ব্যর্থ: %s\n"
-
-#~ msgid "Updating Input Method list"
-#~ msgstr "ইনপুট পদ্ধতির তালিকা আপডেট করা হচ্ছে"
-
-#~ msgid "_Enable input method feature"
-#~ msgstr "ইনপুট পদ্ধতির বৈশিষ্ট্য সক্রিয় করুন (_E)"
-
-#~ msgid "Show the status icon"
-#~ msgstr "অবস্থাসূচক আইকন প্রাপ্ত করতে ব্যর্থ"
-
-#~ msgid "IM Chooser - Input Method configuration tool"
-#~ msgstr "IM Chooser - ইনপুট পদ্ধতি কনফিগার করতে ব্যবহৃত সামগ্রী"

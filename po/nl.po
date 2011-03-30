@@ -1,23 +1,21 @@
-# Translation of im-chooser to Dutch.
-# Copyright (C) 2006 Free Software Foundation, Inc.
-# This file is distributed under the same license as the im-chooser package.
-# Peter van Egdom <p.van.egdom@gmail.com>, 2006, 2008.
-# Geert Warrink <geert.warrink@onsnet.nu>, 2010, 2011.
-# Reinout van Schouwen <reinouts@gnome.org>, 2010
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: im-chooser\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-01-06 15:38+0900\n"
-"PO-Revision-Date: 2011-01-07 13:12+0200\n"
-"Last-Translator: Geert Warrink <geert.warrink@onsnet.nu>\n"
-"Language-Team: Fedora\n"
+"POT-Creation-Date: 2011-03-04 20:12+0900\n"
+"PO-Revision-Date: 2011-03-22 15:34+0000\n"
+"Last-Translator: tagoh <akira+transifex@tagoh.org>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Virtaal 0.6.1\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
 
 #: ../src/ccpanel/im-chooser-panel.desktop.in.in.h:1
 #: ../src/im-chooser.desktop.in.in.h:1 ../src/xfce4-im-chooser.desktop.in.h:1
@@ -34,70 +32,73 @@ msgstr ""
 msgid "Input Method Selector"
 msgstr "Invoermethode selectie"
 
+#. Translators: those are keywords for im-chooser control-center panel
+#: ../src/ccpanel/im-chooser-panel.desktop.in.in.h:4
+msgid "InputMethod;IM;"
+msgstr ""
+
 #: ../src/ui/eggdesktopfile.c:165
 #, c-format
 msgid "File is not a valid .desktop file"
-msgstr "Bestand is geen geldig .desktop bestand"
+msgstr ""
 
 #: ../src/ui/eggdesktopfile.c:188
 #, c-format
 msgid "Unrecognized desktop file Version '%s'"
-msgstr "Onbekende desktop bestand versie '%s'"
+msgstr ""
 
 #: ../src/ui/eggdesktopfile.c:968
 #, c-format
 msgid "Starting %s"
-msgstr "Opstarten van %s"
+msgstr ""
 
 #: ../src/ui/eggdesktopfile.c:1110
 #, c-format
 msgid "Application does not accept documents on command line"
-msgstr "Toepassing accepteert geen documenten op commando-regel"
+msgstr ""
 
 #: ../src/ui/eggdesktopfile.c:1178
 #, c-format
 msgid "Unrecognized launch option: %d"
-msgstr "Niet-herkende opstart optie: %d"
+msgstr ""
 
 #: ../src/ui/eggdesktopfile.c:1383
 #, c-format
 msgid "Can't pass document URIs to a 'Type=Link' desktop entry"
 msgstr ""
-"Kan document URI's niet doorgeven aan een te documenteren een 'Type=Link' "
-"desktop ingang"
 
 #: ../src/ui/eggdesktopfile.c:1404
 #, c-format
 msgid "Not a launchable item"
-msgstr "Geen opstartbaar item"
+msgstr ""
 
 #: ../src/ui/eggsmclient.c:226
 msgid "Disable connection to session manager"
-msgstr "Verbreek verbinding met sessie beheerder"
+msgstr ""
 
 #: ../src/ui/eggsmclient.c:229
 msgid "Specify file containing saved configuration"
-msgstr "Specificeer bestand dat de opgeslagen configuratie bevat"
+msgstr ""
 
 #: ../src/ui/eggsmclient.c:229
 msgid "FILE"
-msgstr "BESTAND"
+msgstr ""
 
 #: ../src/ui/eggsmclient.c:232
 msgid "Specify session management ID"
-msgstr "Specificeer sessiebeheer ID"
+msgstr ""
 
 #: ../src/ui/eggsmclient.c:232
 msgid "ID"
-msgstr "ID"
+msgstr ""
 
 #: ../src/ui/eggsmclient.c:253
 msgid "Session management options:"
-msgstr "Sessie beheeropties:"
+msgstr ""
 
 #: ../src/ui/eggsmclient.c:254
 msgid "Show session management options"
-msgstr "Laat sessiebeheer opties zien"
+msgstr ""
 
 #: ../src/ui/im-chooser-simple.c:117
 msgid "X applications"
@@ -117,18 +118,18 @@ msgstr "Kan geen informatie verkrijgen"
 
 #: ../src/ui/im-chooser-simple.c:271
 msgid "Failed to switch Input Method"
-msgstr "Omschakelen van invoermethode is mislukt"
+msgstr ""
 
-#: ../src/ui/im-chooser-simple.c:372
+#: ../src/ui/im-chooser-simple.c:375
 #, c-format
 msgid "Switching Input Method - %s"
-msgstr "Omschakelen van invoermethode - %s"
+msgstr ""
 
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications and Qt applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications and GTK+ applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications and Qt applications</i></small>"
-#: ../src/ui/im-chooser-simple.c:460 ../src/ui/im-chooser-simple.c:463
-#: ../src/ui/im-chooser-simple.c:466
+#: ../src/ui/im-chooser-simple.c:463 ../src/ui/im-chooser-simple.c:466
+#: ../src/ui/im-chooser-simple.c:469
 #, c-format
 msgid ", except %s and %s"
 msgstr ", met uitzondering van %s en %s"
@@ -136,14 +137,14 @@ msgstr ", met uitzondering van %s en %s"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except Qt applications</i></small>"
-#: ../src/ui/im-chooser-simple.c:469 ../src/ui/im-chooser-simple.c:472
-#: ../src/ui/im-chooser-simple.c:475
+#: ../src/ui/im-chooser-simple.c:472 ../src/ui/im-chooser-simple.c:475
+#: ../src/ui/im-chooser-simple.c:478
 #, c-format
 msgid ", except %s"
 msgstr ", met uitzondering van %s"
 
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications</i></small>"
-#: ../src/ui/im-chooser-simple.c:480
+#: ../src/ui/im-chooser-simple.c:483
 #, c-format
 msgid ""
 "<small><i>Note: this change will not take effect until you next log in%s</"
@@ -152,67 +153,67 @@ msgstr ""
 "<small><i>Opmerking: deze verandering zal pas actief worden als je opnieuw "
 "inlogt %s</i></small>"
 
-#: ../src/ui/im-chooser-simple.c:539
+#: ../src/ui/im-chooser-simple.c:542
 msgid "Parent Window"
 msgstr "Bovenliggende venster"
 
-#: ../src/ui/im-chooser-simple.c:540
+#: ../src/ui/im-chooser-simple.c:543
 msgid "GtkWindow that points to the parent window"
 msgstr "GtkWindow dat naar het bovenliggende venster verwijst"
 
-#: ../src/ui/im-chooser-simple.c:545
+#: ../src/ui/im-chooser-simple.c:548
 msgid "Note type"
 msgstr "Notitie type"
 
-#: ../src/ui/im-chooser-simple.c:546
+#: ../src/ui/im-chooser-simple.c:549
 msgid "A enum value to determine which notes should be displayed"
 msgstr ""
 "Een enumeratie waarde om te bepalen welke notities moeten worden weergegeven"
 
 #. setup a progress window
-#: ../src/ui/im-chooser-simple.c:589
+#: ../src/ui/im-chooser-simple.c:592
 msgid "Work in progress..."
 msgstr "Werk in uitvoering..."
 
-#: ../src/ui/im-chooser-simple.c:671
+#: ../src/ui/im-chooser-simple.c:674
 msgid "No Input Method"
 msgstr "Geen invoermethode"
 
-#: ../src/ui/im-chooser-simple.c:673
+#: ../src/ui/im-chooser-simple.c:676
 #, c-format
 msgid "Use %s"
 msgstr "%s gebruiken"
 
-#: ../src/ui/im-chooser-simple.c:680
+#: ../src/ui/im-chooser-simple.c:683
 msgid " (legacy)"
 msgstr " (verouderd)"
 
-#: ../src/ui/im-chooser-simple.c:682
+#: ../src/ui/im-chooser-simple.c:685
 msgid " (recommended)"
 msgstr " (aanbevolen)"
 
-#: ../src/ui/im-chooser-simple.c:726
+#: ../src/ui/im-chooser-simple.c:729
 #, c-format
 msgid "Unable to communicate to IMSettings services"
 msgstr "Kan niet communiceren met IMSettings services"
 
-#: ../src/ui/im-chooser-simple.c:727
+#: ../src/ui/im-chooser-simple.c:730
 msgid "Version mismatch"
 msgstr "Versies komen niet overeen"
 
-#: ../src/ui/im-chooser-simple.c:741
+#: ../src/ui/im-chooser-simple.c:747
 msgid "Unable to gather current status"
 msgstr "Kan huidige status niet verkrijgen"
 
-#: ../src/ui/im-chooser-simple.c:747
+#: ../src/ui/im-chooser-simple.c:753
 msgid "Unable to get Input Method information"
 msgstr "Kan invoermethode informatie niet verkrijgen"
 
-#: ../src/ui/im-chooser-simple.c:856
+#: ../src/ui/im-chooser-simple.c:862
 msgid "<b>Input Method</b>"
 msgstr "<b>Invoermethode</b>"
 
-#: ../src/ui/im-chooser-simple.c:891
+#: ../src/ui/im-chooser-simple.c:897
 msgid "Input Method _Preferences..."
 msgstr "_Voorkeuren invoermethoden..."
 
@@ -243,93 +244,3 @@ msgstr "[opties...]"
 #, c-format
 msgid "Could not parse arguments: %s\n"
 msgstr "Kon argumenten niet ontleden: %s\n"
-
-#~ msgid "Failed to start Input Method"
-#~ msgstr "Starten van invoermethode is mislukt"
-
-#~ msgid "Stopping Input Method - %s"
-#~ msgstr "Stoppen van invoermethode - %s"
-
-#~ msgid "Updating Input Method list"
-#~ msgstr "Vernieuwen van invoermethodelijst"
-
-#~ msgid "_Enable input method feature"
-#~ msgstr "Invoermethoden _aanzetten"
-
-#~ msgid "Show the status icon"
-#~ msgstr "Het statuspictogram tonen"
-
-#~ msgid "IM Chooser - Input Method configuration tool"
-#~ msgstr "IM Chooser - Configuratieprogramma voor invoermethoden"
-
-#~ msgid "Show note"
-#~ msgstr "Opmerking tonen"
-
-#~ msgid "Show note logs out to apply the change"
-#~ msgstr "Opmerking tonen zal afmelden om de verandering toe te passen"
-
-#~ msgid "Language"
-#~ msgstr "Taal"
-
-#~ msgid "Filename"
-#~ msgstr "Bestandsnaam"
-
-#~ msgid "XIM"
-#~ msgstr "XIM"
-
-#~ msgid "User Specific"
-#~ msgstr "Gebruikersspecifiek"
-
-#~ msgid "xinputrc was modified by the user"
-#~ msgstr "xinputrc is aangepast door de gebruiker"
-
-#~ msgid "Do not update .xinputrc."
-#~ msgstr ".xinputrc niet bijwerken."
-
-#~ msgid "No valid IM installed"
-#~ msgstr "Er is geen geldige invoermethode geïnstalleerd"
-
-#~ msgid "_Use default Input Method for your language"
-#~ msgstr "_Standaard invoermethode voor uw taal gebruiken"
-
-#~ msgid ""
-#~ "Your system chooses the appropriate Input Method for your language "
-#~ "automatically from among Input Methods installed on your system."
-#~ msgstr ""
-#~ "Uw systeem kiest automatisch de geschikte invoermethode voor uw taal uit "
-#~ "de geïnstalleerde invoermethoden op uw systeem."
-
-#~ msgid "Choose _specific Input Method"
-#~ msgstr "Specifieke invoermethode kiezen"
-
-#~ msgid ""
-#~ "Use the specific Input Method that you prefer regardless what Input "
-#~ "Method the system recommends."
-#~ msgstr ""
-#~ "Gebruik de invoermethode die u prefereert ondanks de door het systeem "
-#~ "aangeraden invoermethode."
-
-#~ msgid ""
-#~ "Do not use Input Method no matter what language the desktop is running on."
-#~ msgstr ""
-#~ "Invoermethode niet gebruiken, ondanks de taaldefinitie van het bureaublad."
-
-#~ msgid "Use legacy _Input Method"
-#~ msgstr "_Verouderde invoermethode gebruiken"
-
-#~ msgid ""
-#~ "Use X Input Method anyway. In fact, which input method will be chosen for "
-#~ "the desktop session, depends on the desktop language."
-#~ msgstr ""
-#~ "Gebruik de X invoermethode. De invoermethode die wordt gekozen voor de "
-#~ "bureaublad-sessie is afhankelijk van de bureaublad-taal."
-
-#~ msgid "_Follow the system-wide configuration"
-#~ msgstr "_Gebruik de systeembrede configuratie"
-
-#~ msgid ""
-#~ "Follow the system-wide input method configuration to determine which "
-#~ "input method should be used."
-#~ msgstr ""
-#~ "Gebruik de systeembrede invoermethode configuratie om te achterhalen "
-#~ "welke invoermethode gebruikt dient te worden."

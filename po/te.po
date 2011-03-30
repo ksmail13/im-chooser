@@ -1,29 +1,21 @@
-# translation of te.po to Telugu
-# translation of te.po to
-# translation of te.po to
-# Telugu translations for im-chooser package.
-# Copyright (C) 2006 Red Hat, Inc. All rights reserved.
-# This file is distributed under the same license as the im-chooser package.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-# Automatically generated, 2006.
-# Krishna Babu K <kkrothap@redhat.com>, 2008.
 msgid ""
 msgstr ""
-"Project-Id-Version: te\n"
+"Project-Id-Version: im-chooser\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-01-06 15:38+0900\n"
-"PO-Revision-Date: 2008-09-29 12:42+0530\n"
-"Last-Translator: Krishna Babu K <kkrothap@redhat.com>\n"
-"Language-Team: Telugu <en@li.org>\n"
+"POT-Creation-Date: 2011-03-04 20:12+0900\n"
+"PO-Revision-Date: 2011-03-22 15:34+0000\n"
+"Last-Translator: tagoh <akira+transifex@tagoh.org>\n"
+"Language-Team: Telugu <None>\n"
 "Language: te\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.11.4\n"
-"Plural-Forms: nplurals=2; plural=(n!=1);\n"
-"\n"
-"\n"
-"\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
 
 #: ../src/ccpanel/im-chooser-panel.desktop.in.in.h:1
 #: ../src/im-chooser.desktop.in.in.h:1 ../src/xfce4-im-chooser.desktop.in.h:1
@@ -36,9 +28,13 @@ msgstr ""
 #: ../src/ccpanel/im-chooser-panel.desktop.in.in.h:2
 #: ../src/ui/im-chooser-ui.c:117 ../src/im-chooser.desktop.in.in.h:2
 #: ../src/xfce4-im-chooser.desktop.in.h:2
-#, fuzzy
 msgid "Input Method Selector"
-msgstr "ఇన్పుట్ విధానం"
+msgstr ""
+
+#. Translators: those are keywords for im-chooser control-center panel
+#: ../src/ccpanel/im-chooser-panel.desktop.in.in.h:4
+msgid "InputMethod;IM;"
+msgstr ""
 
 #: ../src/ui/eggdesktopfile.c:165
 #, c-format
@@ -120,20 +116,19 @@ msgid "Unable to get the information"
 msgstr "సమాచారమును పొందలేక పోతోంది"
 
 #: ../src/ui/im-chooser-simple.c:271
-#, fuzzy
 msgid "Failed to switch Input Method"
-msgstr "ఇన్‌పుట్ పద్దతిని ఆపివేయుటలో విఫలమైంది"
+msgstr ""
 
-#: ../src/ui/im-chooser-simple.c:372
-#, fuzzy, c-format
+#: ../src/ui/im-chooser-simple.c:375
+#, c-format
 msgid "Switching Input Method - %s"
-msgstr "ఇన్‌పుట్ పద్దతి - %s ను ప్రారంభిస్తోంది"
+msgstr ""
 
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications and Qt applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications and GTK+ applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications and Qt applications</i></small>"
-#: ../src/ui/im-chooser-simple.c:460 ../src/ui/im-chooser-simple.c:463
-#: ../src/ui/im-chooser-simple.c:466
+#: ../src/ui/im-chooser-simple.c:463 ../src/ui/im-chooser-simple.c:466
+#: ../src/ui/im-chooser-simple.c:469
 #, c-format
 msgid ", except %s and %s"
 msgstr ", %s మరియు %s తప్ప"
@@ -141,14 +136,14 @@ msgstr ", %s మరియు %s తప్ప"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except Qt applications</i></small>"
-#: ../src/ui/im-chooser-simple.c:469 ../src/ui/im-chooser-simple.c:472
-#: ../src/ui/im-chooser-simple.c:475
+#: ../src/ui/im-chooser-simple.c:472 ../src/ui/im-chooser-simple.c:475
+#: ../src/ui/im-chooser-simple.c:478
 #, c-format
 msgid ", except %s"
 msgstr ", %s తప్ప"
 
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications</i></small>"
-#: ../src/ui/im-chooser-simple.c:480
+#: ../src/ui/im-chooser-simple.c:483
 #, c-format
 msgid ""
 "<small><i>Note: this change will not take effect until you next log in%s</"
@@ -156,67 +151,66 @@ msgid ""
 msgstr ""
 "<small><i>గమనిక: మీరు తరువాత %s లాగిన్ అగునంతవరకు ఈ మార్పు ప్రభావితం కాదు.</i></small>"
 
-#: ../src/ui/im-chooser-simple.c:539
+#: ../src/ui/im-chooser-simple.c:542
 msgid "Parent Window"
 msgstr "మాత్రక విండో"
 
-#: ../src/ui/im-chooser-simple.c:540
+#: ../src/ui/im-chooser-simple.c:543
 msgid "GtkWindow that points to the parent window"
 msgstr "మాత్రక విండోను సూచించే Gtkవిండో"
 
-#: ../src/ui/im-chooser-simple.c:545
+#: ../src/ui/im-chooser-simple.c:548
 msgid "Note type"
 msgstr "గమనిక రకము"
 
-#: ../src/ui/im-chooser-simple.c:546
+#: ../src/ui/im-chooser-simple.c:549
 msgid "A enum value to determine which notes should be displayed"
 msgstr "ఏ గమనికలు ప్రదర్శించబడాలి అనేది నిర్ణయించుటకు enum విలువ"
 
 #. setup a progress window
-#: ../src/ui/im-chooser-simple.c:589
+#: ../src/ui/im-chooser-simple.c:592
 msgid "Work in progress..."
 msgstr "పని జరుగుతోంది...."
 
-#: ../src/ui/im-chooser-simple.c:671
-#, fuzzy
+#: ../src/ui/im-chooser-simple.c:674
 msgid "No Input Method"
-msgstr "ఇన్పుట్ విధానం"
+msgstr ""
 
-#: ../src/ui/im-chooser-simple.c:673
+#: ../src/ui/im-chooser-simple.c:676
 #, c-format
 msgid "Use %s"
 msgstr "%s ఉపయోగించు"
 
-#: ../src/ui/im-chooser-simple.c:680
+#: ../src/ui/im-chooser-simple.c:683
 msgid " (legacy)"
 msgstr " (legacy)"
 
-#: ../src/ui/im-chooser-simple.c:682
+#: ../src/ui/im-chooser-simple.c:685
 msgid " (recommended)"
 msgstr " (సిఫార్స్‍‌చేసిన)"
 
-#: ../src/ui/im-chooser-simple.c:726
+#: ../src/ui/im-chooser-simple.c:729
 #, c-format
 msgid "Unable to communicate to IMSettings services"
 msgstr "IMఅమరికల సేవలకు సంప్రదింపు జరుపలేక పోతోంది"
 
-#: ../src/ui/im-chooser-simple.c:727
+#: ../src/ui/im-chooser-simple.c:730
 msgid "Version mismatch"
 msgstr "వర్షన్ అసమానత"
 
-#: ../src/ui/im-chooser-simple.c:741
+#: ../src/ui/im-chooser-simple.c:747
 msgid "Unable to gather current status"
 msgstr "ప్రస్తుత స్థితిని సమీకరించలేక పోతోంది"
 
-#: ../src/ui/im-chooser-simple.c:747
+#: ../src/ui/im-chooser-simple.c:753
 msgid "Unable to get Input Method information"
 msgstr "ఇన్పుట్ పద్దతి సమాచారమును పొందలేక పోతోంది"
 
-#: ../src/ui/im-chooser-simple.c:856
+#: ../src/ui/im-chooser-simple.c:862
 msgid "<b>Input Method</b>"
 msgstr "<b>ఇన్పుట్టు విధానం</b>"
 
-#: ../src/ui/im-chooser-simple.c:891
+#: ../src/ui/im-chooser-simple.c:897
 msgid "Input Method _Preferences..."
 msgstr "ఇన్‌పుట్ పద్దతి అభీష్టాలు(_P)..."
 
@@ -245,21 +239,3 @@ msgstr ""
 #, c-format
 msgid "Could not parse arguments: %s\n"
 msgstr ""
-
-#~ msgid "Failed to start Input Method"
-#~ msgstr "ఇన్‌పుట్ పద్దతిని ప్రారంభించుటలో విఫలమైంది"
-
-#~ msgid "Stopping Input Method - %s"
-#~ msgstr "ఇన్‌పుట్ పద్దతి - %s ను ఆపివేస్తోంది"
-
-#~ msgid "Updating Input Method list"
-#~ msgstr "ఇన్పుట్ విధానం జాబితాను నవీకరిస్తోంది."
-
-#~ msgid "_Enable input method feature"
-#~ msgstr "ఇన్‌పుట్ పద్దతి సౌలభ్యాన్ని చేతనం చేయుము(_E)"
-
-#~ msgid "Show the status icon"
-#~ msgstr "స్థితి ప్రతిమను చూపుము"
-
-#~ msgid "IM Chooser - Input Method configuration tool"
-#~ msgstr "IMని ఎన్నికచేసేది - ఇన్పుట్ విధాన ఆకృతీకరణ ఉపకరణం"

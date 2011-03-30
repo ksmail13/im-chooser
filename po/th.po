@@ -5,18 +5,17 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: im-chooser master\n"
+"Project-Id-Version: im-chooser\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-01-06 15:38+0900\n"
-"PO-Revision-Date: 2009-03-13 16:35+0700\n"
-"Last-Translator: Manatsawin Hanmongkolchai <manatsawin@gmail.com>\n"
-"Language-Team: Thai <thai-l10n@googlegroups.com>\n"
+"POT-Creation-Date: 2011-03-04 20:12+0900\n"
+"PO-Revision-Date: 2011-03-22 15:34+0000\n"
+"Last-Translator: tagoh <akira+transifex@tagoh.org>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: th\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Poedit-Language: Thai\n"
-"X-Poedit-Country: Thailand\n"
+"Plural-Forms: nplurals=1; plural=0\n"
 
 #: ../src/ccpanel/im-chooser-panel.desktop.in.in.h:1
 #: ../src/im-chooser.desktop.in.in.h:1 ../src/xfce4-im-chooser.desktop.in.h:1
@@ -28,9 +27,13 @@ msgstr "เลือกระบบป้อนข้อความที่จ
 #: ../src/ccpanel/im-chooser-panel.desktop.in.in.h:2
 #: ../src/ui/im-chooser-ui.c:117 ../src/im-chooser.desktop.in.in.h:2
 #: ../src/xfce4-im-chooser.desktop.in.h:2
-#, fuzzy
 msgid "Input Method Selector"
-msgstr "ระบบป้อนข้อความ"
+msgstr ""
+
+#. Translators: those are keywords for im-chooser control-center panel
+#: ../src/ccpanel/im-chooser-panel.desktop.in.in.h:4
+msgid "InputMethod;IM;"
+msgstr ""
 
 #: ../src/ui/eggdesktopfile.c:165
 #, c-format
@@ -112,20 +115,19 @@ msgid "Unable to get the information"
 msgstr "ไม่สามารถดึงข้อมูลได้"
 
 #: ../src/ui/im-chooser-simple.c:271
-#, fuzzy
 msgid "Failed to switch Input Method"
-msgstr "ไม่สามารถหยุดระบบป้อนข้อความได้"
+msgstr ""
 
-#: ../src/ui/im-chooser-simple.c:372
-#, fuzzy, c-format
+#: ../src/ui/im-chooser-simple.c:375
+#, c-format
 msgid "Switching Input Method - %s"
-msgstr "กำลังเริ่มระบบป้อนข้อความ - %s"
+msgstr ""
 
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications and Qt applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications and GTK+ applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications and Qt applications</i></small>"
-#: ../src/ui/im-chooser-simple.c:460 ../src/ui/im-chooser-simple.c:463
-#: ../src/ui/im-chooser-simple.c:466
+#: ../src/ui/im-chooser-simple.c:463 ../src/ui/im-chooser-simple.c:466
+#: ../src/ui/im-chooser-simple.c:469
 #, c-format
 msgid ", except %s and %s"
 msgstr " ยกเว้น %s และ %s"
@@ -133,14 +135,14 @@ msgstr " ยกเว้น %s และ %s"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except Qt applications</i></small>"
-#: ../src/ui/im-chooser-simple.c:469 ../src/ui/im-chooser-simple.c:472
-#: ../src/ui/im-chooser-simple.c:475
+#: ../src/ui/im-chooser-simple.c:472 ../src/ui/im-chooser-simple.c:475
+#: ../src/ui/im-chooser-simple.c:478
 #, c-format
 msgid ", except %s"
 msgstr " ยกเว้น %s"
 
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications</i></small>"
-#: ../src/ui/im-chooser-simple.c:480
+#: ../src/ui/im-chooser-simple.c:483
 #, c-format
 msgid ""
 "<small><i>Note: this change will not take effect until you next log in%s</"
@@ -148,67 +150,66 @@ msgid ""
 msgstr ""
 "<small><i>หมายเหตุ: การเปลี่ยนแปลงนี้จะไม่มีผลจนกว่าคุณจะเข้าระบบอีกครั้ง%s</i></small>"
 
-#: ../src/ui/im-chooser-simple.c:539
+#: ../src/ui/im-chooser-simple.c:542
 msgid "Parent Window"
 msgstr "หน้าต่างหลัก"
 
-#: ../src/ui/im-chooser-simple.c:540
+#: ../src/ui/im-chooser-simple.c:543
 msgid "GtkWindow that points to the parent window"
 msgstr "GtkWindow ที่ชี้ไปยังหน้าต่างหลัก"
 
-#: ../src/ui/im-chooser-simple.c:545
+#: ../src/ui/im-chooser-simple.c:548
 msgid "Note type"
 msgstr "ชนิดโหนด"
 
-#: ../src/ui/im-chooser-simple.c:546
+#: ../src/ui/im-chooser-simple.c:549
 msgid "A enum value to determine which notes should be displayed"
 msgstr "ค่า enum ที๋กำหนดว่าโน๊ตใดจะถูกแสดง"
 
 #. setup a progress window
-#: ../src/ui/im-chooser-simple.c:589
+#: ../src/ui/im-chooser-simple.c:592
 msgid "Work in progress..."
 msgstr "อยู่ในระหว่างการพัฒนา..."
 
-#: ../src/ui/im-chooser-simple.c:671
-#, fuzzy
+#: ../src/ui/im-chooser-simple.c:674
 msgid "No Input Method"
-msgstr "ระบบป้อนข้อความ"
+msgstr ""
 
-#: ../src/ui/im-chooser-simple.c:673
+#: ../src/ui/im-chooser-simple.c:676
 #, c-format
 msgid "Use %s"
 msgstr "ใช้ %s"
 
-#: ../src/ui/im-chooser-simple.c:680
+#: ../src/ui/im-chooser-simple.c:683
 msgid " (legacy)"
 msgstr " (ล้าหลัง)"
 
-#: ../src/ui/im-chooser-simple.c:682
+#: ../src/ui/im-chooser-simple.c:685
 msgid " (recommended)"
 msgstr " (แนะนำ)"
 
-#: ../src/ui/im-chooser-simple.c:726
+#: ../src/ui/im-chooser-simple.c:729
 #, c-format
 msgid "Unable to communicate to IMSettings services"
 msgstr "ไม่สามารถเชื่อมต่อกับบริการ IMSettings ได้"
 
-#: ../src/ui/im-chooser-simple.c:727
+#: ../src/ui/im-chooser-simple.c:730
 msgid "Version mismatch"
 msgstr "รุ่นไม่ตรงกัน"
 
-#: ../src/ui/im-chooser-simple.c:741
+#: ../src/ui/im-chooser-simple.c:747
 msgid "Unable to gather current status"
 msgstr "ไม่สามารถดึงสถานะปัจจุบันได้"
 
-#: ../src/ui/im-chooser-simple.c:747
+#: ../src/ui/im-chooser-simple.c:753
 msgid "Unable to get Input Method information"
 msgstr "ไม่สามารถดึงข้อมูลระบบป้อนข้อความได้"
 
-#: ../src/ui/im-chooser-simple.c:856
+#: ../src/ui/im-chooser-simple.c:862
 msgid "<b>Input Method</b>"
 msgstr "<b>ระบบป้อนข้อความ</b>"
 
-#: ../src/ui/im-chooser-simple.c:891
+#: ../src/ui/im-chooser-simple.c:897
 msgid "Input Method _Preferences..."
 msgstr "_ตั้งค่าระบบป้อนข้อความ..."
 
@@ -237,21 +238,3 @@ msgstr ""
 #, c-format
 msgid "Could not parse arguments: %s\n"
 msgstr ""
-
-#~ msgid "Failed to start Input Method"
-#~ msgstr "ไม่สามารถเริ่มต้นระบบป้อนข้อความ"
-
-#~ msgid "Stopping Input Method - %s"
-#~ msgstr "กำลังหยุดระบบป้อนข้อความ - %s"
-
-#~ msgid "Updating Input Method list"
-#~ msgstr "กำลังอัปเดตรายการระบบป้อนข้อความ"
-
-#~ msgid "_Enable input method feature"
-#~ msgstr "_เปิดคุณสมบัติระบบป้อนข้อความ"
-
-#~ msgid "Show the status icon"
-#~ msgstr "แสดงไอคอนสถานะ"
-
-#~ msgid "IM Chooser - Input Method configuration tool"
-#~ msgstr "IM Chooser - เครื่องมือตั้งค่าระบบป้อนข้อความ"

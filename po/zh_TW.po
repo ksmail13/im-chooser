@@ -1,38 +1,39 @@
-# translation of im-chooser.trunk.po to Traditional Chinese
-# Chinese translations for im-chooser package.
-# Copyright (C) 2006 Red Hat, Inc. All rights reserved.
-# This file is distributed under the same license as the im-chooser package.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-# Automatically generated, 2006.
-# Chester Cheng <ccheng@redhat.com>, 2006.
-# Walter Cheuk <wwycheuk@gmail.com>, 2007.
-# Terry Chuang <tchuang@redhat.com>, 2008.
 msgid ""
 msgstr ""
-"Project-Id-Version: im-chooser.trunk\n"
+"Project-Id-Version: im-chooser\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-01-06 15:38+0900\n"
-"PO-Revision-Date: 2011-01-15 23:28+0800\n"
-"Last-Translator: Cheng-Chia Tseng <pswo10680@gmail.com>\n"
-"Language-Team: Traditional Chinese <zh@li.org>\n"
+"POT-Creation-Date: 2011-03-04 20:12+0900\n"
+"PO-Revision-Date: 2011-03-22 15:34+0000\n"
+"Last-Translator: zerng07 <pswo10680@gmail.com>\n"
+"Language-Team: Chinese (Taiwan) <None>\n"
+"Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: \n"
-"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=1; plural=0\n"
 
 #: ../src/ccpanel/im-chooser-panel.desktop.in.in.h:1
-#: ../src/im-chooser.desktop.in.in.h:1
-#: ../src/xfce4-im-chooser.desktop.in.h:1
-msgid "Choose the input method to be used or disable the input method usage on the desktop"
+#: ../src/im-chooser.desktop.in.in.h:1 ../src/xfce4-im-chooser.desktop.in.h:1
+msgid ""
+"Choose the input method to be used or disable the input method usage on the "
+"desktop"
 msgstr "請選擇欲使用的輸入法或是停用桌面環境所使用的輸入法"
 
 #: ../src/ccpanel/im-chooser-panel.desktop.in.in.h:2
-#: ../src/ui/im-chooser-ui.c:117
-#: ../src/im-chooser.desktop.in.in.h:2
+#: ../src/ui/im-chooser-ui.c:117 ../src/im-chooser.desktop.in.in.h:2
 #: ../src/xfce4-im-chooser.desktop.in.h:2
 msgid "Input Method Selector"
 msgstr "輸入法選擇器"
+
+#. Translators: those are keywords for im-chooser control-center panel
+#: ../src/ccpanel/im-chooser-panel.desktop.in.in.h:4
+msgid "InputMethod;IM;"
+msgstr "輸入法;IM;InputMethod"
 
 #: ../src/ui/eggdesktopfile.c:165
 #, c-format
@@ -115,9 +116,9 @@ msgstr "無法取得資訊"
 
 #: ../src/ui/im-chooser-simple.c:271
 msgid "Failed to switch Input Method"
-msgstr "切換輸入法失敗"
+msgstr "無法切換輸入法"
 
-#: ../src/ui/im-chooser-simple.c:372
+#: ../src/ui/im-chooser-simple.c:375
 #, c-format
 msgid "Switching Input Method - %s"
 msgstr "正在切換輸入法 - %s"
@@ -125,9 +126,8 @@ msgstr "正在切換輸入法 - %s"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications and Qt applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications and GTK+ applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications and Qt applications</i></small>"
-#: ../src/ui/im-chooser-simple.c:460
-#: ../src/ui/im-chooser-simple.c:463
-#: ../src/ui/im-chooser-simple.c:466
+#: ../src/ui/im-chooser-simple.c:463 ../src/ui/im-chooser-simple.c:466
+#: ../src/ui/im-chooser-simple.c:469
 #, c-format
 msgid ", except %s and %s"
 msgstr "，除了 %s 和 %s"
@@ -135,84 +135,86 @@ msgstr "，除了 %s 和 %s"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except Qt applications</i></small>"
-#: ../src/ui/im-chooser-simple.c:469
-#: ../src/ui/im-chooser-simple.c:472
-#: ../src/ui/im-chooser-simple.c:475
+#: ../src/ui/im-chooser-simple.c:472 ../src/ui/im-chooser-simple.c:475
+#: ../src/ui/im-chooser-simple.c:478
 #, c-format
 msgid ", except %s"
 msgstr "，除了 %s"
 
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications</i></small>"
-#: ../src/ui/im-chooser-simple.c:480
+#: ../src/ui/im-chooser-simple.c:483
 #, c-format
-msgid "<small><i>Note: this change will not take effect until you next log in%s</i></small>"
+msgid ""
+"<small><i>Note: this change will not take effect until you next log in%s</"
+"i></small>"
 msgstr "<small><i>注意：這項變更要等到您下次登入 %s 後才會生效。</i></small>"
 
-#: ../src/ui/im-chooser-simple.c:539
+#: ../src/ui/im-chooser-simple.c:542
 msgid "Parent Window"
 msgstr "親代視窗"
 
-#: ../src/ui/im-chooser-simple.c:540
+#: ../src/ui/im-chooser-simple.c:543
 msgid "GtkWindow that points to the parent window"
 msgstr "指向親代視窗的 GtkWindow"
 
-#: ../src/ui/im-chooser-simple.c:545
+#: ../src/ui/im-chooser-simple.c:548
 msgid "Note type"
 msgstr "Note 類型"
 
-#: ../src/ui/im-chooser-simple.c:546
+#: ../src/ui/im-chooser-simple.c:549
 msgid "A enum value to determine which notes should be displayed"
 msgstr "一個判斷應顯示哪個 note 的 enum 值"
 
 #. setup a progress window
-#: ../src/ui/im-chooser-simple.c:589
+#: ../src/ui/im-chooser-simple.c:592
 msgid "Work in progress..."
 msgstr "正在處理中..."
 
-#: ../src/ui/im-chooser-simple.c:671
+#: ../src/ui/im-chooser-simple.c:674
 msgid "No Input Method"
 msgstr "無輸入法"
 
-#: ../src/ui/im-chooser-simple.c:673
+#: ../src/ui/im-chooser-simple.c:676
 #, c-format
 msgid "Use %s"
 msgstr "使用 %s"
 
-#: ../src/ui/im-chooser-simple.c:680
+#: ../src/ui/im-chooser-simple.c:683
 msgid " (legacy)"
 msgstr " (不再維護)"
 
-#: ../src/ui/im-chooser-simple.c:682
+#: ../src/ui/im-chooser-simple.c:685
 msgid " (recommended)"
 msgstr " (建議)"
 
-#: ../src/ui/im-chooser-simple.c:726
+#: ../src/ui/im-chooser-simple.c:729
 #, c-format
 msgid "Unable to communicate to IMSettings services"
 msgstr "無法和 IMSettings 服務進行通訊"
 
-#: ../src/ui/im-chooser-simple.c:727
+#: ../src/ui/im-chooser-simple.c:730
 msgid "Version mismatch"
 msgstr "版本不符"
 
-#: ../src/ui/im-chooser-simple.c:741
+#: ../src/ui/im-chooser-simple.c:747
 msgid "Unable to gather current status"
 msgstr "無法取得目前的狀態"
 
-#: ../src/ui/im-chooser-simple.c:747
+#: ../src/ui/im-chooser-simple.c:753
 msgid "Unable to get Input Method information"
 msgstr "無法取得輸入法資訊"
 
-#: ../src/ui/im-chooser-simple.c:856
+#: ../src/ui/im-chooser-simple.c:862
 msgid "<b>Input Method</b>"
 msgstr "<b>輸入法</b>"
 
-#: ../src/ui/im-chooser-simple.c:891
+#: ../src/ui/im-chooser-simple.c:897
 msgid "Input Method _Preferences..."
 msgstr "輸入法偏好設定(_P)..."
 
 #: ../src/ui/im-chooser-ui.c:55
-msgid "<span weight=\"bold\" size=\"larger\">No input method is available</span>"
+msgid ""
+"<span weight=\"bold\" size=\"larger\">No input method is available</span>"
 msgstr "<span weight=\"bold\" size=\"larger\">沒有可用的輸入法</span>"
 
 #: ../src/ui/im-chooser-ui.c:58
@@ -235,17 +237,3 @@ msgstr "[選項...]"
 #, c-format
 msgid "Could not parse arguments: %s\n"
 msgstr "無法解析引數：%s\n"
-
-#~ msgid "Failed to start Input Method"
-#~ msgstr "啟用輸入法失敗"
-#~ msgid "Stopping Input Method - %s"
-#~ msgstr "停用輸入法 - %s"
-#~ msgid "Updating Input Method list"
-#~ msgstr "更新輸入法清單"
-#~ msgid "_Enable input method feature"
-#~ msgstr "啟用輸入法功能(_E)"
-#~ msgid "Show the status icon"
-#~ msgstr "顯示狀態圖示"
-#~ msgid "IM Chooser - Input Method configuration tool"
-#~ msgstr "IM Chooser - 輸入法設定工具"
-

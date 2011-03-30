@@ -1,4 +1,34 @@
-1.4.0 ->
+1.4.1 -> 1.4.2
+=================
+* Bug Fixes:
+  * Update libegg code to build against the latest GTK+.
+  * Update the category of .desktop for GNOME control center.
+  * ticket#5: Fix a typo
+
+* Translations updated:
+  * Bengali India
+  * Brazilian Portuguese
+  * Danish
+  * Flemish Dutch
+  * Italian
+  * German
+  * Gujarati
+  * Japanese
+  * Kannada
+  * Korean
+  * Malayalam
+  * Oriya
+  * Polish
+  * Punjabi
+  * Russian
+  * Simplified Chinese
+  * Spanish
+  * Tamil
+  * Traditional Chinese
+  * Turkish
+  * Ukrainian
+
+1.4.0 -> 1.4.1
 =================
 * Enhancement:
   * IMSettings 1.0.0 support.

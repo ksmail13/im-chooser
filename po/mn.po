@@ -1,40 +1,39 @@
-# translation of mn.po to mongolia
-# translation of mn.po to
-# Copyright (C) 2007 THE mn'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the mn package.
-# naranhuu <naranhuu@localhost.localdomain>, 2007.
-# naranhuu <naranhuu@gmail.com>, 2007.
-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: mn\n"
+"Project-Id-Version: im-chooser\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-01-06 15:38+0900\n"
-"PO-Revision-Date: 2008-03-01 18:06+0900\n"
-"Last-Translator: naranhuu <naranhuu@gmail.com>\n"
-"Language-Team: mongolia <openmn-translation@lists.sf.net>\n"
-"Language: \n"
+"POT-Creation-Date: 2011-03-04 20:12+0900\n"
+"PO-Revision-Date: 2011-03-22 15:34+0000\n"
+"Last-Translator: tagoh <akira+transifex@tagoh.org>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: mn\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
 
 #: ../src/ccpanel/im-chooser-panel.desktop.in.in.h:1
 #: ../src/im-chooser.desktop.in.in.h:1 ../src/xfce4-im-chooser.desktop.in.h:1
-#, fuzzy
 msgid ""
 "Choose the input method to be used or disable the input method usage on the "
 "desktop"
 msgstr ""
-"Оруулах Зарчим тохируулах хэрэгсэл нь Оруулах Зарчимыг сонгох буюу идэвхгүй "
-"болгоход хэрэглэгдэнэ"
 
 #: ../src/ccpanel/im-chooser-panel.desktop.in.in.h:2
 #: ../src/ui/im-chooser-ui.c:117 ../src/im-chooser.desktop.in.in.h:2
 #: ../src/xfce4-im-chooser.desktop.in.h:2
-#, fuzzy
 msgid "Input Method Selector"
-msgstr "Оруулах Зарчим"
+msgstr ""
+
+#. Translators: those are keywords for im-chooser control-center panel
+#: ../src/ccpanel/im-chooser-panel.desktop.in.in.h:4
+msgid "InputMethod;IM;"
+msgstr ""
 
 #: ../src/ui/eggdesktopfile.c:165
 #, c-format
@@ -116,20 +115,19 @@ msgid "Unable to get the information"
 msgstr ""
 
 #: ../src/ui/im-chooser-simple.c:271
-#, fuzzy
 msgid "Failed to switch Input Method"
-msgstr "Оруулах Зарчмыг ашиглахгүй(_D)"
+msgstr ""
 
-#: ../src/ui/im-chooser-simple.c:372
-#, fuzzy, c-format
+#: ../src/ui/im-chooser-simple.c:375
+#, c-format
 msgid "Switching Input Method - %s"
-msgstr "Оруулах Зарчим"
+msgstr ""
 
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications and Qt applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications and GTK+ applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications and Qt applications</i></small>"
-#: ../src/ui/im-chooser-simple.c:460 ../src/ui/im-chooser-simple.c:463
-#: ../src/ui/im-chooser-simple.c:466
+#: ../src/ui/im-chooser-simple.c:463 ../src/ui/im-chooser-simple.c:466
+#: ../src/ui/im-chooser-simple.c:469
 #, c-format
 msgid ", except %s and %s"
 msgstr ""
@@ -137,86 +135,80 @@ msgstr ""
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except Qt applications</i></small>"
-#: ../src/ui/im-chooser-simple.c:469 ../src/ui/im-chooser-simple.c:472
-#: ../src/ui/im-chooser-simple.c:475
+#: ../src/ui/im-chooser-simple.c:472 ../src/ui/im-chooser-simple.c:475
+#: ../src/ui/im-chooser-simple.c:478
 #, c-format
 msgid ", except %s"
 msgstr ""
 
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications</i></small>"
-#: ../src/ui/im-chooser-simple.c:480
-#, fuzzy, c-format
+#: ../src/ui/im-chooser-simple.c:483
+#, c-format
 msgid ""
 "<small><i>Note: this change will not take effect until you next log in%s</"
 "i></small>"
 msgstr ""
-"<small><i>Мэдэгдэл: энэ өөрчлөлт нь таныг дараагийн удаа нэвтрэх хүртэл "
-"хүчингүй байна.</i></small>"
 
-#: ../src/ui/im-chooser-simple.c:539
+#: ../src/ui/im-chooser-simple.c:542
 msgid "Parent Window"
 msgstr ""
 
-#: ../src/ui/im-chooser-simple.c:540
+#: ../src/ui/im-chooser-simple.c:543
 msgid "GtkWindow that points to the parent window"
 msgstr ""
 
-#: ../src/ui/im-chooser-simple.c:545
+#: ../src/ui/im-chooser-simple.c:548
 msgid "Note type"
 msgstr ""
 
-#: ../src/ui/im-chooser-simple.c:546
+#: ../src/ui/im-chooser-simple.c:549
 msgid "A enum value to determine which notes should be displayed"
 msgstr ""
 
 #. setup a progress window
-#: ../src/ui/im-chooser-simple.c:589
+#: ../src/ui/im-chooser-simple.c:592
 msgid "Work in progress..."
 msgstr ""
 
-#: ../src/ui/im-chooser-simple.c:671
-#, fuzzy
+#: ../src/ui/im-chooser-simple.c:674
 msgid "No Input Method"
-msgstr "Оруулах Зарчим"
+msgstr ""
 
-#: ../src/ui/im-chooser-simple.c:673
+#: ../src/ui/im-chooser-simple.c:676
 #, c-format
 msgid "Use %s"
 msgstr "%s -г ашиглах"
 
-#: ../src/ui/im-chooser-simple.c:680
-#, fuzzy
+#: ../src/ui/im-chooser-simple.c:683
 msgid " (legacy)"
-msgstr "(Legacy)"
+msgstr ""
 
-#: ../src/ui/im-chooser-simple.c:682
-#, fuzzy
+#: ../src/ui/im-chooser-simple.c:685
 msgid " (recommended)"
-msgstr "(Санал болгож байна)"
+msgstr ""
 
-#: ../src/ui/im-chooser-simple.c:726
+#: ../src/ui/im-chooser-simple.c:729
 #, c-format
 msgid "Unable to communicate to IMSettings services"
 msgstr ""
 
-#: ../src/ui/im-chooser-simple.c:727
+#: ../src/ui/im-chooser-simple.c:730
 msgid "Version mismatch"
 msgstr ""
 
-#: ../src/ui/im-chooser-simple.c:741
+#: ../src/ui/im-chooser-simple.c:747
 msgid "Unable to gather current status"
 msgstr ""
 
-#: ../src/ui/im-chooser-simple.c:747
-#, fuzzy
+#: ../src/ui/im-chooser-simple.c:753
 msgid "Unable to get Input Method information"
-msgstr "ОЗ Сонгогч·-·Оруулах Зарчим тохируулах хэрэгсэл"
+msgstr ""
 
-#: ../src/ui/im-chooser-simple.c:856
+#: ../src/ui/im-chooser-simple.c:862
 msgid "<b>Input Method</b>"
 msgstr "<b>Оруулах Зарчим</b>"
 
-#: ../src/ui/im-chooser-simple.c:891
+#: ../src/ui/im-chooser-simple.c:897
 msgid "Input Method _Preferences..."
 msgstr "Оруулах Зарчим Тохируулга...(_P)"
 
@@ -234,9 +226,8 @@ msgid "Could not connect to the session manager"
 msgstr ""
 
 #: ../src/ui/im-chooser-ui.c:146
-#, fuzzy
 msgid "Log Out"
-msgstr "Гарах(_L)"
+msgstr ""
 
 #: ../src/main.c:36
 msgid "[options...]"
@@ -246,65 +237,3 @@ msgstr ""
 #, c-format
 msgid "Could not parse arguments: %s\n"
 msgstr ""
-
-#, fuzzy
-#~ msgid "Failed to start Input Method"
-#~ msgstr "Оруулах Зарчмыг ашиглахгүй(_D)"
-
-#, fuzzy
-#~ msgid "Stopping Input Method - %s"
-#~ msgstr "Оруулах Зарчим"
-
-#, fuzzy
-#~ msgid "Updating Input Method list"
-#~ msgstr "Оруулах Зарчим"
-
-#~ msgid "_Enable input method feature"
-#~ msgstr "Оруулах зарчмын онцлогийг идэвхжүүлэх(_E)"
-
-#~ msgid "IM Chooser - Input Method configuration tool"
-#~ msgstr "ОЗ Сонгогч·-·Оруулах Зарчим тохируулах хэрэгсэл"
-
-#~ msgid "No valid IM installed"
-#~ msgstr "Хүчингүй Оруулах Зарчим суулгагдсан байна"
-
-#~ msgid "_Use default Input Method for your language"
-#~ msgstr "Зориулалтын Оруулах Зарчмыг ашиглах(_U)"
-
-#~ msgid ""
-#~ "Your system chooses the appropriate Input Method for your language "
-#~ "automatically from among Input Methods installed on your system."
-#~ msgstr ""
-#~ "Системд суулгагдсан Оруулах Зарчмуудаас таны хэлэндтохирохыг сонгож байна."
-
-#~ msgid "Choose _specific Input Method"
-#~ msgstr "Тусгай Оруулах Зарчим Сонгох(_S)"
-
-#~ msgid ""
-#~ "Use the specific Input Method that you prefer regardless what Input "
-#~ "Method the system recommends."
-#~ msgstr ""
-#~ "Системын санал болгосон Оруулах Зарчмаас илүү гэж үзэж байгаа тусгай "
-#~ "Оруулах Зарчмыг сонгох"
-
-#~ msgid ""
-#~ "Do not use Input Method no matter what language the desktop is running on."
-#~ msgstr ""
-#~ "Дэлгэцэн дээр ямар хэл ашиглагдаж байгаа нь хамаагүй. Оруулах Зарчмыг "
-#~ "ашиглахгүй."
-
-#~ msgid "Use legacy _Input Method"
-#~ msgstr "Оруулах Зарчмыг ашиглах(_I) "
-
-#~ msgid ""
-#~ "Use X Input Method anyway. In fact, which input method will be chosen for "
-#~ "the desktop session, depends on the desktop language."
-#~ msgstr ""
-#~ "Ямар ч байсан X·Оруулах Зарчмыг ашиглах.·Дэлгэцэнд ашиглах Оруулах Зарчим "
-#~ "нь хэлнээс хамааралтай юм."
-
-#~ msgid "xinputrc was modified by the user"
-#~ msgstr "хэрэглэгч xinputrc-г өөрчилсөн байна"
-
-#~ msgid "User Specific"
-#~ msgstr "Тусгай"

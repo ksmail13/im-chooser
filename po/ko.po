@@ -1,32 +1,27 @@
-# translation of im-chooser.trunk.ko.po to Korean
-# Korean translations for im-chooser package.
-# Copyright (C) 2006 Red Hat, Inc. All rights reserved.
-# This file is distributed under the same license as the im-chooser package.
-# 
-# Automatically generated, 2006.
-# Eunju Kim <eukim@redhat.com>, 2006, 2007, 2008.
-# Hyunsok Oh <hoh@redhat.com>, 2010.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: im-chooser.trunk.ko\n"
+"Project-Id-Version: im-chooser\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-01-06 15:38+0900\n"
-"PO-Revision-Date: 2010-03-31 14:24+1000\n"
-"Last-Translator: Hyunsok Oh <hoh@redhat.com>\n"
-"Language-Team: Korean <ko@li.org>\n"
+"POT-Creation-Date: 2011-03-04 20:12+0900\n"
+"PO-Revision-Date: 2011-03-22 15:34+0000\n"
+"Last-Translator: tagoh <akira+transifex@tagoh.org>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ko\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: ko\n"
-"Plural-Forms: nplurals=2; plural=(n!=1);\n"
-"\n"
-"\n"
-"\n"
-"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=1; plural=0\n"
 
 #: ../src/ccpanel/im-chooser-panel.desktop.in.in.h:1
 #: ../src/im-chooser.desktop.in.in.h:1 ../src/xfce4-im-chooser.desktop.in.h:1
-msgid "Choose the input method to be used or disable the input method usage on the desktop"
+msgid ""
+"Choose the input method to be used or disable the input method usage on the "
+"desktop"
 msgstr "데스크탑에서 입력 방식 사용을 비활성화, 또는 사용할 입력 방식 선택 "
 
 #: ../src/ccpanel/im-chooser-panel.desktop.in.in.h:2
@@ -35,30 +30,73 @@ msgstr "데스크탑에서 입력 방식 사용을 비활성화, 또는 사용�
 msgid "Input Method Selector"
 msgstr "입력 방식"
 
+#. Translators: those are keywords for im-chooser control-center panel
+#: ../src/ccpanel/im-chooser-panel.desktop.in.in.h:4
+msgid "InputMethod;IM;"
+msgstr ""
+
 #: ../src/ui/eggdesktopfile.c:165
 #, c-format
 msgid "File is not a valid .desktop file"
 msgstr "올바르지 않은 .desktop 파일입니다"
 
 #: ../src/ui/eggdesktopfile.c:188
-#, fuzzy, c-format
+#, c-format
 msgid "Unrecognized desktop file Version '%s'"
-msgstr "인식되지 않은 데스크탑 파일 버전 '%s'"
+msgstr ""
 
 #: ../src/ui/eggdesktopfile.c:968
-#, fuzzy, c-format
+#, c-format
 msgid "Starting %s"
-msgstr "%s 시작중"
+msgstr ""
 
 #: ../src/ui/eggdesktopfile.c:1110
-#, fuzzy, c-format
+#, c-format
 msgid "Application does not accept documents on command line"
-msgstr "어플리케이션이 명령줄에서 문서를 받지 않습니다"
+msgstr ""
 
 #: ../src/ui/eggdesktopfile.c:1178
-#, fuzzy, c-format
+#, c-format
 msgid "Unrecognized launch option: %d"
-msgstr "올바르지 않은 실행 옵션 %d"
+msgstr ""
+
+#: ../src/ui/eggdesktopfile.c:1383
+#, c-format
+msgid "Can't pass document URIs to a 'Type=Link' desktop entry"
+msgstr ""
+
+#: ../src/ui/eggdesktopfile.c:1404
+#, c-format
+msgid "Not a launchable item"
+msgstr ""
+
+#: ../src/ui/eggsmclient.c:226
+msgid "Disable connection to session manager"
+msgstr ""
+
+#: ../src/ui/eggsmclient.c:229
+msgid "Specify file containing saved configuration"
+msgstr ""
+
+#: ../src/ui/eggsmclient.c:229
+msgid "FILE"
+msgstr "파일"
+
+#: ../src/ui/eggsmclient.c:232
+msgid "Specify session management ID"
+msgstr ""
+
+#: ../src/ui/eggsmclient.c:232
+msgid "ID"
+msgstr "ID"
+
+#: ../src/ui/eggsmclient.c:253
+msgid "Session management options:"
+msgstr ""
+
+#: ../src/ui/eggsmclient.c:254
+msgid "Show session management options"
+msgstr "세션 관리자 옵션 표시"
 
 #: ../src/ui/im-chooser-simple.c:117
 msgid "X applications"
@@ -77,193 +115,128 @@ msgid "Unable to get the information"
 msgstr "정보를 얻을 수 없음 "
 
 #: ../src/ui/im-chooser-simple.c:271
-#, fuzzy
 msgid "Failed to switch Input Method"
-msgstr "입력 방식 중지 실패  "
+msgstr ""
 
-#: ../src/ui/im-chooser-simple.c:372
-#, fuzzy, c-format
+#: ../src/ui/im-chooser-simple.c:375
+#, c-format
 msgid "Switching Input Method - %s"
-msgstr "입력 방식 시작 - %s"
+msgstr ""
 
-#. This will be displayed like "<small><i>Note: this change will not take
-#. effect until you next log in, except X applications and Qt
-#. applications</i></small>"
-#. This will be displayed like "<small><i>Note: this change will not take
-#. effect until you next log in, except X applications and GTK+
-#. applications</i></small>"
-#. This will be displayed like "<small><i>Note: this change will not take
-#. effect until you next log in, except GTK+ applications and Qt
-#. applications</i></small>"
-#: ../src/ui/im-chooser-simple.c:460 ../src/ui/im-chooser-simple.c:463
-#: ../src/ui/im-chooser-simple.c:466
+#. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications and Qt applications</i></small>"
+#. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications and GTK+ applications</i></small>"
+#. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications and Qt applications</i></small>"
+#: ../src/ui/im-chooser-simple.c:463 ../src/ui/im-chooser-simple.c:466
+#: ../src/ui/im-chooser-simple.c:469
 #, c-format
 msgid ", except %s and %s"
 msgstr ", %s 및 %s 제외"
 
-#. This will be displayed like "<small><i>Note: this change will not take
-#. effect until you next log in, except X applications</i></small>"
-#. This will be displayed like "<small><i>Note: this change will not take
-#. effect until you next log in, except GTK+ applications</i></small>"
-#. This will be displayed like "<small><i>Note: this change will not take
-#. effect until you next log in, except Qt applications</i></small>"
-#: ../src/ui/im-chooser-simple.c:469 ../src/ui/im-chooser-simple.c:472
-#: ../src/ui/im-chooser-simple.c:475
+#. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications</i></small>"
+#. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications</i></small>"
+#. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except Qt applications</i></small>"
+#: ../src/ui/im-chooser-simple.c:472 ../src/ui/im-chooser-simple.c:475
+#: ../src/ui/im-chooser-simple.c:478
 #, c-format
 msgid ", except %s"
 msgstr ", %s 제외 "
 
-#. This will be displayed like "<small><i>Note: this change will not take
-#. effect until you next log in, except GTK+ applications</i></small>"
-#: ../src/ui/im-chooser-simple.c:480
+#. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications</i></small>"
+#: ../src/ui/im-chooser-simple.c:483
 #, c-format
-msgid "<small><i>Note: this change will not take effect until you next log in%s</i></small>"
-msgstr "<small><i>알림: 변경사항은 다음번 %s 로그인 할 때 까지 적용되지 않습니다.</i></small>"
+msgid ""
+"<small><i>Note: this change will not take effect until you next log in%s</"
+"i></small>"
+msgstr ""
+"<small><i>알림: 변경사항은 다음번 %s 로그인 할 때 까지 적용되지 않습니다.</"
+"i></small>"
 
-#: ../src/ui/im-chooser-simple.c:539
+#: ../src/ui/im-chooser-simple.c:542
 msgid "Parent Window"
 msgstr "부모창 "
 
-#: ../src/ui/im-chooser-simple.c:540
+#: ../src/ui/im-chooser-simple.c:543
 msgid "GtkWindow that points to the parent window"
 msgstr "부모창을 가리키는 GtkWindow "
 
-#: ../src/ui/im-chooser-simple.c:545
+#: ../src/ui/im-chooser-simple.c:548
 msgid "Note type"
 msgstr "알림 유형 "
 
-#: ../src/ui/im-chooser-simple.c:546
+#: ../src/ui/im-chooser-simple.c:549
 msgid "A enum value to determine which notes should be displayed"
 msgstr "어떤 알림이 나타나게 할 지를 결정하는 열거형 값      "
 
 #. setup a progress window
-#: ../src/ui/im-chooser-simple.c:589
+#: ../src/ui/im-chooser-simple.c:592
 msgid "Work in progress..."
 msgstr "실행 중..."
 
-#: ../src/ui/im-chooser-simple.c:673
+#: ../src/ui/im-chooser-simple.c:674
+msgid "No Input Method"
+msgstr ""
+
+#: ../src/ui/im-chooser-simple.c:676
 #, c-format
 msgid "Use %s"
 msgstr "%s 사용 "
 
-#: ../src/ui/im-chooser-simple.c:680
+#: ../src/ui/im-chooser-simple.c:683
 msgid " (legacy)"
 msgstr " (레거시)"
 
-#: ../src/ui/im-chooser-simple.c:682
+#: ../src/ui/im-chooser-simple.c:685
 msgid " (recommended)"
 msgstr " (권장 사항)"
 
-#: ../src/ui/im-chooser-simple.c:726
+#: ../src/ui/im-chooser-simple.c:729
 #, c-format
 msgid "Unable to communicate to IMSettings services"
 msgstr "IMSettings 서비스와 통신할 수 없음"
 
-#: ../src/ui/im-chooser-simple.c:727
+#: ../src/ui/im-chooser-simple.c:730
 msgid "Version mismatch"
 msgstr "버전 불일치 "
 
-#: ../src/ui/im-chooser-simple.c:741
+#: ../src/ui/im-chooser-simple.c:747
 msgid "Unable to gather current status"
 msgstr "현재 상태를 알 수 없음 "
 
-#: ../src/ui/im-chooser-simple.c:747
+#: ../src/ui/im-chooser-simple.c:753
 msgid "Unable to get Input Method information"
 msgstr "입력 방식 정보를 얻을 수 없음 "
 
-#: ../src/ui/im-chooser-simple.c:856
+#: ../src/ui/im-chooser-simple.c:862
 msgid "<b>Input Method</b>"
 msgstr "<b>입력 방식</b>"
 
-#: ../src/ui/im-chooser-simple.c:891
+#: ../src/ui/im-chooser-simple.c:897
 msgid "Input Method _Preferences..."
 msgstr "입력 방식 설정 (_P) "
 
 #: ../src/ui/im-chooser-ui.c:55
-msgid "<span weight=\"bold\" size=\"larger\">No input method is available</span>"
-msgstr "<span weight=\"bold\" size=\"larger\">사용 가능한 입력 방식이 없음</span> "
+msgid ""
+"<span weight=\"bold\" size=\"larger\">No input method is available</span>"
+msgstr ""
+"<span weight=\"bold\" size=\"larger\">사용 가능한 입력 방식이 없음</span> "
 
 #: ../src/ui/im-chooser-ui.c:58
 msgid "Please install any input methods before running if you like."
 msgstr "실행하기 전 입력 방식을 설치하기 바랍니다."
 
+#: ../src/ui/im-chooser-ui.c:88
+msgid "Could not connect to the session manager"
+msgstr ""
+
 #: ../src/ui/im-chooser-ui.c:146
 msgid "Log Out"
 msgstr "로그 아웃 "
 
-#: ../src/main.c:56
-#, c-format, fuzzy
-msgid "Could not parse arguments: %s\n"
-msgstr "%s 인자를 읽을 수 없습니다\n"
-
 #: ../src/main.c:36
-#, fuzzy
 msgid "[options...]"
-msgstr "[옵션]"
-
-#: ../src/ui/im-chooser-ui.c:88
-#, fuzzy
-msgid "Could not connect to the session manager"
-msgstr "세션 관리자에 연결할 수 없습니다"
-
-#: ../src/ui/eggdesktopfile.c:1404
-#, c-format, fuzzy
-msgid "Not a launchable item"
-msgstr "실행 가능한 항목이 아닙니다"
-
-#: ../src/ui/eggdesktopfile.c:1383
-#, c-format, fuzzy
-msgid "Can't pass document URIs to a 'Type=Link' desktop entry"
-msgstr "문서 URI를 'Type=Link' 데스크탑 엔트리로 보낼 수 없습니다"
-
-#: ../src/ui/eggsmclient.c:229
-msgid "Specify file containing saved configuration"
 msgstr ""
 
-#: ../src/ui/eggsmclient.c:226
-#, fuzzy
-msgid "Disable connection to session manager"
-msgstr "세션 관리자 연결 해제"
-
-#: ../src/ui/eggsmclient.c:232
-msgid "Specify session management ID"
+#: ../src/main.c:56
+#, c-format
+msgid "Could not parse arguments: %s\n"
 msgstr ""
-
-#: ../src/ui/eggsmclient.c:229
-msgid "FILE"
-msgstr "파일"
-
-#: ../src/ui/eggsmclient.c:253
-msgid "Session management options:"
-msgstr ""
-
-#: ../src/ui/eggsmclient.c:232
-msgid "ID"
-msgstr "ID"
-
-#: ../src/ui/eggsmclient.c:254
-msgid "Show session management options"
-msgstr "세션 관리자 옵션 표시"
-
-#: ../src/ui/im-chooser-simple.c:671
-#, fuzzy
-msgid "No Input Method"
-msgstr "입력 방식 없음"
-
-#~ msgid "Failed to start Input Method"
-#~ msgstr "입력 방식 시작 실패 "
-
-#~ msgid "Stopping Input Method - %s"
-#~ msgstr "입력 방식 중지 - %s"
-
-#~ msgid "Updating Input Method list"
-#~ msgstr "입력 방식 목록 업데이트 "
-
-#~ msgid "_Enable input method feature"
-#~ msgstr "입력 방식 기능 활성화 (_E)"
-
-#~ msgid "Show the status icon"
-#~ msgstr "상태 아이콘 표시 "
-
-#~ msgid "IM Chooser - Input Method configuration tool"
-#~ msgstr "IM 선택자 - 입력 방식 설정 도구"

@@ -1,26 +1,21 @@
-# translation of tr.po to Turkish
-# translation of tr.po to
-# Turkish translations for im-chooser package.
-# Copyright (C) 2006 Red Hat, Inc. All rights reserved.
-# This file is distributed under the same license as the im-chooser package.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-# Ismail ASCI <ismail.asci@gmail.com>, 2006.
-# Egemen Metin Turan <mturan@aegee-ankara.org>, 2007.
-# Hasan Alp İNAN, 2011.
 msgid ""
 msgstr ""
 "Project-Id-Version: im-chooser\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-01-06 15:38+0900\n"
-"PO-Revision-Date: 2011-02-04 17:54+0200\n"
-"Last-Translator: Hasan Alp İNAN\n"
-"Language-Team: Turkish <none>\n"
+"POT-Creation-Date: 2011-03-04 20:12+0900\n"
+"PO-Revision-Date: 2011-03-22 15:34+0000\n"
+"Last-Translator: tagoh <akira+transifex@tagoh.org>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: tr\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 1.1\n"
+"Plural-Forms: nplurals=1; plural=0\n"
 
 #: ../src/ccpanel/im-chooser-panel.desktop.in.in.h:1
 #: ../src/im-chooser.desktop.in.in.h:1 ../src/xfce4-im-chooser.desktop.in.h:1
@@ -40,7 +35,7 @@ msgstr "Giriş Yöntemi Seçici"
 #. Translators: those are keywords for im-chooser control-center panel
 #: ../src/ccpanel/im-chooser-panel.desktop.in.in.h:4
 msgid "InputMethod;IM;"
-msgstr "GirişYöntemi;GY;"
+msgstr ""
 
 #: ../src/ui/eggdesktopfile.c:165
 #, c-format
@@ -123,18 +118,18 @@ msgstr "Bilgi alınamıyor"
 
 #: ../src/ui/im-chooser-simple.c:271
 msgid "Failed to switch Input Method"
-msgstr "Giriş Yöntemine geçiş başarısız"
+msgstr ""
 
-#: ../src/ui/im-chooser-simple.c:372
+#: ../src/ui/im-chooser-simple.c:375
 #, c-format
 msgid "Switching Input Method - %s"
-msgstr "Giriş Yöntemine Geçiliyor - %s"
+msgstr ""
 
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications and Qt applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications and GTK+ applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications and Qt applications</i></small>"
-#: ../src/ui/im-chooser-simple.c:460 ../src/ui/im-chooser-simple.c:463
-#: ../src/ui/im-chooser-simple.c:466
+#: ../src/ui/im-chooser-simple.c:463 ../src/ui/im-chooser-simple.c:466
+#: ../src/ui/im-chooser-simple.c:469
 #, c-format
 msgid ", except %s and %s"
 msgstr ", %s ve %s haricinde"
@@ -142,14 +137,14 @@ msgstr ", %s ve %s haricinde"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except Qt applications</i></small>"
-#: ../src/ui/im-chooser-simple.c:469 ../src/ui/im-chooser-simple.c:472
-#: ../src/ui/im-chooser-simple.c:475
+#: ../src/ui/im-chooser-simple.c:472 ../src/ui/im-chooser-simple.c:475
+#: ../src/ui/im-chooser-simple.c:478
 #, c-format
 msgid ", except %s"
 msgstr ", %s haricinde"
 
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications</i></small>"
-#: ../src/ui/im-chooser-simple.c:480
+#: ../src/ui/im-chooser-simple.c:483
 #, c-format
 msgid ""
 "<small><i>Note: this change will not take effect until you next log in%s</"
@@ -158,66 +153,66 @@ msgstr ""
 "<small><i>Not: Bu değişiklik bir sonraki %s girişinize kadar etki "
 "etmeyecektir.</i></small>"
 
-#: ../src/ui/im-chooser-simple.c:539
+#: ../src/ui/im-chooser-simple.c:542
 msgid "Parent Window"
 msgstr "Ana Pencere"
 
-#: ../src/ui/im-chooser-simple.c:540
+#: ../src/ui/im-chooser-simple.c:543
 msgid "GtkWindow that points to the parent window"
 msgstr "Ana pencereyi işaret eden GTKWindow"
 
-#: ../src/ui/im-chooser-simple.c:545
+#: ../src/ui/im-chooser-simple.c:548
 msgid "Note type"
 msgstr "Not türü"
 
-#: ../src/ui/im-chooser-simple.c:546
+#: ../src/ui/im-chooser-simple.c:549
 msgid "A enum value to determine which notes should be displayed"
 msgstr "Bir sayım değeri belirlenmeli ki notlar görüntülenebilir olmalı"
 
 #. setup a progress window
-#: ../src/ui/im-chooser-simple.c:589
+#: ../src/ui/im-chooser-simple.c:592
 msgid "Work in progress..."
 msgstr "Devam eden iş..."
 
-#: ../src/ui/im-chooser-simple.c:671
+#: ../src/ui/im-chooser-simple.c:674
 msgid "No Input Method"
 msgstr "Giriş Yöntemi Yok"
 
-#: ../src/ui/im-chooser-simple.c:673
+#: ../src/ui/im-chooser-simple.c:676
 #, c-format
 msgid "Use %s"
 msgstr "%s kullan"
 
-#: ../src/ui/im-chooser-simple.c:680
+#: ../src/ui/im-chooser-simple.c:683
 msgid " (legacy)"
 msgstr "(kalıt)"
 
-#: ../src/ui/im-chooser-simple.c:682
+#: ../src/ui/im-chooser-simple.c:685
 msgid " (recommended)"
 msgstr "(önerilen)"
 
-#: ../src/ui/im-chooser-simple.c:726
+#: ../src/ui/im-chooser-simple.c:729
 #, c-format
 msgid "Unable to communicate to IMSettings services"
 msgstr "IMSettings hizmetleriyle iletişim kurulamıyor"
 
-#: ../src/ui/im-chooser-simple.c:727
+#: ../src/ui/im-chooser-simple.c:730
 msgid "Version mismatch"
 msgstr "Sürüm uyumsuzluğu"
 
-#: ../src/ui/im-chooser-simple.c:741
+#: ../src/ui/im-chooser-simple.c:747
 msgid "Unable to gather current status"
 msgstr "Mevcut durum bir araya getirilemiyor"
 
-#: ../src/ui/im-chooser-simple.c:747
+#: ../src/ui/im-chooser-simple.c:753
 msgid "Unable to get Input Method information"
 msgstr "Giriş Yöntemi bilgisi alınamıyor"
 
-#: ../src/ui/im-chooser-simple.c:856
+#: ../src/ui/im-chooser-simple.c:862
 msgid "<b>Input Method</b>"
 msgstr "<b>Giriş Yöntemi</b>"
 
-#: ../src/ui/im-chooser-simple.c:891
+#: ../src/ui/im-chooser-simple.c:897
 msgid "Input Method _Preferences..."
 msgstr "Giriş Yöntemi _Tercihleri"
 
@@ -249,64 +244,3 @@ msgstr "[seçenekler...]"
 #, c-format
 msgid "Could not parse arguments: %s\n"
 msgstr "Argümanlar çözümlenemedi: %s\n"
-
-#~ msgid "Failed to start Input Method"
-#~ msgstr "Giriş Yöntemi başlatılamadı"
-
-#~ msgid "Stopping Input Method - %s"
-#~ msgstr "Durdurma Giriş Yöntemi - %s"
-
-#~ msgid "Updating Input Method list"
-#~ msgstr "Giriş Yöntemi Listesi Güncellemesi"
-
-#~ msgid "_Enable input method feature"
-#~ msgstr "Giriş yöntemi özelliğini _etkinleştir"
-
-#~ msgid "Show the status icon"
-#~ msgstr "Durum simgesini göster"
-
-#~ msgid "IM Chooser - Input Method configuration tool"
-#~ msgstr "HHA Seçici - Giriş Yöntemi yapılandırma aracı"
-
-#~ msgid "No valid IM installed"
-#~ msgstr "Geçerli bir HHA kurulmamış"
-
-#, fuzzy
-#~ msgid "Choose _specific Input Method"
-#~ msgstr "_Seçimlik giriş yöntemi kullan"
-
-#, fuzzy
-#~ msgid ""
-#~ "Use the specific Input Method that you prefer regardless what Input "
-#~ "Method the system recommends."
-#~ msgstr ""
-#~ "Sistemin önerdiği giriş yöntemini göz önüne almadan tercih ettiğiniz "
-#~ "giriş yöntemini kullanınız."
-
-#, fuzzy
-#~ msgid ""
-#~ "Do not use Input Method no matter what language the desktop is running on."
-#~ msgstr ""
-#~ "Hangi yerel kullanıldığı göz önüne alınmadan tüm giriş yöntemlerini "
-#~ "kullanılamaz kıl."
-
-#, fuzzy
-#~ msgid "Use legacy _Input Method"
-#~ msgstr "_Eski giriş yöntemlerini kullan"
-
-#~ msgid ""
-#~ "Use X Input Method anyway. In fact, which input method will be chosen for "
-#~ "the desktop session, depends on the desktop language."
-#~ msgstr ""
-#~ "X giriş yöntemini kullan. Gerçekte masaüstü oturumu hangi giriş yöntemini "
-#~ "seçeceğiniz masaüstü diline bağlıdır."
-
-#~ msgid "_Follow the system-wide configuration"
-#~ msgstr "Sistem genelinde geçerli yapılandırmayı _takip et"
-
-#~ msgid ""
-#~ "Follow the system-wide input method configuration to determine which "
-#~ "input method should be used."
-#~ msgstr ""
-#~ "Hangi giriş yönteminin kullanılacağını belirlemek için sistem genelinde "
-#~ "geçerli yapılandırmayı takip et."

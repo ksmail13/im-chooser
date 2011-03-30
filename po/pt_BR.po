@@ -1,34 +1,21 @@
-# Brazilian Portuguese translation of im-chooser.
-# Copyright (C) 2006,2007,2008 Red Hat, Inc. All rights reserved.
-# This file is distributed under the same license as the im-chooser package.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-# Automatically generated, 2006.
-# Valnir Ferreira Jr. <vferreir@redhat.com>, 2006.
-# Diego Búrigo Zacarão <diegobz@gmail.com>, 2007.
-# Igor Pires Soares <igor@projetofedora.org>, 2007,2008.
-# Frederico Madeira <fred@madeira.eng.br>, 2008.
-# Glaucia Cintra <gcintra@redhat.com>, 2008.
-# Diego Búrigo Zacarão <diegobz@projetofedora.org>, 2008.
-# Wilson Campos <wcampos5@gmail.com>, 2008.
-# Cleiton Lima <cleitonlima@espacoliberdade.blog.br>, 2010.
-# ufa <ufa@technotroll.org>, 2010.
-# Taylon Silmer <taylon@taylon.eti.br>, 2011.
 msgid ""
 msgstr ""
 "Project-Id-Version: im-chooser\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-01-06 15:38+0900\n"
-"PO-Revision-Date: 2011-02-15 13:39-0200\n"
-"Last-Translator: Taylon Silmer <taylon@taylon.eti.br>\n"
-"Language-Team: Brazilian Portuguese <trans-pt_br@lists.fedoraproject.org>\n"
+"POT-Creation-Date: 2011-03-04 20:12+0900\n"
+"PO-Revision-Date: 2011-03-22 15:34+0000\n"
+"Last-Translator: tagoh <akira+transifex@tagoh.org>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: pt_BR\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Poedit-Language: Portuguese\n"
-"X-Poedit-Country: BRAZIL\n"
-"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=2; plural=(n > 1)\n"
 
 #: ../src/ccpanel/im-chooser-panel.desktop.in.in.h:1
 #: ../src/im-chooser.desktop.in.in.h:1 ../src/xfce4-im-chooser.desktop.in.h:1
@@ -43,6 +30,11 @@ msgstr ""
 #: ../src/xfce4-im-chooser.desktop.in.h:2
 msgid "Input Method Selector"
 msgstr "Seletor de Método de entrada"
+
+#. Translators: those are keywords for im-chooser control-center panel
+#: ../src/ccpanel/im-chooser-panel.desktop.in.in.h:4
+msgid "InputMethod;IM;"
+msgstr ""
 
 #: ../src/ui/eggdesktopfile.c:165
 #, c-format
@@ -126,18 +118,18 @@ msgstr "Não foi possível obter as informações"
 
 #: ../src/ui/im-chooser-simple.c:271
 msgid "Failed to switch Input Method"
-msgstr "Falha ao alterar o método de entrada"
+msgstr ""
 
-#: ../src/ui/im-chooser-simple.c:372
+#: ../src/ui/im-chooser-simple.c:375
 #, c-format
 msgid "Switching Input Method - %s"
-msgstr "Alterando método de entrada - %s"
+msgstr ""
 
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications and Qt applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications and GTK+ applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications and Qt applications</i></small>"
-#: ../src/ui/im-chooser-simple.c:460 ../src/ui/im-chooser-simple.c:463
-#: ../src/ui/im-chooser-simple.c:466
+#: ../src/ui/im-chooser-simple.c:463 ../src/ui/im-chooser-simple.c:466
+#: ../src/ui/im-chooser-simple.c:469
 #, c-format
 msgid ", except %s and %s"
 msgstr ", exceto %s e %s"
@@ -145,14 +137,14 @@ msgstr ", exceto %s e %s"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except Qt applications</i></small>"
-#: ../src/ui/im-chooser-simple.c:469 ../src/ui/im-chooser-simple.c:472
-#: ../src/ui/im-chooser-simple.c:475
+#: ../src/ui/im-chooser-simple.c:472 ../src/ui/im-chooser-simple.c:475
+#: ../src/ui/im-chooser-simple.c:478
 #, c-format
 msgid ", except %s"
 msgstr ", exceto %s"
 
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications</i></small>"
-#: ../src/ui/im-chooser-simple.c:480
+#: ../src/ui/im-chooser-simple.c:483
 #, c-format
 msgid ""
 "<small><i>Note: this change will not take effect until you next log in%s</"
@@ -161,66 +153,66 @@ msgstr ""
 "<small><i>Nota: esta alteração não terá efeito até o seu próximo login%s.</"
 "i></small>"
 
-#: ../src/ui/im-chooser-simple.c:539
+#: ../src/ui/im-chooser-simple.c:542
 msgid "Parent Window"
 msgstr "Janela mãe"
 
-#: ../src/ui/im-chooser-simple.c:540
+#: ../src/ui/im-chooser-simple.c:543
 msgid "GtkWindow that points to the parent window"
 msgstr "GtkWindow que aponta para a janela mãe"
 
-#: ../src/ui/im-chooser-simple.c:545
+#: ../src/ui/im-chooser-simple.c:548
 msgid "Note type"
 msgstr "Tipo de nota"
 
-#: ../src/ui/im-chooser-simple.c:546
+#: ../src/ui/im-chooser-simple.c:549
 msgid "A enum value to determine which notes should be displayed"
 msgstr "Um valor enum para determinar quais notas devem ser exibidas"
 
 #. setup a progress window
-#: ../src/ui/im-chooser-simple.c:589
+#: ../src/ui/im-chooser-simple.c:592
 msgid "Work in progress..."
 msgstr "Trabalho em andamento..."
 
-#: ../src/ui/im-chooser-simple.c:671
+#: ../src/ui/im-chooser-simple.c:674
 msgid "No Input Method"
 msgstr "Sem Método de entrada"
 
-#: ../src/ui/im-chooser-simple.c:673
+#: ../src/ui/im-chooser-simple.c:676
 #, c-format
 msgid "Use %s"
 msgstr "Usar %s"
 
-#: ../src/ui/im-chooser-simple.c:680
+#: ../src/ui/im-chooser-simple.c:683
 msgid " (legacy)"
 msgstr " (legado)"
 
-#: ../src/ui/im-chooser-simple.c:682
+#: ../src/ui/im-chooser-simple.c:685
 msgid " (recommended)"
 msgstr " (recomendado)"
 
-#: ../src/ui/im-chooser-simple.c:726
+#: ../src/ui/im-chooser-simple.c:729
 #, c-format
 msgid "Unable to communicate to IMSettings services"
 msgstr "Não foi possível comunicar com os serviços IMSettings"
 
-#: ../src/ui/im-chooser-simple.c:727
+#: ../src/ui/im-chooser-simple.c:730
 msgid "Version mismatch"
 msgstr "A versão não confere"
 
-#: ../src/ui/im-chooser-simple.c:741
+#: ../src/ui/im-chooser-simple.c:747
 msgid "Unable to gather current status"
 msgstr "Não foi possível obter o status atual"
 
-#: ../src/ui/im-chooser-simple.c:747
+#: ../src/ui/im-chooser-simple.c:753
 msgid "Unable to get Input Method information"
 msgstr "Não foi possível obter as informações do método de entrada"
 
-#: ../src/ui/im-chooser-simple.c:856
+#: ../src/ui/im-chooser-simple.c:862
 msgid "<b>Input Method</b>"
 msgstr "<b>Método de entrada</b>"
 
-#: ../src/ui/im-chooser-simple.c:891
+#: ../src/ui/im-chooser-simple.c:897
 msgid "Input Method _Preferences..."
 msgstr "_Preferências do método de entrada..."
 
@@ -253,256 +245,3 @@ msgstr "[opções..]"
 #, c-format
 msgid "Could not parse arguments: %s\n"
 msgstr "Não foi possível analisar os argumentos: %s\n"
-
-#~ msgid "Failed to start Input Method"
-#~ msgstr "Falha ao iniciar o método de entrada"
-
-#~ msgid "Stopping Input Method - %s"
-#~ msgstr "Parando método de entrada - %s"
-
-#~ msgid "Updating Input Method list"
-#~ msgstr "Atualizando a lista de métodos de entrada"
-
-#~ msgid "_Enable input method feature"
-#~ msgstr "_Habilitar recurso do método de  entrada"
-
-#~ msgid "Show the status icon"
-#~ msgstr "Mostrar o ícone de status"
-
-#~ msgid "IM Chooser - Input Method configuration tool"
-#~ msgstr "IM Chooser - Ferramenta de configuração do método de entrada"
-
-#~ msgid "Show note"
-#~ msgstr "Mostrar nota"
-
-#~ msgid "Show note logs out to apply the change"
-#~ msgstr "Um logoff é realizado para aplicar a alteração de exibição de nota"
-
-#~ msgid "Replace the running settings daemon with new instance."
-#~ msgstr ""
-#~ "Substitua as configurações do daemon que estão rodando, por uma nova "
-#~ "instância"
-
-#~ msgid "Unknown error in parsing the command lines."
-#~ msgstr "Erro desconhecido ao analisar as linhas de comando."
-
-#~ msgid "Language"
-#~ msgstr "Linguagem"
-
-#~ msgid "A language to pull the information in."
-#~ msgstr "Um idioma para obter informações"
-
-#~ msgid "Filename"
-#~ msgstr "Nome do Arquivo"
-
-#~ msgid "A filename referring to the IM information."
-#~ msgstr "Um nome de arquivo que se refere à informações do IM."
-
-#~ msgid "GTK+ immodule"
-#~ msgstr "GTK+ immodule"
-
-#~ msgid "A module name used for GTK+"
-#~ msgstr "Um nome de módulo usado pelo GTK+"
-
-#~ msgid "Qt immodule"
-#~ msgstr "Qt immodule"
-
-#~ msgid "A module name used for Qt"
-#~ msgstr "Um nome de módulo usado pelo Qt"
-
-#~ msgid "XIM name"
-#~ msgstr "nome XIM"
-
-#~ msgid "XIM server name"
-#~ msgstr "nome do servidor XIM"
-
-#~ msgid "Ignore flag"
-#~ msgstr "Ignore o sinalizador"
-
-#~ msgid "A flag to not list up."
-#~ msgstr "Um sinalizador dizendo para não listar."
-
-#~ msgid "XIM server program name"
-#~ msgstr "Nome do programa do servidor XIM"
-
-#~ msgid "XIM server program to be run"
-#~ msgstr "Programa servidor XIM para ser executado"
-
-#~ msgid "XIM server program's options"
-#~ msgstr "Opções de programa do servidor XIM"
-
-#~ msgid "Command line options for XIM server program"
-#~ msgstr "Opções de linha de comando para o programa servidor XIM"
-
-#~ msgid "Preference program name"
-#~ msgstr "Nome do programa preferido"
-
-#~ msgid "Preference program to be run"
-#~ msgstr "Programa preferido a ser executado"
-
-#~ msgid "Preference program's options"
-#~ msgstr "Opções do programa preferido"
-
-#~ msgid "Command line options for preference program"
-#~ msgstr "Opções de linha de comando para o programa de preferência"
-
-#~ msgid "Auxiliary program name"
-#~ msgstr "Nome do programa auxiliar"
-
-#~ msgid "Auxiliary program to be run"
-#~ msgstr "Programa auxiliar a ser executado"
-
-#~ msgid "Auxiliary program's options"
-#~ msgstr "Opções do programa auxiliar"
-
-#~ msgid "Command line options for auxiliary program"
-#~ msgstr "Opções de linha de comando para o programa auxiliar"
-
-#~ msgid "Short Description"
-#~ msgstr "Descrição curta"
-
-#~ msgid "Long Description"
-#~ msgstr "Descrição longa"
-
-#~ msgid "System Default"
-#~ msgstr "Padrão do Sistema"
-
-#~ msgid "Whether or not IM is a system default."
-#~ msgstr "Não importa se o IM é um sistema padrão."
-
-#~ msgid "User Default"
-#~ msgstr "Padrão do Usuário"
-
-#~ msgid "Whether or not IM is an user default."
-#~ msgstr "Não importa se o IM é um usuário padrão."
-
-#~ msgid "XIM"
-#~ msgstr "XIM"
-
-#~ msgid "Whether or not IM is a XIM server."
-#~ msgstr "Não importa se o IM é um servidor XIM."
-
-#~ msgid "User Specific"
-#~ msgstr "Usuário Específico"
-
-#~ msgid "xinputrc was modified by the user"
-#~ msgstr "o xinputrc foi modificado pelo usuário"
-
-#~ msgid "Invalid IM module type: %d"
-#~ msgstr "Tipo do módulo IM inválido: %d"
-
-#~ msgid "IM module name"
-#~ msgstr "Nome do módulo IM"
-
-#~ msgid "A target IM module name that to observe signals"
-#~ msgstr "Um nome de módulo do IM para serem observados os sinais."
-
-#~ msgid "Replace"
-#~ msgstr "Substitua"
-
-#~ msgid "DBus connection"
-#~ msgstr "Conexão DBus"
-
-#~ msgid "An object to be a DBus connection"
-#~ msgstr "Um objeto para ser a conexão DBus"
-
-#~ msgid "DBus Interface"
-#~ msgstr "DBus Interface"
-
-#~ msgid "Interface name to connect to DBus"
-#~ msgstr "Nome da interface para conectar ao DBus"
-
-#~ msgid "Locale"
-#~ msgstr "Localização"
-
-#~ msgid ""
-#~ "Failed to invoke a method `%s':\n"
-#~ "  %s"
-#~ msgstr ""
-#~ "Falha ao chamar o método `%s':\n"
-#~ "  %s"
-
-#~ msgid ""
-#~ "Failed to invoke a method `%s' on %s:\n"
-#~ "  %s"
-#~ msgstr ""
-#~ "Falha ao chamar o método `%s' em %s:\n"
-#~ "  %s"
-
-#~ msgid "Failed to remove a pidfile: %s"
-#~ msgstr "Falha ao remover o pidfile: %s"
-
-#~ msgid "Failed to open a pidfile: %s"
-#~ msgstr "Falha ao abrir o pidfile: %s"
-
-#~ msgid "Couldn't determine the pid for %s process."
-#~ msgstr "Não foi possível determinar o pid para o processo %s"
-
-#~ msgid "Couldn't send a signal to the %s process successfully."
-#~ msgstr "Não foi possível enviar com sucesso um sinal para o processo %s."
-
-#~ msgid "Failed to get a place of home directory."
-#~ msgstr "Falha ao localizar o diretório home."
-
-#~ msgid "Failed to revert the backup file: %s"
-#~ msgstr "Falha ao reverter o arquivo de backup: %s"
-
-#~ msgid "Failed to create a backup file: %s"
-#~ msgstr "Falha ao criar o arquivo de backup: %s"
-
-#~ msgid "Failed to remove a .xinputrc file: %s"
-#~ msgstr "Falha ao remover o arquivo .xinputrc: %s"
-
-#~ msgid "Failed to make a symlink: %s"
-#~ msgstr "Falha ao fazer uma ligação simbólica: %s"
-
-#~ msgid "No such input method on your system: %s"
-#~ msgstr "Não há nenhum método de inserção em seu sistema: %s"
-
-#~ msgid "No XIM server is available in %s"
-#~ msgstr "Nenhum servidor XIM está disponível em %s"
-
-#~ msgid "X display name"
-#~ msgstr "nome da tela X"
-
-#~ msgid "X display name to use"
-#~ msgstr "nome da tela X a ser usada"
-
-#~ msgid "X display to use"
-#~ msgstr "Tela X a ser usada"
-
-#~ msgid "DISPLAY"
-#~ msgstr "TELA"
-
-#~ msgid "X screen to use"
-#~ msgstr "Tela X a ser usada"
-
-#~ msgid "SCREEN"
-#~ msgstr "TELA"
-
-#~ msgid "Failed to open a X display."
-#~ msgstr "Fala ao abrir uma tela X."
-
-#~ msgid "Reloading...\n"
-#~ msgstr "Recarregando...\n"
-
-#~ msgid "Duplicate entry `%s' from %s. SHORT_DESC has to be unique."
-#~ msgstr "Entrada duplicada `%s' a partir  %s. SHORT_DESC tem que ser única."
-
-#~ msgid "Timed out to initialize %s services."
-#~ msgstr "Tempo Esgotado para inicializar os serviços %s."
-
-#~ msgid "No input methods available on your system."
-#~ msgstr "Nenhum método de entrada está disponível em seu sistema. "
-
-#~ msgid "Force reloading the configuration, including restarting the process."
-#~ msgstr "Force a recarga da configuração, incluindo o reinício do processo."
-
-#~ msgid "Do not update .xinputrc."
-#~ msgstr "Não atualize o .xinputrc."
-
-#~ msgid "Stopped %s\n"
-#~ msgstr "Parado %s\n"
-
-#~ msgid "Failed to stop IM process `%s'\n"
-#~ msgstr "Falha ao parar o processo IM `%s'\n"

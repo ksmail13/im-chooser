@@ -1,18 +1,22 @@
-# translation of pl.po to Polish
-# Piotr Drąg <piotrdrag@gmail.com>, 2006.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: pl\n"
+"Project-Id-Version: im-chooser\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-01-06 15:38+0900\n"
-"PO-Revision-Date: 2011-01-08 08:45+0100\n"
-"Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
-"Language-Team: Polish <trans-pl@lists.fedoraproject.org>\n"
+"POT-Creation-Date: 2011-03-04 20:12+0900\n"
+"PO-Revision-Date: 2011-03-22 15:34+0000\n"
+"Last-Translator: raven <piotrdrag@gmail.com>\n"
+"Language-Team: Polish <None>\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2)\n"
 
 #: ../src/ccpanel/im-chooser-panel.desktop.in.in.h:1
 #: ../src/im-chooser.desktop.in.in.h:1 ../src/xfce4-im-chooser.desktop.in.h:1
@@ -26,6 +30,11 @@ msgstr "Wybór metody wprowadzania lub wyłączanie jej w środowisku graficznym
 #: ../src/xfce4-im-chooser.desktop.in.h:2
 msgid "Input Method Selector"
 msgstr "Wybór metody wprowadzania"
+
+#. Translators: those are keywords for im-chooser control-center panel
+#: ../src/ccpanel/im-chooser-panel.desktop.in.in.h:4
+msgid "InputMethod;IM;"
+msgstr "IM;metoda wprowadzania;metoda wejścia"
 
 #: ../src/ui/eggdesktopfile.c:165
 #, c-format
@@ -45,7 +54,7 @@ msgstr "Uruchamianie %s"
 #: ../src/ui/eggdesktopfile.c:1110
 #, c-format
 msgid "Application does not accept documents on command line"
-msgstr "Aplikacja nie przyjmuje dokumentów w wierszu poleceń"
+msgstr "Program nie przyjmuje dokumentów w wierszu poleceń"
 
 #: ../src/ui/eggdesktopfile.c:1178
 #, c-format
@@ -56,21 +65,21 @@ msgstr "Nierozpoznana opcja uruchamiania: %d"
 #, c-format
 msgid "Can't pass document URIs to a 'Type=Link' desktop entry"
 msgstr ""
-"Nie można przekazać adresów URI dokumentów do wpisu pliku .desktop typu "
-"\"Type=Link\""
+"Nie można przekazywać adresów URI dokumentów do tego wpisu \"Type=Link\" "
+"pliku .desktop"
 
 #: ../src/ui/eggdesktopfile.c:1404
 #, c-format
 msgid "Not a launchable item"
-msgstr "Nie można uruchamiać elementu"
+msgstr "Elementu nie można uruchomić"
 
 #: ../src/ui/eggsmclient.c:226
 msgid "Disable connection to session manager"
-msgstr "Wyłącza połączenie z menedżerem sesji"
+msgstr "Rozłącza połączenie z menedżerem sesji"
 
 #: ../src/ui/eggsmclient.c:229
 msgid "Specify file containing saved configuration"
-msgstr "Określa plik zawierający zapisaną konfigurację"
+msgstr "Podaje plik zawierający zapisaną konfigurację"
 
 #: ../src/ui/eggsmclient.c:229
 msgid "FILE"
@@ -78,7 +87,7 @@ msgstr "PLIK"
 
 #: ../src/ui/eggsmclient.c:232
 msgid "Specify session management ID"
-msgstr "Określa identyfikator zarządzania sesją"
+msgstr "Podaje identyfikator zarządzania sesją"
 
 #: ../src/ui/eggsmclient.c:232
 msgid "ID"
@@ -112,7 +121,7 @@ msgstr "Nie można uzyskać informacji"
 msgid "Failed to switch Input Method"
 msgstr "Przełączenie metody wprowadzania nie powiodło się"
 
-#: ../src/ui/im-chooser-simple.c:372
+#: ../src/ui/im-chooser-simple.c:375
 #, c-format
 msgid "Switching Input Method - %s"
 msgstr "Przełączanie metody wprowadzania - %s"
@@ -120,8 +129,8 @@ msgstr "Przełączanie metody wprowadzania - %s"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications and Qt applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications and GTK+ applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications and Qt applications</i></small>"
-#: ../src/ui/im-chooser-simple.c:460 ../src/ui/im-chooser-simple.c:463
-#: ../src/ui/im-chooser-simple.c:466
+#: ../src/ui/im-chooser-simple.c:463 ../src/ui/im-chooser-simple.c:466
+#: ../src/ui/im-chooser-simple.c:469
 #, c-format
 msgid ", except %s and %s"
 msgstr ", oprócz %s i %s"
@@ -129,14 +138,14 @@ msgstr ", oprócz %s i %s"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except Qt applications</i></small>"
-#: ../src/ui/im-chooser-simple.c:469 ../src/ui/im-chooser-simple.c:472
-#: ../src/ui/im-chooser-simple.c:475
+#: ../src/ui/im-chooser-simple.c:472 ../src/ui/im-chooser-simple.c:475
+#: ../src/ui/im-chooser-simple.c:478
 #, c-format
 msgid ", except %s"
 msgstr ", oprócz %s"
 
 #. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications</i></small>"
-#: ../src/ui/im-chooser-simple.c:480
+#: ../src/ui/im-chooser-simple.c:483
 #, c-format
 msgid ""
 "<small><i>Note: this change will not take effect until you next log in%s</"
@@ -145,66 +154,66 @@ msgstr ""
 "<small><i>Uwaga: ta zmiana nie zostanie uwzględniona przed następnym "
 "logowaniem%s</i></small>"
 
-#: ../src/ui/im-chooser-simple.c:539
+#: ../src/ui/im-chooser-simple.c:542
 msgid "Parent Window"
 msgstr "Okno nadrzędne"
 
-#: ../src/ui/im-chooser-simple.c:540
+#: ../src/ui/im-chooser-simple.c:543
 msgid "GtkWindow that points to the parent window"
 msgstr "GtkWindow wskazujące na okno nadrzędne"
 
-#: ../src/ui/im-chooser-simple.c:545
+#: ../src/ui/im-chooser-simple.c:548
 msgid "Note type"
 msgstr "Typ uwagi"
 
-#: ../src/ui/im-chooser-simple.c:546
+#: ../src/ui/im-chooser-simple.c:549
 msgid "A enum value to determine which notes should be displayed"
 msgstr "Wartość enum określająca, które uwagi powinny być wyświetlane"
 
 #. setup a progress window
-#: ../src/ui/im-chooser-simple.c:589
+#: ../src/ui/im-chooser-simple.c:592
 msgid "Work in progress..."
 msgstr "Praca w toku..."
 
-#: ../src/ui/im-chooser-simple.c:671
+#: ../src/ui/im-chooser-simple.c:674
 msgid "No Input Method"
 msgstr "Brak metod wprowadzania"
 
-#: ../src/ui/im-chooser-simple.c:673
+#: ../src/ui/im-chooser-simple.c:676
 #, c-format
 msgid "Use %s"
 msgstr "Użycie %s"
 
-#: ../src/ui/im-chooser-simple.c:680
+#: ../src/ui/im-chooser-simple.c:683
 msgid " (legacy)"
 msgstr " (przestarzała)"
 
-#: ../src/ui/im-chooser-simple.c:682
+#: ../src/ui/im-chooser-simple.c:685
 msgid " (recommended)"
 msgstr " (zalecana)"
 
-#: ../src/ui/im-chooser-simple.c:726
+#: ../src/ui/im-chooser-simple.c:729
 #, c-format
 msgid "Unable to communicate to IMSettings services"
 msgstr "Nie można komunikować się z usługami IMSettings"
 
-#: ../src/ui/im-chooser-simple.c:727
+#: ../src/ui/im-chooser-simple.c:730
 msgid "Version mismatch"
 msgstr "Wersja nie zgadza się"
 
-#: ../src/ui/im-chooser-simple.c:741
+#: ../src/ui/im-chooser-simple.c:747
 msgid "Unable to gather current status"
 msgstr "Nie można uzyskać obecnego stanu"
 
-#: ../src/ui/im-chooser-simple.c:747
+#: ../src/ui/im-chooser-simple.c:753
 msgid "Unable to get Input Method information"
 msgstr "Nie można uzyskać informacji o metodzie wprowadzania"
 
-#: ../src/ui/im-chooser-simple.c:856
+#: ../src/ui/im-chooser-simple.c:862
 msgid "<b>Input Method</b>"
 msgstr "<b>Metoda wprowadzania</b>"
 
-#: ../src/ui/im-chooser-simple.c:891
+#: ../src/ui/im-chooser-simple.c:897
 msgid "Input Method _Preferences..."
 msgstr "_Preferencje metody wprowadzania..."
 
@@ -217,7 +226,7 @@ msgstr ""
 
 #: ../src/ui/im-chooser-ui.c:58
 msgid "Please install any input methods before running if you like."
-msgstr "Proszę zainstalować dowolną metodę wprowadzania przed uruchomieniem."
+msgstr "Proszę zainstalować metody wprowadzania przed uruchomieniem."
 
 #: ../src/ui/im-chooser-ui.c:88
 msgid "Could not connect to the session manager"

@@ -1,77 +1,86 @@
-# translation of im-chooser.trunk.po to Simplified Chinese
-# translation of zh_CN.po to
-# Chinese translations for im-chooser package.
-# Copyright (C) 2006 Red Hat, Inc. All rights reserved.
-# This file is distributed under the same license as the im-chooser package.
-# 
-# Automatically generated, 2006.
-# Tony Fu <tfu@redhat.com>, 2006.
-# Leah Liu <lliu@redhat.com>, 2008, 2009.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: im-chooser.trunk\n"
+"Project-Id-Version: im-chooser\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-01-06 15:38+0900\n"
-"PO-Revision-Date: 2009-05-15 19:53+1000\n"
-"Last-Translator: Leah Liu <lliu@redhat.com>\n"
-"Language-Team: Simplified Chinese <zh@li.org>\n"
+"POT-Creation-Date: 2011-03-04 20:12+0900\n"
+"PO-Revision-Date: 2011-03-22 15:34+0000\n"
+"Last-Translator: lovenemesis <lovenemesis@gmail.com>\n"
+"Language-Team: Chinese (China) <None>\n"
+"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: \n"
-"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=1; plural=0\n"
 
 #: ../src/ccpanel/im-chooser-panel.desktop.in.in.h:1
 #: ../src/im-chooser.desktop.in.in.h:1 ../src/xfce4-im-chooser.desktop.in.h:1
-msgid "Choose the input method to be used or disable the input method usage on the desktop"
+msgid ""
+"Choose the input method to be used or disable the input method usage on the "
+"desktop"
 msgstr "选择要使用的输入法或者在台式机中禁用输入法用法"
+
+#: ../src/ccpanel/im-chooser-panel.desktop.in.in.h:2
+#: ../src/ui/im-chooser-ui.c:117 ../src/im-chooser.desktop.in.in.h:2
+#: ../src/xfce4-im-chooser.desktop.in.h:2
+msgid "Input Method Selector"
+msgstr "输入法选择器"
+
+#. Translators: those are keywords for im-chooser control-center panel
+#: ../src/ccpanel/im-chooser-panel.desktop.in.in.h:4
+msgid "InputMethod;IM;"
+msgstr "InputMethod;IM;"
 
 #: ../src/ui/eggdesktopfile.c:165
 #, c-format
 msgid "File is not a valid .desktop file"
-msgstr "文件不是有效的.desktop文件"
+msgstr "文件不是有效的 .desktop 文件"
 
 #: ../src/ui/eggdesktopfile.c:188
 #, c-format
 msgid "Unrecognized desktop file Version '%s'"
-msgstr "无法识别desktop文件版本 '%s'"
+msgstr "无法识别的 desktop 文件版本 '%s'"
 
 #: ../src/ui/eggdesktopfile.c:968
 #, c-format
 msgid "Starting %s"
-msgstr "启动中 %s"
+msgstr "正在启动 %s"
 
 #: ../src/ui/eggdesktopfile.c:1110
 #, c-format
 msgid "Application does not accept documents on command line"
-msgstr "应用程序不接受命令行形式文件"
+msgstr "应用程序不接受命令行上的文件"
 
 #: ../src/ui/eggdesktopfile.c:1178
 #, c-format
 msgid "Unrecognized launch option: %d"
-msgstr "不可识别的启动选项：%d"
+msgstr "无法识别的启动选项：%d"
 
 #: ../src/ui/eggdesktopfile.c:1383
 #, c-format
 msgid "Can't pass document URIs to a 'Type=Link' desktop entry"
-msgstr "不能传送文件URI到一个'类型=链接'的desktop入口"
+msgstr "不能传送文件 URI 到 'Type=Link' 的启动器条目"
 
 #: ../src/ui/eggdesktopfile.c:1404
 #, c-format
 msgid "Not a launchable item"
-msgstr "不是一个启动项"
+msgstr "不是可启动项目"
 
 #: ../src/ui/eggsmclient.c:226
 msgid "Disable connection to session manager"
-msgstr "禁用到会话管理器的连接"
+msgstr "禁用连接到会话管理器"
 
 #: ../src/ui/eggsmclient.c:229
 msgid "Specify file containing saved configuration"
-msgstr "指定文件包含保存的配置"
+msgstr "指定包含已保存配置的文件"
 
 #: ../src/ui/eggsmclient.c:229
 msgid "FILE"
-msgstr "FILE"
+msgstr "文件"
 
 #: ../src/ui/eggsmclient.c:232
 msgid "Specify session management ID"
@@ -105,101 +114,107 @@ msgstr "Qt 应用程序"
 msgid "Unable to get the information"
 msgstr "无法获得信息"
 
-#. This will be displayed like "<small><i>Note: this change will not take
-#. effect until you next log in, except X applications and Qt
-#. applications</i></small>"
-#. This will be displayed like "<small><i>Note: this change will not take
-#. effect until you next log in, except X applications and GTK+
-#. applications</i></small>"
-#. This will be displayed like "<small><i>Note: this change will not take
-#. effect until you next log in, except GTK+ applications and Qt
-#. applications</i></small>"
-#: ../src/ui/im-chooser-simple.c:460 ../src/ui/im-chooser-simple.c:463
-#: ../src/ui/im-chooser-simple.c:466
+#: ../src/ui/im-chooser-simple.c:271
+msgid "Failed to switch Input Method"
+msgstr "切换输入法失败"
+
+#: ../src/ui/im-chooser-simple.c:375
+#, c-format
+msgid "Switching Input Method - %s"
+msgstr "正在切换输入法 - %s"
+
+#. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications and Qt applications</i></small>"
+#. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications and GTK+ applications</i></small>"
+#. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications and Qt applications</i></small>"
+#: ../src/ui/im-chooser-simple.c:463 ../src/ui/im-chooser-simple.c:466
+#: ../src/ui/im-chooser-simple.c:469
 #, c-format
 msgid ", except %s and %s"
 msgstr "，除 %s 和 %s 之外"
 
-#. This will be displayed like "<small><i>Note: this change will not take
-#. effect until you next log in, except X applications</i></small>"
-#. This will be displayed like "<small><i>Note: this change will not take
-#. effect until you next log in, except GTK+ applications</i></small>"
-#. This will be displayed like "<small><i>Note: this change will not take
-#. effect until you next log in, except Qt applications</i></small>"
-#: ../src/ui/im-chooser-simple.c:469 ../src/ui/im-chooser-simple.c:472
-#: ../src/ui/im-chooser-simple.c:475
+#. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications</i></small>"
+#. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications</i></small>"
+#. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except Qt applications</i></small>"
+#: ../src/ui/im-chooser-simple.c:472 ../src/ui/im-chooser-simple.c:475
+#: ../src/ui/im-chooser-simple.c:478
 #, c-format
 msgid ", except %s"
 msgstr "，除 %s 之外"
 
-#. This will be displayed like "<small><i>Note: this change will not take
-#. effect until you next log in, except GTK+ applications</i></small>"
-#: ../src/ui/im-chooser-simple.c:480
+#. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications</i></small>"
+#: ../src/ui/im-chooser-simple.c:483
 #, c-format
-msgid "<small><i>Note: this change will not take effect until you next log in%s</i></small>"
+msgid ""
+"<small><i>Note: this change will not take effect until you next log in%s</"
+"i></small>"
 msgstr "<small><i>注：这个修改在您下一次登录%s时才会生效</i></small>"
 
-#: ../src/ui/im-chooser-simple.c:539
+#: ../src/ui/im-chooser-simple.c:542
 msgid "Parent Window"
 msgstr "上一级窗口"
 
-#: ../src/ui/im-chooser-simple.c:540
+#: ../src/ui/im-chooser-simple.c:543
 msgid "GtkWindow that points to the parent window"
 msgstr "指向上一级窗口的 Gtk 窗口"
 
-#: ../src/ui/im-chooser-simple.c:545
+#: ../src/ui/im-chooser-simple.c:548
 msgid "Note type"
 msgstr "备注类型"
 
-#: ../src/ui/im-chooser-simple.c:546
+#: ../src/ui/im-chooser-simple.c:549
 msgid "A enum value to determine which notes should be displayed"
 msgstr "用来决定应该显示哪些注释的 enum 值"
 
 #. setup a progress window
-#: ../src/ui/im-chooser-simple.c:589
+#: ../src/ui/im-chooser-simple.c:592
 msgid "Work in progress..."
 msgstr "处理中... "
 
-#: ../src/ui/im-chooser-simple.c:673
+#: ../src/ui/im-chooser-simple.c:674
+msgid "No Input Method"
+msgstr "无输入法"
+
+#: ../src/ui/im-chooser-simple.c:676
 #, c-format
 msgid "Use %s"
 msgstr "使用 %s"
 
-#: ../src/ui/im-chooser-simple.c:680
+#: ../src/ui/im-chooser-simple.c:683
 msgid " (legacy)"
 msgstr "（继承）"
 
-#: ../src/ui/im-chooser-simple.c:682
+#: ../src/ui/im-chooser-simple.c:685
 msgid " (recommended)"
 msgstr "（推荐）"
 
-#: ../src/ui/im-chooser-simple.c:726
+#: ../src/ui/im-chooser-simple.c:729
 #, c-format
 msgid "Unable to communicate to IMSettings services"
 msgstr "无法联络 IMSetting 服务"
 
-#: ../src/ui/im-chooser-simple.c:727
+#: ../src/ui/im-chooser-simple.c:730
 msgid "Version mismatch"
 msgstr "版本不匹配"
 
-#: ../src/ui/im-chooser-simple.c:741
+#: ../src/ui/im-chooser-simple.c:747
 msgid "Unable to gather current status"
 msgstr "无法收集当前状态"
 
-#: ../src/ui/im-chooser-simple.c:747
+#: ../src/ui/im-chooser-simple.c:753
 msgid "Unable to get Input Method information"
 msgstr "无法获得输入法信息"
 
-#: ../src/ui/im-chooser-simple.c:856
+#: ../src/ui/im-chooser-simple.c:862
 msgid "<b>Input Method</b>"
 msgstr "<b>输入方法</b>"
 
-#: ../src/ui/im-chooser-simple.c:891
+#: ../src/ui/im-chooser-simple.c:897
 msgid "Input Method _Preferences..."
-msgstr "首选输入法（_P）"
+msgstr "输入法首选项（_P）"
 
 #: ../src/ui/im-chooser-ui.c:55
-msgid "<span weight=\"bold\" size=\"larger\">No input method is available</span>"
+msgid ""
+"<span weight=\"bold\" size=\"larger\">No input method is available</span>"
 msgstr "<span weight=\"bold\" size=\"larger\">没有可用的输入法</span>"
 
 #: ../src/ui/im-chooser-ui.c:58
@@ -208,7 +223,7 @@ msgstr "如果您愿意，请在运行前安装输入法。"
 
 #: ../src/ui/im-chooser-ui.c:88
 msgid "Could not connect to the session manager"
-msgstr "不能连接到session管理器"
+msgstr "无法连接到会话管理器"
 
 #: ../src/ui/im-chooser-ui.c:146
 msgid "Log Out"
@@ -221,41 +236,4 @@ msgstr "[选项...]"
 #: ../src/main.c:56
 #, c-format
 msgid "Could not parse arguments: %s\n"
-msgstr "不能解析参数：%s\n"
-
-#: ../src/ccpanel/im-chooser-panel.desktop.in.in.h:2
-#: ../src/ui/im-chooser-ui.c:117 ../src/im-chooser.desktop.in.in.h:2
-#: ../src/xfce4-im-chooser.desktop.in.h:2
-msgid "Input Method Selector"
-msgstr "输入法选择器"
-
-#: ../src/ui/im-chooser-simple.c:271
-msgid "Failed to switch Input Method"
-msgstr "切换输入法失败"
-
-#: ../src/ui/im-chooser-simple.c:372
-#, c-format
-msgid "Switching Input Method - %s"
-msgstr "切换输入法 - %s"
-
-#: ../src/ui/im-chooser-simple.c:671
-msgid "No Input Method"
-msgstr "没有输入法"
-
-#~ msgid "Failed to start Input Method"
-#~ msgstr "启动输入法失败"
-
-#~ msgid "Stopping Input Method - %s"
-#~ msgstr "终止输入法 - %s"
-
-#~ msgid "Updating Input Method list"
-#~ msgstr "更新输入法列表"
-
-#~ msgid "_Enable input method feature"
-#~ msgstr "启用输入法特性（_E）"
-
-#~ msgid "Show the status icon"
-#~ msgstr "显示状态图标"
-
-#~ msgid "IM Chooser - Input Method configuration tool"
-#~ msgstr "IM Chooser - 输入法配置工具"
+msgstr "无法解析参数：%s\n"
