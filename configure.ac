@@ -97,8 +97,21 @@ dnl ======================================================================
 AC_ARG_WITH(desktopfile,
 	[AC_HELP_STRING([--with-desktopfile=FILE], [full path to the desktop file])],,
 	[with_desktopfile="$datadir/applications/im-chooser.desktop"])
+AC_ARG_ENABLE(rebuilds,
+	[AC_HELP_STRING([--disable-rebuilds],
+		[disable all source autogeneration rules])],,
+	[enable_rebuilds=yes])
 
 AC_SUBST(DESKTOPFILE, "$with_desktopfile")
+dnl ======================================================================
+dnl options - rebuilds
+dnl ======================================================================
+REBUILD=\#
+if test "x$enable_rebuilds" = "xyes"; then
+	REBUILD=
+fi
+AC_SUBST(REBUILD)
+
 dnl ======================================================================
 dnl output
 dnl ======================================================================
@@ -112,11 +125,12 @@ data/256x256/Makefile
 data/32x32/Makefile
 data/48x48/Makefile
 po/Makefile.in
+libimchooseui/Makefile
 src/Makefile
+src/app/Makefile
+src/app/im-chooser.desktop.in
 src/ccpanel/Makefile
 src/ccpanel/im-chooser-panel.desktop.in
-src/ui/Makefile
-src/im-chooser.desktop.in
 ])
 AC_OUTPUT
 

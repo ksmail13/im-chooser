@@ -9,6 +9,7 @@
 *\.o
 *\.pc
 *\.rpm
+*~
 \.deps
 \.libs
 Makefile.in
@@ -23,6 +24,7 @@ core.*
 depcomp
 install-sh
 intltool-*
+libimchooseui/imchooseui-marshal.[ch]
 libtool
 ltmain.*
 missing
@@ -30,6 +32,8 @@ mkinstalldirs
 po/Makefile*
 po/POTFILES
 po/\.intltool*
+src/app/im-chooser.desktop.in
+src/app/im-chooser
 src/ccpanel/im-chooser-panel.desktop.in
 src/im-chooser.desktop.in
 src/im-chooser

@@ -1,6 +1,6 @@
 NULL =
 AUTOMAKE_OPTIONS = dist-bzip2
-SUBDIRS = src data po
+SUBDIRS = libimchooseui src data po
 
 CONFIGURE_DEPENDENCIES =	\
 	requires		\
