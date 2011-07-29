@@ -194,7 +194,11 @@ _imchoose_ui_add_row(IMChooseUI      *ui,
 				       _("<a href=\"imsettings-prefs:///%s\">Preference...</a>"),
 				       name);
 	}
-	label = gtk_label_new(prefs_string->str);
+	/* label isn't really attached to any widgets
+	 * but the cell renderer is delegated to render the label.
+	 * so the floating reference is needed to cut off here.
+	 */
+	label = g_object_ref_sink(gtk_label_new(prefs_string->str));
 	gtk_label_set_use_markup(GTK_LABEL (label), TRUE);
 	g_signal_connect(label, "activate_link",
 			 G_CALLBACK (_imchoose_ui_label_activate_link),
@@ -223,7 +227,7 @@ _imchoose_ui_update_list(IMChooseUI *ui,
 	GError *err = NULL;
 	gboolean retval = FALSE;
 	gint api_version, n_retry = 0, i;
-	IMSettingsInfo *info, *none_info, *active_info;
+	IMSettingsInfo *info, *none_info = NULL, *active_info = NULL;
 	GVariant *v, *vv;
 	GVariantIter *viter;
 	GtkListStore *list;
@@ -264,10 +268,10 @@ _imchoose_ui_update_list(IMChooseUI *ui,
 	active_info = imsettings_client_get_active_im_info(client, NULL, &err);
 	if (err)
 		goto bail;
-	v = imsettings_client_get_info_variants(client, NULL, &err);
+	none_info = imsettings_client_get_info_object(client, "none", NULL, &err);
 	if (err)
 		goto bail;
-	none_info = imsettings_client_get_info_object(client, "none", NULL, &err);
+	v = imsettings_client_get_info_variants(client, NULL, &err);
 	if (err)
 		goto bail;
 
@@ -326,6 +330,10 @@ _imchoose_ui_update_list(IMChooseUI *ui,
 	}
 	retval = TRUE;
   bail:
+	if (active_info)
+		g_object_unref(active_info);
+	if (none_info)
+		g_object_unref(none_info);
 	if (err) {
 		if (error) {
 			*error = g_error_copy(err);
@@ -689,7 +697,7 @@ imchoose_ui_get(IMChooseUI  *ui,
 	selection = gtk_tree_view_get_selection(GTK_TREE_VIEW (tree));
 	gtk_tree_selection_set_mode(selection, GTK_SELECTION_BROWSE);
 
-	retval = GTK_WIDGET (gtk_builder_get_object(builder, "root"));
+	retval = GTK_WIDGET (g_object_ref(gtk_builder_get_object(builder, "root")));
 	g_object_set_data(tree, "imchoose-ui", ui);
 	_imchoose_ui_update_list(ui, GTK_WIDGET (tree), &err);
 	if (err)
@@ -697,6 +705,7 @@ imchoose_ui_get(IMChooseUI  *ui,
 
 	gtk_builder_connect_signals(builder, tree);
   bail:
+	g_object_unref(builder);
 	g_free(uifile);
 	if (err) {
 		if (error) {
@@ -738,6 +747,7 @@ imchoose_ui_get_progress_dialog(IMChooseUI  *ui,
 	label = GTK_WIDGET (gtk_builder_get_object(builder, "progress_label"));
 	g_object_set_qdata(G_OBJECT (retval), imchoose_ui_progress_label_quark(), label);
   bail:
+	g_object_unref(builder);
 	g_free(uifile);
 	if (err) {
 		if (error) {

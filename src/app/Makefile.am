@@ -14,7 +14,7 @@ LIBS =								\
 	$(NULL)
 
 DEPS =								\
-	$(builddir)/libimchooseui/libimchooseui.la		\
+	$(top_builddir)/libimchooseui/libimchooseui.la		\
 	$(NULL)
 
 bin_PROGRAMS = im-chooser

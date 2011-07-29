@@ -94,15 +94,11 @@ AM_PATH_GLIB_2_0($GLIB_REQUIRED, :,
 dnl ======================================================================
 dnl options
 dnl ======================================================================
-AC_ARG_WITH(desktopfile,
-	[AC_HELP_STRING([--with-desktopfile=FILE], [full path to the desktop file])],,
-	[with_desktopfile="$datadir/applications/im-chooser.desktop"])
 AC_ARG_ENABLE(rebuilds,
 	[AC_HELP_STRING([--disable-rebuilds],
 		[disable all source autogeneration rules])],,
 	[enable_rebuilds=yes])
 
-AC_SUBST(DESKTOPFILE, "$with_desktopfile")
 dnl ======================================================================
 dnl options - rebuilds
 dnl ======================================================================
