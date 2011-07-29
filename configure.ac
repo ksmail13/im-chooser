@@ -52,6 +52,9 @@ PKG_CHECK_MODULES(PANEL, libgnome-control-center >= $CCPANEL_REQUIRED,[
 	enable_ccpanel=yes
 	PANEL_DIR=$(pkg-config --variable=extensiondir libgnome-control-center)],
 	enable_ccpanel=no)
+PKG_CHECK_MODULES(XFCE4, libxfce4util-1.0,[
+	enable_xfce=yes],[
+	enable_xfce=no])
 PKG_CHECK_MODULES(IMSETTINGS, imsettings >= $IMSETTINGS_REQUIRED)
 AC_SUBST(GTK3_CFLAGS)
 AC_SUBST(GTK3_LIBS)
@@ -64,12 +67,15 @@ AC_SUBST(SM_LIBS)
 AC_SUBST(PANEL_CFLAGS)
 AC_SUBST(PANEL_LIBS)
 AC_SUBST(PANEL_DIR)
+AC_SUBST(XFCE4_CFLAGS)
+AC_SUBST(XFCE4_LIBS)
 
 AC_SUBST(IMCHOOSE_GTK_VERSION)
 
-AC_DEFINE(IMCHOOSE_GTK_VERSION, $IMCHOOSE_GTK_VERSION, [GTK+ version detected by pkg-config])
+AC_DEFINE_UNQUOTED(IMCHOOSE_GTK_VERSION, $IMCHOOSE_GTK_VERSION, [GTK+ version detected by pkg-config])
 
 AM_CONDITIONAL(ENABLE_CCPANEL, test "x$enable_ccpanel" = "xyes")
+AM_CONDITIONAL(ENABLE_XFCE4, test "x$enable_xfce" = "xyes")
 
 if test $IMCHOOSE_GTK_VERSION == 3; then
    	TOOLKIT_CFLAGS="$GTK3_CFLAGS"
@@ -127,6 +133,8 @@ src/app/Makefile
 src/app/im-chooser.desktop.in
 src/ccpanel/Makefile
 src/ccpanel/im-chooser-panel.desktop.in
+src/xfce/Makefile
+src/xfce/xfce4-im-chooser.desktop.in
 ])
 AC_OUTPUT
 

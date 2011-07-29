@@ -1,5 +1,8 @@
 NULL =
 SUBDIRS = app
 if ENABLE_CCPANEL
-SUBDIRS += ccpanel
+#SUBDIRS += ccpanel
+endif
+if ENABLE_XFCE4
+SUBDIRS += xfce
 endif

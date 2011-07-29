@@ -35,6 +35,6 @@ po/\.intltool*
 src/app/im-chooser.desktop.in
 src/app/im-chooser
 src/ccpanel/im-chooser-panel.desktop.in
-src/im-chooser.desktop.in
-src/im-chooser
+src/xfce/xfce4-im-chooser.desktop.in
+src/xfce/xfce4-im-chooser
 stamp-*

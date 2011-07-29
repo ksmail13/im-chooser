@@ -8,4 +8,4 @@ Terminal=false
 Type=Application
 StartupNotify=true
 Categories=Applications;Settings;X-GNOME-PersonalSettings;
-NotShowIn=GNOME;XFCE;
+NotShowIn=XFCE;
