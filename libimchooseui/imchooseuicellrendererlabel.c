@@ -32,10 +32,12 @@
 
 struct _IMChooseUICellRendererLabelPrivate {
 	GtkWidget *child;
+	gint       spacing;
 };
 enum {
 	PROP_0,
 	PROP_WIDGET,
+	PROP_SPACING,
 	PROP_END
 };
 enum {
@@ -69,6 +71,9 @@ _imchoose_ui_cell_renderer_label_get_property(GObject    *object,
 	    case PROP_WIDGET:
 		    g_value_set_object(value, priv->child);
 		    break;
+	    case PROP_SPACING:
+		    g_value_set_int(value, priv->spacing);
+		    break;
 	    default:
 		    G_OBJECT_WARN_INVALID_PROPERTY_ID (object, prop_id, pspec);
 		    break;
@@ -82,12 +87,17 @@ _imchoose_ui_cell_renderer_label_set_property(GObject      *object,
 					      GParamSpec   *pspec)
 {
 	GtkWidget *widget;
+	IMChooseUICellRendererLabel *celllabel = IMCHOOSE_UI_CELL_RENDERER_LABEL (object);
+	IMChooseUICellRendererLabelPrivate *priv = celllabel->priv;
 
 	switch (prop_id) {
 	    case PROP_WIDGET:
 		    widget = GTK_WIDGET (g_value_get_object(value));
 		    imchoose_ui_cell_renderer_label_add(IMCHOOSE_UI_CELL_RENDERER_LABEL (object),
 							widget);
+		    break;
+	    case PROP_SPACING:
+		    priv->spacing = g_value_get_int(value);
 		    break;
 	    default:
 		    G_OBJECT_WARN_INVALID_PROPERTY_ID (object, prop_id, pspec);
@@ -130,7 +140,7 @@ _imchoose_ui_cell_renderer_label_render(GtkCellRenderer      *cell,
 		cairo_clip(cr);
 
 		gtk_render_layout(context, cr,
-				  cell_area->x + xpad,
+				  cell_area->x + xpad + priv->spacing,
 				  cell_area->y + ypad,
 				  layout);
 
@@ -154,9 +164,9 @@ _imchoose_ui_cell_renderer_label_get_preferred_width(GtkCellRenderer *cell,
 		widget_class->get_preferred_width(priv->child, &min_size, &nat_size);
 	}
 	if (minimum_size)
-		*minimum_size = min_size;
+		*minimum_size = min_size + priv->spacing;
 	if (natural_size)
-		*natural_size = nat_size;
+		*natural_size = nat_size + priv->spacing;
 }
 
 static void
@@ -221,6 +231,15 @@ imchoose_ui_cell_renderer_label_class_init(IMChooseUICellRendererLabelClass *kla
 							    _("Widget to contain in the cell"),
 							    GTK_TYPE_WIDGET,
 							    G_PARAM_READWRITE));
+	g_object_class_install_property(object_class,
+					PROP_SPACING,
+					g_param_spec_int("spacing",
+							 _("Spacing"),
+							 _("The amount of space between label"),
+							 0,
+							 G_MAXINT,
+							 0,
+							 G_PARAM_READWRITE));
 
 	signals[SIG_CLICKED] = g_signal_new("clicked",
 					    G_OBJECT_CLASS_TYPE (object_class),
@@ -242,6 +261,7 @@ imchoose_ui_cell_renderer_label_init(IMChooseUICellRendererLabel *celllabel)
 
 	g_object_set(celllabel, "mode",
 		     GTK_CELL_RENDERER_MODE_ACTIVATABLE, NULL);
+	celllabel->priv->spacing = 10;
 }
 
 /*< public >*/
