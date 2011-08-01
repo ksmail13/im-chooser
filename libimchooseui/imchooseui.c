@@ -34,9 +34,6 @@
 
 #define IMCHOOSEUI_GERROR	(_imchoose_ui_get_quark())
 
-void _imchoose_ui_tree_selection_changed(GtkTreeSelection *selection,
-					 gpointer          user_data);
-
 static gboolean _imchoose_ui_label_activate_link(GtkLabel     *label,
                                                  const gchar  *uri,
                                                  gpointer      user_data);
@@ -470,6 +467,41 @@ _imchoose_ui_switch_im_finish(GObject      *source_object,
 }
 
 static void
+_imchoose_ui_tree_selection_changed(GtkTreeSelection *selection,
+				    gpointer          user_data)
+{
+	GtkTreeView *tree = GTK_TREE_VIEW (user_data);
+	GtkTreeModel *model;
+	GtkTreeIter iter;
+	IMChooseUI *ui = IMCHOOSE_UI (g_object_get_data(G_OBJECT (tree), "imchoose-ui"));
+	IMChooseUIPrivate *priv = ui->priv;
+	const gchar *name;
+
+	if (priv->current_im && priv->clicked) {
+		model = gtk_tree_view_get_model(tree);
+		if (gtk_tree_model_get_iter_first(model, &iter)) {
+			do {
+				gtk_tree_model_get(model, &iter, POS_IMNAME, &name, -1);
+				if (strcmp(priv->current_im, name) == 0) {
+					gtk_tree_selection_select_iter(selection, &iter);
+					break;
+				}
+			} while (gtk_tree_model_iter_next(model, &iter));
+		} else {
+		}
+		priv->clicked = FALSE;
+	} else {
+		if (gtk_tree_selection_get_selected(selection, &model, &iter)) {
+			gtk_tree_model_get(model, &iter, POS_IMNAME, &name, -1);
+			if (g_strcmp0(priv->current_im, name) != 0) {
+				_imchoose_ui_switch_im_start(ui, name);
+			}
+		} else {
+		}
+	}
+}
+
+static void
 _imchoose_ui_finalize(GObject *object)
 {
 	IMChooseUI *ui = IMCHOOSE_UI (object);
@@ -696,14 +728,14 @@ imchoose_ui_get(IMChooseUI  *ui,
 
 	selection = gtk_tree_view_get_selection(GTK_TREE_VIEW (tree));
 	gtk_tree_selection_set_mode(selection, GTK_SELECTION_BROWSE);
+	g_signal_connect(selection, "changed",
+			 G_CALLBACK (_imchoose_ui_tree_selection_changed), tree);
 
 	retval = GTK_WIDGET (g_object_ref(gtk_builder_get_object(builder, "root")));
 	g_object_set_data(tree, "imchoose-ui", ui);
 	_imchoose_ui_update_list(ui, GTK_WIDGET (tree), &err);
 	if (err)
 		goto bail;
-
-	gtk_builder_connect_signals(builder, tree);
   bail:
 	g_object_unref(builder);
 	g_free(uifile);
@@ -758,41 +790,6 @@ imchoose_ui_get_progress_dialog(IMChooseUI  *ui,
 	}
 
 	return retval;
-}
-
-void
-_imchoose_ui_tree_selection_changed(GtkTreeSelection *selection,
-				    gpointer          user_data)
-{
-	GtkTreeView *tree = GTK_TREE_VIEW (user_data);
-	GtkTreeModel *model;
-	GtkTreeIter iter;
-	IMChooseUI *ui = IMCHOOSE_UI (g_object_get_data(G_OBJECT (tree), "imchoose-ui"));
-	IMChooseUIPrivate *priv = ui->priv;
-	const gchar *name;
-
-	if (priv->current_im && priv->clicked) {
-		model = gtk_tree_view_get_model(tree);
-		if (gtk_tree_model_get_iter_first(model, &iter)) {
-			do {
-				gtk_tree_model_get(model, &iter, POS_IMNAME, &name, -1);
-				if (strcmp(priv->current_im, name) == 0) {
-					gtk_tree_selection_select_iter(selection, &iter);
-					break;
-				}
-			} while (gtk_tree_model_iter_next(model, &iter));
-		} else {
-		}
-		priv->clicked = FALSE;
-	} else {
-		if (gtk_tree_selection_get_selected(selection, &model, &iter)) {
-			gtk_tree_model_get(model, &iter, POS_IMNAME, &name, -1);
-			if (g_strcmp0(priv->current_im, name) != 0) {
-				_imchoose_ui_switch_im_start(ui, name);
-			}
-		} else {
-		}
-	}
 }
 
 gboolean

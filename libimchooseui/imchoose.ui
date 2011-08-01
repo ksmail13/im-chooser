@@ -155,9 +155,7 @@
                     <property name="headers_visible">False</property>
                     <property name="headers_clickable">False</property>
                     <child internal-child="selection">
-                      <object class="GtkTreeSelection" id="treeview-selection1">
-                        <signal name="changed" handler="_imchoose_ui_tree_selection_changed" swapped="no"/>
-                      </object>
+                      <object class="GtkTreeSelection" id="treeview-selection1"/>
                     </child>
                   </object>
                 </child>
