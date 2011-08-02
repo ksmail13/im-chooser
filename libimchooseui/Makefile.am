@@ -18,6 +18,7 @@ LIBS =								\
 	$(NULL)
 
 EXTRA_DIST =							\
+	$(ui_DATA)						\
 	marshal.list						\
 	$(NULL)
 
