@@ -1,3 +1,11 @@
+1.4.2 -> 1.5.0
+=================
+* Bug Fix:
+  * rhbz#703211: Fix a typo.
+* Enhancements:
+  * new UI
+  * new program integrated into xfce4-settings-manager.
+
 1.4.1 -> 1.4.2
 =================
 * Bug Fixes:
