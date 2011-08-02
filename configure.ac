@@ -1,5 +1,5 @@
 dnl Process this file with autoconf to produce a configure script.
-AC_INIT([im-chooser], 1.5.0, [https://bugzilla.redhat.com/enter_bug.cgi?product=Fedora&component=im-chooser])
+AC_INIT([im-chooser], 1.5.0.1, [https://bugzilla.redhat.com/enter_bug.cgi?product=Fedora&component=im-chooser])
 
 . ./requires
 
@@ -131,8 +131,6 @@ libimchooseui/Makefile
 src/Makefile
 src/app/Makefile
 src/app/im-chooser.desktop.in
-src/ccpanel/Makefile
-src/ccpanel/im-chooser-panel.desktop.in
 src/xfce/Makefile
 src/xfce/xfce4-im-chooser.desktop.in
 ])
