@@ -1,14 +1,13 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: im-chooser\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-03-04 20:12+0900\n"
-"PO-Revision-Date: 2011-03-30 10:12+0000\n"
+"POT-Creation-Date: 2011-08-02 17:13+0900\n"
+"PO-Revision-Date: 2011-08-02 08:12+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: hy\n"
@@ -17,17 +16,241 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
 
+#: ../libimchooseui/eggdesktopfile.c:165
+#, c-format
+msgid "File is not a valid .desktop file"
+msgstr ""
+
+#: ../libimchooseui/eggdesktopfile.c:188
+#, c-format
+msgid "Unrecognized desktop file Version '%s'"
+msgstr ""
+
+#: ../libimchooseui/eggdesktopfile.c:968
+#, c-format
+msgid "Starting %s"
+msgstr ""
+
+#: ../libimchooseui/eggdesktopfile.c:1110
+#, c-format
+msgid "Application does not accept documents on command line"
+msgstr ""
+
+#: ../libimchooseui/eggdesktopfile.c:1178
+#, c-format
+msgid "Unrecognized launch option: %d"
+msgstr ""
+
+#: ../libimchooseui/eggdesktopfile.c:1383
+#, c-format
+msgid "Can't pass document URIs to a 'Type=Link' desktop entry"
+msgstr ""
+
+#: ../libimchooseui/eggdesktopfile.c:1404
+#, c-format
+msgid "Not a launchable item"
+msgstr ""
+
+#: ../libimchooseui/eggsmclient.c:226
+msgid "Disable connection to session manager"
+msgstr ""
+
+#: ../libimchooseui/eggsmclient.c:229
+msgid "Specify file containing saved configuration"
+msgstr ""
+
+#: ../libimchooseui/eggsmclient.c:229
+msgid "FILE"
+msgstr ""
+
+#: ../libimchooseui/eggsmclient.c:232
+msgid "Specify session management ID"
+msgstr ""
+
+#: ../libimchooseui/eggsmclient.c:232
+msgid "ID"
+msgstr ""
+
+#: ../libimchooseui/eggsmclient.c:253
+msgid "Session management options:"
+msgstr ""
+
+#: ../libimchooseui/eggsmclient.c:254
+msgid "Show session management options"
+msgstr ""
+
+#: ../libimchooseui/imchoose.ui.h:1
+msgid "<b>Input Method</b>"
+msgstr ""
+
+#: ../libimchooseui/imchoose.ui.h:2
+msgid "Work in progress..."
+msgstr ""
+
+#: ../libimchooseui/imchoose.ui.h:3
+msgid "label"
+msgstr ""
+
+#: ../libimchooseui/imchooseui.c:162
+msgid "No Input Method"
+msgstr ""
+
+#: ../libimchooseui/imchooseui.c:164
+#, c-format
+msgid "Use %s"
+msgstr ""
+
+#: ../libimchooseui/imchooseui.c:171
+msgid " (legacy)"
+msgstr ""
+
+#: ../libimchooseui/imchooseui.c:173
+msgid " (recommended)"
+msgstr ""
+
+#: ../libimchooseui/imchooseui.c:191
+#, c-format
+msgid "<a href=\"imsettings-prefs:///%s\">Preference...</a>"
+msgstr ""
+
+#: ../libimchooseui/imchooseui.c:240
+#, c-format
+msgid "Unable to create a client instance."
+msgstr ""
+
+#: ../libimchooseui/imchooseui.c:249
+#, c-format
+msgid "Unable to communicate to IMSettings service: %s"
+msgstr ""
+
+#: ../libimchooseui/imchooseui.c:325
+#, c-format
+msgid "Please install any input methods before running if you like."
+msgstr ""
+
+#: ../libimchooseui/imchooseui.c:398
+msgid "Unable to get the information"
+msgstr ""
+
+#: ../libimchooseui/imchooseui.c:411
+msgid "Unable to invoke the preference tool"
+msgstr ""
+
+#: ../libimchooseui/imchooseui.c:432
+#, c-format
+msgid "Switching Input Method - %s"
+msgstr ""
+
+#: ../libimchooseui/imchooseui.c:454
+#, c-format
+msgid "Unknown error during finalizing the request of SwitchIM"
+msgstr ""
+
+#: ../libimchooseui/imchooseui.c:461
+msgid "Failed to switch Input Method"
+msgstr ""
+
+#: ../libimchooseui/imchooseui.c:648
+msgid "X applications"
+msgstr ""
+
+#: ../libimchooseui/imchooseui.c:649
+msgid "GTK+ applications"
+msgstr ""
+
+#: ../libimchooseui/imchooseui.c:650
+msgid "Qt applications"
+msgstr ""
+
+#. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except X applications and Qt applications</i></small>"
+#. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except X applications and GTK+ applications</i></small>"
+#. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except GTK+ applications and Qt applications</i></small>"
+#: ../libimchooseui/imchooseui.c:658 ../libimchooseui/imchooseui.c:663
+#: ../libimchooseui/imchooseui.c:668
+#, c-format
+msgid ", except %s and %s"
+msgstr ""
+
+#. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except X applications</i></small>"
+#. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except GTK+ applications</i></small>"
+#. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except Qt applications</i></small>"
+#: ../libimchooseui/imchooseui.c:673 ../libimchooseui/imchooseui.c:677
+#: ../libimchooseui/imchooseui.c:681
+#, c-format
+msgid ", except %s"
+msgstr ""
+
+#. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except GTK+ applications</i></small>"
+#: ../libimchooseui/imchooseui.c:687
+#, c-format
+msgid ""
+"<small><i>Note: this change will not take effect until your next log in%s</"
+"i></small>"
+msgstr ""
+
+#: ../libimchooseui/imchooseui.c:698
+#, c-format
+msgid "Unable to obtain the object for note"
+msgstr ""
+
+#: ../libimchooseui/imchooseui.c:704
+#, c-format
+msgid "Unable to obtain the object for tree"
+msgstr ""
+
+#: ../libimchooseui/imchooseuicellrendererlabel.c:242
+msgid "Widget"
+msgstr ""
+
+#: ../libimchooseui/imchooseuicellrendererlabel.c:243
+msgid "Widget to contain in the cell"
+msgstr ""
+
+#: ../libimchooseui/imchooseuicellrendererlabel.c:249
+msgid "Spacing"
+msgstr ""
+
+#: ../libimchooseui/imchooseuicellrendererlabel.c:250
+msgid "The amount of space between label"
+msgstr ""
+
+#: ../src/app/im-chooser.desktop.in.in.h:1
 #: ../src/ccpanel/im-chooser-panel.desktop.in.in.h:1
-#: ../src/im-chooser.desktop.in.in.h:1 ../src/xfce4-im-chooser.desktop.in.h:1
+#: ../src/xfce/xfce4-im-chooser.desktop.in.in.h:1
 msgid ""
 "Choose the input method to be used or disable the input method usage on the "
 "desktop"
 msgstr ""
 
-#: ../src/ccpanel/im-chooser-panel.desktop.in.in.h:2
-#: ../src/ui/im-chooser-ui.c:117 ../src/im-chooser.desktop.in.in.h:2
-#: ../src/xfce4-im-chooser.desktop.in.h:2
+#: ../src/app/im-chooser.desktop.in.in.h:2 ../src/app/main.c:205
+#: ../src/ccpanel/im-chooser-panel.desktop.in.in.h:2 ../src/xfce/main.c:262
+#: ../src/xfce/xfce4-im-chooser.desktop.in.in.h:2
 msgid "Input Method Selector"
+msgstr ""
+
+#: ../src/app/main.c:137 ../src/xfce/main.c:139
+msgid "Could not connect to the session manager"
+msgstr ""
+
+#: ../src/app/main.c:156 ../src/xfce/main.c:159
+msgid "[options...]"
+msgstr ""
+
+#: ../src/app/main.c:178 ../src/xfce/main.c:180
+#, c-format
+msgid "Could not parse arguments: %s\n"
+msgstr ""
+
+#: ../src/app/main.c:195 ../src/xfce/main.c:238 ../src/xfce/main.c:253
+msgid "No input method is available"
+msgstr ""
+
+#: ../src/app/main.c:198 ../src/xfce/main.c:241 ../src/xfce/main.c:256
+msgid "Unrecoverable error"
+msgstr ""
+
+#: ../src/app/main.c:210 ../src/xfce/main.c:267
+msgid "Log Out"
 msgstr ""
 
 #. Translators: those are keywords for im-chooser control-center panel
@@ -35,205 +258,10 @@ msgstr ""
 msgid "InputMethod;IM;"
 msgstr ""
 
-#: ../src/ui/eggdesktopfile.c:165
-#, c-format
-msgid "File is not a valid .desktop file"
+#: ../src/xfce/main.c:162
+msgid "Settings manager socket"
 msgstr ""
 
-#: ../src/ui/eggdesktopfile.c:188
-#, c-format
-msgid "Unrecognized desktop file Version '%s'"
-msgstr ""
-
-#: ../src/ui/eggdesktopfile.c:968
-#, c-format
-msgid "Starting %s"
-msgstr ""
-
-#: ../src/ui/eggdesktopfile.c:1110
-#, c-format
-msgid "Application does not accept documents on command line"
-msgstr ""
-
-#: ../src/ui/eggdesktopfile.c:1178
-#, c-format
-msgid "Unrecognized launch option: %d"
-msgstr ""
-
-#: ../src/ui/eggdesktopfile.c:1383
-#, c-format
-msgid "Can't pass document URIs to a 'Type=Link' desktop entry"
-msgstr ""
-
-#: ../src/ui/eggdesktopfile.c:1404
-#, c-format
-msgid "Not a launchable item"
-msgstr ""
-
-#: ../src/ui/eggsmclient.c:226
-msgid "Disable connection to session manager"
-msgstr ""
-
-#: ../src/ui/eggsmclient.c:229
-msgid "Specify file containing saved configuration"
-msgstr ""
-
-#: ../src/ui/eggsmclient.c:229
-msgid "FILE"
-msgstr ""
-
-#: ../src/ui/eggsmclient.c:232
-msgid "Specify session management ID"
-msgstr ""
-
-#: ../src/ui/eggsmclient.c:232
-msgid "ID"
-msgstr ""
-
-#: ../src/ui/eggsmclient.c:253
-msgid "Session management options:"
-msgstr ""
-
-#: ../src/ui/eggsmclient.c:254
-msgid "Show session management options"
-msgstr ""
-
-#: ../src/ui/im-chooser-simple.c:117
-msgid "X applications"
-msgstr ""
-
-#: ../src/ui/im-chooser-simple.c:118
-msgid "GTK+ applications"
-msgstr ""
-
-#: ../src/ui/im-chooser-simple.c:119
-msgid "Qt applications"
-msgstr ""
-
-#: ../src/ui/im-chooser-simple.c:197
-msgid "Unable to get the information"
-msgstr ""
-
-#: ../src/ui/im-chooser-simple.c:271
-msgid "Failed to switch Input Method"
-msgstr ""
-
-#: ../src/ui/im-chooser-simple.c:375
-#, c-format
-msgid "Switching Input Method - %s"
-msgstr ""
-
-#. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications and Qt applications</i></small>"
-#. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications and GTK+ applications</i></small>"
-#. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications and Qt applications</i></small>"
-#: ../src/ui/im-chooser-simple.c:463 ../src/ui/im-chooser-simple.c:466
-#: ../src/ui/im-chooser-simple.c:469
-#, c-format
-msgid ", except %s and %s"
-msgstr ""
-
-#. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications</i></small>"
-#. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications</i></small>"
-#. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except Qt applications</i></small>"
-#: ../src/ui/im-chooser-simple.c:472 ../src/ui/im-chooser-simple.c:475
-#: ../src/ui/im-chooser-simple.c:478
-#, c-format
-msgid ", except %s"
-msgstr ""
-
-#. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications</i></small>"
-#: ../src/ui/im-chooser-simple.c:483
-#, c-format
-msgid ""
-"<small><i>Note: this change will not take effect until you next log in%s</"
-"i></small>"
-msgstr ""
-
-#: ../src/ui/im-chooser-simple.c:542
-msgid "Parent Window"
-msgstr ""
-
-#: ../src/ui/im-chooser-simple.c:543
-msgid "GtkWindow that points to the parent window"
-msgstr ""
-
-#: ../src/ui/im-chooser-simple.c:548
-msgid "Note type"
-msgstr ""
-
-#: ../src/ui/im-chooser-simple.c:549
-msgid "A enum value to determine which notes should be displayed"
-msgstr ""
-
-#. setup a progress window
-#: ../src/ui/im-chooser-simple.c:592
-msgid "Work in progress..."
-msgstr ""
-
-#: ../src/ui/im-chooser-simple.c:674
-msgid "No Input Method"
-msgstr ""
-
-#: ../src/ui/im-chooser-simple.c:676
-#, c-format
-msgid "Use %s"
-msgstr ""
-
-#: ../src/ui/im-chooser-simple.c:683
-msgid " (legacy)"
-msgstr ""
-
-#: ../src/ui/im-chooser-simple.c:685
-msgid " (recommended)"
-msgstr ""
-
-#: ../src/ui/im-chooser-simple.c:729
-#, c-format
-msgid "Unable to communicate to IMSettings services"
-msgstr ""
-
-#: ../src/ui/im-chooser-simple.c:730
-msgid "Version mismatch"
-msgstr ""
-
-#: ../src/ui/im-chooser-simple.c:747
-msgid "Unable to gather current status"
-msgstr ""
-
-#: ../src/ui/im-chooser-simple.c:753
-msgid "Unable to get Input Method information"
-msgstr ""
-
-#: ../src/ui/im-chooser-simple.c:862
-msgid "<b>Input Method</b>"
-msgstr ""
-
-#: ../src/ui/im-chooser-simple.c:897
-msgid "Input Method _Preferences..."
-msgstr ""
-
-#: ../src/ui/im-chooser-ui.c:55
-msgid ""
-"<span weight=\"bold\" size=\"larger\">No input method is available</span>"
-msgstr ""
-
-#: ../src/ui/im-chooser-ui.c:58
-msgid "Please install any input methods before running if you like."
-msgstr ""
-
-#: ../src/ui/im-chooser-ui.c:88
-msgid "Could not connect to the session manager"
-msgstr ""
-
-#: ../src/ui/im-chooser-ui.c:146
-msgid "Log Out"
-msgstr ""
-
-#: ../src/main.c:36
-msgid "[options...]"
-msgstr ""
-
-#: ../src/main.c:56
-#, c-format
-msgid "Could not parse arguments: %s\n"
+#: ../src/xfce/main.c:162
+msgid "SOCKET ID"
 msgstr ""

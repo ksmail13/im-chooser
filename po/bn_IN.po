@@ -1,243 +1,273 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
+# Runa Bhattacharjee <runab@fedoraproject.org>, 2008.
+# Akira  <akira+transifex@tagoh.org>, 2011.
+# Runa Bhattacharjee <runabh@gmail.com>, 2007.
+# Runa Bhattacharjee <runab@redhat.com>, 2006, 2008.
 msgid ""
 msgstr ""
 "Project-Id-Version: im-chooser\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-03-04 20:12+0900\n"
-"PO-Revision-Date: 2011-03-22 15:34+0000\n"
+"POT-Creation-Date: 2011-08-02 17:13+0900\n"
+"PO-Revision-Date: 2011-08-01 06:53+0000\n"
 "Last-Translator: tagoh <akira+transifex@tagoh.org>\n"
-"Language-Team: Bengali (India) <None>\n"
+"Language-Team: Bengali (India) (http://www.transifex.net/projects/p/im-"
+"chooser/team/bn_IN/)\n"
 "Language: bn_IN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
 
+#: ../libimchooseui/eggdesktopfile.c:165
+#, c-format
+msgid "File is not a valid .desktop file"
+msgstr "এটি বৈধ .desktop ফাইল নয়"
+
+#: ../libimchooseui/eggdesktopfile.c:188
+#, c-format
+msgid "Unrecognized desktop file Version '%s'"
+msgstr "ডেস্কটপ ফাইলের অজ্ঞাত সংস্করণ '%s'"
+
+#: ../libimchooseui/eggdesktopfile.c:968
+#, c-format
+msgid "Starting %s"
+msgstr "%s আরম্ভ করা হচ্ছে"
+
+#: ../libimchooseui/eggdesktopfile.c:1110
+#, c-format
+msgid "Application does not accept documents on command line"
+msgstr "অ্যাপ্লিকেশন দ্বারা কমান্ড-লাইনের মাধ্যমে নথিপত্র গ্রহণ করা হয় না"
+
+#: ../libimchooseui/eggdesktopfile.c:1178
+#, c-format
+msgid "Unrecognized launch option: %d"
+msgstr "প্রারম্ভিক বিকল্প অজানা: %d"
+
+#: ../libimchooseui/eggdesktopfile.c:1383
+#, c-format
+msgid "Can't pass document URIs to a 'Type=Link' desktop entry"
+msgstr "'Type=Link' ডেস্কটপ এনট্রির ক্ষেত্রে নথিপত্রের URI উল্লেখ করা সম্ভব নয়"
+
+#: ../libimchooseui/eggdesktopfile.c:1404
+#, c-format
+msgid "Not a launchable item"
+msgstr "প্রারম্ভ করার যোগ্য বস্তু নয়"
+
+#: ../libimchooseui/eggsmclient.c:226
+msgid "Disable connection to session manager"
+msgstr "সেশান পরিচালনব্যবস্থার সাথে সংযোগ বিচ্ছিন্ন করা হবে"
+
+#: ../libimchooseui/eggsmclient.c:229
+msgid "Specify file containing saved configuration"
+msgstr "সংরক্ষিত কনফিগারেশন ধারণকারী ফাইল উল্লেখ করুন"
+
+#: ../libimchooseui/eggsmclient.c:229
+msgid "FILE"
+msgstr "FILE"
+
+#: ../libimchooseui/eggsmclient.c:232
+msgid "Specify session management ID"
+msgstr "সেশান পরিচালনার ID উল্লেখ করু"
+
+#: ../libimchooseui/eggsmclient.c:232
+msgid "ID"
+msgstr "ID"
+
+#: ../libimchooseui/eggsmclient.c:253
+msgid "Session management options:"
+msgstr "সেশান পরিচালনা সংক্রান্ত বিকল্প:"
+
+#: ../libimchooseui/eggsmclient.c:254
+msgid "Show session management options"
+msgstr "সেশান পরিচালনা সংক্রান্ত বিকল্প প্রদর্শন করা হবে"
+
+#: ../libimchooseui/imchoose.ui.h:1
+msgid "<b>Input Method</b>"
+msgstr "<b>ইনপুট পদ্ধতি</b>"
+
+#: ../libimchooseui/imchoose.ui.h:2
+msgid "Work in progress..."
+msgstr "কাজ চলছে..."
+
+#: ../libimchooseui/imchoose.ui.h:3
+msgid "label"
+msgstr ""
+
+#: ../libimchooseui/imchooseui.c:162
+msgid "No Input Method"
+msgstr "ইনপুট পদ্ধতি অনুপস্থিত"
+
+#: ../libimchooseui/imchooseui.c:164
+#, c-format
+msgid "Use %s"
+msgstr "%s ব্যবহার করা হবে"
+
+#: ../libimchooseui/imchooseui.c:171
+msgid " (legacy)"
+msgstr " (লিগ্যাসি)"
+
+#: ../libimchooseui/imchooseui.c:173
+msgid " (recommended)"
+msgstr " (প্রস্তাবিত)"
+
+#: ../libimchooseui/imchooseui.c:191
+#, c-format
+msgid "<a href=\"imsettings-prefs:///%s\">Preference...</a>"
+msgstr ""
+
+#: ../libimchooseui/imchooseui.c:240
+#, c-format
+msgid "Unable to create a client instance."
+msgstr ""
+
+#: ../libimchooseui/imchooseui.c:249
+#, c-format
+msgid "Unable to communicate to IMSettings service: %s"
+msgstr ""
+
+#: ../libimchooseui/imchooseui.c:325
+#, c-format
+msgid "Please install any input methods before running if you like."
+msgstr "ইনপুট পদ্ধতি প্রয়োগ করার পূর্বে অনুগ্রহ করে সেগুলি ইনস্টল করুন।"
+
+#: ../libimchooseui/imchooseui.c:398
+msgid "Unable to get the information"
+msgstr "তথ্য প্রাপ্ত করতে ব্যর্থ"
+
+#: ../libimchooseui/imchooseui.c:411
+msgid "Unable to invoke the preference tool"
+msgstr ""
+
+#: ../libimchooseui/imchooseui.c:432
+#, c-format
+msgid "Switching Input Method - %s"
+msgstr ""
+
+#: ../libimchooseui/imchooseui.c:454
+#, c-format
+msgid "Unknown error during finalizing the request of SwitchIM"
+msgstr ""
+
+#: ../libimchooseui/imchooseui.c:461
+msgid "Failed to switch Input Method"
+msgstr ""
+
+#: ../libimchooseui/imchooseui.c:648
+msgid "X applications"
+msgstr "X অ্যাপ্লিকেশন"
+
+#: ../libimchooseui/imchooseui.c:649
+msgid "GTK+ applications"
+msgstr "GTK+ অ্যাপ্লিকেশন"
+
+#: ../libimchooseui/imchooseui.c:650
+msgid "Qt applications"
+msgstr "Qt অ্যাপ্লিকেশন"
+
+#. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except X applications and Qt applications</i></small>"
+#. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except X applications and GTK+ applications</i></small>"
+#. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except GTK+ applications and Qt applications</i></small>"
+#: ../libimchooseui/imchooseui.c:658 ../libimchooseui/imchooseui.c:663
+#: ../libimchooseui/imchooseui.c:668
+#, c-format
+msgid ", except %s and %s"
+msgstr ", %s ও %s বাদে"
+
+#. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except X applications</i></small>"
+#. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except GTK+ applications</i></small>"
+#. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except Qt applications</i></small>"
+#: ../libimchooseui/imchooseui.c:673 ../libimchooseui/imchooseui.c:677
+#: ../libimchooseui/imchooseui.c:681
+#, c-format
+msgid ", except %s"
+msgstr ", %s বাদে"
+
+#. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except GTK+ applications</i></small>"
+#: ../libimchooseui/imchooseui.c:687
+#, c-format
+msgid ""
+"<small><i>Note: this change will not take effect until your next log in%s</"
+"i></small>"
+msgstr ""
+
+#: ../libimchooseui/imchooseui.c:698
+#, c-format
+msgid "Unable to obtain the object for note"
+msgstr ""
+
+#: ../libimchooseui/imchooseui.c:704
+#, c-format
+msgid "Unable to obtain the object for tree"
+msgstr ""
+
+#: ../libimchooseui/imchooseuicellrendererlabel.c:242
+msgid "Widget"
+msgstr ""
+
+#: ../libimchooseui/imchooseuicellrendererlabel.c:243
+msgid "Widget to contain in the cell"
+msgstr ""
+
+#: ../libimchooseui/imchooseuicellrendererlabel.c:249
+msgid "Spacing"
+msgstr ""
+
+#: ../libimchooseui/imchooseuicellrendererlabel.c:250
+msgid "The amount of space between label"
+msgstr ""
+
+#: ../src/app/im-chooser.desktop.in.in.h:1
 #: ../src/ccpanel/im-chooser-panel.desktop.in.in.h:1
-#: ../src/im-chooser.desktop.in.in.h:1 ../src/xfce4-im-chooser.desktop.in.h:1
+#: ../src/xfce/xfce4-im-chooser.desktop.in.in.h:1
 msgid ""
 "Choose the input method to be used or disable the input method usage on the "
 "desktop"
 msgstr ""
 "ব্যবহারযোগ্য ইনপুট পদ্ধতি নির্ধারণ করুন অথবা ডেস্কটপের মধ্যে ইনপুট পদ্ধতি নিষ্ক্রিয় করুন"
 
-#: ../src/ccpanel/im-chooser-panel.desktop.in.in.h:2
-#: ../src/ui/im-chooser-ui.c:117 ../src/im-chooser.desktop.in.in.h:2
-#: ../src/xfce4-im-chooser.desktop.in.h:2
+#: ../src/app/im-chooser.desktop.in.in.h:2 ../src/app/main.c:205
+#: ../src/ccpanel/im-chooser-panel.desktop.in.in.h:2 ../src/xfce/main.c:262
+#: ../src/xfce/xfce4-im-chooser.desktop.in.in.h:2
 msgid "Input Method Selector"
 msgstr "ইনপুট পদ্ধতি নির্বাচন ব্যবস্থা"
+
+#: ../src/app/main.c:137 ../src/xfce/main.c:139
+msgid "Could not connect to the session manager"
+msgstr "সেশান পরিচালনব্যবস্থার সাথে সংযোগ স্থাপন করতে ব্যর্থ"
+
+#: ../src/app/main.c:156 ../src/xfce/main.c:159
+msgid "[options...]"
+msgstr "[options...]"
+
+#: ../src/app/main.c:178 ../src/xfce/main.c:180
+#, c-format
+msgid "Could not parse arguments: %s\n"
+msgstr "আর্গুমেন্ট পার্স করতে ব্যর্থ: %s\n"
+
+#: ../src/app/main.c:195 ../src/xfce/main.c:238 ../src/xfce/main.c:253
+msgid "No input method is available"
+msgstr ""
+
+#: ../src/app/main.c:198 ../src/xfce/main.c:241 ../src/xfce/main.c:256
+msgid "Unrecoverable error"
+msgstr ""
+
+#: ../src/app/main.c:210 ../src/xfce/main.c:267
+msgid "Log Out"
+msgstr "লগ আউট করুন"
 
 #. Translators: those are keywords for im-chooser control-center panel
 #: ../src/ccpanel/im-chooser-panel.desktop.in.in.h:4
 msgid "InputMethod;IM;"
 msgstr ""
 
-#: ../src/ui/eggdesktopfile.c:165
-#, c-format
-msgid "File is not a valid .desktop file"
-msgstr "এটি বৈধ .desktop ফাইল নয়"
-
-#: ../src/ui/eggdesktopfile.c:188
-#, c-format
-msgid "Unrecognized desktop file Version '%s'"
-msgstr "ডেস্কটপ ফাইলের অজ্ঞাত সংস্করণ '%s'"
-
-#: ../src/ui/eggdesktopfile.c:968
-#, c-format
-msgid "Starting %s"
-msgstr "%s আরম্ভ করা হচ্ছে"
-
-#: ../src/ui/eggdesktopfile.c:1110
-#, c-format
-msgid "Application does not accept documents on command line"
-msgstr "অ্যাপ্লিকেশন দ্বারা কমান্ড-লাইনের মাধ্যমে নথিপত্র গ্রহণ করা হয় না"
-
-#: ../src/ui/eggdesktopfile.c:1178
-#, c-format
-msgid "Unrecognized launch option: %d"
-msgstr "প্রারম্ভিক বিকল্প অজানা: %d"
-
-#: ../src/ui/eggdesktopfile.c:1383
-#, c-format
-msgid "Can't pass document URIs to a 'Type=Link' desktop entry"
-msgstr "'Type=Link' ডেস্কটপ এনট্রির ক্ষেত্রে নথিপত্রের URI উল্লেখ করা সম্ভব নয়"
-
-#: ../src/ui/eggdesktopfile.c:1404
-#, c-format
-msgid "Not a launchable item"
-msgstr "প্রারম্ভ করার যোগ্য বস্তু নয়"
-
-#: ../src/ui/eggsmclient.c:226
-msgid "Disable connection to session manager"
-msgstr "সেশান পরিচালনব্যবস্থার সাথে সংযোগ বিচ্ছিন্ন করা হবে"
-
-#: ../src/ui/eggsmclient.c:229
-msgid "Specify file containing saved configuration"
-msgstr "সংরক্ষিত কনফিগারেশন ধারণকারী ফাইল উল্লেখ করুন"
-
-#: ../src/ui/eggsmclient.c:229
-msgid "FILE"
-msgstr "FILE"
-
-#: ../src/ui/eggsmclient.c:232
-msgid "Specify session management ID"
-msgstr "সেশান পরিচালনার ID উল্লেখ করু"
-
-#: ../src/ui/eggsmclient.c:232
-msgid "ID"
-msgstr "ID"
-
-#: ../src/ui/eggsmclient.c:253
-msgid "Session management options:"
-msgstr "সেশান পরিচালনা সংক্রান্ত বিকল্প:"
-
-#: ../src/ui/eggsmclient.c:254
-msgid "Show session management options"
-msgstr "সেশান পরিচালনা সংক্রান্ত বিকল্প প্রদর্শন করা হবে"
-
-#: ../src/ui/im-chooser-simple.c:117
-msgid "X applications"
-msgstr "X অ্যাপ্লিকেশন"
-
-#: ../src/ui/im-chooser-simple.c:118
-msgid "GTK+ applications"
-msgstr "GTK+ অ্যাপ্লিকেশন"
-
-#: ../src/ui/im-chooser-simple.c:119
-msgid "Qt applications"
-msgstr "Qt অ্যাপ্লিকেশন"
-
-#: ../src/ui/im-chooser-simple.c:197
-msgid "Unable to get the information"
-msgstr "তথ্য প্রাপ্ত করতে ব্যর্থ"
-
-#: ../src/ui/im-chooser-simple.c:271
-msgid "Failed to switch Input Method"
+#: ../src/xfce/main.c:162
+msgid "Settings manager socket"
 msgstr ""
 
-#: ../src/ui/im-chooser-simple.c:375
-#, c-format
-msgid "Switching Input Method - %s"
+#: ../src/xfce/main.c:162
+msgid "SOCKET ID"
 msgstr ""
-
-#. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications and Qt applications</i></small>"
-#. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications and GTK+ applications</i></small>"
-#. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications and Qt applications</i></small>"
-#: ../src/ui/im-chooser-simple.c:463 ../src/ui/im-chooser-simple.c:466
-#: ../src/ui/im-chooser-simple.c:469
-#, c-format
-msgid ", except %s and %s"
-msgstr ", %s ও %s বাদে"
-
-#. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except X applications</i></small>"
-#. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications</i></small>"
-#. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except Qt applications</i></small>"
-#: ../src/ui/im-chooser-simple.c:472 ../src/ui/im-chooser-simple.c:475
-#: ../src/ui/im-chooser-simple.c:478
-#, c-format
-msgid ", except %s"
-msgstr ", %s বাদে"
-
-#. This will be displayed like "<small><i>Note: this change will not take effect until you next log in, except GTK+ applications</i></small>"
-#: ../src/ui/im-chooser-simple.c:483
-#, c-format
-msgid ""
-"<small><i>Note: this change will not take effect until you next log in%s</"
-"i></small>"
-msgstr ""
-"<small><i>উল্লেখ্য: পরবর্তীবার লগ-ইন না করা অবধি এই পরিবর্তন প্রয়োগ করা হবে না "
-"%s</i></small>"
-
-#: ../src/ui/im-chooser-simple.c:542
-msgid "Parent Window"
-msgstr "ঊর্ধ্বতন উইন্ডো"
-
-#: ../src/ui/im-chooser-simple.c:543
-msgid "GtkWindow that points to the parent window"
-msgstr "ঊর্ধ্বতন উইন্ডো নির্দেশকারী GtkWindow"
-
-#: ../src/ui/im-chooser-simple.c:548
-msgid "Note type"
-msgstr "নোটের প্রকৃতি"
-
-#: ../src/ui/im-chooser-simple.c:549
-msgid "A enum value to determine which notes should be displayed"
-msgstr "প্রদর্শনযোগ্য নোট চিহ্নিত করার জন্য একটি enum মান"
-
-#. setup a progress window
-#: ../src/ui/im-chooser-simple.c:592
-msgid "Work in progress..."
-msgstr "কাজ চলছে..."
-
-#: ../src/ui/im-chooser-simple.c:674
-msgid "No Input Method"
-msgstr "ইনপুট পদ্ধতি অনুপস্থিত"
-
-#: ../src/ui/im-chooser-simple.c:676
-#, c-format
-msgid "Use %s"
-msgstr "%s ব্যবহার করা হবে"
-
-#: ../src/ui/im-chooser-simple.c:683
-msgid " (legacy)"
-msgstr " (লিগ্যাসি)"
-
-#: ../src/ui/im-chooser-simple.c:685
-msgid " (recommended)"
-msgstr " (প্রস্তাবিত)"
-
-#: ../src/ui/im-chooser-simple.c:729
-#, c-format
-msgid "Unable to communicate to IMSettings services"
-msgstr "IMSettings পরিসেবার সাথে যোগাযোগ করতে ব্যর্থ"
-
-#: ../src/ui/im-chooser-simple.c:730
-msgid "Version mismatch"
-msgstr "সংস্করণ সংখ্যায় গরমিল"
-
-#: ../src/ui/im-chooser-simple.c:747
-msgid "Unable to gather current status"
-msgstr "বর্তমান অবস্থা সংক্রান্ত তথ্য প্রাপ্ত করতে ব্যর্থ"
-
-#: ../src/ui/im-chooser-simple.c:753
-msgid "Unable to get Input Method information"
-msgstr "ইনপুট পদ্ধতি সংক্রান্ত তথ্য প্রাপ্ত করতে ব্যর্থ"
-
-#: ../src/ui/im-chooser-simple.c:862
-msgid "<b>Input Method</b>"
-msgstr "<b>ইনপুট পদ্ধতি</b>"
-
-#: ../src/ui/im-chooser-simple.c:897
-msgid "Input Method _Preferences..."
-msgstr "ইনপুট পদ্ধতি সংক্রান্ত পছন্দসই মান...(_P)"
-
-#: ../src/ui/im-chooser-ui.c:55
-msgid ""
-"<span weight=\"bold\" size=\"larger\">No input method is available</span>"
-msgstr ""
-"<span weight=\"bold\" size=\"larger\">কোনো ইনপুট পদ্ধতি উপস্থিত নেই</span>"
-
-#: ../src/ui/im-chooser-ui.c:58
-msgid "Please install any input methods before running if you like."
-msgstr "ইনপুট পদ্ধতি প্রয়োগ করার পূর্বে অনুগ্রহ করে সেগুলি ইনস্টল করুন।"
-
-#: ../src/ui/im-chooser-ui.c:88
-msgid "Could not connect to the session manager"
-msgstr "সেশান পরিচালনব্যবস্থার সাথে সংযোগ স্থাপন করতে ব্যর্থ"
-
-#: ../src/ui/im-chooser-ui.c:146
-msgid "Log Out"
-msgstr "লগ আউট করুন"
-
-#: ../src/main.c:36
-msgid "[options...]"
-msgstr "[options...]"
-
-#: ../src/main.c:56
-#, c-format
-msgid "Could not parse arguments: %s\n"
-msgstr "আর্গুমেন্ট পার্স করতে ব্যর্থ: %s\n"
