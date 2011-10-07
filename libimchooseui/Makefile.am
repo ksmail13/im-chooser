@@ -52,6 +52,8 @@ libeggdesktopfile_la_SOURCES =					\
 
 libeggsmclient_la_CFLAGS =					\
 	-DEGG_SM_CLIENT_BACKEND_XSMP				\
+	-DEGG_SM_CLIENT_BACKEND_DBUS				\
+	$(SM_CFLAGS)						\
 	$(NULL)
 libeggsmclient_la_LIBADD =					\
 	$(TOOLKIT_LIBS)						\
@@ -62,6 +64,8 @@ libeggsmclient_la_SOURCES =					\
 	eggsmclient.c						\
 	eggsmclient.h						\
 	eggsmclient-private.h					\
+	eggsmclient-dbus-gnome.c				\
+	eggsmclient-dbus-kde.c					\
 	eggsmclient-xsmp.c					\
 	$(NULL)
 

@@ -340,6 +340,21 @@ egg_sm_client_get (void)
 #elif defined (GDK_WINDOWING_QUARTZ)
 	  global_client = egg_sm_client_osx_new ();
 #else
+	  /* HACK:
+	   * Try D-Bus first because we don't need the state saving here.
+	   * but want to make sure if the logout option is really available.
+	   */
+#ifdef EGG_SM_CLIENT_BACKEND_DBUS
+	  global_client = egg_sm_client_dbus_gnome_new ();
+	  if (!global_client)
+	    global_client = egg_sm_client_dbus_kde_new ();
+#endif
+#ifdef EGG_SM_CLIENT_BACKEND_XSMP
+	  if (!global_client)
+	    global_client = egg_sm_client_xsmp_new ();
+#endif
+
+#if 0
 	  /* If both D-Bus and XSMP are compiled in, try XSMP first
 	   * (since it supports state saving) and fall back to D-Bus
 	   * if XSMP isn't available.
@@ -351,6 +366,7 @@ egg_sm_client_get (void)
 	  if (!global_client)
 	    global_client = egg_sm_client_dbus_new ();
 # endif
+#endif
 #endif
 	}
 

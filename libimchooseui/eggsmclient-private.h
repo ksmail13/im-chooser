@@ -42,8 +42,10 @@ GType        egg_sm_client_xsmp_get_type (void);
 EggSMClient *egg_sm_client_xsmp_new      (void);
 # endif
 # ifdef EGG_SM_CLIENT_BACKEND_DBUS
-GType        egg_sm_client_dbus_get_type (void);
-EggSMClient *egg_sm_client_dbus_new      (void);
+GType        egg_sm_client_dbus_gnome_get_type (void);
+EggSMClient *egg_sm_client_dbus_gnome_new      (void);
+GType        egg_sm_client_dbus_kde_get_type   (void);
+EggSMClient *egg_sm_client_dbus_kde_new        (void);
 # endif
 #elif defined (GDK_WINDOWING_WIN32)
 GType        egg_sm_client_win32_get_type (void);
