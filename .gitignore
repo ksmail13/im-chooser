@@ -29,9 +29,10 @@ libtool
 ltmain.*
 missing
 mkinstalldirs
+po/\.cache
+po/\.intltool*
 po/Makefile*
 po/POTFILES
-po/\.intltool*
 src/app/im-chooser.desktop.in
 src/app/im-chooser
 src/ccpanel/im-chooser-panel.desktop.in
