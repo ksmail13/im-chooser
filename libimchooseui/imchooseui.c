@@ -188,7 +188,7 @@ _imchoose_ui_add_row(IMChooseUI      *ui,
 
 	if (prefsname != NULL && prefsname[0] != 0) {
 		g_string_append_printf(prefs_string,
-				       _("<a href=\"imsettings-prefs:///%s\">Preference...</a>"),
+				       _("<a href=\"imsettings-prefs:///%s\">Preferences...</a>"),
 				       name);
 	}
 	/* label isn't really attached to any widgets
