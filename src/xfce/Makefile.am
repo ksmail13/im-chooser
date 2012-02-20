@@ -18,6 +18,10 @@ DEPS =								\
 	$(top_builddir)/libimchooseui/libimchooseui.la		\
 	$(NULL)
 
+MAINTAINERCLEANFILES =	\
+	*.desktop	\
+	$(NULL)
+
 bin_PROGRAMS = xfce4-im-chooser
 
 xfce4_im_chooser_SOURCES =					\
@@ -38,3 +42,5 @@ desktop_DATA = $(desktop_in_files:.desktop.in=.desktop)
 EXTRA_DIST =			\
 	$(desktop_in_files)	\
 	$(NULL)
+
+-include $(top_srcdir)/git.mk

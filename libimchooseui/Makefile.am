@@ -118,3 +118,5 @@ imchooseui-marshal.c: @REBUILD@ imchooseui-marshal.h Makefile
 	$(GLIB_GENMARSHAL) --prefix=imchoose_ui_marshal $(srcdir)/marshal.list --body) > xgen-icc \
 	&& cp xgen-icc imchooseui-marshal.c \
 	&& rm -f xgen-icc
+
+-include $(top_srcdir)/git.mk

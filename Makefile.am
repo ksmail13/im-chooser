@@ -12,6 +12,18 @@ EXTRA_DIST =			\
 	intltool-update.in	\
 	requires		\
 	$(NULL)
+
+MAINTAINERCLEANFILES =		\
+	$(srcdir)/aclocal.m4	\
+	$(srcdir)/config.guess	\
+	$(srcdir)/config.h.in	\
+	$(srcdir)/config.sub	\
+	$(srcdir)/depcomp	\
+	$(srcdir)/install-sh	\
+	$(srcdir)/ltmain.sh	\
+	$(srcdir)/missing	\
+	$(srcdir)/mkinstalldirs	\
+	$(NULL)
 #
 dist-hook:
 	@if test -d "$(srcdir)/.git";					\
@@ -26,3 +38,5 @@ dist-hook:
 	else								\
 		echo A git clone is required to generate a ChangeLog >&2;	\
 	fi
+
+-include $(top_srcdir)/git.mk
