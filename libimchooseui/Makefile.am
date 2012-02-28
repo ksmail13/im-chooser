@@ -109,12 +109,12 @@ ui_DATA =							\
 imchooseui-marshal.h: stamp-marshal.h
 	@true
 stamp-marshal.h: @REBUILD@ marshal.list Makefile
-	$(GLIB_GENMARSHAL) --prefix=imchoose_ui_marshal $(srcdir)/marshal.list --header > xgen-ich \
+	$(AM_V_GEN) $(GLIB_GENMARSHAL) --prefix=imchoose_ui_marshal $(srcdir)/marshal.list --header > xgen-ich \
 	&& (cmp -s xgen-ich imchooseui-marshal.h || cp xgen-ich imchooseui-marshal.h) \
 	&& rm -f xgen-ich \
 	&& echo timestamp > $(@F)
 imchooseui-marshal.c: @REBUILD@ imchooseui-marshal.h Makefile
-	(echo "#include \"imchooseui-marshal.h\""; \
+	$(AM_V_GEN) (echo "#include \"imchooseui-marshal.h\""; \
 	$(GLIB_GENMARSHAL) --prefix=imchoose_ui_marshal $(srcdir)/marshal.list --body) > xgen-icc \
 	&& cp xgen-icc imchooseui-marshal.c \
 	&& rm -f xgen-icc
