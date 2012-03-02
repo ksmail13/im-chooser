@@ -3,6 +3,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Rajesh Ranjan <rranjan@redhat.com>, 2006, 2008, 2011.
+# rajesh <rajesh@fedoraproject.org>, 2012. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: im-chooser\n"
@@ -91,7 +92,7 @@ msgstr "कार्य प्रगति पर है..."
 
 #: ../libimchooseui/imchoose.ui.h:3
 msgid "label"
-msgstr ""
+msgstr "लेबल"
 
 #: ../libimchooseui/imchooseui.c:162
 msgid "No Input Method"
@@ -113,17 +114,17 @@ msgstr " (अनुशंसित)"
 #: ../libimchooseui/imchooseui.c:191
 #, c-format
 msgid "<a href=\"imsettings-prefs:///%s\">Preference...</a>"
-msgstr ""
+msgstr "<a href=\"imsettings-prefs:///%s\">वरीयताएँ...</a>"
 
 #: ../libimchooseui/imchooseui.c:240
 #, c-format
 msgid "Unable to create a client instance."
-msgstr ""
+msgstr "एक क्लाइंट उदाहरण बनाने में असमर्थ."
 
 #: ../libimchooseui/imchooseui.c:249
 #, c-format
 msgid "Unable to communicate to IMSettings service: %s"
-msgstr ""
+msgstr "IMSettings सेवा में संचार करने में असमर्थ: %s"
 
 #: ../libimchooseui/imchooseui.c:325
 #, c-format
@@ -136,7 +137,7 @@ msgstr "सूचना पाने में असमर्थ"
 
 #: ../libimchooseui/imchooseui.c:411
 msgid "Unable to invoke the preference tool"
-msgstr ""
+msgstr "कोई वरीयता औजार वापस लाने में असमर्थ"
 
 #: ../libimchooseui/imchooseui.c:432
 #, c-format
@@ -146,7 +147,7 @@ msgstr "इनपुट विधि स्विच कर रहा है - %
 #: ../libimchooseui/imchooseui.c:454
 #, c-format
 msgid "Unknown error during finalizing the request of SwitchIM"
-msgstr ""
+msgstr "SwitchIM के आग्रह को अंतिम रूप देने में अनजान त्रुटि"
 
 #: ../libimchooseui/imchooseui.c:461
 msgid "Failed to switch Input Method"
@@ -189,32 +190,33 @@ msgid ""
 "<small><i>Note: this change will not take effect until your next log in%s</"
 "i></small>"
 msgstr ""
+"<small><i>नोट: यह परिवर्तन आपके अगले लॉग in%s के पहले प्रभावी नहीं होगा</i></small>"
 
 #: ../libimchooseui/imchooseui.c:698
 #, c-format
 msgid "Unable to obtain the object for note"
-msgstr ""
+msgstr "नोट के लिए वस्तु पाने में असमर्थ"
 
 #: ../libimchooseui/imchooseui.c:704
 #, c-format
 msgid "Unable to obtain the object for tree"
-msgstr ""
+msgstr "तरू के लिए वस्तु पाने में असमर्थ"
 
 #: ../libimchooseui/imchooseuicellrendererlabel.c:242
 msgid "Widget"
-msgstr ""
+msgstr "विजेट"
 
 #: ../libimchooseui/imchooseuicellrendererlabel.c:243
 msgid "Widget to contain in the cell"
-msgstr ""
+msgstr "कोष्ठ में समाहित करने के लिए विजेट"
 
 #: ../libimchooseui/imchooseuicellrendererlabel.c:249
 msgid "Spacing"
-msgstr ""
+msgstr "अंतरण"
 
 #: ../libimchooseui/imchooseuicellrendererlabel.c:250
 msgid "The amount of space between label"
-msgstr ""
+msgstr "लेबल के बीच में स्थान की मात्रा"
 
 #: ../src/app/im-chooser.desktop.in.in.h:1
 #: ../src/ccpanel/im-chooser-panel.desktop.in.in.h:1
@@ -247,11 +249,11 @@ msgstr "तर्क विश्लेषित नहीं कर सका: 
 
 #: ../src/app/main.c:195 ../src/xfce/main.c:238 ../src/xfce/main.c:253
 msgid "No input method is available"
-msgstr ""
+msgstr "कोई इनपुट विधि उपलब्ध नहीं है"
 
 #: ../src/app/main.c:198 ../src/xfce/main.c:241 ../src/xfce/main.c:256
 msgid "Unrecoverable error"
-msgstr ""
+msgstr "न रिकवरी योग्य त्रुटि"
 
 #: ../src/app/main.c:210 ../src/xfce/main.c:267
 msgid "Log Out"
@@ -264,8 +266,8 @@ msgstr "InputMethod;IM;"
 
 #: ../src/xfce/main.c:162
 msgid "Settings manager socket"
-msgstr ""
+msgstr "सेटिंग्स मैनेजर सॉकेट"
 
 #: ../src/xfce/main.c:162
 msgid "SOCKET ID"
-msgstr ""
+msgstr "सॉकेट आईडी"

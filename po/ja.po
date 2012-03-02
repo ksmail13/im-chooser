@@ -197,7 +197,8 @@ msgstr "%s を除いて、"
 msgid ""
 "<small><i>Note: this change will not take effect until your next log in%s</"
 "i></small>"
-msgstr "<small><i>注記: %sこの変更は次回ログインするまで反映されません</i></small>"
+msgstr ""
+"<small><i>注記: %sこの変更は次回ログインするまで反映されません</i></small>"
 
 #: ../libimchooseui/imchooseui.c:698
 #, c-format

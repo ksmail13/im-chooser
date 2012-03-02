@@ -3,6 +3,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Dimitris Glezos <dimitris@glezos.com>, 2006, 2007.
+# glezos <glezos@fedoraproject.org>, 2011. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: im-chooser\n"
@@ -30,7 +31,7 @@ msgstr ""
 #: ../libimchooseui/eggdesktopfile.c:968
 #, c-format
 msgid "Starting %s"
-msgstr ""
+msgstr "Έναρξη %s"
 
 #: ../libimchooseui/eggdesktopfile.c:1110
 #, c-format
@@ -62,7 +63,7 @@ msgstr ""
 
 #: ../libimchooseui/eggsmclient.c:229
 msgid "FILE"
-msgstr ""
+msgstr "ΑΡΧΕΙΟ"
 
 #: ../libimchooseui/eggsmclient.c:232
 msgid "Specify session management ID"

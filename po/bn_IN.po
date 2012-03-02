@@ -6,6 +6,7 @@
 # Akira  <akira+transifex@tagoh.org>, 2011.
 # Runa Bhattacharjee <runabh@gmail.com>, 2007.
 # Runa Bhattacharjee <runab@redhat.com>, 2006, 2008.
+# sankarshan <sankarshan@pobox.com>, 2011. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: im-chooser\n"
@@ -94,7 +95,7 @@ msgstr "কাজ চলছে..."
 
 #: ../libimchooseui/imchoose.ui.h:3
 msgid "label"
-msgstr ""
+msgstr "লেবেল"
 
 #: ../libimchooseui/imchooseui.c:162
 msgid "No Input Method"
@@ -116,17 +117,17 @@ msgstr " (প্রস্তাবিত)"
 #: ../libimchooseui/imchooseui.c:191
 #, c-format
 msgid "<a href=\"imsettings-prefs:///%s\">Preference...</a>"
-msgstr ""
+msgstr "<a href=\"imsettings-prefs:///%s\">Preference...</a>"
 
 #: ../libimchooseui/imchooseui.c:240
 #, c-format
 msgid "Unable to create a client instance."
-msgstr ""
+msgstr "একটি ক্লায়েন্ট তৈরী করা সম্ভব হয়নি।"
 
 #: ../libimchooseui/imchooseui.c:249
 #, c-format
 msgid "Unable to communicate to IMSettings service: %s"
-msgstr ""
+msgstr "IMSettings সার্ভিস-এর সাথে যোগাযোগ করতে পারা যায়নি: %s"
 
 #: ../libimchooseui/imchooseui.c:325
 #, c-format
@@ -144,7 +145,7 @@ msgstr ""
 #: ../libimchooseui/imchooseui.c:432
 #, c-format
 msgid "Switching Input Method - %s"
-msgstr ""
+msgstr "Input Method -এর বদল করা হচ্ছে - %s"
 
 #: ../libimchooseui/imchooseui.c:454
 #, c-format
@@ -153,7 +154,7 @@ msgstr ""
 
 #: ../libimchooseui/imchooseui.c:461
 msgid "Failed to switch Input Method"
-msgstr ""
+msgstr "Input Method বদল করা যায়নি"
 
 #: ../libimchooseui/imchooseui.c:648
 msgid "X applications"
@@ -249,7 +250,7 @@ msgstr "আর্গুমেন্ট পার্স করতে ব্যর
 
 #: ../src/app/main.c:195 ../src/xfce/main.c:238 ../src/xfce/main.c:253
 msgid "No input method is available"
-msgstr ""
+msgstr "কোন ইনপুট পদ্ধতি পাওয়া যায়নি"
 
 #: ../src/app/main.c:198 ../src/xfce/main.c:241 ../src/xfce/main.c:256
 msgid "Unrecoverable error"
@@ -262,7 +263,7 @@ msgstr "লগ আউট করুন"
 #. Translators: those are keywords for im-chooser control-center panel
 #: ../src/ccpanel/im-chooser-panel.desktop.in.in.h:4
 msgid "InputMethod;IM;"
-msgstr ""
+msgstr "InputMethod;IM;"
 
 #: ../src/xfce/main.c:162
 msgid "Settings manager socket"
@@ -270,4 +271,4 @@ msgstr ""
 
 #: ../src/xfce/main.c:162
 msgid "SOCKET ID"
-msgstr ""
+msgstr "SOCKET ID"
