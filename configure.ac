@@ -53,10 +53,6 @@ PKG_CHECK_MODULES(GTK3, gtk+-3.0, [
 	PKG_CHECK_MODULES(GTK2, gtk+-2.0)
 	IMCHOOSE_GTK_VERSION=2])
 PKG_CHECK_MODULES(SM, sm)
-PKG_CHECK_MODULES(PANEL, libgnome-control-center >= $CCPANEL_REQUIRED,[
-	enable_ccpanel=yes
-	PANEL_DIR=$(pkg-config --variable=extensiondir libgnome-control-center)],
-	enable_ccpanel=no)
 PKG_CHECK_MODULES(XFCE4, libxfce4util-1.0,[
 	enable_xfce=yes],[
 	enable_xfce=no])
@@ -79,7 +75,6 @@ AC_SUBST(IMCHOOSE_GTK_VERSION)
 
 AC_DEFINE_UNQUOTED(IMCHOOSE_GTK_VERSION, $IMCHOOSE_GTK_VERSION, [GTK+ version detected by pkg-config])
 
-AM_CONDITIONAL(ENABLE_CCPANEL, test "x$enable_ccpanel" = "xyes")
 AM_CONDITIONAL(ENABLE_XFCE4, test "x$enable_xfce" = "xyes")
 
 if test $IMCHOOSE_GTK_VERSION == 3; then
