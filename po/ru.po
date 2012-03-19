@@ -246,7 +246,7 @@ msgstr "[параметры...]"
 #: ../src/app/main.c:178 ../src/xfce/main.c:180
 #, c-format
 msgid "Could not parse arguments: %s\n"
-msgstr "Ошибка разбора аргументов: %s¶"
+msgstr "Ошибка разбора аргументов: %s¶\n"
 
 #: ../src/app/main.c:195 ../src/xfce/main.c:238 ../src/xfce/main.c:253
 msgid "No input method is available"

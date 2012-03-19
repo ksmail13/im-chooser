@@ -1,7 +1,7 @@
 dnl Process this file with autoconf to produce a configure script.
 AC_INIT([im-chooser], 1.5.2, [https://bugzilla.redhat.com/enter_bug.cgi?product=Fedora&component=im-chooser])
 
-. ./requires
+. `dirname $0`/requires
 
 AM_INIT_AUTOMAKE($PACKAGE_NAME, $PACKAGE_VERSION)
 dnl silent build rules, requires at least automake-1.11.

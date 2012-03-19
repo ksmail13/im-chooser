@@ -21,6 +21,10 @@ MAINTAINERCLEANFILES =	\
 	*.desktop	\
 	$(NULL)
 
+DISTCLEANFILES =	\
+	*.desktop	\
+	$(NULL)
+
 bin_PROGRAMS = im-chooser
 
 im_chooser_SOURCES =						\

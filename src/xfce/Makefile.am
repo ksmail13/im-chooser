@@ -22,6 +22,10 @@ MAINTAINERCLEANFILES =	\
 	*.desktop	\
 	$(NULL)
 
+DISTCLEANFILES =	\
+	*.desktop	\
+	$(NULL)
+
 bin_PROGRAMS = xfce4-im-chooser
 
 xfce4_im_chooser_SOURCES =					\

@@ -5,6 +5,5 @@ libimchooseui/imchooseui.c
 libimchooseui/imchooseuicellrendererlabel.c
 src/app/im-chooser.desktop.in.in
 src/app/main.c
-src/ccpanel/im-chooser-panel.desktop.in.in
 src/xfce/main.c
 src/xfce/xfce4-im-chooser.desktop.in.in

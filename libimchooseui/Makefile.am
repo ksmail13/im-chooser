@@ -29,6 +29,13 @@ MAINTAINERCLEANFILES =						\
 	$(stamp_files)						\
 	$(NULL)
 
+DISTCLEANFILES =						\
+	$(built_public_headers)					\
+	$(built_private_headers)				\
+	$(built_sources)					\
+	$(stamp_files)						\
+	$(NULL)
+
 CLEANFILES =							\
 	xgen-ich						\
 	xgen-icc						\
