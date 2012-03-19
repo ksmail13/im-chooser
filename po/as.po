@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: im-chooser\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-08-02 17:13+0900\n"
+"POT-Creation-Date: 2012-03-13 20:45+0900\n"
 "PO-Revision-Date: 2012-03-02 20:16+0900\n"
 "Last-Translator: tagoh <akira+transifex@tagoh.org>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -113,8 +113,8 @@ msgstr "(উপদেশিত)"
 
 #: ../libimchooseui/imchooseui.c:191
 #, c-format
-msgid "<a href=\"imsettings-prefs:///%s\">Preference...</a>"
-msgstr "<a href=\"imsettings-prefs:///%s\">পছন্দ...</a>"
+msgid "<a href=\"imsettings-prefs:///%s\">Preferences...</a>"
+msgstr ""
 
 #: ../libimchooseui/imchooseui.c:240
 #, c-format

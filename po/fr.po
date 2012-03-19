@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: im-chooser\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-08-02 17:13+0900\n"
+"POT-Creation-Date: 2012-03-13 20:45+0900\n"
 "PO-Revision-Date: 2011-08-22 05:22+0000\n"
 "Last-Translator: dominique <chepioq@gmail.com>\n"
 "Language-Team: French (http://www.transifex.net/projects/p/im-chooser/team/"
@@ -120,8 +120,8 @@ msgstr " (recommandée)"
 
 #: ../libimchooseui/imchooseui.c:191
 #, c-format
-msgid "<a href=\"imsettings-prefs:///%s\">Preference...</a>"
-msgstr "<a href=\"imsettings-prefs:///%s\">Préférences...</a>"
+msgid "<a href=\"imsettings-prefs:///%s\">Preferences...</a>"
+msgstr ""
 
 #: ../libimchooseui/imchooseui.c:240
 #, c-format

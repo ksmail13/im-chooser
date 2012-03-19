@@ -8,11 +8,12 @@
 # Domingo Becker <domingobecker@gmail.com>, 2008.
 # Héctor Daniel Cabrera <logan@fedoraproject.org>, 2011.
 # Manuel Ospina <mospina@redhat.com>, 2006, 2007.
+# gguerrer <gguerrer@fedoraproject.org>, 2012. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: im-chooser\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-08-02 17:13+0900\n"
+"POT-Creation-Date: 2012-03-13 20:45+0900\n"
 "PO-Revision-Date: 2011-09-27 13:41+0000\n"
 "Last-Translator: logan <logan@fedoraproject.org>\n"
 "Language-Team: Spanish (Castilian) <trans-es@lists.fedoraproject.org>\n"
@@ -118,8 +119,8 @@ msgstr " (recomendado)"
 
 #: ../libimchooseui/imchooseui.c:191
 #, c-format
-msgid "<a href=\"imsettings-prefs:///%s\">Preference...</a>"
-msgstr "<a href=\"imsettings-prefs:///%s\">Preferencia...</a>"
+msgid "<a href=\"imsettings-prefs:///%s\">Preferences...</a>"
+msgstr "<a href=\"imsettings-prefs:///%s\">Preferences...</a>"
 
 #: ../libimchooseui/imchooseui.c:240
 #, c-format

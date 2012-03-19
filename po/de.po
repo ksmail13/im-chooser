@@ -8,11 +8,12 @@
 # Fabian Affolter <fab@fedoraproject.org>, 2007, 2008.
 # Roman Spirgi <rspirgi@gmail.com>, 2011.
 # Timo Trinks <ttrinks@redhat.com>, 2006.
+# hedda <hedda@fedoraproject.org>, 2012. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: im-chooser\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-08-02 17:13+0900\n"
+"POT-Creation-Date: 2012-03-13 20:45+0900\n"
 "PO-Revision-Date: 2011-08-31 21:01+0000\n"
 "Last-Translator: bigant <rspirgi@gmail.com>\n"
 "Language-Team: German (http://www.transifex.net/projects/p/im-chooser/team/"
@@ -119,13 +120,13 @@ msgstr " (empfohlen)"
 
 #: ../libimchooseui/imchooseui.c:191
 #, c-format
-msgid "<a href=\"imsettings-prefs:///%s\">Preference...</a>"
-msgstr "<a href=\"imsettings-prefs:///%s\">Einstellung...</a>"
+msgid "<a href=\"imsettings-prefs:///%s\">Preferences...</a>"
+msgstr ""
 
 #: ../libimchooseui/imchooseui.c:240
 #, c-format
 msgid "Unable to create a client instance."
-msgstr "Client-Instanz nicht erstellbar"
+msgstr "Client-Instanz konnte nicht erstellt werden."
 
 #: ../libimchooseui/imchooseui.c:249
 #, c-format

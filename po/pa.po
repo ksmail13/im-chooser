@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: im-chooser\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-08-02 17:13+0900\n"
+"POT-Creation-Date: 2012-03-13 20:45+0900\n"
 "PO-Revision-Date: 2011-08-18 01:34+0000\n"
 "Last-Translator: aalam <apreet.alam@gmail.com>\n"
 "Language-Team: Panjabi (Punjabi) (http://www.transifex.net/projects/p/im-"
@@ -117,8 +117,8 @@ msgstr " (ਸਿਫਾਰਸ਼-ਕੀਤਾ)"
 
 #: ../libimchooseui/imchooseui.c:191
 #, c-format
-msgid "<a href=\"imsettings-prefs:///%s\">Preference...</a>"
-msgstr "<a href=\"imsettings-prefs:///%s\">ਪਸੰਦ...</a>"
+msgid "<a href=\"imsettings-prefs:///%s\">Preferences...</a>"
+msgstr ""
 
 #: ../libimchooseui/imchooseui.c:240
 #, c-format

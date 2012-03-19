@@ -3,11 +3,12 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Krishna Babu K <kkrothap@redhat.com>, 2008.
+# kkrothap <kkrothap@fedoraproject.org>, 2012. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: im-chooser\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-08-02 17:13+0900\n"
+"POT-Creation-Date: 2012-03-13 20:45+0900\n"
 "PO-Revision-Date: 2011-08-01 06:53+0000\n"
 "Last-Translator: tagoh <akira+transifex@tagoh.org>\n"
 "Language-Team: Telugu (http://www.transifex.net/projects/p/im-chooser/team/"
@@ -21,65 +22,65 @@ msgstr ""
 #: ../libimchooseui/eggdesktopfile.c:165
 #, c-format
 msgid "File is not a valid .desktop file"
-msgstr ""
+msgstr "ఫైలు చెల్లునటువంటి .desktop ఫైలు కాదు"
 
 #: ../libimchooseui/eggdesktopfile.c:188
 #, c-format
 msgid "Unrecognized desktop file Version '%s'"
-msgstr ""
+msgstr "గుర్తించని డెస్కుటాప్ ఫైల్ వర్షన్ '%s'"
 
 #: ../libimchooseui/eggdesktopfile.c:968
 #, c-format
 msgid "Starting %s"
-msgstr ""
+msgstr "%s ప్రారంభిస్తోంది"
 
 #: ../libimchooseui/eggdesktopfile.c:1110
 #, c-format
 msgid "Application does not accept documents on command line"
-msgstr ""
+msgstr "అనువర్తనం కమాండ్ లైన్ పై పత్రములను ఆమోదించదు."
 
 #: ../libimchooseui/eggdesktopfile.c:1178
 #, c-format
 msgid "Unrecognized launch option: %d"
-msgstr ""
+msgstr "గుర్తించని ఆరంభ ఐచ్చికం: %d"
 
 #: ../libimchooseui/eggdesktopfile.c:1383
 #, c-format
 msgid "Can't pass document URIs to a 'Type=Link' desktop entry"
-msgstr ""
+msgstr "పత్ర URI లను 'Type=Link' డెస్కుటాప్ ప్రవేశంనకు పంపలేదు"
 
 #: ../libimchooseui/eggdesktopfile.c:1404
 #, c-format
 msgid "Not a launchable item"
-msgstr ""
+msgstr "ఆరంభించదగు అంశము కాదు"
 
 #: ../libimchooseui/eggsmclient.c:226
 msgid "Disable connection to session manager"
-msgstr ""
+msgstr "సెషన్ నిర్వాహికకు అనుసంధానం అచేతనంచేయి"
 
 #: ../libimchooseui/eggsmclient.c:229
 msgid "Specify file containing saved configuration"
-msgstr ""
+msgstr "దాచిన ఆకృతీకరణను కలిగిన ఫైలును తెలుపుము"
 
 #: ../libimchooseui/eggsmclient.c:229
 msgid "FILE"
-msgstr ""
+msgstr "ఫైల్"
 
 #: ../libimchooseui/eggsmclient.c:232
 msgid "Specify session management ID"
-msgstr ""
+msgstr "సెషన్ నిర్వహణ ఐడి తెలుపుము"
 
 #: ../libimchooseui/eggsmclient.c:232
 msgid "ID"
-msgstr ""
+msgstr "ఐడి"
 
 #: ../libimchooseui/eggsmclient.c:253
 msgid "Session management options:"
-msgstr ""
+msgstr "సెషన్ నిర్వహణ ఐచ్చికములు:"
 
 #: ../libimchooseui/eggsmclient.c:254
 msgid "Show session management options"
-msgstr ""
+msgstr "సెషన్ నిర్వహణ ఐచ్చికాలు చూపు"
 
 #: ../libimchooseui/imchoose.ui.h:1
 msgid "<b>Input Method</b>"
@@ -91,11 +92,11 @@ msgstr "పని జరుగుతోంది...."
 
 #: ../libimchooseui/imchoose.ui.h:3
 msgid "label"
-msgstr ""
+msgstr "లేబుల్"
 
 #: ../libimchooseui/imchooseui.c:162
 msgid "No Input Method"
-msgstr ""
+msgstr "ఏ యిన్పుట్ పద్దతి లేదు"
 
 #: ../libimchooseui/imchooseui.c:164
 #, c-format
@@ -112,18 +113,18 @@ msgstr " (సిఫార్స్‍‌చేసిన)"
 
 #: ../libimchooseui/imchooseui.c:191
 #, c-format
-msgid "<a href=\"imsettings-prefs:///%s\">Preference...</a>"
+msgid "<a href=\"imsettings-prefs:///%s\">Preferences...</a>"
 msgstr ""
 
 #: ../libimchooseui/imchooseui.c:240
 #, c-format
 msgid "Unable to create a client instance."
-msgstr ""
+msgstr "క్లైంట్ సంభవాన్ని సృష్టించలేక పోయింది."
 
 #: ../libimchooseui/imchooseui.c:249
 #, c-format
 msgid "Unable to communicate to IMSettings service: %s"
-msgstr ""
+msgstr " IMఅమరికల సేవతో సంప్రదించలేక పోయింది: %s"
 
 #: ../libimchooseui/imchooseui.c:325
 #, c-format
@@ -136,21 +137,21 @@ msgstr "సమాచారమును పొందలేక పోతోంద�
 
 #: ../libimchooseui/imchooseui.c:411
 msgid "Unable to invoke the preference tool"
-msgstr ""
+msgstr "ప్రాధాన్యత సాధనం మేల్కొలపలేక పోయింది"
 
 #: ../libimchooseui/imchooseui.c:432
 #, c-format
 msgid "Switching Input Method - %s"
-msgstr ""
+msgstr "ఇన్పుట్ పద్ధతి మార్చుతోంది - %s"
 
 #: ../libimchooseui/imchooseui.c:454
 #, c-format
 msgid "Unknown error during finalizing the request of SwitchIM"
-msgstr ""
+msgstr "SwitchIM యొక్క అభ్యర్ధనను ఖరారు చేయునప్పుడు తెలియని దోషం"
 
 #: ../libimchooseui/imchooseui.c:461
 msgid "Failed to switch Input Method"
-msgstr ""
+msgstr "ఇన్పుట్ పద్ధతి మార్చుటకు విఫలమైంది"
 
 #: ../libimchooseui/imchooseui.c:648
 msgid "X applications"
@@ -188,33 +189,33 @@ msgstr ", %s తప్ప"
 msgid ""
 "<small><i>Note: this change will not take effect until your next log in%s</"
 "i></small>"
-msgstr ""
+msgstr "<small><i>గమనిక: మీ తరువాతి లాగిన్ వరకు యీ మార్పు ప్రభావితం కాదు%s</i></small>"
 
 #: ../libimchooseui/imchooseui.c:698
 #, c-format
 msgid "Unable to obtain the object for note"
-msgstr ""
+msgstr "గమనిక కొరకు ఆబ్జక్టును పొందలేక పోయింది"
 
 #: ../libimchooseui/imchooseui.c:704
 #, c-format
 msgid "Unable to obtain the object for tree"
-msgstr ""
+msgstr "ట్రీ కొరకు ఆబ్జక్టును పొందలేక పోయింది"
 
 #: ../libimchooseui/imchooseuicellrendererlabel.c:242
 msgid "Widget"
-msgstr ""
+msgstr "విడ్జట్"
 
 #: ../libimchooseui/imchooseuicellrendererlabel.c:243
 msgid "Widget to contain in the cell"
-msgstr ""
+msgstr "అర నందు కలిగివుండుటకు విడ్జట్"
 
 #: ../libimchooseui/imchooseuicellrendererlabel.c:249
 msgid "Spacing"
-msgstr ""
+msgstr "క్రమాంతరీకరణ(స్పేసింగ్)"
 
 #: ../libimchooseui/imchooseuicellrendererlabel.c:250
 msgid "The amount of space between label"
-msgstr ""
+msgstr "లేబుల్ మద్యన ఖాళీ పరిమాణం"
 
 #: ../src/app/im-chooser.desktop.in.in.h:1
 #: ../src/ccpanel/im-chooser-panel.desktop.in.in.h:1
@@ -229,28 +230,28 @@ msgstr ""
 #: ../src/ccpanel/im-chooser-panel.desktop.in.in.h:2 ../src/xfce/main.c:262
 #: ../src/xfce/xfce4-im-chooser.desktop.in.in.h:2
 msgid "Input Method Selector"
-msgstr ""
+msgstr "ఇన్పుట్ పద్ధతి యెంపిక"
 
 #: ../src/app/main.c:137 ../src/xfce/main.c:139
 msgid "Could not connect to the session manager"
-msgstr ""
+msgstr "సెషన్ నిర్వాహికకు అనుసంధానం కాలేదు"
 
 #: ../src/app/main.c:156 ../src/xfce/main.c:159
 msgid "[options...]"
-msgstr ""
+msgstr "[ఐచ్చికాలు...]"
 
 #: ../src/app/main.c:178 ../src/xfce/main.c:180
 #, c-format
 msgid "Could not parse arguments: %s\n"
-msgstr ""
+msgstr "ఆర్గుమెంట్లను పార్శ్ చేయలేక పోయింది: %s\n"
 
 #: ../src/app/main.c:195 ../src/xfce/main.c:238 ../src/xfce/main.c:253
 msgid "No input method is available"
-msgstr ""
+msgstr "ఏ యిన్పుట్ పద్ధతి అందుబాటులో లేదు"
 
 #: ../src/app/main.c:198 ../src/xfce/main.c:241 ../src/xfce/main.c:256
 msgid "Unrecoverable error"
-msgstr ""
+msgstr "కోలుకోలేని దోషం"
 
 #: ../src/app/main.c:210 ../src/xfce/main.c:267
 msgid "Log Out"
@@ -259,12 +260,12 @@ msgstr "లాగ్ అవుట్"
 #. Translators: those are keywords for im-chooser control-center panel
 #: ../src/ccpanel/im-chooser-panel.desktop.in.in.h:4
 msgid "InputMethod;IM;"
-msgstr ""
+msgstr "InputMethod;IM;"
 
 #: ../src/xfce/main.c:162
 msgid "Settings manager socket"
-msgstr ""
+msgstr "అమరికల నిర్వాహిక సాకెట్"
 
 #: ../src/xfce/main.c:162
 msgid "SOCKET ID"
-msgstr ""
+msgstr "సాకెట్ ఐడి"

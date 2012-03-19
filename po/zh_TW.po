@@ -8,11 +8,12 @@
 # Chester Cheng <ccheng@redhat.com>, 2006.
 # Terry Chuang <tchuang@redhat.com>, 2008.
 # Walter Cheuk <wwycheuk@gmail.com>, 2007.
+# zerng07 <pswo10680@gmail.com>, 2012. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: im-chooser\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-08-02 17:13+0900\n"
+"POT-Creation-Date: 2012-03-13 20:45+0900\n"
 "PO-Revision-Date: 2011-09-05 14:33+0000\n"
 "Last-Translator: zerng07 <pswo10680@gmail.com>\n"
 "Language-Team: Chinese (Taiwan) (http://www.transifex.net/projects/p/im-"
@@ -117,7 +118,7 @@ msgstr " (建議)"
 
 #: ../libimchooseui/imchooseui.c:191
 #, c-format
-msgid "<a href=\"imsettings-prefs:///%s\">Preference...</a>"
+msgid "<a href=\"imsettings-prefs:///%s\">Preferences...</a>"
 msgstr "<a href=\"imsettings-prefs:///%s\">偏好設定...</a>"
 
 #: ../libimchooseui/imchooseui.c:240
