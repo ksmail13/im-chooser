@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: im-chooser\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-03-13 20:45+0900\n"
-"PO-Revision-Date: 2012-04-10 02:58-0400\n"
+"PO-Revision-Date: 2012-04-18 05:13-0400\n"
 "Last-Translator: anipeter <anipeter@fedoraproject.org>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: ml\n"
@@ -246,7 +246,7 @@ msgstr "[ഐച്ഛികങ്ങള്‍...]"
 #: ../src/app/main.c:178 ../src/xfce/main.c:180
 #, c-format
 msgid "Could not parse arguments: %s\n"
-msgstr "ആര്‍ഗ്യുമെന്റുകള്‍ പാഴ്സ് ചെയ്യുവാന്‍ സാധ്യമായില്ല: %s¶\n"
+msgstr "ആര്‍ഗ്യുമെന്റുകള്‍ പാഴ്സ് ചെയ്യുവാന്‍ സാധ്യമായില്ല: %s\n"
 
 #: ../src/app/main.c:195 ../src/xfce/main.c:238 ../src/xfce/main.c:253
 msgid "No input method is available"
