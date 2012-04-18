@@ -3,6 +3,7 @@
   <url>https://translate.zanata.org/zanata/</url>
   <project>im-chooser</project>
   <project-version>master</project-version>
+  <project-type>gettext</project-type>
 
   <locales>
     <locale>af</locale>
