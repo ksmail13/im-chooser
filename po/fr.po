@@ -9,13 +9,14 @@
 # dominique bribanick <chepioq@gmail.com>, 2011.
 # Thomas Canniot <mrtom@fedoraproject.org>, 2006, 2007, 2008.
 # Translators:
+# samfreemanz <sfriedma@redhat.com>, 2012. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: im-chooser\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-03-13 20:45+0900\n"
-"PO-Revision-Date: 2011-08-22 05:22+0000\n"
-"Last-Translator: dominique <chepioq@gmail.com>\n"
+"PO-Revision-Date: 2012-04-15 07:42-0400\n"
+"Last-Translator: samfreemanz <sfriedma@redhat.com>\n"
 "Language-Team: French (http://www.transifex.net/projects/p/im-chooser/team/"
 "fr/)\n"
 "Language: fr\n"
@@ -23,6 +24,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1)\n"
+"X-Generator: Zanata 1.5.0\n"
 
 #: ../libimchooseui/eggdesktopfile.c:165
 #, c-format
@@ -121,7 +123,7 @@ msgstr " (recommandée)"
 #: ../libimchooseui/imchooseui.c:191
 #, c-format
 msgid "<a href=\"imsettings-prefs:///%s\">Preferences...</a>"
-msgstr ""
+msgstr "<a href=\"imsettings-prefs:///%s\">Préférences...</a>"
 
 #: ../libimchooseui/imchooseui.c:240
 #, c-format

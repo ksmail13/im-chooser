@@ -11,8 +11,8 @@ msgstr ""
 "Project-Id-Version: im-chooser\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-03-13 20:45+0900\n"
-"PO-Revision-Date: 2011-08-01 06:53+0000\n"
-"Last-Translator: tagoh <akira+transifex@tagoh.org>\n"
+"PO-Revision-Date: 2012-04-09 11:37-0400\n"
+"Last-Translator: sandeeps <sandeeps@fedoraproject.org>\n"
 "Language-Team: Marathi (http://www.transifex.net/projects/p/im-chooser/team/"
 "mr/)\n"
 "Language: mr\n"
@@ -20,6 +20,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"X-Generator: Zanata 1.5.0\n"
 
 #: ../libimchooseui/eggdesktopfile.c:165
 #, c-format
@@ -116,7 +117,7 @@ msgstr " (सूचविलेले)"
 #: ../libimchooseui/imchooseui.c:191
 #, c-format
 msgid "<a href=\"imsettings-prefs:///%s\">Preferences...</a>"
-msgstr ""
+msgstr "<a href=\"imsettings-prefs:///%s\">पसंती...</a>"
 
 #: ../libimchooseui/imchooseui.c:240
 #, c-format

@@ -11,8 +11,8 @@ msgstr ""
 "Project-Id-Version: im-chooser\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-03-13 20:45+0900\n"
-"PO-Revision-Date: 2011-08-01 06:53+0000\n"
-"Last-Translator: tagoh <akira+transifex@tagoh.org>\n"
+"PO-Revision-Date: 2012-04-15 06:50-0400\n"
+"Last-Translator: ypoyarko <ypoyarko@redhat.com>\n"
 "Language-Team: Russian (http://www.transifex.net/projects/p/im-chooser/team/"
 "ru/)\n"
 "Language: ru\n"
@@ -21,6 +21,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
+"X-Generator: Zanata 1.5.0\n"
 
 #: ../libimchooseui/eggdesktopfile.c:165
 #, c-format
@@ -117,7 +118,7 @@ msgstr " (рекомендуется)"
 #: ../libimchooseui/imchooseui.c:191
 #, c-format
 msgid "<a href=\"imsettings-prefs:///%s\">Preferences...</a>"
-msgstr ""
+msgstr "<a href=\"imsettings-prefs:///%s\">Параметры...</a>"
 
 #: ../libimchooseui/imchooseui.c:240
 #, c-format
@@ -136,7 +137,7 @@ msgstr "Сначала установите методы ввода."
 
 #: ../libimchooseui/imchooseui.c:398
 msgid "Unable to get the information"
-msgstr "Не удалось получить информацию"
+msgstr "Ошибка получения информации"
 
 #: ../libimchooseui/imchooseui.c:411
 msgid "Unable to invoke the preference tool"
@@ -145,7 +146,7 @@ msgstr "Ошибка вызова утилиты настройки"
 #: ../libimchooseui/imchooseui.c:432
 #, c-format
 msgid "Switching Input Method - %s"
-msgstr "Изменение метода ввода на %s"
+msgstr "Изменение метода ввода: %s"
 
 #: ../libimchooseui/imchooseui.c:454
 #, c-format
@@ -193,7 +194,7 @@ msgid ""
 "<small><i>Note: this change will not take effect until your next log in%s</"
 "i></small>"
 msgstr ""
-"<small><i>Изменения не вступят в силу до следующего входа в %</i></small>"
+"<small><i>Изменения вступят в силу после следующего входа в %s</i></small>"
 
 #: ../libimchooseui/imchooseui.c:698
 #, c-format
@@ -237,7 +238,7 @@ msgstr "Выбор метода ввода"
 
 #: ../src/app/main.c:137 ../src/xfce/main.c:139
 msgid "Could not connect to the session manager"
-msgstr "Не удалось подключиться к менеджеру сеанса"
+msgstr "Ошибка подключения к менеджеру сеанса"
 
 #: ../src/app/main.c:156 ../src/xfce/main.c:159
 msgid "[options...]"
@@ -246,7 +247,7 @@ msgstr "[параметры...]"
 #: ../src/app/main.c:178 ../src/xfce/main.c:180
 #, c-format
 msgid "Could not parse arguments: %s\n"
-msgstr "Ошибка разбора аргументов: %s¶\n"
+msgstr "Ошибка разбора аргументов: %s¶"
 
 #: ../src/app/main.c:195 ../src/xfce/main.c:238 ../src/xfce/main.c:253
 msgid "No input method is available"
@@ -258,7 +259,7 @@ msgstr "Критическая ошибка"
 
 #: ../src/app/main.c:210 ../src/xfce/main.c:267
 msgid "Log Out"
-msgstr "Завершить сеанс"
+msgstr "Выход"
 
 #. Translators: those are keywords for im-chooser control-center panel
 #: ../src/ccpanel/im-chooser-panel.desktop.in.in.h:4

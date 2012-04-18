@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: im-chooser\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-03-13 20:45+0900\n"
-"PO-Revision-Date: 2011-08-01 06:53+0000\n"
-"Last-Translator: tagoh <akira+transifex@tagoh.org>\n"
+"PO-Revision-Date: 2012-02-22 04:08-0500\n"
+"Last-Translator: rajesh <rajesh@fedoraproject.org>\n"
 "Language-Team: Hindi (http://www.transifex.net/projects/p/im-chooser/team/"
 "hi/)\n"
 "Language: hi\n"
@@ -18,6 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"X-Generator: Zanata 1.5.0\n"
 
 #: ../libimchooseui/eggdesktopfile.c:165
 #, c-format

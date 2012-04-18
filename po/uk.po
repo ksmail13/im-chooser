@@ -4,12 +4,13 @@
 #
 # Yuri Chornoivan <yurchor@ukr.net>, 2011.
 # Maxim Dziumanenko <dziumanenko@gmail.com>, 2007.
+# yurchor <yurchor@ukr.net>, 2012. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: im-chooser\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-03-13 20:45+0900\n"
-"PO-Revision-Date: 2011-08-01 12:47+0000\n"
+"PO-Revision-Date: 2012-03-20 11:45-0400\n"
 "Last-Translator: yurchor <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -18,6 +19,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
+"X-Generator: Zanata 1.5.0\n"
 
 #: ../libimchooseui/eggdesktopfile.c:165
 #, c-format
@@ -117,7 +119,7 @@ msgstr " (рекомендується)"
 #: ../libimchooseui/imchooseui.c:191
 #, c-format
 msgid "<a href=\"imsettings-prefs:///%s\">Preferences...</a>"
-msgstr ""
+msgstr "<a href=\"imsettings-prefs:///%s\">Налаштування…</a>"
 
 #: ../libimchooseui/imchooseui.c:240
 #, c-format
