@@ -1,3 +1,8 @@
+1.5.2.2 -> 1.6.0
+===================
+* imsettings 1.3.0 support
+* Fix deprecated warnings in GTK+
+
 1.5.2.1 -> 1.5.2.2
 =====================
 * Translations updates.
