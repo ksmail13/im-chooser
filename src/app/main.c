@@ -96,11 +96,13 @@ _show_error_cb(IMChooseUI  *ui,
 	gtk_message_dialog_format_secondary_text(GTK_MESSAGE_DIALOG (dlg), details);
 
 	/* for GNOME HIG compliance */
+#if 0
 	gtk_rc_parse_string("style \"imchoose-ui-message-dialog\" {\n"	\
 			    "  GtkDialog::content-area-spacing = 14\n"	\
 			    "  GtkDialog::content-area-border = 0\n"	\
 			    "}\n"					\
 			    "widget \"GtkMessageDialog\" style \"imchoose-ui-message-dialog\"");
+#endif
 
 	gtk_dialog_run(GTK_DIALOG (dlg));
 	gtk_widget_destroy(dlg);

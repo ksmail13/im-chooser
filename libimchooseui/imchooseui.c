@@ -28,6 +28,7 @@
 #include <glib/gi18n-lib.h>
 #include <imsettings/imsettings.h>
 #include <imsettings/imsettings-client.h>
+#include <imsettings/imsettings-utils.h>
 #include "imchooseui-marshal.h"
 #include "imchooseuicellrendererlabel.h"
 #include "imchooseui.h"
@@ -235,6 +236,11 @@ _imchoose_ui_update_list(IMChooseUI *ui,
 	IMChooseUIPrivate *priv = ui->priv;
 	gsize len, slen = strlen(".conf");
 
+	if (!imsettings_is_enabled()) {
+		g_set_error(&err, IMCHOOSEUI_GERROR, 0,
+			    _("IMSettings is disabled on the system."));
+		goto bail;
+	}
 	if (!client) {
 		g_set_error(&err, IMCHOOSEUI_GERROR, 0,
 			    _("Unable to create a client instance."));
@@ -315,7 +321,7 @@ _imchoose_ui_update_list(IMChooseUI *ui,
 		gtk_tree_iter_free(def_iter);
 	g_object_unref(list);
 
-	gtk_widget_size_request(widget, &requisition);
+	gtk_widget_get_preferred_size(widget, &requisition, NULL);
 	if (requisition.height > 120)
 		requisition.height = 120;
 	gtk_widget_set_size_request(widget, -1, requisition.height);
