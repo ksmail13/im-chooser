@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: im-chooser\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-03-13 20:45+0900\n"
+"POT-Creation-Date: 2012-07-12 20:22+0900\n"
 "PO-Revision-Date: 2012-04-09 11:30-0400\n"
 "Last-Translator: hedda <hedda@fedoraproject.org>\n"
 "Language-Team: German (http://www.transifex.net/projects/p/im-chooser/team/"
@@ -23,179 +23,220 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
-"X-Generator: Zanata 1.5.0\n"
+"X-Generator: Zanata 1.6.1\n"
 
 #: ../libimchooseui/eggdesktopfile.c:165
-#, c-format
+#, fuzzy, c-format
 msgid "File is not a valid .desktop file"
 msgstr "Datei ist keine gültige .desktop-Datei"
 
 #: ../libimchooseui/eggdesktopfile.c:188
-#, c-format
+#, fuzzy, c-format
 msgid "Unrecognized desktop file Version '%s'"
 msgstr "Unbekannte Version der Desktop-Datei '%s'"
 
 #: ../libimchooseui/eggdesktopfile.c:968
-#, c-format
+#, fuzzy, c-format
 msgid "Starting %s"
 msgstr "%s wird gestartet"
 
 #: ../libimchooseui/eggdesktopfile.c:1110
-#, c-format
+#, fuzzy, c-format
 msgid "Application does not accept documents on command line"
 msgstr "Anwendung akzeptiert keine Dokumente über die Kommandozeile"
 
 #: ../libimchooseui/eggdesktopfile.c:1178
-#, c-format
+#, fuzzy, c-format
 msgid "Unrecognized launch option: %d"
 msgstr "Unbekannte Startoption: %d"
 
 #: ../libimchooseui/eggdesktopfile.c:1383
-#, c-format
+#, fuzzy, c-format
 msgid "Can't pass document URIs to a 'Type=Link' desktop entry"
 msgstr ""
 "URL des Dokuments kann an keinen 'Type=Link' Desktop-Eintrag weitergeleitet "
 "werden"
 
 #: ../libimchooseui/eggdesktopfile.c:1404
-#, c-format
+#, fuzzy, c-format
 msgid "Not a launchable item"
 msgstr "Kein ausführbares Objekt"
 
 #: ../libimchooseui/eggsmclient.c:226
+#, fuzzy
 msgid "Disable connection to session manager"
 msgstr "Verbindung zur Sitzungsverwaltung unterbrechen"
 
 #: ../libimchooseui/eggsmclient.c:229
+#, fuzzy
 msgid "Specify file containing saved configuration"
 msgstr "Datei mit der gespeicherten Konfiguration angeben"
 
 #: ../libimchooseui/eggsmclient.c:229
+#, fuzzy
 msgid "FILE"
 msgstr "DATEI"
 
 #: ../libimchooseui/eggsmclient.c:232
+#, fuzzy
 msgid "Specify session management ID"
 msgstr "Sitzungsverwaltungs-ID angeben"
 
 #: ../libimchooseui/eggsmclient.c:232
+#, fuzzy
 msgid "ID"
 msgstr "ID"
 
 #: ../libimchooseui/eggsmclient.c:253
+#, fuzzy
 msgid "Session management options:"
 msgstr "Sitzungsverwaltungsoptionen:"
 
 #: ../libimchooseui/eggsmclient.c:254
+#, fuzzy
 msgid "Show session management options"
 msgstr "Sitzungsverwaltungsoptionen anzeigen"
 
 #: ../libimchooseui/imchoose.ui.h:1
-msgid "<b>Input Method</b>"
-msgstr "<b>Eingabemethode</b>"
-
-#: ../libimchooseui/imchoose.ui.h:2
+#, fuzzy
 msgid "Work in progress..."
 msgstr "In Arbeit …"
 
-#: ../libimchooseui/imchoose.ui.h:3
+#: ../libimchooseui/imchoose.ui.h:2
+#, fuzzy
 msgid "label"
 msgstr "Kennzeichen"
 
-#: ../libimchooseui/imchooseui.c:162
+#: ../libimchooseui/imchoose.ui.h:3
+#, fuzzy
+msgid "<b>Input Method</b>"
+msgstr "<b>Eingabemethode</b>"
+
+#: ../libimchooseui/imchooseui.c:163
+#, fuzzy
 msgid "No Input Method"
 msgstr "Keine Eingabemethode"
 
-#: ../libimchooseui/imchooseui.c:164
-#, c-format
+#: ../libimchooseui/imchooseui.c:165
+#, fuzzy, c-format
 msgid "Use %s"
 msgstr "%s verwenden"
 
-#: ../libimchooseui/imchooseui.c:171
+#: ../libimchooseui/imchooseui.c:172
+#, fuzzy
 msgid " (legacy)"
 msgstr " (veraltet)"
 
-#: ../libimchooseui/imchooseui.c:173
+#: ../libimchooseui/imchooseui.c:174
+#, fuzzy
 msgid " (recommended)"
 msgstr " (empfohlen)"
 
-#: ../libimchooseui/imchooseui.c:191
-#, c-format
+#: ../libimchooseui/imchooseui.c:192
+#, fuzzy, c-format
 msgid "<a href=\"imsettings-prefs:///%s\">Preferences...</a>"
 msgstr "<a href=\"imsettings-prefs:///%s\">Einstellungen ...</a>"
 
-#: ../libimchooseui/imchooseui.c:240
+#: ../libimchooseui/imchooseui.c:241
 #, c-format
+msgid "IMSettings is disabled on the system."
+msgstr ""
+
+#: ../libimchooseui/imchooseui.c:246
+#, fuzzy, c-format
 msgid "Unable to create a client instance."
 msgstr "Client-Instanz konnte nicht erstellt werden."
 
-#: ../libimchooseui/imchooseui.c:249
-#, c-format
+#: ../libimchooseui/imchooseui.c:255
+#, fuzzy, c-format
 msgid "Unable to communicate to IMSettings service: %s"
 msgstr "Keine Kommunikation mit dem IMSettings Service: %s"
 
-#: ../libimchooseui/imchooseui.c:325
-#, c-format
+#: ../libimchooseui/imchooseui.c:331
+#, fuzzy, c-format
 msgid "Please install any input methods before running if you like."
 msgstr ""
 "Bitte installieren Sie die entsprechenden Eingabemethoden vor der "
 "Ausführung, falls gewünscht."
 
-#: ../libimchooseui/imchooseui.c:398
+#: ../libimchooseui/imchooseui.c:404
+#, fuzzy
 msgid "Unable to get the information"
 msgstr "Beziehen der Informationen nicht möglich"
 
-#: ../libimchooseui/imchooseui.c:411
+#: ../libimchooseui/imchooseui.c:417
+#, fuzzy
 msgid "Unable to invoke the preference tool"
 msgstr "Einstellungswerkzeug kann nicht aufgerufen werden"
 
-#: ../libimchooseui/imchooseui.c:432
-#, c-format
+#: ../libimchooseui/imchooseui.c:438
+#, fuzzy, c-format
 msgid "Switching Input Method - %s"
 msgstr "Eingabemethode ändern - %s"
 
-#: ../libimchooseui/imchooseui.c:454
-#, c-format
+#: ../libimchooseui/imchooseui.c:460
+#, fuzzy, c-format
 msgid "Unknown error during finalizing the request of SwitchIM"
 msgstr "Unbekannter Fehler beim Abschließen der SwitchIM-Anforderung"
 
-#: ../libimchooseui/imchooseui.c:461
+#: ../libimchooseui/imchooseui.c:467
+#, fuzzy
 msgid "Failed to switch Input Method"
 msgstr "Wechsel der Eingabemethode fehlgeschlagen"
 
-#: ../libimchooseui/imchooseui.c:648
+#: ../libimchooseui/imchooseui.c:654
+#, fuzzy
 msgid "X applications"
 msgstr "X-Anwendungen"
 
-#: ../libimchooseui/imchooseui.c:649
+#: ../libimchooseui/imchooseui.c:655
+#, fuzzy
 msgid "GTK+ applications"
 msgstr "GTK+-Anwendungen"
 
-#: ../libimchooseui/imchooseui.c:650
+#: ../libimchooseui/imchooseui.c:656
+#, fuzzy
 msgid "Qt applications"
 msgstr "Qt-Anwendungen"
 
+# This will be displayed like "<small><i>Note: this change will not take
+# effect until your next log in, except X applications and Qt
+# applications</i></small>"
+# This will be displayed like "<small><i>Note: this change will not take
+# effect until your next log in, except X applications and GTK+
+# applications</i></small>"
+# This will be displayed like "<small><i>Note: this change will not take
+# effect until your next log in, except GTK+ applications and Qt
+# applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except X applications and Qt applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except X applications and GTK+ applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except GTK+ applications and Qt applications</i></small>"
-#: ../libimchooseui/imchooseui.c:658 ../libimchooseui/imchooseui.c:663
-#: ../libimchooseui/imchooseui.c:668
-#, c-format
+#: ../libimchooseui/imchooseui.c:664 ../libimchooseui/imchooseui.c:669
+#: ../libimchooseui/imchooseui.c:674
+#, fuzzy, c-format
 msgid ", except %s and %s"
 msgstr ", ausgenommen %s und %s"
 
+# This will be displayed like "<small><i>Note: this change will not take
+# effect until your next log in, except X applications</i></small>"
+# This will be displayed like "<small><i>Note: this change will not take
+# effect until your next log in, except GTK+ applications</i></small>"
+# This will be displayed like "<small><i>Note: this change will not take
+# effect until your next log in, except Qt applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except X applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except GTK+ applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except Qt applications</i></small>"
-#: ../libimchooseui/imchooseui.c:673 ../libimchooseui/imchooseui.c:677
-#: ../libimchooseui/imchooseui.c:681
-#, c-format
+#: ../libimchooseui/imchooseui.c:679 ../libimchooseui/imchooseui.c:683
+#: ../libimchooseui/imchooseui.c:687
+#, fuzzy, c-format
 msgid ", except %s"
 msgstr ", ausgenommen %s"
 
+# This will be displayed like "<small><i>Note: this change will not take
+# effect until your next log in, except GTK+ applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except GTK+ applications</i></small>"
-#: ../libimchooseui/imchooseui.c:687
-#, c-format
+#: ../libimchooseui/imchooseui.c:693
+#, fuzzy, c-format
 msgid ""
 "<small><i>Note: this change will not take effect until your next log in%s</"
 "i></small>"
@@ -203,35 +244,45 @@ msgstr ""
 "<small><i>Hinweis: Diese Änderung wird erst bei Ihrem nächsten Login wirksam"
 "%s</i></small>"
 
-#: ../libimchooseui/imchooseui.c:698
-#, c-format
+#: ../libimchooseui/imchooseui.c:704
+#, fuzzy, c-format
 msgid "Unable to obtain the object for note"
 msgstr "Objekt für 'note' kann nicht bezogen werden"
 
-#: ../libimchooseui/imchooseui.c:704
-#, c-format
+#: ../libimchooseui/imchooseui.c:710
+#, fuzzy, c-format
 msgid "Unable to obtain the object for tree"
 msgstr "Objekt für 'tree' kann nicht bezogen werden"
 
 #: ../libimchooseui/imchooseuicellrendererlabel.c:242
+#, fuzzy
 msgid "Widget"
 msgstr "Widget"
 
 #: ../libimchooseui/imchooseuicellrendererlabel.c:243
+#, fuzzy
 msgid "Widget to contain in the cell"
 msgstr "Widget in der Zelle enthalten"
 
 #: ../libimchooseui/imchooseuicellrendererlabel.c:249
+#, fuzzy
 msgid "Spacing"
 msgstr "Abstand"
 
 #: ../libimchooseui/imchooseuicellrendererlabel.c:250
+#, fuzzy
 msgid "The amount of space between label"
 msgstr "Der Abstand zwischen den Kennzeichen"
 
-#: ../src/app/im-chooser.desktop.in.in.h:1
-#: ../src/ccpanel/im-chooser-panel.desktop.in.in.h:1
-#: ../src/xfce/xfce4-im-chooser.desktop.in.in.h:1
+#: ../src/app/im-chooser.desktop.in.in.h:1 ../src/app/main.c:207
+#: ../src/xfce/main.c:262 ../src/xfce/xfce4-im-chooser.desktop.in.in.h:1
+#, fuzzy
+msgid "Input Method Selector"
+msgstr "Wahl der Eingabemethode"
+
+#: ../src/app/im-chooser.desktop.in.in.h:2
+#: ../src/xfce/xfce4-im-chooser.desktop.in.in.h:2
+#, fuzzy
 msgid ""
 "Choose the input method to be used or disable the input method usage on the "
 "desktop"
@@ -239,46 +290,47 @@ msgstr ""
 "Wählen Sie die Eingabemethode, welche verwendet werden soll oder "
 "deaktivieren Sie die Verwendung von Eingabemethoden auf dem Desktop."
 
-#: ../src/app/im-chooser.desktop.in.in.h:2 ../src/app/main.c:205
-#: ../src/ccpanel/im-chooser-panel.desktop.in.in.h:2 ../src/xfce/main.c:262
-#: ../src/xfce/xfce4-im-chooser.desktop.in.in.h:2
-msgid "Input Method Selector"
-msgstr "Wahl der Eingabemethode"
-
-#: ../src/app/main.c:137 ../src/xfce/main.c:139
+#: ../src/app/main.c:139 ../src/xfce/main.c:139
+#, fuzzy
 msgid "Could not connect to the session manager"
 msgstr "Keine Verbindung zur Sitzungsverwaltung"
 
-#: ../src/app/main.c:156 ../src/xfce/main.c:159
+#: ../src/app/main.c:158 ../src/xfce/main.c:159
+#, fuzzy
 msgid "[options...]"
 msgstr "[Optionen...]"
 
-#: ../src/app/main.c:178 ../src/xfce/main.c:180
-#, c-format
+#: ../src/app/main.c:180 ../src/xfce/main.c:180
+#, fuzzy, c-format
 msgid "Could not parse arguments: %s\n"
 msgstr "Konnte diese Argumente nicht parsen: %s\n"
 
-#: ../src/app/main.c:195 ../src/xfce/main.c:238 ../src/xfce/main.c:253
+#: ../src/app/main.c:197 ../src/xfce/main.c:238 ../src/xfce/main.c:253
+#, fuzzy
 msgid "No input method is available"
 msgstr "Keine Eingabemethode verfügbar"
 
-#: ../src/app/main.c:198 ../src/xfce/main.c:241 ../src/xfce/main.c:256
+#: ../src/app/main.c:200 ../src/xfce/main.c:241 ../src/xfce/main.c:256
+#, fuzzy
 msgid "Unrecoverable error"
 msgstr "nicht behebbarer Fehler"
 
-#: ../src/app/main.c:210 ../src/xfce/main.c:267
+#: ../src/app/main.c:212 ../src/xfce/main.c:267
+#, fuzzy
 msgid "Log Out"
 msgstr "Abmelden"
 
-#. Translators: those are keywords for im-chooser control-center panel
-#: ../src/ccpanel/im-chooser-panel.desktop.in.in.h:4
-msgid "InputMethod;IM;"
-msgstr "EingabeMethode;IM;"
-
 #: ../src/xfce/main.c:162
+#, fuzzy
 msgid "Settings manager socket"
 msgstr "Schnittstelle der Einstellungsverwaltung"
 
 #: ../src/xfce/main.c:162
+#, fuzzy
 msgid "SOCKET ID"
 msgstr "Schnittstellen-ID"
+
+# Translators: those are keywords for im-chooser control-center panel
+#~ msgctxt ""
+#~ msgid "InputMethod;IM;"
+#~ msgstr "EingabeMethode;IM;"

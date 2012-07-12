@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: im-chooser\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-03-13 20:45+0900\n"
+"POT-Creation-Date: 2012-07-12 20:22+0900\n"
 "PO-Revision-Date: 2012-04-18 05:13-0400\n"
 "Last-Translator: eukim <eukim@fedoraproject.org>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,175 +19,216 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0\n"
-"X-Generator: Zanata 1.5.0\n"
+"X-Generator: Zanata 1.6.1\n"
 
 #: ../libimchooseui/eggdesktopfile.c:165
-#, c-format
+#, fuzzy, c-format
 msgid "File is not a valid .desktop file"
 msgstr "올바르지 않은 .desktop 파일입니다"
 
 #: ../libimchooseui/eggdesktopfile.c:188
-#, c-format
+#, fuzzy, c-format
 msgid "Unrecognized desktop file Version '%s'"
 msgstr "인식되지 않은 데스크탑 파일 버전 '%s'"
 
 #: ../libimchooseui/eggdesktopfile.c:968
-#, c-format
+#, fuzzy, c-format
 msgid "Starting %s"
 msgstr "%s 시작 중 "
 
 #: ../libimchooseui/eggdesktopfile.c:1110
-#, c-format
+#, fuzzy, c-format
 msgid "Application does not accept documents on command line"
 msgstr "어플리케이션은 명령행에 있는 문서를 허용하지 않습니다 "
 
 #: ../libimchooseui/eggdesktopfile.c:1178
-#, c-format
+#, fuzzy, c-format
 msgid "Unrecognized launch option: %d"
 msgstr "인식되지 않은 시작 옵션: %d"
 
 #: ../libimchooseui/eggdesktopfile.c:1383
-#, c-format
+#, fuzzy, c-format
 msgid "Can't pass document URIs to a 'Type=Link' desktop entry"
 msgstr "문서의 URI를 'Type=Link' 데스크탑 항목에 전달할 수 없습니다 "
 
 #: ../libimchooseui/eggdesktopfile.c:1404
-#, c-format
+#, fuzzy, c-format
 msgid "Not a launchable item"
 msgstr "실행할 수 없는 항목 "
 
 #: ../libimchooseui/eggsmclient.c:226
+#, fuzzy
 msgid "Disable connection to session manager"
 msgstr "세션 관리자의 연결을 해제 "
 
 #: ../libimchooseui/eggsmclient.c:229
+#, fuzzy
 msgid "Specify file containing saved configuration"
 msgstr "설정이 저장된 파일을 지정 "
 
 #: ../libimchooseui/eggsmclient.c:229
+#, fuzzy
 msgid "FILE"
 msgstr "FILE"
 
 #: ../libimchooseui/eggsmclient.c:232
+#, fuzzy
 msgid "Specify session management ID"
 msgstr "세션 관리자 ID 지정 "
 
 #: ../libimchooseui/eggsmclient.c:232
+#, fuzzy
 msgid "ID"
 msgstr "ID"
 
 #: ../libimchooseui/eggsmclient.c:253
+#, fuzzy
 msgid "Session management options:"
 msgstr "세션 관리자 옵션: "
 
 #: ../libimchooseui/eggsmclient.c:254
+#, fuzzy
 msgid "Show session management options"
 msgstr "세션 관리자 옵션 표시"
 
 #: ../libimchooseui/imchoose.ui.h:1
-msgid "<b>Input Method</b>"
-msgstr "<b>입력 방식</b>"
-
-#: ../libimchooseui/imchoose.ui.h:2
+#, fuzzy
 msgid "Work in progress..."
 msgstr "실행 중..."
 
-#: ../libimchooseui/imchoose.ui.h:3
+#: ../libimchooseui/imchoose.ui.h:2
+#, fuzzy
 msgid "label"
 msgstr "레이블 "
 
-#: ../libimchooseui/imchooseui.c:162
+#: ../libimchooseui/imchoose.ui.h:3
+#, fuzzy
+msgid "<b>Input Method</b>"
+msgstr "<b>입력 방식</b>"
+
+#: ../libimchooseui/imchooseui.c:163
+#, fuzzy
 msgid "No Input Method"
 msgstr "입력 방식 없음 "
 
-#: ../libimchooseui/imchooseui.c:164
-#, c-format
+#: ../libimchooseui/imchooseui.c:165
+#, fuzzy, c-format
 msgid "Use %s"
 msgstr "%s 사용 "
 
-#: ../libimchooseui/imchooseui.c:171
+#: ../libimchooseui/imchooseui.c:172
+#, fuzzy
 msgid " (legacy)"
 msgstr " (레거시)"
 
-#: ../libimchooseui/imchooseui.c:173
+#: ../libimchooseui/imchooseui.c:174
+#, fuzzy
 msgid " (recommended)"
 msgstr " (권장 사항)"
 
-#: ../libimchooseui/imchooseui.c:191
-#, c-format
+#: ../libimchooseui/imchooseui.c:192
+#, fuzzy, c-format
 msgid "<a href=\"imsettings-prefs:///%s\">Preferences...</a>"
 msgstr "<a href=\"imsettings-prefs:///%s\">환경설정...</a>"
 
-#: ../libimchooseui/imchooseui.c:240
+#: ../libimchooseui/imchooseui.c:241
 #, c-format
+msgid "IMSettings is disabled on the system."
+msgstr ""
+
+#: ../libimchooseui/imchooseui.c:246
+#, fuzzy, c-format
 msgid "Unable to create a client instance."
 msgstr "클라이언트 인스턴스를 생성할 수 없습니다. "
 
-#: ../libimchooseui/imchooseui.c:249
-#, c-format
+#: ../libimchooseui/imchooseui.c:255
+#, fuzzy, c-format
 msgid "Unable to communicate to IMSettings service: %s"
 msgstr "IMSettings 서비스와 통신할 수 없습니다: %s"
 
-#: ../libimchooseui/imchooseui.c:325
-#, c-format
+#: ../libimchooseui/imchooseui.c:331
+#, fuzzy, c-format
 msgid "Please install any input methods before running if you like."
 msgstr "실행하기 전 입력 방식을 설치하기 바랍니다."
 
-#: ../libimchooseui/imchooseui.c:398
+#: ../libimchooseui/imchooseui.c:404
+#, fuzzy
 msgid "Unable to get the information"
 msgstr "정보를 얻을 수 없음 "
 
-#: ../libimchooseui/imchooseui.c:411
+#: ../libimchooseui/imchooseui.c:417
+#, fuzzy
 msgid "Unable to invoke the preference tool"
 msgstr "설정 도구를 시작할 수 없음 "
 
-#: ../libimchooseui/imchooseui.c:432
-#, c-format
+#: ../libimchooseui/imchooseui.c:438
+#, fuzzy, c-format
 msgid "Switching Input Method - %s"
 msgstr "입력 방식을 전환 중 - %s"
 
-#: ../libimchooseui/imchooseui.c:454
-#, c-format
+#: ../libimchooseui/imchooseui.c:460
+#, fuzzy, c-format
 msgid "Unknown error during finalizing the request of SwitchIM"
 msgstr "SwitchIM의 요청을 종료하는 도중 알 수 없는 오류 발생 "
 
-#: ../libimchooseui/imchooseui.c:461
+#: ../libimchooseui/imchooseui.c:467
+#, fuzzy
 msgid "Failed to switch Input Method"
 msgstr "입력 방식 전환 실패 "
 
-#: ../libimchooseui/imchooseui.c:648
+#: ../libimchooseui/imchooseui.c:654
+#, fuzzy
 msgid "X applications"
 msgstr "X 어플리케이션 "
 
-#: ../libimchooseui/imchooseui.c:649
+#: ../libimchooseui/imchooseui.c:655
+#, fuzzy
 msgid "GTK+ applications"
 msgstr "GTK+ 어플리케이션 "
 
-#: ../libimchooseui/imchooseui.c:650
+#: ../libimchooseui/imchooseui.c:656
+#, fuzzy
 msgid "Qt applications"
 msgstr "Qt 어플리케이션 "
 
+# This will be displayed like "<small><i>Note: this change will not take
+# effect until your next log in, except X applications and Qt
+# applications</i></small>"
+# This will be displayed like "<small><i>Note: this change will not take
+# effect until your next log in, except X applications and GTK+
+# applications</i></small>"
+# This will be displayed like "<small><i>Note: this change will not take
+# effect until your next log in, except GTK+ applications and Qt
+# applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except X applications and Qt applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except X applications and GTK+ applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except GTK+ applications and Qt applications</i></small>"
-#: ../libimchooseui/imchooseui.c:658 ../libimchooseui/imchooseui.c:663
-#: ../libimchooseui/imchooseui.c:668
-#, c-format
+#: ../libimchooseui/imchooseui.c:664 ../libimchooseui/imchooseui.c:669
+#: ../libimchooseui/imchooseui.c:674
+#, fuzzy, c-format
 msgid ", except %s and %s"
 msgstr ", %s 및 %s 제외"
 
+# This will be displayed like "<small><i>Note: this change will not take
+# effect until your next log in, except X applications</i></small>"
+# This will be displayed like "<small><i>Note: this change will not take
+# effect until your next log in, except GTK+ applications</i></small>"
+# This will be displayed like "<small><i>Note: this change will not take
+# effect until your next log in, except Qt applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except X applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except GTK+ applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except Qt applications</i></small>"
-#: ../libimchooseui/imchooseui.c:673 ../libimchooseui/imchooseui.c:677
-#: ../libimchooseui/imchooseui.c:681
-#, c-format
+#: ../libimchooseui/imchooseui.c:679 ../libimchooseui/imchooseui.c:683
+#: ../libimchooseui/imchooseui.c:687
+#, fuzzy, c-format
 msgid ", except %s"
 msgstr ", %s 제외 "
 
+# This will be displayed like "<small><i>Note: this change will not take
+# effect until your next log in, except GTK+ applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except GTK+ applications</i></small>"
-#: ../libimchooseui/imchooseui.c:687
-#, c-format
+#: ../libimchooseui/imchooseui.c:693
+#, fuzzy, c-format
 msgid ""
 "<small><i>Note: this change will not take effect until your next log in%s</"
 "i></small>"
@@ -195,80 +236,91 @@ msgstr ""
 "<small><i>알림: 이러한 변경 사항은 %s로의 다음 로그인  까지 반영되지 않습니다"
 "</i></small>"
 
-#: ../libimchooseui/imchooseui.c:698
-#, c-format
+#: ../libimchooseui/imchooseui.c:704
+#, fuzzy, c-format
 msgid "Unable to obtain the object for note"
 msgstr "알림을 위해 개체를 가져올 수 없음 "
 
-#: ../libimchooseui/imchooseui.c:704
-#, c-format
+#: ../libimchooseui/imchooseui.c:710
+#, fuzzy, c-format
 msgid "Unable to obtain the object for tree"
 msgstr "트리의 개체를 가져올 수 없음 "
 
 #: ../libimchooseui/imchooseuicellrendererlabel.c:242
+#, fuzzy
 msgid "Widget"
 msgstr "위젯"
 
 #: ../libimchooseui/imchooseuicellrendererlabel.c:243
+#, fuzzy
 msgid "Widget to contain in the cell"
 msgstr "셀에 포함시킬 위젯 "
 
 #: ../libimchooseui/imchooseuicellrendererlabel.c:249
+#, fuzzy
 msgid "Spacing"
 msgstr "간격 "
 
 #: ../libimchooseui/imchooseuicellrendererlabel.c:250
+#, fuzzy
 msgid "The amount of space between label"
 msgstr "레이블 사이의 간격 수 "
 
-#: ../src/app/im-chooser.desktop.in.in.h:1
-#: ../src/ccpanel/im-chooser-panel.desktop.in.in.h:1
-#: ../src/xfce/xfce4-im-chooser.desktop.in.in.h:1
+#: ../src/app/im-chooser.desktop.in.in.h:1 ../src/app/main.c:207
+#: ../src/xfce/main.c:262 ../src/xfce/xfce4-im-chooser.desktop.in.in.h:1
+#, fuzzy
+msgid "Input Method Selector"
+msgstr "입력 방식"
+
+#: ../src/app/im-chooser.desktop.in.in.h:2
+#: ../src/xfce/xfce4-im-chooser.desktop.in.in.h:2
+#, fuzzy
 msgid ""
 "Choose the input method to be used or disable the input method usage on the "
 "desktop"
 msgstr "데스크탑에서 입력 방식 사용을 비활성화, 또는 사용할 입력 방식 선택 "
 
-#: ../src/app/im-chooser.desktop.in.in.h:2 ../src/app/main.c:205
-#: ../src/ccpanel/im-chooser-panel.desktop.in.in.h:2 ../src/xfce/main.c:262
-#: ../src/xfce/xfce4-im-chooser.desktop.in.in.h:2
-msgid "Input Method Selector"
-msgstr "입력 방식"
-
-#: ../src/app/main.c:137 ../src/xfce/main.c:139
+#: ../src/app/main.c:139 ../src/xfce/main.c:139
+#, fuzzy
 msgid "Could not connect to the session manager"
 msgstr "세션 관리자로 연결할 수 없음 "
 
-#: ../src/app/main.c:156 ../src/xfce/main.c:159
+#: ../src/app/main.c:158 ../src/xfce/main.c:159
+#, fuzzy
 msgid "[options...]"
 msgstr "[옵션...]"
 
-#: ../src/app/main.c:178 ../src/xfce/main.c:180
-#, c-format
+#: ../src/app/main.c:180 ../src/xfce/main.c:180
+#, fuzzy, c-format
 msgid "Could not parse arguments: %s\n"
 msgstr "인수를 해석할 수 없음: %s\n"
 
-#: ../src/app/main.c:195 ../src/xfce/main.c:238 ../src/xfce/main.c:253
+#: ../src/app/main.c:197 ../src/xfce/main.c:238 ../src/xfce/main.c:253
+#, fuzzy
 msgid "No input method is available"
 msgstr "사용 가능한 입력 방식이 없음 "
 
-#: ../src/app/main.c:198 ../src/xfce/main.c:241 ../src/xfce/main.c:256
+#: ../src/app/main.c:200 ../src/xfce/main.c:241 ../src/xfce/main.c:256
+#, fuzzy
 msgid "Unrecoverable error"
 msgstr "복수할 수 없는 오류 "
 
-#: ../src/app/main.c:210 ../src/xfce/main.c:267
+#: ../src/app/main.c:212 ../src/xfce/main.c:267
+#, fuzzy
 msgid "Log Out"
 msgstr "로그 아웃 "
 
-#. Translators: those are keywords for im-chooser control-center panel
-#: ../src/ccpanel/im-chooser-panel.desktop.in.in.h:4
-msgid "InputMethod;IM;"
-msgstr "입력 방식;IM;"
-
 #: ../src/xfce/main.c:162
+#, fuzzy
 msgid "Settings manager socket"
 msgstr "설정 관리자 소켓 "
 
 #: ../src/xfce/main.c:162
+#, fuzzy
 msgid "SOCKET ID"
 msgstr "SOCKET ID"
+
+# Translators: those are keywords for im-chooser control-center panel
+#~ msgctxt ""
+#~ msgid "InputMethod;IM;"
+#~ msgstr "입력 방식;IM;"
