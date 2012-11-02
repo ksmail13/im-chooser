@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: im-chooser\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-07-12 20:22+0900\n"
-"PO-Revision-Date: 2012-04-13 08:58-0400\n"
+"POT-Creation-Date: 2012-11-02 11:42+0900\n"
+"PO-Revision-Date: 2012-10-01 09:07-0400\n"
 "Last-Translator: mgiri <mgiri@fedoraproject.org>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: or\n"
@@ -19,175 +19,156 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
-"X-Generator: Zanata 1.6.1\n"
+"X-Generator: Zanata 1.7.3\n"
 
 #: ../libimchooseui/eggdesktopfile.c:165
-#, fuzzy, c-format
+#, c-format
 msgid "File is not a valid .desktop file"
 msgstr "ଫାଇଲଟି ଗୋଟିଏ ବୈଧ .desktop ଫାଇଲ ନୁହଁ"
 
 #: ../libimchooseui/eggdesktopfile.c:188
-#, fuzzy, c-format
+#, c-format
 msgid "Unrecognized desktop file Version '%s'"
 msgstr "ଅଚିହ୍ନା ଡେସ୍କଟପ ଫାଇଲ ସଂସ୍କରଣ '%s'"
 
 #: ../libimchooseui/eggdesktopfile.c:968
-#, fuzzy, c-format
+#, c-format
 msgid "Starting %s"
 msgstr "%s କୁ ଆରମ୍ଭ କରୁଅଛି"
 
 #: ../libimchooseui/eggdesktopfile.c:1110
-#, fuzzy, c-format
+#, c-format
 msgid "Application does not accept documents on command line"
 msgstr "ପ୍ରୟୋଗଟି ନିର୍ଦ୍ଦେଶନାମାରେ ଦଲିଲଗୁଡ଼ିକୁ ଗ୍ରହଣ କରିନଥାଏ"
 
 #: ../libimchooseui/eggdesktopfile.c:1178
-#, fuzzy, c-format
+#, c-format
 msgid "Unrecognized launch option: %d"
 msgstr "ଅଚିହ୍ନା ଆରମ୍ଭ ବିକଳ୍ପ: %d"
 
 #: ../libimchooseui/eggdesktopfile.c:1383
-#, fuzzy, c-format
+#, c-format
 msgid "Can't pass document URIs to a 'Type=Link' desktop entry"
 msgstr "ଦଲିଲ URI ଗୁଡ଼ିକୁ 'Type=Link' ଡେସ୍କଟପ ଭରଣରେ ପଠାଇପାରିବେ ନାହିଁ"
 
 #: ../libimchooseui/eggdesktopfile.c:1404
-#, fuzzy, c-format
+#, c-format
 msgid "Not a launchable item"
 msgstr "ଏହା ଏକ ଆରମ୍ଭ କରିବାଯୋଗ୍ୟ ବସ୍ତୁ ନୁହଁ"
 
 #: ../libimchooseui/eggsmclient.c:226
-#, fuzzy
 msgid "Disable connection to session manager"
 msgstr "ଅଧିବେଶନ ପରିଚାଳକରେ ସଂଯୋଗକୁ ନିଷ୍କ୍ରିୟ କରନ୍ତୁ"
 
 #: ../libimchooseui/eggsmclient.c:229
-#, fuzzy
 msgid "Specify file containing saved configuration"
 msgstr "ସଂରକ୍ଷିତ ବିନ୍ୟାସକୁ ଧାରଣ କରିଥିବା ଫାଇଲକୁ ଉଲ୍ଲେଖ କରନ୍ତୁ"
 
 #: ../libimchooseui/eggsmclient.c:229
-#, fuzzy
 msgid "FILE"
 msgstr "ଫାଇଲ"
 
 #: ../libimchooseui/eggsmclient.c:232
-#, fuzzy
 msgid "Specify session management ID"
 msgstr "ଅଧିବେଶନ ପରିଚାଳନା ID କୁ ଉଲ୍ଲେଖ କରନ୍ତୁ"
 
 #: ../libimchooseui/eggsmclient.c:232
-#, fuzzy
 msgid "ID"
 msgstr "ID"
 
 #: ../libimchooseui/eggsmclient.c:253
-#, fuzzy
 msgid "Session management options:"
 msgstr "ଅଧିବେଶନ ପରିଚାଳନା ବିକଳ୍ପଗୁଡ଼ିକ:"
 
 #: ../libimchooseui/eggsmclient.c:254
-#, fuzzy
 msgid "Show session management options"
 msgstr "ଅଧିବେଶନ ପରିଚାଳନା ବିକଳ୍ପଗୁଡ଼ିକୁ ଦର୍ଶାନ୍ତୁ"
 
 #: ../libimchooseui/imchoose.ui.h:1
-#, fuzzy
 msgid "Work in progress..."
 msgstr "କାମ ପ୍ରଗତି କରୁଛି..."
 
 #: ../libimchooseui/imchoose.ui.h:2
-#, fuzzy
 msgid "label"
 msgstr "ନାମପଟି"
 
 #: ../libimchooseui/imchoose.ui.h:3
-#, fuzzy
 msgid "<b>Input Method</b>"
 msgstr "<b>ନିବେଶ ପ୍ରଣାଳୀ</b>"
 
 #: ../libimchooseui/imchooseui.c:163
-#, fuzzy
 msgid "No Input Method"
 msgstr "କୌଣସି ନିବେଶ ପ୍ରଣାଳୀ ନାହିଁ"
 
 #: ../libimchooseui/imchooseui.c:165
-#, fuzzy, c-format
+#, c-format
 msgid "Use %s"
 msgstr "%s କୁ ବ୍ୟବହାର କରନ୍ତୁ"
 
 #: ../libimchooseui/imchooseui.c:172
-#, fuzzy
 msgid " (legacy)"
 msgstr " (ପୁରୁଣା)"
 
 #: ../libimchooseui/imchooseui.c:174
-#, fuzzy
 msgid " (recommended)"
 msgstr " (ପରାମର୍ଶିତ)"
 
 #: ../libimchooseui/imchooseui.c:192
-#, fuzzy, c-format
+#, c-format
 msgid "<a href=\"imsettings-prefs:///%s\">Preferences...</a>"
 msgstr "<a href=\"imsettings-prefs:///%s\">ପସନ୍ଦ...</a>"
 
 #: ../libimchooseui/imchooseui.c:241
 #, c-format
 msgid "IMSettings is disabled on the system."
-msgstr ""
+msgstr "IMSettings ଟି ତନ୍ତ୍ରରେ ନିଷ୍କ୍ରିୟ ଅଛି।"
 
 #: ../libimchooseui/imchooseui.c:246
-#, fuzzy, c-format
+#, c-format
 msgid "Unable to create a client instance."
 msgstr "କ୍ଲାଏଣ୍ଟ ପରିସ୍ଥିତି ନିର୍ମାଣ କରିବାରେ ଅସମର୍ଥ।"
 
 #: ../libimchooseui/imchooseui.c:255
-#, fuzzy, c-format
+#, c-format
 msgid "Unable to communicate to IMSettings service: %s"
 msgstr "IMSettings ସର୍ଭିସ ସହିତ ଯୋଗାଯୋଗ କରିବାରେ ଅସମର୍ଥ: %s"
 
 #: ../libimchooseui/imchooseui.c:331
-#, fuzzy, c-format
+#, c-format
 msgid "Please install any input methods before running if you like."
 msgstr "ଯଦି ଆପଣ ଚାହାନ୍ତି ଚଲାଇବା ପୂର୍ବରୁ ଦୟାକରି କୌଣସି ନିବେଶ ପ୍ରଣାଳୀକୁ ସ୍ଥାପନ କରନ୍ତୁ।"
 
 #: ../libimchooseui/imchooseui.c:404
-#, fuzzy
 msgid "Unable to get the information"
 msgstr "ସୂଚନା ପାଇବାରେ ଅସମର୍ଥ"
 
 #: ../libimchooseui/imchooseui.c:417
-#, fuzzy
 msgid "Unable to invoke the preference tool"
 msgstr "ପସନ୍ଦ ସାଧନକୁ ପାଇବାରେ ଅସମର୍ଥ"
 
 #: ../libimchooseui/imchooseui.c:438
-#, fuzzy, c-format
+#, c-format
 msgid "Switching Input Method - %s"
 msgstr "ନିବେଶ ପ୍ରଣାଳୀକୁ ବଦଳାଉଛି - %s"
 
 #: ../libimchooseui/imchooseui.c:460
-#, fuzzy, c-format
+#, c-format
 msgid "Unknown error during finalizing the request of SwitchIM"
 msgstr "SwitchIM ର ଅନୁରୋଧକୁ ନିଶ୍ଚିତ କରିବା ସମୟରେ ଅଜଣା ତ୍ରୁଟି"
 
 #: ../libimchooseui/imchooseui.c:467
-#, fuzzy
 msgid "Failed to switch Input Method"
 msgstr "ନିବେଶ ପ୍ରଣାଳୀକୁ ବଦଳାଇବାରେ ବିଫଳ"
 
 #: ../libimchooseui/imchooseui.c:654
-#, fuzzy
 msgid "X applications"
 msgstr "X ପ୍ରୟୋଗଗୁଡ଼ିକ"
 
 #: ../libimchooseui/imchooseui.c:655
-#, fuzzy
 msgid "GTK+ applications"
 msgstr "GTK+ ପ୍ରୟୋଗଗୁଡ଼ିକ"
 
 #: ../libimchooseui/imchooseui.c:656
-#, fuzzy
 msgid "Qt applications"
 msgstr "Qt ପ୍ରୟୋଗଗୁଡ଼ିକ"
 
@@ -205,7 +186,7 @@ msgstr "Qt ପ୍ରୟୋଗଗୁଡ଼ିକ"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except GTK+ applications and Qt applications</i></small>"
 #: ../libimchooseui/imchooseui.c:664 ../libimchooseui/imchooseui.c:669
 #: ../libimchooseui/imchooseui.c:674
-#, fuzzy, c-format
+#, c-format
 msgid ", except %s and %s"
 msgstr ", %s ଏବଂ %s ବ୍ୟତିତ"
 
@@ -220,7 +201,7 @@ msgstr ", %s ଏବଂ %s ବ୍ୟତିତ"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except Qt applications</i></small>"
 #: ../libimchooseui/imchooseui.c:679 ../libimchooseui/imchooseui.c:683
 #: ../libimchooseui/imchooseui.c:687
-#, fuzzy, c-format
+#, c-format
 msgid ", except %s"
 msgstr ", %s ବ୍ୟତିତ"
 
@@ -228,7 +209,7 @@ msgstr ", %s ବ୍ୟତିତ"
 # effect until your next log in, except GTK+ applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except GTK+ applications</i></small>"
 #: ../libimchooseui/imchooseui.c:693
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "<small><i>Note: this change will not take effect until your next log in%s</"
 "i></small>"
@@ -237,44 +218,38 @@ msgstr ""
 "i></small>"
 
 #: ../libimchooseui/imchooseui.c:704
-#, fuzzy, c-format
+#, c-format
 msgid "Unable to obtain the object for note"
 msgstr "ଟିପ୍ପଣୀ ପାଇଁ ବସ୍ତୁ ପାଇବାରେ ଅସମର୍ଥ"
 
 #: ../libimchooseui/imchooseui.c:710
-#, fuzzy, c-format
+#, c-format
 msgid "Unable to obtain the object for tree"
 msgstr "ଟ୍ରୀ ପାଇଁ ବସ୍ତୁ ପାଇବାରେ ଅସମର୍ଥ"
 
 #: ../libimchooseui/imchooseuicellrendererlabel.c:242
-#, fuzzy
 msgid "Widget"
 msgstr "ୱିଜେଟ"
 
 #: ../libimchooseui/imchooseuicellrendererlabel.c:243
-#, fuzzy
 msgid "Widget to contain in the cell"
 msgstr "ସେଲରେ ଧାରଣ କରାଯାଇଥିବା ୱିଜେଟ"
 
 #: ../libimchooseui/imchooseuicellrendererlabel.c:249
-#, fuzzy
 msgid "Spacing"
 msgstr "ଖାଲି ସ୍ଥାନ ଦେବା"
 
 #: ../libimchooseui/imchooseuicellrendererlabel.c:250
-#, fuzzy
 msgid "The amount of space between label"
 msgstr "ନାମପଟି ମଧ୍ଯବର୍ତ୍ତୀ ଖାଲିସ୍ଥାନ"
 
 #: ../src/app/im-chooser.desktop.in.in.h:1 ../src/app/main.c:207
 #: ../src/xfce/main.c:262 ../src/xfce/xfce4-im-chooser.desktop.in.in.h:1
-#, fuzzy
 msgid "Input Method Selector"
 msgstr "ନିବେଶ ପ୍ରଣାଳୀ ଚୟନକାରୀ"
 
 #: ../src/app/im-chooser.desktop.in.in.h:2
 #: ../src/xfce/xfce4-im-chooser.desktop.in.in.h:2
-#, fuzzy
 msgid ""
 "Choose the input method to be used or disable the input method usage on the "
 "desktop"
@@ -283,46 +258,34 @@ msgstr ""
 "ନିଷ୍କ୍ରିୟ କରନ୍ତୁ"
 
 #: ../src/app/main.c:139 ../src/xfce/main.c:139
-#, fuzzy
 msgid "Could not connect to the session manager"
 msgstr "ଅଧିବେଶନ ପରିଚାଳକ ସହିତ ସଂଯୋଗ ହୋଇପାରିଲା ନାହିଁ"
 
 #: ../src/app/main.c:158 ../src/xfce/main.c:159
-#, fuzzy
 msgid "[options...]"
 msgstr "[ବିକଳ୍ପଗୁଡ଼ିକ...]"
 
 #: ../src/app/main.c:180 ../src/xfce/main.c:180
-#, fuzzy, c-format
+#, c-format
 msgid "Could not parse arguments: %s\n"
 msgstr "ସ୍ୱତନ୍ତ୍ରଚରଗୁଡ଼ିକୁ ବିଶ୍ଳେଷଣ କରିପାରିଲା ନାହିଁ: %s\n"
 
 #: ../src/app/main.c:197 ../src/xfce/main.c:238 ../src/xfce/main.c:253
-#, fuzzy
 msgid "No input method is available"
 msgstr "କୌଣସି ନିବେଶ ପ୍ରଣାଳୀ ଉପଲବ୍ଧ ନାହିଁ"
 
 #: ../src/app/main.c:200 ../src/xfce/main.c:241 ../src/xfce/main.c:256
-#, fuzzy
 msgid "Unrecoverable error"
 msgstr "ଠିକ ହୋଇପାରୁନଥିବା ତ୍ରୁଟି"
 
 #: ../src/app/main.c:212 ../src/xfce/main.c:267
-#, fuzzy
 msgid "Log Out"
 msgstr "ଲଗଆଉଟ କରନ୍ତୁ"
 
 #: ../src/xfce/main.c:162
-#, fuzzy
 msgid "Settings manager socket"
 msgstr "ପରିଚାଳକ ସକେଟ ବିନ୍ୟାସ"
 
 #: ../src/xfce/main.c:162
-#, fuzzy
 msgid "SOCKET ID"
 msgstr "ସକେଟ ID"
-
-# Translators: those are keywords for im-chooser control-center panel
-#~ msgctxt ""
-#~ msgid "InputMethod;IM;"
-#~ msgstr "ନିବେଶ ପ୍ରଣାଳୀ;IM;"

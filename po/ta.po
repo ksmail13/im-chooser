@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: im-chooser\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-07-12 20:22+0900\n"
+"POT-Creation-Date: 2012-11-02 11:42+0900\n"
 "PO-Revision-Date: 2011-08-01 02:53-0400\n"
 "Last-Translator: tagoh <akira+transifex@tagoh.org>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,80 +17,72 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
-"X-Generator: Zanata 1.6.1\n"
+"X-Generator: Zanata 1.7.3\n"
 
 #: ../libimchooseui/eggdesktopfile.c:165
-#, fuzzy, c-format
+#, c-format
 msgid "File is not a valid .desktop file"
 msgstr "கோப்பு ஒரு சரியான .பணிமேடை கோப்பில் இல்லை"
 
 #: ../libimchooseui/eggdesktopfile.c:188
-#, fuzzy, c-format
+#, c-format
 msgid "Unrecognized desktop file Version '%s'"
 msgstr "கண்டறியாத பணிமேடை கோப்பு பதிப்பு '%s'"
 
 #: ../libimchooseui/eggdesktopfile.c:968
-#, fuzzy, c-format
+#, c-format
 msgid "Starting %s"
 msgstr "%sஐ துவக்குகிறது"
 
 #: ../libimchooseui/eggdesktopfile.c:1110
-#, fuzzy, c-format
+#, c-format
 msgid "Application does not accept documents on command line"
 msgstr "கட்டளை வரியில் பயன்பாடானது ஆவணங்களை ஏற்கவில்லை"
 
 #: ../libimchooseui/eggdesktopfile.c:1178
-#, fuzzy, c-format
+#, c-format
 msgid "Unrecognized launch option: %d"
 msgstr "கண்டறியப்படாத துவக்க விருப்பம்: %d"
 
 #: ../libimchooseui/eggdesktopfile.c:1383
-#, fuzzy, c-format
+#, c-format
 msgid "Can't pass document URIs to a 'Type=Link' desktop entry"
 msgstr "ஒரு 'Type=Link' பணிமேடை உள்ளீட்டுக்கு  ஆவண URIகளை கடத்த முடியவில்லை"
 
 #: ../libimchooseui/eggdesktopfile.c:1404
-#, fuzzy, c-format
+#, c-format
 msgid "Not a launchable item"
 msgstr "ஒரு துவக்கக்கூடிய உருப்படியும் இல்லை"
 
 #: ../libimchooseui/eggsmclient.c:226
-#, fuzzy
 msgid "Disable connection to session manager"
 msgstr "அம்ரவு மேலாளருக்கு இணைப்பை செயல்நீக்கு"
 
 #: ../libimchooseui/eggsmclient.c:229
-#, fuzzy
 msgid "Specify file containing saved configuration"
 msgstr "சேமிக்கப்பட்ட கட்டமைப்பானது கொண்டுள்ள கோப்பை குறிப்பிடவும்"
 
 #: ../libimchooseui/eggsmclient.c:229
-#, fuzzy
 msgid "FILE"
 msgstr "கோப்பு"
 
 #: ../libimchooseui/eggsmclient.c:232
-#, fuzzy
 msgid "Specify session management ID"
 msgstr "அமர்வு மேலாண்மை ஐடியை குறிப்பிடவும்"
 
 #: ../libimchooseui/eggsmclient.c:232
-#, fuzzy
 msgid "ID"
 msgstr "ஐடி"
 
 #: ../libimchooseui/eggsmclient.c:253
-#, fuzzy
 msgid "Session management options:"
 msgstr "அமர்வு மேலாண்மை விருப்பங்கள்:"
 
 #: ../libimchooseui/eggsmclient.c:254
-#, fuzzy
 msgid "Show session management options"
 msgstr "அமர்வு மேலாண்மை விருப்பங்களை காட்டு"
 
 #: ../libimchooseui/imchoose.ui.h:1
-#, fuzzy
 msgid "Work in progress..."
 msgstr "பணி நடந்து கொண்டிருக்கிறது..."
 
@@ -99,27 +91,23 @@ msgid "label"
 msgstr ""
 
 #: ../libimchooseui/imchoose.ui.h:3
-#, fuzzy
 msgid "<b>Input Method</b>"
 msgstr "<b>உள்ளீடு முறை</b>"
 
 #: ../libimchooseui/imchooseui.c:163
-#, fuzzy
 msgid "No Input Method"
 msgstr "உள்ளீடு முறை இல்லை"
 
 #: ../libimchooseui/imchooseui.c:165
-#, fuzzy, c-format
+#, c-format
 msgid "Use %s"
 msgstr "%sஐ பயன்படுத்தல்"
 
 #: ../libimchooseui/imchooseui.c:172
-#, fuzzy
 msgid " (legacy)"
 msgstr " (legacy)"
 
 #: ../libimchooseui/imchooseui.c:174
-#, fuzzy
 msgid " (recommended)"
 msgstr " (பரிந்துரைக்கப்பட்டது)"
 
@@ -144,24 +132,22 @@ msgid "Unable to communicate to IMSettings service: %s"
 msgstr ""
 
 #: ../libimchooseui/imchooseui.c:331
-#, fuzzy, c-format
+#, c-format
 msgid "Please install any input methods before running if you like."
 msgstr "விரும்பினால் இயக்கும் முன் ஏதாவது உள்ளீடு முறைகளை நிறுவவும்."
 
 #: ../libimchooseui/imchooseui.c:404
-#, fuzzy
 msgid "Unable to get the information"
 msgstr "தகவலை பெறும் முடியவில்லை"
 
 #: ../libimchooseui/imchooseui.c:417
-#, fuzzy
 msgid "Unable to invoke the preference tool"
-msgstr "தகவலை பெறும் முடியவில்லை"
+msgstr ""
 
 #: ../libimchooseui/imchooseui.c:438
-#, fuzzy, c-format
+#, c-format
 msgid "Switching Input Method - %s"
-msgstr "உள்ளீடு முறை இல்லை"
+msgstr ""
 
 #: ../libimchooseui/imchooseui.c:460
 #, c-format
@@ -169,22 +155,18 @@ msgid "Unknown error during finalizing the request of SwitchIM"
 msgstr ""
 
 #: ../libimchooseui/imchooseui.c:467
-#, fuzzy
 msgid "Failed to switch Input Method"
-msgstr "உள்ளீடு முறை இல்லை"
+msgstr ""
 
 #: ../libimchooseui/imchooseui.c:654
-#, fuzzy
 msgid "X applications"
 msgstr "X பயன்பாடுகள்"
 
 #: ../libimchooseui/imchooseui.c:655
-#, fuzzy
 msgid "GTK+ applications"
 msgstr "GTK+ பயன்பாடுகள்"
 
 #: ../libimchooseui/imchooseui.c:656
-#, fuzzy
 msgid "Qt applications"
 msgstr "Qt பயன்பாடுகள்"
 
@@ -202,7 +184,7 @@ msgstr "Qt பயன்பாடுகள்"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except GTK+ applications and Qt applications</i></small>"
 #: ../libimchooseui/imchooseui.c:664 ../libimchooseui/imchooseui.c:669
 #: ../libimchooseui/imchooseui.c:674
-#, fuzzy, c-format
+#, c-format
 msgid ", except %s and %s"
 msgstr ", %s மற்றும் %s தவிர"
 
@@ -217,10 +199,12 @@ msgstr ", %s மற்றும் %s தவிர"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except Qt applications</i></small>"
 #: ../libimchooseui/imchooseui.c:679 ../libimchooseui/imchooseui.c:683
 #: ../libimchooseui/imchooseui.c:687
-#, fuzzy, c-format
+#, c-format
 msgid ", except %s"
 msgstr ", %s தவிர"
 
+# This will be displayed like "<small><i>Note: this change will not take
+# effect until your next log in, except GTK+ applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except GTK+ applications</i></small>"
 #: ../libimchooseui/imchooseui.c:693
 #, c-format
@@ -230,14 +214,14 @@ msgid ""
 msgstr ""
 
 #: ../libimchooseui/imchooseui.c:704
-#, fuzzy, c-format
+#, c-format
 msgid "Unable to obtain the object for note"
-msgstr "தகவலை பெறும் முடியவில்லை"
+msgstr ""
 
 #: ../libimchooseui/imchooseui.c:710
-#, fuzzy, c-format
+#, c-format
 msgid "Unable to obtain the object for tree"
-msgstr "தகவலை பெறும் முடியவில்லை"
+msgstr ""
 
 #: ../libimchooseui/imchooseuicellrendererlabel.c:242
 msgid "Widget"
@@ -257,13 +241,11 @@ msgstr ""
 
 #: ../src/app/im-chooser.desktop.in.in.h:1 ../src/app/main.c:207
 #: ../src/xfce/main.c:262 ../src/xfce/xfce4-im-chooser.desktop.in.in.h:1
-#, fuzzy
 msgid "Input Method Selector"
 msgstr "உள்ளீடு முறை தேர்ந்தெடுப்பாளர்"
 
 #: ../src/app/im-chooser.desktop.in.in.h:2
 #: ../src/xfce/xfce4-im-chooser.desktop.in.in.h:2
-#, fuzzy
 msgid ""
 "Choose the input method to be used or disable the input method usage on the "
 "desktop"
@@ -272,31 +254,27 @@ msgstr ""
 "தேர்ந்தெடுக்கவும்"
 
 #: ../src/app/main.c:139 ../src/xfce/main.c:139
-#, fuzzy
 msgid "Could not connect to the session manager"
 msgstr "அமர்வு மேலாளருக்கு இணைக்க முடியவில்லை"
 
 #: ../src/app/main.c:158 ../src/xfce/main.c:159
-#, fuzzy
 msgid "[options...]"
 msgstr "[விருப்பங்கள்...]"
 
 #: ../src/app/main.c:180 ../src/xfce/main.c:180
-#, fuzzy, c-format
+#, c-format
 msgid "Could not parse arguments: %s\n"
 msgstr "விவாரங்களை இடைநிறுத்த முடியவில்லை: %s\n"
 
 #: ../src/app/main.c:197 ../src/xfce/main.c:238 ../src/xfce/main.c:253
-#, fuzzy
 msgid "No input method is available"
-msgstr "உள்ளீடு முறை இல்லை"
+msgstr ""
 
 #: ../src/app/main.c:200 ../src/xfce/main.c:241 ../src/xfce/main.c:256
 msgid "Unrecoverable error"
 msgstr ""
 
 #: ../src/app/main.c:212 ../src/xfce/main.c:267
-#, fuzzy
 msgid "Log Out"
 msgstr "வெளியேறுதல்"
 

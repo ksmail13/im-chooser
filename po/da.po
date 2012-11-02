@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: im-chooser\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-07-12 20:22+0900\n"
+"POT-Creation-Date: 2012-11-02 11:42+0900\n"
 "PO-Revision-Date: 2011-08-01 02:53-0400\n"
 "Last-Translator: tagoh <akira+transifex@tagoh.org>\n"
 "Language-Team: Danish (http://www.transifex.net/projects/p/im-chooser/team/"
@@ -20,81 +20,73 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
-"X-Generator: Zanata 1.6.1\n"
+"X-Generator: Zanata 1.7.3\n"
 
 #: ../libimchooseui/eggdesktopfile.c:165
-#, fuzzy, c-format
+#, c-format
 msgid "File is not a valid .desktop file"
 msgstr "Filen er ikke en gyldig .desktop-fil"
 
 #: ../libimchooseui/eggdesktopfile.c:188
-#, fuzzy, c-format
+#, c-format
 msgid "Unrecognized desktop file Version '%s'"
 msgstr "Uopdaget version af skrivebordsfil \"%s\""
 
 #: ../libimchooseui/eggdesktopfile.c:968
-#, fuzzy, c-format
+#, c-format
 msgid "Starting %s"
 msgstr "Starter %s"
 
 #: ../libimchooseui/eggdesktopfile.c:1110
-#, fuzzy, c-format
+#, c-format
 msgid "Application does not accept documents on command line"
 msgstr "Programmet accepterer ikke dokumenter i kommandolinje"
 
 #: ../libimchooseui/eggdesktopfile.c:1178
-#, fuzzy, c-format
+#, c-format
 msgid "Unrecognized launch option: %d"
 msgstr "Uopdaget kørselsindstilling: %d"
 
 #: ../libimchooseui/eggdesktopfile.c:1383
-#, fuzzy, c-format
+#, c-format
 msgid "Can't pass document URIs to a 'Type=Link' desktop entry"
 msgstr ""
 "Kan ikke indstille dokument-uri'er til et \"Type=Link\"-skrivebordselement"
 
 #: ../libimchooseui/eggdesktopfile.c:1404
-#, fuzzy, c-format
+#, c-format
 msgid "Not a launchable item"
 msgstr "Ikke et kørbart element"
 
 #: ../libimchooseui/eggsmclient.c:226
-#, fuzzy
 msgid "Disable connection to session manager"
 msgstr "Deaktivér forbindelse til sessionhåndtering"
 
 #: ../libimchooseui/eggsmclient.c:229
-#, fuzzy
 msgid "Specify file containing saved configuration"
 msgstr "Angiv fil, som indeholder den gemte konfiguration"
 
 #: ../libimchooseui/eggsmclient.c:229
-#, fuzzy
 msgid "FILE"
 msgstr "FIL"
 
 #: ../libimchooseui/eggsmclient.c:232
-#, fuzzy
 msgid "Specify session management ID"
 msgstr "Angiv id for sessionhåndtering"
 
 #: ../libimchooseui/eggsmclient.c:232
-#, fuzzy
 msgid "ID"
 msgstr "Id"
 
 #: ../libimchooseui/eggsmclient.c:253
-#, fuzzy
 msgid "Session management options:"
 msgstr "Indstillinger for sessionhåndtering:"
 
 #: ../libimchooseui/eggsmclient.c:254
-#, fuzzy
 msgid "Show session management options"
 msgstr "Vis indstillinger for sessionhåndtering"
 
 #: ../libimchooseui/imchoose.ui.h:1
-#, fuzzy
 msgid "Work in progress..."
 msgstr "Arbejde igangsat..."
 
@@ -103,27 +95,23 @@ msgid "label"
 msgstr ""
 
 #: ../libimchooseui/imchoose.ui.h:3
-#, fuzzy
 msgid "<b>Input Method</b>"
 msgstr "<b>Inputmetode</b>"
 
 #: ../libimchooseui/imchooseui.c:163
-#, fuzzy
 msgid "No Input Method"
 msgstr "Ingen inputmetode"
 
 #: ../libimchooseui/imchooseui.c:165
-#, fuzzy, c-format
+#, c-format
 msgid "Use %s"
 msgstr "Brug %s"
 
 #: ../libimchooseui/imchooseui.c:172
-#, fuzzy
 msgid " (legacy)"
 msgstr " (forældet)"
 
 #: ../libimchooseui/imchooseui.c:174
-#, fuzzy
 msgid " (recommended)"
 msgstr " (anbefalet)"
 
@@ -148,22 +136,20 @@ msgid "Unable to communicate to IMSettings service: %s"
 msgstr ""
 
 #: ../libimchooseui/imchooseui.c:331
-#, fuzzy, c-format
+#, c-format
 msgid "Please install any input methods before running if you like."
 msgstr "Installér gerne alle inputmetoder før kørsel hvis du synes."
 
 #: ../libimchooseui/imchooseui.c:404
-#, fuzzy
 msgid "Unable to get the information"
 msgstr "Ikke i stand til at hente informationerne"
 
 #: ../libimchooseui/imchooseui.c:417
-#, fuzzy
 msgid "Unable to invoke the preference tool"
-msgstr "Ikke i stand til at hente informationerne"
+msgstr ""
 
 #: ../libimchooseui/imchooseui.c:438
-#, fuzzy, c-format
+#, c-format
 msgid "Switching Input Method - %s"
 msgstr "Skifter inputmetode - %s"
 
@@ -173,22 +159,18 @@ msgid "Unknown error during finalizing the request of SwitchIM"
 msgstr ""
 
 #: ../libimchooseui/imchooseui.c:467
-#, fuzzy
 msgid "Failed to switch Input Method"
 msgstr "Kunne ikke skifte inputmetode"
 
 #: ../libimchooseui/imchooseui.c:654
-#, fuzzy
 msgid "X applications"
 msgstr "X-programmer"
 
 #: ../libimchooseui/imchooseui.c:655
-#, fuzzy
 msgid "GTK+ applications"
 msgstr "GTK+-programmer"
 
 #: ../libimchooseui/imchooseui.c:656
-#, fuzzy
 msgid "Qt applications"
 msgstr "Qt-programmer"
 
@@ -206,7 +188,7 @@ msgstr "Qt-programmer"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except GTK+ applications and Qt applications</i></small>"
 #: ../libimchooseui/imchooseui.c:664 ../libimchooseui/imchooseui.c:669
 #: ../libimchooseui/imchooseui.c:674
-#, fuzzy, c-format
+#, c-format
 msgid ", except %s and %s"
 msgstr ", undtagen %s og %s"
 
@@ -221,10 +203,12 @@ msgstr ", undtagen %s og %s"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except Qt applications</i></small>"
 #: ../libimchooseui/imchooseui.c:679 ../libimchooseui/imchooseui.c:683
 #: ../libimchooseui/imchooseui.c:687
-#, fuzzy, c-format
+#, c-format
 msgid ", except %s"
 msgstr ", undtagen %s"
 
+# This will be displayed like "<small><i>Note: this change will not take
+# effect until your next log in, except GTK+ applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except GTK+ applications</i></small>"
 #: ../libimchooseui/imchooseui.c:693
 #, c-format
@@ -234,14 +218,14 @@ msgid ""
 msgstr ""
 
 #: ../libimchooseui/imchooseui.c:704
-#, fuzzy, c-format
+#, c-format
 msgid "Unable to obtain the object for note"
-msgstr "Ikke i stand til at hente informationerne"
+msgstr ""
 
 #: ../libimchooseui/imchooseui.c:710
-#, fuzzy, c-format
+#, c-format
 msgid "Unable to obtain the object for tree"
-msgstr "Ikke i stand til at hente informationerne"
+msgstr ""
 
 #: ../libimchooseui/imchooseuicellrendererlabel.c:242
 msgid "Widget"
@@ -261,13 +245,11 @@ msgstr ""
 
 #: ../src/app/im-chooser.desktop.in.in.h:1 ../src/app/main.c:207
 #: ../src/xfce/main.c:262 ../src/xfce/xfce4-im-chooser.desktop.in.in.h:1
-#, fuzzy
 msgid "Input Method Selector"
 msgstr "Inputmetodevælger"
 
 #: ../src/app/im-chooser.desktop.in.in.h:2
 #: ../src/xfce/xfce4-im-chooser.desktop.in.in.h:2
-#, fuzzy
 msgid ""
 "Choose the input method to be used or disable the input method usage on the "
 "desktop"
@@ -276,31 +258,27 @@ msgstr ""
 "inputmetoden på skrivebordet"
 
 #: ../src/app/main.c:139 ../src/xfce/main.c:139
-#, fuzzy
 msgid "Could not connect to the session manager"
 msgstr "Kunne ikke forbinde til sessionhåndteringen"
 
 #: ../src/app/main.c:158 ../src/xfce/main.c:159
-#, fuzzy
 msgid "[options...]"
 msgstr "[tilvalg...]"
 
 #: ../src/app/main.c:180 ../src/xfce/main.c:180
-#, fuzzy, c-format
+#, c-format
 msgid "Could not parse arguments: %s\n"
 msgstr "Kunne ikke oversætte argumenter: %s\n"
 
 #: ../src/app/main.c:197 ../src/xfce/main.c:238 ../src/xfce/main.c:253
-#, fuzzy
 msgid "No input method is available"
-msgstr "Ingen inputmetode"
+msgstr ""
 
 #: ../src/app/main.c:200 ../src/xfce/main.c:241 ../src/xfce/main.c:256
 msgid "Unrecoverable error"
 msgstr ""
 
 #: ../src/app/main.c:212 ../src/xfce/main.c:267
-#, fuzzy
 msgid "Log Out"
 msgstr "Log ud"
 
@@ -311,8 +289,3 @@ msgstr ""
 #: ../src/xfce/main.c:162
 msgid "SOCKET ID"
 msgstr ""
-
-# Translators: those are keywords for im-chooser control-center panel
-#~ msgctxt ""
-#~ msgid "InputMethod;IM;"
-#~ msgstr "Inputmetode;IM;"

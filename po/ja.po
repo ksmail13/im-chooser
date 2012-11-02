@@ -9,14 +9,15 @@
 # Kiyoto Hashida <khashida@redhat.com>, 2008.
 # Kiyoto James Hashida <khashida@redhat.com>, 2006.
 # Akira  <akira+transifex@tagoh.org>, 2011.
+# khasida <khasida@fedoraproject.org>, 2012. #zanata
 # noriko <noriko@fedoraproject.org>, 2012. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: im-chooser\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-07-12 20:22+0900\n"
-"PO-Revision-Date: 2012-03-14 03:58-0400\n"
-"Last-Translator: noriko <noriko@fedoraproject.org>\n"
+"POT-Creation-Date: 2012-11-02 11:42+0900\n"
+"PO-Revision-Date: 2012-09-06 11:44-0400\n"
+"Last-Translator: khasida <khasida@fedoraproject.org>\n"
 "Language-Team: Japanese (http://www.transifex.net/projects/p/im-chooser/team/"
 "ja/)\n"
 "Language: ja\n"
@@ -24,178 +25,159 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0\n"
-"X-Generator: Zanata 1.6.1\n"
+"X-Generator: Zanata 1.7.3\n"
 
 #: ../libimchooseui/eggdesktopfile.c:165
-#, fuzzy, c-format
+#, c-format
 msgid "File is not a valid .desktop file"
 msgstr "ファイルが有効な .desktop ファイルではありません。"
 
 #: ../libimchooseui/eggdesktopfile.c:188
-#, fuzzy, c-format
+#, c-format
 msgid "Unrecognized desktop file Version '%s'"
 msgstr "認められていない .desktop ファイル（Version %s）"
 
 #: ../libimchooseui/eggdesktopfile.c:968
-#, fuzzy, c-format
+#, c-format
 msgid "Starting %s"
 msgstr "%s を開始中です。"
 
 #: ../libimchooseui/eggdesktopfile.c:1110
-#, fuzzy, c-format
+#, c-format
 msgid "Application does not accept documents on command line"
 msgstr ""
 "アプリケーションはコマンドラインでドキュメントを指定することができません。"
 
 #: ../libimchooseui/eggdesktopfile.c:1178
-#, fuzzy, c-format
+#, c-format
 msgid "Unrecognized launch option: %d"
 msgstr "認められていない起動オプション: %d"
 
 #: ../libimchooseui/eggdesktopfile.c:1383
-#, fuzzy, c-format
+#, c-format
 msgid "Can't pass document URIs to a 'Type=Link' desktop entry"
 msgstr ""
 "デスクトップエントリーの \"Type=Link\" にドキュメントの URI をパスできませ"
 "ん。"
 
 #: ../libimchooseui/eggdesktopfile.c:1404
-#, fuzzy, c-format
+#, c-format
 msgid "Not a launchable item"
 msgstr "実行できないアイテム"
 
 #: ../libimchooseui/eggsmclient.c:226
-#, fuzzy
 msgid "Disable connection to session manager"
 msgstr "セッションマネージャの接続を無効"
 
 #: ../libimchooseui/eggsmclient.c:229
-#, fuzzy
 msgid "Specify file containing saved configuration"
 msgstr "保存された設定を含むファイルを指定"
 
 #: ../libimchooseui/eggsmclient.c:229
-#, fuzzy
 msgid "FILE"
 msgstr "FILE"
 
 #: ../libimchooseui/eggsmclient.c:232
-#, fuzzy
 msgid "Specify session management ID"
 msgstr "セッションマネージャのIDを指定"
 
 #: ../libimchooseui/eggsmclient.c:232
-#, fuzzy
 msgid "ID"
 msgstr "ID"
 
 #: ../libimchooseui/eggsmclient.c:253
-#, fuzzy
 msgid "Session management options:"
 msgstr "セッションマネージャのオプション:"
 
 #: ../libimchooseui/eggsmclient.c:254
-#, fuzzy
 msgid "Show session management options"
 msgstr "セッションマネージャのオプションを表示"
 
 #: ../libimchooseui/imchoose.ui.h:1
-#, fuzzy
 msgid "Work in progress..."
 msgstr "処理中です... "
 
 #: ../libimchooseui/imchoose.ui.h:2
-#, fuzzy
 msgid "label"
 msgstr "ラベル"
 
 #: ../libimchooseui/imchoose.ui.h:3
-#, fuzzy
 msgid "<b>Input Method</b>"
 msgstr "<b>入力メソッド</b>"
 
 #: ../libimchooseui/imchooseui.c:163
-#, fuzzy
 msgid "No Input Method"
 msgstr "入力メソッドなし"
 
 #: ../libimchooseui/imchooseui.c:165
-#, fuzzy, c-format
+#, c-format
 msgid "Use %s"
 msgstr "%s を使用する。"
 
 #: ../libimchooseui/imchooseui.c:172
-#, fuzzy
 msgid " (legacy)"
 msgstr " (レガシー)"
 
 #: ../libimchooseui/imchooseui.c:174
-#, fuzzy
 msgid " (recommended)"
 msgstr " (推奨)"
 
 #: ../libimchooseui/imchooseui.c:192
-#, fuzzy, c-format
+#, c-format
 msgid "<a href=\"imsettings-prefs:///%s\">Preferences...</a>"
 msgstr "<a href=\"imsettings-prefs:///%s\">設定...</a>"
 
 #: ../libimchooseui/imchooseui.c:241
 #, c-format
 msgid "IMSettings is disabled on the system."
-msgstr ""
+msgstr "IMSettings はこのシステム上では無効になっています。"
 
 #: ../libimchooseui/imchooseui.c:246
-#, fuzzy, c-format
+#, c-format
 msgid "Unable to create a client instance."
 msgstr "クライアントインスタンスが作成できません"
 
 #: ../libimchooseui/imchooseui.c:255
-#, fuzzy, c-format
+#, c-format
 msgid "Unable to communicate to IMSettings service: %s"
 msgstr "IMSettingsサービスと通信できません: %s"
 
 #: ../libimchooseui/imchooseui.c:331
-#, fuzzy, c-format
+#, c-format
 msgid "Please install any input methods before running if you like."
 msgstr "必要であれば、 実行する前に入力メソッドをインストールしてください。"
 
 #: ../libimchooseui/imchooseui.c:404
-#, fuzzy
 msgid "Unable to get the information"
 msgstr "情報の取得ができません"
 
 #: ../libimchooseui/imchooseui.c:417
-#, fuzzy
 msgid "Unable to invoke the preference tool"
 msgstr "設定ツールが起動できません"
 
 #: ../libimchooseui/imchooseui.c:438
-#, fuzzy, c-format
+#, c-format
 msgid "Switching Input Method - %s"
 msgstr "入力メソッドを切り替え中 - %s"
 
 #: ../libimchooseui/imchooseui.c:460
-#, fuzzy, c-format
+#, c-format
 msgid "Unknown error during finalizing the request of SwitchIM"
 msgstr "SwitchIMの要求の終了中に未知のエラーが発生しました"
 
 #: ../libimchooseui/imchooseui.c:467
-#, fuzzy
 msgid "Failed to switch Input Method"
 msgstr "入力メソッドの切り替えに失敗しました"
 
 #: ../libimchooseui/imchooseui.c:654
-#, fuzzy
 msgid "X applications"
 msgstr "X アプリケーション"
 
 #: ../libimchooseui/imchooseui.c:655
-#, fuzzy
 msgid "GTK+ applications"
 msgstr "GTK+ アプリケーション"
 
 #: ../libimchooseui/imchooseui.c:656
-#, fuzzy
 msgid "Qt applications"
 msgstr "Qt アプリケーション"
 
@@ -213,7 +195,7 @@ msgstr "Qt アプリケーション"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except GTK+ applications and Qt applications</i></small>"
 #: ../libimchooseui/imchooseui.c:664 ../libimchooseui/imchooseui.c:669
 #: ../libimchooseui/imchooseui.c:674
-#, fuzzy, c-format
+#, c-format
 msgid ", except %s and %s"
 msgstr "%s および %s を除いて、"
 
@@ -228,7 +210,7 @@ msgstr "%s および %s を除いて、"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except Qt applications</i></small>"
 #: ../libimchooseui/imchooseui.c:679 ../libimchooseui/imchooseui.c:683
 #: ../libimchooseui/imchooseui.c:687
-#, fuzzy, c-format
+#, c-format
 msgid ", except %s"
 msgstr "%s を除いて、"
 
@@ -236,7 +218,7 @@ msgstr "%s を除いて、"
 # effect until your next log in, except GTK+ applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except GTK+ applications</i></small>"
 #: ../libimchooseui/imchooseui.c:693
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "<small><i>Note: this change will not take effect until your next log in%s</"
 "i></small>"
@@ -244,44 +226,38 @@ msgstr ""
 "<small><i>注記: %sこの変更は次回ログインするまで反映されません</i></small>"
 
 #: ../libimchooseui/imchooseui.c:704
-#, fuzzy, c-format
+#, c-format
 msgid "Unable to obtain the object for note"
 msgstr "注記のためのオブジェクトを取得できません"
 
 #: ../libimchooseui/imchooseui.c:710
-#, fuzzy, c-format
+#, c-format
 msgid "Unable to obtain the object for tree"
 msgstr "ツリーオブジェクトを取得できません"
 
 #: ../libimchooseui/imchooseuicellrendererlabel.c:242
-#, fuzzy
 msgid "Widget"
 msgstr "ウィジェット"
 
 #: ../libimchooseui/imchooseuicellrendererlabel.c:243
-#, fuzzy
 msgid "Widget to contain in the cell"
 msgstr "セルに含まれるウィジェット"
 
 #: ../libimchooseui/imchooseuicellrendererlabel.c:249
-#, fuzzy
 msgid "Spacing"
 msgstr "間隔"
 
 #: ../libimchooseui/imchooseuicellrendererlabel.c:250
-#, fuzzy
 msgid "The amount of space between label"
 msgstr "ラベル間のスペースの数"
 
 #: ../src/app/im-chooser.desktop.in.in.h:1 ../src/app/main.c:207
 #: ../src/xfce/main.c:262 ../src/xfce/xfce4-im-chooser.desktop.in.in.h:1
-#, fuzzy
 msgid "Input Method Selector"
 msgstr "入力メソッドのセレクター"
 
 #: ../src/app/im-chooser.desktop.in.in.h:2
 #: ../src/xfce/xfce4-im-chooser.desktop.in.in.h:2
-#, fuzzy
 msgid ""
 "Choose the input method to be used or disable the input method usage on the "
 "desktop"
@@ -290,46 +266,34 @@ msgstr ""
 "無効化します。"
 
 #: ../src/app/main.c:139 ../src/xfce/main.c:139
-#, fuzzy
 msgid "Could not connect to the session manager"
 msgstr "セッションマネージャへ接続できません。"
 
 #: ../src/app/main.c:158 ../src/xfce/main.c:159
-#, fuzzy
 msgid "[options...]"
 msgstr "[オプション...]"
 
 #: ../src/app/main.c:180 ../src/xfce/main.c:180
-#, fuzzy, c-format
+#, c-format
 msgid "Could not parse arguments: %s\n"
 msgstr "引数を解析できません。: %s\n"
 
 #: ../src/app/main.c:197 ../src/xfce/main.c:238 ../src/xfce/main.c:253
-#, fuzzy
 msgid "No input method is available"
 msgstr "利用可能な入力メソッドがありません"
 
 #: ../src/app/main.c:200 ../src/xfce/main.c:241 ../src/xfce/main.c:256
-#, fuzzy
 msgid "Unrecoverable error"
 msgstr "回復できないエラー"
 
 #: ../src/app/main.c:212 ../src/xfce/main.c:267
-#, fuzzy
 msgid "Log Out"
 msgstr "ログアウト"
 
 #: ../src/xfce/main.c:162
-#, fuzzy
 msgid "Settings manager socket"
 msgstr "設定マネージャーのソケット"
 
 #: ../src/xfce/main.c:162
-#, fuzzy
 msgid "SOCKET ID"
 msgstr "SOCKET ID"
-
-# Translators: those are keywords for im-chooser control-center panel
-#~ msgctxt ""
-#~ msgid "InputMethod;IM;"
-#~ msgstr "入力メソッド;IM;"

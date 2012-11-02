@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: im-chooser\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-07-12 20:22+0900\n"
+"POT-Creation-Date: 2012-11-02 11:42+0900\n"
 "PO-Revision-Date: 2011-08-01 02:53-0400\n"
 "Last-Translator: tagoh <akira+transifex@tagoh.org>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
-"X-Generator: Zanata 1.6.1\n"
+"X-Generator: Zanata 1.7.3\n"
 
 #: ../libimchooseui/eggdesktopfile.c:165
 #, c-format
@@ -82,7 +82,6 @@ msgid "Show session management options"
 msgstr ""
 
 #: ../libimchooseui/imchoose.ui.h:1
-#, fuzzy
 msgid "Work in progress..."
 msgstr "ක්‍රියාත්මක වෙමින්..."
 
@@ -91,17 +90,15 @@ msgid "label"
 msgstr ""
 
 #: ../libimchooseui/imchoose.ui.h:3
-#, fuzzy
 msgid "<b>Input Method</b>"
 msgstr "<b>අක්‍ෂර ඇතුල්කරන ආකාරය</b>"
 
 #: ../libimchooseui/imchooseui.c:163
-#, fuzzy
 msgid "No Input Method"
-msgstr "<b>අක්‍ෂර ඇතුල්කරන ආකාරය</b>"
+msgstr ""
 
 #: ../libimchooseui/imchooseui.c:165
-#, fuzzy, c-format
+#, c-format
 msgid "Use %s"
 msgstr "%s භාවිත කරන්න"
 
@@ -110,7 +107,6 @@ msgid " (legacy)"
 msgstr ""
 
 #: ../libimchooseui/imchooseui.c:174
-#, fuzzy
 msgid " (recommended)"
 msgstr "(අනුමත කළ)"
 
@@ -140,14 +136,12 @@ msgid "Please install any input methods before running if you like."
 msgstr ""
 
 #: ../libimchooseui/imchooseui.c:404
-#, fuzzy
 msgid "Unable to get the information"
 msgstr "තොරතුරු ලබාගත නොහැක"
 
 #: ../libimchooseui/imchooseui.c:417
-#, fuzzy
 msgid "Unable to invoke the preference tool"
-msgstr "තොරතුරු ලබාගත නොහැක"
+msgstr ""
 
 #: ../libimchooseui/imchooseui.c:438
 #, c-format
@@ -164,20 +158,26 @@ msgid "Failed to switch Input Method"
 msgstr ""
 
 #: ../libimchooseui/imchooseui.c:654
-#, fuzzy
 msgid "X applications"
 msgstr "X යෙදුම්"
 
 #: ../libimchooseui/imchooseui.c:655
-#, fuzzy
 msgid "GTK+ applications"
 msgstr "GTK+ යෙදුම්"
 
 #: ../libimchooseui/imchooseui.c:656
-#, fuzzy
 msgid "Qt applications"
 msgstr "Qt යෙදුම්"
 
+# This will be displayed like "<small><i>Note: this change will not take
+# effect until your next log in, except X applications and Qt
+# applications</i></small>"
+# This will be displayed like "<small><i>Note: this change will not take
+# effect until your next log in, except X applications and GTK+
+# applications</i></small>"
+# This will be displayed like "<small><i>Note: this change will not take
+# effect until your next log in, except GTK+ applications and Qt
+# applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except X applications and Qt applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except X applications and GTK+ applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except GTK+ applications and Qt applications</i></small>"
@@ -187,6 +187,12 @@ msgstr "Qt යෙදුම්"
 msgid ", except %s and %s"
 msgstr ""
 
+# This will be displayed like "<small><i>Note: this change will not take
+# effect until your next log in, except X applications</i></small>"
+# This will be displayed like "<small><i>Note: this change will not take
+# effect until your next log in, except GTK+ applications</i></small>"
+# This will be displayed like "<small><i>Note: this change will not take
+# effect until your next log in, except Qt applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except X applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except GTK+ applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except Qt applications</i></small>"
@@ -196,6 +202,8 @@ msgstr ""
 msgid ", except %s"
 msgstr ""
 
+# This will be displayed like "<small><i>Note: this change will not take
+# effect until your next log in, except GTK+ applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except GTK+ applications</i></small>"
 #: ../libimchooseui/imchooseui.c:693
 #, c-format
@@ -205,14 +213,14 @@ msgid ""
 msgstr ""
 
 #: ../libimchooseui/imchooseui.c:704
-#, fuzzy, c-format
+#, c-format
 msgid "Unable to obtain the object for note"
-msgstr "තොරතුරු ලබාගත නොහැක"
+msgstr ""
 
 #: ../libimchooseui/imchooseui.c:710
-#, fuzzy, c-format
+#, c-format
 msgid "Unable to obtain the object for tree"
-msgstr "තොරතුරු ලබාගත නොහැක"
+msgstr ""
 
 #: ../libimchooseui/imchooseuicellrendererlabel.c:242
 msgid "Widget"
@@ -237,7 +245,6 @@ msgstr ""
 
 #: ../src/app/im-chooser.desktop.in.in.h:2
 #: ../src/xfce/xfce4-im-chooser.desktop.in.in.h:2
-#, fuzzy
 msgid ""
 "Choose the input method to be used or disable the input method usage on the "
 "desktop"
@@ -265,7 +272,6 @@ msgid "Unrecoverable error"
 msgstr ""
 
 #: ../src/app/main.c:212 ../src/xfce/main.c:267
-#, fuzzy
 msgid "Log Out"
 msgstr "ඉවත් වන්න"
 

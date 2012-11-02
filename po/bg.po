@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: im-chooser\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-07-12 20:22+0900\n"
+"POT-Creation-Date: 2012-11-02 11:42+0900\n"
 "PO-Revision-Date: 2012-05-19 03:41-0400\n"
 "Last-Translator: laskov <laskov@festa.bg>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -15,116 +15,103 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
-"X-Generator: Zanata 1.6.1\n"
+"X-Generator: Zanata 1.7.3\n"
 
 #: ../libimchooseui/eggdesktopfile.c:165
-#, fuzzy, c-format
+#, c-format
 msgid "File is not a valid .desktop file"
 msgstr "Файлът не е валиден .desktop файл"
 
 #: ../libimchooseui/eggdesktopfile.c:188
-#, fuzzy, c-format
+#, c-format
 msgid "Unrecognized desktop file Version '%s'"
 msgstr "Непозната версия на десктоп файл '%s'"
 
 #: ../libimchooseui/eggdesktopfile.c:968
-#, fuzzy, c-format
+#, c-format
 msgid "Starting %s"
 msgstr "Стартиране на %s"
 
 #: ../libimchooseui/eggdesktopfile.c:1110
-#, fuzzy, c-format
+#, c-format
 msgid "Application does not accept documents on command line"
 msgstr "Приложението не приема документи от командния ред"
 
 #: ../libimchooseui/eggdesktopfile.c:1178
-#, fuzzy, c-format
+#, c-format
 msgid "Unrecognized launch option: %d"
 msgstr "Неразпозната опция при стартиране: %d"
 
 #: ../libimchooseui/eggdesktopfile.c:1383
-#, fuzzy, c-format
+#, c-format
 msgid "Can't pass document URIs to a 'Type=Link' desktop entry"
 msgstr ""
 "Не мога да подам URI-ите на документ към 'Type=Link' елемент на десктопа"
 
 #: ../libimchooseui/eggdesktopfile.c:1404
-#, fuzzy, c-format
+#, c-format
 msgid "Not a launchable item"
 msgstr "Не е нещо, което може да се стартира"
 
 #: ../libimchooseui/eggsmclient.c:226
-#, fuzzy
 msgid "Disable connection to session manager"
 msgstr "Забрани връзка към мениджъра на сесии"
 
 #: ../libimchooseui/eggsmclient.c:229
-#, fuzzy
 msgid "Specify file containing saved configuration"
 msgstr "Посочете файла, съдържащ записаната конфигурация"
 
 #: ../libimchooseui/eggsmclient.c:229
-#, fuzzy
 msgid "FILE"
 msgstr "ФАЙЛ"
 
 #: ../libimchooseui/eggsmclient.c:232
-#, fuzzy
 msgid "Specify session management ID"
 msgstr "Задаване ID за мениджмънт на сесия"
 
 #: ../libimchooseui/eggsmclient.c:232
-#, fuzzy
 msgid "ID"
 msgstr "ID"
 
 #: ../libimchooseui/eggsmclient.c:253
-#, fuzzy
 msgid "Session management options:"
 msgstr "Опции за мениджмънт на сесия:"
 
 #: ../libimchooseui/eggsmclient.c:254
-#, fuzzy
 msgid "Show session management options"
 msgstr "Покажи опциите за мениджмънт на сесия"
 
 #: ../libimchooseui/imchoose.ui.h:1
-#, fuzzy
 msgid "Work in progress..."
 msgstr "Работя..."
 
 #: ../libimchooseui/imchoose.ui.h:2
-#, fuzzy
 msgid "label"
 msgstr "етикет"
 
 #: ../libimchooseui/imchoose.ui.h:3
-#, fuzzy
 msgid "<b>Input Method</b>"
 msgstr "<b>Метод за въвеждане</b>"
 
 #: ../libimchooseui/imchooseui.c:163
-#, fuzzy
 msgid "No Input Method"
 msgstr "Няма метод за въвеждане"
 
 #: ../libimchooseui/imchooseui.c:165
-#, fuzzy, c-format
+#, c-format
 msgid "Use %s"
 msgstr "Ползвайте %s"
 
 #: ../libimchooseui/imchooseui.c:172
-#, fuzzy
 msgid " (legacy)"
 msgstr "(наследен)"
 
 #: ../libimchooseui/imchooseui.c:174
-#, fuzzy
 msgid " (recommended)"
 msgstr "(препоръчителен)"
 
 #: ../libimchooseui/imchooseui.c:192
-#, fuzzy, c-format
+#, c-format
 msgid "<a href=\"imsettings-prefs:///%s\">Preferences...</a>"
 msgstr "<a href=\"imsettings-prefs:///%s\">Предпочитания...</a>"
 
@@ -134,59 +121,53 @@ msgid "IMSettings is disabled on the system."
 msgstr ""
 
 #: ../libimchooseui/imchooseui.c:246
-#, fuzzy, c-format
+#, c-format
 msgid "Unable to create a client instance."
 msgstr "Не може да се създаде клиентска инстанция."
 
 #: ../libimchooseui/imchooseui.c:255
-#, fuzzy, c-format
+#, c-format
 msgid "Unable to communicate to IMSettings service: %s"
 msgstr "Не може да се комуникира с IMSettings услугата: %s"
 
 #: ../libimchooseui/imchooseui.c:331
-#, fuzzy, c-format
+#, c-format
 msgid "Please install any input methods before running if you like."
 msgstr ""
 "Моля, ако желаете, инсталирайте някакви методи за въвеждане преди "
 "стартирането."
 
 #: ../libimchooseui/imchooseui.c:404
-#, fuzzy
 msgid "Unable to get the information"
 msgstr "Не мога да взема информацията"
 
 #: ../libimchooseui/imchooseui.c:417
-#, fuzzy
 msgid "Unable to invoke the preference tool"
 msgstr "Не може да се извика инструмента за предпочитания"
 
 #: ../libimchooseui/imchooseui.c:438
-#, fuzzy, c-format
+#, c-format
 msgid "Switching Input Method - %s"
 msgstr "Превключване на метода за въвеждане - %s"
 
 #: ../libimchooseui/imchooseui.c:460
-#, fuzzy, c-format
+#, c-format
 msgid "Unknown error during finalizing the request of SwitchIM"
 msgstr "Непозната грешка при финализиране заявката на SwitchIM"
 
 #: ../libimchooseui/imchooseui.c:467
-#, fuzzy
 msgid "Failed to switch Input Method"
 msgstr "Превключването на метода за въвеждане не успя"
 
 #: ../libimchooseui/imchooseui.c:654
-#, fuzzy
 msgid "X applications"
 msgstr "X приложения"
 
 #: ../libimchooseui/imchooseui.c:655
-#, fuzzy
 msgid "GTK+ applications"
 msgstr "GTK+ приложения"
 
 #: ../libimchooseui/imchooseui.c:656
-#, fuzzy
 msgid "Qt applications"
 msgstr "Qt приложения"
 
@@ -204,7 +185,7 @@ msgstr "Qt приложения"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except GTK+ applications and Qt applications</i></small>"
 #: ../libimchooseui/imchooseui.c:664 ../libimchooseui/imchooseui.c:669
 #: ../libimchooseui/imchooseui.c:674
-#, fuzzy, c-format
+#, c-format
 msgid ", except %s and %s"
 msgstr ", освен %s и %s"
 
@@ -219,7 +200,7 @@ msgstr ", освен %s и %s"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except Qt applications</i></small>"
 #: ../libimchooseui/imchooseui.c:679 ../libimchooseui/imchooseui.c:683
 #: ../libimchooseui/imchooseui.c:687
-#, fuzzy, c-format
+#, c-format
 msgid ", except %s"
 msgstr ", освен %s"
 
@@ -227,7 +208,7 @@ msgstr ", освен %s"
 # effect until your next log in, except GTK+ applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except GTK+ applications</i></small>"
 #: ../libimchooseui/imchooseui.c:693
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "<small><i>Note: this change will not take effect until your next log in%s</"
 "i></small>"
@@ -236,44 +217,38 @@ msgstr ""
 "влизане%s</i></small>"
 
 #: ../libimchooseui/imchooseui.c:704
-#, fuzzy, c-format
+#, c-format
 msgid "Unable to obtain the object for note"
 msgstr "Не мога да получа обекта за бележка"
 
 #: ../libimchooseui/imchooseui.c:710
-#, fuzzy, c-format
+#, c-format
 msgid "Unable to obtain the object for tree"
 msgstr "Не мога да получа обекта за дърво"
 
 #: ../libimchooseui/imchooseuicellrendererlabel.c:242
-#, fuzzy
 msgid "Widget"
 msgstr "Инструмент"
 
 #: ../libimchooseui/imchooseuicellrendererlabel.c:243
-#, fuzzy
 msgid "Widget to contain in the cell"
 msgstr "Инструмент, съдържащ се в клетката"
 
 #: ../libimchooseui/imchooseuicellrendererlabel.c:249
-#, fuzzy
 msgid "Spacing"
 msgstr "Интервали"
 
 #: ../libimchooseui/imchooseuicellrendererlabel.c:250
-#, fuzzy
 msgid "The amount of space between label"
 msgstr "Размерът на интервал между етикет"
 
 #: ../src/app/im-chooser.desktop.in.in.h:1 ../src/app/main.c:207
 #: ../src/xfce/main.c:262 ../src/xfce/xfce4-im-chooser.desktop.in.in.h:1
-#, fuzzy
 msgid "Input Method Selector"
 msgstr "Избиране метод за въвеждане"
 
 #: ../src/app/im-chooser.desktop.in.in.h:2
 #: ../src/xfce/xfce4-im-chooser.desktop.in.in.h:2
-#, fuzzy
 msgid ""
 "Choose the input method to be used or disable the input method usage on the "
 "desktop"
@@ -282,46 +257,34 @@ msgstr ""
 "въвеждане в десктопа"
 
 #: ../src/app/main.c:139 ../src/xfce/main.c:139
-#, fuzzy
 msgid "Could not connect to the session manager"
 msgstr "Не мога да се свържа с мениджъра на сесии"
 
 #: ../src/app/main.c:158 ../src/xfce/main.c:159
-#, fuzzy
 msgid "[options...]"
 msgstr "[опции...]"
 
 #: ../src/app/main.c:180 ../src/xfce/main.c:180
-#, fuzzy, c-format
+#, c-format
 msgid "Could not parse arguments: %s\n"
 msgstr "Не мога да направя разбор на аргументите: %s\n"
 
 #: ../src/app/main.c:197 ../src/xfce/main.c:238 ../src/xfce/main.c:253
-#, fuzzy
 msgid "No input method is available"
 msgstr "Няма достъпен метод за въвеждане"
 
 #: ../src/app/main.c:200 ../src/xfce/main.c:241 ../src/xfce/main.c:256
-#, fuzzy
 msgid "Unrecoverable error"
 msgstr "Невъзстановима грешка"
 
 #: ../src/app/main.c:212 ../src/xfce/main.c:267
-#, fuzzy
 msgid "Log Out"
 msgstr "Изход"
 
 #: ../src/xfce/main.c:162
-#, fuzzy
 msgid "Settings manager socket"
 msgstr "Socket на мениджъра за настройки"
 
 #: ../src/xfce/main.c:162
-#, fuzzy
 msgid "SOCKET ID"
 msgstr "SOCKET ID"
-
-# Translators: those are keywords for im-chooser control-center panel
-#~ msgctxt ""
-#~ msgid "InputMethod;IM;"
-#~ msgstr "InputMethod;IM;"

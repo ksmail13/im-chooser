@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: im-chooser\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-07-12 20:22+0900\n"
+"POT-Creation-Date: 2012-11-02 11:42+0900\n"
 "PO-Revision-Date: 2011-08-01 02:53-0400\n"
 "Last-Translator: tagoh <akira+transifex@tagoh.org>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5\n"
-"X-Generator: Zanata 1.6.1\n"
+"X-Generator: Zanata 1.7.3\n"
 
 #: ../libimchooseui/eggdesktopfile.c:165
 #, c-format
@@ -83,7 +83,6 @@ msgid "Show session management options"
 msgstr ""
 
 #: ../libimchooseui/imchoose.ui.h:1
-#, fuzzy
 msgid "Work in progress..."
 msgstr "قيد العمل ..."
 
@@ -92,27 +91,23 @@ msgid "label"
 msgstr ""
 
 #: ../libimchooseui/imchoose.ui.h:3
-#, fuzzy
 msgid "<b>Input Method</b>"
 msgstr "<b>طريقة الإدخال<b>"
 
 #: ../libimchooseui/imchooseui.c:163
-#, fuzzy
 msgid "No Input Method"
-msgstr "<b>طريقة الإدخال<b>"
+msgstr ""
 
 #: ../libimchooseui/imchooseui.c:165
-#, fuzzy, c-format
+#, c-format
 msgid "Use %s"
 msgstr "استخدم %s"
 
 #: ../libimchooseui/imchooseui.c:172
-#, fuzzy
 msgid " (legacy)"
 msgstr "(وراثة)"
 
 #: ../libimchooseui/imchooseui.c:174
-#, fuzzy
 msgid " (recommended)"
 msgstr "(مُستحسَـن)"
 
@@ -137,19 +132,17 @@ msgid "Unable to communicate to IMSettings service: %s"
 msgstr ""
 
 #: ../libimchooseui/imchooseui.c:331
-#, fuzzy, c-format
+#, c-format
 msgid "Please install any input methods before running if you like."
 msgstr "ثبت أي طرق إدخال تريد قبل التشغيل إذا أردت"
 
 #: ../libimchooseui/imchooseui.c:404
-#, fuzzy
 msgid "Unable to get the information"
 msgstr "تعذّر الحصول على المعلومات"
 
 #: ../libimchooseui/imchooseui.c:417
-#, fuzzy
 msgid "Unable to invoke the preference tool"
-msgstr "تعذّر الحصول على المعلومات"
+msgstr ""
 
 #: ../libimchooseui/imchooseui.c:438
 #, c-format
@@ -166,17 +159,14 @@ msgid "Failed to switch Input Method"
 msgstr ""
 
 #: ../libimchooseui/imchooseui.c:654
-#, fuzzy
 msgid "X applications"
 msgstr "برامج X"
 
 #: ../libimchooseui/imchooseui.c:655
-#, fuzzy
 msgid "GTK+ applications"
 msgstr "برامج جتك+"
 
 #: ../libimchooseui/imchooseui.c:656
-#, fuzzy
 msgid "Qt applications"
 msgstr "برامج كيوتي"
 
@@ -194,7 +184,7 @@ msgstr "برامج كيوتي"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except GTK+ applications and Qt applications</i></small>"
 #: ../libimchooseui/imchooseui.c:664 ../libimchooseui/imchooseui.c:669
 #: ../libimchooseui/imchooseui.c:674
-#, fuzzy, c-format
+#, c-format
 msgid ", except %s and %s"
 msgstr "، عدا %s و %s"
 
@@ -209,10 +199,12 @@ msgstr "، عدا %s و %s"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except Qt applications</i></small>"
 #: ../libimchooseui/imchooseui.c:679 ../libimchooseui/imchooseui.c:683
 #: ../libimchooseui/imchooseui.c:687
-#, fuzzy, c-format
+#, c-format
 msgid ", except %s"
 msgstr "، عدا %s"
 
+# This will be displayed like "<small><i>Note: this change will not take
+# effect until your next log in, except GTK+ applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except GTK+ applications</i></small>"
 #: ../libimchooseui/imchooseui.c:693
 #, c-format
@@ -222,14 +214,14 @@ msgid ""
 msgstr ""
 
 #: ../libimchooseui/imchooseui.c:704
-#, fuzzy, c-format
+#, c-format
 msgid "Unable to obtain the object for note"
-msgstr "تعذّر الحصول على المعلومات"
+msgstr ""
 
 #: ../libimchooseui/imchooseui.c:710
-#, fuzzy, c-format
+#, c-format
 msgid "Unable to obtain the object for tree"
-msgstr "تعذّر الحصول على المعلومات"
+msgstr ""
 
 #: ../libimchooseui/imchooseuicellrendererlabel.c:242
 msgid "Widget"
@@ -254,7 +246,6 @@ msgstr ""
 
 #: ../src/app/im-chooser.desktop.in.in.h:2
 #: ../src/xfce/xfce4-im-chooser.desktop.in.in.h:2
-#, fuzzy
 msgid ""
 "Choose the input method to be used or disable the input method usage on the "
 "desktop"
@@ -282,7 +273,6 @@ msgid "Unrecoverable error"
 msgstr ""
 
 #: ../src/app/main.c:212 ../src/xfce/main.c:267
-#, fuzzy
 msgid "Log Out"
 msgstr "خروج"
 

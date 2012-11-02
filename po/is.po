@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: im-chooser\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-07-12 20:22+0900\n"
+"POT-Creation-Date: 2012-11-02 11:42+0900\n"
 "PO-Revision-Date: 2011-08-01 02:53-0400\n"
 "Last-Translator: tagoh <akira+transifex@tagoh.org>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
-"X-Generator: Zanata 1.6.1\n"
+"X-Generator: Zanata 1.7.3\n"
 
 #: ../libimchooseui/eggdesktopfile.c:165
 #, c-format
@@ -90,27 +90,23 @@ msgid "label"
 msgstr ""
 
 #: ../libimchooseui/imchoose.ui.h:3
-#, fuzzy
 msgid "<b>Input Method</b>"
 msgstr "<b>Innsláttaraðferð</b>"
 
 #: ../libimchooseui/imchooseui.c:163
-#, fuzzy
 msgid "No Input Method"
-msgstr "<b>Innsláttaraðferð</b>"
+msgstr ""
 
 #: ../libimchooseui/imchooseui.c:165
-#, fuzzy, c-format
+#, c-format
 msgid "Use %s"
 msgstr "Nota %s"
 
 #: ../libimchooseui/imchooseui.c:172
-#, fuzzy
 msgid " (legacy)"
 msgstr " (gamalt)"
 
 #: ../libimchooseui/imchooseui.c:174
-#, fuzzy
 msgid " (recommended)"
 msgstr " (mælt er með þessu)"
 
@@ -162,20 +158,26 @@ msgid "Failed to switch Input Method"
 msgstr ""
 
 #: ../libimchooseui/imchooseui.c:654
-#, fuzzy
 msgid "X applications"
 msgstr "X forrit"
 
 #: ../libimchooseui/imchooseui.c:655
-#, fuzzy
 msgid "GTK+ applications"
 msgstr "GTK+ forrit"
 
 #: ../libimchooseui/imchooseui.c:656
-#, fuzzy
 msgid "Qt applications"
 msgstr "KDE forrit"
 
+# This will be displayed like "<small><i>Note: this change will not take
+# effect until your next log in, except X applications and Qt
+# applications</i></small>"
+# This will be displayed like "<small><i>Note: this change will not take
+# effect until your next log in, except X applications and GTK+
+# applications</i></small>"
+# This will be displayed like "<small><i>Note: this change will not take
+# effect until your next log in, except GTK+ applications and Qt
+# applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except X applications and Qt applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except X applications and GTK+ applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except GTK+ applications and Qt applications</i></small>"
@@ -185,6 +187,12 @@ msgstr "KDE forrit"
 msgid ", except %s and %s"
 msgstr ""
 
+# This will be displayed like "<small><i>Note: this change will not take
+# effect until your next log in, except X applications</i></small>"
+# This will be displayed like "<small><i>Note: this change will not take
+# effect until your next log in, except GTK+ applications</i></small>"
+# This will be displayed like "<small><i>Note: this change will not take
+# effect until your next log in, except Qt applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except X applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except GTK+ applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except Qt applications</i></small>"
@@ -194,6 +202,8 @@ msgstr ""
 msgid ", except %s"
 msgstr ""
 
+# This will be displayed like "<small><i>Note: this change will not take
+# effect until your next log in, except GTK+ applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except GTK+ applications</i></small>"
 #: ../libimchooseui/imchooseui.c:693
 #, c-format
@@ -262,7 +272,6 @@ msgid "Unrecoverable error"
 msgstr ""
 
 #: ../src/app/main.c:212 ../src/xfce/main.c:267
-#, fuzzy
 msgid "Log Out"
 msgstr "Stimpla út"
 

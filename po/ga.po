@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-07-12 20:22+0900\n"
+"POT-Creation-Date: 2012-11-02 11:42+0900\n"
 "PO-Revision-Date: \n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=5; plural=n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n<11 ? 3 : "
 "4\n"
-"X-Generator: Zanata 1.6.1\n"
+"X-Generator: Zanata 1.7.3\n"
 
 #: ../libimchooseui/eggdesktopfile.c:165
 #, c-format
@@ -169,6 +169,15 @@ msgstr ""
 msgid "Qt applications"
 msgstr ""
 
+# This will be displayed like "<small><i>Note: this change will not take
+# effect until your next log in, except X applications and Qt
+# applications</i></small>"
+# This will be displayed like "<small><i>Note: this change will not take
+# effect until your next log in, except X applications and GTK+
+# applications</i></small>"
+# This will be displayed like "<small><i>Note: this change will not take
+# effect until your next log in, except GTK+ applications and Qt
+# applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except X applications and Qt applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except X applications and GTK+ applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except GTK+ applications and Qt applications</i></small>"
@@ -178,6 +187,12 @@ msgstr ""
 msgid ", except %s and %s"
 msgstr ""
 
+# This will be displayed like "<small><i>Note: this change will not take
+# effect until your next log in, except X applications</i></small>"
+# This will be displayed like "<small><i>Note: this change will not take
+# effect until your next log in, except GTK+ applications</i></small>"
+# This will be displayed like "<small><i>Note: this change will not take
+# effect until your next log in, except Qt applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except X applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except GTK+ applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except Qt applications</i></small>"
@@ -187,6 +202,8 @@ msgstr ""
 msgid ", except %s"
 msgstr ""
 
+# This will be displayed like "<small><i>Note: this change will not take
+# effect until your next log in, except GTK+ applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except GTK+ applications</i></small>"
 #: ../libimchooseui/imchooseui.c:693
 #, c-format

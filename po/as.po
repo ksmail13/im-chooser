@@ -4,191 +4,173 @@
 #
 # Amitakhya Phukan <aphukan@redhat.com>, 2008.
 # Amitakhya Phukan <aphukan@fedoraproject.org>, 2008.
+# Nilamdyuti Goswami <ngoswami@redhat.com>, 2012.
 # ngoswami <ngoswami@fedoraproject.org>, 2012. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: im-chooser\n"
+"Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-07-12 20:22+0900\n"
-"PO-Revision-Date: 2012-04-18 05:13-0400\n"
-"Last-Translator: ngoswami <ngoswami@fedoraproject.org>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"POT-Creation-Date: 2012-11-02 11:42+0900\n"
+"PO-Revision-Date: 2012-08-28 11:58-0400\n"
+"Last-Translator: Nilamdyuti Goswami <ngoswami@redhat.com>\n"
+"Language-Team: as_IN <kde-i18n-doc@kde.org>\n"
 "Language: as\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
-"X-Generator: Zanata 1.6.1\n"
+"X-Generator: Zanata 1.7.3\n"
 
 #: ../libimchooseui/eggdesktopfile.c:165
-#, fuzzy, c-format
+#, c-format
 msgid "File is not a valid .desktop file"
-msgstr "নথিপত্ৰ এটা বৈধ .desktop নথিপত্ৰ নহয়"
+msgstr "ফাইল এটা বৈধ .desktop ফাইল নহয়"
 
 #: ../libimchooseui/eggdesktopfile.c:188
-#, fuzzy, c-format
+#, c-format
 msgid "Unrecognized desktop file Version '%s'"
-msgstr "অপৰিচিত ডেক্সটপ নথিপত্ৰ সংস্কৰণ '%s'"
+msgstr "অপৰিচিত ডেস্কটপ ফাইল সংস্কৰণ '%s'"
 
 #: ../libimchooseui/eggdesktopfile.c:968
-#, fuzzy, c-format
+#, c-format
 msgid "Starting %s"
-msgstr "%s আৰম্ভ কৰা"
+msgstr "%s আৰম্ভ কৰা হৈছে"
 
 #: ../libimchooseui/eggdesktopfile.c:1110
-#, fuzzy, c-format
+#, c-format
 msgid "Application does not accept documents on command line"
-msgstr "অনুপ্ৰয়োগে কমান্ড শাৰীত দস্তাবেজসমূহ গ্ৰহণ নকৰে"
+msgstr "এপ্লিকেচনে কমান্ড শাৰীত দস্তাবেজসমূহ গ্ৰহণ নকৰে"
 
 #: ../libimchooseui/eggdesktopfile.c:1178
-#, fuzzy, c-format
+#, c-format
 msgid "Unrecognized launch option: %d"
 msgstr "অপৰিচিত লঞ্চ বিকল্প: %d"
 
 #: ../libimchooseui/eggdesktopfile.c:1383
-#, fuzzy, c-format
+#, c-format
 msgid "Can't pass document URIs to a 'Type=Link' desktop entry"
-msgstr "এটা 'Type=Link' ডেস্কটপ প্ৰবিষ্টিলে দস্তাবেজ URIসমূহ প্ৰেৰণ কৰিব নোৱাৰি"
+msgstr "এটা 'Type=Link' ডেস্কটপ প্ৰবিষ্টিলে দস্তাবেজ URIs প্ৰেৰণ কৰিব নোৱাৰি"
 
 #: ../libimchooseui/eggdesktopfile.c:1404
-#, fuzzy, c-format
+#, c-format
 msgid "Not a launchable item"
 msgstr "এটা লঞ্চ কৰিব পৰা বস্তু নহয়"
 
 #: ../libimchooseui/eggsmclient.c:226
-#, fuzzy
 msgid "Disable connection to session manager"
 msgstr "অধিবেশন ব্যৱস্থাপকলে সংযোগ অসামৰ্থবান কৰক"
 
 #: ../libimchooseui/eggsmclient.c:229
-#, fuzzy
 msgid "Specify file containing saved configuration"
-msgstr "সংৰক্ষিত সংৰূপ অন্তৰ্ভুক্ত কৰা নথিপত্ৰ ধাৰ্য্য কৰক"
+msgstr "সংৰক্ষিত সংৰূপ অন্তৰ্ভুক্ত কৰা ফাইল ধাৰ্য্য কৰক"
 
 #: ../libimchooseui/eggsmclient.c:229
-#, fuzzy
 msgid "FILE"
 msgstr "FILE"
 
 #: ../libimchooseui/eggsmclient.c:232
-#, fuzzy
 msgid "Specify session management ID"
 msgstr "অদিবেশন ব্যৱস্থাপনা ID ধাৰ্য্য কৰক"
 
 #: ../libimchooseui/eggsmclient.c:232
-#, fuzzy
 msgid "ID"
 msgstr "ID"
 
 #: ../libimchooseui/eggsmclient.c:253
-#, fuzzy
 msgid "Session management options:"
 msgstr "অদিবেশন ব্যৱস্থাপনা বিকল্পসমূহ:"
 
 #: ../libimchooseui/eggsmclient.c:254
-#, fuzzy
 msgid "Show session management options"
 msgstr "অধিবেশন ব্যৱস্থাপনা বিকল্পসমূহ দেখুৱাওক"
 
 #: ../libimchooseui/imchoose.ui.h:1
-#, fuzzy
 msgid "Work in progress..."
 msgstr "কাম চলি আছে..."
 
 #: ../libimchooseui/imchoose.ui.h:2
-#, fuzzy
 msgid "label"
 msgstr "লেবেল"
 
 #: ../libimchooseui/imchoose.ui.h:3
-#, fuzzy
 msgid "<b>Input Method</b>"
 msgstr "<b>ইনপুট পদ্ধতি</b>"
 
 #: ../libimchooseui/imchooseui.c:163
-#, fuzzy
 msgid "No Input Method"
 msgstr "কোনো ইনপুট পদ্ধতি নাই"
 
 #: ../libimchooseui/imchooseui.c:165
-#, fuzzy, c-format
+#, c-format
 msgid "Use %s"
 msgstr "%s ব্যৱহাৰ কৰক"
 
 #: ../libimchooseui/imchooseui.c:172
-#, fuzzy
 msgid " (legacy)"
 msgstr "(লিগেচি)"
 
 #: ../libimchooseui/imchooseui.c:174
-#, fuzzy
 msgid " (recommended)"
 msgstr "(উপদেশিত)"
 
 #: ../libimchooseui/imchooseui.c:192
-#, fuzzy, c-format
+#, c-format
 msgid "<a href=\"imsettings-prefs:///%s\">Preferences...</a>"
 msgstr "<a href=\"imsettings-prefs:///%s\">পছন্দসমূহ...</a>"
 
 #: ../libimchooseui/imchooseui.c:241
 #, c-format
 msgid "IMSettings is disabled on the system."
-msgstr ""
+msgstr "IMSettings চিস্টেমত অসামৰ্থবান কৰা আছে।"
 
 #: ../libimchooseui/imchooseui.c:246
-#, fuzzy, c-format
+#, c-format
 msgid "Unable to create a client instance."
 msgstr "এটা ক্লাএন্ট উদাহৰণ সৃষ্টি কৰিবলে অক্ষম।"
 
 #: ../libimchooseui/imchooseui.c:255
-#, fuzzy, c-format
+#, c-format
 msgid "Unable to communicate to IMSettings service: %s"
 msgstr "IMSettings সেৱালে সংযোগ কৰিবলে অক্ষম: %s"
 
 #: ../libimchooseui/imchooseui.c:331
-#, fuzzy, c-format
+#, c-format
 msgid "Please install any input methods before running if you like."
 msgstr "চলোৱাৰ আগতে পছন্দৰ মতে যি কোনো ইনপুট পদ্ধতি ইনস্টল কৰক।"
 
 #: ../libimchooseui/imchooseui.c:404
-#, fuzzy
 msgid "Unable to get the information"
 msgstr "তথ্য প্ৰাপ্ত কৰিবলে অক্ষম"
 
 #: ../libimchooseui/imchooseui.c:417
-#, fuzzy
 msgid "Unable to invoke the preference tool"
 msgstr "পছন্দৰ সঁজুলি আৱাহন কৰিবলে অক্ষম"
 
 #: ../libimchooseui/imchooseui.c:438
-#, fuzzy, c-format
+#, c-format
 msgid "Switching Input Method - %s"
-msgstr "ইনপুট পদ্ধতি সলনি কৰা - %s"
+msgstr "ইনপুট পদ্ধতি সলনি কৰা হৈছে - %s"
 
 #: ../libimchooseui/imchooseui.c:460
-#, fuzzy, c-format
+#, c-format
 msgid "Unknown error during finalizing the request of SwitchIM"
 msgstr "SwitchIM ৰ অনুৰোধ সম্পূৰ্ণ কৰোতে অজ্ঞাত ত্ৰুটি"
 
 #: ../libimchooseui/imchooseui.c:467
-#, fuzzy
 msgid "Failed to switch Input Method"
 msgstr "ইনপুট পদ্ধতি সলনি কৰিবলে ব্যৰ্থ"
 
 #: ../libimchooseui/imchooseui.c:654
-#, fuzzy
 msgid "X applications"
-msgstr "X অনুপ্ৰয়োগসমূহ"
+msgstr "X এপ্লিকেচনসমূহ"
 
 #: ../libimchooseui/imchooseui.c:655
-#, fuzzy
 msgid "GTK+ applications"
-msgstr "GTK+ অনুপ্ৰয়োগসমূহ"
+msgstr "GTK+ এপ্লিকেচনসমূহ"
 
 #: ../libimchooseui/imchooseui.c:656
-#, fuzzy
 msgid "Qt applications"
-msgstr "Qt অনুপ্ৰয়োগসমূহ"
+msgstr "Qt এপ্লিকেচনসমূহ"
 
 # This will be displayed like "<small><i>Note: this change will not take
 # effect until your next log in, except X applications and Qt
@@ -204,7 +186,7 @@ msgstr "Qt অনুপ্ৰয়োগসমূহ"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except GTK+ applications and Qt applications</i></small>"
 #: ../libimchooseui/imchooseui.c:664 ../libimchooseui/imchooseui.c:669
 #: ../libimchooseui/imchooseui.c:674
-#, fuzzy, c-format
+#, c-format
 msgid ", except %s and %s"
 msgstr ", %s আৰু %s ৰ বাহিৰে"
 
@@ -219,7 +201,7 @@ msgstr ", %s আৰু %s ৰ বাহিৰে"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except Qt applications</i></small>"
 #: ../libimchooseui/imchooseui.c:679 ../libimchooseui/imchooseui.c:683
 #: ../libimchooseui/imchooseui.c:687
-#, fuzzy, c-format
+#, c-format
 msgid ", except %s"
 msgstr ", %s ৰ বাহিৰে"
 
@@ -227,7 +209,7 @@ msgstr ", %s ৰ বাহিৰে"
 # effect until your next log in, except GTK+ applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except GTK+ applications</i></small>"
 #: ../libimchooseui/imchooseui.c:693
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "<small><i>Note: this change will not take effect until your next log in%s</"
 "i></small>"
@@ -236,44 +218,38 @@ msgstr ""
 "i></small>"
 
 #: ../libimchooseui/imchooseui.c:704
-#, fuzzy, c-format
+#, c-format
 msgid "Unable to obtain the object for note"
 msgstr "টোকা লবলে অবজেক্ট প্ৰাপ্ত কৰিবলে অক্ষম"
 
 #: ../libimchooseui/imchooseui.c:710
-#, fuzzy, c-format
+#, c-format
 msgid "Unable to obtain the object for tree"
 msgstr "ট্ৰিৰ বাবে অবজেক্ট লবলে অক্ষম"
 
 #: ../libimchooseui/imchooseuicellrendererlabel.c:242
-#, fuzzy
 msgid "Widget"
 msgstr "উইজেট"
 
 #: ../libimchooseui/imchooseuicellrendererlabel.c:243
-#, fuzzy
 msgid "Widget to contain in the cell"
 msgstr "কোষত অন্তৰ্ভুক্ত কৰিবলে উইজেট"
 
 #: ../libimchooseui/imchooseuicellrendererlabel.c:249
-#, fuzzy
 msgid "Spacing"
 msgstr "স্পেইচিং"
 
 #: ../libimchooseui/imchooseuicellrendererlabel.c:250
-#, fuzzy
 msgid "The amount of space between label"
 msgstr "লেবেলৰ মাজৰ স্থান"
 
 #: ../src/app/im-chooser.desktop.in.in.h:1 ../src/app/main.c:207
 #: ../src/xfce/main.c:262 ../src/xfce/xfce4-im-chooser.desktop.in.in.h:1
-#, fuzzy
 msgid "Input Method Selector"
 msgstr "ইনপুট পদ্ধতি নিৰ্বাচক"
 
 #: ../src/app/im-chooser.desktop.in.in.h:2
 #: ../src/xfce/xfce4-im-chooser.desktop.in.in.h:2
-#, fuzzy
 msgid ""
 "Choose the input method to be used or disable the input method usage on the "
 "desktop"
@@ -282,46 +258,34 @@ msgstr ""
 "কৰক"
 
 #: ../src/app/main.c:139 ../src/xfce/main.c:139
-#, fuzzy
 msgid "Could not connect to the session manager"
 msgstr "অধিবেশন ব্যৱস্থাপকলে সংযোগ কৰিব নোৱাৰি"
 
 #: ../src/app/main.c:158 ../src/xfce/main.c:159
-#, fuzzy
 msgid "[options...]"
 msgstr "[বিকল্পসমূহ...]"
 
 #: ../src/app/main.c:180 ../src/xfce/main.c:180
-#, fuzzy, c-format
+#, c-format
 msgid "Could not parse arguments: %s\n"
 msgstr "তৰ্কসমূহ বিশ্লেষণ কৰিব নোৱাৰি: %s\n"
 
 #: ../src/app/main.c:197 ../src/xfce/main.c:238 ../src/xfce/main.c:253
-#, fuzzy
 msgid "No input method is available"
 msgstr "কোনো ইনপুট পদ্ধতি উপলব্ধ নাই"
 
 #: ../src/app/main.c:200 ../src/xfce/main.c:241 ../src/xfce/main.c:256
-#, fuzzy
 msgid "Unrecoverable error"
 msgstr "উদ্ধাৰ কৰিব নোৱাৰা ত্ৰুটি"
 
 #: ../src/app/main.c:212 ../src/xfce/main.c:267
-#, fuzzy
 msgid "Log Out"
 msgstr "প্ৰস্থান কৰক"
 
 #: ../src/xfce/main.c:162
-#, fuzzy
 msgid "Settings manager socket"
 msgstr "সংহতি ব্যৱস্থাপক চকেট"
 
 #: ../src/xfce/main.c:162
-#, fuzzy
 msgid "SOCKET ID"
 msgstr "SOCKET ID"
-
-# Translators: those are keywords for im-chooser control-center panel
-#~ msgctxt ""
-#~ msgid "InputMethod;IM;"
-#~ msgstr "ইনপুটপদ্ধতি;IM;"
