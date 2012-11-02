@@ -19,5 +19,9 @@ install-data-hook:
 		echo "***   $(gtk_update_icon_cache)";	\
 	fi
 
+uninstall-hook:
+	@-if test -z "$(DESTDIR)"; then				\
+		rm $(datadir)/icons/hicolor/icon-theme.cache;	\
+	fi
 
 -include $(top_srcdir)/git.mk
