@@ -177,7 +177,7 @@ _imchoose_ui_add_row(IMChooseUI      *ui,
 		*def_iter = gtk_tree_iter_copy(iter);
 	}
 	if (!priv->current_im &&
-	    (strcmp(running_im, name) == 0 ||
+	    ((running_im && strcmp(running_im, name) == 0) ||
 	     ((!running_im || running_im[0] == 0) &&
 	      strcmp(name, IMSETTINGS_NONE_CONF) == 0))) {
 		priv->current_im = g_strdup(name);
