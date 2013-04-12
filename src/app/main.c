@@ -82,7 +82,7 @@ _show_error_cb(IMChooseUI  *ui,
 {
 	GtkWidget *parent = GTK_WIDGET (user_data);
 	GtkWidget *dlg;
-	gchar *s;
+	gchar *s, *logfile, *m;
 
 	if (progress_id != 0)
 		g_source_remove(progress_id);
@@ -93,7 +93,14 @@ _show_error_cb(IMChooseUI  *ui,
 						 GTK_MESSAGE_ERROR,
 						 GTK_BUTTONS_OK,
 						 s);
-	gtk_message_dialog_format_secondary_text(GTK_MESSAGE_DIALOG (dlg), details);
+	logfile = g_build_filename(g_get_user_cache_dir(), "imsettings", "log", NULL);
+	m = g_strdup_printf(_("Please check <a href=\"file://%s\">%s</a> for more details"),
+			    logfile, logfile);
+	gtk_message_dialog_format_secondary_markup(GTK_MESSAGE_DIALOG (dlg),
+						   "%s\n\n%s",
+						   details, m);
+	g_free (m);
+	g_free (logfile);
 
 	/* for GNOME HIG compliance */
 #if 0
