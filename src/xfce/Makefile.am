@@ -1,6 +1,6 @@
 NULL =
 
-INCLUDES =							\
+AM_CPPFLAGS =							\
 	-DG_LOG_DOMAIN="\"IM-Chooser\""				\
 	-DIMCHOOSE_LOCALEDIR="\"$(datadir)/locale\""		\
 	-I$(top_srcdir)/libimchooseui				\
