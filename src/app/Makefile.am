@@ -25,6 +25,12 @@ DISTCLEANFILES =	\
 	*.desktop	\
 	$(NULL)
 
+BUILT_SOURCES =		\
+	$(man1_MANS)	\
+	$(NULL)
+
+SUFFIXES = .1.xml
+
 bin_PROGRAMS = im-chooser
 
 im_chooser_SOURCES =						\
@@ -42,8 +48,19 @@ desktop_in_files =						\
 desktop_DATA = $(desktop_in_files:.desktop.in=.desktop)
 @INTLTOOL_DESKTOP_RULE@
 
+man1_MANS =		\
+	im-chooser.1	\
+	$(NULL)
+man_xml_files = $(man1_MANS:.1=.1.xml)
+
+.xml.1:
+	$(AM_V_GEN) $(DB2MAN) $<
+.1.xml.1:
+	$(AM_V_GEN) $(DB2MAN) $<
+
 EXTRA_DIST =			\
 	$(desktop_in_files)	\
+	$(man_xml_files)	\
 	$(NULL)
 
 -include $(top_srcdir)/git.mk

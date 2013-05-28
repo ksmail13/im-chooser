@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.2//EN"
+	"http://www.oasis-open.org/docbook/xml/4.2/docbookx.dtd" [
+<!ENTITY firstname "<firstname>Akira</firstname>">
+<!ENTITY surname   "<surname>TAGOH</surname>">
+<!ENTITY email     "<email>akira@tagoh.org</email>">
+<!ENTITY section   "1">
+<!ENTITY username  "Akira TAGOH">
+<!ENTITY command   "im-chooser">
+<!ENTITY purpose   "GUI Application to switch Input Method">
+<!ENTITY gnu       "<acronym>GNU</acronym>">
+]>
+<refentry id="&command;">
+  <refentryinfo>
+    <address>&email;</address>
+    <author>&firstname; &surname;</author>
+    <copyright>
+      <year>2013</year>
+      <holder>&username;</holder>
+    </copyright>
+    <date>May 27, 2013</date>
+  </refentryinfo>
+  <refmeta>
+    <refentrytitle>&command;</refentrytitle>
+    <manvolnum>&section;</manvolnum>
+  </refmeta>
+
+  <refnamediv>
+    <refname>&command;</refname>
+    <refpurpose>&purpose;</refpurpose>
+  </refnamediv>
+
+  <refsynopsisdiv>
+    <cmdsynopsis>
+      <command>&command;</command>
+    </cmdsynopsis>
+  </refsynopsisdiv>
+
+  <refsect1>
+    <title>DESCRIPTION</title>
+    <para>
+      <command>&command;</command> provides a graphical user interface to switch Input Method being managed under imsettings.
+    </para>
+  </refsect1>
+
+  <refsect1>
+    <title>SEE ALSO</title>
+    <para>
+      <command>imsettings-switch</command>(1)
+    </para>
+  </refsect1>
+
+  <refsect1>
+    <title>AUTHOR</title>
+    <para>
+      This manual page was written by &username; &email;
+    </para>
+  </refsect1>
+</refentry>
