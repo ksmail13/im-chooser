@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: im-chooser\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-11-23 15:33+0900\n"
+"POT-Creation-Date: 2013-05-28 10:47+0900\n"
 "PO-Revision-Date: 2012-09-03 07:56-0400\n"
 "Last-Translator: fvalen <fvalen@fedoraproject.org>\n"
 "Language-Team: Italian (http://www.transifex.net/projects/p/im-chooser/team/"
@@ -19,40 +19,45 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
-"X-Generator: Zanata 2.0.2\n"
+"X-Generator: Zanata 2.2.2\n"
 
 #: ../libimchooseui/eggdesktopfile.c:165
 #, c-format
 msgid "File is not a valid .desktop file"
 msgstr "Il file non è un file .desktop valido"
 
-#: ../libimchooseui/eggdesktopfile.c:188
+#. translators: 'Version' is from a desktop file, and
+#. * should not be translated. '%s' would probably be a
+#. * version number.
+#: ../libimchooseui/eggdesktopfile.c:191
 #, c-format
 msgid "Unrecognized desktop file Version '%s'"
 msgstr "Versione '%s' del file desktop non riconosciuta"
 
-#: ../libimchooseui/eggdesktopfile.c:968
+#: ../libimchooseui/eggdesktopfile.c:974
 #, c-format
 msgid "Starting %s"
 msgstr "Avvio %s"
 
-#: ../libimchooseui/eggdesktopfile.c:1110
+#: ../libimchooseui/eggdesktopfile.c:1116
 #, c-format
 msgid "Application does not accept documents on command line"
 msgstr "L'applicazione non accetta documenti su riga di comando"
 
-#: ../libimchooseui/eggdesktopfile.c:1178
+#: ../libimchooseui/eggdesktopfile.c:1184
 #, c-format
 msgid "Unrecognized launch option: %d"
 msgstr "Opzione di lancio non riconosciuta: %d"
 
-#: ../libimchooseui/eggdesktopfile.c:1383
+#. translators: The 'Type=Link' string is found in a
+#. * desktop file, and should not be translated.
+#: ../libimchooseui/eggdesktopfile.c:1391
 #, c-format
 msgid "Can't pass document URIs to a 'Type=Link' desktop entry"
 msgstr ""
 "Impossibile passare gli URI di documento ad un ingresso desktop 'Type=Link'"
 
-#: ../libimchooseui/eggdesktopfile.c:1404
+#: ../libimchooseui/eggdesktopfile.c:1412
 #, c-format
 msgid "Not a launchable item"
 msgstr "L'oggetto non è un eseguibile"
@@ -230,23 +235,23 @@ msgstr "Impossibile ottenere l'oggetto per la nota"
 msgid "Unable to obtain the object for tree"
 msgstr "Impossibile ottenere l'oggetto per l'albero"
 
-#: ../libimchooseui/imchooseuicellrendererlabel.c:242
+#: ../libimchooseui/imchooseuicellrendererlabel.c:252
 msgid "Widget"
 msgstr "Widget"
 
-#: ../libimchooseui/imchooseuicellrendererlabel.c:243
+#: ../libimchooseui/imchooseuicellrendererlabel.c:253
 msgid "Widget to contain in the cell"
 msgstr "Widget da contenere nella cella"
 
-#: ../libimchooseui/imchooseuicellrendererlabel.c:249
+#: ../libimchooseui/imchooseuicellrendererlabel.c:259
 msgid "Spacing"
 msgstr "Spaziatura"
 
-#: ../libimchooseui/imchooseuicellrendererlabel.c:250
+#: ../libimchooseui/imchooseuicellrendererlabel.c:260
 msgid "The amount of space between label"
 msgstr "La quantità di spazio tra le etichette"
 
-#: ../src/app/im-chooser.desktop.in.in.h:1 ../src/app/main.c:207
+#: ../src/app/im-chooser.desktop.in.in.h:1 ../src/app/main.c:214
 #: ../src/xfce/main.c:262 ../src/xfce/xfce4-im-chooser.desktop.in.in.h:1
 msgid "Input Method Selector"
 msgstr "Selettore di Input Method"
@@ -260,28 +265,33 @@ msgstr ""
 "Scegliere il metodo di input da usare oppure disabilitare l'uso del metodo "
 "di input sul desktop"
 
-#: ../src/app/main.c:139 ../src/xfce/main.c:139
+#: ../src/app/main.c:97
+#, c-format
+msgid "Please check <a href=\"file://%s\">%s</a> for more details"
+msgstr ""
+
+#: ../src/app/main.c:146 ../src/xfce/main.c:139
 msgid "Could not connect to the session manager"
 msgstr "Impossibile connettersi al gestore di sessione"
 
-#: ../src/app/main.c:158 ../src/xfce/main.c:159
+#: ../src/app/main.c:165 ../src/xfce/main.c:159
 msgid "[options...]"
 msgstr " [opzioni...]"
 
-#: ../src/app/main.c:180 ../src/xfce/main.c:180
+#: ../src/app/main.c:187 ../src/xfce/main.c:180
 #, c-format
 msgid "Could not parse arguments: %s\n"
 msgstr "Impossibile analizzare gli argomenti: %s\n"
 
-#: ../src/app/main.c:197 ../src/xfce/main.c:238 ../src/xfce/main.c:253
+#: ../src/app/main.c:204 ../src/xfce/main.c:238 ../src/xfce/main.c:253
 msgid "No input method is available"
 msgstr "Nessun input method è disponibile"
 
-#: ../src/app/main.c:200 ../src/xfce/main.c:241 ../src/xfce/main.c:256
+#: ../src/app/main.c:207 ../src/xfce/main.c:241 ../src/xfce/main.c:256
 msgid "Unrecoverable error"
 msgstr "Errore irreversibile"
 
-#: ../src/app/main.c:212 ../src/xfce/main.c:267
+#: ../src/app/main.c:219 ../src/xfce/main.c:267
 msgid "Log Out"
 msgstr "Log Out"
 

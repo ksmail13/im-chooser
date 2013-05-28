@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: im-chooser\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-11-23 15:33+0900\n"
+"POT-Creation-Date: 2013-05-28 10:47+0900\n"
 "PO-Revision-Date: 2012-08-28 08:27-0400\n"
 "Last-Translator: kkrothap <kkrothap@fedoraproject.org>\n"
 "Language-Team: Telugu (http://www.transifex.net/projects/p/im-chooser/team/"
@@ -18,39 +18,44 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
-"X-Generator: Zanata 2.0.2\n"
+"X-Generator: Zanata 2.2.2\n"
 
 #: ../libimchooseui/eggdesktopfile.c:165
 #, c-format
 msgid "File is not a valid .desktop file"
 msgstr "ఫైలు చెల్లునటువంటి .desktop ఫైలు కాదు"
 
-#: ../libimchooseui/eggdesktopfile.c:188
+#. translators: 'Version' is from a desktop file, and
+#. * should not be translated. '%s' would probably be a
+#. * version number.
+#: ../libimchooseui/eggdesktopfile.c:191
 #, c-format
 msgid "Unrecognized desktop file Version '%s'"
 msgstr "గుర్తించని డెస్కుటాప్ ఫైల్ వర్షన్ '%s'"
 
-#: ../libimchooseui/eggdesktopfile.c:968
+#: ../libimchooseui/eggdesktopfile.c:974
 #, c-format
 msgid "Starting %s"
 msgstr "%s ప్రారంభిస్తోంది"
 
-#: ../libimchooseui/eggdesktopfile.c:1110
+#: ../libimchooseui/eggdesktopfile.c:1116
 #, c-format
 msgid "Application does not accept documents on command line"
 msgstr "అనువర్తనం కమాండ్ లైన్ పై పత్రములను ఆమోదించదు."
 
-#: ../libimchooseui/eggdesktopfile.c:1178
+#: ../libimchooseui/eggdesktopfile.c:1184
 #, c-format
 msgid "Unrecognized launch option: %d"
 msgstr "గుర్తించని ఆరంభ ఐచ్చికం: %d"
 
-#: ../libimchooseui/eggdesktopfile.c:1383
+#. translators: The 'Type=Link' string is found in a
+#. * desktop file, and should not be translated.
+#: ../libimchooseui/eggdesktopfile.c:1391
 #, c-format
 msgid "Can't pass document URIs to a 'Type=Link' desktop entry"
 msgstr "పత్ర URI లను 'Type=Link' డెస్కుటాప్ ప్రవేశంనకు పంపలేదు"
 
-#: ../libimchooseui/eggdesktopfile.c:1404
+#: ../libimchooseui/eggdesktopfile.c:1412
 #, c-format
 msgid "Not a launchable item"
 msgstr "ఆరంభించదగు అంశము కాదు"
@@ -224,23 +229,23 @@ msgstr "గమనిక కొరకు ఆబ్జక్టును పొం
 msgid "Unable to obtain the object for tree"
 msgstr "ట్రీ కొరకు ఆబ్జక్టును పొందలేక పోయింది"
 
-#: ../libimchooseui/imchooseuicellrendererlabel.c:242
+#: ../libimchooseui/imchooseuicellrendererlabel.c:252
 msgid "Widget"
 msgstr "విడ్జట్"
 
-#: ../libimchooseui/imchooseuicellrendererlabel.c:243
+#: ../libimchooseui/imchooseuicellrendererlabel.c:253
 msgid "Widget to contain in the cell"
 msgstr "అర నందు కలిగివుండుటకు విడ్జట్"
 
-#: ../libimchooseui/imchooseuicellrendererlabel.c:249
+#: ../libimchooseui/imchooseuicellrendererlabel.c:259
 msgid "Spacing"
 msgstr "క్రమాంతరీకరణ(స్పేసింగ్)"
 
-#: ../libimchooseui/imchooseuicellrendererlabel.c:250
+#: ../libimchooseui/imchooseuicellrendererlabel.c:260
 msgid "The amount of space between label"
 msgstr "లేబుల్ మద్యన ఖాళీ పరిమాణం"
 
-#: ../src/app/im-chooser.desktop.in.in.h:1 ../src/app/main.c:207
+#: ../src/app/im-chooser.desktop.in.in.h:1 ../src/app/main.c:214
 #: ../src/xfce/main.c:262 ../src/xfce/xfce4-im-chooser.desktop.in.in.h:1
 msgid "Input Method Selector"
 msgstr "ఇన్పుట్ పద్ధతి యెంపిక"
@@ -253,28 +258,33 @@ msgid ""
 msgstr ""
 "ఉపయోగించుటకు ఇన్‌పుట్ పద్దతిని ఎంచుకొనుము లేదా ఇన్‌పుట్ పద్దతి ఉపయోగాన్ని డెస్క్‍‌టాప్ పైన అచేతనం చేయుము"
 
-#: ../src/app/main.c:139 ../src/xfce/main.c:139
+#: ../src/app/main.c:97
+#, c-format
+msgid "Please check <a href=\"file://%s\">%s</a> for more details"
+msgstr ""
+
+#: ../src/app/main.c:146 ../src/xfce/main.c:139
 msgid "Could not connect to the session manager"
 msgstr "సెషన్ నిర్వాహికకు అనుసంధానం కాలేదు"
 
-#: ../src/app/main.c:158 ../src/xfce/main.c:159
+#: ../src/app/main.c:165 ../src/xfce/main.c:159
 msgid "[options...]"
 msgstr "[ఐచ్చికాలు...]"
 
-#: ../src/app/main.c:180 ../src/xfce/main.c:180
+#: ../src/app/main.c:187 ../src/xfce/main.c:180
 #, c-format
 msgid "Could not parse arguments: %s\n"
 msgstr "ఆర్గుమెంట్లను పార్శ్ చేయలేక పోయింది: %s\n"
 
-#: ../src/app/main.c:197 ../src/xfce/main.c:238 ../src/xfce/main.c:253
+#: ../src/app/main.c:204 ../src/xfce/main.c:238 ../src/xfce/main.c:253
 msgid "No input method is available"
 msgstr "ఏ యిన్పుట్ పద్ధతి అందుబాటులో లేదు"
 
-#: ../src/app/main.c:200 ../src/xfce/main.c:241 ../src/xfce/main.c:256
+#: ../src/app/main.c:207 ../src/xfce/main.c:241 ../src/xfce/main.c:256
 msgid "Unrecoverable error"
 msgstr "కోలుకోలేని దోషం"
 
-#: ../src/app/main.c:212 ../src/xfce/main.c:267
+#: ../src/app/main.c:219 ../src/xfce/main.c:267
 msgid "Log Out"
 msgstr "లాగ్ అవుట్"
 

@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: im-chooser\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-11-23 15:33+0900\n"
+"POT-Creation-Date: 2013-05-28 10:47+0900\n"
 "PO-Revision-Date: 2012-09-25 03:04-0400\n"
 "Last-Translator: shanky <shanky@fedoraproject.org>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,39 +19,44 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0\n"
-"X-Generator: Zanata 2.0.2\n"
+"X-Generator: Zanata 2.2.2\n"
 
 #: ../libimchooseui/eggdesktopfile.c:165
 #, c-format
 msgid "File is not a valid .desktop file"
 msgstr "ಕಡತವು ಒಂದು .desktop ಕಡತವಾಗಿಲ್ಲ"
 
-#: ../libimchooseui/eggdesktopfile.c:188
+#. translators: 'Version' is from a desktop file, and
+#. * should not be translated. '%s' would probably be a
+#. * version number.
+#: ../libimchooseui/eggdesktopfile.c:191
 #, c-format
 msgid "Unrecognized desktop file Version '%s'"
 msgstr "ಗುರುತಿಸದೆ ಇರುವ ಗಣಕತೆರೆ ಕಡತ ಆವೃತ್ತಿ '%s'"
 
-#: ../libimchooseui/eggdesktopfile.c:968
+#: ../libimchooseui/eggdesktopfile.c:974
 #, c-format
 msgid "Starting %s"
 msgstr "%s ಅನ್ನು ಆರಂಭಿಸಲಾಗುತ್ತಿದೆ"
 
-#: ../libimchooseui/eggdesktopfile.c:1110
+#: ../libimchooseui/eggdesktopfile.c:1116
 #, c-format
 msgid "Application does not accept documents on command line"
 msgstr "ಅನ್ವಯವು ಆಜ್ಞಾ ಸಾಲಿನಲ್ಲಿ ದಸ್ತಾವೇಜುಗಳನ್ನು ಸ್ವೀಕರಿಸುವುದಿಲ್ಲ"
 
-#: ../libimchooseui/eggdesktopfile.c:1178
+#: ../libimchooseui/eggdesktopfile.c:1184
 #, c-format
 msgid "Unrecognized launch option: %d"
 msgstr "ಗುರುತಿಸದೆ ಇರುವ ಆರಂಭದ ಆಯ್ಕೆ: %d"
 
-#: ../libimchooseui/eggdesktopfile.c:1383
+#. translators: The 'Type=Link' string is found in a
+#. * desktop file, and should not be translated.
+#: ../libimchooseui/eggdesktopfile.c:1391
 #, c-format
 msgid "Can't pass document URIs to a 'Type=Link' desktop entry"
 msgstr "ದಸ್ತಾವೇಜು URIಗಳನ್ನು ಒಂದು 'Type=Link' ಗಣಕತೆರೆ ನಮೂದಿಗೆ ರವಾನಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ"
 
-#: ../libimchooseui/eggdesktopfile.c:1404
+#: ../libimchooseui/eggdesktopfile.c:1412
 #, c-format
 msgid "Not a launchable item"
 msgstr "ಆರಂಭಿಸಬಹುದಾದ ಅಂಶವಲ್ಲ"
@@ -227,23 +232,23 @@ msgstr "ಸೂಚನೆಗಾಗಿ ವಸ್ತುವನ್ನು ಪಡೆಯ�
 msgid "Unable to obtain the object for tree"
 msgstr "ವೃಕ್ಷಕ್ಕಾಗಿ ವಸ್ತುವನ್ನು ಪಡೆಯಲು ಸಾಧ್ಯವಾಗಿಲ್ಲ"
 
-#: ../libimchooseui/imchooseuicellrendererlabel.c:242
+#: ../libimchooseui/imchooseuicellrendererlabel.c:252
 msgid "Widget"
 msgstr "ವಿಡ್ಗೆಟ್"
 
-#: ../libimchooseui/imchooseuicellrendererlabel.c:243
+#: ../libimchooseui/imchooseuicellrendererlabel.c:253
 msgid "Widget to contain in the cell"
 msgstr "ಕೋಶದಲ್ಲಿ ಇರಬೇಕಿರುವ ವಿಡ್ಗೆಟ್"
 
-#: ../libimchooseui/imchooseuicellrendererlabel.c:249
+#: ../libimchooseui/imchooseuicellrendererlabel.c:259
 msgid "Spacing"
 msgstr "ಅಂತರ"
 
-#: ../libimchooseui/imchooseuicellrendererlabel.c:250
+#: ../libimchooseui/imchooseuicellrendererlabel.c:260
 msgid "The amount of space between label"
 msgstr "ಲೇಬಲ್‌ಗಳ ನಡುವಿನ ಅಂತರದ ಪ್ರಮಾಣ"
 
-#: ../src/app/im-chooser.desktop.in.in.h:1 ../src/app/main.c:207
+#: ../src/app/im-chooser.desktop.in.in.h:1 ../src/app/main.c:214
 #: ../src/xfce/main.c:262 ../src/xfce/xfce4-im-chooser.desktop.in.in.h:1
 msgid "Input Method Selector"
 msgstr "ಇನ್‌ಪುಟ್ ವಿಧಾನ ಆಯ್ಕೆಗಾರ"
@@ -257,28 +262,33 @@ msgstr ""
 "ಗಣಕ ಪರದೆಯ ಬಳಕೆಗೆ, ಆದಾನಕ್ರಮವನ್ನು ಉಪಯೋಗಿಸಬೇಕೆ ಅಥವಾ ನಿಷ್ಕ್ರಿಯಗೊಳಿಸ ಬೇಕೆ ಎಂಬುದನ್ನು "
 "ಆಯ್ಕೆಮಾಡಿ"
 
-#: ../src/app/main.c:139 ../src/xfce/main.c:139
+#: ../src/app/main.c:97
+#, c-format
+msgid "Please check <a href=\"file://%s\">%s</a> for more details"
+msgstr ""
+
+#: ../src/app/main.c:146 ../src/xfce/main.c:139
 msgid "Could not connect to the session manager"
 msgstr "ಅಧಿವೇಶನ ವ್ಯವಸ್ಥಾಪಕದೊಂದಿಗೆ ಸಂಪರ್ಕಹೊಂದಲು ಸಾಧ್ಯವಾಗಿಲ್ಲ"
 
-#: ../src/app/main.c:158 ../src/xfce/main.c:159
+#: ../src/app/main.c:165 ../src/xfce/main.c:159
 msgid "[options...]"
 msgstr "[ಆಯ್ಕೆಗಳು...]"
 
-#: ../src/app/main.c:180 ../src/xfce/main.c:180
+#: ../src/app/main.c:187 ../src/xfce/main.c:180
 #, c-format
 msgid "Could not parse arguments: %s\n"
 msgstr "ಆರ್ಗ್ಯುಮೆಂಟ್‌ಗಳನ್ನು ಪಾರ್ಸ್ ಮಾಡಲು ಸಾಧ್ಯವಾಗಿಲ್ಲ: %s\n"
 
-#: ../src/app/main.c:197 ../src/xfce/main.c:238 ../src/xfce/main.c:253
+#: ../src/app/main.c:204 ../src/xfce/main.c:238 ../src/xfce/main.c:253
 msgid "No input method is available"
 msgstr "ಯಾವುದೆ ಇನ್‌ಪುಟ್ ವಿಧಾನವು ಲಭ್ಯವಿಲ್ಲ"
 
-#: ../src/app/main.c:200 ../src/xfce/main.c:241 ../src/xfce/main.c:256
+#: ../src/app/main.c:207 ../src/xfce/main.c:241 ../src/xfce/main.c:256
 msgid "Unrecoverable error"
 msgstr "ಸರಿಪಡಿಸಲಾಗದೆ ಇರುವ ದೋಷ"
 
-#: ../src/app/main.c:212 ../src/xfce/main.c:267
+#: ../src/app/main.c:219 ../src/xfce/main.c:267
 msgid "Log Out"
 msgstr "ಹೊರಗೆ ನಡೆ"
 
