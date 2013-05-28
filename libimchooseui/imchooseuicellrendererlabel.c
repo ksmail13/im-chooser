@@ -205,14 +205,16 @@ _imchoose_ui_cell_renderer_label_activate(GtkCellRenderer      *cell,
 
 	gtk_cell_renderer_get_preferred_width(cell, widget, NULL, &width);
 	gtk_cell_renderer_get_preferred_height(cell, widget, NULL, &height);
-	event->button.x -= (cell_area->x + priv->spacing);
-	event->button.y -= cell_area->y;
-	width -= priv->spacing;
-	if (event->button.x >= 0 && event->button.x <= width &&
-	    event->button.y >= 0 && event->button.y <= height) {
-		event->button.x = 0;
-		event->button.y = 0;
-		g_signal_emit(cell, signals[SIG_CLICKED], 0, event, path);
+	if (event) {
+		event->button.x -= (cell_area->x + priv->spacing);
+		event->button.y -= cell_area->y;
+		width -= priv->spacing;
+		if (event->button.x >= 0 && event->button.x <= width &&
+		    event->button.y >= 0 && event->button.y <= height) {
+			event->button.x = 0;
+			event->button.y = 0;
+			g_signal_emit(cell, signals[SIG_CLICKED], 0, event, path);
+		}
 	}
 
 	return TRUE;
