@@ -5,6 +5,7 @@ AM_CPPFLAGS =						\
 	-DIMCHOOSE_LOCALEDIR="\"$(datadir)/locale\""	\
 	-DUIDIR="\"$(datadir)/imchooseui\""		\
 	-DBUILDDIR="\"$(abs_builddir)\""		\
+	-DGDK_VERSION_MIN_REQUIRED=GDK_VERSION_3_4	\
 	$(TOOLKIT_CFLAGS)				\
 	$(IMSETTINGS_CFLAGS)				\
 	$(SM_CFLAGS)					\
