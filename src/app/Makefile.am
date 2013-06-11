@@ -61,6 +61,7 @@ man_xml_files = $(man1_MANS:.1=.1.xml)
 EXTRA_DIST =			\
 	$(desktop_in_files)	\
 	$(man_xml_files)	\
+	$(man1_MANS)		\
 	$(NULL)
 
 -include $(top_srcdir)/git.mk
