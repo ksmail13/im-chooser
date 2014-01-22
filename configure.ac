@@ -9,10 +9,12 @@ dnl by either passing --enable-silent-rules to configure or
 dnl V=0 to make.
 m4_ifdef([AM_SILENT_RULES], [AM_SILENT_RULES([yes])])
 
-AM_MAINTAINER_MODE
-AM_CONFIG_HEADER([config.h])
+LT_PREREQ([2.2])
+LT_INIT([disable-static])
 
-AC_PROG_LIBTOOL
+AM_MAINTAINER_MODE
+AC_CONFIG_HEADERS([config.h])
+
 AC_PROG_INTLTOOL
 
 AC_PROG_CC
