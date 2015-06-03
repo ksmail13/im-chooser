@@ -8,6 +8,6 @@ Exec=xfce4-im-chooser
 Icon=im-chooser
 Terminal=false
 StartupNotify=true
-Categories=X-XFCE;Settings;DesktopSettings;X-XfceSettingsDialog;
+Categories=XFCE;GTK;Settings;DesktopSettings;X-XFCE-SettingsDialog;X-XFCE-PersonalSettings;
 OnlyShowIn=XFCE;
 X-XfcePluggable=true
