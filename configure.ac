@@ -3,27 +3,28 @@ AC_INIT([im-chooser], 1.6.5, [https://bugzilla.redhat.com/enter_bug.cgi?product=
 
 . `dirname $0`/requires
 
-AM_INIT_AUTOMAKE($PACKAGE_NAME, $PACKAGE_VERSION)
+AM_INIT_AUTOMAKE([1.11 -Wno-portability dist-bzip2])
 dnl silent build rules, requires at least automake-1.11.
 dnl by either passing --enable-silent-rules to configure or
 dnl V=0 to make.
 m4_ifdef([AM_SILENT_RULES], [AM_SILENT_RULES([yes])])
 
-LT_PREREQ([2.2])
-LT_INIT([disable-static])
-
 AM_MAINTAINER_MODE
 AC_CONFIG_HEADERS([config.h])
 
-AC_PROG_INTLTOOL
+AX_CHECK_ENABLE_DEBUG
+AM_CONDITIONAL(ENABLE_DEBUG, test $ax_enable_debug = yes)
 
+LT_PREREQ([2.2])
+LT_INIT([disable-static])
+
+AC_PROG_INTLTOOL
 AC_PROG_CC
 
 GNOME_COMPILE_WARNINGS
 GNOME_CXX_WARNINGS
 
 GNOME_COMMON_INIT
-GNOME_DEBUG_CHECK
 GNOME_MAINTAINER_MODE_DEFINES
 
 CFLAGS="$CFLAGS $WARN_CFLAGS"
