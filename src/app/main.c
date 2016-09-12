@@ -178,8 +178,6 @@ main(int    argc,
 
 	setlocale(LC_ALL, "");
 
-	g_type_init();
-
 	g_option_context_add_group(ctx, gtk_get_option_group(FALSE));
 	g_option_context_add_group(ctx, egg_sm_client_get_option_group());
 
@@ -215,10 +213,10 @@ main(int    argc,
 	gtk_container_set_border_width(GTK_CONTAINER (window), 4);
 
 	if (imchoose_ui_is_logout_required(ui)) {
-		close_button = gtk_button_new_from_stock(GTK_STOCK_CLOSE);
-		logout_button = gtk_button_new_with_mnemonic(_("Log Out"));
+		close_button = gtk_button_new_with_mnemonic(_("_Close"));
+		logout_button = gtk_button_new_with_mnemonic(_("_Log Out"));
 		gtk_widget_set_sensitive(logout_button, FALSE);
-		logout_image = gtk_image_new_from_stock(GTK_STOCK_QUIT, GTK_ICON_SIZE_BUTTON);
+		logout_image = gtk_image_new_from_icon_name("application-exit", GTK_ICON_SIZE_BUTTON);
 		gtk_button_set_image(GTK_BUTTON (logout_button), logout_image);
 		gtk_dialog_add_action_widget(GTK_DIALOG (window), logout_button, GTK_RESPONSE_APPLY);
 
@@ -228,7 +226,7 @@ main(int    argc,
 		gtk_widget_show(logout_button);
 		gtk_widget_show(logout_image);
 	} else {
-		close_button = gtk_button_new_from_stock(GTK_STOCK_OK);
+		close_button = gtk_button_new_with_mnemonic(_("_OK"));
 	}
 	gtk_dialog_add_action_widget(GTK_DIALOG (window), close_button, GTK_RESPONSE_OK);
 	gtk_widget_show(close_button);

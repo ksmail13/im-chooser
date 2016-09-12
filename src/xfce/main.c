@@ -264,7 +264,7 @@ main(int    argc,
 
 		if (imchoose_ui_is_logout_required(ui)) {
 			close_button = gtk_button_new_from_stock(GTK_STOCK_CLOSE);
-			logout_button = gtk_button_new_with_mnemonic(_("Log Out"));
+			logout_button = gtk_button_new_with_mnemonic(_("_Log Out"));
 			gtk_widget_set_sensitive(logout_button, FALSE);
 			logout_image = gtk_image_new_from_stock(GTK_STOCK_QUIT, GTK_ICON_SIZE_BUTTON);
 			gtk_button_set_image(GTK_BUTTON (logout_button), logout_image);
