@@ -1,25 +1,26 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-#
+# 
 # Piotr Drąg <piotrdrag@gmail.com>, 2011.
-# raven <piotrdrag@gmail.com>, 2012. #zanata
+# Piotr Drąg <piotrdrag@gmail.com>, 2015. #zanata
+# Piotr Drąg <piotrdrag@gmail.com>, 2016. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: im-chooser\n"
+"Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-05-28 10:47+0900\n"
-"PO-Revision-Date: 2012-08-21 10:07-0400\n"
-"Last-Translator: raven <piotrdrag@gmail.com>\n"
-"Language-Team: Polish (http://www.transifex.net/projects/p/im-chooser/team/"
-"pl/)\n"
-"Language: pl\n"
+"POT-Creation-Date: 2016-09-12 19:27+0900\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2016-09-01 11:50-0400\n"
+"Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
+"Language-Team: Polish (http://www.transifex.net/projects/p/im-chooser/team/"
+"pl/)\n"
+"Language: pl\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2)\n"
-"X-Generator: Zanata 2.2.2\n"
+"X-Generator: Zanata 3.9.5\n"
 
 #: ../libimchooseui/eggdesktopfile.c:165
 #, c-format
@@ -32,17 +33,17 @@ msgstr "Plik nie jest prawidłowym plikiem .desktop"
 #: ../libimchooseui/eggdesktopfile.c:191
 #, c-format
 msgid "Unrecognized desktop file Version '%s'"
-msgstr "Nierozpoznana wersja pliku .desktop \"%s\""
+msgstr "Nierozpoznana wersja pliku .desktop „%s”"
 
 #: ../libimchooseui/eggdesktopfile.c:974
 #, c-format
 msgid "Starting %s"
-msgstr "Uruchamianie %s"
+msgstr "Uruchamianie „%s”"
 
 #: ../libimchooseui/eggdesktopfile.c:1116
 #, c-format
 msgid "Application does not accept documents on command line"
-msgstr "Program nie przyjmuje dokumentów w wierszu poleceń"
+msgstr "Program nie przyjmuje dokumentów w wierszu poleceń"
 
 #: ../libimchooseui/eggdesktopfile.c:1184
 #, c-format
@@ -55,8 +56,8 @@ msgstr "Nierozpoznana opcja uruchamiania: %d"
 #, c-format
 msgid "Can't pass document URIs to a 'Type=Link' desktop entry"
 msgstr ""
-"Nie można przekazywać adresów URI dokumentów do tego wpisu \"Type=Link\" "
-"pliku .desktop"
+"Nie można przekazywać adresów URI dokumentów do tego wpisu „Type=Link” pliku "
+".desktop"
 
 #: ../libimchooseui/eggdesktopfile.c:1412
 #, c-format
@@ -65,7 +66,7 @@ msgstr "Elementu nie można uruchomić"
 
 #: ../libimchooseui/eggsmclient.c:226
 msgid "Disable connection to session manager"
-msgstr "Rozłącza połączenie z menedżerem sesji"
+msgstr "Rozłącza połączenie z menedżerem sesji"
 
 #: ../libimchooseui/eggsmclient.c:229
 msgid "Specify file containing saved configuration"
@@ -93,7 +94,7 @@ msgstr "Wyświetla opcje zarządzania sesją"
 
 #: ../libimchooseui/imchoose.ui.h:1
 msgid "Work in progress..."
-msgstr "Praca w toku..."
+msgstr "Praca w toku…"
 
 #: ../libimchooseui/imchoose.ui.h:2
 msgid "label"
@@ -123,12 +124,12 @@ msgstr " (zalecana)"
 #: ../libimchooseui/imchooseui.c:192
 #, c-format
 msgid "<a href=\"imsettings-prefs:///%s\">Preferences...</a>"
-msgstr "<a href=\"imsettings-prefs:///%s\">Preferencje...</a>"
+msgstr "<a href=\"imsettings-prefs:///%s\">Preferencje…</a>"
 
 #: ../libimchooseui/imchooseui.c:241
 #, c-format
 msgid "IMSettings is disabled on the system."
-msgstr "Usługa IMSettings jest wyłączona w systemie."
+msgstr "Usługa IMSettings jest wyłączona w systemie."
 
 #: ../libimchooseui/imchooseui.c:246
 #, c-format
@@ -138,7 +139,7 @@ msgstr "Nie można utworzyć wystąpienia klienta."
 #: ../libimchooseui/imchooseui.c:255
 #, c-format
 msgid "Unable to communicate to IMSettings service: %s"
-msgstr "Nie można komunikować się z usługą IMSettings: %s"
+msgstr "Nie można komunikować się z usługą IMSettings: %s"
 
 #: ../libimchooseui/imchooseui.c:331
 #, c-format
@@ -156,7 +157,7 @@ msgstr "Nie można przywołać narzędzia preferencji"
 #: ../libimchooseui/imchooseui.c:438
 #, c-format
 msgid "Switching Input Method - %s"
-msgstr "Przełączanie metody wprowadzania - %s"
+msgstr "Przełączanie metody wprowadzania — %s"
 
 #: ../libimchooseui/imchooseui.c:460
 #, c-format
@@ -165,7 +166,7 @@ msgstr "Nieznany błąd podczas finalizowania żądania SwitchIM"
 
 #: ../libimchooseui/imchooseui.c:467
 msgid "Failed to switch Input Method"
-msgstr "Przełączenie metody wprowadzania nie powiodło się"
+msgstr "Przełączenie metody wprowadzania się nie powiodło"
 
 #: ../libimchooseui/imchooseui.c:654
 msgid "X applications"
@@ -179,15 +180,9 @@ msgstr "aplikacji GTK+"
 msgid "Qt applications"
 msgstr "aplikacji Qt"
 
-# This will be displayed like "<small><i>Note: this change will not take
-# effect until your next log in, except X applications and Qt
-# applications</i></small>"
-# This will be displayed like "<small><i>Note: this change will not take
-# effect until your next log in, except X applications and GTK+
-# applications</i></small>"
-# This will be displayed like "<small><i>Note: this change will not take
-# effect until your next log in, except GTK+ applications and Qt
-# applications</i></small>"
+# This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except X applications and Qt applications</i></small>"
+# This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except X applications and GTK+ applications</i></small>"
+# This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except GTK+ applications and Qt applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except X applications and Qt applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except X applications and GTK+ applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except GTK+ applications and Qt applications</i></small>"
@@ -195,14 +190,11 @@ msgstr "aplikacji Qt"
 #: ../libimchooseui/imchooseui.c:674
 #, c-format
 msgid ", except %s and %s"
-msgstr ", oprócz %s i %s"
+msgstr ", oprócz %s i %s"
 
-# This will be displayed like "<small><i>Note: this change will not take
-# effect until your next log in, except X applications</i></small>"
-# This will be displayed like "<small><i>Note: this change will not take
-# effect until your next log in, except GTK+ applications</i></small>"
-# This will be displayed like "<small><i>Note: this change will not take
-# effect until your next log in, except Qt applications</i></small>"
+# This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except X applications</i></small>"
+# This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except GTK+ applications</i></small>"
+# This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except Qt applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except X applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except GTK+ applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except Qt applications</i></small>"
@@ -212,8 +204,7 @@ msgstr ", oprócz %s i %s"
 msgid ", except %s"
 msgstr ", oprócz %s"
 
-# This will be displayed like "<small><i>Note: this change will not take
-# effect until your next log in, except GTK+ applications</i></small>"
+# This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except GTK+ applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except GTK+ applications</i></small>"
 #: ../libimchooseui/imchooseui.c:693
 #, c-format
@@ -234,23 +225,23 @@ msgstr "Nie można uzyskać obiektu dla uwagi"
 msgid "Unable to obtain the object for tree"
 msgstr "Nie można uzyskać obiektu dla drzewa"
 
-#: ../libimchooseui/imchooseuicellrendererlabel.c:252
+#: ../libimchooseui/imchooseuicellrendererlabel.c:244
 msgid "Widget"
 msgstr "Widżet"
 
-#: ../libimchooseui/imchooseuicellrendererlabel.c:253
+#: ../libimchooseui/imchooseuicellrendererlabel.c:245
 msgid "Widget to contain in the cell"
-msgstr "Widżet do zawarcia w komórce"
+msgstr "Widżet do zawarcia w komórce"
 
-#: ../libimchooseui/imchooseuicellrendererlabel.c:259
+#: ../libimchooseui/imchooseuicellrendererlabel.c:251
 msgid "Spacing"
 msgstr "Odstęp"
 
-#: ../libimchooseui/imchooseuicellrendererlabel.c:260
+#: ../libimchooseui/imchooseuicellrendererlabel.c:252
 msgid "The amount of space between label"
 msgstr "Odstęp między etykietami"
 
-#: ../src/app/im-chooser.desktop.in.in.h:1 ../src/app/main.c:214
+#: ../src/app/im-chooser.desktop.in.in.h:1 ../src/app/main.c:212
 #: ../src/xfce/main.c:262 ../src/xfce/xfce4-im-chooser.desktop.in.in.h:1
 msgid "Input Method Selector"
 msgstr "Wybór metody wprowadzania"
@@ -260,37 +251,45 @@ msgstr "Wybór metody wprowadzania"
 msgid ""
 "Choose the input method to be used or disable the input method usage on the "
 "desktop"
-msgstr "Wybór metody wprowadzania lub wyłączanie jej w środowisku graficznym"
+msgstr "Wybór metody wprowadzania lub wyłączanie jej w środowisku graficznym"
 
 #: ../src/app/main.c:97
 #, c-format
 msgid "Please check <a href=\"file://%s\">%s</a> for more details"
-msgstr ""
+msgstr "W pliku <a href=\"file://%s\">%s</a> znajduje się więcej informacji"
 
 #: ../src/app/main.c:146 ../src/xfce/main.c:139
 msgid "Could not connect to the session manager"
-msgstr "Nie można połączyć się z menedżerem sesji"
+msgstr "Nie można połączyć z menedżerem sesji"
 
 #: ../src/app/main.c:165 ../src/xfce/main.c:159
 msgid "[options...]"
-msgstr "[opcje...]"
+msgstr "[opcje…]"
 
-#: ../src/app/main.c:187 ../src/xfce/main.c:180
+#: ../src/app/main.c:185 ../src/xfce/main.c:180
 #, c-format
 msgid "Could not parse arguments: %s\n"
 msgstr "Nie można przetworzyć parametrów: %s\n"
 
-#: ../src/app/main.c:204 ../src/xfce/main.c:238 ../src/xfce/main.c:253
+#: ../src/app/main.c:202 ../src/xfce/main.c:238 ../src/xfce/main.c:253
 msgid "No input method is available"
 msgstr "Brak dostępnych metod wprowadzania"
 
-#: ../src/app/main.c:207 ../src/xfce/main.c:241 ../src/xfce/main.c:256
+#: ../src/app/main.c:205 ../src/xfce/main.c:241 ../src/xfce/main.c:256
 msgid "Unrecoverable error"
 msgstr "Nieodwracalny błąd"
 
-#: ../src/app/main.c:219 ../src/xfce/main.c:267
-msgid "Log Out"
-msgstr "Wyloguj"
+#: ../src/app/main.c:216
+msgid "_Close"
+msgstr ""
+
+#: ../src/app/main.c:217 ../src/xfce/main.c:267
+msgid "_Log Out"
+msgstr ""
+
+#: ../src/app/main.c:229
+msgid "_OK"
+msgstr ""
 
 #: ../src/xfce/main.c:162
 msgid "Settings manager socket"

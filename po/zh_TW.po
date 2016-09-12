@@ -1,29 +1,28 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-#
+# 
 # Translators:
 # Akira  <akira+transifex@tagoh.org>, 2011.
 # Cheng-Chia Tseng <pswo10680@gmail.com>, 2011.
 # Chester Cheng <ccheng@redhat.com>, 2006.
 # Terry Chuang <tchuang@redhat.com>, 2008.
 # Walter Cheuk <wwycheuk@gmail.com>, 2007.
-# zerng07 <pswo10680@gmail.com>, 2012. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: im-chooser\n"
+"Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-05-28 10:47+0900\n"
-"PO-Revision-Date: 2012-07-24 12:31-0400\n"
-"Last-Translator: zerng07 <pswo10680@gmail.com>\n"
-"Language-Team: Chinese (Taiwan) (http://www.transifex.net/projects/p/im-"
-"chooser/team/zh_TW/)\n"
-"Language: zh-Hant-TW\n"
+"POT-Creation-Date: 2016-09-12 19:27+0900\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2014-12-16 08:27-0500\n"
+"Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
+"Language-Team: Chinese (Taiwan) (http://www.transifex.net/projects/p/im-"
+"chooser/team/zh_TW/)\n"
+"Language: zh-TW\n"
 "Plural-Forms: nplurals=1; plural=0\n"
-"X-Generator: Zanata 2.2.2\n"
+"X-Generator: Zanata 3.9.5\n"
 
 #: ../libimchooseui/eggdesktopfile.c:165
 #, c-format
@@ -181,15 +180,9 @@ msgstr "GTK+ 應用程式"
 msgid "Qt applications"
 msgstr "Qt 應用程式"
 
-# This will be displayed like "<small><i>Note: this change will not take
-# effect until your next log in, except X applications and Qt
-# applications</i></small>"
-# This will be displayed like "<small><i>Note: this change will not take
-# effect until your next log in, except X applications and GTK+
-# applications</i></small>"
-# This will be displayed like "<small><i>Note: this change will not take
-# effect until your next log in, except GTK+ applications and Qt
-# applications</i></small>"
+# This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except X applications and Qt applications</i></small>"
+# This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except X applications and GTK+ applications</i></small>"
+# This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except GTK+ applications and Qt applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except X applications and Qt applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except X applications and GTK+ applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except GTK+ applications and Qt applications</i></small>"
@@ -199,12 +192,9 @@ msgstr "Qt 應用程式"
 msgid ", except %s and %s"
 msgstr "，除了 %s 和 %s"
 
-# This will be displayed like "<small><i>Note: this change will not take
-# effect until your next log in, except X applications</i></small>"
-# This will be displayed like "<small><i>Note: this change will not take
-# effect until your next log in, except GTK+ applications</i></small>"
-# This will be displayed like "<small><i>Note: this change will not take
-# effect until your next log in, except Qt applications</i></small>"
+# This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except X applications</i></small>"
+# This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except GTK+ applications</i></small>"
+# This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except Qt applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except X applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except GTK+ applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except Qt applications</i></small>"
@@ -214,8 +204,7 @@ msgstr "，除了 %s 和 %s"
 msgid ", except %s"
 msgstr "，除了 %s"
 
-# This will be displayed like "<small><i>Note: this change will not take
-# effect until your next log in, except GTK+ applications</i></small>"
+# This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except GTK+ applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except GTK+ applications</i></small>"
 #: ../libimchooseui/imchooseui.c:693
 #, c-format
@@ -234,23 +223,23 @@ msgstr "無法取得 note 的物件"
 msgid "Unable to obtain the object for tree"
 msgstr "無法取得 tree 的物件"
 
-#: ../libimchooseui/imchooseuicellrendererlabel.c:252
+#: ../libimchooseui/imchooseuicellrendererlabel.c:244
 msgid "Widget"
 msgstr "工具組"
 
-#: ../libimchooseui/imchooseuicellrendererlabel.c:253
+#: ../libimchooseui/imchooseuicellrendererlabel.c:245
 msgid "Widget to contain in the cell"
 msgstr "包含在巢格內的 Widget"
 
-#: ../libimchooseui/imchooseuicellrendererlabel.c:259
+#: ../libimchooseui/imchooseuicellrendererlabel.c:251
 msgid "Spacing"
 msgstr "間距"
 
-#: ../libimchooseui/imchooseuicellrendererlabel.c:260
+#: ../libimchooseui/imchooseuicellrendererlabel.c:252
 msgid "The amount of space between label"
 msgstr "標籤間的空間"
 
-#: ../src/app/im-chooser.desktop.in.in.h:1 ../src/app/main.c:214
+#: ../src/app/im-chooser.desktop.in.in.h:1 ../src/app/main.c:212
 #: ../src/xfce/main.c:262 ../src/xfce/xfce4-im-chooser.desktop.in.in.h:1
 msgid "Input Method Selector"
 msgstr "輸入法選擇器"
@@ -275,22 +264,30 @@ msgstr "無法連接至作業階段管理員"
 msgid "[options...]"
 msgstr "[選項...]"
 
-#: ../src/app/main.c:187 ../src/xfce/main.c:180
+#: ../src/app/main.c:185 ../src/xfce/main.c:180
 #, c-format
 msgid "Could not parse arguments: %s\n"
 msgstr "無法解析引數：%s\n"
 
-#: ../src/app/main.c:204 ../src/xfce/main.c:238 ../src/xfce/main.c:253
+#: ../src/app/main.c:202 ../src/xfce/main.c:238 ../src/xfce/main.c:253
 msgid "No input method is available"
 msgstr "沒有可用的輸入法"
 
-#: ../src/app/main.c:207 ../src/xfce/main.c:241 ../src/xfce/main.c:256
+#: ../src/app/main.c:205 ../src/xfce/main.c:241 ../src/xfce/main.c:256
 msgid "Unrecoverable error"
 msgstr "無法回復的錯誤"
 
-#: ../src/app/main.c:219 ../src/xfce/main.c:267
-msgid "Log Out"
-msgstr "登出"
+#: ../src/app/main.c:216
+msgid "_Close"
+msgstr ""
+
+#: ../src/app/main.c:217 ../src/xfce/main.c:267
+msgid "_Log Out"
+msgstr ""
+
+#: ../src/app/main.c:229
+msgid "_OK"
+msgstr ""
 
 #: ../src/xfce/main.c:162
 msgid "Settings manager socket"

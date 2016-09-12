@@ -1,25 +1,27 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
+# Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>, 2014. #zanata
+# Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>, 2015. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: im-chooser\n"
+"Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-05-28 10:47+0900\n"
-"PO-Revision-Date: 2011-08-01 02:53-0400\n"
-"Last-Translator: tagoh <akira+transifex@tagoh.org>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: ca\n"
+"POT-Creation-Date: 2016-09-12 19:27+0900\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1)\n"
-"X-Generator: Zanata 2.2.2\n"
+"PO-Revision-Date: 2015-10-07 06:07-0400\n"
+"Last-Translator: Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>\n"
+"Language-Team: Catalan <fedora@llistes.softcatala.org>\n"
+"Language: ca\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Zanata 3.9.5\n"
 
 #: ../libimchooseui/eggdesktopfile.c:165
 #, c-format
 msgid "File is not a valid .desktop file"
-msgstr ""
+msgstr "El fitxer no és un fitxer .desktop vàlid"
 
 #. translators: 'Version' is from a desktop file, and
 #. * should not be translated. '%s' would probably be a
@@ -27,22 +29,22 @@ msgstr ""
 #: ../libimchooseui/eggdesktopfile.c:191
 #, c-format
 msgid "Unrecognized desktop file Version '%s'"
-msgstr ""
+msgstr "No es reconeix la versió «%s» del fitxer d'escriptori"
 
 #: ../libimchooseui/eggdesktopfile.c:974
 #, c-format
 msgid "Starting %s"
-msgstr ""
+msgstr "S'està iniciant %s"
 
 #: ../libimchooseui/eggdesktopfile.c:1116
 #, c-format
 msgid "Application does not accept documents on command line"
-msgstr ""
+msgstr "L'aplicació no accepta documents en la línia d'ordres"
 
 #: ../libimchooseui/eggdesktopfile.c:1184
 #, c-format
 msgid "Unrecognized launch option: %d"
-msgstr ""
+msgstr "Opció de llançament no reconeguda: %d"
 
 #. translators: The 'Type=Link' string is found in a
 #. * desktop file, and should not be translated.
@@ -50,39 +52,40 @@ msgstr ""
 #, c-format
 msgid "Can't pass document URIs to a 'Type=Link' desktop entry"
 msgstr ""
+"No es poden passar les URI de documents a l'entrada d'escriptori 'Type=Link'"
 
 #: ../libimchooseui/eggdesktopfile.c:1412
 #, c-format
 msgid "Not a launchable item"
-msgstr ""
+msgstr "No és un element que es pugui llançar"
 
 #: ../libimchooseui/eggsmclient.c:226
 msgid "Disable connection to session manager"
-msgstr ""
+msgstr "Inhabilita la connexió al gestor de sessió"
 
 #: ../libimchooseui/eggsmclient.c:229
 msgid "Specify file containing saved configuration"
-msgstr ""
+msgstr "Especifica el fitxer que conté la configuració desada"
 
 #: ../libimchooseui/eggsmclient.c:229
 msgid "FILE"
-msgstr ""
+msgstr "FITXER"
 
 #: ../libimchooseui/eggsmclient.c:232
 msgid "Specify session management ID"
-msgstr ""
+msgstr "Especifica l'id. de gestió de sessió"
 
 #: ../libimchooseui/eggsmclient.c:232
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 #: ../libimchooseui/eggsmclient.c:253
 msgid "Session management options:"
-msgstr ""
+msgstr "Opcions de gestió de sessió:"
 
 #: ../libimchooseui/eggsmclient.c:254
 msgid "Show session management options"
-msgstr ""
+msgstr "Mostra les opcions de gestió de sessió"
 
 #: ../libimchooseui/imchoose.ui.h:1
 msgid "Work in progress..."
@@ -90,7 +93,7 @@ msgstr "Treball en curs..."
 
 #: ../libimchooseui/imchoose.ui.h:2
 msgid "label"
-msgstr ""
+msgstr "etiqueta"
 
 #: ../libimchooseui/imchoose.ui.h:3
 msgid "<b>Input Method</b>"
@@ -98,7 +101,7 @@ msgstr "<b>Mètode d'entrada</b>"
 
 #: ../libimchooseui/imchooseui.c:163
 msgid "No Input Method"
-msgstr ""
+msgstr "Sense mètode d'entrada"
 
 #: ../libimchooseui/imchooseui.c:165
 #, c-format
@@ -107,7 +110,7 @@ msgstr "Utilitza %s"
 
 #: ../libimchooseui/imchooseui.c:172
 msgid " (legacy)"
-msgstr " (herencia)"
+msgstr " (antic)"
 
 #: ../libimchooseui/imchooseui.c:174
 msgid " (recommended)"
@@ -116,29 +119,28 @@ msgstr " (recomanat)"
 #: ../libimchooseui/imchooseui.c:192
 #, c-format
 msgid "<a href=\"imsettings-prefs:///%s\">Preferences...</a>"
-msgstr ""
+msgstr "<a href=\"imsettings-prefs:///%s\">Preferències...</a>"
 
 #: ../libimchooseui/imchooseui.c:241
 #, c-format
 msgid "IMSettings is disabled on the system."
-msgstr ""
+msgstr "IMSettings es troba inhabilitat en el sistema."
 
 #: ../libimchooseui/imchooseui.c:246
 #, c-format
 msgid "Unable to create a client instance."
-msgstr ""
+msgstr "No s'ha pogut crear una instància de client."
 
 #: ../libimchooseui/imchooseui.c:255
 #, c-format
 msgid "Unable to communicate to IMSettings service: %s"
-msgstr ""
+msgstr "No s'ha pogut comunicar amb el servei IMSettings: %s"
 
 #: ../libimchooseui/imchooseui.c:331
 #, c-format
 msgid "Please install any input methods before running if you like."
 msgstr ""
-"Opcionalment, podeu instal·lar qualsevol mètode d’entrada abans d’executar-"
-"lo."
+"Si voleu, podeu instal·lar qualsevol mètode d'entrada abans d'executar-ho."
 
 #: ../libimchooseui/imchooseui.c:404
 msgid "Unable to get the information"
@@ -146,25 +148,26 @@ msgstr "No s'ha pogut obtenir la informació"
 
 #: ../libimchooseui/imchooseui.c:417
 msgid "Unable to invoke the preference tool"
-msgstr ""
+msgstr "No s'ha pogut invocar a l'eina de preferències"
 
 #: ../libimchooseui/imchooseui.c:438
 #, c-format
 msgid "Switching Input Method - %s"
-msgstr ""
+msgstr "S'està commutant el mètode d'entada - %s"
 
 #: ../libimchooseui/imchooseui.c:460
 #, c-format
 msgid "Unknown error during finalizing the request of SwitchIM"
 msgstr ""
+"S'ha produït un error durant la finalització de la sol·licitud del SwitchIM"
 
 #: ../libimchooseui/imchooseui.c:467
 msgid "Failed to switch Input Method"
-msgstr ""
+msgstr "Ha fallat la commutació del mètode d'entrada"
 
 #: ../libimchooseui/imchooseui.c:654
 msgid "X applications"
-msgstr "aplicacions d'X"
+msgstr "aplicacions de les X"
 
 #: ../libimchooseui/imchooseui.c:655
 msgid "GTK+ applications"
@@ -174,15 +177,9 @@ msgstr "aplicacions de GTK+"
 msgid "Qt applications"
 msgstr "aplicacions de Qt"
 
-# This will be displayed like "<small><i>Note: this change will not take
-# effect until your next log in, except X applications and Qt
-# applications</i></small>"
-# This will be displayed like "<small><i>Note: this change will not take
-# effect until your next log in, except X applications and GTK+
-# applications</i></small>"
-# This will be displayed like "<small><i>Note: this change will not take
-# effect until your next log in, except GTK+ applications and Qt
-# applications</i></small>"
+# This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except X applications and Qt applications</i></small>"
+# This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except X applications and GTK+ applications</i></small>"
+# This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except GTK+ applications and Qt applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except X applications and Qt applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except X applications and GTK+ applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except GTK+ applications and Qt applications</i></small>"
@@ -192,12 +189,9 @@ msgstr "aplicacions de Qt"
 msgid ", except %s and %s"
 msgstr ", excepte per a les %s i les %s"
 
-# This will be displayed like "<small><i>Note: this change will not take
-# effect until your next log in, except X applications</i></small>"
-# This will be displayed like "<small><i>Note: this change will not take
-# effect until your next log in, except GTK+ applications</i></small>"
-# This will be displayed like "<small><i>Note: this change will not take
-# effect until your next log in, except Qt applications</i></small>"
+# This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except X applications</i></small>"
+# This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except GTK+ applications</i></small>"
+# This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except Qt applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except X applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except GTK+ applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except Qt applications</i></small>"
@@ -207,8 +201,7 @@ msgstr ", excepte per a les %s i les %s"
 msgid ", except %s"
 msgstr ", excepte per a les %s"
 
-# This will be displayed like "<small><i>Note: this change will not take
-# effect until your next log in, except GTK+ applications</i></small>"
+# This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except GTK+ applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except GTK+ applications</i></small>"
 #: ../libimchooseui/imchooseui.c:693
 #, c-format
@@ -216,37 +209,39 @@ msgid ""
 "<small><i>Note: this change will not take effect until your next log in%s</"
 "i></small>"
 msgstr ""
+"<small><i>Nota: aquest canvi no tindrà efecte fins que no toneu a iniciar la "
+"sessió %s</i></small>"
 
 #: ../libimchooseui/imchooseui.c:704
 #, c-format
 msgid "Unable to obtain the object for note"
-msgstr ""
+msgstr "No s'ha pogut obtenir l'objecte per a la nota"
 
 #: ../libimchooseui/imchooseui.c:710
 #, c-format
 msgid "Unable to obtain the object for tree"
-msgstr ""
+msgstr "No s'ha pogut obtenir l'objecte per a l'arbre"
+
+#: ../libimchooseui/imchooseuicellrendererlabel.c:244
+msgid "Widget"
+msgstr "Estri"
+
+#: ../libimchooseui/imchooseuicellrendererlabel.c:245
+msgid "Widget to contain in the cell"
+msgstr "Estri per contenir a la cel·la"
+
+#: ../libimchooseui/imchooseuicellrendererlabel.c:251
+msgid "Spacing"
+msgstr "Espaiat"
 
 #: ../libimchooseui/imchooseuicellrendererlabel.c:252
-msgid "Widget"
-msgstr ""
-
-#: ../libimchooseui/imchooseuicellrendererlabel.c:253
-msgid "Widget to contain in the cell"
-msgstr ""
-
-#: ../libimchooseui/imchooseuicellrendererlabel.c:259
-msgid "Spacing"
-msgstr ""
-
-#: ../libimchooseui/imchooseuicellrendererlabel.c:260
 msgid "The amount of space between label"
-msgstr ""
+msgstr "La quantitat d'espai entre l'etiqueta"
 
-#: ../src/app/im-chooser.desktop.in.in.h:1 ../src/app/main.c:214
+#: ../src/app/im-chooser.desktop.in.in.h:1 ../src/app/main.c:212
 #: ../src/xfce/main.c:262 ../src/xfce/xfce4-im-chooser.desktop.in.in.h:1
 msgid "Input Method Selector"
-msgstr ""
+msgstr "Eina de selecció del mètode d'entrada"
 
 #: ../src/app/im-chooser.desktop.in.in.h:2
 #: ../src/xfce/xfce4-im-chooser.desktop.in.in.h:2
@@ -254,43 +249,51 @@ msgid ""
 "Choose the input method to be used or disable the input method usage on the "
 "desktop"
 msgstr ""
-"Seleccioneu el mètode d’entrada a utilitzar o desactiveu els mètodes "
-"d’entrada en l’escriptori."
+"Seleccioneu el mètode d'entrada a utilitzar o desactiveu els mètodes "
+"d'entrada en l'escriptori"
 
 #: ../src/app/main.c:97
 #, c-format
 msgid "Please check <a href=\"file://%s\">%s</a> for more details"
-msgstr ""
+msgstr "Reviseu <a href=\"file://%s\">%s</a> per a més detalls"
 
 #: ../src/app/main.c:146 ../src/xfce/main.c:139
 msgid "Could not connect to the session manager"
-msgstr ""
+msgstr "No s'ha pogut connectar amb el gestor de sessió"
 
 #: ../src/app/main.c:165 ../src/xfce/main.c:159
 msgid "[options...]"
-msgstr ""
+msgstr "[opcions...]"
 
-#: ../src/app/main.c:187 ../src/xfce/main.c:180
+#: ../src/app/main.c:185 ../src/xfce/main.c:180
 #, c-format
 msgid "Could not parse arguments: %s\n"
-msgstr ""
+msgstr "No s'ha pogut analitzar sintàcticament els arguments: %s\n"
 
-#: ../src/app/main.c:204 ../src/xfce/main.c:238 ../src/xfce/main.c:253
+#: ../src/app/main.c:202 ../src/xfce/main.c:238 ../src/xfce/main.c:253
 msgid "No input method is available"
-msgstr ""
+msgstr "No hi ha disponible cap mètode d'entrada"
 
-#: ../src/app/main.c:207 ../src/xfce/main.c:241 ../src/xfce/main.c:256
+#: ../src/app/main.c:205 ../src/xfce/main.c:241 ../src/xfce/main.c:256
 msgid "Unrecoverable error"
+msgstr "Error irrecuperable"
+
+#: ../src/app/main.c:216
+msgid "_Close"
 msgstr ""
 
-#: ../src/app/main.c:219 ../src/xfce/main.c:267
-msgid "Log Out"
-msgstr "Surt"
+#: ../src/app/main.c:217 ../src/xfce/main.c:267
+msgid "_Log Out"
+msgstr ""
+
+#: ../src/app/main.c:229
+msgid "_OK"
+msgstr ""
 
 #: ../src/xfce/main.c:162
 msgid "Settings manager socket"
-msgstr ""
+msgstr "Ajusts del gestor del socket"
 
 #: ../src/xfce/main.c:162
 msgid "SOCKET ID"
-msgstr ""
+msgstr "ID. SOCKET"

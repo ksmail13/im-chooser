@@ -1,25 +1,24 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-#
+# 
 # Akira  <akira+transifex@tagoh.org>, 2011.
 # Hyunsok Oh <hoh@redhat.com>, 2010.
 # Eunju Kim <eukim@redhat.com>, 2006, 2007, 2008.
-# eukim <eukim@fedoraproject.org>, 2012. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: im-chooser\n"
+"Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-05-28 10:47+0900\n"
-"PO-Revision-Date: 2012-08-15 07:52-0400\n"
-"Last-Translator: eukim <eukim@fedoraproject.org>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: ko\n"
+"POT-Creation-Date: 2016-09-12 19:27+0900\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2014-12-16 08:24-0500\n"
+"Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ko\n"
 "Plural-Forms: nplurals=1; plural=0\n"
-"X-Generator: Zanata 2.2.2\n"
+"X-Generator: Zanata 3.9.5\n"
 
 #: ../libimchooseui/eggdesktopfile.c:165
 #, c-format
@@ -177,15 +176,9 @@ msgstr "GTK+ 어플리케이션 "
 msgid "Qt applications"
 msgstr "Qt 어플리케이션 "
 
-# This will be displayed like "<small><i>Note: this change will not take
-# effect until your next log in, except X applications and Qt
-# applications</i></small>"
-# This will be displayed like "<small><i>Note: this change will not take
-# effect until your next log in, except X applications and GTK+
-# applications</i></small>"
-# This will be displayed like "<small><i>Note: this change will not take
-# effect until your next log in, except GTK+ applications and Qt
-# applications</i></small>"
+# This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except X applications and Qt applications</i></small>"
+# This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except X applications and GTK+ applications</i></small>"
+# This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except GTK+ applications and Qt applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except X applications and Qt applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except X applications and GTK+ applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except GTK+ applications and Qt applications</i></small>"
@@ -195,12 +188,9 @@ msgstr "Qt 어플리케이션 "
 msgid ", except %s and %s"
 msgstr ", %s 및 %s 제외"
 
-# This will be displayed like "<small><i>Note: this change will not take
-# effect until your next log in, except X applications</i></small>"
-# This will be displayed like "<small><i>Note: this change will not take
-# effect until your next log in, except GTK+ applications</i></small>"
-# This will be displayed like "<small><i>Note: this change will not take
-# effect until your next log in, except Qt applications</i></small>"
+# This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except X applications</i></small>"
+# This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except GTK+ applications</i></small>"
+# This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except Qt applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except X applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except GTK+ applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except Qt applications</i></small>"
@@ -218,9 +208,7 @@ msgstr ", %s 제외 "
 msgid ""
 "<small><i>Note: this change will not take effect until your next log in%s</"
 "i></small>"
-msgstr ""
-"<small><i>알림: 이러한 변경 사항은 %s로의 다음 로그인  까지 반영되지 않습니다"
-"</i></small>"
+msgstr "<small><i>알림: 이러한 변경 사항은 %s로의 다음 로그인  까지 반영되지 않습니다</i></small>"
 
 #: ../libimchooseui/imchooseui.c:704
 #, c-format
@@ -232,23 +220,23 @@ msgstr "알림을 위해 개체를 가져올 수 없음 "
 msgid "Unable to obtain the object for tree"
 msgstr "트리의 개체를 가져올 수 없음 "
 
-#: ../libimchooseui/imchooseuicellrendererlabel.c:252
+#: ../libimchooseui/imchooseuicellrendererlabel.c:244
 msgid "Widget"
 msgstr "위젯"
 
-#: ../libimchooseui/imchooseuicellrendererlabel.c:253
+#: ../libimchooseui/imchooseuicellrendererlabel.c:245
 msgid "Widget to contain in the cell"
 msgstr "셀에 포함시킬 위젯 "
 
-#: ../libimchooseui/imchooseuicellrendererlabel.c:259
+#: ../libimchooseui/imchooseuicellrendererlabel.c:251
 msgid "Spacing"
 msgstr "간격 "
 
-#: ../libimchooseui/imchooseuicellrendererlabel.c:260
+#: ../libimchooseui/imchooseuicellrendererlabel.c:252
 msgid "The amount of space between label"
 msgstr "레이블 사이의 간격 수 "
 
-#: ../src/app/im-chooser.desktop.in.in.h:1 ../src/app/main.c:214
+#: ../src/app/im-chooser.desktop.in.in.h:1 ../src/app/main.c:212
 #: ../src/xfce/main.c:262 ../src/xfce/xfce4-im-chooser.desktop.in.in.h:1
 msgid "Input Method Selector"
 msgstr "입력 방식"
@@ -273,22 +261,30 @@ msgstr "세션 관리자로 연결할 수 없음 "
 msgid "[options...]"
 msgstr "[옵션...]"
 
-#: ../src/app/main.c:187 ../src/xfce/main.c:180
+#: ../src/app/main.c:185 ../src/xfce/main.c:180
 #, c-format
 msgid "Could not parse arguments: %s\n"
 msgstr "인수를 해석할 수 없음: %s\n"
 
-#: ../src/app/main.c:204 ../src/xfce/main.c:238 ../src/xfce/main.c:253
+#: ../src/app/main.c:202 ../src/xfce/main.c:238 ../src/xfce/main.c:253
 msgid "No input method is available"
 msgstr "사용 가능한 입력 방식이 없음 "
 
-#: ../src/app/main.c:207 ../src/xfce/main.c:241 ../src/xfce/main.c:256
+#: ../src/app/main.c:205 ../src/xfce/main.c:241 ../src/xfce/main.c:256
 msgid "Unrecoverable error"
 msgstr "복수할 수 없는 오류 "
 
-#: ../src/app/main.c:219 ../src/xfce/main.c:267
-msgid "Log Out"
-msgstr "로그 아웃 "
+#: ../src/app/main.c:216
+msgid "_Close"
+msgstr ""
+
+#: ../src/app/main.c:217 ../src/xfce/main.c:267
+msgid "_Log Out"
+msgstr ""
+
+#: ../src/app/main.c:229
+msgid "_OK"
+msgstr ""
 
 #: ../src/xfce/main.c:162
 msgid "Settings manager socket"

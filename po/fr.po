@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-#
+# 
 # Decroux Fabien <fdecroux@redhat.com>, 2006.
 # Gauthier Ancelin <gauthier.ancelin@laposte.net>, 2008.
 # JAILLET Patrick <ap3demak@gmail.com>, 2006.
@@ -9,23 +9,22 @@
 # dominique bribanick <chepioq@gmail.com>, 2011.
 # Thomas Canniot <mrtom@fedoraproject.org>, 2006, 2007, 2008.
 # Translators:
-# samfreemanz <sfriedma@redhat.com>, 2012. #zanata
-# samfreemanz <sfriedma@redhat.com>, 2013. #zanata
+# dominique <chepioq@gmail.com>, 2015. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: im-chooser\n"
+"Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-05-28 10:47+0900\n"
-"PO-Revision-Date: 2013-04-09 02:33-0400\n"
-"Last-Translator: samfreemanz <sfriedma@redhat.com>\n"
-"Language-Team: French (http://www.transifex.net/projects/p/im-chooser/team/"
-"fr/)\n"
-"Language: fr\n"
+"POT-Creation-Date: 2016-09-12 19:27+0900\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2015-01-20 01:32-0500\n"
+"Last-Translator: dominique <chepioq@gmail.com>\n"
+"Language-Team: French (http://www.transifex.net/projects/p/im-chooser/team/"
+"fr/)\n"
+"Language: fr\n"
 "Plural-Forms: nplurals=2; plural=(n > 1)\n"
-"X-Generator: Zanata 2.2.2\n"
+"X-Generator: Zanata 3.9.5\n"
 
 #: ../libimchooseui/eggdesktopfile.c:165
 #, c-format
@@ -185,15 +184,9 @@ msgstr "Applications GTK+"
 msgid "Qt applications"
 msgstr "Applications Qt"
 
-# This will be displayed like "<small><i>Note: this change will not take
-# effect until your next log in, except X applications and Qt
-# applications</i></small>"
-# This will be displayed like "<small><i>Note: this change will not take
-# effect until your next log in, except X applications and GTK+
-# applications</i></small>"
-# This will be displayed like "<small><i>Note: this change will not take
-# effect until your next log in, except GTK+ applications and Qt
-# applications</i></small>"
+# This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except X applications and Qt applications</i></small>"
+# This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except X applications and GTK+ applications</i></small>"
+# This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except GTK+ applications and Qt applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except X applications and Qt applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except X applications and GTK+ applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except GTK+ applications and Qt applications</i></small>"
@@ -203,12 +196,9 @@ msgstr "Applications Qt"
 msgid ", except %s and %s"
 msgstr ", sauf %s et %s"
 
-# This will be displayed like "<small><i>Note: this change will not take
-# effect until your next log in, except X applications</i></small>"
-# This will be displayed like "<small><i>Note: this change will not take
-# effect until your next log in, except GTK+ applications</i></small>"
-# This will be displayed like "<small><i>Note: this change will not take
-# effect until your next log in, except Qt applications</i></small>"
+# This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except X applications</i></small>"
+# This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except GTK+ applications</i></small>"
+# This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except Qt applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except X applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except GTK+ applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except Qt applications</i></small>"
@@ -218,8 +208,7 @@ msgstr ", sauf %s et %s"
 msgid ", except %s"
 msgstr ", sauf %s"
 
-# This will be displayed like "<small><i>Note: this change will not take
-# effect until your next log in, except GTK+ applications</i></small>"
+# This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except GTK+ applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except GTK+ applications</i></small>"
 #: ../libimchooseui/imchooseui.c:693
 #, c-format
@@ -240,23 +229,23 @@ msgstr "Impossible d'accéder à l'objet de type « note »"
 msgid "Unable to obtain the object for tree"
 msgstr "Impossible d'accéder à l'objet de type « tree »"
 
-#: ../libimchooseui/imchooseuicellrendererlabel.c:252
+#: ../libimchooseui/imchooseuicellrendererlabel.c:244
 msgid "Widget"
 msgstr "Widget"
 
-#: ../libimchooseui/imchooseuicellrendererlabel.c:253
+#: ../libimchooseui/imchooseuicellrendererlabel.c:245
 msgid "Widget to contain in the cell"
 msgstr "Widget à intégrer dans la cellule"
 
-#: ../libimchooseui/imchooseuicellrendererlabel.c:259
+#: ../libimchooseui/imchooseuicellrendererlabel.c:251
 msgid "Spacing"
 msgstr "Espacement"
 
-#: ../libimchooseui/imchooseuicellrendererlabel.c:260
+#: ../libimchooseui/imchooseuicellrendererlabel.c:252
 msgid "The amount of space between label"
 msgstr "Espace entre les étiquettes"
 
-#: ../src/app/im-chooser.desktop.in.in.h:1 ../src/app/main.c:214
+#: ../src/app/im-chooser.desktop.in.in.h:1 ../src/app/main.c:212
 #: ../src/xfce/main.c:262 ../src/xfce/xfce4-im-chooser.desktop.in.in.h:1
 msgid "Input Method Selector"
 msgstr "Sélecteur de méthode de saisie"
@@ -273,7 +262,7 @@ msgstr ""
 #: ../src/app/main.c:97
 #, c-format
 msgid "Please check <a href=\"file://%s\">%s</a> for more details"
-msgstr ""
+msgstr "Veuillez consulter  <a href=\"file://%s\">%s</a> pour plus de détails"
 
 #: ../src/app/main.c:146 ../src/xfce/main.c:139
 msgid "Could not connect to the session manager"
@@ -283,22 +272,30 @@ msgstr "Impossible de se connecter au gestionnaire de session"
 msgid "[options...]"
 msgstr "[options...]"
 
-#: ../src/app/main.c:187 ../src/xfce/main.c:180
+#: ../src/app/main.c:185 ../src/xfce/main.c:180
 #, c-format
 msgid "Could not parse arguments: %s\n"
 msgstr "Impossible d'analyser les arguments : %s\n"
 
-#: ../src/app/main.c:204 ../src/xfce/main.c:238 ../src/xfce/main.c:253
+#: ../src/app/main.c:202 ../src/xfce/main.c:238 ../src/xfce/main.c:253
 msgid "No input method is available"
 msgstr "Aucune méthode d'entrée n'est disponible"
 
-#: ../src/app/main.c:207 ../src/xfce/main.c:241 ../src/xfce/main.c:256
+#: ../src/app/main.c:205 ../src/xfce/main.c:241 ../src/xfce/main.c:256
 msgid "Unrecoverable error"
 msgstr "Erreur irrécupérable"
 
-#: ../src/app/main.c:219 ../src/xfce/main.c:267
-msgid "Log Out"
-msgstr "Se déconnecter"
+#: ../src/app/main.c:216
+msgid "_Close"
+msgstr ""
+
+#: ../src/app/main.c:217 ../src/xfce/main.c:267
+msgid "_Log Out"
+msgstr ""
+
+#: ../src/app/main.c:229
+msgid "_OK"
+msgstr ""
 
 #: ../src/xfce/main.c:162
 msgid "Settings manager socket"

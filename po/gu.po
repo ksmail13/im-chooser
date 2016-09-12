@@ -1,26 +1,25 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-#
+# 
 # Ankit Patel <ankit@redhat.com>, 2006, 2007, 2008.
 # Sweta Kothari <swkothar@redhat.com>, 2008.
 # sweta <swkothar@redhat.com>, 2011.
-# swkothar <swkothar@redhat.com>, 2012. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: im-chooser\n"
+"Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-05-28 10:47+0900\n"
-"PO-Revision-Date: 2012-09-26 02:21-0400\n"
-"Last-Translator: swkothar <swkothar@redhat.com>\n"
-"Language-Team: Gujarati (http://www.transifex.net/projects/p/im-chooser/team/"
-"gu/)\n"
-"Language: gu\n"
+"POT-Creation-Date: 2016-09-12 19:27+0900\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2014-12-16 08:23-0500\n"
+"Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
+"Language-Team: Gujarati (http://www.transifex.net/projects/p/im-chooser/team/"
+"gu/)\n"
+"Language: gu\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
-"X-Generator: Zanata 2.2.2\n"
+"X-Generator: Zanata 3.9.5\n"
 
 #: ../libimchooseui/eggdesktopfile.c:165
 #, c-format
@@ -142,7 +141,8 @@ msgstr " IMSettings સેવા સાથે વાર્તાલાપ કર
 #: ../libimchooseui/imchooseui.c:331
 #, c-format
 msgid "Please install any input methods before running if you like."
-msgstr "મહેરબાની કરીને ચલાવવા પહેલાં કોઈપણ ઈનપુટ પદ્ધતિઓ પસંદ કરો કે જે તમને ગમે."
+msgstr ""
+"મહેરબાની કરીને ચલાવવા પહેલાં કોઈપણ ઈનપુટ પદ્ધતિઓ પસંદ કરો કે જે તમને ગમે."
 
 #: ../libimchooseui/imchooseui.c:404
 msgid "Unable to get the information"
@@ -178,15 +178,9 @@ msgstr "GTK+ કાર્યક્રમો"
 msgid "Qt applications"
 msgstr "Qt કાર્યક્રમો"
 
-# This will be displayed like "<small><i>Note: this change will not take
-# effect until your next log in, except X applications and Qt
-# applications</i></small>"
-# This will be displayed like "<small><i>Note: this change will not take
-# effect until your next log in, except X applications and GTK+
-# applications</i></small>"
-# This will be displayed like "<small><i>Note: this change will not take
-# effect until your next log in, except GTK+ applications and Qt
-# applications</i></small>"
+# This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except X applications and Qt applications</i></small>"
+# This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except X applications and GTK+ applications</i></small>"
+# This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except GTK+ applications and Qt applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except X applications and Qt applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except X applications and GTK+ applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except GTK+ applications and Qt applications</i></small>"
@@ -196,12 +190,9 @@ msgstr "Qt કાર્યક્રમો"
 msgid ", except %s and %s"
 msgstr ", %1$s અને %2$s સિવાય"
 
-# This will be displayed like "<small><i>Note: this change will not take
-# effect until your next log in, except X applications</i></small>"
-# This will be displayed like "<small><i>Note: this change will not take
-# effect until your next log in, except GTK+ applications</i></small>"
-# This will be displayed like "<small><i>Note: this change will not take
-# effect until your next log in, except Qt applications</i></small>"
+# This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except X applications</i></small>"
+# This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except GTK+ applications</i></small>"
+# This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except Qt applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except X applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except GTK+ applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except Qt applications</i></small>"
@@ -211,8 +202,7 @@ msgstr ", %1$s અને %2$s સિવાય"
 msgid ", except %s"
 msgstr ", %s સિવાય"
 
-# This will be displayed like "<small><i>Note: this change will not take
-# effect until your next log in, except GTK+ applications</i></small>"
+# This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except GTK+ applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except GTK+ applications</i></small>"
 #: ../libimchooseui/imchooseui.c:693
 #, c-format
@@ -220,7 +210,8 @@ msgid ""
 "<small><i>Note: this change will not take effect until your next log in%s</"
 "i></small>"
 msgstr ""
-"<small><i>નોંધ: આ ફેરફાર અસર કરશે નહિં જ્યાં સુધી તમે આગળ %s માં પ્રવેશો</i></small>"
+"<small><i>નોંધ: આ ફેરફાર અસર કરશે નહિં જ્યાં સુધી તમે આગળ %s માં પ્રવેશો</"
+"i></small>"
 
 #: ../libimchooseui/imchooseui.c:704
 #, c-format
@@ -232,23 +223,23 @@ msgstr "નોંધ માટે ઑબ્જેક્ટને પ્રાપ
 msgid "Unable to obtain the object for tree"
 msgstr "ટ્રી માટે ઑબ્જેક્ટ પ્રાપ્ત કરવામાં અસમર્થ"
 
-#: ../libimchooseui/imchooseuicellrendererlabel.c:252
+#: ../libimchooseui/imchooseuicellrendererlabel.c:244
 msgid "Widget"
 msgstr "વિજેટ"
 
-#: ../libimchooseui/imchooseuicellrendererlabel.c:253
+#: ../libimchooseui/imchooseuicellrendererlabel.c:245
 msgid "Widget to contain in the cell"
 msgstr "સેલમાં સમાવવા માટે વિજેટ"
 
-#: ../libimchooseui/imchooseuicellrendererlabel.c:259
+#: ../libimchooseui/imchooseuicellrendererlabel.c:251
 msgid "Spacing"
 msgstr "અંતર"
 
-#: ../libimchooseui/imchooseuicellrendererlabel.c:260
+#: ../libimchooseui/imchooseuicellrendererlabel.c:252
 msgid "The amount of space between label"
 msgstr "લેબલ વચ્ચે ઘણી બધી જગ્યા"
 
-#: ../src/app/im-chooser.desktop.in.in.h:1 ../src/app/main.c:214
+#: ../src/app/im-chooser.desktop.in.in.h:1 ../src/app/main.c:212
 #: ../src/xfce/main.c:262 ../src/xfce/xfce4-im-chooser.desktop.in.in.h:1
 msgid "Input Method Selector"
 msgstr "ઇનપુટ પદ્દતિ પસંદકર્તા"
@@ -259,7 +250,8 @@ msgid ""
 "Choose the input method to be used or disable the input method usage on the "
 "desktop"
 msgstr ""
-"વાપરવા માટેની ઈનપુટ પદ્ધતિ પસંદ કરો અથવા ડેસ્કટોપ પર ઈનપુટ પદ્ધતિનો વપરાશ નિષ્ક્રિય કરો"
+"વાપરવા માટેની ઈનપુટ પદ્ધતિ પસંદ કરો અથવા ડેસ્કટોપ પર ઈનપુટ પદ્ધતિનો વપરાશ "
+"નિષ્ક્રિય કરો"
 
 #: ../src/app/main.c:97
 #, c-format
@@ -274,22 +266,30 @@ msgstr "સત્ર સંચાલક સાથે જોડાઇ શક્�
 msgid "[options...]"
 msgstr "[વિકલ્પો...]"
 
-#: ../src/app/main.c:187 ../src/xfce/main.c:180
+#: ../src/app/main.c:185 ../src/xfce/main.c:180
 #, c-format
 msgid "Could not parse arguments: %s\n"
 msgstr "દલીલોનું પદચ્છેદન કરી શક્યા નહિં: %s\n"
 
-#: ../src/app/main.c:204 ../src/xfce/main.c:238 ../src/xfce/main.c:253
+#: ../src/app/main.c:202 ../src/xfce/main.c:238 ../src/xfce/main.c:253
 msgid "No input method is available"
 msgstr "ઇનપુટ પદ્દતિ ઉપલબ્ધ નથી"
 
-#: ../src/app/main.c:207 ../src/xfce/main.c:241 ../src/xfce/main.c:256
+#: ../src/app/main.c:205 ../src/xfce/main.c:241 ../src/xfce/main.c:256
 msgid "Unrecoverable error"
 msgstr "સુધારી ન શકાય તેવી ભૂલ"
 
-#: ../src/app/main.c:219 ../src/xfce/main.c:267
-msgid "Log Out"
-msgstr "બહાર નીકળો"
+#: ../src/app/main.c:216
+msgid "_Close"
+msgstr ""
+
+#: ../src/app/main.c:217 ../src/xfce/main.c:267
+msgid "_Log Out"
+msgstr ""
+
+#: ../src/app/main.c:229
+msgid "_OK"
+msgstr ""
 
 #: ../src/xfce/main.c:162
 msgid "Settings manager socket"
