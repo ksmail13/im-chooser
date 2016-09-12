@@ -84,29 +84,30 @@ _show_error_cb(IMChooseUI  *ui,
 {
 	GtkWidget *parent = GTK_WIDGET (user_data);
 	GtkWidget *dlg;
-	gchar *s;
+	GtkCssProvider *css_provider = gtk_css_provider_new();
+	GtkStyleContext *style_context;
+	const gchar *css = "GtkDialog { -GtkDialog-content-area-spacing: 14; -GtkDialog-content-area-border: 0; }";
 
 	if (progress_id != 0)
 		g_source_remove(progress_id);
 
-	s = g_strdup_printf("<span weight=\"bold\" size=\"larger\">%s</span>", summary);
 	dlg = gtk_message_dialog_new_with_markup(GTK_WINDOW (parent),
 						 GTK_DIALOG_MODAL,
 						 GTK_MESSAGE_ERROR,
 						 GTK_BUTTONS_OK,
-						 s);
-	gtk_message_dialog_format_secondary_text(GTK_MESSAGE_DIALOG (dlg), details);
+						 "<span weight=\"bold\" size=\"larger\">%s</span>",
+						 summary);
+	gtk_message_dialog_format_secondary_text(GTK_MESSAGE_DIALOG (dlg), "%s", details);
 
 	/* for GNOME HIG compliance */
-	gtk_rc_parse_string("style \"imchoose-ui-message-dialog\" {\n"	\
-			    "  GtkDialog::content-area-spacing = 14\n"	\
-			    "  GtkDialog::content-area-border = 0\n"	\
-			    "}\n"					\
-			    "widget \"GtkMessageDialog\" style \"imchoose-ui-message-dialog\"");
+	gtk_css_provider_load_from_data(css_provider, css, -1, NULL);
+	style_context = gtk_widget_get_style_context(dlg);
+	gtk_style_context_add_provider(style_context, GTK_STYLE_PROVIDER (css_provider),
+				       GTK_STYLE_PROVIDER_PRIORITY_APPLICATION);
 
+	g_object_unref(css_provider);
 	gtk_dialog_run(GTK_DIALOG (dlg));
 	gtk_widget_destroy(dlg);
-	g_free(s);
 }
 
 static void
@@ -169,8 +170,6 @@ main(int    argc,
 
 	xfce_textdomain(GETTEXT_PACKAGE, IMCHOOSE_LOCALEDIR, "UTF-8");
 
-	g_type_init();
-
 	group = gtk_get_option_group(FALSE);
 	g_option_group_add_entries(group, entries);
 	g_option_context_add_group(ctx, group);
@@ -208,16 +207,17 @@ main(int    argc,
 			widget = gtk_box_new(GTK_ORIENTATION_VERTICAL, 0);
 			summary = gtk_label_new(NULL);
 			detail = gtk_label_new(NULL);
-			image = gtk_image_new_from_stock(GTK_STOCK_DIALOG_ERROR, GTK_ICON_SIZE_DIALOG);
-			gtk_misc_set_alignment(GTK_MISC (image), 0.5, 0.0);
+			image = gtk_image_new_from_icon_name("dialog-error", GTK_ICON_SIZE_DIALOG);
 
 			gtk_label_set_line_wrap(GTK_LABEL (summary), TRUE);
 			gtk_label_set_selectable(GTK_LABEL (summary), TRUE);
-			gtk_misc_set_alignment(GTK_MISC (summary), 0.0, 0.0);
+			gtk_label_set_xalign(GTK_LABEL (summary), 0.0);
+			gtk_label_set_yalign(GTK_LABEL (summary), 0.0);
 
 			gtk_label_set_line_wrap(GTK_LABEL (detail), TRUE);
 			gtk_label_set_selectable(GTK_LABEL (detail), TRUE);
-			gtk_misc_set_alignment(GTK_MISC (detail), 0.0, 0.0);
+			gtk_label_set_xalign(GTK_LABEL (detail), 0.0);
+			gtk_label_set_yalign(GTK_LABEL (detail), 0.0);
 
 			hbox = gtk_box_new(GTK_ORIENTATION_HORIZONTAL, 12);
 			message_area = gtk_box_new(GTK_ORIENTATION_VERTICAL, 12);
@@ -263,10 +263,10 @@ main(int    argc,
 		gtk_container_set_border_width(GTK_CONTAINER (window), 4);
 
 		if (imchoose_ui_is_logout_required(ui)) {
-			close_button = gtk_button_new_from_stock(GTK_STOCK_CLOSE);
+			close_button = gtk_button_new_with_mnemonic(_("_Close"));
 			logout_button = gtk_button_new_with_mnemonic(_("_Log Out"));
 			gtk_widget_set_sensitive(logout_button, FALSE);
-			logout_image = gtk_image_new_from_stock(GTK_STOCK_QUIT, GTK_ICON_SIZE_BUTTON);
+			logout_image = gtk_image_new_from_icon_name("application-exit", GTK_ICON_SIZE_BUTTON);
 			gtk_button_set_image(GTK_BUTTON (logout_button), logout_image);
 			gtk_dialog_add_action_widget(GTK_DIALOG (window), logout_button, GTK_RESPONSE_APPLY);
 
@@ -276,7 +276,7 @@ main(int    argc,
 			gtk_widget_show(logout_button);
 			gtk_widget_show(logout_image);
 		} else {
-			close_button = gtk_button_new_from_stock(GTK_STOCK_OK);
+			close_button = gtk_button_new_with_mnemonic(_("_OK"));
 		}
 		gtk_dialog_add_action_widget(GTK_DIALOG (window), close_button, GTK_RESPONSE_OK);
 		gtk_widget_show(close_button);
