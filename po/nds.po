@@ -1,20 +1,20 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# 
+#
 # Akira  <akira+transifex@tagoh.org>, 2011.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-12 19:27+0900\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2016-09-12 20:47+0900\n"
 "PO-Revision-Date: 2014-12-16 08:25-0500\n"
 "Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: nds\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
 "X-Generator: Zanata 3.9.5\n"
 
@@ -99,79 +99,79 @@ msgstr ""
 msgid "<b>Input Method</b>"
 msgstr "<b>Ingavmethode</b>"
 
-#: ../libimchooseui/imchooseui.c:163
+#: ../libimchooseui/imchooseui.c:164
 msgid "No Input Method"
 msgstr "Keene Ingavmethode"
 
-#: ../libimchooseui/imchooseui.c:165
+#: ../libimchooseui/imchooseui.c:166
 #, c-format
 msgid "Use %s"
 msgstr "%s bruken"
 
-#: ../libimchooseui/imchooseui.c:172
+#: ../libimchooseui/imchooseui.c:173
 msgid " (legacy)"
 msgstr " (to ool)"
 
-#: ../libimchooseui/imchooseui.c:174
+#: ../libimchooseui/imchooseui.c:175
 msgid " (recommended)"
 msgstr " (empfohlen)"
 
-#: ../libimchooseui/imchooseui.c:192
+#: ../libimchooseui/imchooseui.c:193
 #, c-format
 msgid "<a href=\"imsettings-prefs:///%s\">Preferences...</a>"
 msgstr ""
 
-#: ../libimchooseui/imchooseui.c:241
+#: ../libimchooseui/imchooseui.c:242
 #, c-format
 msgid "IMSettings is disabled on the system."
 msgstr ""
 
-#: ../libimchooseui/imchooseui.c:246
+#: ../libimchooseui/imchooseui.c:247
 #, c-format
 msgid "Unable to create a client instance."
 msgstr ""
 
-#: ../libimchooseui/imchooseui.c:255
+#: ../libimchooseui/imchooseui.c:256
 #, c-format
 msgid "Unable to communicate to IMSettings service: %s"
 msgstr ""
 
-#: ../libimchooseui/imchooseui.c:331
+#: ../libimchooseui/imchooseui.c:332
 #, c-format
 msgid "Please install any input methods before running if you like."
 msgstr "Bidde installer eene Ingavmethode, bevor je de lööpen laten wullst."
 
-#: ../libimchooseui/imchooseui.c:404
+#: ../libimchooseui/imchooseui.c:405
 msgid "Unable to get the information"
 msgstr "Betrecken vun de Informatschoonen geiht nich"
 
-#: ../libimchooseui/imchooseui.c:417
+#: ../libimchooseui/imchooseui.c:418
 msgid "Unable to invoke the preference tool"
 msgstr ""
 
-#: ../libimchooseui/imchooseui.c:438
+#: ../libimchooseui/imchooseui.c:439
 #, c-format
 msgid "Switching Input Method - %s"
 msgstr ""
 
-#: ../libimchooseui/imchooseui.c:460
+#: ../libimchooseui/imchooseui.c:461
 #, c-format
 msgid "Unknown error during finalizing the request of SwitchIM"
 msgstr ""
 
-#: ../libimchooseui/imchooseui.c:467
+#: ../libimchooseui/imchooseui.c:468
 msgid "Failed to switch Input Method"
 msgstr ""
 
-#: ../libimchooseui/imchooseui.c:654
+#: ../libimchooseui/imchooseui.c:655
 msgid "X applications"
 msgstr "X-Anwennen"
 
-#: ../libimchooseui/imchooseui.c:655
+#: ../libimchooseui/imchooseui.c:656
 msgid "GTK+ applications"
 msgstr "GTK+-Anwennen"
 
-#: ../libimchooseui/imchooseui.c:656
+#: ../libimchooseui/imchooseui.c:657
 msgid "Qt applications"
 msgstr "Qt-Anwendungen"
 
@@ -187,8 +187,8 @@ msgstr "Qt-Anwendungen"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except X applications and Qt applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except X applications and GTK+ applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except GTK+ applications and Qt applications</i></small>"
-#: ../libimchooseui/imchooseui.c:664 ../libimchooseui/imchooseui.c:669
-#: ../libimchooseui/imchooseui.c:674
+#: ../libimchooseui/imchooseui.c:665 ../libimchooseui/imchooseui.c:670
+#: ../libimchooseui/imchooseui.c:675
 #, c-format
 msgid ", except %s and %s"
 msgstr ", utnohmen %s un %s"
@@ -202,8 +202,8 @@ msgstr ", utnohmen %s un %s"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except X applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except GTK+ applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except Qt applications</i></small>"
-#: ../libimchooseui/imchooseui.c:679 ../libimchooseui/imchooseui.c:683
-#: ../libimchooseui/imchooseui.c:687
+#: ../libimchooseui/imchooseui.c:680 ../libimchooseui/imchooseui.c:684
+#: ../libimchooseui/imchooseui.c:688
 #, c-format
 msgid ", except %s"
 msgstr ", utnohmen %s"
@@ -211,19 +211,19 @@ msgstr ", utnohmen %s"
 # This will be displayed like "<small><i>Note: this change will not take
 # effect until your next log in, except GTK+ applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except GTK+ applications</i></small>"
-#: ../libimchooseui/imchooseui.c:693
+#: ../libimchooseui/imchooseui.c:694
 #, c-format
 msgid ""
 "<small><i>Note: this change will not take effect until your next log in%s</"
 "i></small>"
 msgstr ""
 
-#: ../libimchooseui/imchooseui.c:704
+#: ../libimchooseui/imchooseui.c:705
 #, c-format
 msgid "Unable to obtain the object for note"
 msgstr ""
 
-#: ../libimchooseui/imchooseui.c:710
+#: ../libimchooseui/imchooseui.c:711
 #, c-format
 msgid "Unable to obtain the object for tree"
 msgstr ""
@@ -258,20 +258,20 @@ msgstr ""
 "Wähl de Ingavmethode, de brukt werrn schall or deaktiver de Verwennen vun "
 "Ingavmethoden op'm Schrievdisk."
 
-#: ../src/app/main.c:97
+#: ../src/app/main.c:98
 #, c-format
 msgid "Please check <a href=\"file://%s\">%s</a> for more details"
 msgstr ""
 
-#: ../src/app/main.c:146 ../src/xfce/main.c:139
+#: ../src/app/main.c:146 ../src/xfce/main.c:140
 msgid "Could not connect to the session manager"
 msgstr "Künn nich to Törnoppasser verbinnen"
 
-#: ../src/app/main.c:165 ../src/xfce/main.c:159
+#: ../src/app/main.c:165 ../src/xfce/main.c:160
 msgid "[options...]"
 msgstr "[Optschoonen...]"
 
-#: ../src/app/main.c:185 ../src/xfce/main.c:180
+#: ../src/app/main.c:185 ../src/xfce/main.c:179
 #, c-format
 msgid "Could not parse arguments: %s\n"
 msgstr "Künn düsse Argumente nich parsen: %s\n"
@@ -284,7 +284,7 @@ msgstr ""
 msgid "Unrecoverable error"
 msgstr ""
 
-#: ../src/app/main.c:216
+#: ../src/app/main.c:216 ../src/xfce/main.c:266
 msgid "_Close"
 msgstr ""
 
@@ -292,14 +292,14 @@ msgstr ""
 msgid "_Log Out"
 msgstr ""
 
-#: ../src/app/main.c:229
+#: ../src/app/main.c:229 ../src/xfce/main.c:279
 msgid "_OK"
 msgstr ""
 
-#: ../src/xfce/main.c:162
+#: ../src/xfce/main.c:163
 msgid "Settings manager socket"
 msgstr ""
 
-#: ../src/xfce/main.c:162
+#: ../src/xfce/main.c:163
 msgid "SOCKET ID"
 msgstr ""

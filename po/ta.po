@@ -1,21 +1,21 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# 
+#
 # Felix <ifelix@redhat.com>, 2006.
 # Akira  <akira+transifex@tagoh.org>, 2011.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-12 19:27+0900\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2016-09-12 20:47+0900\n"
 "PO-Revision-Date: 2014-12-16 08:26-0500\n"
 "Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: ta\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
 "X-Generator: Zanata 3.9.5\n"
 
@@ -99,79 +99,79 @@ msgstr "லேபிள்"
 msgid "<b>Input Method</b>"
 msgstr "<b>உள்ளீடு முறை</b>"
 
-#: ../libimchooseui/imchooseui.c:163
+#: ../libimchooseui/imchooseui.c:164
 msgid "No Input Method"
 msgstr "உள்ளீடு முறை இல்லை"
 
-#: ../libimchooseui/imchooseui.c:165
+#: ../libimchooseui/imchooseui.c:166
 #, c-format
 msgid "Use %s"
 msgstr "%sஐ பயன்படுத்தல்"
 
-#: ../libimchooseui/imchooseui.c:172
+#: ../libimchooseui/imchooseui.c:173
 msgid " (legacy)"
 msgstr " (legacy)"
 
-#: ../libimchooseui/imchooseui.c:174
+#: ../libimchooseui/imchooseui.c:175
 msgid " (recommended)"
 msgstr " (பரிந்துரைக்கப்பட்டது)"
 
-#: ../libimchooseui/imchooseui.c:192
+#: ../libimchooseui/imchooseui.c:193
 #, c-format
 msgid "<a href=\"imsettings-prefs:///%s\">Preferences...</a>"
 msgstr "<a href=\"imsettings-prefs:///%s\">விருப்பத்தேர்வுகள்...</a>"
 
-#: ../libimchooseui/imchooseui.c:241
+#: ../libimchooseui/imchooseui.c:242
 #, c-format
 msgid "IMSettings is disabled on the system."
 msgstr "கணினியில் IMSettings முடக்கப்பட்டுள்ளது."
 
-#: ../libimchooseui/imchooseui.c:246
+#: ../libimchooseui/imchooseui.c:247
 #, c-format
 msgid "Unable to create a client instance."
 msgstr "கிளையன்ட் நேர்வை உருவாக்க முடியவில்லை."
 
-#: ../libimchooseui/imchooseui.c:255
+#: ../libimchooseui/imchooseui.c:256
 #, c-format
 msgid "Unable to communicate to IMSettings service: %s"
 msgstr "IMSettings சேவையுடன் தொடர்புகொள்ள முடியவில்லை: %s"
 
-#: ../libimchooseui/imchooseui.c:331
+#: ../libimchooseui/imchooseui.c:332
 #, c-format
 msgid "Please install any input methods before running if you like."
 msgstr "விரும்பினால் இயக்கும் முன் ஏதாவது உள்ளீடு முறைகளை நிறுவவும்."
 
-#: ../libimchooseui/imchooseui.c:404
+#: ../libimchooseui/imchooseui.c:405
 msgid "Unable to get the information"
 msgstr "தகவலை பெறும் முடியவில்லை"
 
-#: ../libimchooseui/imchooseui.c:417
+#: ../libimchooseui/imchooseui.c:418
 msgid "Unable to invoke the preference tool"
 msgstr "விருப்பத்தேர்வுகள் கருவியைக் கொண்டு வர முடியவில்லை"
 
-#: ../libimchooseui/imchooseui.c:438
+#: ../libimchooseui/imchooseui.c:439
 #, c-format
 msgid "Switching Input Method - %s"
 msgstr "உள்ளீடு முறையை மாற்றுகிறது - %s"
 
-#: ../libimchooseui/imchooseui.c:460
+#: ../libimchooseui/imchooseui.c:461
 #, c-format
 msgid "Unknown error during finalizing the request of SwitchIM"
 msgstr "SwitchIM இன் கோரிக்கையை இறுதிசெய்கையில் தெரியாத பிழை"
 
-#: ../libimchooseui/imchooseui.c:467
+#: ../libimchooseui/imchooseui.c:468
 msgid "Failed to switch Input Method"
 msgstr "உள்ளீடு முறையை மாற்றுவதில் தோல்வி"
 
-#: ../libimchooseui/imchooseui.c:654
+#: ../libimchooseui/imchooseui.c:655
 msgid "X applications"
 msgstr "X பயன்பாடுகள்"
 
-#: ../libimchooseui/imchooseui.c:655
+#: ../libimchooseui/imchooseui.c:656
 msgid "GTK+ applications"
 msgstr "GTK+ பயன்பாடுகள்"
 
-#: ../libimchooseui/imchooseui.c:656
+#: ../libimchooseui/imchooseui.c:657
 msgid "Qt applications"
 msgstr "Qt பயன்பாடுகள்"
 
@@ -181,8 +181,8 @@ msgstr "Qt பயன்பாடுகள்"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except X applications and Qt applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except X applications and GTK+ applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except GTK+ applications and Qt applications</i></small>"
-#: ../libimchooseui/imchooseui.c:664 ../libimchooseui/imchooseui.c:669
-#: ../libimchooseui/imchooseui.c:674
+#: ../libimchooseui/imchooseui.c:665 ../libimchooseui/imchooseui.c:670
+#: ../libimchooseui/imchooseui.c:675
 #, c-format
 msgid ", except %s and %s"
 msgstr ", %s மற்றும் %s தவிர"
@@ -193,29 +193,29 @@ msgstr ", %s மற்றும் %s தவிர"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except X applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except GTK+ applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except Qt applications</i></small>"
-#: ../libimchooseui/imchooseui.c:679 ../libimchooseui/imchooseui.c:683
-#: ../libimchooseui/imchooseui.c:687
+#: ../libimchooseui/imchooseui.c:680 ../libimchooseui/imchooseui.c:684
+#: ../libimchooseui/imchooseui.c:688
 #, c-format
 msgid ", except %s"
 msgstr ", %s தவிர"
 
 # This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except GTK+ applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except GTK+ applications</i></small>"
-#: ../libimchooseui/imchooseui.c:693
+#: ../libimchooseui/imchooseui.c:694
 #, c-format
 msgid ""
 "<small><i>Note: this change will not take effect until your next log in%s</"
 "i></small>"
 msgstr ""
-"<small><i>குறிப்பு: நீங்கள் %s இல் அடுத்த முறை புகுபதிவு செய்யும் வரை இந்த "
-"மாற்றம் விளைவை ஏற்படுத்தாது</i></small>"
+"<small><i>குறிப்பு: நீங்கள் %s இல் அடுத்த முறை புகுபதிவு செய்யும் வரை இந்த மாற்றம் "
+"விளைவை ஏற்படுத்தாது</i></small>"
 
-#: ../libimchooseui/imchooseui.c:704
+#: ../libimchooseui/imchooseui.c:705
 #, c-format
 msgid "Unable to obtain the object for note"
 msgstr "குறிப்புக்கான பொருளைப் பெற முடியவில்லை"
 
-#: ../libimchooseui/imchooseui.c:710
+#: ../libimchooseui/imchooseui.c:711
 #, c-format
 msgid "Unable to obtain the object for tree"
 msgstr "கிளையமைப்புக்கான பொருளைப் பெற முடியவில்லை"
@@ -247,23 +247,23 @@ msgid ""
 "Choose the input method to be used or disable the input method usage on the "
 "desktop"
 msgstr ""
-"பயன்படுத்த அல்லது உள்ளீடு முறை பயன்பாட்டை பணிமேடையில் செயல்நீக்க உள்ளீடு "
-"முறையை தேர்ந்தெடுக்கவும்"
+"பயன்படுத்த அல்லது உள்ளீடு முறை பயன்பாட்டை பணிமேடையில் செயல்நீக்க உள்ளீடு முறையை "
+"தேர்ந்தெடுக்கவும்"
 
-#: ../src/app/main.c:97
+#: ../src/app/main.c:98
 #, c-format
 msgid "Please check <a href=\"file://%s\">%s</a> for more details"
 msgstr ""
 
-#: ../src/app/main.c:146 ../src/xfce/main.c:139
+#: ../src/app/main.c:146 ../src/xfce/main.c:140
 msgid "Could not connect to the session manager"
 msgstr "அமர்வு மேலாளருக்கு இணைக்க முடியவில்லை"
 
-#: ../src/app/main.c:165 ../src/xfce/main.c:159
+#: ../src/app/main.c:165 ../src/xfce/main.c:160
 msgid "[options...]"
 msgstr "[விருப்பங்கள்...]"
 
-#: ../src/app/main.c:185 ../src/xfce/main.c:180
+#: ../src/app/main.c:185 ../src/xfce/main.c:179
 #, c-format
 msgid "Could not parse arguments: %s\n"
 msgstr "விவாரங்களை இடைநிறுத்த முடியவில்லை: %s\n"
@@ -276,7 +276,7 @@ msgstr "உள்ளீடு முறை கிடைக்கவில்ல�
 msgid "Unrecoverable error"
 msgstr "சரிசெய்ய முடியாத பிழை"
 
-#: ../src/app/main.c:216
+#: ../src/app/main.c:216 ../src/xfce/main.c:266
 msgid "_Close"
 msgstr ""
 
@@ -284,14 +284,14 @@ msgstr ""
 msgid "_Log Out"
 msgstr ""
 
-#: ../src/app/main.c:229
+#: ../src/app/main.c:229 ../src/xfce/main.c:279
 msgid "_OK"
 msgstr ""
 
-#: ../src/xfce/main.c:162
+#: ../src/xfce/main.c:163
 msgid "Settings manager socket"
 msgstr "அமைப்புகள் நிர்வாகி சாக்கெட்"
 
-#: ../src/xfce/main.c:162
+#: ../src/xfce/main.c:163
 msgid "SOCKET ID"
 msgstr "SOCKET ID"
