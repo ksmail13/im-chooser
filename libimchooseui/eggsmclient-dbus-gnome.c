@@ -77,7 +77,7 @@ sm_client_gdbus_get_interface_info(void)
 										 &err);
 
 		if (err) {
-			g_warning(err->message);
+			g_warning("%s", err->message);
 			return NULL;
 		}
 		info = g_dbus_interface_info_ref(introspection_data->interfaces[0]);
@@ -120,7 +120,7 @@ sm_client_dbus_gnome_end_session(EggSMClient         *client,
 	if (value)
 		g_variant_unref(value);
 	if (err) {
-		g_warning(err->message);
+		g_warning("%s", err->message);
 		g_error_free(err);
 
 		return FALSE;
@@ -160,7 +160,7 @@ egg_sm_client_dbus_gnome_new(void)
 					      NULL,
 					      &err);
 	if (err) {
-		g_warning(err->message);
+		g_warning("%s", err->message);
 		g_error_free(err);
 		return NULL;
 	}

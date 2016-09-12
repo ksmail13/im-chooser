@@ -25,6 +25,7 @@
 #include "config.h"
 #endif
 
+#include <locale.h>
 #include <glib/gi18n-lib.h>
 #include <imsettings/imsettings.h>
 #include <imsettings/imsettings-client.h>

@@ -6,6 +6,7 @@ AM_CPPFLAGS =							\
 	-I$(top_srcdir)/libimchooseui				\
 	$(TOOLKIT_CFLAGS)					\
 	$(XFCE4_CFLAGS)						\
+	$(WARN_CFLAGS)						\
 	$(NULL)
 
 LIBS =								\

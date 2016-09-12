@@ -9,6 +9,7 @@ AM_CPPFLAGS =						\
 	$(TOOLKIT_CFLAGS)				\
 	$(IMSETTINGS_CFLAGS)				\
 	$(SM_CFLAGS)					\
+	$(WARN_CFLAGS)					\
 	$(NULL)
 
 LIBS =								\

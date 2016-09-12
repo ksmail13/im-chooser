@@ -25,6 +25,7 @@
 #include "config.h"
 #endif
 #include <stdlib.h>
+#include <locale.h>
 #include "imchooseui.h"
 #include <glib/gi18n.h>
 #include "eggsmclient.h"
@@ -82,17 +83,17 @@ _show_error_cb(IMChooseUI  *ui,
 {
 	GtkWidget *parent = GTK_WIDGET (user_data);
 	GtkWidget *dlg;
-	gchar *s, *logfile, *m;
+	gchar *logfile, *m;
 
 	if (progress_id != 0)
 		g_source_remove(progress_id);
 
-	s = g_strdup_printf("<span weight=\"bold\" size=\"larger\">%s</span>", summary);
 	dlg = gtk_message_dialog_new_with_markup(GTK_WINDOW (parent),
 						 GTK_DIALOG_MODAL,
 						 GTK_MESSAGE_ERROR,
 						 GTK_BUTTONS_OK,
-						 s);
+						 "<span weight=\"bold\" size=\"larger\">%s</span>",
+						 summary);
 	logfile = g_build_filename(g_get_user_cache_dir(), "imsettings", "log", NULL);
 	m = g_strdup_printf(_("Please check <a href=\"file://%s\">%s</a> for more details"),
 			    logfile, logfile);
@@ -113,7 +114,6 @@ _show_error_cb(IMChooseUI  *ui,
 
 	gtk_dialog_run(GTK_DIALOG (dlg));
 	gtk_widget_destroy(dlg);
-	g_free(s);
 }
 
 static void

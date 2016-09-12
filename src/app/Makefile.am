@@ -5,6 +5,7 @@ AM_CPPFLAGS =							\
 	-DIMCHOOSE_LOCALEDIR="\"$(datadir)/locale\""		\
 	-DDESKTOPFILE="\"$(desktopdir)/$(desktop_DATA)\""	\
 	-I$(top_srcdir)/libimchooseui				\
+	$(WARN_CFLAGS)						\
 	$(TOOLKIT_CFLAGS)					\
 	$(NULL)
 

@@ -27,9 +27,6 @@ GNOME_CXX_WARNINGS
 GNOME_COMMON_INIT
 GNOME_MAINTAINER_MODE_DEFINES
 
-CFLAGS="$CFLAGS $WARN_CFLAGS"
-CXXFLAGS="$CXXFLAGS $WARN_CXXFLAGS"
-
 dnl ======================================================================
 dnl define variables
 dnl ======================================================================
