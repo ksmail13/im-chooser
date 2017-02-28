@@ -1,22 +1,22 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-#
+# 
 # Sangeeta Kumari <sangeeta09@gmail.com>, 2009.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-09-12 20:47+0900\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
 "PO-Revision-Date: 2014-12-16 08:24-0500\n"
 "Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: mai\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
-"X-Generator: Zanata 3.9.5\n"
+"X-Generator: Zanata 3.9.6\n"
 
 #: ../libimchooseui/eggdesktopfile.c:165
 #, c-format
@@ -138,7 +138,8 @@ msgstr ""
 #: ../libimchooseui/imchooseui.c:332
 #, c-format
 msgid "Please install any input methods before running if you like."
-msgstr "कृपया कोनो इनपुट विधि केँ जँ अहाँ चाहू तँ चलाबै क' पहिने संस्थापित करू "
+msgstr ""
+"कृपया कोनो इनपुट विधि केँ जँ अहाँ चाहू तँ चलाबै क' पहिने संस्थापित करू "
 
 #: ../libimchooseui/imchooseui.c:405
 msgid "Unable to get the information"
@@ -237,8 +238,8 @@ msgid ""
 "Choose the input method to be used or disable the input method usage on the "
 "desktop"
 msgstr ""
-"इनपुट विधि केँ प्रयोग कएल जाएबाक लेल चुनू अथवा डेस्कटाप पर इनपुट विधि प्रयोग केँ निष्क्रिय  "
-"करू"
+"इनपुट विधि केँ प्रयोग कएल जाएबाक लेल चुनू अथवा डेस्कटाप पर इनपुट विधि प्रयोग "
+"केँ निष्क्रिय  करू"
 
 #: ../src/app/main.c:98
 #, c-format

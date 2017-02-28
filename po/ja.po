@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-#
+# 
 # Akira TAGOH <tagoh@redhat.com>, 2006, 2007, 2008.
 # Makoto Mizukami <mmk9060@aol.com>, 2008.
 # Noriko Mizumoto <noriko@redhat.com>, 2007, 2008, 2009.
@@ -15,16 +15,16 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-09-12 20:47+0900\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
 "PO-Revision-Date: 2015-08-15 03:27-0400\n"
 "Last-Translator: Ooyama Yosiyuki <qqke6wd9k@apricot.ocn.ne.jp>\n"
 "Language-Team: Japanese (http://www.transifex.net/projects/p/im-chooser/team/"
 "ja/)\n"
 "Language: ja\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0\n"
-"X-Generator: Zanata 3.9.5\n"
+"X-Generator: Zanata 3.9.6\n"
 
 #: ../libimchooseui/eggdesktopfile.c:165
 #, c-format
@@ -47,8 +47,7 @@ msgstr "%s を開始中です。"
 #: ../libimchooseui/eggdesktopfile.c:1116
 #, c-format
 msgid "Application does not accept documents on command line"
-msgstr ""
-"アプリケーションはコマンドラインでドキュメントを指定することができません。"
+msgstr "アプリケーションはコマンドラインでドキュメントを指定することができません。"
 
 #: ../libimchooseui/eggdesktopfile.c:1184
 #, c-format
@@ -60,9 +59,7 @@ msgstr "認められていない起動オプション: %d"
 #: ../libimchooseui/eggdesktopfile.c:1391
 #, c-format
 msgid "Can't pass document URIs to a 'Type=Link' desktop entry"
-msgstr ""
-"デスクトップエントリーの \"Type=Link\" にドキュメントの URI をパスできませ"
-"ん。"
+msgstr "デスクトップエントリーの \"Type=Link\" にドキュメントの URI をパスできません。"
 
 #: ../libimchooseui/eggdesktopfile.c:1412
 #, c-format
@@ -216,8 +213,7 @@ msgstr "%s を除いて、"
 msgid ""
 "<small><i>Note: this change will not take effect until your next log in%s</"
 "i></small>"
-msgstr ""
-"<small><i>注記: %sこの変更は次回ログインするまで反映されません</i></small>"
+msgstr "<small><i>注記: %sこの変更は次回ログインするまで反映されません</i></small>"
 
 #: ../libimchooseui/imchooseui.c:705
 #, c-format
@@ -255,9 +251,7 @@ msgstr "入力メソッドのセレクター"
 msgid ""
 "Choose the input method to be used or disable the input method usage on the "
 "desktop"
-msgstr ""
-"デスクトップで使用する入力メソッドを選択したり、もしくは入力メソッドの使用を"
-"無効化します。"
+msgstr "デスクトップで使用する入力メソッドを選択したり、もしくは入力メソッドの使用を無効化します。"
 
 #: ../src/app/main.c:98
 #, c-format

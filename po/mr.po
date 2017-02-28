@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-#
+# 
 # Rahul Bhalerao <b.rahul.pm@gmail.com>, 2006.
 # Sandeep Shedmake <sandeep.shedmake@gmail.com>, 2008.
 # sandeeps <sshedmak@redhat.com>, 2011.
@@ -10,16 +10,16 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-09-12 20:47+0900\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
 "PO-Revision-Date: 2014-12-16 08:24-0500\n"
 "Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
 "Language-Team: Marathi (http://www.transifex.net/projects/p/im-chooser/team/"
 "mr/)\n"
 "Language: mr\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
-"X-Generator: Zanata 3.9.5\n"
+"X-Generator: Zanata 3.9.6\n"
 
 #: ../libimchooseui/eggdesktopfile.c:165
 #, c-format
@@ -141,7 +141,8 @@ msgstr "IMSettings सर्व्हिससह संपर्क करण�
 #: ../libimchooseui/imchooseui.c:332
 #, c-format
 msgid "Please install any input methods before running if you like."
-msgstr "कृपया कुठलेही इंपुट पध्दती कार्यान्वीत करण्यापूर्वी त्यास प्रतिष्ठापीत करा."
+msgstr ""
+"कृपया कुठलेही इंपुट पध्दती कार्यान्वीत करण्यापूर्वी त्यास प्रतिष्ठापीत करा."
 
 #: ../libimchooseui/imchooseui.c:405
 msgid "Unable to get the information"
@@ -209,7 +210,8 @@ msgstr ", %s ला वगळता"
 msgid ""
 "<small><i>Note: this change will not take effect until your next log in%s</"
 "i></small>"
-msgstr "<small><i>टिप: पुढील लॉगीन %s पर्यंत हे बदल लागू होणार नाही</i></small>"
+msgstr ""
+"<small><i>टिप: पुढील लॉगीन %s पर्यंत हे बदल लागू होणार नाही</i></small>"
 
 #: ../libimchooseui/imchooseui.c:705
 #, c-format
@@ -248,7 +250,8 @@ msgid ""
 "Choose the input method to be used or disable the input method usage on the "
 "desktop"
 msgstr ""
-"वापरावयाची इनपुट पद्धती निवडण्याचे किंवा डेस्कटॉपवरील इनपुट पद्धतीचा वापर अकार्यक्षम करा"
+"वापरावयाची इनपुट पद्धती निवडण्याचे किंवा डेस्कटॉपवरील इनपुट पद्धतीचा वापर "
+"अकार्यक्षम करा"
 
 #: ../src/app/main.c:98
 #, c-format

@@ -1,27 +1,28 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-#
+# 
 # Adam Pribyl <pribyl@lowlevel.cz>, 2007, 2008.
+# Zdenek <chmelarz@gmail.com>, 2016. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-09-12 20:47+0900\n"
-"PO-Revision-Date: 2014-12-16 08:22-0500\n"
-"Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2016-10-23 11:59-0400\n"
+"Last-Translator: Zdenek <chmelarz@gmail.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: cs\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2\n"
-"X-Generator: Zanata 3.9.5\n"
+"X-Generator: Zanata 3.9.6\n"
 
 #: ../libimchooseui/eggdesktopfile.c:165
 #, c-format
 msgid "File is not a valid .desktop file"
-msgstr ""
+msgstr "Soubor není platným .desktop souborem"
 
 #. translators: 'Version' is from a desktop file, and
 #. * should not be translated. '%s' would probably be a
@@ -29,62 +30,62 @@ msgstr ""
 #: ../libimchooseui/eggdesktopfile.c:191
 #, c-format
 msgid "Unrecognized desktop file Version '%s'"
-msgstr ""
+msgstr "Neznámá verze desktopového souboru '%s'"
 
 #: ../libimchooseui/eggdesktopfile.c:974
 #, c-format
 msgid "Starting %s"
-msgstr ""
+msgstr "Zahájení %s"
 
 #: ../libimchooseui/eggdesktopfile.c:1116
 #, c-format
 msgid "Application does not accept documents on command line"
-msgstr ""
+msgstr "Aplikace neakceptuje dokumenty z příkazové řádky"
 
 #: ../libimchooseui/eggdesktopfile.c:1184
 #, c-format
 msgid "Unrecognized launch option: %d"
-msgstr ""
+msgstr "Neznámá možnost spuštění: %d"
 
 #. translators: The 'Type=Link' string is found in a
 #. * desktop file, and should not be translated.
 #: ../libimchooseui/eggdesktopfile.c:1391
 #, c-format
 msgid "Can't pass document URIs to a 'Type=Link' desktop entry"
-msgstr ""
+msgstr "Nelze předat URI dokumentu do záznamu souboru desktopu 'Type=Link'"
 
 #: ../libimchooseui/eggdesktopfile.c:1412
 #, c-format
 msgid "Not a launchable item"
-msgstr ""
+msgstr "Nespustitelná položka"
 
 #: ../libimchooseui/eggsmclient.c:226
 msgid "Disable connection to session manager"
-msgstr ""
+msgstr "Zakázat připojení ke správci relací"
 
 #: ../libimchooseui/eggsmclient.c:229
 msgid "Specify file containing saved configuration"
-msgstr ""
+msgstr "Určete soubor obsahující uloženou konfiguraci"
 
 #: ../libimchooseui/eggsmclient.c:229
 msgid "FILE"
-msgstr ""
+msgstr "SOUBOR"
 
 #: ../libimchooseui/eggsmclient.c:232
 msgid "Specify session management ID"
-msgstr ""
+msgstr "Určete ID správy relací"
 
 #: ../libimchooseui/eggsmclient.c:232
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 #: ../libimchooseui/eggsmclient.c:253
 msgid "Session management options:"
-msgstr ""
+msgstr "Volby správy relací:"
 
 #: ../libimchooseui/eggsmclient.c:254
 msgid "Show session management options"
-msgstr ""
+msgstr "Zobrazit volby správy relací"
 
 #: ../libimchooseui/imchoose.ui.h:1
 msgid "Work in progress..."
@@ -92,7 +93,7 @@ msgstr "Probíhá..."
 
 #: ../libimchooseui/imchoose.ui.h:2
 msgid "label"
-msgstr ""
+msgstr "štítek"
 
 #: ../libimchooseui/imchoose.ui.h:3
 msgid "<b>Input Method</b>"
@@ -100,7 +101,7 @@ msgstr "<b>Vstupní metoda</b>"
 
 #: ../libimchooseui/imchooseui.c:164
 msgid "No Input Method"
-msgstr ""
+msgstr "Žádná vstupní metoda"
 
 #: ../libimchooseui/imchooseui.c:166
 #, c-format
@@ -118,22 +119,22 @@ msgstr "(doporučeno)"
 #: ../libimchooseui/imchooseui.c:193
 #, c-format
 msgid "<a href=\"imsettings-prefs:///%s\">Preferences...</a>"
-msgstr ""
+msgstr "<a href=\"imsettings-prefs:///%s\">Předvolby...</a>"
 
 #: ../libimchooseui/imchooseui.c:242
 #, c-format
 msgid "IMSettings is disabled on the system."
-msgstr ""
+msgstr "IMSettings je na tomto systému vypnut."
 
 #: ../libimchooseui/imchooseui.c:247
 #, c-format
 msgid "Unable to create a client instance."
-msgstr ""
+msgstr "Nelze vytvořit instanci klienta."
 
 #: ../libimchooseui/imchooseui.c:256
 #, c-format
 msgid "Unable to communicate to IMSettings service: %s"
-msgstr ""
+msgstr "Nelze komunikovat se IMSettings servisem: %s"
 
 #: ../libimchooseui/imchooseui.c:332
 #, c-format
@@ -146,21 +147,21 @@ msgstr "Nelze získat informace"
 
 #: ../libimchooseui/imchooseui.c:418
 msgid "Unable to invoke the preference tool"
-msgstr ""
+msgstr "Nelze vyvolat nástroj předvoleb"
 
 #: ../libimchooseui/imchooseui.c:439
 #, c-format
 msgid "Switching Input Method - %s"
-msgstr ""
+msgstr "Přepínání vstupní metody - %s"
 
 #: ../libimchooseui/imchooseui.c:461
 #, c-format
 msgid "Unknown error during finalizing the request of SwitchIM"
-msgstr ""
+msgstr "Neznámá chyba během finalizace žádosti SwitchIM"
 
 #: ../libimchooseui/imchooseui.c:468
 msgid "Failed to switch Input Method"
-msgstr ""
+msgstr "Nepodařilo se přepnout metodu vstupu"
 
 #: ../libimchooseui/imchooseui.c:655
 msgid "X applications"
@@ -206,37 +207,39 @@ msgid ""
 "<small><i>Note: this change will not take effect until your next log in%s</"
 "i></small>"
 msgstr ""
+"<small><i>Poznámka: Tato změna se projeví až po příštím přihlášení%s</i></"
+"small>"
 
 #: ../libimchooseui/imchooseui.c:705
 #, c-format
 msgid "Unable to obtain the object for note"
-msgstr ""
+msgstr "Nelze získat objekt pro poznámku"
 
 #: ../libimchooseui/imchooseui.c:711
 #, c-format
 msgid "Unable to obtain the object for tree"
-msgstr ""
+msgstr "Nelze získat objekt pro strom"
 
 #: ../libimchooseui/imchooseuicellrendererlabel.c:244
 msgid "Widget"
-msgstr ""
+msgstr "Ovládací prvek"
 
 #: ../libimchooseui/imchooseuicellrendererlabel.c:245
 msgid "Widget to contain in the cell"
-msgstr ""
+msgstr "Ovládací prvek pro vložení do buňky"
 
 #: ../libimchooseui/imchooseuicellrendererlabel.c:251
 msgid "Spacing"
-msgstr ""
+msgstr "Řádkování"
 
 #: ../libimchooseui/imchooseuicellrendererlabel.c:252
 msgid "The amount of space between label"
-msgstr ""
+msgstr "Množství prostoru mezi štítky"
 
 #: ../src/app/im-chooser.desktop.in.in.h:1 ../src/app/main.c:212
 #: ../src/xfce/main.c:262 ../src/xfce/xfce4-im-chooser.desktop.in.in.h:1
 msgid "Input Method Selector"
-msgstr ""
+msgstr "Přepínač metody vstupu"
 
 #: ../src/app/im-chooser.desktop.in.in.h:2
 #: ../src/xfce/xfce4-im-chooser.desktop.in.in.h:2
@@ -250,45 +253,45 @@ msgstr ""
 #: ../src/app/main.c:98
 #, c-format
 msgid "Please check <a href=\"file://%s\">%s</a> for more details"
-msgstr ""
+msgstr "Pro více informací se prosím podívejte na <a href=\"file://%s\">%s</a>"
 
 #: ../src/app/main.c:146 ../src/xfce/main.c:140
 msgid "Could not connect to the session manager"
-msgstr ""
+msgstr "Nelze se připojit ke správci sezení"
 
 #: ../src/app/main.c:165 ../src/xfce/main.c:160
 msgid "[options...]"
-msgstr ""
+msgstr "[volby...]"
 
 #: ../src/app/main.c:185 ../src/xfce/main.c:179
 #, c-format
 msgid "Could not parse arguments: %s\n"
-msgstr ""
+msgstr "Nelze parsovat argumenty: %s\n"
 
 #: ../src/app/main.c:202 ../src/xfce/main.c:238 ../src/xfce/main.c:253
 msgid "No input method is available"
-msgstr ""
+msgstr "Žádná metoda vstupu není dostupná"
 
 #: ../src/app/main.c:205 ../src/xfce/main.c:241 ../src/xfce/main.c:256
 msgid "Unrecoverable error"
-msgstr ""
+msgstr "Neopravitelná chyba"
 
 #: ../src/app/main.c:216 ../src/xfce/main.c:266
 msgid "_Close"
-msgstr ""
+msgstr "_Zavřít"
 
 #: ../src/app/main.c:217 ../src/xfce/main.c:267
 msgid "_Log Out"
-msgstr ""
+msgstr "Odh_lásit"
 
 #: ../src/app/main.c:229 ../src/xfce/main.c:279
 msgid "_OK"
-msgstr ""
+msgstr "_OK"
 
 #: ../src/xfce/main.c:163
 msgid "Settings manager socket"
-msgstr ""
+msgstr "Soket správce nastavení"
 
 #: ../src/xfce/main.c:163
 msgid "SOCKET ID"
-msgstr ""
+msgstr "ID SOKETU"
