@@ -46,6 +46,8 @@ GType        egg_sm_client_dbus_gnome_get_type (void);
 EggSMClient *egg_sm_client_dbus_gnome_new      (void);
 GType        egg_sm_client_dbus_kde_get_type   (void);
 EggSMClient *egg_sm_client_dbus_kde_new        (void);
+GType        egg_sm_client_dbus_xfce_get_type  (void);
+EggSMClient *egg_sm_client_dbus_xfce_new       (void);
 # endif
 #elif defined (GDK_WINDOWING_WIN32)
 GType        egg_sm_client_win32_get_type (void);

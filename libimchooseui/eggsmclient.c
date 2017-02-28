@@ -348,6 +348,8 @@ egg_sm_client_get (void)
 	  global_client = egg_sm_client_dbus_gnome_new ();
 	  if (!global_client)
 	    global_client = egg_sm_client_dbus_kde_new ();
+	  if (!global_client)
+	    global_client = egg_sm_client_dbus_xfce_new ();
 #endif
 #ifdef EGG_SM_CLIENT_BACKEND_XSMP
 	  if (!global_client)

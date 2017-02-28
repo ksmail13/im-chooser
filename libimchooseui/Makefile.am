@@ -75,6 +75,7 @@ libeggsmclient_la_SOURCES =					\
 	eggsmclient-private.h					\
 	eggsmclient-dbus-gnome.c				\
 	eggsmclient-dbus-kde.c					\
+	eggsmclient-dbus-xfce.c					\
 	eggsmclient-xsmp.c					\
 	$(NULL)
 
