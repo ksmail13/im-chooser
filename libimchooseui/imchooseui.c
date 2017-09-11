@@ -371,10 +371,7 @@ _imchoose_ui_label_clicked(IMChooseUICellRendererLabel *celllabel,
 				   -1);
 		g_return_if_fail (GTK_IS_LABEL (label));
 		priv->clicked = TRUE;
-		g_signal_emit_by_name(label, "motion-notify-event", event, &retval);
-		g_signal_emit_by_name(label, "button-press-event", event, &retval);
-		g_signal_emit_by_name(label, "button-release-event", event, &retval);
-		g_signal_emit_by_name(label, "leave-notify-event", event, &retval);
+		g_signal_emit_by_name(label, "activate_link", gtk_label_get_current_uri(GTK_LABEL (label)), &retval);
 	}
 }
 
