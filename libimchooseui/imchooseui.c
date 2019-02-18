@@ -268,6 +268,15 @@ _imchoose_ui_update_list(IMChooseUI *ui,
 		n_retry++;
 		goto retry;
 	}
+	if (!imsettings_client_is_supported_desktop(client, NULL, &err)) {
+		GError *e = NULL;
+
+		g_set_error(&e, IMCHOOSEUI_GERROR, 0,
+			    _("Current desktop isn't supported. Please follow instructions on your desktop to enable Input Method."));
+		g_error_free(err);
+		err = e;
+		goto bail;
+	}
 
 	active_info = imsettings_client_get_active_im_info(client, NULL, &err);
 	if (err)
@@ -614,13 +623,13 @@ imchoose_ui_get(IMChooseUI  *ui,
 	builder = gtk_builder_new();
 	uifile = g_build_filename(UIDIR, "imchoose.ui", NULL);
 
-#ifdef GNOME_ENABLE_DEBUG
+#ifndef NDEBUG
 	if (!g_file_test(uifile, G_FILE_TEST_EXISTS)) {
 		/* fallback to uninstalled file */
 		g_free(uifile);
 		uifile = g_build_filename(BUILDDIR, "imchoose.ui", NULL);
 	}
-#endif /* GNOME_ENABLE_DEBUG */
+#endif /* !NDEBUG */
 	if (gtk_builder_add_from_file(builder, uifile, &err) == 0) {
 		goto bail;
 	}
