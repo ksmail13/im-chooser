@@ -4,8 +4,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-12 20:47+0900\n"
+"Report-Msgid-Bugs-To: https://pagure.io/im-chooser/issues\n"
+"POT-Creation-Date: 2019-02-19 06:28+0000\n"
 "PO-Revision-Date: 2014-12-16 08:22-0500\n"
 "Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,162 +16,160 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
 "X-Generator: Zanata 3.9.6\n"
 
-#: ../libimchooseui/eggdesktopfile.c:165
-#, c-format
+#: libimchooseui/eggdesktopfile.c:165
 msgid "File is not a valid .desktop file"
 msgstr "Файлът не е валиден .desktop файл"
 
 #. translators: 'Version' is from a desktop file, and
 #. * should not be translated. '%s' would probably be a
 #. * version number.
-#: ../libimchooseui/eggdesktopfile.c:191
+#: libimchooseui/eggdesktopfile.c:191
 #, c-format
 msgid "Unrecognized desktop file Version '%s'"
 msgstr "Непозната версия на десктоп файл '%s'"
 
-#: ../libimchooseui/eggdesktopfile.c:974
+#: libimchooseui/eggdesktopfile.c:974
 #, c-format
 msgid "Starting %s"
 msgstr "Стартиране на %s"
 
-#: ../libimchooseui/eggdesktopfile.c:1116
-#, c-format
+#: libimchooseui/eggdesktopfile.c:1116
 msgid "Application does not accept documents on command line"
 msgstr "Приложението не приема документи от командния ред"
 
-#: ../libimchooseui/eggdesktopfile.c:1184
+#: libimchooseui/eggdesktopfile.c:1184
 #, c-format
 msgid "Unrecognized launch option: %d"
 msgstr "Неразпозната опция при стартиране: %d"
 
 #. translators: The 'Type=Link' string is found in a
 #. * desktop file, and should not be translated.
-#: ../libimchooseui/eggdesktopfile.c:1391
-#, c-format
+#: libimchooseui/eggdesktopfile.c:1391
 msgid "Can't pass document URIs to a 'Type=Link' desktop entry"
 msgstr ""
 "Не мога да подам URI-ите на документ към 'Type=Link' елемент на десктопа"
 
-#: ../libimchooseui/eggdesktopfile.c:1412
-#, c-format
+#: libimchooseui/eggdesktopfile.c:1412
 msgid "Not a launchable item"
 msgstr "Не е нещо, което може да се стартира"
 
-#: ../libimchooseui/eggsmclient.c:226
+#: libimchooseui/eggsmclient.c:226
 msgid "Disable connection to session manager"
 msgstr "Забрани връзка към мениджъра на сесии"
 
-#: ../libimchooseui/eggsmclient.c:229
+#: libimchooseui/eggsmclient.c:229
 msgid "Specify file containing saved configuration"
 msgstr "Посочете файла, съдържащ записаната конфигурация"
 
-#: ../libimchooseui/eggsmclient.c:229
+#: libimchooseui/eggsmclient.c:229
 msgid "FILE"
 msgstr "ФАЙЛ"
 
-#: ../libimchooseui/eggsmclient.c:232
+#: libimchooseui/eggsmclient.c:232
 msgid "Specify session management ID"
 msgstr "Задаване ID за мениджмънт на сесия"
 
-#: ../libimchooseui/eggsmclient.c:232
+#: libimchooseui/eggsmclient.c:232
 msgid "ID"
 msgstr "ID"
 
-#: ../libimchooseui/eggsmclient.c:253
+#: libimchooseui/eggsmclient.c:253
 msgid "Session management options:"
 msgstr "Опции за мениджмънт на сесия:"
 
-#: ../libimchooseui/eggsmclient.c:254
+#: libimchooseui/eggsmclient.c:254
 msgid "Show session management options"
 msgstr "Покажи опциите за мениджмънт на сесия"
 
-#: ../libimchooseui/imchoose.ui.h:1
+#: libimchooseui/imchoose.ui:8
 msgid "Work in progress..."
 msgstr "Работя..."
 
-#: ../libimchooseui/imchoose.ui.h:2
+#: libimchooseui/imchoose.ui:45 libimchooseui/imchoose.ui:174
 msgid "label"
 msgstr "етикет"
 
-#: ../libimchooseui/imchoose.ui.h:3
+#: libimchooseui/imchoose.ui:193
 msgid "<b>Input Method</b>"
 msgstr "<b>Метод за въвеждане</b>"
 
-#: ../libimchooseui/imchooseui.c:164
+#: libimchooseui/imchooseui.c:164
 msgid "No Input Method"
 msgstr "Няма метод за въвеждане"
 
-#: ../libimchooseui/imchooseui.c:166
+#: libimchooseui/imchooseui.c:166
 #, c-format
 msgid "Use %s"
 msgstr "Ползвайте %s"
 
-#: ../libimchooseui/imchooseui.c:173
+#: libimchooseui/imchooseui.c:173
 msgid " (legacy)"
 msgstr "(наследен)"
 
-#: ../libimchooseui/imchooseui.c:175
+#: libimchooseui/imchooseui.c:175
 msgid " (recommended)"
 msgstr "(препоръчителен)"
 
-#: ../libimchooseui/imchooseui.c:193
+#: libimchooseui/imchooseui.c:193
 #, c-format
 msgid "<a href=\"imsettings-prefs:///%s\">Preferences...</a>"
 msgstr "<a href=\"imsettings-prefs:///%s\">Предпочитания...</a>"
 
-#: ../libimchooseui/imchooseui.c:242
-#, c-format
+#: libimchooseui/imchooseui.c:242
 msgid "IMSettings is disabled on the system."
 msgstr ""
 
-#: ../libimchooseui/imchooseui.c:247
-#, c-format
+#: libimchooseui/imchooseui.c:247
 msgid "Unable to create a client instance."
 msgstr "Не може да се създаде клиентска инстанция."
 
-#: ../libimchooseui/imchooseui.c:256
+#: libimchooseui/imchooseui.c:256
 #, c-format
 msgid "Unable to communicate to IMSettings service: %s"
 msgstr "Не може да се комуникира с IMSettings услугата: %s"
 
-#: ../libimchooseui/imchooseui.c:332
-#, c-format
+#: libimchooseui/imchooseui.c:275
+msgid ""
+"Current desktop isn't supported. Please follow instructions on your desktop "
+"to enable Input Method."
+msgstr ""
+
+#: libimchooseui/imchooseui.c:341
 msgid "Please install any input methods before running if you like."
 msgstr ""
 "Моля, ако желаете, инсталирайте някакви методи за въвеждане преди "
 "стартирането."
 
-#: ../libimchooseui/imchooseui.c:405
+#: libimchooseui/imchooseui.c:411
 msgid "Unable to get the information"
 msgstr "Не мога да взема информацията"
 
-#: ../libimchooseui/imchooseui.c:418
+#: libimchooseui/imchooseui.c:424
 msgid "Unable to invoke the preference tool"
 msgstr "Не може да се извика инструмента за предпочитания"
 
-#: ../libimchooseui/imchooseui.c:439
+#: libimchooseui/imchooseui.c:445
 #, c-format
 msgid "Switching Input Method - %s"
 msgstr "Превключване на метода за въвеждане - %s"
 
-#: ../libimchooseui/imchooseui.c:461
-#, c-format
+#: libimchooseui/imchooseui.c:467
 msgid "Unknown error during finalizing the request of SwitchIM"
 msgstr "Непозната грешка при финализиране заявката на SwitchIM"
 
-#: ../libimchooseui/imchooseui.c:468
+#: libimchooseui/imchooseui.c:474
 msgid "Failed to switch Input Method"
 msgstr "Превключването на метода за въвеждане не успя"
 
-#: ../libimchooseui/imchooseui.c:655
+#: libimchooseui/imchooseui.c:661
 msgid "X applications"
 msgstr "X приложения"
 
-#: ../libimchooseui/imchooseui.c:656
+#: libimchooseui/imchooseui.c:662
 msgid "GTK+ applications"
 msgstr "GTK+ приложения"
 
-#: ../libimchooseui/imchooseui.c:657
+#: libimchooseui/imchooseui.c:663
 msgid "Qt applications"
 msgstr "Qt приложения"
 
@@ -181,8 +179,8 @@ msgstr "Qt приложения"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except X applications and Qt applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except X applications and GTK+ applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except GTK+ applications and Qt applications</i></small>"
-#: ../libimchooseui/imchooseui.c:665 ../libimchooseui/imchooseui.c:670
-#: ../libimchooseui/imchooseui.c:675
+#: libimchooseui/imchooseui.c:671 libimchooseui/imchooseui.c:676
+#: libimchooseui/imchooseui.c:681
 #, c-format
 msgid ", except %s and %s"
 msgstr ", освен %s и %s"
@@ -193,15 +191,15 @@ msgstr ", освен %s и %s"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except X applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except GTK+ applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except Qt applications</i></small>"
-#: ../libimchooseui/imchooseui.c:680 ../libimchooseui/imchooseui.c:684
-#: ../libimchooseui/imchooseui.c:688
+#: libimchooseui/imchooseui.c:686 libimchooseui/imchooseui.c:690
+#: libimchooseui/imchooseui.c:694
 #, c-format
 msgid ", except %s"
 msgstr ", освен %s"
 
 # This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except GTK+ applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except GTK+ applications</i></small>"
-#: ../libimchooseui/imchooseui.c:694
+#: libimchooseui/imchooseui.c:700
 #, c-format
 msgid ""
 "<small><i>Note: this change will not take effect until your next log in%s</"
@@ -210,88 +208,88 @@ msgstr ""
 "<small><i>Забележка: тази промяна няма да влезе в сила преди следващото Ви "
 "влизане%s</i></small>"
 
-#: ../libimchooseui/imchooseui.c:705
-#, c-format
+#: libimchooseui/imchooseui.c:711
 msgid "Unable to obtain the object for note"
 msgstr "Не мога да получа обекта за бележка"
 
-#: ../libimchooseui/imchooseui.c:711
-#, c-format
+#: libimchooseui/imchooseui.c:717
 msgid "Unable to obtain the object for tree"
 msgstr "Не мога да получа обекта за дърво"
 
-#: ../libimchooseui/imchooseuicellrendererlabel.c:244
+#: libimchooseui/imchooseuicellrendererlabel.c:244
 msgid "Widget"
 msgstr "Инструмент"
 
-#: ../libimchooseui/imchooseuicellrendererlabel.c:245
+#: libimchooseui/imchooseuicellrendererlabel.c:245
 msgid "Widget to contain in the cell"
 msgstr "Инструмент, съдържащ се в клетката"
 
-#: ../libimchooseui/imchooseuicellrendererlabel.c:251
+#: libimchooseui/imchooseuicellrendererlabel.c:251
 msgid "Spacing"
 msgstr "Интервали"
 
-#: ../libimchooseui/imchooseuicellrendererlabel.c:252
+#: libimchooseui/imchooseuicellrendererlabel.c:252
 msgid "The amount of space between label"
 msgstr "Размерът на интервал между етикет"
 
-#: ../src/app/im-chooser.desktop.in.in.h:1 ../src/app/main.c:212
-#: ../src/xfce/main.c:262 ../src/xfce/xfce4-im-chooser.desktop.in.in.h:1
+#: src/app/im-chooser.desktop:5 src/xfce/xfce4-im-chooser.desktop:87
+msgid "im-chooser"
+msgstr ""
+
+#: src/app/main.c:98
+#, c-format
+msgid "Please check <a href=\"file://%s\">%s</a> for more details"
+msgstr ""
+
+#: src/app/main.c:146 src/xfce/main.c:140
+msgid "Could not connect to the session manager"
+msgstr "Не мога да се свържа с мениджъра на сесии"
+
+#: src/app/main.c:165 src/xfce/main.c:160
+msgid "[options...]"
+msgstr "[опции...]"
+
+#: src/app/main.c:185 src/xfce/main.c:179
+#, c-format
+msgid "Could not parse arguments: %s\n"
+msgstr "Не мога да направя разбор на аргументите: %s\n"
+
+#: src/app/main.c:202 src/xfce/main.c:238 src/xfce/main.c:253
+msgid "No input method is available"
+msgstr "Няма достъпен метод за въвеждане"
+
+#: src/app/main.c:205 src/xfce/main.c:241 src/xfce/main.c:256
+msgid "Unrecoverable error"
+msgstr "Невъзстановима грешка"
+
+#: src/app/main.c:212 src/xfce/main.c:262 src/xfce/xfce4-im-chooser.desktop:6
 msgid "Input Method Selector"
 msgstr "Избиране метод за въвеждане"
 
-#: ../src/app/im-chooser.desktop.in.in.h:2
-#: ../src/xfce/xfce4-im-chooser.desktop.in.in.h:2
+#: src/app/main.c:216 src/xfce/main.c:266
+msgid "_Close"
+msgstr ""
+
+#: src/app/main.c:217 src/xfce/main.c:267
+msgid "_Log Out"
+msgstr ""
+
+#: src/app/main.c:229 src/xfce/main.c:279
+msgid "_OK"
+msgstr ""
+
+#: src/xfce/main.c:163
+msgid "Settings manager socket"
+msgstr "Socket на мениджъра за настройки"
+
+#: src/xfce/main.c:163
+msgid "SOCKET ID"
+msgstr "SOCKET ID"
+
+#: src/xfce/xfce4-im-chooser.desktop:38
 msgid ""
 "Choose the input method to be used or disable the input method usage on the "
 "desktop"
 msgstr ""
 "Избор на използвания метод за въвеждане или забрана използването на метод за "
 "въвеждане в десктопа"
-
-#: ../src/app/main.c:98
-#, c-format
-msgid "Please check <a href=\"file://%s\">%s</a> for more details"
-msgstr ""
-
-#: ../src/app/main.c:146 ../src/xfce/main.c:140
-msgid "Could not connect to the session manager"
-msgstr "Не мога да се свържа с мениджъра на сесии"
-
-#: ../src/app/main.c:165 ../src/xfce/main.c:160
-msgid "[options...]"
-msgstr "[опции...]"
-
-#: ../src/app/main.c:185 ../src/xfce/main.c:179
-#, c-format
-msgid "Could not parse arguments: %s\n"
-msgstr "Не мога да направя разбор на аргументите: %s\n"
-
-#: ../src/app/main.c:202 ../src/xfce/main.c:238 ../src/xfce/main.c:253
-msgid "No input method is available"
-msgstr "Няма достъпен метод за въвеждане"
-
-#: ../src/app/main.c:205 ../src/xfce/main.c:241 ../src/xfce/main.c:256
-msgid "Unrecoverable error"
-msgstr "Невъзстановима грешка"
-
-#: ../src/app/main.c:216 ../src/xfce/main.c:266
-msgid "_Close"
-msgstr ""
-
-#: ../src/app/main.c:217 ../src/xfce/main.c:267
-msgid "_Log Out"
-msgstr ""
-
-#: ../src/app/main.c:229 ../src/xfce/main.c:279
-msgid "_OK"
-msgstr ""
-
-#: ../src/xfce/main.c:163
-msgid "Settings manager socket"
-msgstr "Socket на мениджъра за настройки"
-
-#: ../src/xfce/main.c:163
-msgid "SOCKET ID"
-msgstr "SOCKET ID"

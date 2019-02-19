@@ -12,8 +12,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-12 20:47+0900\n"
+"Report-Msgid-Bugs-To: https://pagure.io/im-chooser/issues\n"
+"POT-Creation-Date: 2019-02-19 06:28+0000\n"
 "PO-Revision-Date: 2016-04-02 05:43-0400\n"
 "Last-Translator: Eduardo Mayorga Téllez <e@mayorgalinux.com>\n"
 "Language-Team: Spanish (Castilian) <trans-es@lists.fedoraproject.org>\n"
@@ -24,161 +24,159 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
 "X-Generator: Zanata 3.9.6\n"
 
-#: ../libimchooseui/eggdesktopfile.c:165
-#, c-format
+#: libimchooseui/eggdesktopfile.c:165
 msgid "File is not a valid .desktop file"
 msgstr "El archivo no es un archivo .desktop válido"
 
 #. translators: 'Version' is from a desktop file, and
 #. * should not be translated. '%s' would probably be a
 #. * version number.
-#: ../libimchooseui/eggdesktopfile.c:191
+#: libimchooseui/eggdesktopfile.c:191
 #, c-format
 msgid "Unrecognized desktop file Version '%s'"
 msgstr "Versión «%s» de archivo de escritorio desconocida "
 
-#: ../libimchooseui/eggdesktopfile.c:974
+#: libimchooseui/eggdesktopfile.c:974
 #, c-format
 msgid "Starting %s"
 msgstr "Iniciando %s"
 
-#: ../libimchooseui/eggdesktopfile.c:1116
-#, c-format
+#: libimchooseui/eggdesktopfile.c:1116
 msgid "Application does not accept documents on command line"
 msgstr "La aplicación no acepta documentos en la línea de comandos"
 
-#: ../libimchooseui/eggdesktopfile.c:1184
+#: libimchooseui/eggdesktopfile.c:1184
 #, c-format
 msgid "Unrecognized launch option: %d"
 msgstr "Opción de inicio desconocida: %d"
 
 #. translators: The 'Type=Link' string is found in a
 #. * desktop file, and should not be translated.
-#: ../libimchooseui/eggdesktopfile.c:1391
-#, c-format
+#: libimchooseui/eggdesktopfile.c:1391
 msgid "Can't pass document URIs to a 'Type=Link' desktop entry"
 msgstr ""
 "No es posible pasar las URI del documento a una entrada de escritorio "
 "«Type=Link»"
 
-#: ../libimchooseui/eggdesktopfile.c:1412
-#, c-format
+#: libimchooseui/eggdesktopfile.c:1412
 msgid "Not a launchable item"
 msgstr "No es un elemento iniciable"
 
-#: ../libimchooseui/eggsmclient.c:226
+#: libimchooseui/eggsmclient.c:226
 msgid "Disable connection to session manager"
 msgstr "Desactivar la conexión al administrador de sesión"
 
-#: ../libimchooseui/eggsmclient.c:229
+#: libimchooseui/eggsmclient.c:229
 msgid "Specify file containing saved configuration"
 msgstr "Especificar el archivo que contiene la configuración almacenada "
 
-#: ../libimchooseui/eggsmclient.c:229
+#: libimchooseui/eggsmclient.c:229
 msgid "FILE"
 msgstr "ARCHIVO"
 
-#: ../libimchooseui/eggsmclient.c:232
+#: libimchooseui/eggsmclient.c:232
 msgid "Specify session management ID"
 msgstr "Especificar ID de administración de sesión"
 
-#: ../libimchooseui/eggsmclient.c:232
+#: libimchooseui/eggsmclient.c:232
 msgid "ID"
 msgstr "ID"
 
-#: ../libimchooseui/eggsmclient.c:253
+#: libimchooseui/eggsmclient.c:253
 msgid "Session management options:"
 msgstr "Opciones de administración de sesión:"
 
-#: ../libimchooseui/eggsmclient.c:254
+#: libimchooseui/eggsmclient.c:254
 msgid "Show session management options"
 msgstr "Mostrar opciones de administración de sesión"
 
-#: ../libimchooseui/imchoose.ui.h:1
+#: libimchooseui/imchoose.ui:8
 msgid "Work in progress..."
 msgstr "Trabajo en curso..."
 
-#: ../libimchooseui/imchoose.ui.h:2
+#: libimchooseui/imchoose.ui:45 libimchooseui/imchoose.ui:174
 msgid "label"
 msgstr "etiqueta"
 
-#: ../libimchooseui/imchoose.ui.h:3
+#: libimchooseui/imchoose.ui:193
 msgid "<b>Input Method</b>"
 msgstr "<b>Método de entrada</b>"
 
-#: ../libimchooseui/imchooseui.c:164
+#: libimchooseui/imchooseui.c:164
 msgid "No Input Method"
 msgstr "No hay un método de entrada"
 
-#: ../libimchooseui/imchooseui.c:166
+#: libimchooseui/imchooseui.c:166
 #, c-format
 msgid "Use %s"
 msgstr "Use %s"
 
-#: ../libimchooseui/imchooseui.c:173
+#: libimchooseui/imchooseui.c:173
 msgid " (legacy)"
 msgstr " (heredado)"
 
-#: ../libimchooseui/imchooseui.c:175
+#: libimchooseui/imchooseui.c:175
 msgid " (recommended)"
 msgstr " (recomendado)"
 
-#: ../libimchooseui/imchooseui.c:193
+#: libimchooseui/imchooseui.c:193
 #, c-format
 msgid "<a href=\"imsettings-prefs:///%s\">Preferences...</a>"
 msgstr "<a href=\"imsettings-prefs:///%s\">Preferences...</a>"
 
-#: ../libimchooseui/imchooseui.c:242
-#, c-format
+#: libimchooseui/imchooseui.c:242
 msgid "IMSettings is disabled on the system."
 msgstr "IMSettings está desactivado en el sistema."
 
-#: ../libimchooseui/imchooseui.c:247
-#, c-format
+#: libimchooseui/imchooseui.c:247
 msgid "Unable to create a client instance."
 msgstr "No se puede crear una instancia de cliente."
 
-#: ../libimchooseui/imchooseui.c:256
+#: libimchooseui/imchooseui.c:256
 #, c-format
 msgid "Unable to communicate to IMSettings service: %s"
 msgstr "No se puede comunicar con el servicio de IMSettings: %s"
 
-#: ../libimchooseui/imchooseui.c:332
-#, c-format
+#: libimchooseui/imchooseui.c:275
+msgid ""
+"Current desktop isn't supported. Please follow instructions on your desktop "
+"to enable Input Method."
+msgstr ""
+
+#: libimchooseui/imchooseui.c:341
 msgid "Please install any input methods before running if you like."
 msgstr "Instale cualquier método de entrada antes de ejecutarlo, si lo desea."
 
-#: ../libimchooseui/imchooseui.c:405
+#: libimchooseui/imchooseui.c:411
 msgid "Unable to get the information"
 msgstr "No se puede obtener la información"
 
-#: ../libimchooseui/imchooseui.c:418
+#: libimchooseui/imchooseui.c:424
 msgid "Unable to invoke the preference tool"
 msgstr "No se puede invocar la herramienta de preferencias"
 
-#: ../libimchooseui/imchooseui.c:439
+#: libimchooseui/imchooseui.c:445
 #, c-format
 msgid "Switching Input Method - %s"
 msgstr "Modificando método de entrada - %s"
 
-#: ../libimchooseui/imchooseui.c:461
-#, c-format
+#: libimchooseui/imchooseui.c:467
 msgid "Unknown error during finalizing the request of SwitchIM"
 msgstr "Error desconocido al finalizar el pedido de SwitchIM"
 
-#: ../libimchooseui/imchooseui.c:468
+#: libimchooseui/imchooseui.c:474
 msgid "Failed to switch Input Method"
 msgstr "Falló al modificar el método de entrada"
 
-#: ../libimchooseui/imchooseui.c:655
+#: libimchooseui/imchooseui.c:661
 msgid "X applications"
 msgstr "Aplicaciones X"
 
-#: ../libimchooseui/imchooseui.c:656
+#: libimchooseui/imchooseui.c:662
 msgid "GTK+ applications"
 msgstr "Aplicaciones GTK+"
 
-#: ../libimchooseui/imchooseui.c:657
+#: libimchooseui/imchooseui.c:663
 msgid "Qt applications"
 msgstr "Aplicaciones Qt"
 
@@ -188,8 +186,8 @@ msgstr "Aplicaciones Qt"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except X applications and Qt applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except X applications and GTK+ applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except GTK+ applications and Qt applications</i></small>"
-#: ../libimchooseui/imchooseui.c:665 ../libimchooseui/imchooseui.c:670
-#: ../libimchooseui/imchooseui.c:675
+#: libimchooseui/imchooseui.c:671 libimchooseui/imchooseui.c:676
+#: libimchooseui/imchooseui.c:681
 #, c-format
 msgid ", except %s and %s"
 msgstr ", excepto %s y %s"
@@ -200,15 +198,15 @@ msgstr ", excepto %s y %s"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except X applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except GTK+ applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except Qt applications</i></small>"
-#: ../libimchooseui/imchooseui.c:680 ../libimchooseui/imchooseui.c:684
-#: ../libimchooseui/imchooseui.c:688
+#: libimchooseui/imchooseui.c:686 libimchooseui/imchooseui.c:690
+#: libimchooseui/imchooseui.c:694
 #, c-format
 msgid ", except %s"
 msgstr ", excepto %s"
 
 # This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except GTK+ applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except GTK+ applications</i></small>"
-#: ../libimchooseui/imchooseui.c:694
+#: libimchooseui/imchooseui.c:700
 #, c-format
 msgid ""
 "<small><i>Note: this change will not take effect until your next log in%s</"
@@ -217,88 +215,88 @@ msgstr ""
 "<small><i>Nota: este cambio no surtirá efecto sino hasta el siguiente inicio "
 "de sesión%s</i></small>"
 
-#: ../libimchooseui/imchooseui.c:705
-#, c-format
+#: libimchooseui/imchooseui.c:711
 msgid "Unable to obtain the object for note"
 msgstr "No se puede obtener el objeto para la nota"
 
-#: ../libimchooseui/imchooseui.c:711
-#, c-format
+#: libimchooseui/imchooseui.c:717
 msgid "Unable to obtain the object for tree"
 msgstr "No se puede obtener el objeto para el árbol"
 
-#: ../libimchooseui/imchooseuicellrendererlabel.c:244
+#: libimchooseui/imchooseuicellrendererlabel.c:244
 msgid "Widget"
 msgstr "Asistente"
 
-#: ../libimchooseui/imchooseuicellrendererlabel.c:245
+#: libimchooseui/imchooseuicellrendererlabel.c:245
 msgid "Widget to contain in the cell"
 msgstr "Asistente para contener en la celda"
 
-#: ../libimchooseui/imchooseuicellrendererlabel.c:251
+#: libimchooseui/imchooseuicellrendererlabel.c:251
 msgid "Spacing"
 msgstr "Espaciado"
 
-#: ../libimchooseui/imchooseuicellrendererlabel.c:252
+#: libimchooseui/imchooseuicellrendererlabel.c:252
 msgid "The amount of space between label"
 msgstr "La cantidad de espacio entre etiquetas"
 
-#: ../src/app/im-chooser.desktop.in.in.h:1 ../src/app/main.c:212
-#: ../src/xfce/main.c:262 ../src/xfce/xfce4-im-chooser.desktop.in.in.h:1
+#: src/app/im-chooser.desktop:5 src/xfce/xfce4-im-chooser.desktop:87
+msgid "im-chooser"
+msgstr ""
+
+#: src/app/main.c:98
+#, c-format
+msgid "Please check <a href=\"file://%s\">%s</a> for more details"
+msgstr "Por favor consulte <a href=\"file://%s\">%s</a> para más detalles."
+
+#: src/app/main.c:146 src/xfce/main.c:140
+msgid "Could not connect to the session manager"
+msgstr "No se pudo conectar con el administrador de sesión"
+
+#: src/app/main.c:165 src/xfce/main.c:160
+msgid "[options...]"
+msgstr "[opciones...]"
+
+#: src/app/main.c:185 src/xfce/main.c:179
+#, c-format
+msgid "Could not parse arguments: %s\n"
+msgstr "No se pueden analizar argumentos: %s\n"
+
+#: src/app/main.c:202 src/xfce/main.c:238 src/xfce/main.c:253
+msgid "No input method is available"
+msgstr "No hay un método de entrada disponible"
+
+#: src/app/main.c:205 src/xfce/main.c:241 src/xfce/main.c:256
+msgid "Unrecoverable error"
+msgstr "Error irrecuperable"
+
+#: src/app/main.c:212 src/xfce/main.c:262 src/xfce/xfce4-im-chooser.desktop:6
 msgid "Input Method Selector"
 msgstr "Selector del método de entrada"
 
-#: ../src/app/im-chooser.desktop.in.in.h:2
-#: ../src/xfce/xfce4-im-chooser.desktop.in.in.h:2
+#: src/app/main.c:216 src/xfce/main.c:266
+msgid "_Close"
+msgstr ""
+
+#: src/app/main.c:217 src/xfce/main.c:267
+msgid "_Log Out"
+msgstr ""
+
+#: src/app/main.c:229 src/xfce/main.c:279
+msgid "_OK"
+msgstr ""
+
+#: src/xfce/main.c:163
+msgid "Settings manager socket"
+msgstr "Socket del gestor de configuraciones"
+
+#: src/xfce/main.c:163
+msgid "SOCKET ID"
+msgstr "ID DE SOCKET"
+
+#: src/xfce/xfce4-im-chooser.desktop:38
 msgid ""
 "Choose the input method to be used or disable the input method usage on the "
 "desktop"
 msgstr ""
 "Seleccione el método de entrada a utilizar o desactive los métodos de "
 "entrada en el escritorio."
-
-#: ../src/app/main.c:98
-#, c-format
-msgid "Please check <a href=\"file://%s\">%s</a> for more details"
-msgstr "Por favor consulte <a href=\"file://%s\">%s</a> para más detalles."
-
-#: ../src/app/main.c:146 ../src/xfce/main.c:140
-msgid "Could not connect to the session manager"
-msgstr "No se pudo conectar con el administrador de sesión"
-
-#: ../src/app/main.c:165 ../src/xfce/main.c:160
-msgid "[options...]"
-msgstr "[opciones...]"
-
-#: ../src/app/main.c:185 ../src/xfce/main.c:179
-#, c-format
-msgid "Could not parse arguments: %s\n"
-msgstr "No se pueden analizar argumentos: %s\n"
-
-#: ../src/app/main.c:202 ../src/xfce/main.c:238 ../src/xfce/main.c:253
-msgid "No input method is available"
-msgstr "No hay un método de entrada disponible"
-
-#: ../src/app/main.c:205 ../src/xfce/main.c:241 ../src/xfce/main.c:256
-msgid "Unrecoverable error"
-msgstr "Error irrecuperable"
-
-#: ../src/app/main.c:216 ../src/xfce/main.c:266
-msgid "_Close"
-msgstr ""
-
-#: ../src/app/main.c:217 ../src/xfce/main.c:267
-msgid "_Log Out"
-msgstr ""
-
-#: ../src/app/main.c:229 ../src/xfce/main.c:279
-msgid "_OK"
-msgstr ""
-
-#: ../src/xfce/main.c:163
-msgid "Settings manager socket"
-msgstr "Socket del gestor de configuraciones"
-
-#: ../src/xfce/main.c:163
-msgid "SOCKET ID"
-msgstr "ID DE SOCKET"

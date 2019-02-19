@@ -11,8 +11,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-12 20:47+0900\n"
+"Report-Msgid-Bugs-To: https://pagure.io/im-chooser/issues\n"
+"POT-Creation-Date: 2019-02-19 06:28+0000\n"
 "PO-Revision-Date: 2014-12-16 08:27-0500\n"
 "Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
 "Language-Team: Chinese (Taiwan) (http://www.transifex.net/projects/p/im-"
@@ -24,159 +24,157 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0\n"
 "X-Generator: Zanata 3.9.6\n"
 
-#: ../libimchooseui/eggdesktopfile.c:165
-#, c-format
+#: libimchooseui/eggdesktopfile.c:165
 msgid "File is not a valid .desktop file"
 msgstr "檔案不是正確的 .desktop 檔案格式"
 
 #. translators: 'Version' is from a desktop file, and
 #. * should not be translated. '%s' would probably be a
 #. * version number.
-#: ../libimchooseui/eggdesktopfile.c:191
+#: libimchooseui/eggdesktopfile.c:191
 #, c-format
 msgid "Unrecognized desktop file Version '%s'"
 msgstr "不能識別的 desktop 檔案版本 '%s'"
 
-#: ../libimchooseui/eggdesktopfile.c:974
+#: libimchooseui/eggdesktopfile.c:974
 #, c-format
 msgid "Starting %s"
 msgstr "正在開始 %s"
 
-#: ../libimchooseui/eggdesktopfile.c:1116
-#, c-format
+#: libimchooseui/eggdesktopfile.c:1116
 msgid "Application does not accept documents on command line"
 msgstr "應用程式不接受命令行上的文件"
 
-#: ../libimchooseui/eggdesktopfile.c:1184
+#: libimchooseui/eggdesktopfile.c:1184
 #, c-format
 msgid "Unrecognized launch option: %d"
 msgstr "不能識別的啟動選項: %d"
 
 #. translators: The 'Type=Link' string is found in a
 #. * desktop file, and should not be translated.
-#: ../libimchooseui/eggdesktopfile.c:1391
-#, c-format
+#: libimchooseui/eggdesktopfile.c:1391
 msgid "Can't pass document URIs to a 'Type=Link' desktop entry"
 msgstr "不能轉送文件 URI 到一個 'Type=Link' desktop 條目"
 
-#: ../libimchooseui/eggdesktopfile.c:1412
-#, c-format
+#: libimchooseui/eggdesktopfile.c:1412
 msgid "Not a launchable item"
 msgstr "不是一個可啟動物品"
 
-#: ../libimchooseui/eggsmclient.c:226
+#: libimchooseui/eggsmclient.c:226
 msgid "Disable connection to session manager"
 msgstr "關閉連接至作業階段管理員的連線"
 
-#: ../libimchooseui/eggsmclient.c:229
+#: libimchooseui/eggsmclient.c:229
 msgid "Specify file containing saved configuration"
 msgstr "指定包含設置紀錄的檔案"
 
-#: ../libimchooseui/eggsmclient.c:229
+#: libimchooseui/eggsmclient.c:229
 msgid "FILE"
 msgstr "FILE"
 
-#: ../libimchooseui/eggsmclient.c:232
+#: libimchooseui/eggsmclient.c:232
 msgid "Specify session management ID"
 msgstr "指定作業階段管理 ID"
 
-#: ../libimchooseui/eggsmclient.c:232
+#: libimchooseui/eggsmclient.c:232
 msgid "ID"
 msgstr "ID"
 
-#: ../libimchooseui/eggsmclient.c:253
+#: libimchooseui/eggsmclient.c:253
 msgid "Session management options:"
 msgstr "作業階段管理選項："
 
-#: ../libimchooseui/eggsmclient.c:254
+#: libimchooseui/eggsmclient.c:254
 msgid "Show session management options"
 msgstr "顯示作業階段管埋選項"
 
-#: ../libimchooseui/imchoose.ui.h:1
+#: libimchooseui/imchoose.ui:8
 msgid "Work in progress..."
 msgstr "正在處理中..."
 
-#: ../libimchooseui/imchoose.ui.h:2
+#: libimchooseui/imchoose.ui:45 libimchooseui/imchoose.ui:174
 msgid "label"
 msgstr "標籤"
 
-#: ../libimchooseui/imchoose.ui.h:3
+#: libimchooseui/imchoose.ui:193
 msgid "<b>Input Method</b>"
 msgstr "<b>輸入法</b>"
 
-#: ../libimchooseui/imchooseui.c:164
+#: libimchooseui/imchooseui.c:164
 msgid "No Input Method"
 msgstr "無輸入法"
 
-#: ../libimchooseui/imchooseui.c:166
+#: libimchooseui/imchooseui.c:166
 #, c-format
 msgid "Use %s"
 msgstr "使用 %s"
 
-#: ../libimchooseui/imchooseui.c:173
+#: libimchooseui/imchooseui.c:173
 msgid " (legacy)"
 msgstr " (不再維護)"
 
-#: ../libimchooseui/imchooseui.c:175
+#: libimchooseui/imchooseui.c:175
 msgid " (recommended)"
 msgstr " (建議)"
 
-#: ../libimchooseui/imchooseui.c:193
+#: libimchooseui/imchooseui.c:193
 #, c-format
 msgid "<a href=\"imsettings-prefs:///%s\">Preferences...</a>"
 msgstr "<a href=\"imsettings-prefs:///%s\">偏好設定...</a>"
 
-#: ../libimchooseui/imchooseui.c:242
-#, c-format
+#: libimchooseui/imchooseui.c:242
 msgid "IMSettings is disabled on the system."
 msgstr "IMSettings 已在系統上停用。"
 
-#: ../libimchooseui/imchooseui.c:247
-#, c-format
+#: libimchooseui/imchooseui.c:247
 msgid "Unable to create a client instance."
 msgstr "無法建立客戶端實體。"
 
-#: ../libimchooseui/imchooseui.c:256
+#: libimchooseui/imchooseui.c:256
 #, c-format
 msgid "Unable to communicate to IMSettings service: %s"
 msgstr "無法與 IMSettings 服務溝通：%s"
 
-#: ../libimchooseui/imchooseui.c:332
-#, c-format
+#: libimchooseui/imchooseui.c:275
+msgid ""
+"Current desktop isn't supported. Please follow instructions on your desktop "
+"to enable Input Method."
+msgstr ""
+
+#: libimchooseui/imchooseui.c:341
 msgid "Please install any input methods before running if you like."
 msgstr "請在執行前安裝任何您想要的輸入法。"
 
-#: ../libimchooseui/imchooseui.c:405
+#: libimchooseui/imchooseui.c:411
 msgid "Unable to get the information"
 msgstr "無法取得資訊"
 
-#: ../libimchooseui/imchooseui.c:418
+#: libimchooseui/imchooseui.c:424
 msgid "Unable to invoke the preference tool"
 msgstr "無法喚起偏好設定工具"
 
-#: ../libimchooseui/imchooseui.c:439
+#: libimchooseui/imchooseui.c:445
 #, c-format
 msgid "Switching Input Method - %s"
 msgstr "正在切換輸入法 - %s"
 
-#: ../libimchooseui/imchooseui.c:461
-#, c-format
+#: libimchooseui/imchooseui.c:467
 msgid "Unknown error during finalizing the request of SwitchIM"
 msgstr "終結 SwitchIM 請求時發生未知錯誤"
 
-#: ../libimchooseui/imchooseui.c:468
+#: libimchooseui/imchooseui.c:474
 msgid "Failed to switch Input Method"
 msgstr "無法切換輸入法"
 
-#: ../libimchooseui/imchooseui.c:655
+#: libimchooseui/imchooseui.c:661
 msgid "X applications"
 msgstr "X 應用程式"
 
-#: ../libimchooseui/imchooseui.c:656
+#: libimchooseui/imchooseui.c:662
 msgid "GTK+ applications"
 msgstr "GTK+ 應用程式"
 
-#: ../libimchooseui/imchooseui.c:657
+#: libimchooseui/imchooseui.c:663
 msgid "Qt applications"
 msgstr "Qt 應用程式"
 
@@ -186,8 +184,8 @@ msgstr "Qt 應用程式"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except X applications and Qt applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except X applications and GTK+ applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except GTK+ applications and Qt applications</i></small>"
-#: ../libimchooseui/imchooseui.c:665 ../libimchooseui/imchooseui.c:670
-#: ../libimchooseui/imchooseui.c:675
+#: libimchooseui/imchooseui.c:671 libimchooseui/imchooseui.c:676
+#: libimchooseui/imchooseui.c:681
 #, c-format
 msgid ", except %s and %s"
 msgstr "，除了 %s 和 %s"
@@ -198,101 +196,101 @@ msgstr "，除了 %s 和 %s"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except X applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except GTK+ applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except Qt applications</i></small>"
-#: ../libimchooseui/imchooseui.c:680 ../libimchooseui/imchooseui.c:684
-#: ../libimchooseui/imchooseui.c:688
+#: libimchooseui/imchooseui.c:686 libimchooseui/imchooseui.c:690
+#: libimchooseui/imchooseui.c:694
 #, c-format
 msgid ", except %s"
 msgstr "，除了 %s"
 
 # This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except GTK+ applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except GTK+ applications</i></small>"
-#: ../libimchooseui/imchooseui.c:694
+#: libimchooseui/imchooseui.c:700
 #, c-format
 msgid ""
 "<small><i>Note: this change will not take effect until your next log in%s</"
 "i></small>"
 msgstr "<small><i>註：這個變更直到您下次登入 %s 後才會生效</i></small>"
 
-#: ../libimchooseui/imchooseui.c:705
-#, c-format
+#: libimchooseui/imchooseui.c:711
 msgid "Unable to obtain the object for note"
 msgstr "無法取得 note 的物件"
 
-#: ../libimchooseui/imchooseui.c:711
-#, c-format
+#: libimchooseui/imchooseui.c:717
 msgid "Unable to obtain the object for tree"
 msgstr "無法取得 tree 的物件"
 
-#: ../libimchooseui/imchooseuicellrendererlabel.c:244
+#: libimchooseui/imchooseuicellrendererlabel.c:244
 msgid "Widget"
 msgstr "工具組"
 
-#: ../libimchooseui/imchooseuicellrendererlabel.c:245
+#: libimchooseui/imchooseuicellrendererlabel.c:245
 msgid "Widget to contain in the cell"
 msgstr "包含在巢格內的 Widget"
 
-#: ../libimchooseui/imchooseuicellrendererlabel.c:251
+#: libimchooseui/imchooseuicellrendererlabel.c:251
 msgid "Spacing"
 msgstr "間距"
 
-#: ../libimchooseui/imchooseuicellrendererlabel.c:252
+#: libimchooseui/imchooseuicellrendererlabel.c:252
 msgid "The amount of space between label"
 msgstr "標籤間的空間"
 
-#: ../src/app/im-chooser.desktop.in.in.h:1 ../src/app/main.c:212
-#: ../src/xfce/main.c:262 ../src/xfce/xfce4-im-chooser.desktop.in.in.h:1
-msgid "Input Method Selector"
-msgstr "輸入法選擇器"
+#: src/app/im-chooser.desktop:5 src/xfce/xfce4-im-chooser.desktop:87
+msgid "im-chooser"
+msgstr ""
 
-#: ../src/app/im-chooser.desktop.in.in.h:2
-#: ../src/xfce/xfce4-im-chooser.desktop.in.in.h:2
-msgid ""
-"Choose the input method to be used or disable the input method usage on the "
-"desktop"
-msgstr "請選擇欲使用的輸入法或是停用桌面環境所使用的輸入法"
-
-#: ../src/app/main.c:98
+#: src/app/main.c:98
 #, c-format
 msgid "Please check <a href=\"file://%s\">%s</a> for more details"
 msgstr ""
 
-#: ../src/app/main.c:146 ../src/xfce/main.c:140
+#: src/app/main.c:146 src/xfce/main.c:140
 msgid "Could not connect to the session manager"
 msgstr "無法連接至作業階段管理員"
 
-#: ../src/app/main.c:165 ../src/xfce/main.c:160
+#: src/app/main.c:165 src/xfce/main.c:160
 msgid "[options...]"
 msgstr "[選項...]"
 
-#: ../src/app/main.c:185 ../src/xfce/main.c:179
+#: src/app/main.c:185 src/xfce/main.c:179
 #, c-format
 msgid "Could not parse arguments: %s\n"
 msgstr "無法解析引數：%s\n"
 
-#: ../src/app/main.c:202 ../src/xfce/main.c:238 ../src/xfce/main.c:253
+#: src/app/main.c:202 src/xfce/main.c:238 src/xfce/main.c:253
 msgid "No input method is available"
 msgstr "沒有可用的輸入法"
 
-#: ../src/app/main.c:205 ../src/xfce/main.c:241 ../src/xfce/main.c:256
+#: src/app/main.c:205 src/xfce/main.c:241 src/xfce/main.c:256
 msgid "Unrecoverable error"
 msgstr "無法回復的錯誤"
 
-#: ../src/app/main.c:216 ../src/xfce/main.c:266
+#: src/app/main.c:212 src/xfce/main.c:262 src/xfce/xfce4-im-chooser.desktop:6
+msgid "Input Method Selector"
+msgstr "輸入法選擇器"
+
+#: src/app/main.c:216 src/xfce/main.c:266
 msgid "_Close"
 msgstr ""
 
-#: ../src/app/main.c:217 ../src/xfce/main.c:267
+#: src/app/main.c:217 src/xfce/main.c:267
 msgid "_Log Out"
 msgstr ""
 
-#: ../src/app/main.c:229 ../src/xfce/main.c:279
+#: src/app/main.c:229 src/xfce/main.c:279
 msgid "_OK"
 msgstr ""
 
-#: ../src/xfce/main.c:163
+#: src/xfce/main.c:163
 msgid "Settings manager socket"
 msgstr "設定值管理程式 socket"
 
-#: ../src/xfce/main.c:163
+#: src/xfce/main.c:163
 msgid "SOCKET ID"
 msgstr "SOCKET ID"
+
+#: src/xfce/xfce4-im-chooser.desktop:38
+msgid ""
+"Choose the input method to be used or disable the input method usage on the "
+"desktop"
+msgstr "請選擇欲使用的輸入法或是停用桌面環境所使用的輸入法"

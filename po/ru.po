@@ -9,8 +9,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-12 20:47+0900\n"
+"Report-Msgid-Bugs-To: https://pagure.io/im-chooser/issues\n"
+"POT-Creation-Date: 2019-02-19 06:28+0000\n"
 "PO-Revision-Date: 2016-03-20 08:05-0400\n"
 "Last-Translator: yuliya <ypoyarko@redhat.com>\n"
 "Language-Team: Russian (http://www.transifex.net/projects/p/im-chooser/team/"
@@ -23,159 +23,157 @@ msgstr ""
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
 "X-Generator: Zanata 3.9.6\n"
 
-#: ../libimchooseui/eggdesktopfile.c:165
-#, c-format
+#: libimchooseui/eggdesktopfile.c:165
 msgid "File is not a valid .desktop file"
 msgstr "Неверный файл .desktop"
 
 #. translators: 'Version' is from a desktop file, and
 #. * should not be translated. '%s' would probably be a
 #. * version number.
-#: ../libimchooseui/eggdesktopfile.c:191
+#: libimchooseui/eggdesktopfile.c:191
 #, c-format
 msgid "Unrecognized desktop file Version '%s'"
 msgstr "Неизвестная версия файла: %s"
 
-#: ../libimchooseui/eggdesktopfile.c:974
+#: libimchooseui/eggdesktopfile.c:974
 #, c-format
 msgid "Starting %s"
 msgstr "Запуск %s"
 
-#: ../libimchooseui/eggdesktopfile.c:1116
-#, c-format
+#: libimchooseui/eggdesktopfile.c:1116
 msgid "Application does not accept documents on command line"
 msgstr "Не принимает документы в командной строке"
 
-#: ../libimchooseui/eggdesktopfile.c:1184
+#: libimchooseui/eggdesktopfile.c:1184
 #, c-format
 msgid "Unrecognized launch option: %d"
 msgstr "Неизвестный параметр запуска: %d"
 
 #. translators: The 'Type=Link' string is found in a
 #. * desktop file, and should not be translated.
-#: ../libimchooseui/eggdesktopfile.c:1391
-#, c-format
+#: libimchooseui/eggdesktopfile.c:1391
 msgid "Can't pass document URIs to a 'Type=Link' desktop entry"
 msgstr "Невозможно передать URI записи \"Type=Link\""
 
-#: ../libimchooseui/eggdesktopfile.c:1412
-#, c-format
+#: libimchooseui/eggdesktopfile.c:1412
 msgid "Not a launchable item"
 msgstr "Неисполняемый элемент"
 
-#: ../libimchooseui/eggsmclient.c:226
+#: libimchooseui/eggsmclient.c:226
 msgid "Disable connection to session manager"
 msgstr "Отменить подключение к менеджеру сеансов"
 
-#: ../libimchooseui/eggsmclient.c:229
+#: libimchooseui/eggsmclient.c:229
 msgid "Specify file containing saved configuration"
 msgstr "Выберите файл с настройками"
 
-#: ../libimchooseui/eggsmclient.c:229
+#: libimchooseui/eggsmclient.c:229
 msgid "FILE"
 msgstr "Файл"
 
-#: ../libimchooseui/eggsmclient.c:232
+#: libimchooseui/eggsmclient.c:232
 msgid "Specify session management ID"
 msgstr "Выберите ID управления сеансом"
 
-#: ../libimchooseui/eggsmclient.c:232
+#: libimchooseui/eggsmclient.c:232
 msgid "ID"
 msgstr "ID"
 
-#: ../libimchooseui/eggsmclient.c:253
+#: libimchooseui/eggsmclient.c:253
 msgid "Session management options:"
 msgstr "Параметры управления сеансом:"
 
-#: ../libimchooseui/eggsmclient.c:254
+#: libimchooseui/eggsmclient.c:254
 msgid "Show session management options"
 msgstr "Показать параметры управления сеансом"
 
-#: ../libimchooseui/imchoose.ui.h:1
+#: libimchooseui/imchoose.ui:8
 msgid "Work in progress..."
 msgstr "Выполняется..."
 
-#: ../libimchooseui/imchoose.ui.h:2
+#: libimchooseui/imchoose.ui:45 libimchooseui/imchoose.ui:174
 msgid "label"
 msgstr "метка"
 
-#: ../libimchooseui/imchoose.ui.h:3
+#: libimchooseui/imchoose.ui:193
 msgid "<b>Input Method</b>"
 msgstr "<b>Метод ввода</b>"
 
-#: ../libimchooseui/imchooseui.c:164
+#: libimchooseui/imchooseui.c:164
 msgid "No Input Method"
 msgstr "Нет метода ввода"
 
-#: ../libimchooseui/imchooseui.c:166
+#: libimchooseui/imchooseui.c:166
 #, c-format
 msgid "Use %s"
 msgstr "Использовать %s"
 
-#: ../libimchooseui/imchooseui.c:173
+#: libimchooseui/imchooseui.c:173
 msgid " (legacy)"
 msgstr " (устаревший)"
 
-#: ../libimchooseui/imchooseui.c:175
+#: libimchooseui/imchooseui.c:175
 msgid " (recommended)"
 msgstr " (рекомендуется)"
 
-#: ../libimchooseui/imchooseui.c:193
+#: libimchooseui/imchooseui.c:193
 #, c-format
 msgid "<a href=\"imsettings-prefs:///%s\">Preferences...</a>"
 msgstr "<a href=\"imsettings-prefs:///%s\">Параметры...</a>"
 
-#: ../libimchooseui/imchooseui.c:242
-#, c-format
+#: libimchooseui/imchooseui.c:242
 msgid "IMSettings is disabled on the system."
 msgstr "Функции IMSettings отключены."
 
-#: ../libimchooseui/imchooseui.c:247
-#, c-format
+#: libimchooseui/imchooseui.c:247
 msgid "Unable to create a client instance."
 msgstr "Не удалось создать экземпляр клиента."
 
-#: ../libimchooseui/imchooseui.c:256
+#: libimchooseui/imchooseui.c:256
 #, c-format
 msgid "Unable to communicate to IMSettings service: %s"
 msgstr "Не удалось связаться с IMSettings: %s"
 
-#: ../libimchooseui/imchooseui.c:332
-#, c-format
+#: libimchooseui/imchooseui.c:275
+msgid ""
+"Current desktop isn't supported. Please follow instructions on your desktop "
+"to enable Input Method."
+msgstr ""
+
+#: libimchooseui/imchooseui.c:341
 msgid "Please install any input methods before running if you like."
 msgstr "Сначала установите методы ввода."
 
-#: ../libimchooseui/imchooseui.c:405
+#: libimchooseui/imchooseui.c:411
 msgid "Unable to get the information"
 msgstr "Ошибка получения информации"
 
-#: ../libimchooseui/imchooseui.c:418
+#: libimchooseui/imchooseui.c:424
 msgid "Unable to invoke the preference tool"
 msgstr "Ошибка вызова утилиты настройки"
 
-#: ../libimchooseui/imchooseui.c:439
+#: libimchooseui/imchooseui.c:445
 #, c-format
 msgid "Switching Input Method - %s"
 msgstr "Изменение метода ввода: %s"
 
-#: ../libimchooseui/imchooseui.c:461
-#, c-format
+#: libimchooseui/imchooseui.c:467
 msgid "Unknown error during finalizing the request of SwitchIM"
 msgstr "Неизвестная ошибка при обработке запроса SwitchIM"
 
-#: ../libimchooseui/imchooseui.c:468
+#: libimchooseui/imchooseui.c:474
 msgid "Failed to switch Input Method"
 msgstr "Не удалось изменить метод ввода"
 
-#: ../libimchooseui/imchooseui.c:655
+#: libimchooseui/imchooseui.c:661
 msgid "X applications"
 msgstr "приложений X"
 
-#: ../libimchooseui/imchooseui.c:656
+#: libimchooseui/imchooseui.c:662
 msgid "GTK+ applications"
 msgstr "приложений GTK+ "
 
-#: ../libimchooseui/imchooseui.c:657
+#: libimchooseui/imchooseui.c:663
 msgid "Qt applications"
 msgstr "приложений Qt"
 
@@ -185,8 +183,8 @@ msgstr "приложений Qt"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except X applications and Qt applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except X applications and GTK+ applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except GTK+ applications and Qt applications</i></small>"
-#: ../libimchooseui/imchooseui.c:665 ../libimchooseui/imchooseui.c:670
-#: ../libimchooseui/imchooseui.c:675
+#: libimchooseui/imchooseui.c:671 libimchooseui/imchooseui.c:676
+#: libimchooseui/imchooseui.c:681
 #, c-format
 msgid ", except %s and %s"
 msgstr " за исключением %s и %s"
@@ -197,15 +195,15 @@ msgstr " за исключением %s и %s"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except X applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except GTK+ applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except Qt applications</i></small>"
-#: ../libimchooseui/imchooseui.c:680 ../libimchooseui/imchooseui.c:684
-#: ../libimchooseui/imchooseui.c:688
+#: libimchooseui/imchooseui.c:686 libimchooseui/imchooseui.c:690
+#: libimchooseui/imchooseui.c:694
 #, c-format
 msgid ", except %s"
 msgstr " за исключением %s"
 
 # This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except GTK+ applications</i></small>"
 #. This will be displayed like "<small><i>Note: this change will not take effect until your next log in, except GTK+ applications</i></small>"
-#: ../libimchooseui/imchooseui.c:694
+#: libimchooseui/imchooseui.c:700
 #, c-format
 msgid ""
 "<small><i>Note: this change will not take effect until your next log in%s</"
@@ -213,86 +211,86 @@ msgid ""
 msgstr ""
 "<small><i>Изменения вступят в силу после следующего входа в %s</i></small>"
 
-#: ../libimchooseui/imchooseui.c:705
-#, c-format
+#: libimchooseui/imchooseui.c:711
 msgid "Unable to obtain the object for note"
 msgstr "Не удалось получить объект примечания"
 
-#: ../libimchooseui/imchooseui.c:711
-#, c-format
+#: libimchooseui/imchooseui.c:717
 msgid "Unable to obtain the object for tree"
 msgstr "Не удалось получить объект дерева"
 
-#: ../libimchooseui/imchooseuicellrendererlabel.c:244
+#: libimchooseui/imchooseuicellrendererlabel.c:244
 msgid "Widget"
 msgstr "Виджет"
 
-#: ../libimchooseui/imchooseuicellrendererlabel.c:245
+#: libimchooseui/imchooseuicellrendererlabel.c:245
 msgid "Widget to contain in the cell"
 msgstr "Виджет для включения в ячейку"
 
-#: ../libimchooseui/imchooseuicellrendererlabel.c:251
+#: libimchooseui/imchooseuicellrendererlabel.c:251
 msgid "Spacing"
 msgstr "Пробелы"
 
-#: ../libimchooseui/imchooseuicellrendererlabel.c:252
+#: libimchooseui/imchooseuicellrendererlabel.c:252
 msgid "The amount of space between label"
 msgstr "Число пробелов между метками"
 
-#: ../src/app/im-chooser.desktop.in.in.h:1 ../src/app/main.c:212
-#: ../src/xfce/main.c:262 ../src/xfce/xfce4-im-chooser.desktop.in.in.h:1
-msgid "Input Method Selector"
-msgstr "Метод ввода"
+#: src/app/im-chooser.desktop:5 src/xfce/xfce4-im-chooser.desktop:87
+msgid "im-chooser"
+msgstr ""
 
-#: ../src/app/im-chooser.desktop.in.in.h:2
-#: ../src/xfce/xfce4-im-chooser.desktop.in.in.h:2
-msgid ""
-"Choose the input method to be used or disable the input method usage on the "
-"desktop"
-msgstr "Выберите метод ввода или отключите его использование на рабочем столе"
-
-#: ../src/app/main.c:98
+#: src/app/main.c:98
 #, c-format
 msgid "Please check <a href=\"file://%s\">%s</a> for more details"
 msgstr "За дальнейшей информацией обратитесь к <a href=\"file://%s\">%s</a>"
 
-#: ../src/app/main.c:146 ../src/xfce/main.c:140
+#: src/app/main.c:146 src/xfce/main.c:140
 msgid "Could not connect to the session manager"
 msgstr "Ошибка подключения к менеджеру сеанса"
 
-#: ../src/app/main.c:165 ../src/xfce/main.c:160
+#: src/app/main.c:165 src/xfce/main.c:160
 msgid "[options...]"
 msgstr "[параметры...]"
 
-#: ../src/app/main.c:185 ../src/xfce/main.c:179
+#: src/app/main.c:185 src/xfce/main.c:179
 #, c-format
 msgid "Could not parse arguments: %s\n"
 msgstr "Ошибка разбора аргументов: %s\n"
 
-#: ../src/app/main.c:202 ../src/xfce/main.c:238 ../src/xfce/main.c:253
+#: src/app/main.c:202 src/xfce/main.c:238 src/xfce/main.c:253
 msgid "No input method is available"
 msgstr "Нет методов ввода"
 
-#: ../src/app/main.c:205 ../src/xfce/main.c:241 ../src/xfce/main.c:256
+#: src/app/main.c:205 src/xfce/main.c:241 src/xfce/main.c:256
 msgid "Unrecoverable error"
 msgstr "Критическая ошибка"
 
-#: ../src/app/main.c:216 ../src/xfce/main.c:266
+#: src/app/main.c:212 src/xfce/main.c:262 src/xfce/xfce4-im-chooser.desktop:6
+msgid "Input Method Selector"
+msgstr "Метод ввода"
+
+#: src/app/main.c:216 src/xfce/main.c:266
 msgid "_Close"
 msgstr ""
 
-#: ../src/app/main.c:217 ../src/xfce/main.c:267
+#: src/app/main.c:217 src/xfce/main.c:267
 msgid "_Log Out"
 msgstr ""
 
-#: ../src/app/main.c:229 ../src/xfce/main.c:279
+#: src/app/main.c:229 src/xfce/main.c:279
 msgid "_OK"
 msgstr ""
 
-#: ../src/xfce/main.c:163
+#: src/xfce/main.c:163
 msgid "Settings manager socket"
 msgstr "Сокет менеджера настроек"
 
-#: ../src/xfce/main.c:163
+#: src/xfce/main.c:163
 msgid "SOCKET ID"
 msgstr "ID сокета"
+
+#: src/xfce/xfce4-im-chooser.desktop:38
+msgid ""
+"Choose the input method to be used or disable the input method usage on the "
+"desktop"
+msgstr "Выберите метод ввода или отключите его использование на рабочем столе"
