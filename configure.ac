@@ -1,5 +1,5 @@
 dnl Process this file with autoconf to produce a configure script.
-AC_INIT([im-chooser], 1.7.1, [https://bugzilla.redhat.com/enter_bug.cgi?product=Fedora&component=im-chooser])
+AC_INIT([im-chooser], 1.7.1, [https://pagure.io/im-chooser/issues])
 
 . `dirname $0`/requires
 
@@ -11,6 +11,7 @@ m4_ifdef([AM_SILENT_RULES], [AM_SILENT_RULES([yes])])
 
 AM_MAINTAINER_MODE
 AC_CONFIG_HEADERS([config.h])
+AC_CONFIG_MACRO_DIRS([m4])
 
 AX_CHECK_ENABLE_DEBUG
 AM_CONDITIONAL(ENABLE_DEBUG, test $ax_enable_debug = yes)
@@ -18,14 +19,10 @@ AM_CONDITIONAL(ENABLE_DEBUG, test $ax_enable_debug = yes)
 LT_PREREQ([2.2])
 LT_INIT([disable-static])
 
-AC_PROG_INTLTOOL
 AC_PROG_CC
 
 GNOME_COMPILE_WARNINGS
 GNOME_CXX_WARNINGS
-
-GNOME_COMMON_INIT
-GNOME_MAINTAINER_MODE_DEFINES
 
 dnl ======================================================================
 dnl define variables
@@ -44,7 +41,8 @@ GETTEXT_PACKAGE=$PACKAGE
 AC_SUBST(GETTEXT_PACKAGE)
 AC_DEFINE_UNQUOTED(GETTEXT_PACKAGE, "$GETTEXT_PACKAGE", [Gettext package])
 
-AM_GLIB_GNU_GETTEXT
+AM_GNU_GETTEXT_VERSION([0.19.8])
+AM_GNU_GETTEXT([external])
 
 dnl ======================================================================
 dnl check pkg-config stuff

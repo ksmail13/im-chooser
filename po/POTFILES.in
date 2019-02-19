@@ -1,9 +1,9 @@
 libimchooseui/eggdesktopfile.c
 libimchooseui/eggsmclient.c
-[type: gettext/glade]libimchooseui/imchoose.ui
+libimchooseui/imchoose.ui
 libimchooseui/imchooseui.c
 libimchooseui/imchooseuicellrendererlabel.c
-src/app/im-chooser.desktop.in.in
+src/app/im-chooser.desktop
 src/app/main.c
 src/xfce/main.c
-src/xfce/xfce4-im-chooser.desktop.in.in
+src/xfce/xfce4-im-chooser.desktop
