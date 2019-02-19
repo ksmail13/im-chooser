@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: https://pagure.io/im-chooser/issues\n"
-"POT-Creation-Date: 2019-02-19 06:28+0000\n"
+"POT-Creation-Date: 2019-02-19 06:48+0000\n"
 "PO-Revision-Date: 2014-12-16 08:24-0500\n"
 "Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -233,7 +233,19 @@ msgstr "സ്പെയിസിങ്"
 msgid "The amount of space between label"
 msgstr "ലേബലിനിടയിലുള്ള സ്ഥലം"
 
-#: src/app/im-chooser.desktop:5 src/xfce/xfce4-im-chooser.desktop:87
+#: src/app/im-chooser.desktop:35 src/app/main.c:212 src/xfce/main.c:262
+#: src/xfce/xfce4-im-chooser.desktop:37
+msgid "Input Method Selector"
+msgstr "ഇന്‍പുട്ട് രീതി തെരഞ്ഞെടുക്കുന്നതിനുള്ള പ്രയോഗം"
+
+#: src/app/im-chooser.desktop:83 src/xfce/xfce4-im-chooser.desktop:85
+msgid ""
+"Choose the input method to be used or disable the input method usage on the "
+"desktop"
+msgstr ""
+"ഡസ്ക്ടോപ്പില്‍ ഏത് ഇന്‍പുട്ട് രീതി ഉപയോഗിക്കണം അല്ലെങ്കില്‍ ഏത് നിര്‍ജ്ജീവമാക്കണം എന്ന് തിരഞ്ഞെടുക്കുക"
+
+#: src/app/im-chooser.desktop:85 src/xfce/xfce4-im-chooser.desktop:87
 msgid "im-chooser"
 msgstr ""
 
@@ -263,10 +275,6 @@ msgstr "ഇന്‍പുട്ട് രീതി ലഭ്യമല്ല"
 msgid "Unrecoverable error"
 msgstr "തിരുത്തുവാന്‍ സാധ്യമല്ലാത്ത പിശക്"
 
-#: src/app/main.c:212 src/xfce/main.c:262 src/xfce/xfce4-im-chooser.desktop:6
-msgid "Input Method Selector"
-msgstr "ഇന്‍പുട്ട് രീതി തെരഞ്ഞെടുക്കുന്നതിനുള്ള പ്രയോഗം"
-
 #: src/app/main.c:216 src/xfce/main.c:266
 msgid "_Close"
 msgstr ""
@@ -286,10 +294,3 @@ msgstr "മാനേജറിനുള്ള സോക്കറ്റ് സജ�
 #: src/xfce/main.c:163
 msgid "SOCKET ID"
 msgstr "സോക്കറ്റ് ഐഡി"
-
-#: src/xfce/xfce4-im-chooser.desktop:38
-msgid ""
-"Choose the input method to be used or disable the input method usage on the "
-"desktop"
-msgstr ""
-"ഡസ്ക്ടോപ്പില്‍ ഏത് ഇന്‍പുട്ട് രീതി ഉപയോഗിക്കണം അല്ലെങ്കില്‍ ഏത് നിര്‍ജ്ജീവമാക്കണം എന്ന് തിരഞ്ഞെടുക്കുക"

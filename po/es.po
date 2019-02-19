@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: https://pagure.io/im-chooser/issues\n"
-"POT-Creation-Date: 2019-02-19 06:28+0000\n"
+"POT-Creation-Date: 2019-02-19 06:48+0000\n"
 "PO-Revision-Date: 2016-04-02 05:43-0400\n"
 "Last-Translator: Eduardo Mayorga Téllez <e@mayorgalinux.com>\n"
 "Language-Team: Spanish (Castilian) <trans-es@lists.fedoraproject.org>\n"
@@ -239,7 +239,20 @@ msgstr "Espaciado"
 msgid "The amount of space between label"
 msgstr "La cantidad de espacio entre etiquetas"
 
-#: src/app/im-chooser.desktop:5 src/xfce/xfce4-im-chooser.desktop:87
+#: src/app/im-chooser.desktop:35 src/app/main.c:212 src/xfce/main.c:262
+#: src/xfce/xfce4-im-chooser.desktop:37
+msgid "Input Method Selector"
+msgstr "Selector del método de entrada"
+
+#: src/app/im-chooser.desktop:83 src/xfce/xfce4-im-chooser.desktop:85
+msgid ""
+"Choose the input method to be used or disable the input method usage on the "
+"desktop"
+msgstr ""
+"Seleccione el método de entrada a utilizar o desactive los métodos de "
+"entrada en el escritorio."
+
+#: src/app/im-chooser.desktop:85 src/xfce/xfce4-im-chooser.desktop:87
 msgid "im-chooser"
 msgstr ""
 
@@ -269,10 +282,6 @@ msgstr "No hay un método de entrada disponible"
 msgid "Unrecoverable error"
 msgstr "Error irrecuperable"
 
-#: src/app/main.c:212 src/xfce/main.c:262 src/xfce/xfce4-im-chooser.desktop:6
-msgid "Input Method Selector"
-msgstr "Selector del método de entrada"
-
 #: src/app/main.c:216 src/xfce/main.c:266
 msgid "_Close"
 msgstr ""
@@ -292,11 +301,3 @@ msgstr "Socket del gestor de configuraciones"
 #: src/xfce/main.c:163
 msgid "SOCKET ID"
 msgstr "ID DE SOCKET"
-
-#: src/xfce/xfce4-im-chooser.desktop:38
-msgid ""
-"Choose the input method to be used or disable the input method usage on the "
-"desktop"
-msgstr ""
-"Seleccione el método de entrada a utilizar o desactive los métodos de "
-"entrada en el escritorio."

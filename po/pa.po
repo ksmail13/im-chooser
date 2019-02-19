@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: https://pagure.io/im-chooser/issues\n"
-"POT-Creation-Date: 2019-02-19 06:28+0000\n"
+"POT-Creation-Date: 2019-02-19 06:48+0000\n"
 "PO-Revision-Date: 2014-12-16 08:25-0500\n"
 "Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
 "Language-Team: Panjabi (Punjabi) (http://www.transifex.net/projects/p/im-"
@@ -236,7 +236,18 @@ msgstr "ਦੂਰੀ"
 msgid "The amount of space between label"
 msgstr "ਲੇਬਲ ਵਿੱਚ ਦੂਰੀ ਦੀ ਮਾਤਰਾ"
 
-#: src/app/im-chooser.desktop:5 src/xfce/xfce4-im-chooser.desktop:87
+#: src/app/im-chooser.desktop:35 src/app/main.c:212 src/xfce/main.c:262
+#: src/xfce/xfce4-im-chooser.desktop:37
+msgid "Input Method Selector"
+msgstr "ਇੰਪੁੱਟ ਢੰਗ ਚੋਣਕਾਰ"
+
+#: src/app/im-chooser.desktop:83 src/xfce/xfce4-im-chooser.desktop:85
+msgid ""
+"Choose the input method to be used or disable the input method usage on the "
+"desktop"
+msgstr "ਵਰਤਣ ਲਈ ਇੰਪੁੱਟ ਢੰਗ ਚੁਣੋ ਜਾਂ ਡੈਸਕਟਾਪ ਵਾਸਤੇ ਇੰਪੁੱਟ ਢੰਗ ਦੀ ਵਰਤੋਂ ਨੂੰ ਅਯੋਗ ਕਰੋ।"
+
+#: src/app/im-chooser.desktop:85 src/xfce/xfce4-im-chooser.desktop:87
 msgid "im-chooser"
 msgstr ""
 
@@ -266,10 +277,6 @@ msgstr "ਕੋਈ ਇੰਪੁੱਟ ਢੰਗ ਉਪਲੱਬਧ ਨਹੀਂ �
 msgid "Unrecoverable error"
 msgstr "ਨਾ-ਸੋਧਣ ਯੋਗ ਗਲਤੀ"
 
-#: src/app/main.c:212 src/xfce/main.c:262 src/xfce/xfce4-im-chooser.desktop:6
-msgid "Input Method Selector"
-msgstr "ਇੰਪੁੱਟ ਢੰਗ ਚੋਣਕਾਰ"
-
 #: src/app/main.c:216 src/xfce/main.c:266
 msgid "_Close"
 msgstr ""
@@ -289,9 +296,3 @@ msgstr "ਸੈਟਿੰਗ ਮੈਨੇਜਰ ਸਾਕਟ"
 #: src/xfce/main.c:163
 msgid "SOCKET ID"
 msgstr "SOCKET ID"
-
-#: src/xfce/xfce4-im-chooser.desktop:38
-msgid ""
-"Choose the input method to be used or disable the input method usage on the "
-"desktop"
-msgstr "ਵਰਤਣ ਲਈ ਇੰਪੁੱਟ ਢੰਗ ਚੁਣੋ ਜਾਂ ਡੈਸਕਟਾਪ ਵਾਸਤੇ ਇੰਪੁੱਟ ਢੰਗ ਦੀ ਵਰਤੋਂ ਨੂੰ ਅਯੋਗ ਕਰੋ।"

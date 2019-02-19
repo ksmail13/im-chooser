@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: https://pagure.io/im-chooser/issues\n"
-"POT-Creation-Date: 2019-02-19 06:28+0000\n"
+"POT-Creation-Date: 2019-02-19 06:48+0000\n"
 "PO-Revision-Date: 2014-12-16 08:26-0500\n"
 "Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
 "Language-Team: Telugu (http://www.transifex.net/projects/p/im-chooser/team/"
@@ -230,7 +230,19 @@ msgstr "క్రమాంతరీకరణ(స్పేసింగ్)"
 msgid "The amount of space between label"
 msgstr "లేబుల్ మద్యన ఖాళీ పరిమాణం"
 
-#: src/app/im-chooser.desktop:5 src/xfce/xfce4-im-chooser.desktop:87
+#: src/app/im-chooser.desktop:35 src/app/main.c:212 src/xfce/main.c:262
+#: src/xfce/xfce4-im-chooser.desktop:37
+msgid "Input Method Selector"
+msgstr "ఇన్పుట్ పద్ధతి యెంపిక"
+
+#: src/app/im-chooser.desktop:83 src/xfce/xfce4-im-chooser.desktop:85
+msgid ""
+"Choose the input method to be used or disable the input method usage on the "
+"desktop"
+msgstr ""
+"ఉపయోగించుటకు ఇన్‌పుట్ పద్దతిని ఎంచుకొనుము లేదా ఇన్‌పుట్ పద్దతి ఉపయోగాన్ని డెస్క్‍‌టాప్ పైన అచేతనం చేయుము"
+
+#: src/app/im-chooser.desktop:85 src/xfce/xfce4-im-chooser.desktop:87
 msgid "im-chooser"
 msgstr ""
 
@@ -260,10 +272,6 @@ msgstr "ఏ యిన్పుట్ పద్ధతి అందుబాటు
 msgid "Unrecoverable error"
 msgstr "కోలుకోలేని దోషం"
 
-#: src/app/main.c:212 src/xfce/main.c:262 src/xfce/xfce4-im-chooser.desktop:6
-msgid "Input Method Selector"
-msgstr "ఇన్పుట్ పద్ధతి యెంపిక"
-
 #: src/app/main.c:216 src/xfce/main.c:266
 msgid "_Close"
 msgstr ""
@@ -283,10 +291,3 @@ msgstr "అమరికల నిర్వాహిక సాకెట్"
 #: src/xfce/main.c:163
 msgid "SOCKET ID"
 msgstr "సాకెట్ ఐడి"
-
-#: src/xfce/xfce4-im-chooser.desktop:38
-msgid ""
-"Choose the input method to be used or disable the input method usage on the "
-"desktop"
-msgstr ""
-"ఉపయోగించుటకు ఇన్‌పుట్ పద్దతిని ఎంచుకొనుము లేదా ఇన్‌పుట్ పద్దతి ఉపయోగాన్ని డెస్క్‍‌టాప్ పైన అచేతనం చేయుము"

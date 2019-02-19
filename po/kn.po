@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: https://pagure.io/im-chooser/issues\n"
-"POT-Creation-Date: 2019-02-19 06:28+0000\n"
+"POT-Creation-Date: 2019-02-19 06:48+0000\n"
 "PO-Revision-Date: 2014-12-16 08:24-0500\n"
 "Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -234,7 +234,20 @@ msgstr "ಅಂತರ"
 msgid "The amount of space between label"
 msgstr "ಲೇಬಲ್‌ಗಳ ನಡುವಿನ ಅಂತರದ ಪ್ರಮಾಣ"
 
-#: src/app/im-chooser.desktop:5 src/xfce/xfce4-im-chooser.desktop:87
+#: src/app/im-chooser.desktop:35 src/app/main.c:212 src/xfce/main.c:262
+#: src/xfce/xfce4-im-chooser.desktop:37
+msgid "Input Method Selector"
+msgstr "ಇನ್‌ಪುಟ್ ವಿಧಾನ ಆಯ್ಕೆಗಾರ"
+
+#: src/app/im-chooser.desktop:83 src/xfce/xfce4-im-chooser.desktop:85
+msgid ""
+"Choose the input method to be used or disable the input method usage on the "
+"desktop"
+msgstr ""
+"ಗಣಕ ಪರದೆಯ ಬಳಕೆಗೆ, ಆದಾನಕ್ರಮವನ್ನು ಉಪಯೋಗಿಸಬೇಕೆ ಅಥವಾ ನಿಷ್ಕ್ರಿಯಗೊಳಿಸ ಬೇಕೆ ಎಂಬುದನ್ನು "
+"ಆಯ್ಕೆಮಾಡಿ"
+
+#: src/app/im-chooser.desktop:85 src/xfce/xfce4-im-chooser.desktop:87
 msgid "im-chooser"
 msgstr ""
 
@@ -264,10 +277,6 @@ msgstr "ಯಾವುದೆ ಇನ್‌ಪುಟ್ ವಿಧಾನವು ಲಭ
 msgid "Unrecoverable error"
 msgstr "ಸರಿಪಡಿಸಲಾಗದೆ ಇರುವ ದೋಷ"
 
-#: src/app/main.c:212 src/xfce/main.c:262 src/xfce/xfce4-im-chooser.desktop:6
-msgid "Input Method Selector"
-msgstr "ಇನ್‌ಪುಟ್ ವಿಧಾನ ಆಯ್ಕೆಗಾರ"
-
 #: src/app/main.c:216 src/xfce/main.c:266
 msgid "_Close"
 msgstr ""
@@ -287,11 +296,3 @@ msgstr "ಸಿದ್ಧತೆಗಳ ವ್ಯವಸ್ಥಾಪಕ ಸಾಕೆ�
 #: src/xfce/main.c:163
 msgid "SOCKET ID"
 msgstr "SOCKET ID"
-
-#: src/xfce/xfce4-im-chooser.desktop:38
-msgid ""
-"Choose the input method to be used or disable the input method usage on the "
-"desktop"
-msgstr ""
-"ಗಣಕ ಪರದೆಯ ಬಳಕೆಗೆ, ಆದಾನಕ್ರಮವನ್ನು ಉಪಯೋಗಿಸಬೇಕೆ ಅಥವಾ ನಿಷ್ಕ್ರಿಯಗೊಳಿಸ ಬೇಕೆ ಎಂಬುದನ್ನು "
-"ಆಯ್ಕೆಮಾಡಿ"

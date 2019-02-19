@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: https://pagure.io/im-chooser/issues\n"
-"POT-Creation-Date: 2019-02-19 06:28+0000\n"
+"POT-Creation-Date: 2019-02-19 06:48+0000\n"
 "PO-Revision-Date: 2014-12-16 08:23-0500\n"
 "Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
 "Language-Team: Hindi (http://www.transifex.net/projects/p/im-chooser/team/"
@@ -232,7 +232,20 @@ msgstr "अंतरण"
 msgid "The amount of space between label"
 msgstr "लेबल के बीच में स्थान की मात्रा"
 
-#: src/app/im-chooser.desktop:5 src/xfce/xfce4-im-chooser.desktop:87
+#: src/app/im-chooser.desktop:35 src/app/main.c:212 src/xfce/main.c:262
+#: src/xfce/xfce4-im-chooser.desktop:37
+msgid "Input Method Selector"
+msgstr "इनपुट विधि चयनक"
+
+#: src/app/im-chooser.desktop:83 src/xfce/xfce4-im-chooser.desktop:85
+msgid ""
+"Choose the input method to be used or disable the input method usage on the "
+"desktop"
+msgstr ""
+"इनपुट विधि को प्रयोग किये जाने के लिये चुनें या डेस्कटॉप पर इनपुट विधि प्रयोग को निष्क्रिय "
+"करें"
+
+#: src/app/im-chooser.desktop:85 src/xfce/xfce4-im-chooser.desktop:87
 msgid "im-chooser"
 msgstr ""
 
@@ -262,10 +275,6 @@ msgstr "कोई इनपुट विधि उपलब्ध नहीं �
 msgid "Unrecoverable error"
 msgstr "न रिकवरी योग्य त्रुटि"
 
-#: src/app/main.c:212 src/xfce/main.c:262 src/xfce/xfce4-im-chooser.desktop:6
-msgid "Input Method Selector"
-msgstr "इनपुट विधि चयनक"
-
 #: src/app/main.c:216 src/xfce/main.c:266
 msgid "_Close"
 msgstr ""
@@ -285,11 +294,3 @@ msgstr "सेटिंग्स मैनेजर सॉकेट"
 #: src/xfce/main.c:163
 msgid "SOCKET ID"
 msgstr "सॉकेट आईडी"
-
-#: src/xfce/xfce4-im-chooser.desktop:38
-msgid ""
-"Choose the input method to be used or disable the input method usage on the "
-"desktop"
-msgstr ""
-"इनपुट विधि को प्रयोग किये जाने के लिये चुनें या डेस्कटॉप पर इनपुट विधि प्रयोग को निष्क्रिय "
-"करें"

@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: https://pagure.io/im-chooser/issues\n"
-"POT-Creation-Date: 2019-02-19 06:28+0000\n"
+"POT-Creation-Date: 2019-02-19 06:48+0000\n"
 "PO-Revision-Date: 2016-10-05 01:53-0400\n"
 "Last-Translator: Jean-Baptiste Holcroft <jean-baptiste@holcroft.fr>\n"
 "Language-Team: French (http://www.transifex.net/projects/p/im-chooser/team/"
@@ -242,7 +242,20 @@ msgstr "Espacement"
 msgid "The amount of space between label"
 msgstr "Espace entre les étiquettes"
 
-#: src/app/im-chooser.desktop:5 src/xfce/xfce4-im-chooser.desktop:87
+#: src/app/im-chooser.desktop:35 src/app/main.c:212 src/xfce/main.c:262
+#: src/xfce/xfce4-im-chooser.desktop:37
+msgid "Input Method Selector"
+msgstr "Sélecteur de méthode de saisie"
+
+#: src/app/im-chooser.desktop:83 src/xfce/xfce4-im-chooser.desktop:85
+msgid ""
+"Choose the input method to be used or disable the input method usage on the "
+"desktop"
+msgstr ""
+"Choisissez la méthode de saisie à utiliser ou désactivez l'utilisation des "
+"méthodes de saisie sur le système."
+
+#: src/app/im-chooser.desktop:85 src/xfce/xfce4-im-chooser.desktop:87
 msgid "im-chooser"
 msgstr ""
 
@@ -272,10 +285,6 @@ msgstr "Aucune méthode d'entrée n'est disponible"
 msgid "Unrecoverable error"
 msgstr "Erreur irrécupérable"
 
-#: src/app/main.c:212 src/xfce/main.c:262 src/xfce/xfce4-im-chooser.desktop:6
-msgid "Input Method Selector"
-msgstr "Sélecteur de méthode de saisie"
-
 #: src/app/main.c:216 src/xfce/main.c:266
 msgid "_Close"
 msgstr "_Fermer"
@@ -295,11 +304,3 @@ msgstr "Paramètres du gestionnaire de socket"
 #: src/xfce/main.c:163
 msgid "SOCKET ID"
 msgstr "ID SOCKET"
-
-#: src/xfce/xfce4-im-chooser.desktop:38
-msgid ""
-"Choose the input method to be used or disable the input method usage on the "
-"desktop"
-msgstr ""
-"Choisissez la méthode de saisie à utiliser ou désactivez l'utilisation des "
-"méthodes de saisie sur le système."

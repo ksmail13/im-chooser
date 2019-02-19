@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: https://pagure.io/im-chooser/issues\n"
-"POT-Creation-Date: 2019-02-19 06:28+0000\n"
+"POT-Creation-Date: 2019-02-19 06:48+0000\n"
 "PO-Revision-Date: 2016-10-02 07:07-0400\n"
 "Last-Translator: Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>\n"
 "Language-Team: Catalan <fedora@llistes.softcatala.org>\n"
@@ -235,7 +235,20 @@ msgstr "Espaiat"
 msgid "The amount of space between label"
 msgstr "La quantitat d'espai entre l'etiqueta"
 
-#: src/app/im-chooser.desktop:5 src/xfce/xfce4-im-chooser.desktop:87
+#: src/app/im-chooser.desktop:35 src/app/main.c:212 src/xfce/main.c:262
+#: src/xfce/xfce4-im-chooser.desktop:37
+msgid "Input Method Selector"
+msgstr "Eina de selecció del mètode d'entrada"
+
+#: src/app/im-chooser.desktop:83 src/xfce/xfce4-im-chooser.desktop:85
+msgid ""
+"Choose the input method to be used or disable the input method usage on the "
+"desktop"
+msgstr ""
+"Seleccioneu el mètode d'entrada a utilitzar o desactiveu els mètodes "
+"d'entrada en l'escriptori"
+
+#: src/app/im-chooser.desktop:85 src/xfce/xfce4-im-chooser.desktop:87
 msgid "im-chooser"
 msgstr ""
 
@@ -265,10 +278,6 @@ msgstr "No hi ha disponible cap mètode d'entrada"
 msgid "Unrecoverable error"
 msgstr "Error irrecuperable"
 
-#: src/app/main.c:212 src/xfce/main.c:262 src/xfce/xfce4-im-chooser.desktop:6
-msgid "Input Method Selector"
-msgstr "Eina de selecció del mètode d'entrada"
-
 #: src/app/main.c:216 src/xfce/main.c:266
 msgid "_Close"
 msgstr "Tan_ca"
@@ -288,11 +297,3 @@ msgstr "Ajusts del gestor del socket"
 #: src/xfce/main.c:163
 msgid "SOCKET ID"
 msgstr "ID. SOCKET"
-
-#: src/xfce/xfce4-im-chooser.desktop:38
-msgid ""
-"Choose the input method to be used or disable the input method usage on the "
-"desktop"
-msgstr ""
-"Seleccioneu el mètode d'entrada a utilitzar o desactiveu els mètodes "
-"d'entrada en l'escriptori"
