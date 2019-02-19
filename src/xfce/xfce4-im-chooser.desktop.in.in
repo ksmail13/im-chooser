@@ -2,8 +2,8 @@
 Encoding=UTF-8
 Version=1.0
 Type=Application
-_Name=Input Method Selector
-_Comment=Choose the input method to be used or disable the input method usage on the desktop
+Name=Input Method Selector
+Comment=Choose the input method to be used or disable the input method usage on the desktop
 Exec=xfce4-im-chooser
 Icon=im-chooser
 Terminal=false
