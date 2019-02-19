@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# 
+#
 # Akira  <akira+transifex@tagoh.org>, 2011.
 # Hyunsok Oh <hoh@redhat.com>, 2010.
 # Eunju Kim <eukim@redhat.com>, 2006, 2007, 2008.
@@ -10,13 +10,13 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-09-12 20:47+0900\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
 "PO-Revision-Date: 2014-12-16 08:24-0500\n"
 "Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: ko\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0\n"
 "X-Generator: Zanata 3.9.6\n"
 
@@ -208,7 +208,9 @@ msgstr ", %s 제외 "
 msgid ""
 "<small><i>Note: this change will not take effect until your next log in%s</"
 "i></small>"
-msgstr "<small><i>알림: 이러한 변경 사항은 %s로의 다음 로그인  까지 반영되지 않습니다</i></small>"
+msgstr ""
+"<small><i>알림: 이러한 변경 사항은 %s로의 다음 로그인  까지 반영되지 않습니다"
+"</i></small>"
 
 #: ../libimchooseui/imchooseui.c:705
 #, c-format

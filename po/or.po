@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# 
+#
 # Manoj Kumar Giri <giri.manojkr@gmail.com>, 2008.
 # Subhransu Behera <sbehera@redhat.com>, 2006.
 # Manoj Kumar Giri <mgiri@redhat.com>, 2008.
@@ -10,13 +10,13 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-09-12 20:47+0900\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
 "PO-Revision-Date: 2014-12-16 08:25-0500\n"
 "Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: or\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
 "X-Generator: Zanata 3.9.6\n"
 
@@ -140,8 +140,7 @@ msgstr "IMSettings ସର୍ଭିସ ସହିତ ଯୋଗାଯୋଗ କର�
 #: ../libimchooseui/imchooseui.c:332
 #, c-format
 msgid "Please install any input methods before running if you like."
-msgstr ""
-"ଯଦି ଆପଣ ଚାହାନ୍ତି ଚଲାଇବା ପୂର୍ବରୁ ଦୟାକରି କୌଣସି ନିବେଶ ପ୍ରଣାଳୀକୁ ସ୍ଥାପନ କରନ୍ତୁ।"
+msgstr "ଯଦି ଆପଣ ଚାହାନ୍ତି ଚଲାଇବା ପୂର୍ବରୁ ଦୟାକରି କୌଣସି ନିବେଶ ପ୍ରଣାଳୀକୁ ସ୍ଥାପନ କରନ୍ତୁ।"
 
 #: ../libimchooseui/imchooseui.c:405
 msgid "Unable to get the information"
@@ -210,8 +209,8 @@ msgid ""
 "<small><i>Note: this change will not take effect until your next log in%s</"
 "i></small>"
 msgstr ""
-"<small><i>ଟିପ୍ପଣୀ: ଏହି ପରିବର୍ତ୍ତନ ଆପଣଙ୍କର ପରବର୍ତ୍ତୀ ଲଗଇନ %s ପର୍ଯ୍ୟନ୍ତ "
-"କାର୍ଯ୍ୟକାରୀ ହୋଇନଥାଏ</i></small>"
+"<small><i>ଟିପ୍ପଣୀ: ଏହି ପରିବର୍ତ୍ତନ ଆପଣଙ୍କର ପରବର୍ତ୍ତୀ ଲଗଇନ %s ପର୍ଯ୍ୟନ୍ତ କାର୍ଯ୍ୟକାରୀ ହୋଇନଥାଏ</"
+"i></small>"
 
 #: ../libimchooseui/imchooseui.c:705
 #, c-format
@@ -250,8 +249,8 @@ msgid ""
 "Choose the input method to be used or disable the input method usage on the "
 "desktop"
 msgstr ""
-"ବ୍ଯବହାର କରିବାକୁ ଥିବା ନିବେଶ ପ୍ରଣାଳୀକୁ ଚୟନ କରନ୍ତୁ କିମ୍ବା ଡେସ୍କଟପରେ ନିବେଶ "
-"ପ୍ରଣାଳୀର ବ୍ଯବହାର ବିଧିକୁ ନିଷ୍କ୍ରିୟ କରନ୍ତୁ"
+"ବ୍ଯବହାର କରିବାକୁ ଥିବା ନିବେଶ ପ୍ରଣାଳୀକୁ ଚୟନ କରନ୍ତୁ କିମ୍ବା ଡେସ୍କଟପରେ ନିବେଶ ପ୍ରଣାଳୀର ବ୍ଯବହାର ବିଧିକୁ "
+"ନିଷ୍କ୍ରିୟ କରନ୍ତୁ"
 
 #: ../src/app/main.c:98
 #, c-format
