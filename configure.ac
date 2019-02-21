@@ -1,5 +1,5 @@
 dnl Process this file with autoconf to produce a configure script.
-AC_INIT([im-chooser], 1.7.2, [https://pagure.io/im-chooser/issues])
+AC_INIT([im-chooser], 1.7.3, [https://pagure.io/im-chooser/issues])
 
 . `dirname $0`/requires
 
