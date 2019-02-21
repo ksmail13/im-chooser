@@ -273,7 +273,8 @@ _imchoose_ui_update_list(IMChooseUI *ui,
 
 		g_set_error(&e, IMCHOOSEUI_GERROR, 0,
 			    _("Current desktop isn't supported. Please follow instructions on your desktop to enable Input Method."));
-		g_error_free(err);
+		if (err)
+			g_error_free(err);
 		err = e;
 		goto bail;
 	}
