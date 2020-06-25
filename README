@@ -13,3 +13,31 @@ Features
    box on GUI.
  * Invoke the preference application for Input Method on
    demand.
+
+
+What does fix from master.
+==========
+This branch makes im-chooser can be working in GNOME in Fedora.
+It ignore result of "imsettings_client_is_supported_desktop" for avoid error that "org.gnome.SettingsDaemon.Keyboard.desktop exists. imsettings is going to be disabled.".
+
+How to enable other IM instead of ibus
+==========
+
+(You might need reboot between these process.)
+
+1. install IM what suited you.
+2. build and install this branch.
+3. execute new im-chooser (after install, im-chooser show up on application menu)
+4. change IM. im-chooser can show up error but It works.
+5. change xinputrc (by $ sudo alternatives --config xinputrc)
+6. reboot
+
+If not working as you expected then try 5 before 3.
+
+
+Fedora Gnome 환경에서 im-chooser가 작동되지 않아
+문제가 되는부분을 제거한 버전입니다.
+
+설치 하신 후 xinputrc 설정을 원하는 IM으로 바꾸시면 됩니다.
+im-chooser로 다른 IM을 선택할 때, 에러가 발생하나 실제로는 동작되는 걸로 보입니다.
+잘 안되는 경우엔 순서를 바꿔서 시도해보세요.
