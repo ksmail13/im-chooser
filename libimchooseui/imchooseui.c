@@ -269,14 +269,15 @@ _imchoose_ui_update_list(IMChooseUI *ui,
 		goto retry;
 	}
 	if (!imsettings_client_is_supported_desktop(client, NULL, &err)) {
-		GError *e = NULL;
+		// to avoid error when startup in GNOME
+		// GError *e = NULL;
 
-		g_set_error(&e, IMCHOOSEUI_GERROR, 0,
-			    _("Current desktop isn't supported. Please follow instructions on your desktop to enable Input Method."));
-		if (err)
-			g_error_free(err);
-		err = e;
-		goto bail;
+		// g_set_error(&e, IMCHOOSEUI_GERROR, 0,
+		// 	    _("Current desktop isn't supported. Please follow instructions on your desktop to enable Input Method."));
+		// if (err)
+		// 	g_error_free(err);
+		// err = e;
+		// goto bail;
 	}
 
 	active_info = imsettings_client_get_active_im_info(client, NULL, &err);
